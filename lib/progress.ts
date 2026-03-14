@@ -53,6 +53,37 @@ export function saveQuizResult(lessonId: string, result: QuizResult) {
   localStorage.setItem(QUIZ_KEY, JSON.stringify(all));
 }
 
+const REVIEW_KEY = "pe-app-review";
+
+function loadReview(): Record<string, string> {
+  if (typeof window === "undefined") return {};
+  try {
+    const raw = localStorage.getItem(REVIEW_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+/** Mark a card as dismissed for today. */
+export function dismissCard(cardId: string) {
+  if (typeof window === "undefined") return;
+  const all = loadReview();
+  all[cardId] = new Date().toISOString().slice(0, 10);
+  localStorage.setItem(REVIEW_KEY, JSON.stringify(all));
+}
+
+/** Return the set of card IDs dismissed today. */
+export function getDismissedToday(): Set<string> {
+  const today = new Date().toISOString().slice(0, 10);
+  const all = loadReview();
+  return new Set(
+    Object.entries(all)
+      .filter(([, date]) => date === today)
+      .map(([id]) => id)
+  );
+}
+
 export function setLessonStatus(
   moduleId: string,
   lessonId: string,

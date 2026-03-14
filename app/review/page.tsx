@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getModuleProgress } from "@/lib/progress";
+import { getModuleProgress, dismissCard, getDismissedToday } from "@/lib/progress";
 import {
   buildReviewQueue,
   groupByPriority,
@@ -318,7 +318,7 @@ type GroupMode = "priority" | "topic";
 
 export default function ReviewPage() {
   const [cards, setCards] = useState<QueueCard[]>([]);
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+  const [dismissed, setDismissed] = useState<Set<string>>(() => getDismissedToday());
   const [groupMode, setGroupMode] = useState<GroupMode>("priority");
   const [hasProgress, setHasProgress] = useState(false);
 
@@ -329,8 +329,10 @@ export default function ReviewPage() {
     setCards(buildReviewQueue(progress));
   }, []);
 
-  const dismiss = (id: string) =>
+  const dismiss = (id: string) => {
+    dismissCard(id);
     setDismissed((prev) => new Set([...prev, id]));
+  };
 
   const visible = cards.filter((c) => !dismissed.has(c.cardId));
   const isEmpty = visible.length === 0;
