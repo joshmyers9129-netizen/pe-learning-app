@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-access: #2294bd;
+  --color-cream: #f0e6dd;
+  --color-rust: #d9532b;
+  --color-amber: #faa51a;
+  --color-light-cream: #fbf7f3;
+  --color-muted: #404040;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-light-cream text-black;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg bg-access text-white text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-40;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg border border-black/20 bg-white text-sm font-medium hover:bg-cream transition-colors;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-black/10 shadow-sm;
+  }
+}
