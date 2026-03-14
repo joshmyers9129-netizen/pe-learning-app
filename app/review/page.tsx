@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getModuleProgress } from "@/lib/progress";
+import { getModuleProgress, getAllQuizResults, getCardStruggleCounts, recordCardStruggle } from "@/lib/progress";
 import {
   buildReviewQueue,
   groupByPriority,
@@ -108,9 +108,11 @@ function topicLabel(t: string) {
 function ReviewCardTile({
   card,
   onDismiss,
+  onStruggle,
 }: {
   card: QueueCard;
   onDismiss: (id: string) => void;
+  onStruggle: (id: string) => void;
 }) {
   const [flipped, setFlipped] = useState(false);
   const typeCfg = CARD_TYPE_CONFIG[card.cardType];
@@ -196,7 +198,15 @@ function ReviewCardTile({
         {bodyVisible && (
           <AiHelper prompt={aiPrompt} label="Help me understand this" />
         )}
-        <div className="flex justify-end mt-2">
+        <div className="flex justify-end gap-2 mt-2">
+          {bodyVisible && (
+            <button
+              onClick={() => { onStruggle(card.cardId); onDismiss(card.cardId); }}
+              className="text-xs text-[#FAA51A] hover:text-[#9B6A00] font-medium px-3 py-1.5 rounded-lg hover:bg-[#FAA51A]/10 transition-colors"
+            >
+              Still learning
+            </button>
+          )}
           <button
             onClick={() => onDismiss(card.cardId)}
             className="text-xs text-[#404040] hover:text-[#D9532B] font-medium px-3 py-1.5 rounded-lg hover:bg-[#D9532B]/8 transition-colors"
@@ -243,10 +253,12 @@ function GroupedByPriority({
   cards,
   dismissed,
   onDismiss,
+  onStruggle,
 }: {
   cards: QueueCard[];
   dismissed: Set<string>;
   onDismiss: (id: string) => void;
+  onStruggle: (id: string) => void;
 }) {
   const groups = groupByPriority(cards);
   return (
@@ -266,7 +278,7 @@ function GroupedByPriority({
             </div>
             <div className="space-y-3">
               {visible.map((c) => (
-                <ReviewCardTile key={c.cardId} card={c} onDismiss={onDismiss} />
+                <ReviewCardTile key={c.cardId} card={c} onDismiss={onDismiss} onStruggle={onStruggle} />
               ))}
             </div>
           </section>
@@ -280,10 +292,12 @@ function GroupedByTopic({
   cards,
   dismissed,
   onDismiss,
+  onStruggle,
 }: {
   cards: QueueCard[];
   dismissed: Set<string>;
   onDismiss: (id: string) => void;
+  onStruggle: (id: string) => void;
 }) {
   const groups = groupByTopic(cards);
   const topics = Object.keys(groups).sort();
@@ -302,7 +316,7 @@ function GroupedByTopic({
             </div>
             <div className="space-y-3">
               {visible.map((c) => (
-                <ReviewCardTile key={c.cardId} card={c} onDismiss={onDismiss} />
+                <ReviewCardTile key={c.cardId} card={c} onDismiss={onDismiss} onStruggle={onStruggle} />
               ))}
             </div>
           </section>
@@ -326,11 +340,15 @@ export default function ReviewPage() {
     const progress = getModuleProgress(MODULE_ID);
     const hasAny = Object.keys(progress).length > 0;
     setHasProgress(hasAny);
-    setCards(buildReviewQueue(progress));
+    setCards(buildReviewQueue(progress, getAllQuizResults(), getCardStruggleCounts()));
   }, []);
 
   const dismiss = (id: string) =>
     setDismissed((prev) => new Set([...prev, id]));
+
+  const struggle = (id: string) => {
+    recordCardStruggle(id);
+  };
 
   const visible = cards.filter((c) => !dismissed.has(c.cardId));
   const isEmpty = visible.length === 0;
@@ -398,12 +416,14 @@ export default function ReviewPage() {
             cards={cards}
             dismissed={dismissed}
             onDismiss={dismiss}
+            onStruggle={struggle}
           />
         ) : (
           <GroupedByTopic
             cards={cards}
             dismissed={dismissed}
             onDismiss={dismiss}
+            onStruggle={struggle}
           />
         )}
       </div>
