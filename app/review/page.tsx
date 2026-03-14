@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getModuleProgress, getAllQuizResults, getCardStruggleCounts, recordCardStruggle } from "@/lib/progress";
+import { getModuleProgress, dismissCard, getDismissedToday, getAllQuizResults, getCardStruggleCounts, recordCardStruggle } from "@/lib/progress";
 import {
   buildReviewQueue,
   groupByPriority,
@@ -332,7 +332,7 @@ type GroupMode = "priority" | "topic";
 
 export default function ReviewPage() {
   const [cards, setCards] = useState<QueueCard[]>([]);
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+  const [dismissed, setDismissed] = useState<Set<string>>(() => getDismissedToday());
   const [groupMode, setGroupMode] = useState<GroupMode>("priority");
   const [hasProgress, setHasProgress] = useState(false);
 
@@ -343,8 +343,10 @@ export default function ReviewPage() {
     setCards(buildReviewQueue(progress, getAllQuizResults(), getCardStruggleCounts()));
   }, []);
 
-  const dismiss = (id: string) =>
+  const dismiss = (id: string) => {
+    dismissCard(id);
     setDismissed((prev) => new Set([...prev, id]));
+  };
 
   const struggle = (id: string) => {
     recordCardStruggle(id);
