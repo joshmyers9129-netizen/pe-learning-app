@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { modules } from "@/lib/modules";
 import { useModuleProgress } from "@/hooks/useProgress";
+import { getAllQuizResults, getCardStruggleCounts } from "@/lib/progress";
 import { buildReviewQueue, groupByPriority } from "@/lib/reviewQueue";
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
       progress[l.lessonId]?.status === "not-started"
   );
 
-  const queue = buildReviewQueue(progress);
+  const queue = buildReviewQueue(progress, getAllQuizResults(), getCardStruggleCounts());
   const { high, medium } = groupByPriority(queue);
   const dueCount = high.length + medium.length;
 

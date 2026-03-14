@@ -1,5 +1,3 @@
-"use client";
-
 import { LessonProgress, ModuleProgress, QuizResult } from "./types";
 
 const STORAGE_KEY = "pe-app-progress";

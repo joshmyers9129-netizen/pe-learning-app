@@ -68,14 +68,12 @@ function DifficultyPip({ level }: { level: string }) {
 }
 
 function FeaturedModuleCard({
-  moduleId,
   title,
   description,
   totalLessons,
   completed,
   inProgress,
 }: {
-  moduleId: string;
   title: string;
   description: string;
   totalLessons: number;
@@ -162,7 +160,7 @@ function LessonRow({ lesson, status, onStatusChange }: LessonRowProps) {
       {/* Status dot */}
       <button
         onClick={() => onStatusChange(lesson.lessonId, next)}
-        className="flex-shrink-0 p-0.5 rounded-full hover:scale-110 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2294BD]"
+        className="flex-shrink-0 p-2 -m-1.5 rounded-full hover:scale-110 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2294BD]"
         title={`Mark as ${next}`}
         aria-label={`Toggle status for day ${lesson.dayNumber}`}
       >
@@ -227,7 +225,6 @@ export default function ModulesPage() {
 
         {/* Featured module card */}
         <FeaturedModuleCard
-          moduleId={currentModule.moduleId}
           title={currentModule.moduleTitle}
           description={currentModule.description}
           totalLessons={lessons.length}

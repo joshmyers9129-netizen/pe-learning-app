@@ -13,7 +13,7 @@ export default function NavBar() {
   const path = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E8DDD4] z-10">
+    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E8DDD4] z-10" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
       <div className="max-w-2xl mx-auto flex">
         {TABS.map(({ href, label }) => {
           const active = path === href;
