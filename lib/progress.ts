@@ -1,6 +1,6 @@
 "use client";
 
-import { LessonProgress, ModuleProgress } from "./types";
+import { LessonProgress, ModuleProgress, QuizResult } from "./types";
 
 const STORAGE_KEY = "pe-app-progress";
 
@@ -28,6 +28,29 @@ export function getLessonProgress(
   lessonId: string
 ): LessonProgress {
   return getModuleProgress(moduleId)[lessonId] ?? { status: "not-started" };
+}
+
+const QUIZ_KEY = "pe-app-quiz";
+
+function loadQuiz(): Record<string, QuizResult> {
+  if (typeof window === "undefined") return {};
+  try {
+    const raw = localStorage.getItem(QUIZ_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+export function getQuizResult(lessonId: string): QuizResult | undefined {
+  return loadQuiz()[lessonId];
+}
+
+export function saveQuizResult(lessonId: string, result: QuizResult) {
+  if (typeof window === "undefined") return;
+  const all = loadQuiz();
+  all[lessonId] = result;
+  localStorage.setItem(QUIZ_KEY, JSON.stringify(all));
 }
 
 export function setLessonStatus(

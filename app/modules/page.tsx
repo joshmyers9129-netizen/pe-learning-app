@@ -170,11 +170,11 @@ function LessonRow({ lesson, status, onStatusChange }: LessonRowProps) {
       </button>
 
       {/* Title + meta */}
-      <div className="flex-1 min-w-0">
+      <a href={`/lesson/${lesson.lessonId}`} className="flex-1 min-w-0 group">
         <div className="flex items-baseline gap-1.5 flex-wrap">
           <DifficultyPip level={lesson.difficulty} />
           <span
-            className={`text-sm font-medium leading-snug ${
+            className={`text-sm font-medium leading-snug group-hover:underline ${
               status === "completed" ? "line-through text-[#404040]" : "text-[#000000]"
             }`}
           >
@@ -182,7 +182,7 @@ function LessonRow({ lesson, status, onStatusChange }: LessonRowProps) {
           </span>
         </div>
         <p className="text-xs text-[#404040] mt-0.5">{lesson.estimatedMinutes} min</p>
-      </div>
+      </a>
 
       {/* Badge — hidden on xs, shown sm+ */}
       <div className="hidden sm:block flex-shrink-0">
