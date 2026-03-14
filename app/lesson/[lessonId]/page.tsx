@@ -88,6 +88,31 @@ const BLOCK_STYLE: Record<
     bg: "bg-[#F9F6F3]",
     labelColor: "text-[#9A918A]",
   },
+  // ── Premium block types ────────────────────────────────────────────────────
+  "meeting-cold-open": {
+    label: "Meeting cold open",
+    border: "border-[#2294BD]/30",
+    bg: "bg-[#2294BD]/8",
+    labelColor: "text-[#2294BD]",
+  },
+  "worked-example": {
+    label: "Worked example",
+    border: "border-[#FAA51A]/30",
+    bg: "bg-[#FAA51A]/8",
+    labelColor: "text-[#9B6A00]",
+  },
+  "weak-vs-strong-answer": {
+    label: "Weak vs. strong answer",
+    border: "border-[#D9532B]/30",
+    bg: "bg-[#D9532B]/6",
+    labelColor: "text-[#D9532B]",
+  },
+  "allocator-application": {
+    label: "Allocator application",
+    border: "border-[#2A9D60]/25",
+    bg: "bg-[#2A9D60]/6",
+    labelColor: "text-[#1A6B42]",
+  },
 };
 
 function Block({ block }: { block: LessonBlock }) {
@@ -96,9 +121,12 @@ function Block({ block }: { block: LessonBlock }) {
   if (block.type === "visual") {
     return (
       <div className={`rounded-xl border ${s.border} ${s.bg} px-4 py-4 mb-3`}>
-        <p className={`text-xs font-semibold uppercase tracking-wider mb-2 ${s.labelColor}`}>
+        <p className={`text-xs font-semibold uppercase tracking-wider mb-1 ${s.labelColor}`}>
           {s.label} — {block.title}
         </p>
+        {block.learningPurpose && (
+          <p className="text-xs text-[#404040] italic mb-2">{block.learningPurpose}</p>
+        )}
         {block.src && (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -113,7 +141,13 @@ function Block({ block }: { block: LessonBlock }) {
         {block.caption && (
           <p className="text-xs text-[#404040] italic mb-1">{block.caption}</p>
         )}
-        {block.whyItMatters && (
+        {block.whatToNotice && (
+          <div className="mt-2 rounded-lg border border-[#FAA51A]/30 bg-[#FAA51A]/8 px-3 py-2">
+            <span className="text-xs font-semibold text-[#9B6A00] uppercase tracking-wide">What to notice — </span>
+            <span className="text-xs text-[#000000]">{block.whatToNotice}</span>
+          </div>
+        )}
+        {(block.whyItMatters) && (
           <div className="mt-2 rounded-lg border border-[#2294BD]/20 bg-[#2294BD]/5 px-3 py-2">
             <span className="text-xs font-semibold text-[#2294BD] uppercase tracking-wide">Why this matters — </span>
             <span className="text-xs text-[#000000]">{block.whyItMatters}</span>

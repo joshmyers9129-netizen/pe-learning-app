@@ -31,16 +31,22 @@ export interface ModuleProgress {
 // ── Lesson content ────────────────────────────────────────────────────────────
 
 export type LessonBlockType =
+  // ── Legacy types (keep for backward compat) ──────────────────────────────
   | "intro"
-  | "framing"
-  | "teaching"
   | "example"
   | "quote"
-  | "visual"
-  | "inference-boundary"
   | "weak-answer"
+  // ── Premium lesson types ──────────────────────────────────────────────────
+  | "meeting-cold-open"
+  | "framing"
+  | "teaching"
+  | "worked-example"
+  | "visual"
+  | "weak-vs-strong-answer"
+  | "inference-boundary"
   | "exercise"
   | "meeting-application"
+  | "allocator-application"
   | "source-note";
 
 export interface LessonBlock {
@@ -50,14 +56,19 @@ export interface LessonBlock {
   content?: string;
   /** Optional ID referencing a visual component from the visuals registry */
   visualId?: string;
-  // ── Visual block fields ─────────────────────────────────────────────────────
+  // ── Source attachment (any block type) ───────────────────────────────────
+  /** Inline source citation — attachable to any block, not just lesson footer */
+  sourceNote?: string;
+  // ── Visual block fields ───────────────────────────────────────────────────
   /** Image path (relative to /public) or external URL — used when type="visual" */
   src?: string;
   /** Caption displayed beneath the image */
   caption?: string;
-  /** Attribution or source for the image */
-  sourceNote?: string;
-  /** Optional annotation explaining pedagogical relevance */
+  /** Why this visual is included: what concept or relationship it illustrates */
+  learningPurpose?: string;
+  /** Specific annotation directing learner attention to something in the visual */
+  whatToNotice?: string;
+  /** @deprecated Use learningPurpose. Kept for backward compat with existing lessons. */
   whyItMatters?: string;
 }
 
