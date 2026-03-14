@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 
 const SYSTEM_PROMPT = `You are a PE concepts explainer for a CFA charterholder with strong public-markets intuition but limited private equity fluency. Explain concepts clearly and draw analogies to public markets where useful. Be concise — 2 to 3 short paragraphs. Do not fabricate citations, invent specific fund names, or make up performance figures. If you do not know something, say so plainly.`;
 
+export function GET() {
+  return NextResponse.json({ available: !!process.env.OPENROUTER_API_KEY });
+}
+
 export async function POST(req: NextRequest) {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) {

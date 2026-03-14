@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface AiHelperProps {
   /** Short user-facing prompt sent to the API */
@@ -9,14 +9,20 @@ interface AiHelperProps {
   label?: string;
 }
 
-const AI_ENABLED = process.env.NEXT_PUBLIC_AI_ENABLED === "true";
-
 export function AiHelper({ prompt, label = "Explain this more simply" }: AiHelperProps) {
+  const [available, setAvailable] = useState(false);
   const [state, setState] = useState<"idle" | "loading" | "done" | "error">("idle");
   const [text, setText] = useState("");
   const [error, setError] = useState("");
 
-  if (!AI_ENABLED) return null;
+  useEffect(() => {
+    fetch("/api/ai-help")
+      .then((r) => r.json())
+      .then((d) => setAvailable(d.available === true))
+      .catch(() => setAvailable(false));
+  }, []);
+
+  if (!available) return null;
 
   async function handleClick() {
     setState("loading");

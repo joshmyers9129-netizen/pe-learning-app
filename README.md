@@ -79,14 +79,12 @@ Node 18+ required. No database or backend setup needed.
 Copy `.env.example` to `.env.local` (never commit `.env.local`):
 
 ```
-NEXT_PUBLIC_AI_ENABLED=false
 OPENROUTER_API_KEY=
 ```
 
-- `NEXT_PUBLIC_AI_ENABLED` — set to `true` to show AI helper buttons on lesson and review pages
-- `OPENROUTER_API_KEY` — your [OpenRouter](https://openrouter.ai) key; required if AI is enabled
+- `OPENROUTER_API_KEY` — your [OpenRouter](https://openrouter.ai) key. If set, AI helper buttons appear automatically on lesson and review pages. Leave blank (or omit) to disable AI entirely.
 
-The app works fully without AI. When disabled, all AI UI is hidden.
+The app works fully without AI. When the key is absent, all AI UI is hidden.
 
 ---
 
@@ -95,8 +93,7 @@ The app works fully without AI. When disabled, all AI UI is hidden.
 1. Push the repo to GitHub
 2. Import the project in [Vercel](https://vercel.com)
 3. Add environment variables in the Vercel project settings:
-   - `OPENROUTER_API_KEY` (if using AI)
-   - `NEXT_PUBLIC_AI_ENABLED=true` (if using AI)
+   - `OPENROUTER_API_KEY` — set this to enable AI helper; omit to disable
 4. Deploy — no build configuration needed beyond the defaults for Next.js
 
 Because all user data is in `localStorage`, there is nothing to provision server-side.
