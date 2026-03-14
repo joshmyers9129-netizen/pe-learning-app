@@ -30,12 +30,35 @@ export interface ModuleProgress {
 
 // ── Lesson content ────────────────────────────────────────────────────────────
 
+export type LessonBlockType =
+  | "intro"
+  | "framing"
+  | "teaching"
+  | "example"
+  | "quote"
+  | "visual"
+  | "inference-boundary"
+  | "weak-answer"
+  | "exercise"
+  | "meeting-application"
+  | "source-note";
+
 export interface LessonBlock {
-  type: "intro" | "teaching" | "example" | "exercise";
+  type: LessonBlockType;
   title: string;
-  content: string;
+  /** Primary text content — required for all block types except "visual" */
+  content?: string;
   /** Optional ID referencing a visual component from the visuals registry */
   visualId?: string;
+  // ── Visual block fields ─────────────────────────────────────────────────────
+  /** Image path (relative to /public) or external URL — used when type="visual" */
+  src?: string;
+  /** Caption displayed beneath the image */
+  caption?: string;
+  /** Attribution or source for the image */
+  sourceNote?: string;
+  /** Optional annotation explaining pedagogical relevance */
+  whyItMatters?: string;
 }
 
 export interface MCQuestion {

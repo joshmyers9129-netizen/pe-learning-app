@@ -6,6 +6,7 @@ import { getModuleById } from "@/lib/modules";
 import { saveQuizResult, setLessonStatus, getQuizResult } from "@/lib/progress";
 import {
   LessonBlock,
+  LessonBlockType,
   MCQuestion,
   SRQuestion,
   QuizQuestion,
@@ -18,11 +19,17 @@ const MODULE_ID = "pe-foundations";
 // ── block renderer ────────────────────────────────────────────────────────────
 
 const BLOCK_STYLE: Record<
-  LessonBlock["type"],
+  LessonBlockType,
   { label: string; border: string; bg: string; labelColor: string }
 > = {
   intro: {
     label: "Context",
+    border: "border-[#2294BD]/20",
+    bg: "bg-[#2294BD]/5",
+    labelColor: "text-[#2294BD]",
+  },
+  framing: {
+    label: "Framing",
     border: "border-[#2294BD]/20",
     bg: "bg-[#2294BD]/5",
     labelColor: "text-[#2294BD]",
@@ -39,22 +46,94 @@ const BLOCK_STYLE: Record<
     bg: "bg-[#FAA51A]/6",
     labelColor: "text-[#9B6A00]",
   },
+  quote: {
+    label: "Quote",
+    border: "border-[#7C5CBF]/20",
+    bg: "bg-[#7C5CBF]/5",
+    labelColor: "text-[#7C5CBF]",
+  },
+  visual: {
+    label: "Visual",
+    border: "border-[#E8DDD4]",
+    bg: "bg-[#F9F6F3]",
+    labelColor: "text-[#404040]",
+  },
+  "inference-boundary": {
+    label: "Inference boundary",
+    border: "border-[#FAA51A]/40",
+    bg: "bg-[#FAA51A]/10",
+    labelColor: "text-[#9B6A00]",
+  },
+  "weak-answer": {
+    label: "Weak answer",
+    border: "border-[#D9532B]/25",
+    bg: "bg-[#D9532B]/5",
+    labelColor: "text-[#D9532B]",
+  },
   exercise: {
     label: "Exercise",
     border: "border-[#D9532B]/20",
     bg: "bg-[#D9532B]/5",
     labelColor: "text-[#D9532B]",
   },
+  "meeting-application": {
+    label: "Meeting application",
+    border: "border-[#2A9D60]/20",
+    bg: "bg-[#2A9D60]/5",
+    labelColor: "text-[#1A6B42]",
+  },
+  "source-note": {
+    label: "Source note",
+    border: "border-[#E8DDD4]",
+    bg: "bg-[#F9F6F3]",
+    labelColor: "text-[#9A918A]",
+  },
 };
 
 function Block({ block }: { block: LessonBlock }) {
   const s = BLOCK_STYLE[block.type];
+
+  if (block.type === "visual") {
+    return (
+      <div className={`rounded-xl border ${s.border} ${s.bg} px-4 py-4 mb-3`}>
+        <p className={`text-xs font-semibold uppercase tracking-wider mb-2 ${s.labelColor}`}>
+          {s.label} — {block.title}
+        </p>
+        {block.src && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={block.src}
+            alt={block.caption ?? block.title}
+            className="w-full rounded-lg mb-2 object-contain max-h-80"
+          />
+        )}
+        {block.content && (
+          <p className="text-sm text-[#000000] leading-relaxed mb-2">{block.content}</p>
+        )}
+        {block.caption && (
+          <p className="text-xs text-[#404040] italic mb-1">{block.caption}</p>
+        )}
+        {block.whyItMatters && (
+          <div className="mt-2 rounded-lg border border-[#2294BD]/20 bg-[#2294BD]/5 px-3 py-2">
+            <span className="text-xs font-semibold text-[#2294BD] uppercase tracking-wide">Why this matters — </span>
+            <span className="text-xs text-[#000000]">{block.whyItMatters}</span>
+          </div>
+        )}
+        {block.sourceNote && (
+          <p className="text-[10px] text-[#9A918A] mt-1">Source: {block.sourceNote}</p>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className={`rounded-xl border ${s.border} ${s.bg} px-4 py-4 mb-3`}>
       <p className={`text-xs font-semibold uppercase tracking-wider mb-1 ${s.labelColor}`}>
         {s.label} — {block.title}
       </p>
-      <p className="text-sm text-[#000000] leading-relaxed">{block.content}</p>
+      {block.content && (
+        <p className="text-sm text-[#000000] leading-relaxed">{block.content}</p>
+      )}
     </div>
   );
 }
