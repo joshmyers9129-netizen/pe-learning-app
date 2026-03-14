@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getModuleProgress, dismissCard, getDismissedToday } from "@/lib/progress";
-import { getModuleProgress, getAllQuizResults, getCardStruggleCounts, recordCardStruggle } from "@/lib/progress";
+import { getModuleProgress, dismissCard, getDismissedToday, getAllQuizResults, getCardStruggleCounts, recordCardStruggle } from "@/lib/progress";
 import {
   buildReviewQueue,
   groupByPriority,

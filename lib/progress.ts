@@ -63,6 +63,12 @@ function loadReview(): Record<string, string> {
   if (typeof window === "undefined") return {};
   try {
     const raw = localStorage.getItem(REVIEW_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
 // ── Card-level struggle tracking ──────────────────────────────────────────────
 
 const STRUGGLES_KEY = "pe-app-card-struggles";
@@ -94,6 +100,8 @@ export function getDismissedToday(): Set<string> {
       .filter(([, date]) => date === today)
       .map(([id]) => id)
   );
+}
+
 export function getCardStruggleCounts(): Record<string, number> {
   return loadStruggles();
 }
