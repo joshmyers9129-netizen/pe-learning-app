@@ -1,31 +1,5 @@
 export type LessonStatus = "not-started" | "in-progress" | "completed";
 
-export type BlockType = "intro" | "teaching" | "example" | "exercise";
-export type QuizType = "multiple-choice" | "short-response";
-
-export interface LessonBlock {
-  type: BlockType;
-  title: string;
-  content: string;
-  /** Optional ID referencing a visual component from the visuals registry */
-  visualId?: string;
-}
-
-export interface QuizQuestion {
-  questionId: string;
-  type: QuizType;
-  prompt: string;
-  options?: string[];
-  correctAnswer?: string;
-}
-
-export interface LessonContent {
-  lessonId: string;
-  blocks: LessonBlock[];
-  quiz: QuizQuestion[];
-  sources: string[];
-}
-
 export interface Lesson {
   lessonId: string;
   dayNumber: number;
@@ -60,6 +34,8 @@ export interface LessonBlock {
   type: "intro" | "teaching" | "example" | "exercise";
   title: string;
   content: string;
+  /** Optional ID referencing a visual component from the visuals registry */
+  visualId?: string;
 }
 
 export interface MCQuestion {

@@ -18,10 +18,7 @@ const SOURCES = {
   ],
 };
 
-export const allLessonContent: LessonContent[] = [
-  // ─── Day 1 ───────────────────────────────────────────────────────────────
-// Days 1–5: fully built. Days 6–20: placeholder quiz + minimal blocks.
-
+// Days 1–20: fully built lessons.
 export const lessonContents: LessonContent[] = [
   // ── Day 1 ──────────────────────────────────────────────────────────────────
   {
