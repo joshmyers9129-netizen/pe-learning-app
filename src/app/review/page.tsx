@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import {
   getDueReviewCards,
   dismissReviewCard,
+  rescheduleReviewCard,
   getWeakTopics,
   loadProgress,
 } from "@/lib/progress";
@@ -23,7 +24,14 @@ export default function ReviewPage() {
   function handleDismiss(cardId: string) {
     dismissReviewCard(cardId);
     setCards((prev) => prev.filter((c) => c.cardId !== cardId));
+    setFlipped((prev) => { const next = new Set(prev); next.delete(cardId); return next; });
     setCompletedCount((n) => n + 1);
+  }
+
+  function handleStillUnsure(cardId: string) {
+    rescheduleReviewCard(cardId, 1); // due tomorrow, priority bumped
+    setCards((prev) => prev.filter((c) => c.cardId !== cardId));
+    setFlipped((prev) => { const next = new Set(prev); next.delete(cardId); return next; });
   }
 
   function toggleFlip(cardId: string) {
@@ -97,12 +105,20 @@ export default function ReviewPage() {
                     {isFlipped ? "Hide answer" : "Show answer"}
                   </button>
                   {isFlipped && (
-                    <button
-                      onClick={() => handleDismiss(card.cardId)}
-                      className="btn-primary text-xs"
-                    >
-                      Got it
-                    </button>
+                    <>
+                      <button
+                        onClick={() => handleDismiss(card.cardId)}
+                        className="btn-primary text-xs"
+                      >
+                        Got it
+                      </button>
+                      <button
+                        onClick={() => handleStillUnsure(card.cardId)}
+                        className="btn-secondary text-xs"
+                      >
+                        Still unsure
+                      </button>
+                    </>
                   )}
                 </div>
               </div>

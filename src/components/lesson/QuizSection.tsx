@@ -5,7 +5,7 @@ import type { Question } from "@/types/content";
 
 interface Props {
   questions: Question[];
-  onComplete: (score: number) => void;
+  onComplete: (score: number, incorrectIds: string[]) => void;
 }
 
 export default function QuizSection({ questions, onComplete }: Props) {
@@ -26,15 +26,13 @@ export default function QuizSection({ questions, onComplete }: Props) {
   }
 
   function handleSubmit() {
-    const correct = mcQuestions.filter((q) => {
-      if (q.type !== "multiple-choice") return false;
-      return answers[q.questionId] === q.correctAnswer;
-    }).length;
-    const total = mcQuestions.length;
-    const s = total > 0 ? correct / total : 1;
+    const incorrectIds = mcQuestions
+      .filter((q) => q.type === "multiple-choice" && answers[q.questionId] !== q.correctAnswer)
+      .map((q) => q.questionId);
+    const s = mcQuestions.length > 0 ? 1 - incorrectIds.length / mcQuestions.length : 1;
     setScore(s);
     setSubmitted(true);
-    onComplete(s);
+    onComplete(s, incorrectIds);
   }
 
   const allMcAnswered = mcQuestions.every((q) => answers[q.questionId]);

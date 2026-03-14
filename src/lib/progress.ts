@@ -6,7 +6,9 @@ import type {
   ConfidenceLevel,
   ReviewCard,
   TopicMastery,
+  Lesson,
 } from "@/types/content";
+import { buildReviewCards } from "@/lib/cards";
 
 const STORAGE_KEY = "pe-app-progress";
 
@@ -116,20 +118,34 @@ function daysSince(isoDate: string): number {
 
 // ─── Review queue ─────────────────────────────────────────────────────────────
 
-export function addToReviewQueue(card: Omit<ReviewCard, "dueDate" | "priority">): void {
+/**
+ * Generate and enqueue review cards for a completed lesson.
+ * Skips any card whose ID already exists in the queue (dedup by cardId).
+ */
+export function queueLessonReviewCards(
+  moduleId: string,
+  lesson: Lesson,
+  incorrectQuestionIds: string[],
+  confidence: ConfidenceLevel,
+  quizScore: number
+): void {
   const progress = loadProgress();
-  const dueDate = new Date();
-  dueDate.setDate(dueDate.getDate() + 1); // due tomorrow by default
+  const existingCardIds = new Set(progress.reviewQueue.map((c) => c.cardId));
 
-  progress.reviewQueue.push({
-    ...card,
-    dueDate: dueDate.toISOString(),
-    priority: 5,
-  });
+  const newCards = buildReviewCards(
+    moduleId,
+    lesson,
+    incorrectQuestionIds,
+    confidence,
+    quizScore,
+    existingCardIds
+  );
 
+  progress.reviewQueue.push(...newCards);
   saveProgress(progress);
 }
 
+/** Return all cards whose dueDate is now or in the past, sorted high→low priority. */
 export function getDueReviewCards(): ReviewCard[] {
   const progress = loadProgress();
   const now = new Date().toISOString();
@@ -138,9 +154,24 @@ export function getDueReviewCards(): ReviewCard[] {
     .sort((a, b) => b.priority - a.priority);
 }
 
+/** Remove a card permanently (user said "Got it"). */
 export function dismissReviewCard(cardId: string): void {
   const progress = loadProgress();
   progress.reviewQueue = progress.reviewQueue.filter((c) => c.cardId !== cardId);
+  saveProgress(progress);
+}
+
+/** Reschedule a card for daysFromNow days, bumping its priority by 2. */
+export function rescheduleReviewCard(cardId: string, daysFromNow: number): void {
+  const progress = loadProgress();
+  const card = progress.reviewQueue.find((c) => c.cardId === cardId);
+  if (!card) return;
+
+  const due = new Date();
+  due.setDate(due.getDate() + daysFromNow);
+  card.dueDate = due.toISOString();
+  card.priority = Math.min(10, card.priority + 2);
+
   saveProgress(progress);
 }
 

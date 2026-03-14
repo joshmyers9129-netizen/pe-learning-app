@@ -8,6 +8,7 @@ import {
   completeLesson,
   isLessonCompleted,
   getLessonProgress,
+  queueLessonReviewCards,
 } from "@/lib/progress";
 import LessonBlock from "@/components/lesson/LessonBlock";
 import QuizSection from "@/components/lesson/QuizSection";
@@ -27,6 +28,7 @@ export default function LessonPage({ params }: Props) {
 
   const [stage, setStage] = useState<Stage>("reading");
   const [quizScore, setQuizScore] = useState(0);
+  const [incorrectIds, setIncorrectIds] = useState<string[]>([]);
   const [confidence, setConfidence] = useState<ConfidenceLevel | null>(null);
   const [alreadyDone, setAlreadyDone] = useState(false);
 
@@ -52,20 +54,16 @@ export default function LessonPage({ params }: Props) {
     );
   }
 
-  function handleQuizComplete(score: number) {
+  function handleQuizComplete(score: number, wrongIds: string[]) {
     setQuizScore(score);
+    setIncorrectIds(wrongIds);
     setStage("confidence");
   }
 
   function handleFinish() {
     if (!confidence) return;
-    completeLesson(
-      mod!.moduleId,
-      lesson!.lessonId,
-      quizScore,
-      confidence,
-      lesson!.topics
-    );
+    completeLesson(mod!.moduleId, lesson!.lessonId, quizScore, confidence, lesson!.topics);
+    queueLessonReviewCards(mod!.moduleId, lesson!, incorrectIds, confidence, quizScore);
     setStage("done");
   }
 
