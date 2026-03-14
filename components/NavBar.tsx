@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const TABS = [
+  { href: "/", label: "Today" },
   { href: "/modules", label: "Modules" },
   { href: "/review", label: "Review" },
 ] as const;
@@ -15,7 +16,7 @@ export default function NavBar() {
     <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E8DDD4] z-10">
       <div className="max-w-2xl mx-auto flex">
         {TABS.map(({ href, label }) => {
-          const active = path === href || (href === "/modules" && path === "/");
+          const active = path === href;
           return (
             <Link
               key={href}
