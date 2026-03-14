@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-access: #2294BD;
+  --color-rust: #D9532B;
+  --color-fast: #FAA51A;
+  --color-cream: #F0E6DD;
+  --color-light-cream: #FBF7F3;
+}
+
+html {
+  font-family: Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
