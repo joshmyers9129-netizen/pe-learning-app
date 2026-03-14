@@ -13,6 +13,7 @@ import {
   QuizResult,
 } from "@/lib/types";
 import { AiHelper } from "@/components/AiHelper";
+import { LESSON_VISUALS } from "@/components/visuals";
 
 const MODULE_ID = "pe-foundations";
 
@@ -20,37 +21,50 @@ const MODULE_ID = "pe-foundations";
 
 const BLOCK_STYLE: Record<
   LessonBlockType,
-  { label: string; border: string; bg: string; labelColor: string }
+  {
+    label: string;
+    border: string;
+    bg: string;
+    labelColor: string;
+    accent?: string;
+    contentClass?: string;
+  }
 > = {
   intro: {
     label: "Context",
     border: "border-[#2294BD]/20",
     bg: "bg-[#2294BD]/5",
     labelColor: "text-[#2294BD]",
+    accent: "border-l-[#2294BD]/50",
   },
   framing: {
     label: "Framing",
     border: "border-[#2294BD]/20",
     bg: "bg-[#2294BD]/5",
     labelColor: "text-[#2294BD]",
+    accent: "border-l-[#2294BD]/50",
   },
   teaching: {
     label: "Core concept",
     border: "border-[#000]/10",
     bg: "bg-white",
     labelColor: "text-[#404040]",
+    // no left accent — clean white reads as the signal block
   },
   example: {
     label: "Example",
     border: "border-[#FAA51A]/25",
     bg: "bg-[#FAA51A]/6",
     labelColor: "text-[#9B6A00]",
+    accent: "border-l-[#FAA51A]",
   },
   quote: {
     label: "Quote",
     border: "border-[#7C5CBF]/20",
     bg: "bg-[#7C5CBF]/5",
     labelColor: "text-[#7C5CBF]",
+    accent: "border-l-[#7C5CBF]/60",
+    contentClass: "italic",
   },
   visual: {
     label: "Visual",
@@ -63,12 +77,14 @@ const BLOCK_STYLE: Record<
     border: "border-[#FAA51A]/40",
     bg: "bg-[#FAA51A]/10",
     labelColor: "text-[#9B6A00]",
+    accent: "border-l-[#FAA51A]",
   },
   "weak-answer": {
     label: "Weak answer",
     border: "border-[#D9532B]/25",
     bg: "bg-[#D9532B]/5",
     labelColor: "text-[#D9532B]",
+    accent: "border-l-[#D9532B]/60",
   },
   exercise: {
     label: "Exercise",
@@ -81,58 +97,96 @@ const BLOCK_STYLE: Record<
     border: "border-[#2A9D60]/20",
     bg: "bg-[#2A9D60]/5",
     labelColor: "text-[#1A6B42]",
+    accent: "border-l-[#2A9D60]",
   },
   "source-note": {
     label: "Source note",
     border: "border-[#E8DDD4]",
     bg: "bg-[#F9F6F3]",
     labelColor: "text-[#9A918A]",
+    contentClass: "text-[#9A918A]",
   },
 };
 
 function Block({ block }: { block: LessonBlock }) {
   const s = BLOCK_STYLE[block.type];
+  const accentClass = s.accent ? `border-l-4 ${s.accent}` : "";
 
   if (block.type === "visual") {
+    const VisualComponent = block.visualId
+      ? LESSON_VISUALS[block.visualId]
+      : null;
     return (
-      <div className={`rounded-xl border ${s.border} ${s.bg} px-4 py-4 mb-3`}>
-        <p className={`text-xs font-semibold uppercase tracking-wider mb-2 ${s.labelColor}`}>
-          {s.label} — {block.title}
+      <div
+        className={`rounded-xl border ${s.border} ${s.bg} px-5 py-5 mb-5`}
+      >
+        <p
+          className={`text-[10px] font-bold uppercase tracking-widest mb-1 ${s.labelColor}`}
+        >
+          {s.label}
         </p>
-        {block.src && (
+        <p className="text-[15px] font-semibold text-[#000000] leading-snug mb-4">
+          {block.title}
+        </p>
+
+        {VisualComponent && (
+          <div className="mb-4">
+            <VisualComponent />
+          </div>
+        )}
+        {block.src && !VisualComponent && (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={block.src}
             alt={block.caption ?? block.title}
-            className="w-full rounded-lg mb-2 object-contain max-h-80"
+            className="w-full rounded-lg mb-4 object-contain max-h-80"
           />
         )}
         {block.content && (
-          <p className="text-sm text-[#000000] leading-relaxed mb-2">{block.content}</p>
+          <p className="text-[15px] text-[#000000] leading-[1.7] mb-3">
+            {block.content}
+          </p>
         )}
         {block.caption && (
-          <p className="text-xs text-[#404040] italic mb-1">{block.caption}</p>
+          <p className="text-xs text-[#404040] italic mb-3">{block.caption}</p>
         )}
         {block.whyItMatters && (
-          <div className="mt-2 rounded-lg border border-[#2294BD]/20 bg-[#2294BD]/5 px-3 py-2">
-            <span className="text-xs font-semibold text-[#2294BD] uppercase tracking-wide">Why this matters — </span>
-            <span className="text-xs text-[#000000]">{block.whyItMatters}</span>
+          <div className="rounded-lg border border-[#2294BD]/20 bg-[#2294BD]/5 px-4 py-3 mb-3">
+            <span className="text-xs font-bold text-[#2294BD] uppercase tracking-wide">
+              Why this matters —{" "}
+            </span>
+            <span className="text-sm text-[#000000] leading-relaxed">
+              {block.whyItMatters}
+            </span>
           </div>
         )}
         {block.sourceNote && (
-          <p className="text-[10px] text-[#9A918A] mt-1">Source: {block.sourceNote}</p>
+          <p className="text-[11px] text-[#9A918A] leading-relaxed">
+            Source: {block.sourceNote}
+          </p>
         )}
       </div>
     );
   }
 
   return (
-    <div className={`rounded-xl border ${s.border} ${s.bg} px-4 py-4 mb-3`}>
-      <p className={`text-xs font-semibold uppercase tracking-wider mb-1 ${s.labelColor}`}>
-        {s.label} — {block.title}
+    <div
+      className={`rounded-xl border ${s.border} ${accentClass} ${s.bg} px-5 py-5 mb-5`}
+    >
+      <p
+        className={`text-[10px] font-bold uppercase tracking-widest mb-1.5 ${s.labelColor}`}
+      >
+        {s.label}
+      </p>
+      <p className="text-[15px] font-semibold text-[#000000] leading-snug mb-2.5">
+        {block.title}
       </p>
       {block.content && (
-        <p className="text-sm text-[#000000] leading-relaxed">{block.content}</p>
+        <p
+          className={`text-[15px] text-[#000000] leading-[1.7] ${s.contentClass ?? ""}`}
+        >
+          {block.content}
+        </p>
       )}
     </div>
   );
@@ -156,11 +210,11 @@ function MCQuestionCard({
   const isCorrect = selected === q.correctAnswer;
 
   return (
-    <div className="mb-6">
-      <p className="text-xs font-semibold text-[#404040] uppercase tracking-wide mb-2">
+    <div className="mb-7">
+      <p className="text-[10px] font-bold text-[#404040] uppercase tracking-widest mb-2">
         Q{index + 1} · Multiple choice
       </p>
-      <p className="text-sm font-medium text-[#000000] leading-snug mb-3">
+      <p className="text-[15px] font-medium text-[#000000] leading-snug mb-3">
         {q.prompt}
       </p>
 
@@ -178,10 +232,12 @@ function MCQuestionCard({
               style = "border-2 border-[#2294BD] bg-[#2294BD]/10 text-[#000000]";
               icon = "✓";
             } else if (isSelected && !isRight) {
-              style = "border-2 border-[#D9532B] bg-[#D9532B]/8 text-[#D9532B] line-through";
+              style =
+                "border-2 border-[#D9532B] bg-[#D9532B]/8 text-[#D9532B] line-through";
               icon = "✗";
             } else {
-              style = "border border-[#E8DDD4] bg-[#F9F6F3] text-[#9A918A] cursor-default";
+              style =
+                "border border-[#E8DDD4] bg-[#F9F6F3] text-[#9A918A] cursor-default";
             }
           } else if (isSelected) {
             style = "border-2 border-[#2294BD] bg-[#2294BD]/8 text-[#000000]";
@@ -250,11 +306,11 @@ function SRQuestionCard({
   onSubmit: () => void;
 }) {
   return (
-    <div className="mb-6">
-      <p className="text-xs font-semibold text-[#404040] uppercase tracking-wide mb-2">
+    <div className="mb-7">
+      <p className="text-[10px] font-bold text-[#404040] uppercase tracking-widest mb-2">
         Q{index + 1} · Short response
       </p>
-      <p className="text-sm font-medium text-[#000000] leading-snug mb-3">
+      <p className="text-[15px] font-medium text-[#000000] leading-snug mb-3">
         {q.prompt}
       </p>
 
@@ -263,7 +319,7 @@ function SRQuestionCard({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder="Write your answer here…"
-        rows={3}
+        rows={4}
         className="w-full rounded-xl border border-[#E8DDD4] bg-white px-4 py-3 text-sm text-[#000000] placeholder:text-[#9A918A] resize-none focus:outline-none focus:border-[#2294BD] focus:ring-1 focus:ring-[#2294BD]/30 disabled:bg-[#F9F6F3] disabled:text-[#404040] transition-colors"
       />
 
@@ -278,11 +334,13 @@ function SRQuestionCard({
       )}
 
       {state === "submitted" && (
-        <div className="mt-3 rounded-xl border border-[#E8DDD4] bg-[#F0E6DD] px-4 py-3">
-          <p className="text-xs font-semibold uppercase tracking-wide text-[#404040] mb-1">
+        <div className="mt-3 rounded-xl border border-[#E8DDD4] bg-[#F0E6DD] px-5 py-4">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-[#404040] mb-2">
             Model answer
           </p>
-          <p className="text-sm text-[#000000] leading-relaxed">{q.modelAnswer}</p>
+          <p className="text-[15px] text-[#000000] leading-[1.7]">
+            {q.modelAnswer}
+          </p>
         </div>
       )}
     </div>
@@ -301,11 +359,11 @@ function ConfidenceRating({
   onChange: (v: number) => void;
 }) {
   return (
-    <div className="rounded-2xl border border-[#E8DDD4] bg-white px-5 py-5 mt-2">
-      <p className="text-sm font-semibold text-[#000000] mb-1">
+    <div className="rounded-2xl border border-[#E8DDD4] bg-white px-6 py-5 mt-2">
+      <p className="text-[15px] font-semibold text-[#000000] mb-1">
         How confident do you feel?
       </p>
-      <p className="text-xs text-[#404040] mb-4">
+      <p className="text-sm text-[#404040] mb-4">
         Rate your understanding of today's material.
       </p>
       <div className="flex gap-2 justify-between">
@@ -316,7 +374,7 @@ function ConfidenceRating({
             <button
               key={v}
               onClick={() => onChange(v)}
-              className={`flex-1 flex flex-col items-center gap-1 py-2.5 rounded-xl border text-xs font-medium transition-colors ${
+              className={`flex-1 flex flex-col items-center gap-1 py-3 rounded-xl border text-xs font-medium transition-colors ${
                 active
                   ? "border-[#2294BD] bg-[#2294BD] text-white"
                   : "border-[#E8DDD4] bg-white text-[#404040] hover:border-[#2294BD]/50 hover:bg-[#2294BD]/5"
@@ -413,16 +471,16 @@ export default function LessonPage({
 
   return (
     <main className="min-h-screen bg-[#FBF7F3]">
-      <div className="max-w-2xl mx-auto px-4 py-6">
+      <div className="max-w-2xl mx-auto px-4 py-8 sm:py-10">
         {/* Header */}
-        <div className="mb-5">
+        <div className="mb-8">
           <a
             href="/modules"
-            className="text-xs text-[#2294BD] hover:underline mb-2 inline-block"
+            className="text-xs text-[#2294BD] hover:underline mb-3 inline-block"
           >
             ← Modules
           </a>
-          <div className="flex items-baseline gap-2">
+          <div className="flex items-baseline gap-2 mb-1">
             <span className="text-xs font-bold text-[#404040] uppercase tracking-widest">
               Day {lesson.dayNumber}
             </span>
@@ -431,26 +489,29 @@ export default function LessonPage({
               {lesson.estimatedMinutes} min
             </span>
           </div>
-          <h1 className="text-xl font-bold text-[#000000] mt-1 leading-snug">
+          <h1 className="text-2xl font-bold text-[#000000] leading-snug">
             {lesson.title}
           </h1>
         </div>
 
         {/* Learning blocks */}
-        <div className="mb-6">
+        <div className="mb-8">
           {content.blocks.map((block, i) => (
             <Block key={i} block={block} />
           ))}
         </div>
 
         {/* Quiz */}
-        <div className="rounded-2xl border border-[#E8DDD4] bg-white px-5 py-5 mb-4">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-sm font-bold text-[#000000] uppercase tracking-wide">
-              Quiz
-            </h2>
+        <div className="rounded-2xl border border-[#E8DDD4] bg-white px-6 py-6 mb-4">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h2 className="text-[10px] font-bold text-[#404040] uppercase tracking-widest mb-0.5">
+                Check your understanding
+              </h2>
+              <p className="text-[15px] font-semibold text-[#000000]">Quiz</p>
+            </div>
             {saved && (
-              <span className="text-xs text-[#2294BD] bg-[#2294BD]/10 px-2 py-1 rounded-lg font-medium">
+              <span className="text-xs text-[#2294BD] bg-[#2294BD]/10 px-2.5 py-1 rounded-lg font-medium">
                 Completed
               </span>
             )}
@@ -476,7 +537,7 @@ export default function LessonPage({
             <button
               disabled={!mcAllAnswered}
               onClick={() => setMcSubmitted(true)}
-              className="w-full rounded-xl bg-[#000000] text-white text-sm font-semibold py-3 mb-6 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#222] transition-colors"
+              className="w-full rounded-xl bg-[#000000] text-white text-sm font-semibold py-3 mb-7 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#222] transition-colors"
             >
               Check answers
             </button>
@@ -484,7 +545,7 @@ export default function LessonPage({
 
           {/* MC score banner */}
           {mcSubmitted && mcQuestions.length > 0 && (
-            <div className="mb-6">
+            <div className="mb-7">
               <div
                 className={`rounded-xl px-4 py-3 flex items-center gap-3 border ${
                   mcScore === 1
@@ -586,17 +647,17 @@ export default function LessonPage({
 
         {/* Sources */}
         {content.sources.length > 0 && (
-          <div className="mt-6 border-t border-[#E8DDD4] pt-4">
-            <p className="text-xs font-semibold text-[#404040] uppercase tracking-wide mb-2">
+          <div className="mt-8 border-t border-[#E8DDD4] pt-5">
+            <p className="text-[10px] font-bold text-[#9A918A] uppercase tracking-widest mb-3">
               Sources
             </p>
-            <ul className="space-y-1">
+            <ol className="space-y-1.5 list-decimal list-inside">
               {content.sources.map((s, i) => (
-                <li key={i} className="text-xs text-[#404040]">
+                <li key={i} className="text-[11px] text-[#9A918A] leading-relaxed">
                   {s}
                 </li>
               ))}
-            </ul>
+            </ol>
           </div>
         )}
       </div>
