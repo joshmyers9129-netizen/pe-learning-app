@@ -9,6 +9,7 @@ import {
   QueueCard,
 } from "@/lib/reviewQueue";
 import { CardType, Priority } from "@/lib/types";
+import { AiHelper } from "@/components/AiHelper";
 
 // ── constants ─────────────────────────────────────────────────────────────────
 
@@ -115,6 +116,8 @@ function ReviewCardTile({
   const typeCfg = CARD_TYPE_CONFIG[card.cardType];
   const priCfg = PRIORITY_CONFIG[card.priority];
   const isFlipCard = card.cardType === "flashcard";
+  const bodyVisible = !isFlipCard || flipped;
+  const aiPrompt = `Help me understand this PE concept from a review card. Question: "${card.front}" — Answer: "${card.back}". I'm a CFA charterholder with strong public-markets experience but limited PE fluency. Make the concept more intuitive.`;
 
   return (
     <div
@@ -188,14 +191,19 @@ function ReviewCardTile({
         )}
       </div>
 
-      {/* Dismiss */}
-      <div className="px-4 pb-4 pt-1 flex justify-end">
-        <button
-          onClick={() => onDismiss(card.cardId)}
-          className="text-xs text-[#404040] hover:text-[#D9532B] font-medium px-3 py-1.5 rounded-lg hover:bg-[#D9532B]/8 transition-colors"
-        >
-          Done for now
-        </button>
+      {/* AI helper + dismiss */}
+      <div className="px-4 pb-4 pt-1">
+        {bodyVisible && (
+          <AiHelper prompt={aiPrompt} label="Help me understand this" />
+        )}
+        <div className="flex justify-end mt-2">
+          <button
+            onClick={() => onDismiss(card.cardId)}
+            className="text-xs text-[#404040] hover:text-[#D9532B] font-medium px-3 py-1.5 rounded-lg hover:bg-[#D9532B]/8 transition-colors"
+          >
+            Done for now
+          </button>
+        </div>
       </div>
     </div>
   );

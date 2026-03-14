@@ -34,3 +34,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## AI Helper (optional)
+
+The app works fully without AI. To enable the optional AI helper:
+
+1. Copy `.env.example` to `.env.local` on your local machine — **never commit `.env.local` to GitHub**.
+2. Add your [OpenRouter](https://openrouter.ai) API key to `OPENROUTER_API_KEY`.
+3. Set `NEXT_PUBLIC_AI_ENABLED=true`.
+
+Without these, all AI helper UI is hidden and the app behaves identically.
