@@ -24,70 +24,295 @@ export const lessonContents: LessonContent[] = [
   {
     lessonId: "day-01",
     blocks: [
+      // ── Cold open ──────────────────────────────────────────────────────────
       {
         type: "intro",
-        title: "Why this matters",
+        title: "The meeting you are walking into",
         content:
-          "You cannot follow a PE manager meeting if you do not have the fund model in your head. This lesson builds the baseline.",
+          "You are twenty minutes into a first manager meeting. The GP says: 'We are fully committed in Fund V — running about 68% drawn at cost — and we expect to be back in market for Fund VI in roughly eighteen months once we work through the remaining deployment overhang.' The room nods. A slide appears showing Fund IV at 1.9x TVPI and 0.6x DPI. The GP adds: 'Fund IV is seasoned, two companies still to exit, and we think there is meaningful upside in both.' What did any of that mean? 'Fully committed' means the fundraise closed and LPs have signed for the full target. '68% drawn at cost' means the GP has called and deployed 68% of total committed capital into deals; 32% remains uncalled. '0.6x DPI' means LPs have received back 60 cents for every dollar they have put in — in cash, from actual exits. '1.9x TVPI' means the GP believes the total portfolio, realized plus unrealized marks, is worth 1.9x cost. The gap between 1.9x and 0.6x is 1.3x of unrealized, unvalidated value. If you could not decode that in real time, this lesson builds the model you need before you walk in the door.",
       },
+      // ── Framing ────────────────────────────────────────────────────────────
+      {
+        type: "framing",
+        title: "Why the fund model is the foundation of everything else",
+        content:
+          "Every concept in this curriculum — IRR, distribution waterfalls, PME benchmarks, carry mechanics, pacing models — presupposes that you understand the PE fund as a structural entity and know how capital moves through it. Without the fund model, you will pattern-match on numbers without understanding what they measure, and GPs who sense that gap will present performance narratives without the structural context that would allow those narratives to be interrogated. The fund model is also where public-markets intuition most reliably misleads. A CFA charterholder expects an NAV updated daily, capital redeemable on request, and returns expressed as an annualized rate against a benchmark. PE inverts all three: NAV is a GP estimate reviewed annually by auditors, capital is locked for a decade, and returns arrive as large irregular cash flows rather than a continuously priced account. This lesson recalibrates those assumptions deliberately. It is not a soft overview — it is a technical foundation. Work through it as such.",
+      },
+      // ── Teaching 1: closed-end structure ───────────────────────────────────
       {
         type: "teaching",
-        title: "Core concept",
+        title: "The closed-end structure: why illiquidity is design, not limitation",
         content:
-          "A PE fund is a closed-end vehicle where LPs commit capital, the GP calls that capital over time, invests in portfolio companies, and later distributes proceeds as investments are exited.",
+          "A PE fund is a closed-end limited partnership with a fixed term — typically 10 years, with contractual options to extend one to two years with LP or LPAC consent — and a fixed pool of committed capital. Once the fund closes, no new investors may subscribe and no existing investors may redeem. The capital is contractually locked for the life of the fund. This structure is not a defect the industry tolerates; it is a precondition for the strategy. A buyout GP acquiring a manufacturing company with the thesis of building out a regional platform over five years, replacing senior management, and selling to a strategic buyer when EBITDA has doubled cannot execute that thesis if LPs can redeem capital on demand. Forced asset sales to meet redemptions would destroy the holding strategy entirely. The illiquidity of PE is a deliberate architectural choice made in service of the investment model — not a cost extracted from LPs without reason. Understanding this matters when LPs ask whether illiquidity premium arguments are credible. The right answer is that illiquidity is the structure, and the premium is what compensates LPs for accepting a structure that is a prerequisite for the strategy to exist at all.",
       },
+      // ── Teaching 2: GP and LP roles ─────────────────────────────────────────
+      {
+        type: "teaching",
+        title: "The two principals: what the GP and LP actually do",
+        content:
+          "The limited partnership has two classes of participant with structurally different roles. The general partner is the fund manager and active decision-maker: it sources investment opportunities, executes acquisitions, sits on portfolio company boards, oversees operational and financial improvement programs, and decides when and how to exit each position. The GP holds residual management rights — all decisions not explicitly reserved to LPs in the LPA belong to the GP. The GP also contributes capital alongside LPs, typically 1–3% of total fund size. This GP commitment is economically meaningful: at 1.5% of a $2.5B fund, the GP is investing $37.5M of its own capital, subordinate to LP capital in the distribution waterfall. Limited partners are passive investors by legal design. They commit capital, receive economic distributions, hold certain governance rights under the LPA — voting on LPAC matters, key-person clauses, fund extensions — but they have no role in individual investment decisions. An LP with strong views on a specific deal should be seeking a co-investment or a managed account structure, not attempting to influence a commingled fund. The LP's fundamental alignment mechanism is not control — it is incentive structure. The GP's largest economic payoff, carried interest, is contingent on LPs first clearing their preferred return. That alignment is imperfect in practice and will be examined carefully in Days 2 and 11.",
+      },
+      // ── Teaching 3: commitment as legal obligation ──────────────────────────
+      {
+        type: "teaching",
+        title: "The LP commitment: a contingent liability, not a future investment",
+        content:
+          "An LP commitment is a legally binding contractual obligation to deliver capital on demand, up to the total committed amount, over the fund's investment period. The commitment is made at signing of the limited partnership agreement, before any deal is done — this is the 'blind pool' feature of PE. LPs commit to a manager and a strategy before knowing what companies the fund will buy. The LP does not transfer cash at fund closing; it makes a promise. That promise has real balance-sheet consequences. The correct characterization of an unfunded LP commitment is a contingent liability — not a future investment opportunity, not a soft allocation target. This distinction matters operationally. An endowment carrying $300M in unfunded PE commitments across eight active funds holds $300M in obligations callable within 10 business days at any time, with no control over the timing. If those calls arrive simultaneously during a market dislocation — as they did for some endowments in 2008 — the endowment must fund them from liquid reserves or face default. The 2008–2009 crisis produced documented LP defaults, including from institutions with PE allocations of 20–30% of their portfolios, caught between illiquid PE obligations and collapsing public equity values. This is not a theoretical risk. It is a recurring feature of LP liquidity management that flows directly from the legal nature of the commitment.",
+      },
+      // ── Teaching 4: capital calls ───────────────────────────────────────────
+      {
+        type: "teaching",
+        title: "Capital calls: mechanics, notice periods, and default consequences",
+        content:
+          "The GP draws down LP commitments by issuing capital call notices — formal requests for a specific dollar amount from each LP, specifying the funding purpose and the wire deadline. Purposes include deal acquisitions, follow-on investments in existing portfolio companies, management fees, and fund formation expenses. Notice periods are typically 10 business days under standard LPA terms, though some LPAs allow as few as five. Each LP's share of every call is pro rata to its committed capital as a percentage of total fund commitments: an LP holding 4% of the fund receives 4% of every capital call. The GP has no obligation to give LPs advance notice of when calls will come or how large they will be — call timing is a function of deal activity, which is inherently unpredictable. Failure to fund a capital call on time is a default under the LPA. Default remedies are deliberately punitive: standard LPA provisions include forfeiture of the LP's interest at a discount (often 50–75 cents on the dollar, with the discount allocated to non-defaulting LPs or sold to a third party), loss of voting rights, and exclusion from future distributions until the default is cured with interest. In practice, institutional LP defaults are rare because the reputational cost in a relationship-driven market — permanent exclusion from future allocations by that GP and reputational damage across the GP community — exceeds the short-term liquidity relief of defaulting in all but the most extreme scenarios. The rarity of defaults should not obscure the severity of the obligation. Unfunded commitments are real liabilities.",
+      },
+      // ── Source note ────────────────────────────────────────────────────────
+      {
+        type: "source-note",
+        title: "Capital call mechanics and LP default provisions",
+        content:
+          "Standard capital call notice requirements, pro-rata mechanics, and LP default remedies are detailed in ILPA Principles 3.0 (2019), Section 4, and ILPA's Model Limited Partnership Agreement provisions. The 10-business-day notice convention is market standard; actual LPA terms vary. LP defaults during the 2008–2009 crisis are documented in Preqin, 'LP Behaviour During the Financial Crisis' (2009), and in Lerner, Schoar, and Wongsunwai, 'Smart Institutions, Foolish Choices,' Journal of Finance, 2007.",
+      },
+      // ── Visual: fund lifecycle ──────────────────────────────────────────────
+      {
+        type: "visual",
+        title: "The PE fund lifecycle — four overlapping phases",
+        visualId: "fund-lifecycle-timeline",
+        caption:
+          "The four phases of a standard PE fund lifecycle, from fundraising close through final harvest distributions. Phases overlap — investment and value creation run concurrently for early portfolio companies.",
+        whyItMatters:
+          "The phase overlap is the structural explanation for a pattern you will see repeatedly in LP reporting: a fund in year four that is simultaneously making new acquisitions, actively managing its first portfolio companies, and beginning to show early exit activity. This is not unusual fund management — it is the natural consequence of the overlapping timeline. When a GP presents a fund in its fourth year with a TVPI above 1.0x but DPI near zero, that is not a flag. It is the expected state of a fund whose harvest phase has not yet begun. The timeline also explains why interim performance — any TVPI before year six or seven of a standard fund — has a weak empirical relationship to final realized returns.",
+        sourceNote:
+          "Original synthesis based on standard PE fund lifecycle structure as described in ILPA educational materials and CFA Institute private markets curriculum, 2024.",
+      },
+      // ── Teaching 5: how capital flows through the fund ──────────────────────
+      {
+        type: "teaching",
+        title: "Capital flow: the four-stage arc from close to final distribution",
+        content:
+          "A PE fund's capital moves through four stages in sequence, though stages two through four overlap materially in practice. Stage one is fundraising: the GP markets the fund, conducts LP due diligence meetings, collects subscription documents, and holds a final close — typically 12 to 18 months after launch. Stage two is the investment period: the GP issues capital calls and deploys committed capital into acquisitions over three to five years. This is the period of negative LP cashflow — capital leaves LPs and enters the fund to be invested. Stage three is the value creation phase, which overlaps heavily with stage two. By year three, the GP is typically both making new investments and actively managing companies acquired in years one and two. Stage four is the harvest phase: portfolio companies are sold or taken public, proceeds are realized, and distributions flow to LPs. In a standard fund, meaningful distributions begin in years four to six — earlier for funds that exit opportunistically, later for funds with slower exit markets or longer hold theses. The standard 10-year fund life allows for roughly five years of investment activity and five years of managing toward exit, with extensions available if exit markets are unfavorable at year ten. A fund that extends its life is not necessarily underperforming — it may simply be unwilling to sell quality assets in a distressed exit environment.",
+      },
+      // ── Teaching 6: distributions ───────────────────────────────────────────
+      {
+        type: "teaching",
+        title: "Distributions: how and when LPs receive proceeds",
+        content:
+          "When a portfolio company is sold, merger proceeds flow to the fund, and the fund distributes cash to LPs under the terms of the distribution waterfall in the LPA. The mechanics of the waterfall — who gets paid first, in what order, and how the GP earns carried interest — are covered in Day 2. For now, the key structural points are these. First, distributions are deal-event-driven, not time-driven. A fund that exits three companies in one quarter may return 40% of invested capital at once; a fund in a slow-exit environment may pay nothing for two consecutive years. LP cashflow from PE is lumpy by design. Second, distributions come in two economically distinct forms: return of capital (the LP receives back the dollars it contributed to that investment) and profit distributions (the LP receives its share of the gain above cost, net of carry). Third, the ratio of realized to unrealized performance — DPI to RVPI — is the most important indicator of how much of a fund's stated performance has been tested by the market. A fund with 1.8x TVPI and 0.2x DPI has returned almost nothing in cash and carries 1.6x of value that is a GP appraisal estimate, not a realized figure. A fund with 1.8x TVPI and 1.5x DPI has actually returned most of that value in cash. Same headline number, fundamentally different level of certainty.",
+      },
+      // ── Teaching 7: three states of capital ────────────────────────────────
+      {
+        type: "teaching",
+        title: "Three states of LP capital: committed, invested, and realized",
+        content:
+          "LP capital in a PE fund exists in three states simultaneously, and confusing them is among the most common signs of a gap in PE fluency. Committed capital is the total contractual obligation — the number the LP signed for. Invested capital (also called called capital or paid-in capital) is the cumulative amount the GP has drawn down to date. Unrealized value — expressed as RVPI, residual value to paid-in capital — is the GP's estimate of what the current unrealized portfolio would be worth in an exit. Realized capital — expressed as DPI, distributions to paid-in capital — is cash that has actually been returned to LPs from completed exits. At any point in a fund's life, the relationship is: TVPI = DPI + RVPI, both measured relative to paid-in capital. And on the commitment side: total commitment = called capital to date plus remaining unfunded commitment. A GP who tells you their fund has 'returned capital' may mean distributions have begun — not that LPs have recovered everything they put in. Precision with these four terms is a prerequisite for reading any PE performance report correctly. You will use them in every lesson from Day 3 onward.",
+      },
+      // ── Visual 2: capital states ────────────────────────────────────────────
+      {
+        type: "visual",
+        title: "LP capital states across a typical investment period",
+        content:
+          "Illustrative progression for a $100M LP commitment to a $2.5B fund (4% of fund). At fund close: committed $100M, called to date $0M, unfunded commitment $100M, DPI 0.0x, RVPI 0.0x. End of Year 2: called $38M, unfunded $62M, TVPI ~0.95x (early marks near cost). End of Year 4 (investment period close): called $88M, unfunded $12M reserved for follow-ons and fees, TVPI ~1.2x, DPI ~0.0x. End of Year 7: called $92M, unfunded $8M, TVPI ~1.6x, DPI ~0.5x (first exits complete). End of Year 10 (final distributions): called $95M total, TVPI 2.2x, DPI 2.2x (fully realized). Each dollar in the unfunded column is a legally binding, callable obligation — not an investment plan. The RVPI column shrinks to zero at fund end as every mark is tested by an actual transaction.",
+        caption:
+          "Illustrative capital state progression for a $100M LP commitment across a 10-year buyout fund lifecycle. All figures are approximate and representative of typical mid-market fund mechanics.",
+        whyItMatters:
+          "Most LPs new to the asset class focus on the called amount and treat the unfunded column as a planning assumption. It is not. It is a liability. More importantly, the RVPI column — which often represents 80–90% of reported TVPI in years two through five — is an appraisal, not a realized return. Understanding that TVPI is mostly unrealized until year seven or later is the single most important correction to make when reading PE performance reports from active funds.",
+        sourceNote:
+          "Original synthesis. Drawdown pace and TVPI build are representative of mid-market buyout fund mechanics per Cambridge Associates PE benchmark methodology and ILPA reporting standards.",
+      },
+      // ── Worked example ─────────────────────────────────────────────────────
       {
         type: "example",
-        title: "Mini example",
+        title: "Worked example: Cairn Partners Fund IV, a $2.4B mid-market buyout fund",
         content:
-          "A manager raises a $2 billion fund, invests over four years, exits holdings over years five through ten, and reports both interim valuations and realized proceeds.",
+          "Cairn Partners closes Fund IV at $2.4B in January 2019. A university endowment commits $96M — exactly 4%. The fund charges 2% management fee on committed capital during the five-year investment period, stepping to 1.5% on invested capital thereafter. Carry is 20% above an 8% preferred return. Year 1 (2019): The GP calls $24M — $14.4M for two platform acquisitions, $9.6M for Year 1 management fees. Endowment unfunded commitment: $72M. Year 2–4 (2020–2022, investment period): Seven additional acquisitions are made. By end of 2022, the endowment has funded $76M of its $96M commitment. Remaining unfunded: $20M (reserved for follow-ons and fees). The portfolio holds nine companies. GP-reported NAV for the endowment's interest: $84M — roughly 11% above cost, reflecting early operational progress across the portfolio. DPI: 0.0x (no exits yet). TVPI: 1.11x ($84M NAV / $76M called). Year 6 (2024): The first two companies are sold — one at 2.6x gross MOIC, one at 1.8x. Endowment receives $31M in total distributions. DPI: 0.41x ($31M / $76M called). TVPI: 1.52x ($31M realized + $84M remaining unrealized / $76M). Year 9 (2027): Seven of nine companies exited. Total endowment distributions: $171M. Two companies remain, GP-marked at $18M. DPI: 2.25x. TVPI: 2.49x. Net IRR: 17.1%. Year 11 (2029, fund extended by one year): Final two exits. Total endowment distributions: $203M. Net IRR: 15.9%. TVPI: 2.67x. Note the IRR compression from Year 9 to Year 11: the same additional $32M gain, delivered 24 months later than modeled, costs approximately 120 basis points of annualized return. The extension year is not free even if the final MOIC improves.",
       },
+      // ── Source note ────────────────────────────────────────────────────────
+      {
+        type: "source-note",
+        title: "Worked example calibration",
+        content:
+          "Fund economics in this example are calibrated to historical mid-market buyout benchmarks. Net IRR range of 14–18% for top-half managers and TVPI range of 2.2–2.8x over a full fund life are consistent with Cambridge Associates Private Equity Index data for 2015–2019 vintage buyout funds (Cambridge Associates, 'Private Equity Index and Selected Benchmark Statistics,' 2023). Management fee and carry terms reflect ILPA fee survey medians for mid-market buyout funds.",
+      },
+      // ── Weak vs. strong ─────────────────────────────────────────────────────
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong answer: explaining a PE fund to a colleague",
+        content:
+          "The question: a colleague from the fixed income team asks you what a private equity fund actually is. Weak answer: 'It is basically a pool of money that a manager uses to buy private companies. You put money in, they invest it, and hopefully you make a good return over time.' This is not wrong, but it is useless. It treats PE as a mutual fund variant and omits every structural feature that distinguishes it from liquid alternatives. A colleague who leaves the conversation with this mental model will make bad intuitions about liquidity, NAV reliability, and return timing. Strong answer: 'A PE fund is a closed-end limited partnership where institutional investors make legally binding commitments — not cash transfers — that a specialist manager draws down over three to five years to buy and operate private companies. The capital is locked for ten years or more with no redemption right. Reported performance before year six or seven is mostly GP estimate, not realized cash. Cash returns come as irregular distributions when companies are sold. The manager earns a performance fee only after investors have cleared an 8% annual preferred return. The three things that are most different from public equities are: you cannot get out, the quoted value is an appraisal until there is an actual exit, and the returns arrive in large lumpy chunks over a decade rather than as a continuously priced account.' The strong answer identifies structure, the legal nature of the commitment, the timeline, what is and is not realized, and the incentive structure — and it positions all of this against public-markets intuition the questioner already holds.",
+      },
+      // ── Inference boundary ─────────────────────────────────────────────────
+      {
+        type: "inference-boundary",
+        title: "What the Day 1 model does not tell you",
+        content:
+          "The structural framework built in this lesson — closed-end structure, committed vs. invested capital, capital calls, distributions, GP and LP roles, DPI vs. RVPI — is necessary but deliberately limited. It does not give you the tools to evaluate any specific fund on its merits. The fund model is the floor, not the ceiling of PE fluency. Specifically: it does not explain how PE returns are measured, when IRR misleads, or how to use MOIC alongside IRR correctly — that is Days 4 and 5. It does not explain how the GP's carried interest is calculated, when it is earned, or how the distribution waterfall sequences GP and LP payouts — that is Day 2 and Day 11. It does not address the J-curve dynamic or why interim TVPI has a poor empirical track record as a predictor of final returns — that is Day 3. It does not explain how GP-reported NAV is constructed, where it can be inflated, or what audit review actually catches — that is Day 18. A common error in LP meetings is treating familiarity with fund structure as investment judgment. Knowing what a capital call is and knowing whether a specific GP's track record reflects skill or vintage-year luck are entirely different competencies. This lesson provides the former. Days 4, 5, 12, and 13 build the latter.",
+      },
+      // ── Meeting application ─────────────────────────────────────────────────
+      {
+        type: "meeting-application",
+        title: "Reading the GP's opening ten minutes: four real-time decodes",
+        content:
+          "In almost every first manager meeting, the GP opens with a fund overview that references committed capital, drawn capital, and portfolio performance. Four decodes you can now do in real time. Decode 1 — Draw-down status: when the GP says 'we are 72% deployed in Fund V,' that means the capital call process is roughly three-quarters complete and the investment portfolio is largely assembled. The remaining 28% will be called for follow-on investments, fees, and any deals sourced before the investment period closes. Ask: when does the investment period expire? Decode 2 — TVPI vs. DPI gap: when the GP presents 1.9x TVPI and 0.6x DPI, the gap (1.3x RVPI) is value that exists only as GP-estimated appraisal. The precise follow-up is: what percentage of TVPI is from companies already fully realized versus companies still held? A 1.9x TVPI built mostly from one large realized exit is a different signal than a 1.9x TVPI carried entirely by unrealized marks. Decode 3 — Early distribution timing: if the GP mentions Fund IV started distributing in Year 4, that is earlier than typical. Ask what drove it — opportunistic exits often precede full value-creation execution. A company sold in Year 4 may not have completed its operational improvement program. Decode 4 — Fund VI timing: if the GP says they expect to launch Fund VI in 18 months, they are beginning the successor fund pitch before the current portfolio is fully realized. Ask whether the Fund V team will be managing both funds simultaneously and how portfolio company attention will be divided during that overlap.",
+      },
+      // ── Allocator application ───────────────────────────────────────────────
+      {
+        type: "meeting-application",
+        title: "Allocator application: sizing the obligation before you commit",
+        content:
+          "Before signing an LP commitment, three structural questions follow directly from the fund model built in this lesson. First: what is your total unfunded PE exposure relative to your liquid reserve capacity? A new $75M commitment added to an existing program with $350M in aggregate unfunded commitments means $425M in callable obligations, each requiring funding within 10 business days. A liquid portfolio sized at $200M is not sufficient to support this exposure during a simultaneous call event. Second: what is the call cadence of your existing commitments? Funds in early investment periods call capital most aggressively — a 2022 vintage fund may call 20–25% of committed capital in a single year at peak deployment pace. Understanding which vintages are in their peak call phase helps you model realistic near-term liquidity requirements, not just long-run averages. Third: does the vintage year create concentration risk? Committing heavily in a single calendar year means most of your entry multiples are anchored to the same market pricing environment. The fund model tells you what is contractually happening; the allocator's job is to layer on the portfolio-level implications of that structure across multiple simultaneous fund relationships.",
+      },
+      // ── Exercise ────────────────────────────────────────────────────────────
       {
         type: "exercise",
-        title: "Quick exercise",
+        title: "Exercise: unfunded commitment and capital state analysis",
         content:
-          "In one or two sentences, explain why committed capital is not the same as invested capital.",
+          "Your foundation holds commitments to three PE funds currently in active investment periods. Fund A (vintage 2021, $100M commitment, mid-market buyout): 58% called to date. Fund B (vintage 2022, $60M commitment, growth equity): 32% called. Fund C (vintage 2023, $80M commitment, buyout): 12% called. The CIO asks for an analysis before the next investment committee meeting. (1) Calculate the aggregate unfunded commitment in dollar terms across all three funds. (2) Fund A's GP has just issued a capital call for 8% of the fund. How much does the foundation owe, and when? (3) Fund B reports a TVPI of 1.15x and DPI of 0.0x at the end of Year 2. Is this a performance concern? (4) The foundation's liquid fixed-income portfolio is $180M. Assess whether the current unfunded exposure is adequately supported.",
       },
     ],
     quiz: [
+      // ── MC 1 ────────────────────────────────────────────────────────────────
       {
         questionId: "d1q1",
         type: "multiple-choice",
-        prompt: "Which statement best describes a typical PE fund?",
+        prompt:
+          "What is the primary structural difference between a PE closed-end fund and an open-end mutual fund?",
         options: [
-          "An open-end vehicle with daily subscriptions and redemptions",
-          "A closed-end fund where capital is committed up front but drawn over time",
-          "A passive vehicle that tracks a benchmark",
-          "A permanent capital vehicle with no distribution cycle",
+          "PE funds invest only in private companies; mutual funds invest only in publicly listed securities",
+          "PE funds have fixed terms and no investor redemption right; mutual funds offer periodic or daily liquidity",
+          "PE funds charge carried interest; mutual funds charge only management fees",
+          "PE funds are available only to pension funds; mutual funds are broadly available to retail investors",
         ],
         correctAnswer:
-          "A closed-end fund where capital is committed up front but drawn over time",
+          "PE funds have fixed terms and no investor redemption right; mutual funds offer periodic or daily liquidity",
       },
+      // ── MC 2 ────────────────────────────────────────────────────────────────
       {
         questionId: "d1q2",
         type: "multiple-choice",
-        prompt: "Which is the best description of the GP's role?",
-        options: [
-          "Provide all the capital and outsource investment decisions",
-          "Manage the fund, source deals, make investments, and oversee exits",
-          "Act only as a reporting agent for LPs",
-          "Match investor flows with public market liquidity",
-        ],
-        correctAnswer:
-          "Manage the fund, source deals, make investments, and oversee exits",
+        prompt:
+          "An LP holds a $60M commitment in a $1.5B PE fund. The GP issues a capital call for $120M across the full fund. How much is the LP obligated to fund?",
+        options: ["$4.8M", "$8.0M", "$60M", "$120M"],
+        correctAnswer: "$4.8M",
       },
+      // ── MC 3 ────────────────────────────────────────────────────────────────
       {
         questionId: "d1q3",
+        type: "multiple-choice",
+        prompt:
+          "Which of the following most accurately defines an LP's unfunded PE commitment?",
+        options: [
+          "Capital the LP has already transferred to the fund that the GP has not yet deployed into deals",
+          "A voluntary soft allocation the LP can reduce if market conditions deteriorate",
+          "The portion of the LP's total commitment not yet called, representing a legally binding contingent obligation",
+          "Capital held in escrow by a third-party custodian pending approval of individual investments",
+        ],
+        correctAnswer:
+          "The portion of the LP's total commitment not yet called, representing a legally binding contingent obligation",
+      },
+      // ── MC 4 ────────────────────────────────────────────────────────────────
+      {
+        questionId: "d1q4",
+        type: "multiple-choice",
+        prompt:
+          "A buyout fund in Year 6 of a 10-year term reports TVPI of 1.95x and DPI of 0.30x. What is the most accurate interpretation of this data?",
+        options: [
+          "The fund has returned nearly twice invested capital in cash, with residual upside remaining",
+          "The fund is underperforming because DPI has not crossed 1.0x after six years",
+          "Nearly all of the fund's reported performance is unrealized appraisal value; LPs have received limited cash from actual exits",
+          "The fund has fully deployed capital twice over and is now in pure harvest mode",
+        ],
+        correctAnswer:
+          "Nearly all of the fund's reported performance is unrealized appraisal value; LPs have received limited cash from actual exits",
+      },
+      // ── MC 5 ────────────────────────────────────────────────────────────────
+      {
+        questionId: "d1q5",
+        type: "multiple-choice",
+        prompt:
+          "A GP announces that the investment period for Fund III ended six months ago. Which statement is most accurate regarding LP obligations on remaining uncalled capital?",
+        options: [
+          "All uncalled LP commitments are automatically cancelled at the end of the investment period",
+          "The GP can no longer call capital for new platform investments but may still call remaining uncalled capital for follow-on investments, fees, and fund expenses per the LPA",
+          "LPs must fund 100% of remaining uncalled capital within 30 days of investment period expiration",
+          "The fund enters immediate liquidation mode and all holdings are sold within 12 months",
+        ],
+        correctAnswer:
+          "The GP can no longer call capital for new platform investments but may still call remaining uncalled capital for follow-on investments, fees, and fund expenses per the LPA",
+      },
+      // ── MC 6 ────────────────────────────────────────────────────────────────
+      {
+        questionId: "d1q6",
+        type: "multiple-choice",
+        prompt:
+          "Why does the GP contribute 1–3% of fund capital alongside LP commitments, rather than investing zero of its own capital?",
+        options: [
+          "SEC registration requirements mandate GP co-investment in registered fund vehicles",
+          "GP capital covers management fees during the investment period so LPs pay nothing upfront",
+          "The GP commitment aligns economic incentives — the GP shares downside risk and earns carry only after LPs recover capital plus the preferred return",
+          "GP capital provides the liquidity buffer needed to fund capital calls on short notice",
+        ],
+        correctAnswer:
+          "The GP commitment aligns economic incentives — the GP shares downside risk and earns carry only after LPs recover capital plus the preferred return",
+      },
+      // ── MC 7 ────────────────────────────────────────────────────────────────
+      {
+        questionId: "d1q7",
+        type: "multiple-choice",
+        prompt:
+          "A PE fund manager says 'we have fully committed Fund V.' In the context of PE fund mechanics, what does this mean?",
+        options: [
+          "The fund has deployed all called capital into portfolio company investments",
+          "The fund has raised all target capital from LPs and the fundraise is closed",
+          "The fund has returned all committed capital to LPs through distributions",
+          "The GP has committed to a five-year holding period for all current portfolio companies",
+        ],
+        correctAnswer:
+          "The fund has raised all target capital from LPs and the fundraise is closed",
+      },
+      // ── SR 1 ────────────────────────────────────────────────────────────────
+      {
+        questionId: "d1q8",
         type: "short-response",
-        prompt: "Why does the capital call structure matter for LPs?",
+        prompt:
+          "A GP presenting Fund V tells you that Fund IV is showing 2.2x TVPI with the investment period now closed. Name three specific follow-up questions you would ask to properly evaluate this claim, and explain briefly why each matters.",
         modelAnswer:
-          "LPs must keep liquid reserves to fund calls on short notice (typically 10 business days). Failure to respond to a capital call can result in severe penalties, including forfeiture of LP interest. The unpredictability of call timing is a real liquidity-management challenge.",
+          "First, ask what percentage of the 2.2x TVPI is realized DPI versus unrealized RVPI. If DPI is 0.4x and RVPI is 1.8x, virtually all of the reported performance is still GP appraisal — unvalidated by actual exits. The 2.2x headline is a materially weaker signal in that case than it would be at 1.5x DPI. Second, ask how the two or three largest unrealized positions are valued relative to current public-market peer multiples. If the GP is marking portfolio companies at entry-year EV/EBITDA multiples that have since compressed in public markets, the RVPI component may be stale or inflated — and the investment period closing does not change that. Third, ask how Fund IV compares to vintage-year peers on a PME basis. A 2.2x TVPI from a 2016–2018 vintage fund competed against a public equity market that nearly doubled in the same period. Without a PME comparison against a relevant public benchmark, the raw TVPI multiple provides no information about whether the GP added value net of the market tailwind.",
+      },
+      // ── SR 2 ────────────────────────────────────────────────────────────────
+      {
+        questionId: "d1q9",
+        type: "short-response",
+        prompt:
+          "Explain why an LP's unfunded PE commitment should be characterized as a contingent liability rather than a future investment opportunity, and describe one concrete scenario where mischaracterizing it creates a real problem.",
+        modelAnswer:
+          "An LP commitment to a PE fund is a legally binding contractual obligation, not a soft allocation target. Once executed, the LP must fund capital calls within the notice period in the LPA — typically 10 business days — and failure to do so is a default with severe contractual remedies including potential forfeiture of prior distributions and forced sale of the LP interest at a discount. The LP has no right to reduce or rescind the obligation unilaterally. This makes it a contingent liability that must be incorporated into liquidity planning, not a future investment that can be deferred if conditions change. A concrete failure scenario: an endowment carries $400M in aggregate unfunded PE commitments modeled as 'future PE allocation activity' and maintains only $150M in liquid reserves. In a year when public equity markets fall 25% and three vintage funds simultaneously enter peak deployment phases — each calling 15–20% of committed capital — the endowment faces $60–80M in calls within the same quarter. With liquid reserves depleted by portfolio rebalancing needs, the endowment must either sell equities at distressed prices, draw on credit facilities at elevated cost, or default on one or more commitments. Proper characterization as a contingent liability would have required a liquidity buffer sufficient to cover plausible simultaneous call scenarios under stress.",
+      },
+      // ── SR 3 ────────────────────────────────────────────────────────────────
+      {
+        questionId: "d1q10",
+        type: "short-response",
+        prompt:
+          "A family office considering its first PE commitment is told by an advisor that investing in a PE fund is 'similar to buying into a mutual fund that holds private companies.' Identify three specific structural differences that make this characterization misleading, and explain what each means for how the family office should prepare.",
+        modelAnswer:
+          "First, capital is not transferred upfront. Unlike a mutual fund where a single purchase puts capital to work immediately, a PE commitment obliges the family office to fund capital calls in unpredictable tranches over three to five years on 10-business-day notice. The family office must maintain accessible liquidity throughout the investment period — not for one transaction, but for an ongoing series of calls whose timing it does not control. Second, there is no redemption. A mutual fund investor can sell at NAV on any business day. A PE LP cannot exit except through the secondary market, typically at a discount to GP-reported NAV and with significant transaction cost and friction. If the family office needs the capital back at any point in the 10-year fund life, its options are materially worse than a forced sale of liquid securities. Third, the reported 'value' between exits is a GP estimate, not a market price. A mutual fund NAV is computed daily using market prices of underlying holdings. PE interim NAV reflects the GP's appraisal — based on comparable company multiples, recent transactions, and DCF — reviewed by auditors only annually. A family office that monitors the 'value' of its PE investment in quarterly reports is reading an estimate, not a price. The actual realized value will only be known when each portfolio company is sold, which may be years away.",
+      },
+      // ── SR 4 ────────────────────────────────────────────────────────────────
+      {
+        questionId: "d1q11",
+        type: "short-response",
+        prompt:
+          "In the exercise above, calculate the aggregate unfunded commitment across the three funds and assess whether the $180M liquid fixed-income portfolio adequately supports that exposure. Show your reasoning.",
+        modelAnswer:
+          "Aggregate unfunded commitments: Fund A — $100M committed, 58% called = $58M called, $42M unfunded. Fund B — $60M committed, 32% called = $19.2M called, $40.8M unfunded. Fund C — $80M committed, 12% called = $9.6M called, $70.4M unfunded. Total unfunded: $42M + $40.8M + $70.4M = $153.2M. At first glance, $180M in liquid assets appears to cover $153.2M in unfunded commitments. But this framing understates the risk for two reasons. First, a liquidity buffer for PE unfunded commitments should not be sized at 100% coverage — that would mean holding the buffer as near-zero-return cash or near-cash assets, which is wasteful. But sizing it at 1:1 also provides no cushion for simultaneous calls arriving during a period when the liquid portfolio is itself under stress — falling bond prices reduce the liquidation value of the fixed-income portfolio at the exact moment it may need to be accessed. Second, Fund C is in the earliest stage of its investment period and is likely to be the most call-active fund over the next 18 months, potentially calling 20–30% of its commitment in a single year. The foundation should model a stress scenario in which all three funds call 15% of committed capital simultaneously — a total call of approximately $36M — and confirm the liquid portfolio can absorb that without forced selling at distressed prices. A $180M fixed-income portfolio is marginally adequate under normal conditions but would benefit from a credit facility backstop for stress scenarios.",
       },
     ],
     sources: [
-      "CFA Institute private markets and manager-selection materials",
-      "ILPA educational materials",
-      "CAIA private equity curriculum references",
+      "ILPA, 'ILPA Principles 3.0,' 2019 — Section 4: Transparency; Model LPA capital call and default provisions",
+      "CFA Institute, 'CFA Program Curriculum, Level III — Private Markets Investments,' 2024",
+      "CAIA Association, 'CAIA Level I: An Introduction to Core Topics in Alternative Investments,' 3rd ed.",
+      "Cambridge Associates, 'Private Equity Index and Selected Benchmark Statistics,' Q4 2023",
+      "Preqin, 'LP Behaviour During the Financial Crisis,' Special Report, 2009",
+      "Lerner, J., Schoar, A., and Wongsunwai, W., 'Smart Institutions, Foolish Choices,' Journal of Finance, 2007",
     ],
   },
 
