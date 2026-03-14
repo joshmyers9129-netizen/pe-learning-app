@@ -385,7 +385,7 @@ export default function ReviewPage() {
               )
             )}
             <span className="text-xs text-[#404040] self-center ml-auto">
-              Tap dot · flip card · dismiss
+              Flip card · dismiss when done
             </span>
           </div>
         )}

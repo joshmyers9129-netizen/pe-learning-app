@@ -1,7 +1,24 @@
 import { LessonContent } from "./types";
 
-// Days 1–5: fully built. Days 6–20: placeholder quiz + minimal blocks.
+const SOURCES = {
+  core: [
+    "ILPA educational materials (ilpa.org)",
+    "CFA Institute private markets curriculum",
+    "CAIA private equity curriculum references",
+  ],
+  performance: [
+    "ILPA performance reporting standards",
+    "CFA Institute Global Investment Performance Standards (GIPS)",
+    "Cambridge Associates PE benchmarking methodology",
+  ],
+  advanced: [
+    "ILPA educational materials (ilpa.org)",
+    "Preqin Global Private Equity Report",
+    "Cambridge Associates PE benchmarking methodology",
+  ],
+};
 
+// Days 1–20: fully built lessons.
 export const lessonContents: LessonContent[] = [
   // ── Day 1 ──────────────────────────────────────────────────────────────────
   {
