@@ -6,6 +6,7 @@
  *   const Visual = LESSON_VISUALS[block.visualId];
  *   if (Visual) return <Visual />;
  */
+import type React from "react";
 import FundLifecycleTimeline from "./FundLifecycleTimeline";
 import JCurveVisual from "./JCurveVisual";
 import MultiplesRelationship from "./MultiplesRelationship";
