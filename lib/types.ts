@@ -27,3 +27,16 @@ export interface LessonProgress {
 export interface ModuleProgress {
   [lessonId: string]: LessonProgress;
 }
+
+export type CardType = "flashcard" | "mini-case" | "reteach";
+export type Priority = "high" | "medium" | "low";
+
+export interface ReviewCard {
+  cardId: string;
+  lessonId: string;
+  dayNumber: number;
+  cardType: CardType;
+  topic: string;
+  front: string;
+  back: string;
+}
