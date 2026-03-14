@@ -46,11 +46,40 @@ export function getQuizResult(lessonId: string): QuizResult | undefined {
   return loadQuiz()[lessonId];
 }
 
+export function getAllQuizResults(): Record<string, QuizResult> {
+  return loadQuiz();
+}
+
 export function saveQuizResult(lessonId: string, result: QuizResult) {
   if (typeof window === "undefined") return;
   const all = loadQuiz();
   all[lessonId] = result;
   localStorage.setItem(QUIZ_KEY, JSON.stringify(all));
+}
+
+// ── Card-level struggle tracking ──────────────────────────────────────────────
+
+const STRUGGLES_KEY = "pe-app-card-struggles";
+
+function loadStruggles(): Record<string, number> {
+  if (typeof window === "undefined") return {};
+  try {
+    const raw = localStorage.getItem(STRUGGLES_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+export function getCardStruggleCounts(): Record<string, number> {
+  return loadStruggles();
+}
+
+export function recordCardStruggle(cardId: string) {
+  if (typeof window === "undefined") return;
+  const all = loadStruggles();
+  all[cardId] = (all[cardId] ?? 0) + 1;
+  localStorage.setItem(STRUGGLES_KEY, JSON.stringify(all));
 }
 
 export function setLessonStatus(
