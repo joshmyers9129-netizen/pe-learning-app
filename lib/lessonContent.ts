@@ -34,6 +34,7 @@ export const allLessonContent: LessonContent[] = [
         title: "The PE fund model",
         content:
           "A PE fund is a closed-end vehicle. LPs commit capital; the GP draws it down through capital calls, invests in portfolio companies, manages them, then exits and distributes proceeds. The fund typically runs 10 years: a 4–5 year investment period followed by a harvest period. LPs cannot withdraw early — hence the illiquidity premium.",
+        visualId: "fund-lifecycle-timeline",
       },
       {
         type: "example",
@@ -166,6 +167,7 @@ export const allLessonContent: LessonContent[] = [
         title: "Capital calls and the J-curve",
         content:
           "Capital calls are issued as deals close — not on a fixed schedule. LPs typically have 10 business days to fund each call. Early in fund life, fees are charged before investments are made, and early marks may reflect writedowns, pushing interim IRR negative. As exits generate distributions the curve inflects upward. Reliable IRR is only available when the fund is 60–70% through its life.",
+        visualId: "j-curve",
       },
       {
         type: "example",
@@ -299,6 +301,7 @@ export const allLessonContent: LessonContent[] = [
         title: "TVPI, DPI, and RVPI defined",
         content:
           "TVPI (Total Value to Paid-In) = (distributions + residual NAV) / paid-in capital. It is the headline multiple. DPI (Distributions to Paid-In) = cash returned / paid-in capital. It is the realized component only. RVPI (Residual Value to Paid-In) = NAV / paid-in capital — the unrealized portion. TVPI = DPI + RVPI. Late in fund life, RVPI should shrink toward zero as the GP exits holdings. High RVPI in a mature fund is a warning sign.",
+        visualId: "multiples-relationship",
       },
       {
         type: "example",
@@ -367,6 +370,7 @@ export const allLessonContent: LessonContent[] = [
         title: "Fund phases and vintage year",
         content:
           "A PE fund moves through three phases: (1) Fundraising and early deployment (years 1–2), (2) Investment period (years 1–4/5), (3) Harvest and wind-down (years 5–10+). Vintage year is defined by the year of first close or first capital call. Funds of the same vintage faced the same credit conditions and entry valuations — making same-vintage comparisons the standard for benchmarking.",
+        visualId: "fund-lifecycle-timeline",
       },
       {
         type: "example",
@@ -899,6 +903,7 @@ export const allLessonContent: LessonContent[] = [
         title: "Pacing model mechanics",
         content:
           "A pacing model projects future capital calls and distributions to keep the PE allocation near a target. Because PE funds draw capital over 3–5 years and return it over 7–10, you must commit 2–3x your target NAV per cycle to sustain the allocation. Vintage diversification — committing to multiple funds across consecutive years — smooths J-curve effects and reduces concentration risk. Key inputs: target allocation percentage, current NAV, expected draw-down and distribution timing, and new fund sizes.",
+        visualId: "j-curve",
       },
       {
         type: "example",

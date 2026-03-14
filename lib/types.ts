@@ -7,6 +7,8 @@ export interface LessonBlock {
   type: BlockType;
   title: string;
   content: string;
+  /** Optional ID referencing a visual component from the visuals registry */
+  visualId?: string;
 }
 
 export interface QuizQuestion {
