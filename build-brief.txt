@@ -1,0 +1,107 @@
+Project: PE Learning App
+
+Goal:
+Build a personal web app for Josh to improve private equity fluency through short daily lessons. The app should feel like a modular learning platform, not a one-off course.
+
+Primary use case:
+A 20-day private equity learning program with 15 to 30 minute daily lessons, adapted for a user with strong public-markets intuition but limited private equity fluency.
+
+Product scope for v1:
+- Web app only
+- Personal use only
+- No auth
+- No database
+- No required paid API
+- All 20 days browsable from the start
+- Priority-based review queue
+- Optional AI help later, but app must work fully without AI
+
+Pedagogical goals:
+- Improve PE meeting fluency
+- Reduce performance-measurement confusion
+- Build allocator / portfolio-construction understanding
+- Prevent false fluency
+- Reinforce retention through review cards and confidence tracking
+
+Architecture principles:
+- Modular learning platform, not a one-off 20-day course
+- Introduce a module layer above lessons
+- Treat the first 20-day PE curriculum as Module 1
+- Lesson rendering should be schema-driven
+- Topic mastery, review queue, and progress tracking must work across future modules
+- Avoid hard-coding logic specifically to 20 days
+
+Main app areas:
+- Dashboard / Today
+- Modules
+- Lesson Detail
+- Review
+- Progress
+
+Lesson requirements:
+Each lesson should include:
+- title
+- estimated time
+- learning objective
+- short teaching blocks
+- one practical example or mini-case
+- one short exercise
+- quiz with 3 to 5 questions
+- mostly multiple choice
+- one short written response
+- confidence rating after quiz
+- small sources section at bottom
+
+Adaptivity:
+- Fixed curriculum spine
+- Mastery tracking by topic
+- Weakness score based on correctness, confidence, and recency
+- Priority-based review queue
+- Review queue should include:
+  - flashcard-style cards
+  - mini-case prompts
+  - one-sentence reteach cards
+
+Visual design:
+- Calm, professional, mobile-friendly
+- Compact and readable
+- Use this palette:
+  - Access #2294BD
+  - Black #000000
+  - Cream #F0E6DD
+  - White #FFFFFF
+  - Rust #D9532B
+  - Fast #FAA51A
+  - Light Cream #FBF7F3 for alternating table rows only
+  - Gray #404040 for disclosure text only
+- Visuals should teach, not decorate
+
+Suggested early visuals:
+- fund lifecycle timeline
+- IRR / TVPI / DPI / RVPI relationship visual
+- pacing / J-curve concept visual
+
+Content strategy:
+- Build as a hybrid of the existing PE curriculum spine and an app-native rewrite
+- Start with 5 fully built lessons and placeholders for all 20
+- Expand later
+
+Technical preferences:
+- Next.js
+- TypeScript
+- Tailwind
+- Local-first
+- Use localStorage for progress, mastery, confidence, and review queue
+
+Important rules:
+- No database in v1
+- No auth in v1
+- No API-dependent logic in v1
+- Keep code modular and reusable
+- Stop after each major phase and summarize changes
+
+User profile:
+- CFA charter holder
+- Strong public equity background
+- Wants PE fluency for manager meetings, allocator thinking, and future OCIO relevance
+- Prefers practical, structured, decision-useful learning
