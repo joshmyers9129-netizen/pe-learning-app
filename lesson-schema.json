@@ -1,0 +1,78 @@
+{
+  "moduleId": "pe-foundations",
+  "moduleTitle": "Private Equity Foundations",
+  "lessons": [
+    {
+      "lessonId": "day-01",
+      "dayNumber": 1,
+      "title": "How Private Equity Actually Works",
+      "estimatedMinutes": 25,
+      "topics": ["pe-basics", "fund-structure", "capital-flow"],
+      "difficulty": "foundational",
+      "prerequisites": [],
+      "learningObjectives": [
+        "Explain the basic PE fund model in plain English",
+        "Understand how capital is called, invested, harvested, and distributed",
+        "Distinguish GP-level claims from fund-structure mechanics"
+      ],
+      "blocks": [
+        {
+          "type": "intro",
+          "title": "Why this matters",
+          "content": "You cannot follow a PE manager meeting if you do not have the fund model in your head. This lesson builds the baseline."
+        },
+        {
+          "type": "teaching",
+          "title": "Core concept",
+          "content": "A PE fund is a closed-end vehicle where LPs commit capital, the GP calls that capital over time, invests in portfolio companies, and later distributes proceeds as investments are exited."
+        },
+        {
+          "type": "example",
+          "title": "Mini example",
+          "content": "A manager raises a $2 billion fund, invests over four years, exits holdings over years five through ten, and reports both interim valuations and realized proceeds."
+        },
+        {
+          "type": "exercise",
+          "title": "Quick exercise",
+          "content": "In one or two sentences, explain why committed capital is not the same as invested capital."
+        }
+      ],
+      "quiz": [
+        {
+          "questionId": "d1q1",
+          "type": "multiple-choice",
+          "prompt": "Which statement best describes a typical PE fund?",
+          "options": [
+            "An open-end vehicle with daily subscriptions and redemptions",
+            "A closed-end fund where capital is committed up front but drawn over time",
+            "A passive vehicle that tracks a benchmark",
+            "A permanent capital vehicle with no distribution cycle"
+          ],
+          "correctAnswer": "A closed-end fund where capital is committed up front but drawn over time"
+        },
+        {
+          "questionId": "d1q2",
+          "type": "multiple-choice",
+          "prompt": "Which is the best description of the GP’s role?",
+          "options": [
+            "Provide all the capital and outsource investment decisions",
+            "Manage the fund, source deals, make investments, and oversee exits",
+            "Act only as a reporting agent for LPs",
+            "Match investor flows with public market liquidity"
+          ],
+          "correctAnswer": "Manage the fund, source deals, make investments, and oversee exits"
+        },
+        {
+          "questionId": "d1q3",
+          "type": "short-response",
+          "prompt": "Why does the capital call structure matter for LPs?"
+        }
+      ],
+      "sources": [
+        "CFA Institute private markets and manager-selection materials",
+        "ILPA educational materials",
+        "CAIA private equity curriculum references"
+      ]
+    }
+  ]
+}
