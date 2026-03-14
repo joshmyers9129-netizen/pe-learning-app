@@ -506,7 +506,7 @@ export default function LessonPage({
         )}
 
         {/* Sources */}
-        {content.sources.length > 0 && content.sources[0] !== "Content in development" && (
+        {content.sources.length > 0 && (
           <div className="mt-6 border-t border-[#E8DDD4] pt-4">
             <p className="text-xs font-semibold text-[#404040] uppercase tracking-wide mb-2">
               Sources
