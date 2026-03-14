@@ -13,3 +13,5 @@ npm-debug.log*
 
 # OS
 .DS_Store
+next-env.d.ts
+tsconfig.tsbuildinfo
