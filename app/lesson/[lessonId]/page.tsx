@@ -11,6 +11,7 @@ import {
   QuizQuestion,
   QuizResult,
 } from "@/lib/types";
+import { AiHelper } from "@/components/AiHelper";
 
 const MODULE_ID = "pe-foundations";
 
@@ -404,29 +405,37 @@ export default function LessonPage({
 
           {/* MC score banner */}
           {mcSubmitted && mcQuestions.length > 0 && (
-            <div
-              className={`rounded-xl px-4 py-3 mb-6 flex items-center gap-3 border ${
-                mcScore === 1
-                  ? "bg-[#2294BD]/10 border-[#2294BD]/25 text-[#2294BD]"
-                  : mcScore >= 0.5
-                  ? "bg-[#FAA51A]/10 border-[#FAA51A]/25 text-[#9B6A00]"
-                  : "bg-[#D9532B]/8 border-[#D9532B]/20 text-[#D9532B]"
-              }`}
-            >
-              <span className="text-lg font-bold">
-                {mcScore === 1 ? "✓" : mcScore >= 0.5 ? "~" : "✗"}
-              </span>
-              <span className="text-sm font-semibold">
-                {Math.round(mcScore * mcQuestions.length)}/{mcQuestions.length}{" "}
-                correct
-              </span>
-              <span className="text-sm text-[#404040] font-normal">
-                {mcScore === 1
-                  ? "— perfect score"
-                  : mcScore >= 0.5
-                  ? "— review the highlighted answers"
-                  : "— revisit the lesson material"}
-              </span>
+            <div className="mb-6">
+              <div
+                className={`rounded-xl px-4 py-3 flex items-center gap-3 border ${
+                  mcScore === 1
+                    ? "bg-[#2294BD]/10 border-[#2294BD]/25 text-[#2294BD]"
+                    : mcScore >= 0.5
+                    ? "bg-[#FAA51A]/10 border-[#FAA51A]/25 text-[#9B6A00]"
+                    : "bg-[#D9532B]/8 border-[#D9532B]/20 text-[#D9532B]"
+                }`}
+              >
+                <span className="text-lg font-bold">
+                  {mcScore === 1 ? "✓" : mcScore >= 0.5 ? "~" : "✗"}
+                </span>
+                <span className="text-sm font-semibold">
+                  {Math.round(mcScore * mcQuestions.length)}/{mcQuestions.length}{" "}
+                  correct
+                </span>
+                <span className="text-sm text-[#404040] font-normal">
+                  {mcScore === 1
+                    ? "— perfect score"
+                    : mcScore >= 0.5
+                    ? "— review the highlighted answers"
+                    : "— revisit the lesson material"}
+                </span>
+              </div>
+              {mcScore < 1 && (
+                <AiHelper
+                  prompt={`I just got some questions wrong on a PE quiz about "${lesson.title}". Explain the core concepts of this topic more simply, drawing on public-markets analogies where helpful.`}
+                  label="Explain this more simply"
+                />
+              )}
             </div>
           )}
 
@@ -464,6 +473,12 @@ export default function LessonPage({
         {quizComplete && (
           <>
             <ConfidenceRating value={confidence} onChange={setConfidence} />
+            {confidence !== null && confidence <= 2 && (
+              <AiHelper
+                prompt={`I rated my confidence as ${confidence}/5 after studying "${lesson.title}" in a PE learning app. I'm a CFA charterholder with strong public-markets experience but limited PE fluency. Explain the key concepts of this topic in an intuitive way.`}
+                label="Explain this more simply"
+              />
+            )}
             {!saved && (
               <button
                 disabled={!confidence}
