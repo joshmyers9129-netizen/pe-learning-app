@@ -11,7 +11,7 @@ export const modules: Module[] = [
         lessonId: "day-01",
         dayNumber: 1,
         title: "How Private Equity Actually Works",
-        estimatedMinutes: 25,
+        estimatedMinutes: 28,
         topics: ["pe-basics", "fund-structure", "capital-flow"],
         difficulty: "foundational",
         prerequisites: [],

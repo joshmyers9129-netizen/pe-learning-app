@@ -24,70 +24,277 @@ export const lessonContents: LessonContent[] = [
   {
     lessonId: "day-01",
     blocks: [
+      // ── Meeting cold open ─────────────────────────────────────────────────
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "You cannot follow a PE manager meeting if you do not have the fund model in your head. This lesson builds the baseline.",
+          "The GP's head of investor relations slides a fund summary across the table: 'Fund IV is $3.2 billion, currently 68% deployed in year three, with a $1.1 billion NAV and a 35% follow-on reserve against remaining commitments.' In one sentence: four distinct concepts — deployment pace relative to the investment period, interim NAV versus paid-in capital, follow-on reserve adequacy, and committed versus deployed capital. If you don't have the fund model internalized, you cannot interrogate any of them in real time. This lesson builds that model.",
+      },
+      // ── Framing ───────────────────────────────────────────────────────────
+      {
+        type: "framing",
+        title: "Why the fund model is the foundation",
+        content:
+          "Every PE metric — IRR, TVPI, DPI, PME — is anchored in the fund structure. Without the structural model, you cannot identify when IRR is being distorted (subscription line timing, early exit concentration), why NAV is not the same thing as value, or why a year-3 performance number is nearly useless for cross-fund comparison. A CFA charterholder approaching PE with a public-equity mental model — continuous liquidity, daily NAV, mark-to-market pricing — will have systematically wrong intuitions across every dimension of PE analysis. The fund model is not introductory material you learn once and shelve. It is the analytical skeleton on which all subsequent PE reasoning hangs.",
+      },
+      // ── Teaching blocks ───────────────────────────────────────────────────
+      {
+        type: "teaching",
+        title: "The closed-end structure: design, not constraint",
+        content:
+          "A PE fund is a closed-end vehicle — the capital pool is fixed at close, with no new subscriptions, no redemptions, and no daily NAV. The fund has a defined term (typically 10 years, with one or two one-year extension rights subject to LP approval). LPs cannot exit by redeeming their interest; secondary market sales to a willing buyer are the only exit path. This design is deliberate. It enables three things the PE return model requires: the illiquidity premium — LPs surrender liquidity and expect compensation in return; multi-year operational control — a GP with a stable capital base can execute 3–5 year operational improvements without the threat of capital withdrawal; and incentive alignment — carry is earned on fund-level total returns across the fund's full life, not on quarterly NAV marks. The analogy to a listed closed-end fund (CEF) is imperfect: a CEF trades at a market price that may diverge sharply from NAV, while a PE fund has neither. The governing legal document — the limited partnership agreement (LPA) — defines the structure, terms, and GP authority.",
       },
       {
         type: "teaching",
-        title: "Core concept",
+        title: "Capital commitment vs. capital calls: the operational mechanic",
         content:
-          "A PE fund is a closed-end vehicle where LPs commit capital, the GP calls that capital over time, invests in portfolio companies, and later distributes proceeds as investments are exited.",
+          "When an LP signs the LPA and commits $50 million, they are making a legally binding obligation to fund capital calls up to $50 million over the fund's life — not writing a check. The GP calls capital — issues a formal capital call notice — when funds are needed: to close an investment, pay management fees, or cover fund expenses. Notices typically require LP funding within 10 business days, though specific terms vary by LPA. This distinction is critical at every level of analysis. A fund with $2 billion in commitments and $800 million called at year 2 is an $800 million fund operationally — the remaining $1.2 billion is a contingent obligation on LP balance sheets. Deployment pace — the rate at which the GP calls and deploys capital — affects the fee base, shapes the J-curve, and drives the IRR calculation. An LP managing a $200 million PE allocation across six funds may have $120–150 million in uncalled commitments outstanding simultaneously, all callable with 10 days' notice. This is not a theoretical liquidity risk; it is a recurring operational reality for any institutional LP with a meaningful PE program.",
       },
+      {
+        type: "teaching",
+        title: "Unfunded commitments: the hidden balance sheet item",
+        content:
+          "Unfunded commitments — the gap between what an LP has committed and what has been called — sit as a contingent liability until drawn. This creates three structural risks that LPs frequently underestimate. First, timing correlation: GPs often accelerate capital calls during favorable deal environments, which historically coincide with periods when LP liquid portfolios face competing demands. Second, over-commitment mechanics: institutional LPs routinely commit 1.2–1.5x their target PE allocation on the empirical basis that GPs historically call 85–95% of commitments over a fund's life. This works until multiple GPs in a portfolio simultaneously reach high deployment in a single vintage year, concentrating liquidity demand. Third, default risk: failure to fund a capital call within the LPA-defined notice period triggers severe contractual penalties — typically suspension of voting rights, forced sale of LP interest at a significant discount (often 50–75 cents on the dollar), or forfeiture of the uncalled balance. ILPA Principles 3.0 recommends 15+ business days' notice as best practice, but this is advisory, not a legal requirement.",
+      },
+      // ── Visual 1 ─────────────────────────────────────────────────────────
+      {
+        type: "visual",
+        title: "PE Fund Lifecycle — The Four Phases",
+        visualId: "fund-lifecycle-timeline",
+        caption:
+          "The four phases overlap in practice. Value creation for early acquisitions begins before the investment period closes; harvesting often begins before all value-creation work is complete.",
+        whyItMatters:
+          "The investment period close date is a structural boundary that constrains GP discretion on new platform investments — and defines when LP unfunded commitment exposure shrinks from full commitment to follow-on reserve only.",
+        sourceNote:
+          "Phase definitions and typical timing: CAIA Association Level II curriculum, private equity fund structure chapters.",
+      },
+      // ── Teaching blocks continued ─────────────────────────────────────────
+      {
+        type: "teaching",
+        title: "Fund lifecycle phases: operational mechanics and overlaps",
+        content:
+          "The investment period (typically years 1–5, sometimes 4–6) defines the GP's authority to make new platform investments. Once it closes, called capital can only be used for follow-on investments in existing portfolio companies and for fund expenses — a significant constraint on GP discretion. The harvest phase has no clean start date: GPs exit when conditions allow, which may compress into years 7–9 (typical) or extend to year 10 and beyond (common when credit markets tighten or exit multiples compress). This temporal ambiguity has material implications for performance measurement. A fund that completes most exits in year 7 versus year 9 of a 10-year life will show meaningfully different IRRs even with identical terminal multiples — because IRR is highly sensitive to cash flow timing. Tracking investment period close against current fund age is a basic allocator data point that most investors underutilize.",
+      },
+      {
+        type: "teaching",
+        title: "Capital flow anatomy: commitment to distribution",
+        content:
+          "Tracing a dollar of committed capital through the fund lifecycle: (1) LP commits $1.00 — the dollar sits in the LP's liquid portfolio, subject to call. (2) GP issues a capital call; LP funds approximately $0.90 net of any management fee offsets that year. (3) GP closes an acquisition — the called equity plus debt financing (typically 4–6x EBITDA for a buyout) funds the enterprise value. (4) Portfolio company operates under GP oversight; GP marks it quarterly for NAV purposes — LP sees TVPI build, but it is unrealized. (5) GP exits via trade sale, sponsor-to-sponsor transaction, or IPO; gross proceeds flow to the fund. (6) Distribution waterfall applies: return of paid-in capital first, then preferred return (hurdle, typically 8% per annum compounded), then GP catch-up, then 80/20 split of remaining profits. (7) LP receives a cash distribution. DPI at any point reflects only what has been wired; RVPI reflects GP-determined interim value for the remaining portfolio. A fund with TVPI 1.8x and DPI 0.3x has mostly unrealized, unconfirmed returns — a distinction that is not cosmetic.",
+      },
+      // ── Worked example ────────────────────────────────────────────────────
       {
         type: "example",
-        title: "Mini example",
+        title: "Worked example: tracing a $2 billion buyout fund",
         content:
-          "A manager raises a $2 billion fund, invests over four years, exits holdings over years five through ten, and reports both interim valuations and realized proceeds.",
+          "Fund IV: $2 billion committed, 2%/20% structure, 8% preferred return, 5-year investment period, 10-year term. Years 1–2: GP calls $600 million (30% of commitments) for 4 platform acquisitions at $150 million average equity per deal. Management fees: $40 million/year on committed capital. NAV marked near cost. Net IRR: −4% (fee drag before any realized gains; structurally expected). Years 3–4: Additional $800 million called for 4 more platforms and follow-ons. Total called: $1.4 billion. No exits. Three companies marked up on EBITDA growth. TVPI: 1.15x, DPI: 0.0x, Net IRR: ~3% (J-curve still dominant). Years 5–7: First exits begin. Trade sale of Company A — acquired for $150 million equity, sold for $330 million equity value, 2.2x gross MOIC. Partial IPO of Company B. DPI builds to 0.40x. TVPI: 1.45x, Net IRR: ~12%. Years 8–10: Harvest accelerates. Five of eight remaining companies exit. Final two held in continuing NAV. Net TVPI: 1.85x, DPI: 1.55x, RVPI: 0.30x, Net IRR: 16.5%. The year-2 IRR of −4% and the year-10 IRR of 16.5% describe the same fund — one of the most important structural insights in all of PE analysis. A manager presenting their year-3 metrics at a first meeting is showing you the J-curve trough, not their track record.",
+      },
+      // ── Visual 2 ─────────────────────────────────────────────────────────
+      {
+        type: "visual",
+        title: "The J-Curve: Early Negative IRR Is Structural",
+        visualId: "j-curve",
+        caption:
+          "The J-curve is a direct consequence of fee drag before exits occur — not a signal of poor investment quality. The inflection point typically arrives around year 4–5; meaningful performance signal begins after year 6–7.",
+        whyItMatters:
+          "A GP presenting their current fund's IRR before the inflection point is showing you a metric that is mathematically certain to improve as exits occur. The relevant question is not the current IRR but the pace of deployment relative to the investment period and the quality of the unrealized portfolio.",
+        sourceNote:
+          "J-curve mechanics and empirical timing: CAIA Level II; Cambridge Associates Private Equity Benchmark Commentary.",
+      },
+      // ── Teaching blocks continued ─────────────────────────────────────────
+      {
+        type: "teaching",
+        title: "The blind pool: what the LP is actually buying",
+        content:
+          "A PE fund is a blind pool — the LP commits capital before the portfolio is constructed. At the time of commitment, the GP may have one or two warehoused deals, but the majority of the portfolio is unidentified. The LP is buying GP judgment, sourcing capability, and operational capacity — not a portfolio. This structural fact has several decision-relevant implications. First, past performance is the primary evidence available in manager selection, which creates the question of what predictive content it carries — a contested empirical question covered in Day 12. Second, the LPA defines the investment mandate: permitted sectors, geographies, deal size ranges, concentration limits, and leverage parameters. An LP who has not reviewed the LPA (or at minimum the PPM summary) does not know what the GP is authorized to do with their capital. Third, fund sequence matters: a GP managing their final fund before a senior departure has different incentives than one building toward Fund V. GP team continuity and succession planning are frequently underweighted in LP diligence.",
       },
       {
-        type: "exercise",
-        title: "Quick exercise",
+        type: "teaching",
+        title: "Meeting vocabulary: the precise language of the fund model",
         content:
-          "In one or two sentences, explain why committed capital is not the same as invested capital.",
+          "GPs use fund-model vocabulary precisely in meetings. A CFA-fluent LP who does not speak this language will be dependent on GP framing. Key terms: 'Committed capital' — total LP obligations, including uncalled. 'Paid-in capital' (also 'called capital') — actual cash drawn from LPs to date. 'Invested capital' — capital deployed into portfolio companies (paid-in minus management fees and expenses). 'NAV' — GP-determined fair value of the remaining portfolio per FASB ASC 820 and IPEV guidelines. 'TVPI' — (distributions + NAV) / paid-in; the total value multiple. 'DPI' — distributions / paid-in; the realized multiple, the only confirmed performance. 'RVPI' — NAV / paid-in; the unrealized component of TVPI. 'Gross IRR' — fund-level return before management fees and carry. 'Net IRR' — LP-level return after all fees and carry; the only number that matters for LP comparison. 'Follow-on reserve' — portion of committed capital reserved for subsequent investments in existing portfolio companies. In a meeting, 'Fund IV is 68% deployed in year three' means the GP has called approximately 68% of total commitments three years into a 5-year investment period — somewhat ahead of average pace — leaving roughly 32% (less the follow-on reserve) available for new platforms.",
+      },
+      // ── Source note ───────────────────────────────────────────────────────
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "Fund structure mechanics and LP governance: ILPA Principles 3.0 (ilpa.org/principles). Fund lifecycle and mechanics: CAIA Association Level II, private equity fund structure chapters. Capital call conventions and defaulting LP provisions: ILPA educational materials. PE NAV and fair value methodology: FASB ASC 820 (Fair Value Measurement); IPEV Valuation Guidelines, current edition (ipev.org). Performance calibration: Cambridge Associates Private Equity Benchmark Commentary. Interim valuation predictive validity: Harris, R., Jenkinson, T., and Kaplan, S. (2014), 'Private Equity Performance: What Do We Know?' Journal of Finance 69(5), 1851–1882.",
+      },
+      // ── Weak vs. strong answer ────────────────────────────────────────────
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: responding to a deployment pace update",
+        content:
+          "The GP says: 'Fund IV is 68% deployed in year three, and we have a strong pipeline for the remaining investable capital.' Weak LP response: 'That's impressive pace — what are you seeing in terms of entry multiples right now?' Why it's weak: the LP has accepted the GP's framing, pivoted to a generic market question, and completely missed the most important structural implication of 68% deployment in year three of a five-year investment period. Strong LP response: 'With 68% called and two years remaining in the investment period, your remaining investable capacity is roughly $640 million — but how much of that is reserved for follow-ons in your existing portfolio companies? Are any companies likely to require incremental capital beyond your original reserve estimates?' Why it's strong: it deconstructs the remaining investable capital into new-platform capacity versus follow-on reserve, identifies the relevant risk (follow-on reserve adequacy as the portfolio matures), and signals that the LP understands the structural difference between deployment pace and available new-platform capacity. This is the distinction between an LP who has the fund model internalized and one who is following the GP's narrative.",
+      },
+      // ── Inference boundary ────────────────────────────────────────────────
+      {
+        type: "inference-boundary",
+        title: "Inference boundary: what year-4 metrics can and cannot tell you",
+        content:
+          "At year four of a typical 10-year buyout fund, reported metrics include DPI, TVPI, and net IRR. What can be reliably concluded: deployment pace (compare called capital to the investment period to assess whether the GP is behind, on pace, or ahead for new platforms); confirmed realized value (DPI is cash actually wired to LPs, not subject to valuation interpretation); whether any early exits have occurred. What cannot be reliably concluded: ultimate fund performance. Year-4 IRR is mechanically distorted by the J-curve and by the timing of any early exits — a single early exit in year 3 can double the reported interim IRR regardless of portfolio quality. The RVPI component of TVPI is GP-determined fair value per ASC 820 methodologies (comparable transactions, DCF, last-round pricing) and while audited for process, it is not market-confirmed. Harris, Jenkinson, and Kaplan (2014) document that interim PE valuations have limited predictive validity for final returns before approximately 60–70% of fund economic life has elapsed. The professionally correct posture in year 4: treat DPI as confirmed value, deployment pace as a structural check, and RVPI and interim IRR as indicative only.",
+      },
+      // ── Exercise ──────────────────────────────────────────────────────────
+      {
+        type: "exercise",
+        title: "Applied exercise: reading a year-4 fund update",
+        content:
+          "A GP presents Fund III at a first meeting. Fund size: $1.8 billion. Vintage: 2019. Fund age: 4 years. Reported metrics: net IRR 7.2%, TVPI 1.28x, DPI 0.18x, RVPI 1.10x. The GP describes the fund as 'tracking well against benchmark.' Work through the following before proceeding to the quiz: (a) What does the DPI/TVPI split tell you about the source and reliability of the apparent returns? (b) A 7.2% net IRR at year 4 of a 2019-vintage buyout fund — is this underperformance or structurally expected? (c) The GP notes the top three portfolio companies represent 62% of current NAV. What specific risk does this concentration create for RVPI reliability? (d) What single additional data point would most improve your ability to evaluate Fund III quality at this stage?",
+      },
+      // ── Meeting application ───────────────────────────────────────────────
+      {
+        type: "meeting-application",
+        title: "In the manager meeting: four high-signal questions",
+        content:
+          "Armed with the fund model, these questions become natural entry points for any first GP meeting. (1) 'What is your current DPI, and what is your expected timeline to reach 1.0x DPI on Fund III?' — Separates GP confidence from confirmed value; forces a conversation about exit timing and visibility. (2) 'How much of your follow-on reserve has been utilized so far, and do you have any concerns about reserve adequacy for the remaining portfolio companies?' — Tests capital discipline within the fund and reveals whether the GP manages the portfolio as a capital allocation problem. (3) 'Walk me through your expected capital call schedule for Fund IV in years 1 through 3 — what pace should we model for liquidity planning?' — Establishes LP liquidity planning inputs and signals you understand capital call mechanics. (4) 'On Fund III, what is the RVPI distribution across remaining portfolio companies — how concentrated is the unrealized NAV?' — Probes concentration risk in the unrealized return and forces a company-level conversation that most LPs never initiate.",
+      },
+      // ── Allocator application ─────────────────────────────────────────────
+      {
+        type: "meeting-application",
+        title: "Allocator application: three structural challenges from the fund model",
+        content:
+          "The fund model creates three structural portfolio management challenges for any LP allocating across multiple PE managers. First, pacing risk: an LP committing $150 million per year across four to six funds simultaneously may have $400–600 million in uncalled commitments outstanding at any time. A pacing model — projecting expected capital calls by fund and year against available liquid reserves — is not optional; it is a basic operational tool for a functioning PE program. Over-commitment works until multiple GPs simultaneously accelerate calls in a strong vintage year, creating a call crisis against a single LP's liquidity position. Second, vintage year concentration: the fund model's 3–5 year investment periods mean that two sequential fund commitments may acquire companies at materially different macro conditions. A PE portfolio concentrated in two or three vintage years carries macro-entry risk that is invisible on a portfolio NAV report but often materializes in the harvest phase. Third, the denominator effect: when public markets sell off sharply, PE NAVs are slow to mark down because GP interim valuations lag market conditions. This mechanically inflates the apparent portfolio weight of PE even as the economic value of those companies has likely declined. Understanding this as a structural artifact of the fund model — not a signal of PE outperformance — is essential for avoiding forced rebalancing decisions at the worst time.",
       },
     ],
     quiz: [
       {
         questionId: "d1q1",
         type: "multiple-choice",
-        prompt: "Which statement best describes a typical PE fund?",
+        prompt: "Which statement best describes the structure of a typical PE fund?",
         options: [
-          "An open-end vehicle with daily subscriptions and redemptions",
-          "A closed-end fund where capital is committed up front but drawn over time",
-          "A passive vehicle that tracks a benchmark",
-          "A permanent capital vehicle with no distribution cycle",
+          "An open-end vehicle with quarterly subscription and redemption windows",
+          "A closed-end vehicle with a fixed pool of committed capital deployed over an investment period",
+          "A registered investment company subject to Investment Company Act of 1940 constraints",
+          "A permanent capital vehicle that distributes income without a defined fund term",
         ],
         correctAnswer:
-          "A closed-end fund where capital is committed up front but drawn over time",
+          "A closed-end vehicle with a fixed pool of committed capital deployed over an investment period",
       },
       {
         questionId: "d1q2",
         type: "multiple-choice",
-        prompt: "Which is the best description of the GP's role?",
+        prompt:
+          "An LP commits $100 million to a PE fund at final close. Two years later, the GP has called $35 million. Which statement is correct?",
         options: [
-          "Provide all the capital and outsource investment decisions",
-          "Manage the fund, source deals, make investments, and oversee exits",
-          "Act only as a reporting agent for LPs",
-          "Match investor flows with public market liquidity",
+          "The LP has fully satisfied its commitment; no further calls can be made",
+          "The LP owes $35 million — only the amount already called constitutes ongoing obligation",
+          "The LP has $65 million in uncalled commitment remaining, constituting a binding legal obligation",
+          "The remaining obligation is determined by fund NAV at the time of each future call",
         ],
         correctAnswer:
-          "Manage the fund, source deals, make investments, and oversee exits",
+          "The LP has $65 million in uncalled commitment remaining, constituting a binding legal obligation",
       },
       {
         questionId: "d1q3",
+        type: "multiple-choice",
+        prompt:
+          "A buyout fund reports TVPI 1.55x and DPI 0.20x at year 5. Which interpretation is most accurate?",
+        options: [
+          "The fund has outperformed — 1.55x exceeds the historical buyout median TVPI",
+          "Most of the apparent return is unrealized, GP-marked NAV; only 20 cents per dollar has been confirmed via actual distribution",
+          "The fund has returned most LP capital; a DPI of 0.20x represents the majority of net proceeds",
+          "The fund is deep in the harvest phase, with the majority of exits already completed",
+        ],
+        correctAnswer:
+          "Most of the apparent return is unrealized, GP-marked NAV; only 20 cents per dollar has been confirmed via actual distribution",
+      },
+      {
+        questionId: "d1q4",
+        type: "multiple-choice",
+        prompt: "The J-curve in PE fund performance primarily reflects:",
+        options: [
+          "A deliberate return-smoothing policy applied by GP accountants during the investment period",
+          "Sequential losses on early investments later recovered through portfolio follow-on investments",
+          "The drag of management fees and early-period valuation marks before exits generate meaningful distributions",
+          "The mathematical effect of reinvesting portfolio company earnings during the holding period",
+        ],
+        correctAnswer:
+          "The drag of management fees and early-period valuation marks before exits generate meaningful distributions",
+      },
+      {
+        questionId: "d1q5",
+        type: "multiple-choice",
+        prompt:
+          "An LP receives a capital call notice requiring funding in 10 business days during a period of significant public equity market stress. Which risk is most specific to the PE fund model?",
+        options: [
+          "The GP may permanently reduce the fund size if the LP does not respond promptly",
+          "The LP may need to liquidate depressed public equity holdings to meet the call, creating forced selling at a poor time",
+          "The fund's IRR will be permanently impaired proportionally to the LP's response delay",
+          "The GP will substitute another institutional LP within 5 business days if the original LP does not respond",
+        ],
+        correctAnswer:
+          "The LP may need to liquidate depressed public equity holdings to meet the call, creating forced selling at a poor time",
+      },
+      {
+        questionId: "d1q6",
+        type: "multiple-choice",
+        prompt:
+          "After a PE fund's investment period closes, which activity can the GP still conduct?",
+        options: [
+          "Source and close new platform acquisitions if an exceptional opportunity arises",
+          "Call capital for management fees and for follow-on investments in existing portfolio companies",
+          "Transfer uncalled commitment obligations to a successor fund without LP consent",
+          "Extend the investment period by up to 12 months using GP-only written consent",
+        ],
+        correctAnswer:
+          "Call capital for management fees and for follow-on investments in existing portfolio companies",
+      },
+      {
+        questionId: "d1q7",
+        type: "multiple-choice",
+        prompt:
+          "A GP reports a gross IRR of 22% and a net IRR of 15.5% on Fund III. The 6.5 percentage-point gap primarily reflects:",
+        options: [
+          "Currency hedging costs and FX translation losses on cross-border portfolio companies",
+          "The return difference between leveraged buyout investments and organic growth investments within the fund",
+          "Management fees, carried interest, and fund-level expenses reducing LP-level returns",
+          "The difference between IRR calculated on committed capital versus paid-in capital",
+        ],
+        correctAnswer:
+          "Management fees, carried interest, and fund-level expenses reducing LP-level returns",
+      },
+      {
+        questionId: "d1q8",
         type: "short-response",
-        prompt: "Why does the capital call structure matter for LPs?",
+        prompt:
+          "A pension fund CIO asks you to explain why a PE fund's committed capital differs from its invested capital, and why this distinction matters for the pension's liquidity planning. Write two to three sentences as you would say them in that conversation.",
         modelAnswer:
-          "LPs must keep liquid reserves to fund calls on short notice (typically 10 business days). Failure to respond to a capital call can result in severe penalties, including forfeiture of LP interest. The unpredictability of call timing is a real liquidity-management challenge.",
+          "Committed capital is the total legal obligation the pension has agreed to fund over the life of the fund; invested capital is only what has actually been called and deployed to date. The uncalled balance — typically 60–80% of commitment in the first two years — remains a contingent liability that can be drawn with as little as 10 business days' notice. This means the pension must hold liquid reserves against uncalled commitments rather than fully deploying that capital elsewhere, which requires a formal pacing model to manage call timing against portfolio liquidity needs.",
+      },
+      {
+        questionId: "d1q9",
+        type: "short-response",
+        prompt:
+          "Why is it professionally hazardous to compare net IRRs from two PE funds with different vintage years without additional context? What does a more rigorous comparison require?",
+        modelAnswer:
+          "IRR is highly sensitive to cash flow timing and to the macro environment at entry. A fund deploying in 2012–2015 and exiting 2016–2019 benefited from multiple expansion and low financing costs that improved IRR independent of manager skill; a fund deploying in 2007–2010 faced peak entry multiples and the credit crisis. Cross-vintage IRR comparison conflates manager decisions with macro environment. A rigorous comparison requires PME (public market equivalent) methodology — replicating each fund's exact capital call and distribution timing against a public index to isolate the return attributable to the manager over the market alternative. Kaplan-Schoar PME, mPME (Cambridge Associates), and Direct Alpha are the three most common PME methods. Vintage year diversification is the LP-level portfolio implication: no single vintage year should dominate a PE program.",
+      },
+      {
+        questionId: "d1q10",
+        type: "short-response",
+        prompt:
+          "Describe two things you can reliably conclude and two things you cannot reliably conclude from a buyout fund's reported metrics at year four of a 10-year fund life.",
+        modelAnswer:
+          "Reliably concludable: (1) Deployment pace — comparing called capital to the investment period gives a clear signal of whether the GP is behind, on pace, or ahead for new platform investments, which affects follow-on reserve adequacy and new-platform capacity. (2) Confirmed realized value — DPI is cash actually wired to LPs; it is not subject to valuation methodology or GP discretion. Not reliably concludable: (1) Ultimate fund performance — year-4 IRR and TVPI are heavily distorted by J-curve mechanics and GP interim marks; Harris, Jenkinson, and Kaplan (2014) find that interim PE metrics have limited predictive validity before 60–70% of fund economic life has elapsed. (2) Unrealized portfolio quality — RVPI reflects GP-applied ASC 820 fair value methodologies that can diverge materially from eventual exit prices; concentration in a few large companies amplifies this uncertainty.",
+      },
+      {
+        questionId: "d1q11",
+        type: "short-response",
+        prompt:
+          "A first-time LP says: 'We're not concerned about capital calls — we're a large institution and we always have cash available.' What specific structural risk are they underestimating, and what would you tell them?",
+        modelAnswer:
+          "The risk is not simple cash availability but the intersection of three factors: (1) timing correlation — GPs tend to accelerate calls during strong deal environments, which historically overlap with periods when LP liquid portfolios face competing demands; (2) simultaneous calls — an LP running an over-committed portfolio may face multiple GPs calling simultaneously in an active vintage year, concentrating liquidity demand in a short window; (3) severe default penalties — failing to fund a call within the LPA-defined notice period triggers contractual penalties including loss of voting rights, forced sale of LP interest at 50–75 cents on the dollar, and forfeiture of uncalled balance. A functioning PE program requires a formal pacing model, a dedicated unfunded commitment reserve (typically 25–35% of uncalled commitments in liquid instruments), and stress testing of simultaneous call scenarios. 'Having cash available' is not the same as being structurally prepared for PE's specific call mechanics.",
       },
     ],
     sources: [
-      "CFA Institute private markets and manager-selection materials",
-      "ILPA educational materials",
-      "CAIA private equity curriculum references",
+      "ILPA Principles 3.0 — governance, fee transparency, and LP rights (ilpa.org/principles)",
+      "CAIA Association Level II: private equity fund structure and mechanics chapters",
+      "Cambridge Associates Private Equity Benchmark Commentary — performance calibration and PME methodology",
+      "Harris, R., Jenkinson, T., and Kaplan, S. (2014). 'Private Equity Performance: What Do We Know?' Journal of Finance 69(5), 1851–1882",
+      "FASB ASC 820 Fair Value Measurement — PE NAV and interim valuation standards",
+      "IPEV Valuation Guidelines, current edition (ipev.org) — private equity fair value methodology",
+      "CFA Institute: Private Markets and Alternative Investments curriculum",
     ],
   },
 
