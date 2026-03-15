@@ -2092,101 +2092,215 @@ export const lessonContents: LessonContent[] = [
     blocks: [
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "The LPA is the contract governing your entire PE relationship. Most LPs sign it and file it. Sophisticated LPs negotiate it. Knowing which terms move the needle — and which are boilerplate — is essential before committing capital.",
+          "A GP says: 'Our economics are standard market, fully aligned.' The deck highlights a typical management fee and 20% carried interest above an 8% hurdle. But the term sheet includes broad recycling rights, a GP commitment of 0.5% of fund size, two one-year extensions exercisable at GP discretion, and only high-level discussion of clawback mechanics. What should you focus on first?\n\nThe answer is not whether the headline fee and carry are within market range. It is whether the full economic and legal package creates genuine alignment — or just the appearance of it. This lesson moves from the headline language into the mechanics that actually shape LP outcomes.",
+      },
+      {
+        type: "framing",
+        title: "Why this lesson is not about legal drafting",
+        content:
+          "This is not a lesson about negotiating LPA language for its own sake. It is about understanding which economic and governance terms drive:\n- **Net-to-LP outcomes** over the life of the fund\n- **Timing of GP economics** relative to LP realizations\n- **Governance protections** under stress\n- **Flexibility provisions** that may favor the GP disproportionately\n- Whether 'alignment' is structural or presentational\n\nA GP can appear attractive at a high level while still presenting fund economics that shift downside to LPs, allow early carry realization before outcomes are clear, or grant flexibility that is difficult to police once committed. A serious allocator needs the full picture — not just the headline fee and carry.",
       },
       {
         type: "teaching",
-        title: "Economic terms",
+        title: "What the waterfall is trying to do",
         content:
-          "Management fee: typically 1.5–2% of committed capital during the investment period, stepping down to invested capital thereafter. Carried interest: typically 20% above an 8% preferred return (hurdle). Catch-up clause: after LPs receive their hurdle, the GP often receives 100% of the next distributions until they have received 20% of all profits — watch the catch-up rate. Clawback: GP must return excess carry if later losses reduce aggregate profit. Fee offsets: portfolio company monitoring fees and transaction fees should offset management fees — negotiate the offset rate (typically 80–100%).",
+          "A distribution waterfall is the contractual mechanism that determines how cash leaving the fund — from exits, dividends, or asset sales — is allocated between LPs and the GP. It exists to:\n\n- **Return LP capital first** before the GP participates in upside (in most structures)\n- **Compensate LPs for the time value** of their committed capital through a preferred return\n- **Define when and how GP carry begins** — the point at which the GP starts receiving a profit share\n- **Shape incentives over the fund's life** — determining whether the GP is motivated to realize value early, late, or broadly\n- **Provide LP protection** if outcomes across the portfolio are uneven\n\nThe waterfall is not a formality. It is the core economic contract between LP and GP. Every other term in the LPA operates in the context of what the waterfall establishes.",
       },
       {
         type: "teaching",
-        title: "Governance and protection terms",
+        title: "Core waterfall components: the building blocks",
         content:
-          "Key man clause: names the individuals whose departure suspends the investment period, giving LPs a chance to exit or negotiate. No-fault divorce: LP majority can remove the GP without cause — rare to trigger but valuable to have. LPAC (LP Advisory Committee): a subset of large LPs that approves conflicts of interest, valuations, and extensions. Most-favoured nation (MFN): ensures you receive the best terms given to any other LP. Side letters: bilateral agreements granting specific LPs preferred economics or rights — always ask what side letters exist.",
+          "Most PE fund distributions follow a tiered sequence. Each tier must be satisfied before the next begins:\n\n**1. Return of capital:** LPs receive back 100% of their contributed capital — capital calls, management fees, and fund expenses. The GP does not participate until this tier is complete.\n\n**2. Preferred return (hurdle rate):** LPs receive a specified return on their invested capital — commonly 8% per annum compounded on the unreturned balance. This compensates LPs for the time value of committed capital. Not all funds have a preferred return; in some structures (particularly in venture), carry begins immediately.\n\n**3. Catch-up:** After LPs have received their hurdle, the GP typically receives 100% of the next distributions until the GP has received a specified percentage (usually 20%) of total profits — the same carry percentage that will apply to the ongoing split. The catch-up rate determines how quickly the GP reaches their full carry share. A 100% catch-up rate means the GP collects all distributions until they are 'caught up.' A 50% catch-up splits distributions until the same endpoint.\n\n**4. Carried interest split:** Once the catch-up is complete, remaining proceeds are split — typically 80% to LPs and 20% to the GP (the carried interest or 'carry').\n\n**5. Clawback:** If early exits generate carry payments to the GP, but later exits underperform, the GP may have received more carry than they are entitled to on a whole-fund basis. The clawback provision requires the GP to return excess carry previously received. It is a remedy — not a prevention mechanism.",
+      },
+      {
+        type: "visual",
+        title: "Waterfall sequence: how proceeds flow from exit to LP and GP",
+        content:
+          "**Illustrative waterfall — fund with $500M committed, 8% preferred return, 100% catch-up, 20% carry:**\n\nAssume $200M in exit proceeds arrive after $150M of LP capital has been contributed.\n\n- **Tier 1 — Return of capital:** First $150M to LPs until all contributed capital is returned.\n  → After this tier: LPs have received $150M. Remaining proceeds: $50M.\n\n- **Tier 2 — Preferred return:** LP earned 8% annually on the $150M over 4 years ≈ $51M cumulative preferred return. Proceeds of $50M go entirely to preferred return — partially satisfied.\n  → After this tier: LP preferred return balance = ~$1M still outstanding. Remaining proceeds: $0.\n\nIn this scenario, no carry is paid because the preferred return is not yet fully covered — the GP earns nothing on this distribution. The waterfall protects LPs at every tier until conditions are met.",
+        caption:
+          "In practice, a European-style waterfall applies this logic across all distributions from all exits in aggregate. An American-style waterfall applies it deal-by-deal — creating different timing dynamics for when carry is recognized.",
+        whyItMatters:
+          "Allocators sometimes treat the waterfall as a technical matter for legal review. It is not. The waterfall directly determines when the GP begins earning carry, how well LP capital is protected if later deals disappoint, and whether the incentive structure encourages patient value creation or early optimistic exits.",
+        sourceNote:
+          "ILPA Principles 3.0 — waterfall structure and LP protections; CFA Institute alternative investments curriculum — GP/LP economics.",
+      },
+      {
+        type: "teaching",
+        title: "American vs. European waterfall: intuition and implications",
+        content:
+          "The geographic labels are conventions — not geography-specific legal requirements. The critical distinction is the unit of analysis for carry calculation:\n\n**American waterfall (deal-by-deal):**\n- Carry is calculated and paid on each individual deal as it is exited\n- If Deal A returns 4x and Deal B returns 0.5x, the GP receives carry on Deal A's profit even if the fund as a whole is underperforming\n- LPs typically include loss carryforward provisions and clawback obligations as partial protection\n- Benefit for the GP: earlier carry realization, even mid-fund\n- Risk for the LP: carry paid on early wins may not be returned if later deals disappoint\n\n**European waterfall (whole-fund):**\n- Carry is calculated on total LP returns across all deals, after LPs have received back all contributed capital plus preferred return across the entire fund\n- No carry is paid until the fund as a whole has cleared its return hurdles\n- Benefit for the LP: carry timing is tied to aggregate outcomes, not individual deal outcomes\n- Risk for the GP: carry is deferred until late in the fund's life — creating different cash flow timing for GP economics\n\n**Allocator question:** The question is not which is 'better' in the abstract. It is what protections and behavioral incentives each creates for your specific relationship with this GP, in this market environment, at this stage of the fund cycle.\n\nA GP with an American waterfall who has had three consecutive strong exits early in the fund may have already recognized substantial carry — even if several remaining portfolio companies are struggling. That carry recognition is a fact the LP should understand.",
+      },
+      {
+        type: "teaching",
+        title: "Why catch-up mechanics matter more than they appear",
+        content:
+          "The catch-up clause is often treated as technical plumbing — a transition mechanism between the preferred return tier and the ongoing carry split. In practice, it determines:\n\n**How quickly economics swing toward the GP after hurdle conditions are met.** Consider two funds:\n- Fund A: 100% catch-up — after LPs receive the 8% preferred return, the GP receives 100% of distributions until they have received 20% of all profits. Cash flow to LPs halts temporarily.\n- Fund B: 50% catch-up — the GP reaches the same endpoint (20% of total profits), but distributions are split 50/50 during the catch-up period. LPs continue receiving cash while the GP catches up.\n\nThe total carry amount at fund end may be the same, but the timing and LP cash flow experience differ substantially. A 100% catch-up on a large fund with a strong preferred-return balance can generate a significant period where all exit proceeds flow to the GP — which can be disorienting for LPs expecting pro-rata distributions.\n\n**Incentive timing:** A fast catch-up structure creates a strong incentive for GPs to time early exits strategically — generating gains that clear the hurdle and trigger catch-up. This may or may not align with the LP's interest in maximizing long-term value rather than managing carry timing.\n\nA prepared allocator asks: 'Can you illustrate how the catch-up works in practice on your actual distribution history?' rather than accepting 'standard catch-up mechanics' as a complete answer.",
+      },
+      {
+        type: "teaching",
+        title: "Clawback and escrow: from provision to practical protection",
+        content:
+          "**Why clawback exists:** Early realizations in a fund may not represent full-fund economics. If a GP receives carry on profitable early exits but later deals underperform, total LP returns may fall below what carry payments implied. The clawback provision requires the GP to return excess carry to LPs — but only at fund end (or under specific conditions).\n\n**The enforceability gap:** 'A clawback exists' is not sufficient diligence. The critical question is whether the obligation is practically enforceable:\n\n- **GP partner liquidity:** Carry is typically paid to individual GP partners, not held at the firm level. If those individuals have spent, invested, or distributed the carry proceeds over a 10-year fund life, recovering it is difficult.\n- **Tax complication:** GP partners may have paid income taxes on carry received. Recovering after-tax carry requires the LP to chase a gross amount the GP may no longer hold net.\n- **Escrow mechanisms:** Some LPAs require a percentage of carry (typically 25–30%) to be held in escrow until fund end. This creates a real, held reserve against clawback obligation. Without escrow, clawback is a contractual right against a potentially illiquid individual counterparty.\n\n**What a strong clawback structure looks like:** Clear calculation methodology; escrow held by a third party; mechanism for interest or adjustment on escrowed amounts; defined conditions for release; and a guarantee structure (personal guarantee from GP partners, or insurance) if escrow is partial.\n\nAn allocator who accepts 'we have a clawback provision' without asking about escrow and enforceability is not conducting complete diligence.",
+      },
+      {
+        type: "teaching",
+        title: "Recycling: efficiency and expanded exposure",
+        content:
+          "**What recycling is:** Recycling provisions allow the GP to redeploy certain categories of returned capital — early exit proceeds, dividends, or realized gains — rather than distributing them to LPs. This allows the GP to invest more than the committed fund size if proceeds come back early enough to be redeployed within the investment period.\n\n**Why it can be useful:** In a fund with strong early exits, recycling allows capital to be put to work again rather than lying idle. For the LP, this can improve efficiency — capital is working rather than sitting in a money market account.\n\n**Why it requires scrutiny:**\n- **Effective fund size increases.** If $500M committed and $100M is recycled and redeployed, the fund has effectively deployed $600M in capital. LP exposure to the manager and the strategy increases beyond the original commitment.\n- **Timing complexity.** Recycled capital extends the period when LP capital is at risk. The J-curve effect is elongated.\n- **Breadth of discretion matters.** Some LPAs allow recycling of any distribution within a specified period; others restrict it to dividends or capital gains from investments made below cost. The broader the GP's discretion, the more consequential the provision.\n\nAn allocator should ask: How much have you historically recycled across prior funds? Under what circumstances do you exercise the recycling right? How does recycling affect the effective deployment multiple?",
+      },
+      {
+        type: "teaching",
+        title: "Term, extensions, and governance protections",
+        content:
+          "**Fund term and extension rights:** Most PE funds have a 10-year base term, with one or two one-year extensions available. Extensions are common — realizations often take longer than planned, and forcing exits in a compressed window can destroy value. However, extension rights deserve analysis:\n\n- **Who controls the right?** Extensions exercisable at the GP's sole discretion (with or without LP notice) are substantially different from extensions requiring LPAC approval or LP majority consent.\n- **What is the trigger?** Extensions to maximize value on specific remaining assets are more defensible than open-ended extensions that extend the management fee period.\n- **Fee treatment during extension:** Some LPAs allow management fees to continue during extension periods; ILPA best practice recommends stepping down fees to invested capital basis or a reduced rate during extensions.\n\n**Governance protections that matter:**\n\n- **Key-person provision:** Names specific individuals whose departure suspends the investment period, giving LPs time to assess the situation and exercise rights.\n- **No-fault removal:** LP majority (typically 75%+) can remove the GP without cause — rarely triggered but valuable protection.\n- **LPAC rights:** The LP Advisory Committee approves conflicts of interest, valuation methodologies, extensions, and related-party transactions. LPAC composition and authority matter.\n- **Side-letter effects:** Preferred terms granted to specific LPs via side letters may include governance rights not available to others. Always request a list of material side-letter terms and ensure MFN application.",
+      },
+      {
+        type: "teaching",
+        title: "What real alignment sounds like",
+        content:
+          "A GP who says 'our economics are market, we're fully aligned' has said very little. The complete alignment picture requires understanding:\n\n**1. Fee basis and offset:** Is management fee calculated on committed or invested capital? Does it step down post-investment period? What is the offset rate on portfolio company fees?\n\n**2. Carry timing:** American or European waterfall? What catch-up rate? When does the GP realistically begin receiving carry — and does that timing align with LP realizations?\n\n**3. Clawback protection:** Does escrow exist? What percentage? What is the enforcement mechanism? Have they ever had to execute a clawback?\n\n**4. GP commitment:** Is the GP's co-investment material relative to the expected carry they will earn? A 0.5% GP commitment alongside $50M in anticipated carry is not the same alignment signal as a 3% commitment.\n\n**5. Recycling discretion:** How broad is it? Has it been used? How does historical recycling compare to the LPA authority granted?\n\n**6. Extension rights:** Who controls them? Under what conditions would they be used? What is the fee treatment?\n\nA strong answer from a GP explains why each of these is designed the way it is and how it serves LP interests — not just that the terms are 'market.'",
+      },
+      {
+        type: "visual",
+        title: "Alignment is more than fee and carry",
+        content:
+          "**Six dimensions of fund alignment — what to evaluate beyond headline economics:**\n\n| Dimension | Strong LP Signal | Weak LP Signal |\n|---|---|---|\n| **Fee basis** | Steps down to invested capital; 100% fee offset | Committed capital throughout; 80% or lower offset |\n| **Carry timing** | European waterfall; deferred carry | American deal-by-deal; early carry recognition |\n| **Clawback** | Escrow held by third party; defined enforcement | Contractual only; no escrow; personal guarantee absent |\n| **GP commitment** | 3%+ of fund; at-risk alongside LPs | <1% of fund; token commitment relative to carry |\n| **Recycling** | Narrow authority; disclosed historical use | Broad discretion; vague historical disclosure |\n| **Extension rights** | LPAC or LP majority approval required | GP sole discretion; no fee reduction during extension |",
+        whyItMatters:
+          "Fund alignment is not a binary. A fund can be 'market' on every individual dimension and still present a package that disproportionately favors GP flexibility over LP protection. The table above provides an evaluation framework for the full alignment picture — not just whether fee and carry are within typical ranges.",
+        sourceNote:
+          "ILPA Principles 3.0 — alignment best practices; ILPA model LPA provisions; CFA Institute alternative investments curriculum.",
       },
       {
         type: "example",
-        title: "Mini-case: fee offset negotiation",
+        title: "Worked example: evaluating a full economic package",
         content:
-          "A GP earns $5M in monitoring fees and $3M in transaction fees from portfolio companies. If the LPA has an 80% fee offset, $6.4M reduces the management fee. At 100% offset, $8M reduces it. Over a 10-year fund, a 20-percentage-point difference in fee offset rates can cost LPs millions. Large LPs negotiate 100% offsets; smaller LPs may accept 80% without realising the economics.",
+          "A GP presents Fund IV with the following terms:\n- Management fee: 2% on committed capital, stepping down to 1.5% on invested capital after year 5\n- Fee offset: 80% on monitoring and transaction fees\n- Carry: 20% above an 8% preferred return\n- Catch-up: 100% catch-up to GP\n- Waterfall: American (deal-by-deal) with loss carryforward\n- Clawback: standard provision, no escrow discussed\n- GP commitment: $10M on a $2B fund (0.5%)\n- Recycling: GP discretion to recycle any proceeds returned within the first 6 years\n- Extension: two one-year extensions at GP discretion\n\n**What matters most economically:**\nThe American waterfall combined with 100% catch-up means the GP can receive substantial carry on early winners before full-fund economics are clear. The clawback without escrow makes the remedy theoretical rather than practically secured. The 80% offset (vs. 100%) reduces the LP's fee rebate by 20% of all portfolio company fees earned — potentially meaningful at $2B fund scale.\n\n**What creates real LP protection:**\nThe preferred return and the loss carryforward provision in the American waterfall both help. The step-down on fees post-year-5 is a positive. But the clawback without escrow is the most significant protection gap.\n\n**What creates GP flexibility:**\nBroad recycling authority (any proceeds within 6 years) effectively allows the fund to deploy up to $2B+ in capital if early exits recycle. Two extensions at GP sole discretion extend both the investment period and the fee period.\n\n**Where follow-up diligence is needed:**\n1. Can they illustrate the clawback calculation methodology and confirm escrow terms?\n2. How much have they recycled in prior funds — and was the recycled capital productive?\n3. Have they used extensions in prior funds, and on what basis?\n4. What portfolio company monitoring fees have been generated in prior funds, and what was the effective LP rebate at 80% offset?",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: evaluating fund economics",
+        content:
+          "**Weak answer:**\n'The terms look market, so unless they are obviously off-market, it probably doesn't matter much. The fee and carry are standard.'\n\nThis is insufficient. Headline economics within market range tell you very little about actual LP outcomes or alignment quality.\n\n**Strong answer:**\n'Headline economics are only the starting point. I want to understand how carry timing works under the American waterfall — specifically whether the clawback has meaningful practical enforcement through escrow. I want to know how broad the recycling authority is and whether historical use is consistent with the stated authority. I want to confirm that extension rights require LPAC or LP approval, not GP discretion alone. And I want to assess whether the GP commitment — 0.5% of fund size — is material relative to the carry they can earn. On these dimensions, the package looks flexible for the GP and less protected for LPs than the headline suggests.'",
+      },
+      {
+        type: "inference-boundary",
+        title: "What 'standard market terms' does not prove",
+        content:
+          "From 'standard market terms' and 'fully aligned' language in a GP presentation, you cannot infer:\n\n- **That alignment is structurally strong.** Market range economics can coexist with governance provisions that are GP-favorable.\n- **That LP protections are robust.** Clawback exists in almost every fund; the question is whether it is practically enforceable.\n- **That fund flexibility is balanced.** Extension and recycling rights within market ranges can still substantially expand GP discretion.\n- **That economics will work well net of timing effects.** American waterfall funds can generate substantial carry before full-fund outcomes are known — a structural feature, not an alignment failing per se, but a fact LPs should model.\n- **That the GP commitment is meaningful.** A GP commitment percentage that is 'market' may still be small relative to expected carry economics.",
       },
       {
         type: "exercise",
-        title: "Quick exercise",
+        title: "Exercise: five diligence questions on fund economics",
         content:
-          "You are reviewing an LPA with a 100% catch-up clause and an 8% hurdle. Explain to a colleague what this means for the order of distributions between the LP and GP.",
+          "You are reviewing a fund with American waterfall, no escrow on clawback, broad recycling rights, and two extensions at GP discretion. Draft five specific diligence questions to ask the GP, covering:\n\n1. **Carry timing:** How the American waterfall affects carry recognition in the context of their historical exit pattern — when has carry been paid relative to final-fund outcomes?\n2. **Clawback:** The mechanics of clawback calculation, and whether escrow or a personal guarantee structure is available.\n3. **Recycling:** What categories of proceeds are eligible for recycling, how much has been recycled in prior funds, and the maximum effective deployment multiple that broad authority creates.\n4. **Extension rights:** Under what specific conditions extensions have been used previously, and whether LPAC involvement or LP consent is expected in practice.\n5. **GP commitment:** The absolute dollar amount of GP commitment and whether it is funded from personal capital or from prior carry distributions — which is a different alignment signal.",
+      },
+      {
+        type: "meeting-application",
+        title: "In the manager meeting: five questions to ask about fund economics",
+        content:
+          "These questions should feel like a professional conversation, not an interrogation. They signal that you understand the economics deeply:\n\n- 'Can you walk us through the waterfall in practical terms — with an illustrative example of how distributions would flow across the different tiers?'\n- 'Under your American waterfall, how have prior carry payments timed relative to final fund realizations? Have there been situations where carry was paid early that required adjustment?'\n- 'How is the clawback protected in practice — is there an escrow mechanism, and if so, what percentage of carry is held and for how long?'\n- 'Your LPA grants broad recycling authority — how much have you historically recycled across your prior funds, and what was the maximum effective deployment multiple in any prior fund?'\n- 'Under what circumstances would you expect to use the extension rights? In prior funds where you used extensions, was there LP or LPAC consultation in advance?'",
+      },
+      {
+        type: "meeting-application",
+        title: "Allocator application: write a brief fund economics alignment note",
+        content:
+          "After reviewing a fund's term sheet, draft a short note for your investment committee that characterizes the fund economics as one of:\n- **Aligned:** Waterfall structure, clawback enforcement, recycling limits, and extension governance are each designed to protect LP interests alongside reasonable GP incentives\n- **Acceptable but flexible:** Headlines are market; specific provisions expand GP discretion or create timing mismatch, but within manageable bounds given other strengths\n- **Weakly protected:** Structural features (carry timing, clawback gap, broad flexibility rights) shift meaningful risk toward LPs relative to the headline terms\n\nFor each characterization, identify the specific provision(s) driving the conclusion. This is the level of precision expected in a credible LP assessment — not 'terms look market.'",
+      },
+      {
+        type: "source-note",
+        title: "Sources and further reading",
+        content:
+          "- ILPA Principles 3.0 — model LPA provisions, waterfall structures, clawback, and governance\n- ILPA model LPA — detailed template provisions for key economic and governance terms\n- CFA Institute alternative investments curriculum — GP/LP economics and LPA structure\n- CAIA Level II — PE fund economics, waterfall mechanics, and alignment\n- Institutional LP guidance on evaluating GP alignment: ILPA due diligence questionnaire, economic terms section",
       },
     ],
     quiz: [
       {
         questionId: "d11q1",
         type: "multiple-choice",
-        prompt: "What does a 'key man clause' in an LPA typically provide?",
+        prompt:
+          "In a standard PE fund waterfall with an 8% preferred return, which statement correctly describes the order of distributions?",
         options: [
-          "It guarantees the GP hits the target IRR or returns fees",
-          "It allows the GP to replace underperforming portfolio company management",
-          "It suspends the investment period if named key individuals leave the GP",
-          "It limits LP transfers to pre-approved secondary buyers",
+          "GP carry is paid first, then LP return of capital, then preferred return",
+          "LP return of capital is paid first, then preferred return, then catch-up, then ongoing carry split",
+          "Preferred return is paid first, then return of capital, then GP carry on remaining proceeds",
+          "All distributions are split 80/20 between LPs and GP from the first dollar returned",
         ],
         correctAnswer:
-          "It suspends the investment period if named key individuals leave the GP",
+          "LP return of capital is paid first, then preferred return, then catch-up, then ongoing carry split",
       },
       {
         questionId: "d11q2",
         type: "multiple-choice",
-        prompt: "What is the purpose of a GP clawback provision?",
+        prompt:
+          "What is the key difference between an American (deal-by-deal) waterfall and a European (whole-fund) waterfall?",
         options: [
-          "Allow the GP to recall LP capital after distributions",
-          "Require the GP to return carry paid on early wins if aggregate fund profits are later insufficient",
-          "Permit the GP to extend the fund life without LP consent",
-          "Reduce the management fee if the fund misses its return target",
+          "American waterfalls have a higher preferred return hurdle than European structures",
+          "American waterfalls allow carry to be paid on individual profitable exits before the full fund has returned LP capital; European waterfalls require aggregate fund-level hurdles to be cleared first",
+          "European waterfalls allow GPs to recycle capital across all fund investments; American waterfalls restrict recycling",
+          "American waterfalls require LPAC approval before any carry is distributed; European structures do not",
         ],
         correctAnswer:
-          "Require the GP to return carry paid on early wins if aggregate fund profits are later insufficient",
+          "American waterfalls allow carry to be paid on individual profitable exits before the full fund has returned LP capital; European waterfalls require aggregate fund-level hurdles to be cleared first",
       },
       {
         questionId: "d11q3",
         type: "multiple-choice",
-        prompt: "A 100% management fee offset means:",
+        prompt:
+          "A fund has a 100% catch-up clause at the 20% carry level. What happens immediately after LPs receive their full preferred return?",
         options: [
-          "The GP waives its management fee entirely",
-          "All portfolio company fees earned by the GP reduce the LP management fee dollar for dollar",
-          "LPs receive a 100% return of management fees at fund close",
-          "The GP's carry is calculated before deducting management fees",
+          "All subsequent distributions revert to the 80/20 LP/GP split immediately",
+          "The GP receives 100% of distributions until they have received 20% of total fund profits, then the split reverts to 80/20",
+          "LPs receive 50% and the GP receives 50% until the GP has received 20% of total profits",
+          "The fund is wound down and all remaining capital is distributed pro-rata to LPs",
         ],
         correctAnswer:
-          "All portfolio company fees earned by the GP reduce the LP management fee dollar for dollar",
+          "The GP receives 100% of distributions until they have received 20% of total fund profits, then the split reverts to 80/20",
       },
       {
         questionId: "d11q4",
         type: "multiple-choice",
-        prompt: "What is an MFN (most-favoured nation) clause?",
+        prompt:
+          "Why is a clawback provision that lacks an escrow mechanism considered a weaker LP protection than one with escrow?",
         options: [
-          "A clause limiting the GP from investing in foreign jurisdictions",
-          "A guarantee that one LP's economics are at least as favourable as any other LP's",
-          "A provision restricting the GP from raising a successor fund during the investment period",
-          "A term requiring the GP to give LPs first refusal on co-investments",
+          "Without escrow, the GP is not legally obligated to return any carry",
+          "Without escrow, recovering excess carry requires pursuing individual GP partners who may have already spent or invested the proceeds, making enforcement practically difficult",
+          "Without escrow, the preferred return cannot be recalculated at fund wind-down",
+          "Without escrow, the LPAC cannot approve extensions during the fund's life",
         ],
         correctAnswer:
-          "A guarantee that one LP's economics are at least as favourable as any other LP's",
+          "Without escrow, recovering excess carry requires pursuing individual GP partners who may have already spent or invested the proceeds, making enforcement practically difficult",
       },
       {
         questionId: "d11q5",
+        type: "multiple-choice",
+        prompt:
+          "A fund's LPA grants the GP discretion to recycle any proceeds returned within the first six years of the fund. What is the primary LP risk from broad recycling authority?",
+        options: [
+          "Recycling reduces the management fee base, creating a conflict of interest for the GP",
+          "Recycling allows the fund to effectively deploy more capital than committed, increasing LP exposure to the manager and strategy beyond the original commitment",
+          "Recycling extends the preferred return calculation period, reducing GP carry",
+          "Recycling requires LPAC approval and creates governance complexity",
+        ],
+        correctAnswer:
+          "Recycling allows the fund to effectively deploy more capital than committed, increasing LP exposure to the manager and strategy beyond the original commitment",
+      },
+      {
+        questionId: "d11q6",
         type: "short-response",
         prompt:
-          "Why should an LP ask about side letters when reviewing an LPA, and what might they reveal?",
+          "A GP tells you their fund has 'standard market economics with full alignment.' You see a 0.5% GP commitment, an American waterfall with no escrow on clawback, and two extensions at GP discretion. Write a brief response explaining what specific aspects you would investigate further and why 'standard market' is not a sufficient characterization.",
         modelAnswer:
-          "Side letters are bilateral agreements granting specific LPs better terms — lower fees, co-investment rights, more frequent reporting, or redemption rights not in the main LPA. If another LP has a 1.5% management fee while you are paying 2%, or has co-investment rights you do not, your economics are inferior even with an MFN. Side letters expose the real fee structure and the GP's willingness to negotiate. Always ask what side letters exist and request MFN treatment to capture any superior terms.",
+          "Standard market tells me very little about actual alignment. Three areas require specific follow-up. First, the American waterfall means carry can be paid on early exits before full-fund outcomes are known — I want to understand how prior carry payments have timed relative to final realizations, and whether clawback has ever been needed. Without escrow, the clawback is a contractual right against individuals who may not hold liquid assets equal to prior carry received; this is a meaningful gap in LP protection that I would seek to address through escrow or guarantee structure. Second, the 0.5% GP commitment is small relative to the 20% carry the GP can earn on a fund of any material size. A GP making $50M in carry from a $500M fund while committing $2.5M of their own capital is not equally exposed to downside — I would ask whether the commitment can be increased or whether there are other mechanisms tying GP economics to LP outcomes. Third, two extensions at GP discretion extend both the investment period and the fee period without LP oversight — I want to understand what conditions would trigger use and whether LPAC consultation is expected in practice even if not legally required. Together these features create a package that is flexible for the GP but less protected for LPs than the headline suggests.",
       },
     ],
     sources: [
-      "ILPA Principles 3.0 — model LPA provisions",
-      "CFA Institute alternative investments — LP agreement terms",
-      "ILPA fee transparency template and reporting standards",
+      "ILPA Principles 3.0 — waterfall structure, clawback, and LP governance protections",
+      "ILPA model limited partnership agreement — economic and governance provisions",
+      "CFA Institute alternative investments curriculum — GP/LP economics and fund structure",
+      "CAIA Level II — private equity fund economics, waterfall mechanics, and alignment",
+      "ILPA due diligence questionnaire — economic terms and fund structure section",
     ],
   },
 
@@ -2196,33 +2310,123 @@ export const lessonContents: LessonContent[] = [
     blocks: [
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "PE manager selection is where most institutional alpha is made or lost. The dispersion between top-quartile and bottom-quartile PE managers is far wider than in public markets — selecting the wrong GP is not just underperformance, it can be a permanent impairment of capital.",
+          "A GP says: 'We are top-quartile in our vintage year and strategy.' The materials show a net IRR of 19% and a TVPI of 1.85x — both strong by peer comparison. But DPI is 0.65x at year seven, the PME shows the fund modestly above 1.0 versus the relevant public benchmark, and a significant portion of TVPI rests on recent unrealized mark growth from two large portfolio companies.\n\nWhich should you trust more — the quartile ranking or the PME? And what else do you need to know?\n\nThis lesson is about building an answer to that question — not just for this scenario, but for any benchmarking presentation you will encounter.",
+      },
+      {
+        type: "framing",
+        title: "Benchmarking in PE is a toolkit, not a single test",
+        content:
+          "Public-markets analysts ask: 'What is the benchmark?' In PE, that question is harder — and anyone who answers it by pointing to a single peer quartile is giving an incomplete answer.\n\nCredible PE benchmarking draws on multiple tools:\n- **Peer-group quartile rankings** within vintage year and strategy\n- **PME-type public-market equivalents** that control for cash flow timing\n- **Vintage-year comparisons** that acknowledge macro and market context\n- **Realized vs. unrealized quality checks** that separate confirmed cash from GP-estimated marks\n\nEach tool tells you something. Each has limitations the others can partially address. A credible allocator understands what each tool can do — and where it can mislead.",
       },
       {
         type: "teaching",
-        title: "The evaluation framework",
+        title: "Why benchmarking PE is harder than benchmarking public funds",
         content:
-          "Assess four dimensions. People: who are the investment professionals, how long have they worked together, what is the team's continuity? Process: how does the GP source, evaluate, and exit deals — is it repeatable? Performance: what do the numbers say net of fees, and does the value bridge support the narrative? Portfolio: what does the current book look like — concentration, vintage, sector? Each dimension should hold up independently. A great track record with team turnover is not a safe re-up.",
+          "Four structural features make PE benchmarking inherently more complex than time-weighted public market comparisons:\n\n**1. Irregular cash flows.** PE capital is called and returned on an unpredictable schedule determined by deal timing, not calendar quarters. Simple return calculations do not account for the timing of capital deployment or distribution — creating the need for IRR and PME rather than TWR.\n\n**2. Partly estimated valuations.** Interim portfolio company valuations are GP-determined Level 3 estimates — not market prices. TVPI and IRR at any point before full realization include a substantial component of judgment, not market verification.\n\n**3. Less standardized strategy definitions.** 'Buyout' includes small-cap, mid-market, large-cap, and mega-cap strategies with materially different risk profiles, leverage dynamics, and return patterns. Comparing across a broad 'buyout' peer set conflates strategies with different expected return profiles.\n\n**4. Vintage-year and macro dependency.** Entry multiples, financing conditions, and exit environments vary dramatically by vintage year. A 2006-vintage fund faced a different macro backdrop from a 2012-vintage fund — and performance differences partly reflect these structural differences rather than GP skill.",
       },
       {
         type: "teaching",
-        title: "Distinguishing luck from skill",
+        title: "Vintage-year peer groups: the primary benchmarking axis",
         content:
-          "PE track records are short, lumpy, and easily gamed. Key questions: Is performance concentrated in one or two deals (wide dispersion within the fund)? Did the strategy match the macro environment (tail winds, not skill)? How does the fund compare to vintage-year peers on PME? Is the team that produced the track record still intact? Has the strategy drifted — larger fund size, different sectors, more leverage? A GP who produced great returns in a small fund with five partners and now runs a $5B fund with thirty analysts is a different product.",
+          "Vintage year — typically defined as the year of first capital call — is the most important dimension for constructing a valid peer group. Comparing a 2007-vintage fund to a 2012-vintage fund conflates very different entry and exit environments.\n\n**Why vintage year matters so much:**\n- Entry purchase price multiples were 8–10x in 2006–2007 and 6–7x in 2011–2012. Leverage was readily available pre-2008 and constrained through 2011–2012. Exit conditions reflect public market levels at the time of realization.\n- Two funds with the same investment strategy and team quality could produce 1.5x vs. 2.2x TVPI purely from vintage-year differences — not skill differences.\n\n**Limitations of vintage-year benchmarks:**\n- Data providers (Cambridge Associates, Burgiss, Preqin) define vintage year slightly differently — some use first close, others use first investment. Confirm the definition before comparing.\n- Vintage benchmarks average across strategies. A buyout fund and a growth equity fund in the same vintage year face different benchmarks.\n- Data quality varies: smaller or newer funds may report less consistently, introducing selection bias in the benchmark composition.\n\n**The allocator posture:** Use vintage-year peer comparison as the primary anchor, but do not treat it as sufficient in isolation.",
+      },
+      {
+        type: "teaching",
+        title: "Quartiles: useful but not a complete argument",
+        content:
+          "Quartile rankings sort funds within a vintage-year peer group from best (top quartile, Q1) to worst (bottom quartile, Q4). They are simple, widely understood, and embedded in every GP pitch book. They are also insufficient as a standalone benchmark.\n\n**What quartiles do well:**\n- Provide a quick peer-relative position that accounts for vintage-year context\n- Allow LPs to compare multiple managers on a common scale\n- Set expectations for what a 'good' result looks like within a given vintage and strategy\n\n**What quartiles hide:**\n- **Dispersion within buckets:** The spread between Q1 and the top of Q2 may be narrow; the spread within Q1 may be enormous. Quartile rank does not tell you how strongly the fund outperformed its quartile boundary.\n- **Survivor bias:** Failed funds and underperforming funds stop reporting. Data providers show the universe of reporting funds — which systematically excludes the worst outcomes.\n- **Strategy heterogeneity:** 'Top quartile buyout' includes large-cap and small-cap funds, sector-focused and generalist funds, US and European strategies. The peer set may not be genuinely comparable.\n- **Sample size fragility:** In some vintage years, the peer group for a specific strategy is small enough that one or two outlier funds can shift quartile boundaries significantly.\n\n**The key inference limitation:** A top-quartile ranking tells you the fund beat its PE peers — it does not tell you whether it beat the public-market opportunity cost on a like-for-like cash flow basis.",
+      },
+      {
+        type: "visual",
+        title: "The benchmarking toolkit: four tools, four questions",
+        content:
+          "**A credible PE performance assessment uses all four tools:**\n\n| Tool | Primary question answered | Key limitation |\n|---|---|---|\n| **Peer quartile ranking** | How did the fund perform vs. PE peers in the same vintage and strategy? | Does not compare to public alternatives; affected by survivor bias and peer-set composition |\n| **Vintage-year comparison** | How does fund performance look in the context of its macro and market environment? | Does not isolate skill from vintage tailwind/headwind |\n| **PME (public market equivalent)** | Did the fund outperform a liquid public-market alternative given the same cash-flow timing? | Depends on benchmark choice; does not eliminate strategy, leverage, or valuation quality concerns |\n| **Realized vs. unrealized split** | How much of the reported return is confirmed cash vs. GP-estimated marks? | Does not assess whether remaining marks are accurate; requires deal-level investigation |",
+        whyItMatters:
+          "No single tool is sufficient. A top-quartile fund with a PME barely above 1.0 and weak DPI is a materially different situation from a top-quartile fund with a 1.3 PME and DPI above 1.0. Using only quartile rank misses the most important context.",
+        sourceNote:
+          "Cambridge Associates PE benchmark methodology; Burgiss private equity performance data; MSCI PME and Direct Alpha methodology papers.",
+      },
+      {
+        type: "teaching",
+        title: "PME intuition: what it is trying to do",
+        content:
+          "The Public Market Equivalent (PME) asks a specific and useful question: if you had invested in a public-market index with the same timing and magnitude of cash flows as this PE fund — the same calls on the same dates, the same distributions on the same dates — what would your final wealth be? And how does that compare to what the PE fund actually returned?\n\n**The Kaplan-Schoar PME (KS-PME)** is the most widely used formulation:\n- Each capital call is 'invested' in the public index (e.g., S&P 500, Russell 2000) on the call date\n- Each distribution reduces the public index position by the distributed amount on the distribution date\n- At the analysis date, the remaining public index position is the 'terminal value'\n- KS-PME = (PE fund distributions + current NAV) / public index terminal value\n\nA KS-PME of 1.0 means the PE fund returned exactly the same as the index given the same cash flow timing. A PME of 1.2 means the PE fund created 20% more value than the index — after accounting for timing.\n\n**Modified PME (mPME) and Direct Alpha** are variants that address specific technical shortcomings in KS-PME (particularly the limitation that KS-PME implicitly assumes the public market position can become negative in high-distribution scenarios). Direct Alpha converts the PME comparison into an annualized alpha — more intuitive for communicating outperformance in basis points or percentage terms.\n\n**Why PME is more rigorous than peer quartiles for the core question:** It explicitly tests whether PE justified the illiquidity premium versus the liquid alternative. A peer quartile rank cannot answer this question.",
+      },
+      {
+        type: "teaching",
+        title: "What PME can and cannot do",
+        content:
+          "PME is a powerful tool. It is not a complete solution.\n\n**What PME can do:**\n- Control for the timing of cash flows in a way peer quartiles cannot\n- Directly compare PE to the alternative the LP could have chosen (a liquid index)\n- Provide a consistent framework across different fund vintages and sizes\n- Reduce (though not eliminate) the gaming opportunity created by subscription line use — since the underlying cash flows are the basis of the calculation\n\n**What PME cannot do:**\n- Eliminate benchmark selection effects. A PME versus the S&P 500 will differ from a PME versus the Russell 2000 for the same fund. The choice of public benchmark should reflect the actual risk exposure and comparable investment opportunity — which requires judgment.\n- Verify valuation quality. PME calculations typically use the reported NAV as the terminal value. An inflated NAV will inflate the PME.\n- Address leverage and risk differences. A fund using 5x leverage in a buyout portfolio is taking different risk than a public index. PME > 1.0 does not confirm that risk-adjusted returns exceeded the public alternative.\n- Isolate skill from vintage or macro factors. A strong PME in a weak vintage year for public markets may reflect that PE was simply less exposed to the macro headwind — not superior GP skill.\n\n**The integrative view:** Strong benchmarking means asking 'what does the PME show, and is the result credible given everything else I know about this fund?' — not treating PME as a single definitive test.",
+      },
+      {
+        type: "visual",
+        title: "Vintage-year comparison: isolating macro from manager",
+        content:
+          "**Illustrative vintage-year effects on PE performance — buyout strategy:**\n\n| Vintage Year | Entry multiple environment | Exit environment | Leverage availability | Typical outcome range |\n|---|---|---|---|---|\n| 2006–2007 | High (9–11x EV/EBITDA) | Mixed (financial crisis, then recovery) | Abundant, then absent | Wide dispersion; median performance challenging |\n| 2009–2011 | Low (6–8x EV/EBITDA) | Strong (rising multiples through 2014–2018) | Improving | Favorable for most managers; vintage tailwind |\n| 2014–2016 | Moderate-high (8–10x) | Good (pre-COVID) | Favorable | Reasonable; some multiple compression at exit |\n| 2019–2021 | Elevated (10–13x EV/EBITDA) | Challenged (rising rates, multiple compression) | Constrained post-2022 | Early results mixed; full outcomes pending |\n\nA top-quartile result in the 2006 vintage reflects more manager skill than the same quartile rank in the 2010 vintage — the macro environment was dramatically more difficult. PME helps control for this by comparing to the public-market alternative in the same period.",
+        whyItMatters:
+          "Vintage year is not just a benchmark sorting variable. It is a fundamental determinant of PE returns that interacts with manager skill. An allocator who does not adjust for vintage context when interpreting performance is systematically misreading the data.",
+        sourceNote:
+          "Cambridge Associates vintage-year PE benchmark data; Harris, Jenkinson, and Kaplan (2014) — Private Equity Performance: What Do We Know?",
+      },
+      {
+        type: "teaching",
+        title: "Benchmark distortions: six things that can mislead",
+        content:
+          "Six structural distortions affect how PE benchmark comparisons appear:\n\n**1. Survivor bias.** Data providers show the universe of funds that are still reporting. Funds that have been wound down with poor performance, or that stopped reporting, are systematically underrepresented. This inflates the apparent median and compresses the visible quartile spread.\n\n**2. Strategy mismatch.** 'Buyout' is a category, not a definition. Comparing a large-cap buyout fund to a mid-market peer set will produce a misleading quartile rank — the macro, leverage, and multiple dynamics are different.\n\n**3. Weak vintage comparability.** A fund may be classified in a vintage year that does not reflect its actual deployment timing. Funds that closed late in a vintage year may have deployed capital primarily in the next vintage environment.\n\n**4. Subscription line effects on IRR.** Credit facilities used to delay capital calls inflate IRR by compressing the time-weighted denominator. A fund using a 12-month line reporting 22% IRR may have a 'fund-level' IRR of 18–19% on a capital-call basis. Peer benchmarks typically reflect mixed subscription line usage, making direct IRR comparison unreliable. ILPA recommends reporting both with- and without-line IRR.\n\n**5. Heavy reliance on unrealized marks.** A fund reporting strong TVPI early in its life on the basis of GP-determined valuations cannot be compared on the same basis as a later-vintage fund with substantial DPI. The realized vs. unrealized composition of TVPI matters for benchmark validity.\n\n**6. GP-selected comparisons.** GPs choose which benchmark to present and how to define the peer set. A GP who shows their fund as top-quartile versus a broad 'buyout' benchmark while their actual peers are a narrower set of comparable managers may be presenting a favorable but misleading comparison.",
+      },
+      {
+        type: "visual",
+        title: "Top quartile is not enough: five questions behind the ranking",
+        content:
+          "**When a GP presents a top-quartile result, ask these five follow-up questions before drawing conclusions:**\n\n| Question | What it reveals |\n|---|---|\n| **What is the DPI?** | How much of the quartile result is confirmed cash vs. interim marks? A top-quartile fund with DPI 0.4x at year 7 has not yet confirmed the majority of its performance. |\n| **What is the PME vs. a relevant public benchmark?** | Did the fund actually outperform the LP's liquid alternative on a cash-flow-adjusted basis? Quartile rank cannot answer this. |\n| **What is the unrealized share of TVPI?** | If unrealized is >60% of TVPI past year 6, the headline result is substantially dependent on GP mark quality. |\n| **What is the peer set composition?** | Are the 'peers' genuinely comparable — same vintage year, same size range, same strategy focus? Or is the fund comparing favorably against a diluted peer universe? |\n| **What is the concentration of returns?** | Is the top-quartile result driven by broad portfolio performance or concentrated in one or two outlier deals? Concentration reduces the repeatability inference. |",
+        whyItMatters:
+          "A top-quartile ranking answers one question: did this fund outperform the median PE fund in its peer group? It does not tell you whether that result is realized, confirmed, reproducible, or superior to the public-market alternative. Benchmark fluency means knowing which of the five questions matters most for the specific fund and situation.",
+        sourceNote:
+          "ILPA reporting standards; Cambridge Associates benchmark methodology; Kaplan and Schoar (2005) PME paper.",
       },
       {
         type: "example",
-        title: "Mini-case: track record concentration",
+        title: "Worked example: reading a complex benchmark presentation",
         content:
-          "A GP's Fund II shows 2.8x TVPI and 24% net IRR. On inspection, one healthcare deal — a 6x return — accounts for 55% of fund-level profit. Remove it and the fund returns 1.7x. The GP's narrative is 'consistent operational improvement across the portfolio.' The data says otherwise. This single-deal concentration is a yellow flag — great outcome, but not repeatable strategy.",
+          "A GP presents their 2016-vintage mid-market buyout fund at year 7 in 2023:\n- Net IRR: 21% (top quartile vs. Cambridge vintage-2016 mid-market buyout peer set)\n- TVPI: 1.75x (top quartile)\n- DPI: 0.55x (only one significant exit completed)\n- PME vs. Russell 2000: 1.08\n- Six of nine portfolio companies remain unrealized; the two largest account for 60% of current NAV and carry marks of 12x EV/EBITDA vs. sector comparables at 9–10x\n\n**What the quartile result tells you:**\nThe fund is ahead of most peers on reported metrics at year 7. This is a positive signal, particularly if the peer set is genuinely comparable.\n\n**What it does not tell you:**\nDPI of 0.55x at year 7 means only 55 cents per LP dollar has been confirmed in cash. The 1.75x TVPI requires another $0.55+ in distributions per dollar called from remaining unrealized positions — and two of those positions carry marks (12x EV/EBITDA) that appear elevated relative to current sector comparables (9–10x).\n\n**How realized vs. unrealized changes the interpretation:**\nApplying current sector comparable multiples (9.5x, midpoint) to the two large unrealized positions would reduce their reported NAV by approximately 21%. This reduces total TVPI from 1.75x to approximately 1.55x — still top quartile, but materially different from headline. The PME at 1.08 is modest — the fund has outperformed the public alternative, but by a thin margin.\n\n**What follow-up is required:**\n- Specific valuation methodology for the two large positions and how the GP justifies the 12x mark vs. sector comparables\n- Exit pipeline and timeline for the six remaining companies — when does the GP expect to realize the 1.2x in unrealized value?\n- Whether the subscription line has affected reported IRR and what the fund-level capital-call-based IRR looks like\n- Whether the PME benchmark (Russell 2000) is genuinely the correct public comparator for this strategy",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: interpreting a top-quartile result",
+        content:
+          "**Weak answer:**\n'Top quartile means the fund clearly outperformed. That is a strong result — if the strategy is right for our portfolio, this is a manager we should back.'\n\nThis treats the quartile ranking as a complete answer. It ignores the realized vs. unrealized composition, the PME result, and the valuation questions behind the headline.\n\n**Strong answer:**\n'Top quartile is helpful context, but not sufficient. At year 7, DPI of 0.55x means most of the reported outperformance is still in unrealized marks. Two large positions appear marked at a premium to current sector comparables — which would reduce TVPI if marks are normalized. The PME at 1.08 is positive but thin. I want to understand the GP's valuation basis for those two positions, the exit timeline for the remaining portfolio, and what the capital-call-based IRR looks like stripped of subscription line effects. That analysis will tell me whether the top-quartile result reflects realized skill, timing-related mark appreciation, or a combination — and whether it is likely to be confirmed as realizations accumulate.'",
+      },
+      {
+        type: "inference-boundary",
+        title: "What you cannot infer from a quartile ranking alone",
+        content:
+          "From a top-quartile peer ranking, you cannot infer:\n\n- **That manager skill is clearly proven.** Vintage tailwinds, strategy-specific market conditions, and leverage availability all contribute to fund returns independently of GP skill.\n- **That the public-market opportunity cost was beaten.** A fund can be top-quartile vs. PE peers and simultaneously below PME parity vs. a public index. Both statements are frequently true simultaneously.\n- **That performance quality is equal across realized and unrealized components.** A top-quartile TVPI early in a fund's life is primarily a statement about GP marks, not confirmed outcomes.\n- **That returns are repeatable.** Concentration in one or two deals, vintage-year tailwinds, or strategy characteristics that no longer apply (e.g., a sector that has re-rated) may explain the result without implying replicability in the next fund.\n- **That the peer set is genuinely comparable.** Benchmark peer groups are defined by data providers and GPs — the composition may include funds with materially different strategies, sizes, or risk profiles.",
       },
       {
         type: "exercise",
-        title: "Quick exercise",
+        title: "Exercise: explaining top-quartile caution to an investment committee",
         content:
-          "A GP has a strong 15-year track record but raised their current fund at twice the size of the last one and hired 12 new investment professionals in the past three years. What specific risks does this create, and what questions would you ask in the meeting?",
+          "Draft a short paragraph (3–5 sentences) explaining to your investment committee why a top-quartile PE fund with a net IRR of 22%, TVPI of 1.8x, and DPI of 0.45x at year seven might still require substantial caution before committing to the successor fund.\n\nYour paragraph should cover:\n- What the quartile result tells you and what it does not\n- Why DPI of 0.45x at year seven is relevant\n- What additional information would change your assessment\n- How PME context would inform the evaluation\n\nA strong answer will distinguish what is confirmed from what is estimated, note the implication for repeatability inference, and identify the specific diligence steps needed before drawing a conclusion.",
+      },
+      {
+        type: "meeting-application",
+        title: "In the manager meeting: five benchmark questions",
+        content:
+          "These questions focus on what the benchmark data can and cannot confirm:\n\n- 'How are you defining the peer set for the quartile comparison — which data provider, which vintage definition, and does the peer set include both realized and unrealized funds in the same vintage year?'\n- 'What is the realized vs. unrealized mix in the track record? Specifically, for the funds you are presenting as evidence of performance quality, what share of TVPI is DPI?'\n- 'How should we think about PME-type comparisons for your strategy — which public index do you consider the most relevant benchmark, and what does Direct Alpha look like on a capital-call basis rather than subscription-line-affected IRR?'\n- 'Have subscription credit lines affected your reported IRR figures? Can you provide both the reported IRR and the fund-level capital-call-based IRR for comparison?'\n- 'In the parts of your track record where performance is most impressive, what is the most evidence-based explanation — operational improvement, multiple expansion, vintage tailwind, or a combination?'",
+      },
+      {
+        type: "meeting-application",
+        title: "Allocator application: write a benchmark interpretation note",
+        content:
+          "After reviewing a GP's performance presentation, draft a brief benchmark interpretation note that separates the evidence into three columns:\n\n**What the peer data suggests:**\nCharacterize the quartile position, note the vintage year and peer set quality, and identify any survivorship or composition concerns.\n\n**What the PME context suggests:**\nNote the public-market equivalent result, the benchmark chosen, and whether the outperformance is substantial (>1.15 PME), modest (1.05–1.15), or thin (<1.05). Flag whether subscription line usage may have affected the IRR-based PME calculation.\n\n**What remains uncertain:**\nIdentify what cannot be concluded from the available benchmark data — specifically the realized vs. unrealized split, valuation quality in unrealized positions, and whether strong metrics in prior funds imply repeatability in the current fund given team, strategy, and fund-size considerations.\n\nThis three-column structure prevents benchmark data from being treated as more conclusive than it is.",
+      },
+      {
+        type: "source-note",
+        title: "Sources and further reading",
+        content:
+          "- Kaplan, Steven N. and Schoar, Antoinette (2005) — Private Equity Performance: Returns, Persistence, and Capital Flows (PME methodology)\n- Harris, Robert S., Jenkinson, Tim, and Kaplan, Steven N. (2014) — Private Equity Performance: What Do We Know?\n- Cambridge Associates — Private Equity Benchmark Commentary and methodology documentation\n- Burgiss / MSCI — Private Equity Performance Data methodology and PME / Direct Alpha technical papers\n- ILPA — Performance Reporting Standards and subscription line guidance\n- CFA Institute alternative investments curriculum — private capital performance benchmarking\n- CAIA Level II — private equity benchmarking, PME, and peer-group interpretation",
       },
     ],
     quiz: [
@@ -2230,71 +2434,89 @@ export const lessonContents: LessonContent[] = [
         questionId: "d12q1",
         type: "multiple-choice",
         prompt:
-          "Which is the most important indicator that a GP's past performance may not be repeatable?",
+          "A Kaplan-Schoar PME of 1.15 for a PE fund means:",
         options: [
-          "The fund used leverage across most portfolio companies",
-          "Returns were concentrated in one or two outlier deals rather than broad across the portfolio",
-          "The fund's IRR exceeded the PME benchmark",
-          "The GP charged a 2.5% management fee on committed capital",
+          "The fund returned 15% net IRR above its hurdle rate",
+          "The fund created 15% more value than a public-market index given the same cash-flow timing",
+          "The fund's TVPI exceeded the public-market index TVPI by 15 percentage points",
+          "The fund outperformed 15% of its vintage-year peer group on a quartile basis",
         ],
         correctAnswer:
-          "Returns were concentrated in one or two outlier deals rather than broad across the portfolio",
+          "The fund created 15% more value than a public-market index given the same cash-flow timing",
       },
       {
         questionId: "d12q2",
         type: "multiple-choice",
         prompt:
-          "Why does a significant increase in fund size raise due diligence concerns?",
+          "Why is vintage year the primary axis for constructing a valid PE peer benchmark?",
         options: [
-          "Larger funds must invest in more geographies, increasing currency risk",
-          "A larger fund may require larger deals or more portfolio companies, potentially outside the GP's proven strategy",
-          "Management fees decrease proportionally at larger fund sizes",
-          "Larger funds take longer to invest, extending the J-curve",
+          "Vintage year determines the management fee structure applicable to each fund",
+          "Entry multiple environments, financing conditions, and exit windows vary significantly by vintage year, making cross-vintage comparisons systematically misleading",
+          "Data providers only collect performance data organized by vintage year, so no other grouping is possible",
+          "Vintage year determines when the fund's key-man clause expires",
         ],
         correctAnswer:
-          "A larger fund may require larger deals or more portfolio companies, potentially outside the GP's proven strategy",
+          "Entry multiple environments, financing conditions, and exit windows vary significantly by vintage year, making cross-vintage comparisons systematically misleading",
       },
       {
         questionId: "d12q3",
         type: "multiple-choice",
         prompt:
-          "What is 'attribution analysis' and why is it central to PE due diligence?",
+          "A PE fund is top-quartile vs. its vintage-year peers but has a PME of 0.92. What is the correct interpretation?",
         options: [
-          "The process of allocating management fees to individual LPs",
-          "Breaking fund returns into deal-level contributions to assess concentration and consistency",
-          "Attributing performance to macro factors vs. GP skill using regression analysis",
-          "Assigning credit for deals to specific investment professionals on the team",
+          "The fund outperformed both PE peers and public markets",
+          "The fund beat most PE peers but underperformed the relevant public-market index on a cash-flow-adjusted basis",
+          "The PME of 0.92 is within a normal range and does not indicate underperformance",
+          "The fund's IRR must be recalculated using the modified PME methodology before a conclusion can be drawn",
         ],
         correctAnswer:
-          "Breaking fund returns into deal-level contributions to assess concentration and consistency",
+          "The fund beat most PE peers but underperformed the relevant public-market index on a cash-flow-adjusted basis",
       },
       {
         questionId: "d12q4",
         type: "multiple-choice",
         prompt:
-          "A GP's lead partner — who sourced and managed the fund's best deals — retired before the new fund close. How should this affect your assessment?",
+          "Subscription credit lines inflate reported IRR primarily by:",
         options: [
-          "It is irrelevant if the fund's brand and strategy are unchanged",
-          "It is a material key-person event; the track record may not transfer to the remaining team",
-          "It improves the investment team's economics, aligning incentives better",
-          "It only matters if the LPA had a named key man clause referencing that partner",
+          "Reducing management fees charged to LPs during the investment period",
+          "Delaying capital calls while allowing investments to be made, compressing the time period over which IRR is calculated and inflating the annualised rate",
+          "Allowing the GP to recycle capital more aggressively during the harvest phase",
+          "Extending the investment period, giving the GP more time to deploy capital at favorable valuations",
         ],
         correctAnswer:
-          "It is a material key-person event; the track record may not transfer to the remaining team",
+          "Delaying capital calls while allowing investments to be made, compressing the time period over which IRR is calculated and inflating the annualised rate",
       },
       {
         questionId: "d12q5",
+        type: "multiple-choice",
+        prompt:
+          "A 2016-vintage buyout fund shows 1.8x TVPI at year seven but DPI of only 0.45x. Which concern does this combination most clearly raise?",
+        options: [
+          "The fund has paid too much carried interest relative to LP distributions",
+          "The majority of the reported outperformance rests on unrealized GP-estimated marks rather than confirmed cash returns, making the headline result provisional",
+          "The fund has not yet entered its investment period and capital deployment has been slow",
+          "The fund's IRR cannot be calculated reliably without a full DPI of at least 1.0x",
+        ],
+        correctAnswer:
+          "The majority of the reported outperformance rests on unrealized GP-estimated marks rather than confirmed cash returns, making the headline result provisional",
+      },
+      {
+        questionId: "d12q6",
         type: "short-response",
         prompt:
-          "Describe two specific questions you would ask a GP in a manager meeting to test whether their claimed operational value creation is real and repeatable.",
+          "Explain to an investment committee why a PE fund that is top-quartile among its vintage-year peers might still warrant caution. What additional information would give you greater confidence in the result?",
         modelAnswer:
-          "First: 'Can you walk me through the value bridge for your three largest exits — specifically, how much of EBITDA growth was organic versus from acquisitions, and what operational initiatives drove margin improvement?' This tests whether the GP can quantify their impact. Second: 'Which deals in your last fund underperformed and what did you learn from them?' A GP who cannot describe failures credibly has either not made any — unlikely — or is not being candid. Genuine operators can name specific mistakes and explain what changed.",
+          "Top-quartile performance among PE peers tells us the fund outperformed the majority of comparable managers — a positive signal, but not a complete answer. Three limitations are most important. First, quartile rank does not compare PE to the liquid public-market alternative. A fund can be top-quartile vs. PE peers and simultaneously below PME parity — meaning the LP would have done better in a passive index after accounting for the timing of capital calls and distributions. Second, at year seven, we need to understand how much of the TVPI is DPI (confirmed cash) versus GP-determined marks. If DPI is below 0.6x and unrealized marks represent the majority of reported value, the 'outperformance' has not yet been tested by the market. A mark-rich TVPI at year seven is a provisional result, not a confirmed one. Third, quartile rank can reflect vintage tailwinds, strategy-specific multiple expansion, or concentrated deal outcomes rather than repeatable manager skill. To build greater confidence, I would want to see the PME versus a relevant public benchmark on a capital-call basis (excluding subscription line effects), the DPI trajectory and exit timeline for remaining positions, the valuation methodology behind the largest unrealized marks, and deal-level attribution showing whether returns are broad-based or concentrated in one or two outcomes.",
       },
     ],
     sources: [
-      "CFA Institute alternative investments — manager selection framework",
-      "ILPA due diligence questionnaire (DDQ) template",
-      "Cambridge Associates manager research methodology",
+      "Kaplan, S. and Schoar, A. (2005) — Private Equity Performance: Returns, Persistence, and Capital Flows",
+      "Harris, R., Jenkinson, T., and Kaplan, S. (2014) — Private Equity Performance: What Do We Know?",
+      "Cambridge Associates — Private Equity Benchmark Commentary and methodology",
+      "Burgiss / MSCI — PME and Direct Alpha technical methodology papers",
+      "ILPA Performance Reporting Standards — subscription line guidance and fund-level return reporting",
+      "CFA Institute alternative investments curriculum — private capital benchmarking",
+      "CAIA Level II — PE benchmarking, PME, and peer-group analysis",
     ],
   },
 
