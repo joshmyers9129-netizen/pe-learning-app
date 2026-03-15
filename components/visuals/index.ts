@@ -16,8 +16,11 @@ import SubscriptionLineIRR from "./SubscriptionLineIRR";
 import JCurveDPIOverlay from "./JCurveDPIOverlay";
 import IRRvsMOIC from "./IRRvsMOIC";
 import GPUnderwritingFramework from "./GPUnderwritingFramework";
+import CommitmentPacingTimeline from "./CommitmentPacingTimeline";
+import OvercommitmentRiskMap from "./OvercommitmentRiskMap";
+import VintageDiversification from "./VintageDiversification";
 
-export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework };
+export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification };
 
 export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "fund-lifecycle-timeline": FundLifecycleTimeline,
@@ -29,4 +32,7 @@ export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "j-curve-dpi-overlay": JCurveDPIOverlay,
   "irr-vs-moic": IRRvsMOIC,
   "gp-underwriting-framework": GPUnderwritingFramework,
+  "commitment-pacing-timeline": CommitmentPacingTimeline,
+  "overcommitment-risk-map": OvercommitmentRiskMap,
+  "vintage-diversification": VintageDiversification,
 };

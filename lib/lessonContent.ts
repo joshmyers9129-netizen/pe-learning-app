@@ -2712,33 +2712,96 @@ export const lessonContents: LessonContent[] = [
     blocks: [
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "PE is not a one-time allocation — it is a programme. Without deliberate pacing, your PE allocation drifts well below or above target, vintage years cluster dangerously, and liquidity management becomes reactive. Pacing is the operational core of running a PE programme.",
+          "An investment committee is reviewing a request to commit $45M to three well-regarded GPs that are simultaneously in market for new funds. The PE programme already has above-average 2020–2021 vintage concentration, $65M in outstanding unfunded commitments, and distributions have been running lighter than projected for six consecutive quarters. Total PE NAV sits at 11% of portfolio against a 15% target.\n\nThe case for committing: these GPs have strong track records, the programme is below target, and access may not be available in the next fundraising cycle.\n\nThe case for pausing: the unfunded pipeline alone will push NAV toward target over the next 18 months. Vintage concentration is already elevated. Distributions may remain slow. If calls from existing funds accelerate while new commitments also start drawing, the liquidity demand could be material.\n\nWhich argument is right? The question is framed incorrectly. This is a programme-level decision, not a fund-level one. GP quality is one input. Programme state — pacing, vintage balance, unfunded exposure, liquidity — determines the answer.",
+      },
+      {
+        type: "framing",
+        title: "Portfolio construction as programme management",
+        content:
+          "Portfolio construction in PE is not just 'pick good funds.' An allocator who selects strong GPs but ignores pacing, vintage spread, and cash-flow management can still end up with a programme that is overexposed in a downturn, illiquid at the wrong time, or consuming more governance attention than the team can sustain.\n\n**What this lesson covers — and what it does not.** Day 13 covered how to evaluate individual GPs: the four-lens underwriting framework, track-record analysis, team and process signals. Day 15 will cover secondaries as a liquidity and portfolio management tool. This lesson covers neither. It covers the programme layer above individual fund selection: how to pace commitments, manage vintage exposure, and preserve total programme balance over time. You can execute Days 13 and 15 perfectly and still run a poorly constructed programme if the pacing and portfolio architecture are undisciplined.\n\nPE programme management has five distinct dimensions:\n\n1. **Pacing** — how much to commit per year to reach and maintain target exposure without overshooting\n2. **Vintage diversification** — spreading commitments across years to avoid concentration in a single macro or credit cycle\n3. **Cash-flow management** — matching anticipated capital calls and distributions to the portfolio's liquidity needs\n4. **Exposure management** — keeping funded PE within permitted allocation ranges as the total portfolio moves\n5. **Governance capacity** — managing the number of active GP relationships at a level the team can effectively sustain\n\nThe allocator's job in any specific commitment decision is to ask: does this preserve the programme's balance across all five dimensions, or does it strain one or more of them?",
       },
       {
         type: "teaching",
-        title: "Why PE allocation management is different",
+        title: "Why PE programme construction is different",
         content:
-          "Unlike public equities, you cannot buy or sell PE exposure on demand. You commit capital today, it gets drawn over three to five years, and distributions trickle back over seven to twelve years. If you want a 15% PE allocation, you must commit 2–3x your target NAV each cycle — because much of your committed capital is not yet drawn, and distributions from mature funds are simultaneously returning capital. The result: to maintain a 15% allocation, a $1B portfolio needs to commit roughly $60–100M per year.",
+          "In public equities, exposure equals investment. You buy $10M of equity and you have $10M of equity exposure — immediately, and reversibly.\n\nIn PE, commitment and exposure are decoupled — by years.\n\nYou commit $10M today. Over the next three to four years, the GP draws that capital in tranches as it deploys into companies. Meanwhile, distributions from older funds trickle back — but slowly and not on a schedule. At any given moment, the programme has three overlapping fund phases active simultaneously:\n\n- **Draw-down funds (years 1–4 of each vintage):** capital calls arriving, NAV building from deployed capital\n- **Harvest funds (years 5–9):** active portfolio management, some distributions beginning\n- **Mature funds (years 8–12):** final exits, accelerated distributions, NAV winding down\n\nA programme that has committed each year from 2016 to 2024 has nine simultaneous vintages spread across all three phases. Total PE NAV is the aggregate of nine partially-deployed, partially-returned positions — not a clean, point-in-time exposure number.\n\n**Two key implications:**\n\nFirst, you cannot rebalance on demand. If PE overshoots its target, your options are to pause new commitments (slow correction over years) or sell existing positions in the secondary market (faster, but at a discount). There is no sell button for funded PE.\n\nSecond, your current exposure was shaped by decisions made three to five years ago. The fund committed in 2020 is calling capital today. Commitment decisions made in 2025 will shape the programme through 2033 and beyond. Pacing discipline compounds — and so do pacing errors.",
       },
       {
         type: "teaching",
-        title: "Building a pacing model",
+        title: "The pacing model: what it does and how it works",
         content:
-          "A pacing model projects forward NAV by modelling: (1) future capital calls from existing commitments (typically 20–30% of unfunded commitment per year), (2) future distributions from existing holdings (typically low in years 1–4, peaking in years 5–8), (3) planned new commitments. The goal is a stable NAV near your target as a percent of total portfolio. Vintage year diversification — committing across several consecutive years — reduces concentration risk from a single macro cycle.",
+          "A **pacing model** is the quantitative core of PE programme management. It does three things:\n\n1. **Projects future capital calls** from existing unfunded commitments. Typical call pattern: 20–30% of unfunded commitment per year in years 1–3 of each fund, declining in years 4–5.\n2. **Projects future distributions** from existing positions. Low in years 1–4 of each vintage, accelerating in years 5–8, trailing off in years 9–12.\n3. **Models new commitment requirements** needed to keep total PE NAV near its target percentage of the total portfolio.\n\n**The overcommitment ratio — why it is structurally necessary:**\n\nBecause capital is drawn slowly and returned slowly, allocators must commit more than their incremental target NAV increase in any given year. This is not recklessness. It is structural arithmetic.\n\nIntuition: if you want a 15% PE allocation and commit exactly enough to fill the gap each year, that capital will spend three to four years in the unfunded queue before becoming NAV. Meanwhile, distributions from older funds are simultaneously returning capital. A programme that commits only the target increment will be persistently below allocation.\n\n**A worked numerical example:**\n\nA $2B endowment targets 12% PE allocation — $240M NAV. Current programme state:\n\n- PE NAV: $185M (9.25% of total)\n- Unfunded commitments: $140M\n- Expected call rate on unfunded: 28% per year → approximately $39M of calls expected in the next 12 months\n- Expected distributions: approximately $12M (exit environment is slow)\n- Net projected NAV change from existing pipeline alone: approximately +$27M\n\nWithout any new commitments, projected NAV in 12 months: approximately $212M — still below the $240M target, but the programme is moving toward it organically.\n\nNow ask: how much new commitment to layer in? If each new $25M commitment draws at 28%/year, it contributes roughly $7M in NAV in year one. Committing $50M of new capital would add approximately $14M in additional first-year NAV, projecting total NAV to roughly $226M — modestly below target but on trajectory.\n\n**Key pacing principle:** Target the programme to approach the allocation over two to three years, not in a single year. Committing heavily in one year to hit target immediately creates vintage concentration and risks overshooting when all those call tranches arrive simultaneously.\n\n**When a pacing model goes stale:**\n\n- Call rates accelerate (GPs deploy faster than modeled due to deal flow or fund-end pressure)\n- Distribution rates disappoint (exit markets freeze, IPO windows close, GPs extend holding periods)\n- Total portfolio value declines sharply (denominator effect inflates PE weight automatically)\n- Fund-level surprises (a GP extends its commitment period, delays capital calls, or reduces fund size)",
+      },
+      {
+        type: "visual",
+        title: "Commitment Pacing Timeline",
+        visualId: "commitment-pacing-timeline",
+        caption:
+          "Each vintage fund progresses through three phases over its life. At any given point in time, a PE programme has vintages in all three phases simultaneously — meaning capital calls and distributions from different cohorts overlap. Gaps in annual commitment create future gaps in funded NAV.",
+      },
+      {
+        type: "teaching",
+        title: "Overcommitment: mechanics and failure modes",
+        content:
+          "**How overcommitment creates capital efficiency in normal environments:**\n\nPE funds rarely call capital all at once. A $50M commitment made today might call $8M in year one, $14M in year two, $18M in year three, and $10M in years four and five. Meanwhile, distributions from earlier vintages are returning capital. In equilibrium, the cash demands and cash returns roughly offset, and funded NAV stays near target without the allocator holding excess cash as a buffer.\n\nThe overcommitment ratio — total committed but unfunded capital divided by current PE NAV — reflects how much 'pipeline' the programme has ahead of it. Ratios of 50–80% are common in well-managed programmes. Ratios above 100% warrant stress-testing.\n\n**Three conditions that break equilibrium:**\n\n**1. Call acceleration.** When multiple funds enter active deployment simultaneously — or GPs face fund-end deployment pressure — calls cluster. An allocator with $200M in unfunded commitments expects perhaps $56M in calls next year. If market conditions shift and all funds accelerate deployment, actual calls could jump to $80–90M. This is a liquidity strain, not a mathematical abstraction.\n\n**2. Distribution disappointment.** Exit markets are cyclical. When public markets weaken, IPO windows close, strategic buyers pause, and GPs extend holding periods. The $40M in distributions an allocator projected for the year may arrive as $12M. The portfolio is not declining — but PE exposure measured as a percentage of total assets creeps upward as PE NAV fails to convert to cash.\n\n**3. The denominator effect.** If public equities fall 25% and PE NAV is stable (or partially marked down due to lagged valuations), PE allocation as a percentage of total portfolio rises automatically — without new commitments or unusual call activity. A programme at 14% PE may suddenly show 18–19% against its target.\n\n**The compound scenario:**\n\nThese three conditions often arrive together in market stress. The 2008–09 period produced exactly this combination for over-committed allocators: 2006–2007 vintage funds were mid-deployment and accelerating calls; exit markets froze and distributions stopped; equity portfolios declined 40–50%. Endowments and pension funds that had committed at 3–4x overcommitment found themselves funding calls from rapidly diminishing liquidity. Some were forced to sell PE positions in the secondary market at 50–60 cents on the dollar.\n\n**Early warning signs that overcommitment is becoming dangerous:**\n\n- Unfunded commitments exceed 80% of current PE NAV\n- No meaningful distributions expected in the next 12 months\n- Multiple funds in simultaneous early deployment phase\n- Broader portfolio has declined or is illiquid in other segments\n- No secondary market liquidity cushion modeled in the stress case",
+      },
+      {
+        type: "visual",
+        title: "Overcommitment Risk Map",
+        visualId: "overcommitment-risk-map",
+        caption:
+          "The three overcommitment failure modes individually are manageable. The compound scenario — call acceleration, distribution freeze, and denominator decline arriving simultaneously — is what produced genuine illiquidity for over-committed allocators in 2008–09.",
+      },
+      {
+        type: "teaching",
+        title: "Vintage diversification and concentration beyond vintage",
+        content:
+          "**Why vintage spread matters:**\n\nEach vintage year inherits the entry conditions of its period — valuation multiples, leverage availability, sector cycles, interest rate levels. These conditions differ meaningfully across years and affect the entire cohort of funds that invested during that window.\n\nThe contrast is instructive: 2006–2007 vintage buyout funds entered at peak leverage (7–8x debt/EBITDA was common) and peak multiples. When the financial crisis arrived, these funds faced financing haircuts and mark-downs that were difficult to escape regardless of GP skill. Average performance for these vintages significantly trailed 2009–2011 vintages, which entered at depressed multiples and tight deal competition. A diversified allocator owned both; a concentrated one absorbed the full cycle.\n\n**Practical vintage diversification:**\n\nA disciplined programme commits across consecutive years so that:\n\n- No single vintage exceeds 25–30% of total committed capital\n- At least three to four distinct macro entry periods are represented\n- The programme is not dependent on one credit cycle's performance to achieve total return targets\n\n**Concentration beyond vintage — four additional dimensions:**\n\n**GP concentration.** More than 25–30% of a programme committed to a single GP creates key-person risk, strategy concentration, and governance leverage (the GP knows you are captive). Two or three GPs should not dominate a programme.\n\n**Sector concentration.** Heavy weighting toward technology buyouts (common in the 2018–2022 allocation cycle) or healthcare inherits that sector's cycle exposure. A 2021 tech-heavy portfolio entered at EBITDA multiples of 20–25x; normalization has been painful across the cohort. Sector spread reduces correlated drawdown.\n\n**Geography concentration.** North American-only exposure is the most common blind spot in institutional PE programmes. European PE has different entry conditions, sector mix, and valuation dynamics. UK, German, and Nordic mid-market buyout has often diverged from US large-cap cycles, providing diversification value.\n\n**Style / strategy concentration.** A programme entirely in large-cap buyout misses the return characteristics of lower middle market, growth equity, and venture. These strategies have different risk, liquidity, cycle sensitivity, and return profiles. Depending on one strategy for all PE return means accepting that strategy's cycle risk fully.\n\n**What good diversification looks like:** No single vintage, GP, sector, or geography dominates more than 30% of committed capital. Not a constraint that forces compromise on quality — a structural discipline that prevents programme fragility.",
+      },
+      {
+        type: "visual",
+        title: "Vintage Diversification",
+        visualId: "vintage-diversification",
+        caption:
+          "Vintage concentration is visible in the commitment history. A programme with 49% of capital in 2020–2021 vintages has meaningful entry-condition concentration — not a GP-selection problem but a pacing one. Adding 2022–2024 vintage commitments improves the spread, but only if pacing resumes.",
       },
       {
         type: "example",
-        title: "Mini-case: over-commitment problem",
+        title: "Worked example: a programme at a decision point",
         content:
-          "An endowment targets 20% PE on a $500M portfolio ($100M target NAV). In 2021, the CIO commits $120M to new funds — excited by strong 2020 vintages. Existing funds accelerate capital calls. PE NAV spikes to 28% of the portfolio as public markets fall in 2022. The endowment is illiquid and over-allocated to PE. It cannot rebalance. The error was committing based on enthusiasm rather than a model that accounted for existing unfunded commitments.",
+          "**The scenario:**\n\nA $1.5B multi-asset portfolio targets 15% PE allocation ($225M NAV). The investment team is reviewing the programme in Q4 2024 and considering committing $50M to three favored GPs that are simultaneously fundraising.\n\n**Current programme state:**\n\n- PE NAV: $198M (13.2% of total)\n- Unfunded commitments: $160M across 8 funds\n- Vintage spread: 2020 ($75M), 2021 ($85M), 2022 ($45M), 2023 ($30M), 2024 ($25M just closed)\n- Expected calls from unfunded: approximately $45M over next 12 months (28% call rate)\n- Expected distributions: approximately $10M (2020–2021 vintage funds are in active portfolio management, exits limited)\n\n**Step 1: Run the pacing model without new commitments.**\n\nStart: $198M NAV. Add $45M in calls (funded NAV grows). Less $10M in distributions (capital returned). Projected NAV in 12 months: approximately $233M — already above the $225M target without committing anything new. The unfunded pipeline fills the gap.\n\n**Step 2: Assess vintage concentration.**\n\nThe 2020–2021 vintages represent $75M + $85M = $160M of the total $260M committed so far, or 62% of the programme. That is heavy concentration in a single macro entry period — high multiples, compressed yields, elevated leverage. Adding $50M in 2024 vintage commitments would reduce 2020–2021's share of a larger programme to approximately 49%, which is an improvement. The vintage diversification argument for committing is real.\n\n**Step 3: Stress-test overcommitment.**\n\nCurrent unfunded: $160M. Current PE NAV: $198M. Unfunded-to-NAV ratio: 81% — elevated but not dangerous. If $50M of new commitments are added, unfunded rises to $210M. Expected calls from this larger base at 28% = approximately $59M per year. Plus the new commitments beginning to call: total perhaps $65–70M in expected annual calls. On a $1.5B portfolio with other liquid assets, this is manageable — but it requires explicit liquidity confirmation, not assumption.\n\n**What this analysis shows:**\n\nCommitting is defensible in modest size — particularly because it improves vintage spread and the overcommitment ratio remains within acceptable range. Committing the full $50M at once is more aggressive than needed: the pacing model shows the programme will slightly exceed target NAV even without new commitments. A staged approach — $25–30M committed now across the highest-conviction GP, with the remainder deferred to Q2 2025 — captures the vintage diversification benefit while maintaining pacing discipline.\n\n**What data matters most before deciding:**\n\n- Formal or informal call schedule guidance from the 8 existing GPs (to refine the 28% call-rate assumption)\n- Exit pipeline from the 2020–2021 vintage funds (to pressure-test the $10M distribution assumption)\n- Liquidity position elsewhere in the $1.5B portfolio (to confirm the $65–70M call capacity is actually available)\n- GP governance bandwidth: can the investment team effectively monitor 11 active GP relationships?",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak answer vs. strong answer",
+        content:
+          "**Weak:** 'These are high-quality GPs that we have backed successfully in prior cycles. We are below our 15% PE target. We should commit the full $50M while we have access.'\n\n**Why it's weak:** GP quality and below-target allocation are relevant inputs — not a decision. This answer ignores the pacing model result (which shows the programme will exceed target without new commitments), the vintage concentration problem (which already exists and does not automatically justify more of the same), the overcommitment stress test (which the team has not run), and the liquidity confirmation (which has not been done).\n\n**Strong:** 'Access matters and the vintage diversification argument is real — 2024 vintage commitments would reduce concentration in the 2020–2021 cohort. But the pacing model shows we will reach target NAV organically over 12 months from existing unfunded commitments. The decision is not whether to commit but how much and when. A staged commitment of $25–30M to the highest-conviction GP now, with a formal pacing review in Q1 2025 before committing the remainder, preserves access, improves vintage balance, and keeps overcommitment within stress-tested bounds. The full $50M in one quarter creates unnecessary urgency and skips a liquidity check we should be running regardless.'\n\n**What distinguishes the strong answer:** It starts from programme state, not GP attractiveness. It treats pacing discipline as the governing constraint, not enthusiasm. It proposes a decision that is sized to the evidence rather than the maximum available opportunity.",
+      },
+      {
+        type: "inference-boundary",
+        title: "What you cannot infer",
+        content:
+          "**From strong GP quality alone:**\n- That the programme should accelerate commitments. Programme capacity is determined by programme state — NAV, unfunded exposure, vintage spread, liquidity — not by GP attractiveness alone.\n- That previous strong performance from a GP predicts call timing or distribution timing in the next fund. GP quality and GP deployment speed are different variables.\n\n**From being below target allocation:**\n- That any volume of new commitment is safe. The unfunded pipeline often fills the gap organically. Committing aggressively when the pipeline is already working toward target is a pacing error, not a correction.\n- That the target allocation itself is still appropriate. If the total portfolio has changed in composition, risk tolerance, or liquidity needs since the PE target was set, the target may need recalibration before new commitments are made.\n\n**From recent distribution improvement:**\n- That distribution assumptions have normalized. One or two strong exits in a quarter do not reset the pacing model. Distribution timing requires GP-level pipeline analysis, not extrapolation from recent results.\n\n**From a slow exit environment:**\n- That distributions will remain slow forever, justifying aggressive commitment to build NAV. Exit markets recover. Committing heavily because distributions are currently slow can cause overshooting when exits resume and both distributions and new fund calls arrive simultaneously.",
       },
       {
         type: "exercise",
-        title: "Quick exercise",
+        title: "Exercise: write a short recommendation",
         content:
-          "You manage a $2B endowment targeting 12% PE allocation ($240M NAV). Current PE NAV is $160M, and you have $80M in unfunded commitments. How much additional commitment capacity do you have before hitting your target allocation, and what factors would you consider?",
+          "Using the scenario from the worked example above, write a 150–250 word recommendation on whether to accelerate (commit the full $50M now), maintain (commit $25–30M now and defer the rest), or slow (commit nothing or defer all commitments).\n\nYour recommendation must address:\n\n1. What the pacing model shows about whether new commitments are needed to reach target\n2. How the vintage concentration analysis affects your recommendation\n3. What the overcommitment stress test suggests about safe commitment capacity\n4. The one piece of information that would most change your recommendation\n\nThere is no single correct conclusion. A well-reasoned 'maintain' and a well-reasoned 'accelerate with conditions' are both defensible. A well-reasoned 'slow' requires specific evidence. The quality of your reasoning — whether it starts from programme state, uses the pacing model, and treats uncertainty explicitly — matters more than the conclusion you reach.",
+      },
+      {
+        type: "meeting-application",
+        title: "Questions for any PE programme review",
+        content:
+          "Before any investment committee meeting where PE pacing is on the agenda, the allocator should be able to answer these questions without referring to the manager presentation:\n\n- What is our current PE NAV as a percentage of total portfolio, and what is the formal target? How has that percentage moved over the past four quarters?\n- What is our total unfunded commitment balance? At the expected call rate, how much NAV will capital calls add over the next 12 and 24 months — without any new commitments?\n- How are our existing commitments distributed by vintage year? Does any single vintage exceed 25–30% of total committed capital?\n- What are our distribution assumptions for the next 12–24 months? Are those assumptions based on GP pipeline guidance or on a default rate assumption?\n- What happens to our PE allocation percentage if the broader portfolio declines 20%? At what total portfolio level does our PE weight breach its upper policy bound?\n- How many active GP relationships is the investment team currently monitoring? Can the team add new GP relationships without compromising monitoring quality on existing ones?\n\n**For a portfolio construction note:**\n\nState: current PE NAV as % of portfolio, total unfunded exposure, vintage spread, and whether distributions are tracking to assumptions.\n\nRecommend: whether pacing should accelerate, maintain, or slow — with explicit reference to a pacing model projection, not qualitative enthusiasm.\n\nFlag: what information is currently missing or stale that would change the recommendation if it were updated.",
+      },
+      {
+        type: "source-note",
+        title: "Sources",
+        content:
+          "CFA Institute, Private Markets and Alternative Investments (CFA Program Curriculum, Level III) — allocation sizing, pacing frameworks, and overcommitment mechanics. ILPA, LP Commitments and Pacing: Governance Considerations (2020) — best practices for unfunded exposure management, call-rate modeling, and stress testing of overcommitment ratios. Preqin, Global Private Equity & Venture Capital Report (annual, see vintage-year performance appendix) — vintage year performance dispersion and commitment cycle data. Yale Endowment Annual Reports 2008–2014 — PE pacing framework and crisis-period overcommitment experience. David Swensen, Pioneering Portfolio Management (2000, rev. 2009) — foundational treatment of illiquid asset pacing, overcommitment rationale, and the role of vintage diversification in institutional PE programmes.",
       },
     ],
     quiz: [
@@ -2746,69 +2809,73 @@ export const lessonContents: LessonContent[] = [
         questionId: "d14q1",
         type: "multiple-choice",
         prompt:
-          "Why must a PE programme commit more than its target NAV in any given year?",
+          "An investment committee believes its PE programme is on track because total committed capital — funded NAV plus unfunded commitments — already exceeds the target allocation dollar amount. What critical variable does this reasoning ignore?",
         options: [
-          "Because PE funds charge fees on committed rather than invested capital",
-          "Because capital is drawn over years and distributions return capital simultaneously, requiring over-commitment to maintain target exposure",
-          "Because vintage year diversification requires investing in multiple strategies per year",
-          "Because PE NAV is reported on a lag and is systematically understated",
+          "Management fees on unfunded commitments reduce effective committed capital below the nominal figure",
+          "Distributions from existing funds are simultaneously returning capital, meaning net NAV depends on both calls arriving and distributions departing — committed capital alone does not predict future funded NAV",
+          "PE fund valuations are marked to market quarterly, which automatically adjusts the programme toward target without additional commitments",
+          "Vintage diversification requirements mandate that each new commitment must replace a maturing fund of an equivalent strategy",
         ],
         correctAnswer:
-          "Because capital is drawn over years and distributions return capital simultaneously, requiring over-commitment to maintain target exposure",
+          "Distributions from existing funds are simultaneously returning capital, meaning net NAV depends on both calls arriving and distributions departing — committed capital alone does not predict future funded NAV",
       },
       {
         questionId: "d14q2",
         type: "multiple-choice",
-        prompt: "What is the primary purpose of a PE pacing model?",
+        prompt:
+          "A $2B endowment targets 12% PE allocation. Current PE NAV is $190M and unfunded commitments are $130M. If the call rate on unfunded commitments is 25% per year and distributions are negligible, approximately how much PE NAV will capital calls add over the next 12 months?",
         options: [
-          "To calculate the IRR of the total PE programme",
-          "To project future NAV and commitment needs to keep the allocation near its target",
-          "To determine the optimal number of GPs in the PE portfolio",
-          "To compare PE returns to the public-market benchmark each quarter",
+          "$47.5M (25% of current PE NAV)",
+          "$32.5M (25% of unfunded commitments)",
+          "$24.0M (12% of unfunded commitments)",
+          "$19.0M (10% of current PE NAV)",
         ],
         correctAnswer:
-          "To project future NAV and commitment needs to keep the allocation near its target",
+          "$32.5M (25% of unfunded commitments)",
       },
       {
         questionId: "d14q3",
         type: "multiple-choice",
-        prompt: "Vintage year diversification in a PE programme is designed to:",
+        prompt:
+          "Which of the following best describes the denominator effect on a PE programme?",
         options: [
-          "Maximise the number of GPs in the portfolio",
-          "Reduce concentration in a single macro or credit cycle that affects entry valuations",
-          "Ensure all funds in the programme mature in the same year",
-          "Comply with ERISA diversification requirements for pension funds",
+          "PE NAV declines as GPs mark down portfolio companies in a downturn",
+          "PE allocation as a percentage of total portfolio rises when other asset classes decline, even without new PE commitments or unusual call activity",
+          "PE distributions are reinvested in other asset classes, shrinking the total PE numerator",
+          "PE managers charge higher management fees when the portfolio denominator declines",
         ],
         correctAnswer:
-          "Reduce concentration in a single macro or credit cycle that affects entry valuations",
+          "PE allocation as a percentage of total portfolio rises when other asset classes decline, even without new PE commitments or unusual call activity",
       },
       {
         questionId: "d14q4",
         type: "multiple-choice",
         prompt:
-          "An endowment is significantly over-allocated to PE versus its target. What is the most practical near-term option?",
+          "Vintage year diversification in a PE programme primarily protects against which of the following?",
         options: [
-          "Immediately redeem LP interests in all underperforming funds",
-          "Pause new commitments and wait for distributions from maturing funds to reduce NAV",
-          "Increase the target allocation to match the current exposure",
-          "Request emergency capital calls from portfolio company management",
+          "GP key-person risk from leadership changes at specific managers",
+          "Regulatory concentration limits imposed by ERISA or similar frameworks",
+          "Concentration in a single entry-price, leverage, and financing-cycle environment",
+          "Currency and foreign-exchange exposure from non-domestic PE funds",
         ],
         correctAnswer:
-          "Pause new commitments and wait for distributions from maturing funds to reduce NAV",
+          "Concentration in a single entry-price, leverage, and financing-cycle environment",
       },
       {
         questionId: "d14q5",
         type: "short-response",
         prompt:
-          "Explain the concept of 'over-commitment' in PE portfolio management and the risk it creates.",
+          "A PE programme is below its 15% target allocation, and three quality GPs are simultaneously fundraising. A colleague argues: 'We are below target and have access to strong managers — we should commit aggressively now.' Explain why this reasoning is incomplete, and describe what analysis would be required to determine the appropriate commitment amount.",
         modelAnswer:
-          "Over-commitment means pledging more capital to PE funds than you expect to have to fund at any one time, relying on the fact that calls and distributions rarely align to create a funding shortfall. It allows LPs to maintain target NAV without holding excess cash. The risk is a liquidity squeeze: if capital calls accelerate (multiple funds deploying simultaneously), distributions slow (no exits in a downturn), and the rest of the portfolio declines, the LP may struggle to fund calls. The 2008–09 crisis exposed many endowments that had over-committed aggressively and then faced simultaneous calls with no liquidity to fund them.",
+          "Being below target and having access to strong managers are relevant inputs, but they do not determine the appropriate commitment amount. The required analysis starts with the pacing model: project forward PE NAV using expected call rates from existing unfunded commitments and expected distributions from mature funds. If the unfunded pipeline will organically push NAV toward target over 12–18 months, committing aggressively now risks overshooting the target when both existing and new calls arrive simultaneously. Second, assess vintage concentration: if the programme is already heavily concentrated in recent vintages, more commitments of the same vintage reduce rather than improve diversification — unless they represent genuinely different entry conditions. Third, run an overcommitment stress test: what happens to liquidity if calls accelerate by 50% and distributions remain at current depressed levels? Finally, assess governance capacity: adding new GP relationships has a monitoring cost. The conclusion — how much to commit, to which GPs, and with what staging — should follow from this analysis, not from enthusiasm about access or the fact of being below target.",
       },
     ],
     sources: [
-      "CFA Institute alternative investments — portfolio construction and pacing",
-      "ILPA model LP reporting and pacing guidance",
-      "Yale Endowment annual reports — PE pacing framework",
+      "CFA Institute, Private Markets and Alternative Investments (CFA Program Curriculum, Level III) — allocation sizing and pacing",
+      "ILPA, LP Commitments and Pacing: Governance Considerations (2020)",
+      "Preqin, Global Private Equity & Venture Capital Report — vintage year performance data (annual)",
+      "Yale Endowment Annual Reports 2008–2014 — PE pacing framework and crisis-period overcommitment",
+      "David Swensen, Pioneering Portfolio Management (2000, rev. 2009) — illiquid asset pacing and overcommitment rationale",
     ],
   },
 
