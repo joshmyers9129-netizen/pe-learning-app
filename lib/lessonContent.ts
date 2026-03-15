@@ -2526,105 +2526,173 @@ export const lessonContents: LessonContent[] = [
     blocks: [
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "PE funds do not have a Bloomberg ticker. Benchmarking them requires deliberate methodology choices — and those choices dramatically affect whether a fund looks good or average. Understanding how benchmarks work prevents you from being misled by selective GP comparisons.",
+          "A GP arrives with a strong brand, a polished pitch deck, and a few standout realized winners. The partners have decades of experience, the strategy sounds differentiated, and the last fund was oversubscribed. The team asserts that their process is disciplined and repeatable.\n\nWhat evidence would you actually need before concluding this GP is genuinely strong rather than well-marketed?\n\nThis lesson is about building a manager-underwriting framework that prevents you from being sold — by brand, by fundraising momentum, or by a few headline numbers — when the underlying case for a commitment is still unresolved. Manager selection is where much of allocator value is created or lost. A repeatable evaluation framework is the tool that separates signal from noise.",
+      },
+      {
+        type: "framing",
+        title: "A framework for underwriting managers, not just liking them",
+        content:
+          "The right question is not 'do we like this team?' It is: what explains this GP's outcomes, how repeatable is that process, and what risks could break it?\n\nThe standard practitioner framework organizes GP evaluation into four lenses — each designed to catch a different failure mode:\n\n**1. People** — decision-making structure, incentives, ownership, and succession\n**2. Process** — sourcing edge, IC discipline, walk-away behavior, and repeatability\n**3. Portfolio construction** — concentration, reserves, sizing discipline, and fund structure fit\n**4. Evidence quality** — realized depth, coherence between claimed edge and actual outcomes\n\nA GP can look strong on three lenses and have a disqualifying weakness in the fourth. The framework prevents you from treating strength in one area as a substitute for diligence in another — the most common way allocators talk themselves into a weak commitment.\n\n**The central inference discipline:** Identify the weakest lens and ask: is this weakness disqualifying, or is it a manageable risk with a known ceiling? A framework that only confirms what you already believed after the pitch is not analysis — it is rationalization.",
       },
       {
         type: "teaching",
-        title: "Peer benchmarks and their limits",
+        title: "Lens 1: People — decision structure, incentives, and succession",
         content:
-          "The most common benchmark is a vintage-year peer median or quartile ranking from data providers like Cambridge Associates, Preqin, or Burgiss. Quartile rankings compare a fund to peers in the same vintage and strategy. Problems: survivorship bias (failed funds underreport), reporting lags (GPs self-report, timing varies), and strategy heterogeneity (a 'buyout' category mixes small-cap, mid-market, and large-cap). Top-quartile in a weak vintage may be bottom-quartile in a strong one.",
+          "The people question is not 'do we like this team?' It is a structural question about how decisions get made, who owns the economics, and what happens when key individuals leave.\n\n**Decision-making structure**\nIn many PE firms, a single senior partner or founder drives the majority of deal selection and value-creation judgment. The question is whether decision authority is genuinely distributed or whether the firm is operationally a one- or two-person shop wrapped in institutional branding. The test: ask the team to describe a deal they passed on that a senior partner wanted to do. Genuine IC discipline shows in the answer.\n\n**Economic ownership and carry distribution**\nHow is carried interest distributed across the team? A carry structure concentrated in one or two founders creates misaligned incentives for everyone else — and signals that departures of junior and mid-level talent are likely. Firms that distribute carry broadly to deal-doers and sector specialists tend to have better retention and more distributed decision-making.\n\n**Key-person dependence**\nMost LPAs include a key-person clause — if specified partners leave or reduce their commitment, LPs may suspend capital calls or trigger a wind-down vote. The LPA clause is a minimum protection, not sufficient diligence. The underwriting question is: would this firm's deal flow, judgment, and LP relationships survive if the two or three most senior partners departed in the next five years?\n\n**Succession and institutionalization**\nA GP that has invested $2B over twelve years but cannot name the partner generation below the founders who will run Fund V is not institutionalized — it is a franchise dependent on individuals. True institutionalization means the deal-selection process, the network, and the value-creation playbook are embedded in the firm's operating model, not carried personally by two founders.\n\n**What to notice:** A team that deflects succession questions with 'we have a strong bench' but cannot name specific partners with meaningful deal attribution is giving you a signal worth following up on through reference checks.",
       },
       {
         type: "teaching",
-        title: "PME: the public market equivalent",
+        title: "Lens 2: Process — sourcing edge, IC discipline, and walk-away behavior",
         content:
-          "PME (Public Market Equivalent) benchmarks PE against a hypothetical investment in a public index with the same cash flow timing. The Kaplan-Schoar PME invests each capital call into the index and redeems each distribution. A PME > 1.0 means the PE fund outperformed the index on a like-for-like cash flow basis. Direct Alpha (Modified PME) converts this to an annualised excess return. PME is the most rigorous benchmark because it controls for the timing of cash flows — the same timing advantage that inflates PE IRR relative to a simple time-weighted return.",
+          "Process integrity is the hardest lens to verify and the easiest to market. Every GP claims a differentiated, disciplined process. The allocator's job is to find evidence that distinguishes a genuine process from a description of one.\n\n**Sourcing edge**\nIn a competitive PE market, most large transactions are auctions. True sourcing edge — the ability to see opportunities before they are widely marketed — typically comes from one of three sources: proprietary networks in a specific sector or geography, operational relationships built through portfolio company executives, or deep sector expertise that enables early identification before a company meets generic investment-grade criteria.\n\nThe test for sourcing edge is data, not claims. Ask: what percentage of your last fund's investments came from proactively sourced versus broadly marketed processes? For most mid-market buyout funds, the honest answer is 50–70% auction or broadly marketed. A GP claiming 80% proprietary should be able to name the specific network or relationship driving that — and you should be able to verify it through reference calls.\n\n**IC discipline and walk-away behavior**\nA disciplined IC can reject a deal that a senior partner has sponsored, that is under price competition, or that passes most criteria but fails one key threshold. Ask: how often does a deal reach the IC and get killed? A GP that tells you every deal they bring to IC gets done has likely not been selective enough. GP-level pass rates of 1–3% on deals initially reviewed are common for disciplined mid-market managers.\n\n**Repeatability: process vs. personality**\nThe most dangerous process is one that works because of one person's judgment but is described as institutional. Ask the GP to walk you through a decision made by the IC over the objection of the deal lead. What the answer reveals — whether the IC functions as a genuine check or a rubber stamp — is more informative than any written process document.\n\n**What to notice:** GPs whose process narrative centers on 'our deal team's judgment' rather than 'our IC's discipline' are giving you a signal about where decision authority actually sits.",
+      },
+      {
+        type: "teaching",
+        title: "Lens 3: Portfolio construction — concentration, reserves, and sizing discipline",
+        content:
+          "Portfolio construction discipline is often visible in a fund's structure even before deal-level results arrive. A GP with weak construction discipline can underperform not because of bad company selection, but because of incorrect sizing, depleted reserves, or excessive sector concentration.\n\n**Position sizing and concentration**\nMost mid-market buyout funds target 8–14 portfolio companies. A fund with 5 investments has high concentration risk — one bad outcome has outsized impact. A fund with 20+ investments at a comparable fund size may have average initial equity checks too small to exert meaningful board influence.\n\nConcentration is not automatically bad — some GPs explicitly run conviction-weighted concentrated portfolios. The question is whether the fund structure is consistent with the stated strategy. A $3B fund claiming 8–10 investments has average equity checks of ~$300–375M per company — which pushes the portfolio into large-cap deal competition, regardless of how the strategy is described.\n\n**Reserve policy**\nDoes the GP maintain explicit reserve commitments for follow-on investments? What happens when a portfolio company needs additional capital? A GP that consistently over-deploys in follow-on investments — because existing companies need support or because new deals look attractive — will be capital-constrained at the end of the investment period. Ask for the reserve-to-initial-investment ratio across prior funds and whether that ratio has been maintained.\n\n**Strategy-fund size fit**\nOne of the clearest portfolio construction signals is whether fund size growth has stayed in sync with the investable universe. A GP that raised $500M in Fund II and $1.5B in Fund III has either expanded into larger deals (changing strategy), taken more portfolio companies (changing concentration), or is chasing the same deals with too much capital (competing against itself).\n\n**What to notice:** A GP that says 'the fund size increase reflects our growing team capacity' without explaining how the investable universe or deal size has proportionally expanded is giving you an incomplete answer to a material question.",
+      },
+      {
+        type: "teaching",
+        title: "Lens 4: Evidence quality — what the track record can and cannot prove",
+        content:
+          "Track record analysis at the level required for GP underwriting goes well beyond 'what is the net IRR?' A credible evidence review asks: how concentrated is the source of returns, how much is realized, and does the evidence actually support the claimed edge?\n\n**Realized vs. unrealized**\nAs covered in Day 12, a track record dominated by interim marks is not the same as one confirmed by distributions. A GP with three fully-realized funds has materially stronger evidence than one with the same headline returns mostly in unrealized NAV. DPI — distributions paid to LP capital called — is the most verifiable dimension of performance.\n\n**Concentration of winners**\nAsk for deal-level attribution: what are the top three deals by return contribution, and what percentage of total fund value do they represent? A fund where two deals account for 60% of total value creation has a concentrated result. The claim that this represents a repeatable process is much weaker than the headline return suggests.\n\nStrong evidence looks like: returns distributed reasonably across 6+ deals, with no single deal accounting for more than 20–25% of total value creation, and consistent outcomes across deals in different sectors and entry years.\n\n**Coherence between claimed edge and actual outcomes**\nThis is the most penetrating question in track record analysis. If a GP claims operational value creation as their edge, ask: which specific realized deals demonstrate EBITDA margin improvement at exit? If the claimed edge is proprietary sourcing, ask: which of these realized deals were genuinely off-market?\n\nIf the claimed edge is operational but the top deals were driven by multiple expansion plus leverage amplification, the track record is not coherent evidence for the stated process. The disconnect is a diligence finding, not a trivial discrepancy.\n\n**Fund-size-adjusted evidence**\nA $500M fund generating 2.8x net TVPI investing 12 companies at $30–50M average checks is evidence of success in mid-market buyouts. The same 2.8x on a $3B fund making $250M average checks is evidence of success in a materially different market segment — one with more competition and less margin for operational improvement. Track records built at one fund size do not automatically transfer to a larger fund.\n\n**What to notice:** A GP who selectively presents their best-performing funds without providing all vintage years, or who does not readily provide deal-level attribution, is giving you a signal about evidence quality before you have even seen the numbers.",
+      },
+      {
+        type: "visual",
+        title: "The four-lens underwriting map",
+        visualId: "gp-underwriting-framework",
+        content:
+          "The four lenses organize GP evaluation so that no dimension substitutes for another. Each quadrant identifies the primary failure mode for that lens and the questions that surface it.",
+        whyItMatters:
+          "A GP that is strong on people and evidence but weak on portfolio construction may be diluting returns through fund-size creep. A GP strong on process but with concentrated evidence may not be repeatable. Using all four lenses in sequence prevents the common allocator error of endorsing a GP based on the two or three dimensions that were easiest to assess.",
+        sourceNote:
+          "ILPA Due Diligence Questionnaire (DDQ) framework; ILPA Principles 3.0; practitioner-standard GP evaluation frameworks.",
+      },
+      {
+        type: "teaching",
+        title: "Common allocator mistakes in manager evaluation",
+        content:
+          "Several systematic errors lead allocators toward managers who appear strong but are not — and away from managers who are genuinely repeatable.\n\n**Mistake 1: Anchoring on brand**\nTier-1 brand names in PE are persistent. A firm that was best-in-class in 2005 carries that reputation forward even through material team changes, strategy drift, and fund-size growth that has moved them into a different competitive context. Allocator inertia around brand is one of the largest sources of manager selection error. The correct posture: evaluate the current team on current evidence. Treat prior-generation returns as historical context, not current proof.\n\n**Mistake 2: Overweighting recent unrealized marks**\nA fund mid-cycle with strong unrealized marks generates favorable sentiment before evidence is tested by actual exits. The marks are GP-estimated Level 3 valuations, and the highest marks often reflect GP optimism bias. Overweighting current marks in a re-up decision is systematically substituting recency for realized confirmation. Many experienced allocators require 0.7–0.8x DPI before treating a re-up decision as evidence-based rather than momentum-based.\n\n**Mistake 3: Underweighting team risk**\nKey-person dependence is systematically underweighted because it is uncomfortable to press in a meeting and its consequences are low-frequency but high-impact. A firm dependent on two founders who are fifteen years closer to retirement than when the flagship fund was raised is a materially different investment proposition than it was at Fund II.\n\n**Mistake 4: Ignoring strategy drift and fund-size creep**\nGPs that have grown from $500M to $3B in three fund cycles have moved into a fundamentally different competitive environment — larger deals, more auction competition, less margin for operational differentiation. Yet many LPs evaluate Fund V on evidence built in Fund II and Fund III, in a different market segment, at a different scale.\n\n**What makes these hard to avoid:** All four mistakes are compounded by GP relationship management. A GP that knows how to run a diligence process — warm introductions, polished LP letters, coordinated reference calls — can present a highly favorable picture even when the underlying proposition has deteriorated.",
       },
       {
         type: "example",
-        title: "Mini-case: misleading quartile ranking",
+        title: "Worked example: which GP is more underwriteable?",
         content:
-          "A GP presents their fund as 'top quartile, vintage 2014.' The Cambridge Associates benchmark shows the median vintage-2014 buyout fund at 1.7x TVPI. The GP's fund is at 1.9x — legitimately top quartile. But the S&P 500 returned approximately 2.3x over the same period. The PME is 0.82 — the fund underperformed public equities on a cash-flow-adjusted basis. The fund is simultaneously 'top quartile vs. PE peers' and 'below benchmark vs. public markets.' Both statements are true.",
+          "Two GPs both present attractive headline numbers. Both are raising their fourth fund. Apply the four-lens framework.\n\n**GP A: Summit Capital (illustrative)**\n- Strategy: Mid-market buyout, generalist\n- Fund III: 2.4x net TVPI, 21% net IRR — top quartile, vintage 2018\n- Fund IV target: $3.0B vs. Fund III at $1.1B\n- Track record: Top three deals account for 72% of Fund III value creation; DPI 0.52x at year 6; 4 of 12 companies realized\n- Team: Two founders (ages 58 and 61), 80% of carry concentrated between them; three junior partners with limited named attribution\n- Process claim: 'Disciplined, multi-sector proprietary sourcing'\n\n**GP B: Clearstone Partners (illustrative)**\n- Strategy: Mid-market buyout, industrial services and specialty manufacturing focus\n- Fund III: 1.95x net TVPI, 16% net IRR — second quartile, vintage 2018\n- Fund IV target: $800M vs. Fund III at $650M\n- Track record: Top three deals account for 38% of Fund III value creation; DPI 0.92x at year 6 (8 of 11 companies realized)\n- Team: Managing partner (age 52), three sector partners with named deal attribution; carry distributed across 7 partners; two sector partners promoted internally\n- Process claim: 'Sector-specialist sourcing, documented operational playbook in industrial services'\n\n**Applying the four lenses:**\n\n**People:**\nGP A: High key-person concentration (two founders, 80% carry, no clear succession). Fund IV is implicitly a question about who runs the firm post-founders.\nGP B: Named partner succession evident; internal promotions with carry participation; lower key-person risk.\n\n**Process:**\nGP A: 'Multi-sector generalist' sourcing is difficult to verify or differentiate. Fund IV at $3.0B is nearly three times Fund III — the deal universe that supported a $1.1B generalist strategy is not the same as a $3.0B one.\nGP B: Sector-specialist sourcing in industrial services is verifiable through reference calls with deal intermediaries. Operational playbook is documented through realized exit evidence.\n\n**Portfolio Construction:**\nGP A: 12 companies at $1.1B = ~$90M average equity check at Fund III; at $3.0B targeting similar count = ~$250M average check. That is a different competitive market. Return concentration (top 3 = 72%) and low DPI (0.52x at year 6) mean most reported value is interim marks.\nGP B: 11 companies in 3 sectors; 8 realized; DPI 0.92x. Tighter construction, narrower sector focus, strong realization rate. Fund-size growth of 23% maintains competitive positioning.\n\n**Evidence Quality:**\nGP A: 2.4x net TVPI is attractive but concentrated in 3 deals and substantially unrealized at year 6. The evidence basis is thinner than the headline suggests.\nGP B: 1.95x net TVPI with 0.92x DPI and broad deal attribution. Lower headline but deeper evidence base. Evidence matches the claimed operational playbook.\n\n**Which is more underwriteable?**\nGP B. Lower headline returns but stronger evidence quality, better portfolio construction discipline, manageable team risk, and fund-size growth that is consistent with the strategy. GP A presents a high-momentum pitch with a weaker evidence foundation and a fund-size tripling that has not been explained in strategy terms.\n\n**What evidence would determine conviction for each:**\n- GP A: Deal-level attribution for all 12 Fund III companies, succession plan with specific partner authority and attribution, and a credible explanation for why the $3.0B investable universe resembles the $1.1B strategy.\n- GP B: Whether the industrial services thesis holds in a rising-cost environment, and whether the managing partner's health and long-term succession is adequately structured beyond the current management team.",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: interpreting headline returns in manager selection",
+        content:
+          "**Weak answer:**\n'GP A looks stronger because the returns are higher — 2.4x net TVPI and 21% IRR is top-quartile, and you want a top-quartile manager.'\n\nThis treats headline returns as a complete argument. It ignores evidence concentration, team risk, the fund-size tripling, the low DPI at year 6, and the fact that 72% of the reported return is interim marks, not confirmed distributions.\n\n**Strong answer:**\n'Headline returns matter, but I need to understand how concentrated the evidence is, whether the team and process are genuinely repeatable at 3x the fund size, whether the portfolio construction at $3B matches the strategy that generated the track record, and how much of the current TVPI is confirmed cash rather than GP-estimated marks. GP B's lower headline returns come with deeper evidence quality, better team structure, and a fund-size trajectory that is consistent with the strategy. Before concluding GP A is the stronger investment, I need: deal-level attribution for the top three deals, a succession plan for the two founders, and a credible explanation for why the $3B investable universe looks like the $1.1B one.'\n\nThe professional formulation: strong returns plus strong evidence plus repeatable process plus manageable people risk is a fundable GP. Headline returns alone — especially when concentrated and unrealized — is a pitch, not a proof.",
+      },
+      {
+        type: "inference-boundary",
+        title: "What you cannot infer from brand, returns, or a polished meeting",
+        content:
+          "From a strong brand, high headline returns, or a polished management presentation, you cannot infer:\n\n- **That the process is repeatable.** Concentrated returns driven by one or two exceptional deals may reflect skill, timing, or market conditions that no longer apply. A GP who generated 3.0x TVPI in a $400M fund on 2011-vintage deal pricing does not automatically generate 3.0x on a $2.5B fund in a competitive 2019 environment.\n\n- **That the team is durable.** Founders with 80% of carry who are in their late 50s are not the same team at Fund V that they were at Fund II. A 'team' slide with seven named partners does not prove distributed decision-making or genuine succession.\n\n- **That fund-size growth is strategy-consistent.** 'We are raising a larger fund because LP demand is strong' does not answer whether the underlying investable universe supports the larger capital pool. Demand-driven fund growth that is not strategy-constrained is a risk signal, not a quality signal.\n\n- **That the claimed edge exists.** A GP claiming proprietary sourcing, deep operational expertise, or sector specialization has made a claim. That claim is not evidence of the claim. Evidence requires: documented deal-level sourcing data, EBITDA improvement attribution at exit, and independent reference checks from portfolio company management.\n\n- **That past performance predicts future results in a meaningful way.** PE performance persistence is weaker than commonly assumed. Kaplan and Schoar (2005) documented persistence in early buyout data; subsequent research has found that persistence has declined as capital and competition have increased. A track record is useful context but not a reliable predictor of Fund V.",
       },
       {
         type: "exercise",
-        title: "Quick exercise",
+        title: "Exercise: draft a manager-underwriting checklist",
         content:
-          "A GP shows you a top-quartile IRR ranking without providing a PME. What are two reasons you should ask for the PME before drawing conclusions?",
+          "Draft a manager-underwriting checklist organized around the four core lenses. For each lens, list three to four questions that an allocator should be able to answer with verifiable evidence — not with the GP's assurances alone.\n\nYour checklist should cover:\n- **People:** who makes decisions, how is carry distributed, what is the succession plan, which junior partners have named deal attribution\n- **Process:** how is sourcing documented and verifiable, what is the IC pass rate, how does the firm handle disagreement at IC, can the GP name a deal they walked away from and why\n- **Portfolio construction:** what is the typical position count and average check size, how do reserves work across prior funds, has fund size grown in proportion to the investable universe, is sector concentration intentional and sized appropriately\n- **Evidence quality:** what share of the track record is DPI, what is the deal-level return concentration, does the claimed edge appear in realized outcome data, is the evidence built at the same fund size and market segment\n\nA strong checklist will distinguish questions answerable from GP materials from those requiring verification through reference checks, portfolio company conversations, or independent data.",
+      },
+      {
+        type: "meeting-application",
+        title: "In the manager meeting: five questions a prepared LP asks",
+        content:
+          "These questions target the evidence most likely to distinguish a genuinely strong GP from a well-marketed one:\n\n- **'Walk me through a deal you passed on because of IC discipline — specifically a deal the deal team wanted to do that the IC rejected.'** This tests whether the IC is a genuine check or a rubber stamp.\n\n- **'How has fund size growth changed the deals you compete for? Which transactions in Fund IV would not have been competitive in Fund II?'** This tests whether the GP has thought rigorously about how scale has changed the strategy.\n\n- **'For your top three deals by return contribution, can you walk me through the value creation attribution — specifically how much came from EBITDA growth, multiple expansion, and leverage?'** This tests whether claimed operational edge shows up in realized outcomes.\n\n- **'What happens to this firm if the two founding partners step back in the next five years — who leads deals, who manages LP relationships, and how has carry been structured to retain them?'** This tests succession planning and whether junior partners have meaningful authority and economic stake.\n\n- **'For the companies in the current portfolio that are behind plan, what are the specific interventions underway and what outcome scenarios are you building reserves against?'** This tests portfolio management discipline and reserve policy under stress.",
+      },
+      {
+        type: "meeting-application",
+        title: "Allocator application: write a short manager-underwriting note",
+        content:
+          "After a GP meeting and initial track record review, write a brief manager-underwriting note covering three points:\n\n**Strongest positive:**\nThe single most compelling piece of evidence that this GP is genuinely differentiated. Ground it in evidence, not assurance — a specific realized outcome pattern, a verifiable sourcing advantage, or a documented team structure that supports succession and distributed decision-making.\n\n**Biggest open risk:**\nThe single most important unresolved risk that would change your conviction if the answer were unfavorable. Frame it as a question that requires evidence to resolve — not a concern you hold but cannot test. Examples: 'Can the GP articulate succession without the two founders?' or 'Does the claimed operational edge appear in EBITDA attribution at exit?'\n\n**What evidence is still missing:**\nList two to three pieces of information that would most change your conviction in either direction. Include both quantitative inputs (deal-level attribution for specified funds, DPI trajectory, reserve data across fund vintages) and qualitative inputs (reference checks from specific counterparties, portfolio company management conversations, LP references from prior funds).\n\nThis note structure prevents the common allocator failure mode: being impressed by a meeting without anchoring that impression to specific, verifiable evidence. The discipline of naming what is still missing is as important as naming what is strong.",
+      },
+      {
+        type: "source-note",
+        title: "Sources and further reading",
+        content:
+          "- ILPA Due Diligence Questionnaire (ILPA DDQ) — standard LP diligence framework for GP evaluation across people, process, portfolio, and track record\n- ILPA Principles 3.0 — GP transparency standards covering carry distribution, key-man provisions, and reporting obligations\n- Kaplan, S. and Schoar, A. (2005) — Private Equity Performance: Returns, Persistence, and Capital Flows (performance persistence and PME methodology)\n- Gompers, P., Kaplan, S., and Mukharlyamov, V. (2016) — What Do Private Equity Firms Say They Do? (evidence on GP sourcing, value creation, and process self-description vs. outcomes)\n- CFA Institute alternative investments curriculum — private markets manager selection and due diligence\n- CAIA Level II — manager due diligence, GP evaluation frameworks, and track record analysis",
       },
     ],
     quiz: [
       {
         questionId: "d13q1",
         type: "multiple-choice",
-        prompt: "What does a PME greater than 1.0 indicate?",
+        prompt:
+          "An allocator reviews a GP with strong headline returns, positive references, and an impressive pitch. However, the top two deals account for 68% of Fund III value creation, the founding partner holds 75% of carry, and the fund has tripled in size since the track record was built. Which description best characterizes the underwriting problem?",
         options: [
-          "The fund returned more than one dollar for every dollar called",
-          "The fund outperformed a public-market index on a cash-flow-adjusted basis",
-          "The GP earned carried interest above the hurdle rate",
-          "The fund's IRR exceeded the benchmark IRR",
+          "Process risk only — the IC discipline was not adequately verified",
+          "Evidence quality and people risk — returns are concentrated and not clearly repeatable, and key-person dependence is high",
+          "Portfolio construction only — return concentration is a fund structure issue, not a people question",
+          "No significant problem — strong headline returns and positive references are sufficient for a re-up",
         ],
         correctAnswer:
-          "The fund outperformed a public-market index on a cash-flow-adjusted basis",
+          "Evidence quality and people risk — returns are concentrated and not clearly repeatable, and key-person dependence is high",
       },
       {
         questionId: "d13q2",
         type: "multiple-choice",
         prompt:
-          "Why do survivorship bias and self-reporting lag distort PE peer benchmarks?",
+          "A GP raised $500M in Fund II and is now raising $2.5B for Fund IV, describing the same mid-market buyout strategy. What is the most direct concern for an allocator evaluating Fund V?",
         options: [
-          "Failed funds stop reporting, inflating the median; slow reporting masks recent underperformance",
-          "Top-quartile funds report early, making the peer group look better than it is",
-          "Survivorship bias only affects venture capital, not buyout",
-          "Self-reporting lag reduces the DPI of the peer group artificially",
+          "The GP has outgrown ILPA reporting standards, which apply only to funds below $1B",
+          "Fund-size growth has likely moved the GP into a different competitive market with larger deals, more auction pressure, and less margin for differentiation",
+          "A $2.5B fund is too large to generate meaningful carried interest for the GP team",
+          "The track record from Fund II and III was built in a different interest rate environment and cannot be adjusted for today's conditions",
         ],
         correctAnswer:
-          "Failed funds stop reporting, inflating the median; slow reporting masks recent underperformance",
+          "Fund-size growth has likely moved the GP into a different competitive market with larger deals, more auction pressure, and less margin for differentiation",
       },
       {
         questionId: "d13q3",
         type: "multiple-choice",
         prompt:
-          "A fund is top-quartile vs. PE peers but has a PME of 0.85. What is the correct interpretation?",
+          "A GP claims their investment process is fully institutionalized and not dependent on any single individual. Which of the following would be the strongest evidence supporting this claim?",
         options: [
-          "The fund outperformed both PE peers and public markets",
-          "The fund beat PE peers but underperformed a public-market index on a cash-flow-equivalent basis",
-          "The PME of 0.85 is too low to draw conclusions about public-market comparison",
-          "The fund's IRR must be recalculated using the modified PME methodology",
+          "The GP has a detailed 40-page written investment process document reviewed by LPs",
+          "The GP's website lists twelve investment professionals with detailed biographies",
+          "The investment committee has rejected deals championed by senior partners, and named junior partners have led five or more completed investments with individual return attribution",
+          "The GP has maintained the same management fee and carry structure across all fund vintages",
         ],
         correctAnswer:
-          "The fund beat PE peers but underperformed a public-market index on a cash-flow-equivalent basis",
+          "The investment committee has rejected deals championed by senior partners, and named junior partners have led five or more completed investments with individual return attribution",
       },
       {
         questionId: "d13q4",
         type: "multiple-choice",
         prompt:
-          "Which benchmark data provider is considered most comprehensive for PE peer comparisons?",
+          "A GP claims their edge is deep operational value creation in manufacturing. Their top three realized deals show EBITDA growth of 8%, 12%, and 5% respectively at exit. EV/EBITDA at entry averaged 7x and at exit averaged 11x. What should an allocator conclude about the evidence quality?",
         options: [
-          "Bloomberg — uses market pricing for PE holdings",
-          "Cambridge Associates / Burgiss — uses pooled fund-level cash flow data from institutional LPs",
-          "Preqin — primary source for IRR calculations only",
-          "S&P Capital IQ — covers public and private markets equally",
+          "The claimed operational edge is confirmed — EBITDA grew in all three deals",
+          "The claimed operational edge is not confirmed by the evidence — most value generation appears to come from multiple expansion, not operational improvement",
+          "The results are too varied across deals to draw a conclusion about operational capability",
+          "Multiple expansion always reflects management quality, so the operational claim is supported",
         ],
         correctAnswer:
-          "Cambridge Associates / Burgiss — uses pooled fund-level cash flow data from institutional LPs",
+          "The claimed operational edge is not confirmed by the evidence — most value generation appears to come from multiple expansion, not operational improvement",
       },
       {
         questionId: "d13q5",
         type: "short-response",
         prompt:
-          "Why is it insufficient to evaluate a PE fund solely on its quartile ranking versus peers?",
+          "You are reviewing a $1.2B mid-market buyout fund (vintage 2019, now at year 5). Net TVPI is 1.65x. DPI is 0.35x. The top two deals account for 58% of current NAV. The founding partner holds 70% of carry and is 63 years old. Write a brief manager-underwriting note (3–5 sentences) covering the strongest positive available, the biggest open risk, and what evidence you would need before a re-up decision.",
         modelAnswer:
-          "Quartile rankings only compare a fund to other PE funds — not to the opportunity cost of public market exposure. A fund can be top quartile in a weak vintage and still underperform what LPs could have earned in a passive index. PME is necessary to answer the core question: did the PE fund justify its illiquidity, complexity, and fees relative to a public alternative? Additionally, quartile rankings are distorted by survivorship bias, strategy heterogeneity within categories, and variable reporting lags across GPs.",
+          "The 1.65x TVPI at year 5 is a credible early trajectory for a 2019-vintage mid-market buyout fund if the unrealized marks are defensible, and the strategy focus is coherent with the stated market segment. However, the evidence base is thin: DPI of 0.35x at year 5 means almost no value has been confirmed in cash, and the top two deals account for 58% of current NAV — making the headline result highly dependent on interim marks in a small number of positions rather than broad-based realized performance. The most significant open risk is key-person dependence: a founding partner with 70% of carry who is 63 years old represents a succession risk that has not been resolved in the fund's governance structure. Before a re-up, I would need deal-level exit attribution showing whether value creation came from EBITDA improvement or multiple expansion, a concrete succession plan with evidence of junior partner deal authority, and a clear explanation of the GP's reserve policy and exit timeline for the two large unrealized positions.",
       },
     ],
     sources: [
-      "Kaplan and Schoar (2005) — PME methodology",
-      "Cambridge Associates private equity benchmark reports",
-      "Burgiss private equity performance data methodology",
-      "CFA Institute alternative investments — performance benchmarking",
+      "ILPA Due Diligence Questionnaire (ILPA DDQ) — LP diligence framework for GP evaluation",
+      "ILPA Principles 3.0 — GP transparency standards, carry distribution, and key-man provisions",
+      "Kaplan, S. and Schoar, A. (2005) — Private Equity Performance: Returns, Persistence, and Capital Flows",
+      "Gompers, P., Kaplan, S., and Mukharlyamov, V. (2016) — What Do Private Equity Firms Say They Do?",
+      "CFA Institute alternative investments curriculum — private markets manager selection",
+      "CAIA Level II — Chapter: Private Equity Manager Due Diligence and GP Evaluation Frameworks",
     ],
   },
 
