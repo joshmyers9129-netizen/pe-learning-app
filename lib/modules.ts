@@ -187,7 +187,7 @@ export const modules: Module[] = [
         lessonId: "day-13",
         dayNumber: 13,
         title: "Manager Selection and GP Underwriting",
-        estimatedMinutes: 35,
+        estimatedMinutes: 30,
         topics: ["manager-selection", "due-diligence", "track-record", "gp-underwriting"],
         difficulty: "advanced",
         prerequisites: ["day-04", "day-05", "day-11", "day-12"],
