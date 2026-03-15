@@ -15,8 +15,9 @@ import JCurveDepthFactors from "./JCurveDepthFactors";
 import SubscriptionLineIRR from "./SubscriptionLineIRR";
 import JCurveDPIOverlay from "./JCurveDPIOverlay";
 import IRRvsMOIC from "./IRRvsMOIC";
+import GPUnderwritingFramework from "./GPUnderwritingFramework";
 
-export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC };
+export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework };
 
 export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "fund-lifecycle-timeline": FundLifecycleTimeline,
@@ -27,4 +28,5 @@ export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "irr-subscription-line": SubscriptionLineIRR,
   "j-curve-dpi-overlay": JCurveDPIOverlay,
   "irr-vs-moic": IRRvsMOIC,
+  "gp-underwriting-framework": GPUnderwritingFramework,
 };
