@@ -3,10 +3,34 @@
 import { useState, useEffect } from "react";
 
 interface AiHelperProps {
-  /** Short user-facing prompt sent to the API */
+  /** Context sent to the API as the user message */
   prompt: string;
   /** Button label */
   label?: string;
+}
+
+function renderAiResponse(text: string): React.ReactNode {
+  return text.split("\n").map((line, i) => {
+    if (!line.trim()) return <div key={i} className="h-2" />;
+    const headerMatch = line.match(/^\*\*(.+)\*\*\s*$/);
+    if (headerMatch) {
+      return (
+        <p key={i} className="text-[10px] font-bold text-[#2294BD] uppercase tracking-wide mt-3 first:mt-0">
+          {headerMatch[1]}
+        </p>
+      );
+    }
+    const parts = line.split(/(\*\*[^*]+\*\*)/g);
+    return (
+      <p key={i} className="text-sm text-[#000000] leading-relaxed">
+        {parts.map((part, j) =>
+          part.startsWith("**") && part.endsWith("**")
+            ? <strong key={j}>{part.slice(2, -2)}</strong>
+            : part
+        )}
+      </p>
+    );
+  });
 }
 
 export function AiHelper({ prompt, label = "Explain this more simply" }: AiHelperProps) {
@@ -96,10 +120,10 @@ export function AiHelper({ prompt, label = "Explain this more simply" }: AiHelpe
               Dismiss
             </button>
           </div>
-          <p className="text-sm text-[#000000] leading-relaxed whitespace-pre-wrap">
-            {text}
-          </p>
-          <p className="text-[10px] text-[#9A918A] mt-2">
+          <div className="space-y-0.5">
+            {renderAiResponse(text)}
+          </div>
+          <p className="text-[10px] text-[#9A918A] mt-3">
             AI-generated — verify key figures independently.
           </p>
         </div>

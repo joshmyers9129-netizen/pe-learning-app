@@ -523,6 +523,21 @@ export default function LessonPage({
 
   const questionIndex = (q: QuizQuestion) => allQuestions.indexOf(q);
 
+  // ── AI helper prompts ────────────────────────────────────────────────────────
+  const topicStr = lesson.topics.slice(0, 3).join(", ");
+  const wrongMcDetails = mcQuestions
+    .filter((q) => mcAnswers[q.questionId] && mcAnswers[q.questionId] !== q.correctAnswer)
+    .map((q) => `• "${q.prompt}"\n  Correct: "${q.correctAnswer}" | My answer: "${mcAnswers[q.questionId]}"`)
+    .join("\n");
+  const mcHelpPrompt =
+    `Lesson: "${lesson.title}" | Topic: ${topicStr}\n` +
+    (wrongMcDetails ? `Questions I got wrong:\n${wrongMcDetails}\n\n` : "") +
+    `Explain the correct reasoning and help me understand the underlying PE concepts.`;
+  const confidenceHelpPrompt =
+    `Lesson: "${lesson.title}" | Topic: ${topicStr} | Confidence: ${confidence ?? "?"}/5` +
+    (wrongMcDetails ? `\nI also got these MC questions wrong:\n${wrongMcDetails}` : "") +
+    `\n\nHelp me solidify my understanding of these PE concepts.`;
+
   return (
     <main className="min-h-screen bg-[#FBF7F3]">
       <div className="max-w-2xl mx-auto px-4 py-8 sm:py-10">
@@ -626,7 +641,7 @@ export default function LessonPage({
               </div>
               {mcScore < 1 && (
                 <AiHelper
-                  prompt={`I just got some questions wrong on a PE quiz about "${lesson.title}". Explain the core concepts of this topic more simply, drawing on public-markets analogies where helpful.`}
+                  prompt={mcHelpPrompt}
                   label="Explain this more simply"
                 />
               )}
@@ -669,7 +684,7 @@ export default function LessonPage({
             <ConfidenceRating value={confidence} onChange={setConfidence} />
             {confidence !== null && confidence <= 2 && (
               <AiHelper
-                prompt={`I rated my confidence as ${confidence}/5 after studying "${lesson.title}" in a PE learning app. I'm a CFA charterholder with strong public-markets experience but limited PE fluency. Explain the key concepts of this topic in an intuitive way.`}
+                prompt={confidenceHelpPrompt}
                 label="Explain this more simply"
               />
             )}

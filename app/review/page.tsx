@@ -119,7 +119,10 @@ function ReviewCardTile({
   const priCfg = PRIORITY_CONFIG[card.priority];
   const isFlipCard = card.cardType === "flashcard";
   const bodyVisible = !isFlipCard || flipped;
-  const aiPrompt = `Help me understand this PE concept from a review card. Question: "${card.front}" — Answer: "${card.back}". I'm a CFA charterholder with strong public-markets experience but limited PE fluency. Make the concept more intuitive.`;
+  const aiPrompt =
+    `Card type: ${typeCfg.label} | Topic: ${topicLabel(card.topic)}\n\n` +
+    `Prompt: "${card.front}"\nAnswer: "${card.back}"\n\n` +
+    `Help me understand this PE concept deeply.`;
 
   return (
     <div
