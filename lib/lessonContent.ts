@@ -1,23 +1,5 @@
 import { LessonContent } from "./types";
 
-const SOURCES = {
-  core: [
-    "ILPA educational materials (ilpa.org)",
-    "CFA Institute private markets curriculum",
-    "CAIA private equity curriculum references",
-  ],
-  performance: [
-    "ILPA performance reporting standards",
-    "CFA Institute Global Investment Performance Standards (GIPS)",
-    "Cambridge Associates PE benchmarking methodology",
-  ],
-  advanced: [
-    "ILPA educational materials (ilpa.org)",
-    "Preqin Global Private Equity Report",
-    "Cambridge Associates PE benchmarking methodology",
-  ],
-};
-
 // Days 1–20: fully built lessons.
 export const lessonContents: LessonContent[] = [
   // ── Day 1 ──────────────────────────────────────────────────────────────────
@@ -145,28 +127,28 @@ export const lessonContents: LessonContent[] = [
         type: "inference-boundary",
         title: "Inference boundary: what year-4 metrics can and cannot tell you",
         content:
-          "At year four of a typical 10-year buyout fund, reported metrics include DPI, TVPI, and net IRR. What can be reliably concluded: deployment pace (compare called capital to the investment period to assess whether the GP is behind, on pace, or ahead for new platforms); confirmed realized value (DPI is cash actually wired to LPs, not subject to valuation interpretation); whether any early exits have occurred. What cannot be reliably concluded: ultimate fund performance. Year-4 IRR is mechanically distorted by the J-curve and by the timing of any early exits — a single early exit in year 3 can double the reported interim IRR regardless of portfolio quality. The RVPI component of TVPI is GP-determined fair value per ASC 820 methodologies (comparable transactions, DCF, last-round pricing) and while audited for process, it is not market-confirmed. Cambridge Associates' benchmark methodology limits interim performance comparisons to funds where at least 60–70% of economic life has elapsed, on the basis that earlier metrics have insufficient predictive validity. Harris, Jenkinson, and Kaplan (2014) corroborate this pattern: fund quartile rankings based on early interim metrics shift substantially by final realization, meaning a year-4 top-quartile label carries far less signal than a year-8 one. The professionally correct posture in year 4: treat DPI as confirmed value, deployment pace as a structural check, and RVPI and interim IRR as indicative only.",
+          "**What year-4 metrics can tell you:**\n- Deployment pace — compare called capital to the investment period to assess whether the GP is behind, on pace, or ahead for new platforms\n- Confirmed realized value — DPI is cash actually wired to LPs, not subject to valuation interpretation\n- Whether any early exits have occurred\n\n**What year-4 metrics cannot tell you:**\n- Ultimate fund performance — year-4 IRR is mechanically distorted by the J-curve and by the timing of any early exits; a single early exit in year 3 can double the reported interim IRR regardless of portfolio quality\n- Whether RVPI marks are accurate — RVPI is GP-determined fair value per ASC 820 methodologies and while audited for process, is not market-confirmed\n- Quartile ranking reliability — Harris, Jenkinson, and Kaplan (2014) show fund quartile rankings based on early interim metrics shift substantially by final realization; a year-4 top-quartile label carries far less signal than a year-8 one\n\nThe professionally correct posture at year 4: treat DPI as confirmed value, deployment pace as a structural check, and RVPI and interim IRR as indicative only.",
       },
       // ── Exercise ──────────────────────────────────────────────────────────
       {
         type: "exercise",
         title: "Applied exercise: reading a year-4 fund update",
         content:
-          "A GP presents Fund III at a first meeting. Fund size: $1.8 billion. Vintage: 2019. Fund age: 4 years. Reported metrics: net IRR 7.2%, TVPI 1.28x, DPI 0.18x, RVPI 1.10x. The GP describes the fund as 'tracking well against benchmark.' Work through the following before proceeding to the quiz: (a) What does the DPI/TVPI split tell you about the source and reliability of the apparent returns? (b) A 7.2% net IRR at year 4 of a 2019-vintage buyout fund — is this underperformance or structurally expected? (c) The GP notes the top three portfolio companies represent 62% of current NAV. What specific risk does this concentration create for RVPI reliability? (d) What single additional data point would most improve your ability to evaluate Fund III quality at this stage?",
+          "A GP presents Fund III at a first meeting. Fund size: $1.8 billion. Vintage: 2019. Fund age: 4 years. Reported metrics: net IRR 7.2%, TVPI 1.28x, DPI 0.18x, RVPI 1.10x. The GP describes the fund as 'tracking well against benchmark.' Work through the following before proceeding to the quiz:\n\n1. What does the DPI/TVPI split tell you about the source and reliability of the apparent returns?\n2. A 7.2% net IRR at year 4 of a 2019-vintage buyout fund — is this underperformance or structurally expected?\n3. The GP notes the top three portfolio companies represent 62% of current NAV. What specific risk does this concentration create for RVPI reliability?\n4. What single additional data point would most improve your ability to evaluate Fund III quality at this stage?",
       },
       // ── Meeting application ───────────────────────────────────────────────
       {
         type: "meeting-application",
         title: "In the manager meeting: four high-signal questions",
         content:
-          "Armed with the fund model, these questions become natural entry points for any first GP meeting. (1) 'What is your current DPI, and what is your expected timeline to reach 1.0x DPI on Fund III?' — Separates GP confidence from confirmed value; forces a conversation about exit timing and visibility. (2) 'How much of your follow-on reserve has been utilized so far, and do you have any concerns about reserve adequacy for the remaining portfolio companies?' — Tests capital discipline within the fund and reveals whether the GP manages the portfolio as a capital allocation problem. (3) 'Walk me through your expected capital call schedule for Fund IV in years 1 through 3 — what pace should we model for liquidity planning?' — Establishes LP liquidity planning inputs and signals you understand capital call mechanics. (4) 'On Fund III, what is the RVPI distribution across remaining portfolio companies — how concentrated is the unrealized NAV?' — Probes concentration risk in the unrealized return and forces a company-level conversation that most LPs never initiate.",
+          "Armed with the fund model, these questions become natural entry points for any first GP meeting.\n\n1. **\"What is your current DPI, and what is your expected timeline to reach 1.0x DPI on Fund III?\"** — Separates GP confidence from confirmed value; forces a conversation about exit timing and visibility.\n2. **\"How much of your follow-on reserve has been utilized so far, and do you have any concerns about reserve adequacy for the remaining portfolio companies?\"** — Tests capital discipline within the fund and reveals whether the GP manages the portfolio as a capital allocation problem.\n3. **\"Walk me through your expected capital call schedule for Fund IV in years 1 through 3 — what pace should we model for liquidity planning?\"** — Establishes LP liquidity planning inputs and signals you understand capital call mechanics.\n4. **\"On Fund III, what is the RVPI distribution across remaining portfolio companies — how concentrated is the unrealized NAV?\"** — Probes concentration risk in the unrealized return and forces a company-level conversation that most LPs never initiate.",
       },
       // ── Allocator application ─────────────────────────────────────────────
       {
         type: "meeting-application",
         title: "Allocator application: three structural challenges from the fund model",
         content:
-          "The fund model creates three structural portfolio management challenges for any LP allocating across multiple PE managers. First, pacing risk: an LP committing $150 million per year across four to six funds simultaneously may have $400–600 million in uncalled commitments outstanding at any time. A pacing model — projecting expected capital calls by fund and year against available liquid reserves — is not optional; it is a basic operational tool for a functioning PE program. Over-commitment works until multiple GPs simultaneously accelerate calls in a strong vintage year, creating a call crisis against a single LP's liquidity position. Second, vintage year concentration: the fund model's 3–5 year investment periods mean that two sequential fund commitments may acquire companies at materially different macro conditions. A PE portfolio concentrated in two or three vintage years carries macro-entry risk that is invisible on a portfolio NAV report but often materializes in the harvest phase. Third, the denominator effect: when public markets sell off sharply, PE NAVs are slow to mark down because GP interim valuations lag market conditions. This mechanically inflates the apparent portfolio weight of PE even as the economic value of those companies has likely declined. Understanding this as a structural artifact of the fund model — not a signal of PE outperformance — is essential for avoiding forced rebalancing decisions at the worst time.",
+          "The fund model creates three structural portfolio management challenges for any LP allocating across multiple PE managers.\n\n1. **Pacing risk:** an LP committing $150 million per year across four to six funds simultaneously may have $400–600 million in uncalled commitments outstanding at any time. A pacing model projecting expected capital calls by fund and year is not optional — it is a basic operational tool. Over-commitment works until multiple GPs simultaneously accelerate calls in a strong vintage year, creating a call crisis against a single LP's liquidity position.\n2. **Vintage year concentration:** the fund model's 3–5 year investment periods mean that two sequential fund commitments may acquire companies at materially different macro conditions. A PE portfolio concentrated in two or three vintage years carries macro-entry risk that is invisible on a portfolio NAV report but often materializes in the harvest phase.\n3. **The denominator effect:** when public markets sell off sharply, PE NAVs are slow to mark down because GP interim valuations lag market conditions. This mechanically inflates the apparent portfolio weight of PE even as the economic value of those companies has likely declined — a structural artifact, not a signal of PE outperformance.",
       },
     ],
     quiz: [
@@ -240,34 +222,6 @@ export const lessonContents: LessonContent[] = [
           "The LP may need to liquidate depressed public equity holdings to meet the call, creating forced selling at a poor time",
       },
       {
-        questionId: "d1q6",
-        type: "multiple-choice",
-        prompt:
-          "After a PE fund's investment period closes, which activity can the GP still conduct?",
-        options: [
-          "Source and close new platform acquisitions if an exceptional opportunity arises",
-          "Call capital for management fees and for follow-on investments in existing portfolio companies",
-          "Transfer uncalled commitment obligations to a successor fund without LP consent",
-          "Extend the investment period by up to 12 months using GP-only written consent",
-        ],
-        correctAnswer:
-          "Call capital for management fees and for follow-on investments in existing portfolio companies",
-      },
-      {
-        questionId: "d1q7",
-        type: "multiple-choice",
-        prompt:
-          "A GP reports a gross IRR of 22% and a net IRR of 15.5% on Fund III. The 6.5 percentage-point gap primarily reflects:",
-        options: [
-          "Currency hedging costs and FX translation losses on cross-border portfolio companies",
-          "The return difference between leveraged buyout investments and organic growth investments within the fund",
-          "Management fees, carried interest, and fund-level expenses reducing LP-level returns",
-          "The difference between IRR calculated on committed capital versus paid-in capital",
-        ],
-        correctAnswer:
-          "Management fees, carried interest, and fund-level expenses reducing LP-level returns",
-      },
-      {
         questionId: "d1q8",
         type: "short-response",
         prompt:
@@ -276,28 +230,12 @@ export const lessonContents: LessonContent[] = [
           "Committed capital is the total legal obligation the pension has agreed to fund over the life of the fund; invested capital is only what has actually been called and deployed to date. The uncalled balance — typically 60–80% of commitment in the first two years — remains a contingent liability that can be drawn with as little as 10 business days' notice. This means the pension must hold liquid reserves against uncalled commitments rather than fully deploying that capital elsewhere, which requires a formal pacing model to manage call timing against portfolio liquidity needs.",
       },
       {
-        questionId: "d1q9",
-        type: "short-response",
-        prompt:
-          "Why is it professionally hazardous to compare net IRRs from two PE funds with different vintage years without additional context? What does a more rigorous comparison require?",
-        modelAnswer:
-          "IRR is highly sensitive to cash flow timing and to the macro environment at entry. A fund deploying in 2012–2015 and exiting 2016–2019 benefited from multiple expansion and low financing costs that improved IRR independent of manager skill; a fund deploying in 2007–2010 faced peak entry multiples and the credit crisis. Cross-vintage IRR comparison conflates manager decisions with macro environment. A rigorous comparison requires PME (public market equivalent) methodology — replicating each fund's exact capital call and distribution timing against a public index to isolate the return attributable to the manager over the market alternative. Kaplan-Schoar PME, mPME (Cambridge Associates), and Direct Alpha are the three most common PME methods. Vintage year diversification is the LP-level portfolio implication: no single vintage year should dominate a PE program.",
-      },
-      {
         questionId: "d1q10",
         type: "short-response",
         prompt:
           "Describe two things you can reliably conclude and two things you cannot reliably conclude from a buyout fund's reported metrics at year four of a 10-year fund life.",
         modelAnswer:
           "Reliably concludable: (1) Deployment pace — comparing called capital to the investment period gives a clear signal of whether the GP is behind, on pace, or ahead for new platform investments, which affects follow-on reserve adequacy and new-platform capacity. (2) Confirmed realized value — DPI is cash actually wired to LPs; it is not subject to valuation methodology or GP discretion. Not reliably concludable: (1) Ultimate fund performance — year-4 IRR and TVPI are heavily distorted by J-curve mechanics and GP interim marks; Harris, Jenkinson, and Kaplan (2014) find that interim PE metrics have limited predictive validity before 60–70% of fund economic life has elapsed. (2) Unrealized portfolio quality — RVPI reflects GP-applied ASC 820 fair value methodologies that can diverge materially from eventual exit prices; concentration in a few large companies amplifies this uncertainty.",
-      },
-      {
-        questionId: "d1q11",
-        type: "short-response",
-        prompt:
-          "A first-time LP says: 'We're not concerned about capital calls — we're a large institution and we always have cash available.' What specific structural risk are they underestimating, and what would you tell them?",
-        modelAnswer:
-          "The risk is not simple cash availability but the intersection of three factors: (1) timing correlation — GPs tend to accelerate calls during strong deal environments, which historically overlap with periods when LP liquid portfolios face competing demands; (2) simultaneous calls — an LP running an over-committed portfolio may face multiple GPs calling simultaneously in an active vintage year, concentrating liquidity demand in a short window; (3) severe default penalties — failing to fund a call within the LPA-defined notice period triggers contractual penalties including loss of voting rights, forced sale of LP interest at 50–75 cents on the dollar, and forfeiture of uncalled balance. A functioning PE program requires a formal pacing model, a dedicated unfunded commitment reserve (typically 25–35% of uncalled commitments in liquid instruments), and stress testing of simultaneous call scenarios. 'Having cash available' is not the same as being structurally prepared for PE's specific call mechanics.",
       },
     ],
     sources: [
@@ -410,21 +348,21 @@ export const lessonContents: LessonContent[] = [
         type: "inference-boundary",
         title: "Inference boundary: what fee terms can and cannot tell you",
         content:
-          "What fee terms reliably indicate: (1) The minimum LP return required before carry is triggered — the preferred return threshold is contractual and precise. (2) The economic cost of the management fee — basis and step-down terms can be modeled to project total dollar cost over the fund life. (3) Whether incentives are aligned on loss-avoidance — a GP with meaningful unfinanced fund commitment has real capital at risk on the downside, not just unrealized carry. What fee terms cannot reliably indicate: (1) Whether the GP will actually generate returns above the hurdle — terms indicate alignment but not skill. A perfectly structured fee agreement with a mediocre manager transfers less wealth from LP to GP only because there are fewer profits to share. (2) Whether the GP will exercise judgment conservatively during the catch-up window — a GP who has cleared the preferred return threshold and is collecting 100% during catch-up technically has strong incentive to delay final distributions, as each additional dollar of net proceeds earns them 100 cents. This is a real tension in full catch-up structures. (3) Whether clawback is economically meaningful — the legal provision exists in most LPAs; actual recoverability at wind-down depends on escrow mechanics and GP partner financial position, neither of which is visible from the term sheet alone.",
+          "**What fee terms can tell you:**\n- The minimum LP return required before carry is triggered — the preferred return threshold is contractual and precise\n- The economic cost of the management fee — basis and step-down terms can be modeled to project total dollar cost over the fund life\n- Whether incentives are aligned on loss-avoidance — a GP with meaningful unfinanced fund commitment has real capital at risk on the downside, not just unrealized carry\n\n**What fee terms cannot tell you:**\n- Whether the GP will actually generate returns above the hurdle — terms indicate alignment but not skill; a perfectly structured agreement with a mediocre manager transfers less wealth only because there are fewer profits to share\n- Whether the GP will exercise conservative judgment during the catch-up window — a GP collecting 100% during catch-up technically has incentive to delay final distributions; each additional dollar of net proceeds earns them 100 cents\n- Whether clawback is economically meaningful — the legal provision exists in most LPAs; actual recoverability at wind-down depends on escrow mechanics and GP partner financial position, neither visible from the term sheet alone",
       },
       // ── Exercise ──────────────────────────────────────────────────────────
       {
         type: "exercise",
         title: "Applied exercise: comparing two fee structures",
         content:
-          "Fund A: $1.5B committed, 2% on committed capital for 10 years, 20% carry above 8% compound preferred return, 100% catch-up, 80% fee offset. Fund B: $1.5B committed, 2% on committed capital during 5-year investment period then 1.5% on invested capital ($1.3B deployed), 20% carry above 8% compound preferred return, 80% catch-up, 100% fee offset. Both funds have identical investment strategies and gross return assumptions. Work through the following: (a) Project total management fees for each fund over 10 years; assume $1.3B deployed by end of year 5. (b) In Fund A, the GP earns $25M in transaction fees on a major deal in year 3 with an 80% offset. How much of this reaches LPs versus the GP? In Fund B, the same transaction generates the same fees with 100% offset. What is the difference? (c) At exit, total LP profit above cost = $700M on each fund. Under Fund A's full catch-up, and Fund B's partial catch-up, describe how LP cash flows differ during the catch-up phase — even though the total GP carry is the same.",
+          "Fund A: $1.5B committed, 2% on committed capital for 10 years, 20% carry above 8% compound preferred return, 100% catch-up, 80% fee offset. Fund B: $1.5B committed, 2% on committed capital during 5-year investment period then 1.5% on invested capital ($1.3B deployed), 20% carry above 8% compound preferred return, 80% catch-up, 100% fee offset. Both funds have identical investment strategies and gross return assumptions. Work through the following:\n\n1. Project total management fees for each fund over 10 years; assume $1.3B deployed by end of year 5.\n2. In Fund A, the GP earns $25M in transaction fees on a major deal in year 3 with an 80% offset. How much of this reaches LPs versus the GP? In Fund B, the same transaction generates the same fees with 100% offset. What is the difference?\n3. At exit, total LP profit above cost = $700M on each fund. Under Fund A's full catch-up, and Fund B's partial catch-up, describe how LP cash flows differ during the catch-up phase — even though the total GP carry is the same.",
       },
       // ── Meeting application ───────────────────────────────────────────────
       {
         type: "meeting-application",
         title: "In the manager meeting: five targeted questions",
         content:
-          "With the incentive stack fully mapped, these questions become natural. (1) 'On the management fee, does the 2% step down at investment period close — and what is the post-investment-period base, committed or invested?' — Probes the largest variable in cumulative fee drag. (2) 'What percentage of transaction and monitoring fees is offset against the management fee — and can you show us the fee offset ledger for Fund III?' — Identifies hidden GP compensation; a GP who resists showing the ledger has something to disclose. (3) 'Is the GP catch-up full or partial — and how was it structured in your prior fund?' — Tests consistency between fund terms and whether the GP is hardening on LP-unfavorable structures. (4) 'How is the GP commitment funded — is it personal capital, a loan against future carry, or deferred management fees?' — The single most revealing question about whether alignment is real or nominal. (5) 'What clawback protection do you provide — is there an escrow, and at what percentage of carry distributions?' — Tests whether the legal obligation is backed by real collateral.",
+          "With the incentive stack fully mapped, these questions become natural.\n\n1. **\"On the management fee, does the 2% step down at investment period close — and what is the post-investment-period base, committed or invested?\"** — Probes the largest variable in cumulative fee drag.\n2. **\"What percentage of transaction and monitoring fees is offset against the management fee — and can you show us the fee offset ledger for Fund III?\"** — Identifies hidden GP compensation; a GP who resists showing the ledger has something to disclose.\n3. **\"Is the GP catch-up full or partial — and how was it structured in your prior fund?\"** — Tests consistency between fund terms and whether the GP is hardening on LP-unfavorable structures.\n4. **\"How is the GP commitment funded — is it personal capital, a loan against future carry, or deferred management fees?\"** — The single most revealing question about whether alignment is real or nominal.\n5. **\"What clawback protection do you provide — is there an escrow, and at what percentage of carry distributions?\"** — Tests whether the legal obligation is backed by real collateral.",
       },
       // ── Allocator application ─────────────────────────────────────────────
       {
@@ -506,34 +444,6 @@ export const lessonContents: LessonContent[] = [
           "A carry-loan-financed commitment places no personal capital at risk — if the fund loses, the GP loses only unrealized carry, not actual wealth",
       },
       {
-        questionId: "d2q6",
-        type: "multiple-choice",
-        prompt:
-          "A PE fund reaches wind-down with a clawback obligation of $30M. The LPA requires no carried interest escrow. Which risk does this create?",
-        options: [
-          "The LP must contribute $30M in additional capital to cover the clawback obligation",
-          "The GP can refuse the clawback if fewer than three LP partners request it",
-          "The GP may have already spent or distributed the excess carry, making the legal claim difficult to collect",
-          "The fund term automatically extends until the $30M clawback is fully recovered from future GP carry",
-        ],
-        correctAnswer:
-          "The GP may have already spent or distributed the excess carry, making the legal claim difficult to collect",
-      },
-      {
-        questionId: "d2q7",
-        type: "multiple-choice",
-        prompt:
-          "A fund with a partial (80/20) catch-up versus one with a full (100%) catch-up will, at final wind-down:",
-        options: [
-          "Pay the GP more total carry under the partial catch-up, because distributions are prolonged",
-          "Pay identical total carry in both cases — the difference is only the timing of LP cash flows during the catch-up phase",
-          "Pay the GP less carry under the partial catch-up because the LP receives 20% during the catch-up, reducing the GP's share",
-          "Depend entirely on fund size — partial catch-ups favor GPs on small funds but LPs on large funds",
-        ],
-        correctAnswer:
-          "Pay identical total carry in both cases — the difference is only the timing of LP cash flows during the catch-up phase",
-      },
-      {
         questionId: "d2q8",
         type: "short-response",
         prompt:
@@ -548,22 +458,6 @@ export const lessonContents: LessonContent[] = [
           "Walk through the GP catch-up arithmetic for a fund where LP preferred return = $300M and the GP's carry rate is 20%. What is the GP catch-up amount, and what does it represent?",
         modelAnswer:
           "The GP catch-up amount = $300M × (20 / 80) = $75M. This represents the amount the GP must receive after the preferred return tranche before the standard 80/20 carried interest split begins. The catch-up ensures that the GP's total carry equals exactly 20% of all profits distributed so far at the end of the catch-up phase. At that point: LP has received $300M in preferred return, GP has received $75M in catch-up. Total distributed in profits above cost = $375M. GP share = $75M / $375M = 20%; LP share = $300M / $375M = 80%. The subsequent 80/20 split maintains this ratio going forward.",
-      },
-      {
-        questionId: "d2q10",
-        type: "short-response",
-        prompt:
-          "An LP tells you their LPAC seat gives them effective oversight of the GP's investment decisions. What is the correct understanding of LPAC authority, and what does it actually cover?",
-        modelAnswer:
-          "LPAC has no authority over investment decisions — it cannot veto acquisitions, mandate exits, or override the GP on any portfolio management question. Its role is fiduciary oversight of governance: reviewing conflicts of interest (related-party transactions, allocation policies when the GP manages multiple funds), approving valuations for hard-to-mark assets, consenting to material fund changes (term extensions, strategy amendments), and providing input on key-person events. Investment decisions remain entirely within GP discretion per the LPA. The LP conflating LPAC authority with investment oversight is making a material error about their actual governance rights.",
-      },
-      {
-        questionId: "d2q11",
-        type: "short-response",
-        prompt:
-          "A GP's fund term sheet shows 20% carried interest. A rigorous LP analysis estimates total GP economics of 30%+ of net profits. How does this gap arise, and what does it imply for LP net return expectations?",
-        modelAnswer:
-          "The gap arises because '20% carry' describes only the profit-sharing step of the waterfall, excluding management fees. On a fund with $150M in management fees over 10 years and $1B in net profits, the carry = $200M (20%). Total GP economics = $350M = 35% of net profits. Management fees are not profit-sharing but they do reduce LP net proceeds from $1B to $850M, which is then further reduced by carry. The LP net return must be budgeted against total GP take — not just headline carry. Practically, this means a gross return well above the hurdle is required to produce adequate LP economics after total fee load. For a fund charging 2%/20% with committed-capital basis and no step-down, gross returns of 15%+ are typically required to produce 10%+ net IRR for LPs.",
       },
     ],
     sources: [
@@ -681,14 +575,14 @@ export const lessonContents: LessonContent[] = [
         type: "exercise",
         title: "Applied exercise: diagnosing a J-curve presentation",
         content:
-          "A GP presents two scenarios for Fund IV at year 3: Scenario A shows −2% net IRR and 0.96x TVPI. The GP used no subscription line. Scenario B shows +3% net IRR and 1.07x TVPI. The GP used a 6-month subscription line for all calls. Both scenarios involve the same deals, same timing, same portfolio marks. Work through the following: (a) Is Scenario A or B a better-performing fund? What does the IRR difference actually reflect? (b) The GP offers the following comparison: 'Our peer fund at the same stage shows −5% net IRR — we're 8 points ahead.' The peer fund used no subscription line. What is the most likely explanation for the gap, and how would you test it? (c) If Fund IV's first significant exit (a 2.8x gross MOIC on the largest investment) occurs in year 4, what would you expect to happen to the reported net IRR? Would this be evidence of investment skill at that point?",
+          "A GP presents two scenarios for Fund IV at year 3: Scenario A shows −2% net IRR and 0.96x TVPI. The GP used no subscription line. Scenario B shows +3% net IRR and 1.07x TVPI. The GP used a 6-month subscription line for all calls. Both scenarios involve the same deals, same timing, same portfolio marks. Work through the following:\n\n1. Is Scenario A or B a better-performing fund? What does the IRR difference actually reflect?\n2. The GP offers the following comparison: 'Our peer fund at the same stage shows −5% net IRR — we're 8 points ahead.' The peer fund used no subscription line. What is the most likely explanation for the gap, and how would you test it?\n3. If Fund IV's first significant exit (a 2.8x gross MOIC on the largest investment) occurs in year 4, what would you expect to happen to the reported net IRR? Would this be evidence of investment skill at that point?",
       },
       // ── Meeting application ───────────────────────────────────────────────
       {
         type: "meeting-application",
         title: "In the manager meeting: five targeted questions on J-curve and calls",
         content:
-          "With the J-curve framework internalized, these questions become natural checkpoints. (1) 'What is your current deployment pace against the investment period close date — and what percentage is reserved for follow-ons in existing portfolio companies?' — Establishes how much new-platform capacity remains versus how much capital is committed to incumbents. (2) 'For Fund III's current TVPI, how much is GP marks above cost versus capital actually returned?' — Probes whether the positive TVPI is confirmed economics or interim valuation; the DPI/RVPI split answers this directly. (3) 'Do you use a subscription line, and can you provide both adjusted and unadjusted IRR for Fund III?' — Tests whether reported IRR includes mechanical inflation. (4) 'When do you expect the first major exit from Fund IV — and is there a specific portfolio company where exit timing is most visible?' — Shifts the conversation from current metrics (mostly uninformative) to exit pipeline, where the actual performance signal lives. (5) 'When you say you're tracking in line with prior fund vintage — are you comparing adjusted or unadjusted IRR, and are the prior funds also at the same stage of economic life?' — Identifies whether the 'prior fund' comparison is valid or misleading.",
+          "With the J-curve framework internalized, these questions become natural checkpoints.\n\n1. **\"What is your current deployment pace against the investment period close date — and what percentage is reserved for follow-ons in existing portfolio companies?\"** — Establishes how much new-platform capacity remains versus how much capital is committed to incumbents.\n2. **\"For Fund III's current TVPI, how much is GP marks above cost versus capital actually returned?\"** — Probes whether the positive TVPI is confirmed economics or interim valuation; the DPI/RVPI split answers this directly.\n3. **\"Do you use a subscription line, and can you provide both adjusted and unadjusted IRR for Fund III?\"** — Tests whether reported IRR includes mechanical inflation.\n4. **\"When do you expect the first major exit from Fund IV — and is there a specific portfolio company where exit timing is most visible?\"** — Shifts the conversation from current metrics (mostly uninformative) to exit pipeline, where the actual performance signal lives.\n5. **\"When you say you're tracking in line with prior fund vintage — are you comparing adjusted or unadjusted IRR, and are the prior funds also at the same stage of economic life?\"** — Identifies whether the 'prior fund' comparison is valid or misleading.",
       },
       // ── Allocator application ─────────────────────────────────────────────
       {
@@ -770,34 +664,6 @@ export const lessonContents: LessonContent[] = [
           "Year-three metrics are structurally dominated by fee drag rather than investment quality, making this comparison nearly uninformative about relative performance",
       },
       {
-        questionId: "d3q6",
-        type: "multiple-choice",
-        prompt:
-          "An LP with $600M in uncalled PE commitments across six funds receives three simultaneous capital call notices in one quarter, totaling $90M. Why is having 'plenty of cash in the portfolio' insufficient liquidity planning for this situation?",
-        options: [
-          "The LP is legally required to maintain a dedicated bank account equal to 20% of total uncalled commitments",
-          "Cash held in money market funds does not satisfy capital call requirements; only wire transfers from designated accounts are accepted",
-          "The correct LP policy is a formal pacing model with a liquidity buffer explicitly sized against peak simultaneous call scenarios, not reliance on general portfolio cash",
-          "Three simultaneous calls from different GPs would trigger an automatic fund-level default clause requiring LP counsel review",
-        ],
-        correctAnswer:
-          "The correct LP policy is a formal pacing model with a liquidity buffer explicitly sized against peak simultaneous call scenarios, not reliance on general portfolio cash",
-      },
-      {
-        questionId: "d3q7",
-        type: "multiple-choice",
-        prompt:
-          "A venture capital fund reports −15% net IRR at year four. How does this compare analytically to a buyout fund reporting −4% at year four?",
-        options: [
-          "The VC fund is a worse performer — a −15% IRR at year four indicates early losses that are unlikely to recover",
-          "Both IRRs are structurally expected for their respective strategy types; VC funds typically show deeper troughs due to longer holds, more early write-downs, and binary exit profiles",
-          "The VC fund uses a different accounting standard, making direct IRR comparison impossible before year seven",
-          "The buyout fund's −4% indicates a subscription line is inflating its IRR relative to the VC fund's more conservative reporting",
-        ],
-        correctAnswer:
-          "Both IRRs are structurally expected for their respective strategy types; VC funds typically show deeper troughs due to longer holds, more early write-downs, and binary exit profiles",
-      },
-      {
         questionId: "d3q8",
         type: "short-response",
         prompt:
@@ -812,14 +678,6 @@ export const lessonContents: LessonContent[] = [
           "Two funds at year four show the following: Fund A: net IRR +5%, no subscription line. Fund B: net IRR +9%, 6-month subscription line for all calls. What are the two alternative explanations for the gap, and how would you test which one is correct?",
         modelAnswer:
           "Two explanations: (1) Fund B is a better-performing fund — the IRR premium reflects superior investment quality, stronger exit timing, or a less fee-intensive structure. (2) Fund B's subscription line use has mechanically inflated its IRR by delaying LP cash outflows, making its reported IRR non-comparable to Fund A. Both effects can coexist. To test: ask Fund B for unadjusted IRR (excluding the subscription line timing benefit). If the unadjusted IRR is approximately 5–6%, the gap is largely or entirely mechanical. If unadjusted IRR is still materially above Fund A's 5%, there is genuine performance content in the gap. Additionally, compare MOIC (cash-on-cash multiple) which is unaffected by subscription line timing — if both funds have similar MOIC at year four, the IRR difference is predominantly mechanical.",
-      },
-      {
-        questionId: "d3q10",
-        type: "short-response",
-        prompt:
-          "Describe the key inputs and outputs of an LP pacing model, and explain what 'stress testing' a pacing model means in practice.",
-        modelAnswer:
-          "Inputs: committed capital by fund (total obligation), expected call schedule (S-curve deployment model per fund — typically 20–30% year one, 50–60% by year three, 85–95% by end of investment period), annual management fee calls, follow-on reserve estimates per portfolio (typically 20–30% of committed), and expected distribution timing (modeled from exit pipeline). Outputs: projected quarterly capital calls by fund, net cash flow (calls minus distributions) by quarter, and the point at which the program becomes net-positive (distributions exceed calls). Stress testing means modeling the simultaneous acceleration scenario: what if all active fund managers accelerate deployment by 25–30% in a single 12-month window? This models peak call demand without assuming any distributing fund provides offsetting cash. The stress output should be compared against the LP's near-liquid reserve pool; if the stress scenario exceeds liquid reserves, the LP either needs to hold larger buffers or reduce new commitment pacing.",
       },
     ],
     sources: [
@@ -929,14 +787,14 @@ export const lessonContents: LessonContent[] = [
       // ── Visual 3 ─────────────────────────────────────────────────────────
       {
         type: "visual",
-        title: "The J-Curve: When IRR Signal Becomes Meaningful",
-        visualId: "j-curve",
+        title: "Subscription Line Effect: Same Fund, Different IRR",
+        visualId: "irr-subscription-line",
         caption:
-          "IRR signal emerges gradually across the fund lifecycle. The J-curve trough tells you almost nothing about ultimate performance — it reflects fee drag and timing, not investment quality. By years 6–8, with meaningful exits completed, IRR begins reflecting manager skill. The same fund can show −10% IRR at year 2 and +19% at year 9.",
+          "A 6-month subscription line delays LP capital calls by 6 months, shrinking the measured investment period and mechanically inflating reported net IRR by ~2–3 percentage points — without changing a single investment outcome. MOIC is identical; IRR is not.",
         whyItMatters:
-          "Presenting IRR before the J-curve inflection point provides almost no information about ultimate performance. The relevant signal before year 5 is deployment pace and portfolio quality indicators — not reported IRR. After year 7, with 50%+ DPI, IRR begins earning its role as a performance summary. Asking for IRR benchmarks at year 3 is asking the wrong question at the wrong time.",
+          "When a GP reports net IRR without disclosing subscription line usage, you cannot know whether performance reflects investment skill or timing mechanics. ILPA 2017 guidance recommends GPs report both adjusted and unadjusted IRR. If a GP reports only one figure, asking which it is — and requesting the adjusted figure — is a basic due diligence step.",
         sourceNote:
-          "J-curve timing and IRR signal threshold: Cambridge Associates Private Equity Benchmark Commentary, interim vs. final performance methodology; Harris, Jenkinson, and Kaplan (2014), Journal of Finance 69(5).",
+          "Subscription line IRR inflation methodology: ILPA Subscription Line of Credit and Alignment of Interest Guidance (2017). Quantification of IRR impact: Phalippou, L. and Gottschalg, O. (2009), Review of Financial Studies 22(4).",
       },
       // ── Source note ───────────────────────────────────────────────────────
       {
@@ -957,21 +815,21 @@ export const lessonContents: LessonContent[] = [
         type: "inference-boundary",
         title: "Inference boundary: what IRR can and cannot tell you",
         content:
-          "What IRR reliably indicates: (1) The precise annualized rate of return on LP capital actually called and returned — this is the mathematical definition, accurate given correct cash flow data. (2) The time sensitivity of the return — at the same MOIC, a higher IRR means capital was returned faster, which has genuine economic value if reinvestment alternatives are available. (3) Whether the preferred return threshold has been exceeded — if net IRR is above the hurdle rate, the GP has triggered their carry entitlement on distributions to date. (4) Comparative performance across managers on a vintage-year-adjusted basis — with consistent denominator treatment and PME adjustment, net IRR is the primary cross-manager comparison tool. What IRR does not indicate: (1) Amount of LP wealth created — IRR is indifferent to the scale of capital deployed; a 30% IRR on $5M and a 30% IRR on $500M are economically incomparable in absolute dollar terms. (2) Investment quality without PME adjustment — vintage year macro conditions affect IRR independently of manager skill; two managers can produce identical IRRs through entirely different combinations of skill and luck. (3) Whether reported IRR is comparable across managers — subscription line use, recycling provisions, and denominator treatment all affect the metric without reflecting true economic differences. (4) The certainty of unrealized returns — if significant NAV remains in RVPI, the IRR is partially based on interim marks that have not been confirmed through exit. A fund reporting 22% IRR at year 6 with DPI 0.3x and RVPI 1.6x has confirmed almost nothing at that IRR.",
+          "**What IRR can tell you:**\n- The precise annualized rate of return on LP capital actually called and returned — this is the mathematical definition, accurate given correct cash flow data\n- The time sensitivity of the return — at the same MOIC, a higher IRR means capital was returned faster, which has genuine economic value if reinvestment alternatives exist\n- Whether the preferred return threshold has been exceeded — if net IRR is above the hurdle, the GP has triggered carry entitlement on distributions to date\n- Comparative performance across managers on a vintage-year-adjusted, PME-adjusted basis — net IRR is the primary cross-manager comparison tool when applied consistently\n\n**What IRR cannot tell you:**\n- Amount of LP wealth created — IRR is indifferent to scale; a 30% IRR on $5M and a 30% IRR on $500M are economically incomparable in absolute dollar terms\n- Investment quality without PME adjustment — vintage year conditions affect IRR independently of manager skill; two managers can produce identical IRRs through different combinations of skill and luck\n- Whether reported IRR is comparable across managers — subscription line use, recycling provisions, and denominator treatment all affect the metric without reflecting economic differences\n- The certainty of unrealized returns — a fund reporting 22% IRR at year 6 with DPI 0.3x and RVPI 1.6x has confirmed almost nothing at that IRR; the figure rests on interim marks",
       },
       // ── Exercise ──────────────────────────────────────────────────────────
       {
         type: "exercise",
         title: "Applied exercise: dissecting two fund IRR presentations",
         content:
-          "Fund Anchor and Fund Bridge both closed in 2017. Both report 20% net IRR at year 8. Additional data: Fund Anchor — $800M committed, DPI 1.35x, RVPI 0.55x, no subscription line used. Fund Bridge — $800M committed, DPI 0.85x, RVPI 1.25x, used a 9-month subscription line for all calls; unadjusted IRR = 16.5%. Work through the following: (a) On a confirmed LP wealth basis — dollars actually returned per dollar committed — which fund has delivered more? By how much, in dollar terms, on $800M committed? (b) What is the most likely explanation for Fund Bridge's 3.5 percentage point gap between reported 20% and unadjusted 16.5% IRR? (c) Fund Bridge's RVPI is 1.25x — what specific information about the remaining portfolio would you need to evaluate whether this mark is reliable? (d) A pension fund CIO is choosing between Fund Anchor's manager and Fund Bridge's manager for a new commitment. Which fund is the stronger basis for a new commitment, and what is the single most important remaining question?",
+          "Fund Anchor and Fund Bridge both closed in 2017. Both report 20% net IRR at year 8. Additional data: Fund Anchor — $800M committed, DPI 1.35x, RVPI 0.55x, no subscription line used. Fund Bridge — $800M committed, DPI 0.85x, RVPI 1.25x, used a 9-month subscription line for all calls; unadjusted IRR = 16.5%. Work through the following:\n\n1. On a confirmed LP wealth basis — dollars actually returned per dollar committed — which fund has delivered more? By how much, in dollar terms, on $800M committed?\n2. What is the most likely explanation for Fund Bridge's 3.5 percentage point gap between reported 20% and unadjusted 16.5% IRR?\n3. Fund Bridge's RVPI is 1.25x — what specific information about the remaining portfolio would you need to evaluate whether this mark is reliable?\n4. A pension fund CIO is choosing between Fund Anchor's manager and Fund Bridge's manager for a new commitment. Which fund is the stronger basis for a new commitment, and what is the single most important remaining question?",
       },
       // ── Meeting application ───────────────────────────────────────────────
       {
         type: "meeting-application",
         title: "In the manager meeting: five targeted questions on IRR",
         content:
-          "With the IRR framework internalized, these questions become standard entry points for any fund performance review. (1) 'Is the net IRR you are presenting adjusted or unadjusted for subscription line use — and can you provide both figures for Fund III?' — Establishes whether the reported metric is comparable to managers who do not use subscription lines; a GP unable to provide both numbers cannot support a clean comparison. (2) 'What is your net MOIC alongside the IRR — and for each prior fund, can you show where DPI and RVPI stood at the same stage of life?' — Pairs the time metric with the capital metric; reveals whether a high IRR reflects broad portfolio performance or a few fast exits on small capital. (3) 'Can you provide PME for Fund III — either Kaplan-Schoar or Cambridge mPME against the S&P 500 — showing performance against the public market alternative on matched cash flows?' — The single most rigorous test of whether PE value has been created versus market beta captured; a GP who cannot produce PME data either does not track it or knows the result is unflattering. (4) 'On your gross-to-net spread, can you break it down between management fees, carried interest, and other fund expenses?' — Tests fee transparency; a GP who knows their gross-to-net spread in detail is managing LP economics carefully. One who cannot answer without looking it up is not. (5) 'For your top three investments by gross IRR, what percentage of total committed capital did they represent? And how does the remainder of the portfolio look on a MOIC basis?' — Probes whether headline IRR is concentrated in a few fast, small-capital wins while the majority of LP money is deployed in the bulk of the portfolio at more modest returns.",
+          "With the IRR framework internalized, these questions become standard entry points for any fund performance review.\n\n1. **\"Is the net IRR you are presenting adjusted or unadjusted for subscription line use — and can you provide both figures for Fund III?\"** — Establishes whether the reported metric is comparable to managers who do not use subscription lines; a GP unable to provide both numbers cannot support a clean comparison.\n2. **\"What is your net MOIC alongside the IRR — and for each prior fund, can you show where DPI and RVPI stood at the same stage of life?\"** — Pairs the time metric with the capital metric; reveals whether a high IRR reflects broad portfolio performance or a few fast exits on small capital.\n3. **\"Can you provide PME for Fund III — either Kaplan-Schoar or Cambridge mPME against the S&P 500 — showing performance against the public market alternative on matched cash flows?\"** — The single most rigorous test of whether PE value has been created versus market beta captured; a GP who cannot produce PME data either does not track it or knows the result is unflattering.\n4. **\"On your gross-to-net spread, can you break it down between management fees, carried interest, and other fund expenses?\"** — Tests fee transparency; a GP who knows their gross-to-net spread in detail is managing LP economics carefully; one who cannot answer without looking it up is not.\n5. **\"For your top three investments by gross IRR, what percentage of total committed capital did they represent — and how does the remainder of the portfolio look on a MOIC basis?\"** — Probes whether headline IRR is concentrated in a few fast, small-capital wins while the majority of LP money earns more modest returns.",
       },
       // ── Allocator application ─────────────────────────────────────────────
       {
@@ -1053,34 +911,6 @@ export const lessonContents: LessonContent[] = [
           "The fund outperformed the public market benchmark on a matched cash-flow basis: LP capital deployed in PE generated 12% more terminal value than if it had been invested in the public index at the same times",
       },
       {
-        questionId: "d4q6",
-        type: "multiple-choice",
-        prompt:
-          "A PE fund reports 18% net IRR at year 6 with DPI 0.25x and RVPI 1.55x. Which analytical concern is most material?",
-        options: [
-          "The fund is likely nearing the end of its investment period, which will compress IRR going forward",
-          "Almost all of the reported 18% IRR is underpinned by unrealized, GP-marked NAV — only 0.25x has been confirmed in cash, making the IRR figure highly sensitive to exit pricing assumptions",
-          "The fund's gross-to-net spread appears too narrow — 18% net IRR on a 2%/20% fund implies an unusually low gross return",
-          "The fund's DPI is above average for a year-6 fund, suggesting the GP has been harvesting prematurely",
-        ],
-        correctAnswer:
-          "Almost all of the reported 18% IRR is underpinned by unrealized, GP-marked NAV — only 0.25x has been confirmed in cash, making the IRR figure highly sensitive to exit pricing assumptions",
-      },
-      {
-        questionId: "d4q7",
-        type: "multiple-choice",
-        prompt:
-          "Which statement about the IRR reinvestment rate assumption is most accurate?",
-        options: [
-          "IRR explicitly assumes reinvestment of distributions at the risk-free rate, which is conservative and therefore biases IRR downward",
-          "IRR carries an implicit assumption that all interim distributions are reinvested at the same IRR, which typically overstates the actual multi-period compound return LP portfolios achieve",
-          "The reinvestment assumption only affects IRR calculations for venture capital funds, where interim distributions are rare",
-          "MIRR eliminates the reinvestment assumption entirely and should therefore always be used instead of IRR for PE fund comparison",
-        ],
-        correctAnswer:
-          "IRR carries an implicit assumption that all interim distributions are reinvested at the same IRR, which typically overstates the actual multi-period compound return LP portfolios achieve",
-      },
-      {
         questionId: "d4q8",
         type: "short-response",
         prompt:
@@ -1095,22 +925,6 @@ export const lessonContents: LessonContent[] = [
           "Explain to a first-year analyst why averaging the net IRRs of six funds in a PE portfolio does not produce a valid portfolio-level IRR. What is the correct methodology?",
         modelAnswer:
           "Averaging individual fund IRRs is invalid because IRR is a nonlinear, cash-flow-timing-sensitive metric. A fund that called $100M early and returned $200M in year 3 (a high IRR on small capital) and a fund that called $900M and is still deploying (a low interim IRR on large capital) will average to a meaningless number because the average ignores the fact that 90% of the LP's money is in the second fund. The correct methodology is to consolidate all fund-level cash flows — treating each capital call across all funds as an outflow by date, each distribution as an inflow by date, and the sum of period-ending NAVs as a terminal value — into a single combined cash flow stream, then solve for the single IRR of that consolidated stream. This 'whole-portfolio IRR' correctly weights each fund by actual LP capital deployed and returned, not by fund count. It may differ from the simple average by 2–4 percentage points for a mature diversified PE program.",
-      },
-      {
-        questionId: "d4q10",
-        type: "short-response",
-        prompt:
-          "A GP presents Fund III with 23% gross IRR and 15% net IRR, attributing the 8-point gap entirely to the '2-and-20 structure.' Is this explanation complete? What else can contribute to the gross-to-net spread, and how would you verify the breakdown?",
-        modelAnswer:
-          "The explanation is incomplete. The 8-point gross-to-net spread can include: (1) Management fees — approximately 1.5–2 points per year on a 2%/20% fund, depending on fee basis and step-down terms; (2) Carried interest — approximately 4–6 points depending on waterfall structure, preferred return level, and the timing of carry crystallization relative to the fund's return profile; (3) Fund-level expenses — legal, audit, accounting, administration — typically contributing 0.1–0.3 points; (4) Portfolio company monitoring fees and transaction fees not fully offset against the management fee (if offset is less than 100%). To verify: request a fee transparency report (ILPA Fee Reporting Template format) showing total management fees collected, total carried interest paid or accrued, total fund expenses, and total fee offsets applied. This allows the LP to independently reconstruct the gross-to-net stack and verify that the 8-point gap is fully explained by disclosed fees rather than unexplained leakage. A GP who resists providing this detail is concealing some component of the GP economic take.",
-      },
-      {
-        questionId: "d4q11",
-        type: "short-response",
-        prompt:
-          "Describe three specific GP behaviors that mechanically inflate reported IRR without improving LP economics. For each, identify how you would detect it in due diligence.",
-        modelAnswer:
-          "Three mechanisms and detection methods: (1) Subscription line use — the GP delays capital calls by 60–180 days, compressing the apparent investment period and inflating annualized IRR. Detection: ask for both subscription-line-adjusted and unadjusted net IRR. ILPA (2017) recommends GPs provide both. A GP who cannot or will not is likely obscuring mechanical inflation. (2) Early exit concentration — the GP exits small, fast-returning investments early (generating very high short-duration IRRs on small capital) while the majority of LP capital remains deployed in larger, slower investments. Detection: ask for gross MOIC and IRR by individual investment and request a portfolio table sorted by capital deployed. If the highest-IRR investments represent 5–10% of total capital and the remaining 90% has modest returns, the headline IRR is not representative of the fund's broader performance. (3) Capital recycling — the GP reinvests early distributions within the investment period without issuing a new capital call, so LP paid-in capital does not increase even though the GP is deploying additional capital. Detection: compare total investments at cost across the life of the fund to total paid-in capital; if investments at cost significantly exceed paid-in capital, capital recycling has occurred. Ask to see the LPA recycling provision and the GP's accounting treatment.",
       },
     ],
     sources: [
@@ -1185,12 +999,12 @@ export const lessonContents: LessonContent[] = [
       // ── Visual 2 ─────────────────────────────────────────────────────────
       {
         type: "visual",
-        title: "The J-Curve: DPI Builds as IRR Recovers",
-        visualId: "j-curve",
+        title: "IRR vs. DPI Over Fund Life: Marks vs. Cash",
+        visualId: "j-curve-dpi-overlay",
         caption:
-          "The J-curve describes IRR over time, but the DPI trajectory follows its own path. DPI starts at zero during the investment period, builds with early exits (years 4–7), and accelerates through the harvest phase (years 7–10). A fund where IRR is recovering but DPI barely moves is recovering on paper — through rising RVPI marks — not in cash. Both curves must be tracked simultaneously.",
+          "IRR and DPI follow different trajectories. IRR recovers from its trough as portfolio companies are marked up; DPI builds only when exits produce actual cash. The shaded zone (Yr 5–7) is where IRR commonly improves while DPI stays flat — a signal that recovery is mark-driven, not exit-driven.",
         whyItMatters:
-          "Overlaying DPI progression on the IRR recovery reveals whether IRR improvement is driven by confirmed cash distributions (DPI building) or rising GP marks (RVPI expanding without exits). IRR can improve because the GP is marking up unrealized assets; DPI cannot improve without actual exits. A fund with improving IRR but flat DPI for 2–3 consecutive years is a specific monitoring flag.",
+          "A fund reporting improving IRR with flat DPI is marking up unrealized positions. The gains exist only on paper until exits confirm them. Cambridge Associates benchmark data shows median DPI for 2015–2018 vintage buyout funds at year 8 in the 0.9–1.2x range — a fund materially below that range with strong reported IRR deserves specific scrutiny.",
         sourceNote:
           "DPI evolution and median benchmarks by vintage year: Cambridge Associates Private Equity Benchmark Commentary; ILPA Performance Reporting Standards, quarterly reporting guidance.",
       },
@@ -1251,21 +1065,21 @@ export const lessonContents: LessonContent[] = [
         type: "inference-boundary",
         title: "Inference boundary: what multiples can and cannot tell you",
         content:
-          "What multiples reliably indicate: (1) TVPI as a comprehensive value summary — combining confirmed distributions and current estimated residual into the most complete single multiple available at any lifecycle stage. (2) DPI as the confirmed floor — at any point, DPI represents actual cash received. It cannot be restated or revised downward; it is the realized return. (3) The DPI/RVPI composition reveals the proportion of performance that is confirmed versus estimated. A year-9 fund with DPI 1.6x and RVPI 0.2x has almost fully validated its performance; one with DPI 0.6x and RVPI 1.2x has done the opposite. (4) Fund maturity relative to benchmark — comparing DPI to Cambridge Associates vintage-year medians provides a quick diagnostic of whether the harvest pace is normal, ahead, or behind. What multiples cannot reliably indicate: (1) Whether RVPI marks will be confirmed at exit — they are estimates. Jenkinson, Sousa, and Stucke (2013) found average GP marks are broadly accurate in the cross-section but with meaningful upward bias for struggling companies specifically. (2) Whether TVPI growth reflects operational value creation or market multiple expansion — decomposing the source requires company-level data beyond what quarterly reports typically provide. (3) Whether the GP's valuation methodology is conservatively or aggressively applied — two GPs using the same ASC 820 framework with different EBITDA and multiple assumptions can produce very different RVPI for economically similar portfolios. (4) Whether future performance will match current trajectory — remaining portfolio concentration, GP team changes, exit market conditions, and macro environment all affect final TVPI in ways not visible from current multiples.",
+          "**What multiples can tell you:**\n- TVPI as a comprehensive value summary — combining confirmed distributions and current estimated residual into the most complete single multiple available at any lifecycle stage\n- DPI as the confirmed floor — DPI is actual cash received; it cannot be restated or revised downward\n- The DPI/RVPI split reveals what proportion of performance is confirmed versus estimated; a year-9 fund with DPI 1.6x and RVPI 0.2x has nearly fully validated its returns\n- Fund maturity relative to benchmark — comparing DPI to Cambridge Associates vintage-year medians diagnoses whether harvest pace is normal, ahead, or behind\n\n**What multiples cannot tell you:**\n- Whether RVPI marks will be confirmed at exit — Jenkinson, Sousa, and Stucke (2013) found average GP marks broadly accurate in the cross-section but with meaningful upward bias for struggling companies specifically\n- Whether TVPI growth reflects operational value creation or market multiple expansion — decomposing the source requires company-level data beyond what quarterly reports provide\n- Whether the GP's valuation methodology is conservative or aggressive — two GPs using the same ASC 820 framework with different EBITDA and multiple assumptions can produce very different RVPI for economically similar portfolios\n- Whether future performance will match current trajectory — portfolio concentration, GP team changes, exit market conditions, and macro environment all affect final TVPI in ways not visible from current multiples",
       },
       // ── Exercise ──────────────────────────────────────────────────────────
       {
         type: "exercise",
         title: "Applied exercise: stress-testing a fund's multiples",
         content:
-          "A $1.5B committed buyout fund is in year 7. Paid-in: $1.4B. Distributions: $980M. NAV: $1.12B. 5 of 10 original companies remain. The GP reports TVPI using an 'invested capital' denominator of $1.25B (net of fees called). Work through: (a) Compute DPI and RVPI on the ILPA-standard paid-in denominator of $1.4B, and confirm they sum to TVPI. Then compute TVPI on the GP's reported invested capital basis. What is the denominator-driven difference? (b) The largest remaining company is marked at $560M — 50% of NAV. It was acquired at 9x EV/EBITDA on $50M trailing EBITDA. Today, trailing EBITDA has declined 10% from acquisition to $45M, but the GP is applying the current sector average of 11x forward EBITDA (consensus forward EBITDA: $55M). At entry-comparable trailing EBITDA at a 9x multiple, what would this company be worth? What happens to the fund's TVPI and RVPI under that scenario? (c) If the revised NAV for all remaining companies is $840M rather than $1.12B (a 25% markdown reflecting exit-realistic multiples), what is the revised TVPI on paid-in capital basis? (d) Compare the original reported TVPI to the two revised scenarios. What does this tell you about the risk embedded in RVPI at a 25% discount?",
+          "A $1.5B committed buyout fund is in year 7. Paid-in: $1.4B. Distributions: $980M. NAV: $1.12B. 5 of 10 original companies remain. The GP reports TVPI using an 'invested capital' denominator of $1.25B (net of fees called). Work through the following:\n\n1. Compute DPI and RVPI on the ILPA-standard paid-in denominator of $1.4B, and confirm they sum to TVPI. Then compute TVPI on the GP's reported invested capital basis. What is the denominator-driven difference?\n2. The largest remaining company is marked at $560M — 50% of NAV. It was acquired at 9x EV/EBITDA on $50M trailing EBITDA. Today, trailing EBITDA has declined 10% to $45M, but the GP is applying 11x forward EBITDA (consensus forward EBITDA: $55M). At entry-comparable trailing EBITDA at a 9x multiple, what would this company be worth? What happens to the fund's TVPI and RVPI under that scenario?\n3. If the revised NAV for all remaining companies is $840M rather than $1.12B (a 25% markdown reflecting exit-realistic multiples), what is the revised TVPI on a paid-in capital basis?\n4. Compare the original reported TVPI to the two revised scenarios. What does this tell you about the risk embedded in RVPI at a 25% discount?",
       },
       // ── Meeting application ───────────────────────────────────────────────
       {
         type: "meeting-application",
         title: "In the manager meeting: five targeted questions on multiples",
         content:
-          "With the multiples framework internalized, these questions become natural checkpoints in any fund review. (1) 'Can you break down your current TVPI into DPI and RVPI — and for a fund at this lifecycle stage, what DPI do you expect to reach by wind-down?' — Establishes the composition of headline performance and tests the GP's conviction and exit visibility. (2) 'For the RVPI component, what valuation methodology are you applying to the three largest remaining companies — and what current sector comparables are you using as the multiple anchor?' — Forces the GP to defend Level 3 assumptions and reveals whether marks reflect current transaction markets or peak-cycle multiples applied without adjustment. (3) 'Is your TVPI reported on paid-in capital or invested capital basis — and does the denominator include management fees and expenses called, per ILPA standards?' — Confirms denominator consistency before any benchmark comparison; a GP using invested capital basis against a Cambridge benchmark (paid-in basis) is presenting an inflated relative figure. (4) 'How does your current DPI compare to the Cambridge Associates median for your vintage year at this fund age?' — Benchmarks confirmed returns against a standard reference; a GP who does not know this number has not prepared the LP-relevant comparison an institutional review requires. (5) 'For the companies still in RVPI, how much of the mark-up from entry reflects actual EBITDA growth versus sector multiple re-rating since your entry underwriting?' — The most analytically rigorous RVPI question: separates genuine operational value creation from market multiple expansion that will reverse at exit if multiples normalize.",
+          "With the multiples framework internalized, these questions become natural checkpoints in any fund review.\n\n1. **\"Can you break down your current TVPI into DPI and RVPI — and for a fund at this lifecycle stage, what DPI do you expect to reach by wind-down?\"** — Establishes the composition of headline performance and tests the GP's conviction and exit visibility.\n2. **\"For the RVPI component, what valuation methodology are you applying to the three largest remaining companies — and what current sector comparables are you using as the multiple anchor?\"** — Forces the GP to defend Level 3 assumptions and reveals whether marks reflect current transaction markets or peak-cycle multiples applied without adjustment.\n3. **\"Is your TVPI reported on paid-in capital or invested capital basis — and does the denominator include management fees and expenses called, per ILPA standards?\"** — Confirms denominator consistency before any benchmark comparison; a GP using invested capital basis against a Cambridge benchmark (paid-in basis) is presenting an inflated relative figure.\n4. **\"How does your current DPI compare to the Cambridge Associates median for your vintage year at this fund age?\"** — Benchmarks confirmed returns against a standard reference; a GP who does not know this number has not prepared the LP-relevant comparison an institutional review requires.\n5. **\"For the companies still in RVPI, how much of the mark-up from entry reflects actual EBITDA growth versus sector multiple re-rating since your entry underwriting?\"** — The most analytically rigorous RVPI question: separates genuine operational value creation from market multiple expansion that will reverse at exit if multiples normalize.",
       },
       // ── Allocator application ─────────────────────────────────────────────
       {
@@ -1347,34 +1161,6 @@ export const lessonContents: LessonContent[] = [
           "Fund P is superior — a higher DPI confirms a larger proportion of the TVPI in cash, with minimal remaining uncertainty",
       },
       {
-        questionId: "d5q6",
-        type: "multiple-choice",
-        prompt:
-          "Which of the following would cause a fund's RVPI to increase without any genuine operational improvement at the portfolio company level?",
-        options: [
-          "The portfolio company repays acquisition debt ahead of schedule, reducing enterprise value leverage",
-          "The GP applies a higher EV/EBITDA multiple in the current quarter because sector comparable transaction multiples have expanded, even though company EBITDA is flat",
-          "The GP receives a management fee offset credit that reduces the fund's cost basis",
-          "An LP sells their fund interest in the secondary market at a premium to NAV, signaling GP mark conservatism",
-        ],
-        correctAnswer:
-          "The GP applies a higher EV/EBITDA multiple in the current quarter because sector comparable transaction multiples have expanded, even though company EBITDA is flat",
-      },
-      {
-        questionId: "d5q7",
-        type: "multiple-choice",
-        prompt:
-          "A LP allocator wants to stress-test their PE portfolio's performance. Which approach is most analytically rigorous?",
-        options: [
-          "Apply a 10% haircut to the highest TVPI fund in the portfolio, as this represents the largest uncertainty",
-          "Discount the total portfolio RVPI by 20–25% to simulate a compressed-multiple exit environment, and recalculate total portfolio TVPI on the revised NAV basis",
-          "Replace RVPI with DPI for all funds older than 7 years, assuming no further distributions are possible",
-          "Average the DPI figures across all fund positions, weighted by committed capital, to derive a portfolio-level realized return",
-        ],
-        correctAnswer:
-          "Discount the total portfolio RVPI by 20–25% to simulate a compressed-multiple exit environment, and recalculate total portfolio TVPI on the revised NAV basis",
-      },
-      {
         questionId: "d5q8",
         type: "short-response",
         prompt:
@@ -1389,22 +1175,6 @@ export const lessonContents: LessonContent[] = [
           "Explain to a new LP analyst why a year-9 buyout fund with TVPI 1.8x and DPI 0.6x warrants more scrutiny than a year-9 fund with TVPI 1.6x and DPI 1.45x — even though the first fund shows a higher headline multiple.",
         modelAnswer:
           "The year-9 fund with TVPI 1.8x and DPI 0.6x has 1.2x of its headline multiple — fully two-thirds of the total value — sitting in RVPI: GP-marked estimates of remaining portfolio value that have not yet been confirmed through exits. At year nine of a typical 10-year fund, a DPI of only 0.6x means the GP has returned just 60 cents per LP dollar in cash after nine years. This is dramatically below the Cambridge Associates median for 2014–2016 vintage buyout funds (approximately 0.9–1.2x DPI at year 8–9). The RVPI of 1.2x is a large, concentrated estimate — and if the remaining companies are marked at aggressive multiples relative to current comparables, the exit prices may fall well short of those marks. The fund with TVPI 1.6x and DPI 1.45x has confirmed 1.45x of its total value in cash — 91% of its headline is real. The residual RVPI of 0.15x is modest and manageable. Even a 50% markdown on the remaining NAV would reduce TVPI from 1.6x to only 1.525x — a trivial revision. The higher-TVPI fund has more total apparent value on paper, but far less certainty about whether that value will be received. For a prospective LP evaluating these two managers for a new fund, the demonstrated ability to actually return capital in cash is more relevant evidence of skill than GP-marked interim estimates.",
-      },
-      {
-        questionId: "d5q10",
-        type: "short-response",
-        prompt:
-          "A GP says the RVPI for Fund III is 'conservatively marked.' What does this claim actually mean within the ASC 820 fair value framework, and how would you test whether the marks are genuinely conservative?",
-        modelAnswer:
-          "Under ASC 820, 'conservative' is not a defined standard — all marks must reflect the GP's best estimate of exit-date fair value, not a deliberately understated figure. A GP who says they are 'conservatively marked' is typically claiming that their methodology assumptions (EBITDA multiple, normalized EBITDA, discount rate) are below the current market consensus for similar assets. To test the claim: (1) Ask for the specific methodology for each major remaining company — EV/EBITDA multiple applied, the EBITDA base used (trailing, forward, or normalized), and the source of the comparable transaction set. (2) Compare the applied multiple to the most recent comparable transactions in the same sector and size range. If sector comparables are pricing at 9x and the GP is using 8x, the conservatism claim is credible. If comparables are at 9x and the GP is using 10.5x, it is not. (3) Review whether the EBITDA base is trailing (observable, harder to manipulate) or forward (relies on management projections that may be optimistic). (4) Check the auditor's fair value disclosure note in the annual financial statements — this discloses the range of significant unobservable inputs used in Level 3 valuations, allowing the LP to see how the GP's assumptions compare to the stated range. A GP who is genuinely conservatively marked can walk through each company's multiple, source, and EBITDA base quickly and specifically — they know the supporting data because they prepared it conservatively with LP scrutiny in mind.",
-      },
-      {
-        questionId: "d5q11",
-        type: "short-response",
-        prompt:
-          "Describe the concept of a 'self-funding' PE program and explain what portfolio construction conditions must be satisfied for distributions from mature funds to meaningfully offset capital calls from newer commitments.",
-        modelAnswer:
-          "A self-funding PE program is one where distributions from mature fund positions — DPI accumulating as those funds enter their harvest phase — partially or fully offset the capital calls being issued by newer fund commitments still in their deployment phase. When the program is self-funding, the LP's net cash outflow to PE is near zero or slightly positive (distributions roughly equal calls), meaning the PE allocation is sustaining itself without continued drawdowns on the LP's liquid portfolio. Conditions required: (1) Vintage year diversification — commitments spread across 4–6+ distinct vintage years so that some funds are always in harvest (generating DPI) while others are in deployment (drawing calls). A portfolio concentrated in 2–3 vintage years will have a 'feast and famine' cash flow profile — all calls in early years, all distributions compressed into later years, with no overlap. (2) Fund size consistency — relatively stable commitment sizes year-over-year; dramatic step-ups in new commitment sizes overwhelm distributions from older, smaller funds. (3) Program maturity — the self-funding state only emerges once the program's oldest vintages are 7+ years old and actively distributing. A 3-year-old PE program is all calls with no offsets, by definition. (4) Exit market health — distributions depend on the GP's ability to exit investments at acceptable prices; a prolonged period of suppressed deal activity (as in 2022–2023) delays distributions and pushes even well-structured programs back toward net-negative cash flow positions temporarily.",
       },
     ],
     sources: [
