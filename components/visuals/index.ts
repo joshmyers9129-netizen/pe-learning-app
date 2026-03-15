@@ -12,8 +12,10 @@ import JCurveVisual from "./JCurveVisual";
 import MultiplesRelationship from "./MultiplesRelationship";
 import FeeWaterfall from "./FeeWaterfall";
 import JCurveDepthFactors from "./JCurveDepthFactors";
+import SubscriptionLineIRR from "./SubscriptionLineIRR";
+import JCurveDPIOverlay from "./JCurveDPIOverlay";
 
-export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors };
+export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay };
 
 export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "fund-lifecycle-timeline": FundLifecycleTimeline,
@@ -21,4 +23,6 @@ export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "multiples-relationship": MultiplesRelationship,
   "fee-waterfall": FeeWaterfall,
   "j-curve-depth-factors": JCurveDepthFactors,
+  "irr-subscription-line": SubscriptionLineIRR,
+  "j-curve-dpi-overlay": JCurveDPIOverlay,
 };

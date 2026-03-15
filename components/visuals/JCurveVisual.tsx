@@ -12,7 +12,7 @@ export default function JCurveVisual() {
   //               rises to ~Y=30 by yr 9.
 
   const midY = 85;
-  const leftPad = 32;
+  const leftPad = 42;
   const rightPad = 8;
   const width = 280;
   const innerW = width - leftPad - rightPad;
@@ -135,7 +135,7 @@ export default function JCurveVisual() {
           textAnchor="end"
           dominantBaseline="middle"
         >
-          0
+          0%
         </text>
         <text
           x={leftPad - 4}
@@ -145,7 +145,7 @@ export default function JCurveVisual() {
           textAnchor="end"
           dominantBaseline="middle"
         >
-          +
+          +15%
         </text>
         <text
           x={leftPad - 4}
@@ -155,7 +155,7 @@ export default function JCurveVisual() {
           textAnchor="end"
           dominantBaseline="middle"
         >
-          −
+          −12%
         </text>
 
         {/* Zone labels */}
@@ -164,6 +164,12 @@ export default function JCurveVisual() {
         </text>
         <text x={x(7.5)} y={midY - 28} fontSize="8.5" fill="#2294BD" textAnchor="middle" fontStyle="italic">
           Exits &amp; distributions
+        </text>
+
+        {/* Trough annotation */}
+        <circle cx={x(2)} cy={midY + 32} r="3" fill="#D9532B" />
+        <text x={x(2)} y={midY + 44} fontSize="7.5" fill="#D9532B" textAnchor="middle">
+          Trough ~Yr 2
         </text>
 
         {/* Inflection annotation */}
