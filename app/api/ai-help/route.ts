@@ -1,8 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const EXPLAIN_PROMPT = `You are a PE concepts explainer for a CFA charterholder with strong public-markets intuition but limited private equity fluency. Explain concepts clearly and draw analogies to public markets where useful. Be concise — 2 to 3 short paragraphs. Do not fabricate citations, invent specific fund names, or make up performance figures. If you do not know something, say so plainly.`;
+const TEACH_PROMPT = `You are a private equity learning coach for a CFA charterholder with strong public-markets intuition but limited PE fluency.
 
-const GRADE_PROMPT = `You are grading a short-response answer to a private equity question for a CFA charterholder learner. The learner has strong public-markets knowledge but is building PE fluency. Assess whether their answer captures the key concepts, then give: 1) a one-sentence verdict (Strong / Partial / Needs work), 2) what they got right, 3) what was missing or imprecise. Be direct and specific — 3 to 5 sentences total. Do not fabricate specific figures.`;
+Respond in exactly four labeled sections using this format:
+
+**Plain-English explanation**
+2–3 sentences. No jargon. Explain as if talking to a smart colleague who knows bonds and equities but not PE.
+
+**What this really means in PE**
+1–2 sentences. How do practitioners actually use or encounter this concept?
+
+**Common mistake or pitfall**
+1–2 sentences. What do people often get wrong, conflate, or misapply?
+
+**What to ask in a manager meeting**
+One concrete question an LP could ask a GP to probe this topic.
+
+Be specific and direct. Do not fabricate fund names, performance figures, or citations. If you do not know something, say so plainly.`;
 
 export function GET() {
   return NextResponse.json({ available: !!process.env.OPENROUTER_API_KEY });
@@ -17,7 +31,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  let body: { prompt?: string; mode?: string };
+  let body: { prompt?: string };
   try {
     body = await req.json();
   } catch {
@@ -28,8 +42,6 @@ export async function POST(req: NextRequest) {
   if (!userPrompt) {
     return NextResponse.json({ error: "Missing prompt." }, { status: 400 });
   }
-
-  const systemPrompt = body.mode === "grade" ? GRADE_PROMPT : EXPLAIN_PROMPT;
 
   try {
     const response = await fetch(
@@ -45,10 +57,10 @@ export async function POST(req: NextRequest) {
         body: JSON.stringify({
           model: "anthropic/claude-haiku-4-5",
           messages: [
-            { role: "system", content: systemPrompt },
+            { role: "system", content: TEACH_PROMPT },
             { role: "user", content: userPrompt },
           ],
-          max_tokens: 600,
+          max_tokens: 700,
           temperature: 0.4,
         }),
       }
