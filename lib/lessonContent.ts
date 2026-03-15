@@ -24,70 +24,290 @@ export const lessonContents: LessonContent[] = [
   {
     lessonId: "day-01",
     blocks: [
+      // ── Meeting cold open ─────────────────────────────────────────────────
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "You cannot follow a PE manager meeting if you do not have the fund model in your head. This lesson builds the baseline.",
+          "The GP's head of investor relations slides a fund summary across the table: 'Fund IV is $3.2 billion, currently 68% deployed in year three, with a $1.1 billion NAV and a 35% follow-on reserve against remaining commitments.' In one sentence: four distinct concepts — deployment pace relative to the investment period, interim NAV versus paid-in capital, follow-on reserve adequacy, and committed versus deployed capital. If you don't have the fund model internalized, you cannot interrogate any of them in real time. This lesson builds that model.",
+      },
+      // ── Framing ───────────────────────────────────────────────────────────
+      {
+        type: "framing",
+        title: "Why the fund model is the foundation",
+        content:
+          "Every PE metric — IRR, TVPI, DPI, PME — is anchored in the fund structure. Without the structural model, you cannot identify when IRR is being distorted — whether by a subscription line (a revolving credit facility secured against uncalled LP commitments, used to bridge acquisitions before calling LP capital; this delays the LP's cash outflow date and mechanically inflates reported IRR without improving LP economics) or by early exit concentration — why NAV is not the same thing as value, or why a year-3 performance number is nearly useless for cross-fund comparison. A CFA charterholder approaching PE with a public-equity mental model — continuous liquidity, daily NAV, mark-to-market pricing — will have systematically wrong intuitions across every dimension of PE analysis. The fund model is not introductory material you learn once and shelve. It is the analytical skeleton on which all subsequent PE reasoning hangs.",
+      },
+      // ── Teaching blocks ───────────────────────────────────────────────────
+      {
+        type: "teaching",
+        title: "The closed-end structure: design, not constraint",
+        content:
+          "A PE fund is a closed-end vehicle — the capital pool is fixed at close, with no new subscriptions, no redemptions, and no daily NAV. The fund has a defined term (typically 10 years, with one or two one-year extension rights subject to LP approval). LPs cannot exit by redeeming their interest; secondary market sales to a willing buyer are the only exit path. This design is deliberate. It enables three things the PE return model requires: the illiquidity premium — LPs surrender liquidity and expect compensation in return; multi-year operational control — a GP with a stable capital base can execute 3–5 year operational improvements without the threat of capital withdrawal; and incentive alignment — carry is earned on fund-level total returns across the fund's full life, not on quarterly NAV marks. The analogy to a listed closed-end fund (CEF) is imperfect: a CEF trades at a market price that may diverge sharply from NAV, while a PE fund has neither. The governing legal document — the limited partnership agreement (LPA) — defines the structure, terms, and GP authority.",
       },
       {
         type: "teaching",
-        title: "Core concept",
+        title: "Capital commitment vs. capital calls: the operational mechanic",
         content:
-          "A PE fund is a closed-end vehicle where LPs commit capital, the GP calls that capital over time, invests in portfolio companies, and later distributes proceeds as investments are exited.",
+          "When an LP signs the LPA and commits $50 million, they are making a legally binding obligation to fund capital calls up to $50 million over the fund's life — not writing a check. The GP calls capital — issues a formal capital call notice — when funds are needed: to close an investment, pay management fees, or cover fund expenses. Notices typically require LP funding within 10 business days, though specific terms vary by LPA. This distinction is critical at every level of analysis. A fund with $2 billion in commitments and $800 million called at year 2 is an $800 million fund operationally — the remaining $1.2 billion is a contingent obligation on LP balance sheets. Deployment pace — the rate at which the GP calls and deploys capital — affects the fee base, shapes the J-curve, and drives the IRR calculation. An LP managing a $200 million PE allocation across six funds may have $120–150 million in uncalled commitments outstanding simultaneously, all callable with 10 days' notice. This is not a theoretical liquidity risk; it is a recurring operational reality for any institutional LP with a meaningful PE program.",
       },
+      {
+        type: "teaching",
+        title: "Unfunded commitments: the hidden balance sheet item",
+        content:
+          "Unfunded commitments — the gap between what an LP has committed and what has been called — sit as a contingent liability until drawn. This creates three structural risks that LPs frequently underestimate. First, timing correlation: GPs often accelerate capital calls during favorable deal environments, which historically coincide with periods when LP liquid portfolios face competing demands. Second, over-commitment mechanics: institutional LPs routinely commit 1.2–1.5x their target PE allocation on the empirical basis that GPs historically call 85–95% of commitments over a fund's life. This works until multiple GPs in a portfolio simultaneously reach high deployment in a single vintage year, concentrating liquidity demand. Third, default risk: failure to fund a capital call within the LPA-defined notice period triggers severe contractual penalties — typically suspension of voting rights, forced sale of LP interest at a significant discount (often 50–75 cents on the dollar), or forfeiture of the uncalled balance. ILPA Principles 3.0 recommends 15+ business days' notice as best practice, but this is advisory, not a legal requirement.",
+      },
+      // ── Visual 1 ─────────────────────────────────────────────────────────
+      {
+        type: "visual",
+        title: "PE Fund Lifecycle — The Four Phases",
+        visualId: "fund-lifecycle-timeline",
+        caption:
+          "The four phases overlap in practice. Value creation for early acquisitions begins before the investment period closes; harvesting often begins before all value-creation work is complete.",
+        whyItMatters:
+          "The investment period close date is a structural boundary that constrains GP discretion on new platform investments — and defines when LP unfunded commitment exposure shrinks from full commitment to follow-on reserve only.",
+        sourceNote:
+          "Phase definitions and typical timing: CAIA Association Level II curriculum, private equity fund structure chapters.",
+      },
+      // ── Teaching blocks continued ─────────────────────────────────────────
+      {
+        type: "teaching",
+        title: "Fund lifecycle phases: operational mechanics and overlaps",
+        content:
+          "The investment period (typically years 1–5, sometimes 4–6) defines the GP's authority to make new platform investments. Once it closes, called capital can only be used for follow-on investments in existing portfolio companies and for fund expenses — a significant constraint on GP discretion. The harvest phase has no clean start date: GPs exit when conditions allow, which may compress into years 7–9 (typical) or extend to year 10 and beyond (common when credit markets tighten or exit multiples compress). This temporal ambiguity has material implications for performance measurement. A fund that completes most exits in year 7 versus year 9 of a 10-year life will show meaningfully different IRRs even with identical terminal multiples — because IRR is highly sensitive to cash flow timing. Tracking investment period close against current fund age is a basic allocator data point that most investors underutilize.",
+      },
+      {
+        type: "teaching",
+        title: "Capital flow anatomy: commitment to distribution",
+        content:
+          "Tracing a dollar of committed capital through the fund lifecycle: (1) LP commits $1.00 — the dollar sits in the LP's liquid portfolio, subject to call. (2) GP issues a capital call; LP funds approximately $0.90 net of any management fee offsets that year. If the fund uses a subscription line credit facility — a short-term revolving facility secured by uncalled LP commitments — the GP may bridge the acquisition with the credit line and call LP capital weeks later. This delays LP cash outflow and mechanically inflates reported IRR without improving the LP's actual economics. (3) GP closes an acquisition — the called equity plus debt financing (typically 4–6x EBITDA for a buyout) funds the enterprise value. (4) Portfolio company operates under GP oversight; GP marks it quarterly for NAV purposes — LP sees TVPI build, but it is unrealized. (5) GP exits via trade sale, sponsor-to-sponsor transaction, or IPO; gross proceeds flow to the fund. (6) A distribution waterfall governs how gross proceeds are sequenced: LP capital is returned first, then LPs receive their preferred return (typically 8% per annum compounded), and only after these thresholds does the GP earn carried interest on remaining profits. This sequencing matters because it defines when GP economics begin — American and European waterfall structures differ on this question. Full mechanics are in Day 11. (7) LP receives a net cash distribution. DPI at any point reflects only what has been wired; RVPI reflects GP-determined interim value for the remaining portfolio. A fund with TVPI 1.8x and DPI 0.3x has mostly unrealized, unconfirmed returns — a distinction that is not cosmetic.",
+      },
+      // ── Worked example ────────────────────────────────────────────────────
       {
         type: "example",
-        title: "Mini example",
+        title: "Worked example: tracing a $2 billion buyout fund",
         content:
-          "A manager raises a $2 billion fund, invests over four years, exits holdings over years five through ten, and reports both interim valuations and realized proceeds.",
+          "Fund IV: $2 billion committed, 2%/20% structure, 8% preferred return, 5-year investment period, 10-year term. Years 1–2: GP calls $600 million (30% of commitments) for 4 platform acquisitions at $150 million average equity per deal. Management fees: $40 million/year on committed capital. NAV marked near cost. Net IRR: −4% (fee drag before any realized gains; structurally expected). Years 3–4: Additional $800 million called for 4 more platforms and follow-ons. Total called: $1.4 billion. No exits. Three companies marked up on EBITDA growth. TVPI: 1.15x, DPI: 0.0x, Net IRR: ~3% (J-curve still dominant). Years 5–7: First exits begin. Trade sale of Company A — acquired for $150 million equity, sold for $330 million equity value, 2.2x gross MOIC. Partial IPO of Company B. DPI builds to 0.40x. TVPI: 1.45x, Net IRR: ~12%. Years 8–10: Harvest accelerates. Five of eight remaining companies exit. Final two held in continuing NAV. Net TVPI: 1.85x, DPI: 1.55x, RVPI: 0.30x, Net IRR: 16.5%. The year-2 IRR of −4% and the year-10 IRR of 16.5% describe the same fund — one of the most important structural insights in all of PE analysis. A manager presenting their year-3 metrics at a first meeting is showing you the J-curve trough, not their track record. Deal mechanics behind Company A's 2.2x gross MOIC: entry at $50M trailing EBITDA, 8x EV/EBITDA = $400M enterprise value. Financing: $150M LP equity contribution, $250M acquisition debt (5x EBITDA). Four-year hold — EBITDA grown to $65M through margin improvement and a bolt-on acquisition; exit multiple held at 8x = $520M EV. Debt reduced to $190M through operating cash flow. Exit equity: $520M − $190M = $330M. Gross MOIC: $330M ÷ $150M = 2.2x. Without leverage, the same $400M → $520M EV appreciation (30% total gain) returns only $150M × 1.30 = $195M — a 1.3x MOIC rather than 2.2x. Financial leverage amplified a modest 30% EV gain into a 120% equity return. This is why entry EV/EBITDA multiple and acquisition leverage quantum are the two variables most closely interrogated in any buyout discussion.",
+      },
+      // ── Visual 2 ─────────────────────────────────────────────────────────
+      {
+        type: "visual",
+        title: "TVPI, DPI, and RVPI: How the Multiples Relate",
+        visualId: "multiples-relationship",
+        caption:
+          "TVPI = DPI + RVPI. In early and middle fund years, most of TVPI consists of unrealized RVPI. As exits accumulate, DPI rises and RVPI falls toward zero. A fund reporting TVPI 1.45x with DPI 0.40x has confirmed only 0.40x in cash.",
+        whyItMatters:
+          "Comparing two funds on TVPI alone merges confirmed cash returns with GP-marked estimates into a single number. The DPI/RVPI split is the fastest single indicator of how much a fund's headline multiple is backed by actual distributions versus interim marks that have not yet faced exit pricing.",
+        sourceNote:
+          "TVPI, DPI, and RVPI definitions: ILPA Performance Reporting Standards; IPEV Valuation Guidelines, current edition.",
+      },
+      // ── Visual 3 ─────────────────────────────────────────────────────────
+      {
+        type: "visual",
+        title: "The J-Curve: Early Negative IRR Is Structural",
+        visualId: "j-curve",
+        caption:
+          "The J-curve is a direct consequence of fee drag before exits occur — not a signal of poor investment quality. The inflection point typically arrives around year 4–5; meaningful performance signal begins after year 6–7.",
+        whyItMatters:
+          "A GP presenting their current fund's IRR before the inflection point is showing you a metric that is mathematically certain to improve as exits occur. The relevant question is not the current IRR but the pace of deployment relative to the investment period and the quality of the unrealized portfolio.",
+        sourceNote:
+          "J-curve mechanics and empirical timing: CAIA Level II; Cambridge Associates Private Equity Benchmark Commentary.",
+      },
+      // ── Teaching blocks continued ─────────────────────────────────────────
+      {
+        type: "teaching",
+        title: "The blind pool: what the LP is actually buying",
+        content:
+          "A PE fund is a blind pool — the LP commits capital before the portfolio is constructed. At the time of commitment, the GP may have one or two warehoused deals, but the majority of the portfolio is unidentified. The LP is buying GP judgment, sourcing capability, and operational capacity — not a portfolio. This structural fact has several decision-relevant implications. First, past performance is the primary evidence available in manager selection, which creates the question of what predictive content it carries — a contested empirical question covered in Day 12. Second, the LPA defines the investment mandate: permitted sectors, geographies, deal size ranges, concentration limits, and leverage parameters. An LP who has not reviewed the LPA (or at minimum the PPM summary) does not know what the GP is authorized to do with their capital. Third, fund sequence matters: a GP managing their final fund before a senior departure has different incentives than one building toward Fund V. GP team continuity and succession planning are frequently underweighted in LP diligence.",
       },
       {
-        type: "exercise",
-        title: "Quick exercise",
+        type: "teaching",
+        title: "Meeting vocabulary: the precise language of the fund model",
         content:
-          "In one or two sentences, explain why committed capital is not the same as invested capital.",
+          "GPs use fund-model vocabulary precisely in meetings. A CFA-fluent LP who does not speak this language will be dependent on GP framing. Key terms: 'Committed capital' — total LP obligations, including uncalled. 'Paid-in capital' (also 'called capital') — actual cash drawn from LPs to date. 'Invested capital' — capital deployed into portfolio companies (paid-in minus management fees and expenses). 'NAV' — GP-determined fair value of the remaining portfolio per FASB ASC 820 and IPEV guidelines. 'TVPI' — (distributions + NAV) / paid-in; the total value multiple. 'DPI' — distributions / paid-in; the realized multiple, the only confirmed performance. 'RVPI' — NAV / paid-in; the unrealized component of TVPI. 'Gross IRR' — fund-level return before management fees and carry. 'Net IRR' — LP-level return after all fees and carry; the only number that matters for LP comparison. 'Follow-on reserve' — portion of committed capital reserved for subsequent investments in existing portfolio companies. In a meeting, 'Fund IV is 68% deployed in year three' means the GP has called approximately 68% of total commitments three years into a 5-year investment period — somewhat ahead of average pace — leaving roughly 32% (less the follow-on reserve) available for new platforms.",
+      },
+      // ── Source note ───────────────────────────────────────────────────────
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "Fund structure mechanics and LP governance: ILPA Principles 3.0 (ilpa.org/principles). Fund lifecycle and mechanics: CAIA Association Level II, private equity fund structure chapters. Capital call conventions and defaulting LP provisions: ILPA Principles 3.0, Section 3 (LP default provisions and recommended notice periods); specific penalty ranges reflect representative LPA terms as surveyed in ILPA educational materials — actual terms vary by fund. LP over-commitment practice and historical draw-down rates: Preqin Investor Outlook: Alternative Assets (LP survey, annual editions); the 85–95% historical call rate reflects Preqin and ILPA survey data and is not a contractual guarantee. Subscription line credit facilities and IRR impact: ILPA Subscription Line of Credit and Alignment of Interest Guidance (2017). PE NAV and fair value methodology: FASB ASC 820 (Fair Value Measurement); IPEV Valuation Guidelines, current edition (ipev.org). Benchmark timing thresholds: Cambridge Associates Private Equity Benchmark Commentary, interim vs. final performance methodology. Interim valuation predictive validity: Harris, R., Jenkinson, T., and Kaplan, S. (2014), 'Private Equity Performance: What Do We Know?' Journal of Finance 69(5), 1851–1882.",
+      },
+      // ── Weak vs. strong answer ────────────────────────────────────────────
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: responding to a deployment pace update",
+        content:
+          "The GP says: 'Fund IV is 68% deployed in year three, and we have a strong pipeline for the remaining investable capital.' Weak LP response: 'That's impressive pace — what are you seeing in terms of entry multiples right now?' Why it's weak: the LP has accepted the GP's framing, pivoted to a generic market question, and completely missed the most important structural implication of 68% deployment in year three of a five-year investment period. Strong LP response: 'With 68% called and two years remaining in the investment period, your remaining investable capacity is roughly $640 million — but how much of that is reserved for follow-ons in your existing portfolio companies? Are any companies likely to require incremental capital beyond your original reserve estimates?' Why it's strong: it deconstructs the remaining investable capital into new-platform capacity versus follow-on reserve, identifies the relevant risk (follow-on reserve adequacy as the portfolio matures), and signals that the LP understands the structural difference between deployment pace and available new-platform capacity. This is the distinction between an LP who has the fund model internalized and one who is following the GP's narrative.",
+      },
+      // ── Inference boundary ────────────────────────────────────────────────
+      {
+        type: "inference-boundary",
+        title: "Inference boundary: what year-4 metrics can and cannot tell you",
+        content:
+          "At year four of a typical 10-year buyout fund, reported metrics include DPI, TVPI, and net IRR. What can be reliably concluded: deployment pace (compare called capital to the investment period to assess whether the GP is behind, on pace, or ahead for new platforms); confirmed realized value (DPI is cash actually wired to LPs, not subject to valuation interpretation); whether any early exits have occurred. What cannot be reliably concluded: ultimate fund performance. Year-4 IRR is mechanically distorted by the J-curve and by the timing of any early exits — a single early exit in year 3 can double the reported interim IRR regardless of portfolio quality. The RVPI component of TVPI is GP-determined fair value per ASC 820 methodologies (comparable transactions, DCF, last-round pricing) and while audited for process, it is not market-confirmed. Cambridge Associates' benchmark methodology limits interim performance comparisons to funds where at least 60–70% of economic life has elapsed, on the basis that earlier metrics have insufficient predictive validity. Harris, Jenkinson, and Kaplan (2014) corroborate this pattern: fund quartile rankings based on early interim metrics shift substantially by final realization, meaning a year-4 top-quartile label carries far less signal than a year-8 one. The professionally correct posture in year 4: treat DPI as confirmed value, deployment pace as a structural check, and RVPI and interim IRR as indicative only.",
+      },
+      // ── Exercise ──────────────────────────────────────────────────────────
+      {
+        type: "exercise",
+        title: "Applied exercise: reading a year-4 fund update",
+        content:
+          "A GP presents Fund III at a first meeting. Fund size: $1.8 billion. Vintage: 2019. Fund age: 4 years. Reported metrics: net IRR 7.2%, TVPI 1.28x, DPI 0.18x, RVPI 1.10x. The GP describes the fund as 'tracking well against benchmark.' Work through the following before proceeding to the quiz: (a) What does the DPI/TVPI split tell you about the source and reliability of the apparent returns? (b) A 7.2% net IRR at year 4 of a 2019-vintage buyout fund — is this underperformance or structurally expected? (c) The GP notes the top three portfolio companies represent 62% of current NAV. What specific risk does this concentration create for RVPI reliability? (d) What single additional data point would most improve your ability to evaluate Fund III quality at this stage?",
+      },
+      // ── Meeting application ───────────────────────────────────────────────
+      {
+        type: "meeting-application",
+        title: "In the manager meeting: four high-signal questions",
+        content:
+          "Armed with the fund model, these questions become natural entry points for any first GP meeting. (1) 'What is your current DPI, and what is your expected timeline to reach 1.0x DPI on Fund III?' — Separates GP confidence from confirmed value; forces a conversation about exit timing and visibility. (2) 'How much of your follow-on reserve has been utilized so far, and do you have any concerns about reserve adequacy for the remaining portfolio companies?' — Tests capital discipline within the fund and reveals whether the GP manages the portfolio as a capital allocation problem. (3) 'Walk me through your expected capital call schedule for Fund IV in years 1 through 3 — what pace should we model for liquidity planning?' — Establishes LP liquidity planning inputs and signals you understand capital call mechanics. (4) 'On Fund III, what is the RVPI distribution across remaining portfolio companies — how concentrated is the unrealized NAV?' — Probes concentration risk in the unrealized return and forces a company-level conversation that most LPs never initiate.",
+      },
+      // ── Allocator application ─────────────────────────────────────────────
+      {
+        type: "meeting-application",
+        title: "Allocator application: three structural challenges from the fund model",
+        content:
+          "The fund model creates three structural portfolio management challenges for any LP allocating across multiple PE managers. First, pacing risk: an LP committing $150 million per year across four to six funds simultaneously may have $400–600 million in uncalled commitments outstanding at any time. A pacing model — projecting expected capital calls by fund and year against available liquid reserves — is not optional; it is a basic operational tool for a functioning PE program. Over-commitment works until multiple GPs simultaneously accelerate calls in a strong vintage year, creating a call crisis against a single LP's liquidity position. Second, vintage year concentration: the fund model's 3–5 year investment periods mean that two sequential fund commitments may acquire companies at materially different macro conditions. A PE portfolio concentrated in two or three vintage years carries macro-entry risk that is invisible on a portfolio NAV report but often materializes in the harvest phase. Third, the denominator effect: when public markets sell off sharply, PE NAVs are slow to mark down because GP interim valuations lag market conditions. This mechanically inflates the apparent portfolio weight of PE even as the economic value of those companies has likely declined. Understanding this as a structural artifact of the fund model — not a signal of PE outperformance — is essential for avoiding forced rebalancing decisions at the worst time.",
       },
     ],
     quiz: [
       {
         questionId: "d1q1",
         type: "multiple-choice",
-        prompt: "Which statement best describes a typical PE fund?",
+        prompt:
+          "Which statement most precisely describes how LP committed capital works in a PE fund?",
         options: [
-          "An open-end vehicle with daily subscriptions and redemptions",
-          "A closed-end fund where capital is committed up front but drawn over time",
-          "A passive vehicle that tracks a benchmark",
-          "A permanent capital vehicle with no distribution cycle",
+          "Committed capital is transferred to the fund at final close and held in a segregated escrow account until the GP deploys it into investments",
+          "Committed capital is a binding LP obligation to fund capital calls issued by the GP, up to the committed amount, over the fund's investment period",
+          "Committed capital establishes the GP's maximum debt financing capacity across portfolio company acquisitions",
+          "Committed capital is recorded as paid-in capital on the fund's financial statements from the date of the LP's subscription agreement",
         ],
         correctAnswer:
-          "A closed-end fund where capital is committed up front but drawn over time",
+          "Committed capital is a binding LP obligation to fund capital calls issued by the GP, up to the committed amount, over the fund's investment period",
       },
       {
         questionId: "d1q2",
         type: "multiple-choice",
-        prompt: "Which is the best description of the GP's role?",
+        prompt:
+          "An LP commits $100 million to a PE fund at final close. Two years later, the GP has called $35 million. Which statement is correct?",
         options: [
-          "Provide all the capital and outsource investment decisions",
-          "Manage the fund, source deals, make investments, and oversee exits",
-          "Act only as a reporting agent for LPs",
-          "Match investor flows with public market liquidity",
+          "The LP has fully satisfied its commitment; no further calls can be made",
+          "The LP owes $35 million — only the amount already called constitutes ongoing obligation",
+          "The LP has $65 million in uncalled commitment remaining, constituting a binding legal obligation",
+          "The remaining obligation is determined by fund NAV at the time of each future call",
         ],
         correctAnswer:
-          "Manage the fund, source deals, make investments, and oversee exits",
+          "The LP has $65 million in uncalled commitment remaining, constituting a binding legal obligation",
       },
       {
         questionId: "d1q3",
+        type: "multiple-choice",
+        prompt:
+          "A buyout fund reports TVPI 1.55x and DPI 0.20x at year 5. Which interpretation is most accurate?",
+        options: [
+          "The fund has outperformed — 1.55x exceeds the historical buyout median TVPI",
+          "Most of the apparent return is unrealized, GP-marked NAV; only 20 cents per dollar has been confirmed via actual distribution",
+          "The fund has returned most LP capital; a DPI of 0.20x represents the majority of net proceeds",
+          "The fund is deep in the harvest phase, with the majority of exits already completed",
+        ],
+        correctAnswer:
+          "Most of the apparent return is unrealized, GP-marked NAV; only 20 cents per dollar has been confirmed via actual distribution",
+      },
+      {
+        questionId: "d1q4",
+        type: "multiple-choice",
+        prompt: "The J-curve in PE fund performance primarily reflects:",
+        options: [
+          "A deliberate return-smoothing policy applied by GP accountants during the investment period",
+          "Sequential losses on early investments later recovered through portfolio follow-on investments",
+          "The drag of management fees and early-period valuation marks before exits generate meaningful distributions",
+          "The mathematical effect of reinvesting portfolio company earnings during the holding period",
+        ],
+        correctAnswer:
+          "The drag of management fees and early-period valuation marks before exits generate meaningful distributions",
+      },
+      {
+        questionId: "d1q5",
+        type: "multiple-choice",
+        prompt:
+          "An LP receives a capital call notice requiring funding in 10 business days during a period of significant public equity market stress. Which risk is most specific to the PE fund model?",
+        options: [
+          "The GP may permanently reduce the fund size if the LP does not respond promptly",
+          "The LP may need to liquidate depressed public equity holdings to meet the call, creating forced selling at a poor time",
+          "The fund's IRR will be permanently impaired proportionally to the LP's response delay",
+          "The GP will substitute another institutional LP within 5 business days if the original LP does not respond",
+        ],
+        correctAnswer:
+          "The LP may need to liquidate depressed public equity holdings to meet the call, creating forced selling at a poor time",
+      },
+      {
+        questionId: "d1q6",
+        type: "multiple-choice",
+        prompt:
+          "After a PE fund's investment period closes, which activity can the GP still conduct?",
+        options: [
+          "Source and close new platform acquisitions if an exceptional opportunity arises",
+          "Call capital for management fees and for follow-on investments in existing portfolio companies",
+          "Transfer uncalled commitment obligations to a successor fund without LP consent",
+          "Extend the investment period by up to 12 months using GP-only written consent",
+        ],
+        correctAnswer:
+          "Call capital for management fees and for follow-on investments in existing portfolio companies",
+      },
+      {
+        questionId: "d1q7",
+        type: "multiple-choice",
+        prompt:
+          "A GP reports a gross IRR of 22% and a net IRR of 15.5% on Fund III. The 6.5 percentage-point gap primarily reflects:",
+        options: [
+          "Currency hedging costs and FX translation losses on cross-border portfolio companies",
+          "The return difference between leveraged buyout investments and organic growth investments within the fund",
+          "Management fees, carried interest, and fund-level expenses reducing LP-level returns",
+          "The difference between IRR calculated on committed capital versus paid-in capital",
+        ],
+        correctAnswer:
+          "Management fees, carried interest, and fund-level expenses reducing LP-level returns",
+      },
+      {
+        questionId: "d1q8",
         type: "short-response",
-        prompt: "Why does the capital call structure matter for LPs?",
+        prompt:
+          "A pension fund CIO asks you to explain why a PE fund's committed capital differs from its invested capital, and why this distinction matters for the pension's liquidity planning. Write two to three sentences as you would say them in that conversation.",
         modelAnswer:
-          "LPs must keep liquid reserves to fund calls on short notice (typically 10 business days). Failure to respond to a capital call can result in severe penalties, including forfeiture of LP interest. The unpredictability of call timing is a real liquidity-management challenge.",
+          "Committed capital is the total legal obligation the pension has agreed to fund over the life of the fund; invested capital is only what has actually been called and deployed to date. The uncalled balance — typically 60–80% of commitment in the first two years — remains a contingent liability that can be drawn with as little as 10 business days' notice. This means the pension must hold liquid reserves against uncalled commitments rather than fully deploying that capital elsewhere, which requires a formal pacing model to manage call timing against portfolio liquidity needs.",
+      },
+      {
+        questionId: "d1q9",
+        type: "short-response",
+        prompt:
+          "Why is it professionally hazardous to compare net IRRs from two PE funds with different vintage years without additional context? What does a more rigorous comparison require?",
+        modelAnswer:
+          "IRR is highly sensitive to cash flow timing and to the macro environment at entry. A fund deploying in 2012–2015 and exiting 2016–2019 benefited from multiple expansion and low financing costs that improved IRR independent of manager skill; a fund deploying in 2007–2010 faced peak entry multiples and the credit crisis. Cross-vintage IRR comparison conflates manager decisions with macro environment. A rigorous comparison requires PME (public market equivalent) methodology — replicating each fund's exact capital call and distribution timing against a public index to isolate the return attributable to the manager over the market alternative. Kaplan-Schoar PME, mPME (Cambridge Associates), and Direct Alpha are the three most common PME methods. Vintage year diversification is the LP-level portfolio implication: no single vintage year should dominate a PE program.",
+      },
+      {
+        questionId: "d1q10",
+        type: "short-response",
+        prompt:
+          "Describe two things you can reliably conclude and two things you cannot reliably conclude from a buyout fund's reported metrics at year four of a 10-year fund life.",
+        modelAnswer:
+          "Reliably concludable: (1) Deployment pace — comparing called capital to the investment period gives a clear signal of whether the GP is behind, on pace, or ahead for new platform investments, which affects follow-on reserve adequacy and new-platform capacity. (2) Confirmed realized value — DPI is cash actually wired to LPs; it is not subject to valuation methodology or GP discretion. Not reliably concludable: (1) Ultimate fund performance — year-4 IRR and TVPI are heavily distorted by J-curve mechanics and GP interim marks; Harris, Jenkinson, and Kaplan (2014) find that interim PE metrics have limited predictive validity before 60–70% of fund economic life has elapsed. (2) Unrealized portfolio quality — RVPI reflects GP-applied ASC 820 fair value methodologies that can diverge materially from eventual exit prices; concentration in a few large companies amplifies this uncertainty.",
+      },
+      {
+        questionId: "d1q11",
+        type: "short-response",
+        prompt:
+          "A first-time LP says: 'We're not concerned about capital calls — we're a large institution and we always have cash available.' What specific structural risk are they underestimating, and what would you tell them?",
+        modelAnswer:
+          "The risk is not simple cash availability but the intersection of three factors: (1) timing correlation — GPs tend to accelerate calls during strong deal environments, which historically overlap with periods when LP liquid portfolios face competing demands; (2) simultaneous calls — an LP running an over-committed portfolio may face multiple GPs calling simultaneously in an active vintage year, concentrating liquidity demand in a short window; (3) severe default penalties — failing to fund a call within the LPA-defined notice period triggers contractual penalties including loss of voting rights, forced sale of LP interest at 50–75 cents on the dollar, and forfeiture of uncalled balance. A functioning PE program requires a formal pacing model, a dedicated unfunded commitment reserve (typically 25–35% of uncalled commitments in liquid instruments), and stress testing of simultaneous call scenarios. 'Having cash available' is not the same as being structurally prepared for PE's specific call mechanics.",
       },
     ],
     sources: [
-      "CFA Institute private markets and manager-selection materials",
-      "ILPA educational materials",
-      "CAIA private equity curriculum references",
+      "ILPA Principles 3.0 — governance, fee transparency, and LP rights (ilpa.org/principles)",
+      "CAIA Association Level II: private equity fund structure and mechanics chapters",
+      "Cambridge Associates Private Equity Benchmark Commentary — performance calibration and PME methodology",
+      "Harris, R., Jenkinson, T., and Kaplan, S. (2014). 'Private Equity Performance: What Do We Know?' Journal of Finance 69(5), 1851–1882",
+      "FASB ASC 820 Fair Value Measurement — PE NAV and interim valuation standards",
+      "IPEV Valuation Guidelines, current edition (ipev.org) — private equity fair value methodology",
+      "CFA Institute: Private Markets and Alternative Investments curriculum",
     ],
   },
 
@@ -95,83 +315,264 @@ export const lessonContents: LessonContent[] = [
   {
     lessonId: "day-02",
     blocks: [
+      // ── Meeting cold open ─────────────────────────────────────────────────
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "The GP/LP incentive structure is the foundation of every PE relationship. Understanding it lets you read fee terms clearly and spot misalignment.",
+          "The GP's head of IR walks through Fund IV economics: 'Management fee is 2% on committed capital through the investment period, then steps to 1.5% on invested capital. Carry is 20% above an 8% preferred return. We run a 100% GP catch-up. Our own commitment is 3% of fund, and we've agreed to 100% fee offsets for any monitoring or transaction fees.' Five distinct economic terms in three sentences. If you don't have the incentive stack mapped — how each term interacts with the others — you cannot evaluate alignment, identify LP-unfriendly structures, or compare terms across managers. This lesson teaches the mechanics behind each term and shows how they add up.",
+      },
+      // ── Framing ───────────────────────────────────────────────────────────
+      {
+        type: "framing",
+        title: "Why '2-and-20' is not a single thing",
+        content:
+          "'2-and-20 with an 8% hurdle' describes a range of actual economics so wide that two funds using this shorthand may transfer materially different amounts from LPs to GPs depending on: whether the fee basis steps down from committed to invested capital (and when), whether the hurdle is simple or compounded, whether the GP catch-up is 100% or 80%, whether fee offsets return monitoring and transaction fees in full, whether clawback provisions are backed by meaningful escrow, and whether the GP commitment is personal capital or carry-loan-financed. A CFA charterholder who accepts '2-and-20' as a complete term sheet has missed the most consequential variation in PE fee structures. This lesson teaches the working mechanics of each component.",
+      },
+      // ── Teaching blocks ───────────────────────────────────────────────────
+      {
+        type: "teaching",
+        title: "Management fees: basis, step-down, and the dollar impact",
+        content:
+          "Management fees are the GP's operating budget — covering staff, office, legal, travel, and diligence costs. At 2% of committed capital, a $2B fund generates $40M per year whether or not a dollar is deployed. This is intentional: the GP's team is fully engaged sourcing and evaluating deals before capital is put to work. Fee basis matters more than headline rate. Consider a $2B fund with two structures: Structure A charges 2% of committed capital for the full 10-year term. Structure B charges 2% on committed capital through the 5-year investment period, then 1.5% on invested capital ($1.7B deployed) thereafter. Cumulative fees: Structure A = $40M × 10 = $400M. Structure B = ($40M × 5) + ($25.5M × 5) = $200M + $127.5M = $327.5M. The difference — $72.5M — goes entirely to the GP in Structure A and is not available for LP returns. On a $2B fund, this fee difference alone reduces LP net MOIC by approximately 3.6 cents per dollar of commitment. ILPA Principles 3.0 recommends that fee terms be disclosed with explicit basis, step-down triggers, and the formula for calculating the post-investment-period base.",
       },
       {
         type: "teaching",
-        title: "Fee structure",
+        title: "The preferred return: mechanics, compounding, and why 8%",
         content:
-          "GPs charge a management fee (typically 1.5–2% of committed capital) to cover operating costs. Carried interest (typically 20%) is the GP's share of profits above the hurdle rate — usually 8% preferred return. The GP clawback ensures excess carry is returned if later deals underperform.",
+          "The preferred return (hurdle rate) is the annualized return LPs must receive on paid-in capital before the GP earns any carried interest. The standard is 8% per annum, compounded annually on unreturned capital — a figure calibrated historically to long-run public equity returns, establishing that the LP should achieve a public-equity-equivalent outcome before GP participation begins. Compounding matters at longer hold periods. A $500M fund with 8% compounded hurdle over a 6-year average hold accumulates a preferred return obligation of $500M × (1.08⁶ − 1) = $294M — meaningfully larger than a simple 8% × 6 × $500M = $240M simple-interest hurdle. LPAs that specify 'simple' hurdles (rare but present in older or smaller-fund documentation) systematically understate the LP's protection at multi-year holds. The preferred return is not guaranteed — if the fund underperforms the hurdle after fees, the GP earns nothing in carry, and the LP still receives the inferior net return. It is a threshold for carry participation, not a contractual promise of performance.",
       },
+      {
+        type: "teaching",
+        title: "GP catch-up: full vs. partial, and the arithmetic",
+        content:
+          "After the preferred return tranche is satisfied, the GP catch-up determines how rapidly the GP reaches its carried interest entitlement on total profits. Under a 100% (full) catch-up, the GP receives 100% of subsequent distributions until the GP has earned exactly 20% of all profits distributed to date — LP cash flow pauses entirely during this tranche. The algebra: if the LP has received $P in preferred return, the GP catch-up amount equals P × (carry_rate / (1 − carry_rate)) = P × (0.20 / 0.80) = P × 0.25. On a $294M preferred return, the catch-up is $294M × 0.25 = $73.5M entirely to the GP. Under a partial (80/20) catch-up, the GP receives 80% and the LP receives 20% during this phase, extending it in duration but providing LP cash flow throughout. Economic endpoint is identical: both structures ultimately deliver 20% of total profits to the GP. The difference is timing and LP cash flow experience during the catch-up window. Institutional LPs with strong negotiating leverage often push for partial catch-ups specifically because they preserve LP distributions during a period when the portfolio may be at peak risk (before harvest is complete).",
+      },
+      // ── Visual 1 ─────────────────────────────────────────────────────────
+      {
+        type: "visual",
+        title: "Distribution Waterfall — The Sequence of LP and GP Payments",
+        visualId: "fee-waterfall",
+        caption:
+          "The waterfall sequences distributions in fixed order: LP capital first, then preferred return, then GP catch-up, then the 80/20 carried-interest split. The GP earns zero carry until steps 1 and 2 are fully satisfied.",
+        whyItMatters:
+          "Understanding the waterfall tells you when GP carry economics begin — and therefore what the GP's incentive actually is at each stage of the fund. A GP who has not cleared the preferred return has no carry upside yet, which affects their exit timing pressure.",
+        sourceNote:
+          "Waterfall mechanics and LP protection provisions: ILPA Principles 3.0, Section 4 (economic terms). European vs. American waterfall structures: CAIA Level II, private equity fund terms chapters.",
+      },
+      {
+        type: "teaching",
+        title: "Carried interest: effective rate and total GP economics",
+        content:
+          "The 20% headline carry understates true GP economics when management fees are layered on top. On a $1B fund returning $1.85B net (after fees), total LP profit = $850M. GP carry = 20% × $850M = $170M. Management fees over 10 years (2% → 1.5% step-down) ≈ $150M. Total GP gross economics = $170M + $150M = $320M against $1B of LP capital — an effective 32% of LP capital transferred to the GP in aggregate. This framing matters for LP return attribution: the $1.85B net available to LPs already reflects the $150M fee drag; the carry is an additional 20% on remaining profits. Gross-to-net drag on a strong-performing fund is routinely 6–8 percentage points of IRR annually. A fund with 22% gross IRR and 15% net IRR is not unusual; the gap is structurally explained by management fees (1.5–2 percentage points) plus carried interest (4–6 percentage points depending on timing and profit level). This gap is why net IRR — and net MOIC — are the only economically meaningful comparisons for LPs.",
+      },
+      {
+        type: "teaching",
+        title: "Fee offsets: monitoring fees, transaction fees, directors' fees",
+        content:
+          "GPs historically earned additional revenue directly from portfolio companies: monitoring fees (annual retainers, typically $1–3M per company per year), transaction fees (deal closing fees, typically 0.5–1% of enterprise value at entry and exit), and directors' fees (board compensation). Without a fee offset provision, these payments represent additional GP compensation above the management fee — borne economically by portfolio companies and therefore funded by LP capital. ILPA Principles 3.0 recommends 100% fee offsets as best practice: all monitoring and transaction fees credited against management fees, reducing the net management fee collected from LPs. A partial offset (e.g., 80%) allows the GP to retain 20% of these fees as incremental revenue. The due diligence implication: in large buyout funds, transaction fees on a $1B+ deal can exceed $10–15M. With a 100% offset, that amount reduces the LP's management fee burden. Without an offset, it is pure GP revenue on top of management fees. Always ask: 'What is the exact offset rate, and can you show me the fee offset schedule for Fund III?' A fund that does not report this cleanly is concealing meaningful compensation.",
+      },
+      // ── Worked example ────────────────────────────────────────────────────
       {
         type: "example",
-        title: "Mini example",
+        title: "Worked example: full waterfall on a $1B fund",
         content:
-          "A GP raises a $1B fund with 2% management fee and 20% carry above an 8% hurdle. Annual fees = $20M. If the fund returns 2x net, carry is earned on profits above the hurdle — roughly $160M+ of GP economics.",
+          "Fund IV: $1B committed, 2%/20% structure, 8% compound preferred return, 100% GP catch-up, 100% fee offset. Simplified management fees: $150M over fund life (Years 1–5: 2% on $1B = $20M/yr × 5 = $100M; Years 6–10: 1.5% on $900M invested = $13.5M/yr × 5 = $67.5M, rounded to $150M total). LP paid-in: $1B. Gross proceeds at exit: $2.0B. Net available for distribution: $2.0B − $150M = $1.85B. Waterfall distribution of $1.85B: Step 1 (Return of LP capital): $1.0B → LPs. Remaining: $850M. Step 2 (Preferred return, 6-year average hold, compounded): $1B × (1.08⁶ − 1) = $587M → LPs. Remaining: $850M − $587M = $263M. Step 3 (GP catch-up, 100%): GP catch-up target = $587M × (20/80) = $146.75M → GP. Remaining: $263M − $146.75M = $116.25M. Step 4 (Carried interest split): $116.25M × 80% = $93M → LPs; $116.25M × 20% = $23.25M → GP. Verification: LP total = $1,000M + $587M + $93M = $1,680M. GP total carry = $146.75M + $23.25M = $170M = exactly 20% × $850M total profit ✓. LP net MOIC = $1,680M / $1,000M = 1.68x net after fees. GP economics: $170M carry + $150M management fees = $320M total. Partial catch-up comparison (80/20): same economic endpoint ($170M carry), but LP receives 20% of distributions during the catch-up phase instead of zero. On $263M available in steps 3 and 4, LP receives $263M × 20% in catch-up + some in split versus $0 in catch-up + $93M in split. LP intermediate cash flows are larger under partial catch-up, though final amounts converge. The choice matters when fund harvest concentrates in years 7–9 — under full catch-up, LP may receive no cash for 1–2 additional years while GP clears its catch-up.",
       },
       {
-        type: "exercise",
-        title: "Quick exercise",
+        type: "teaching",
+        title: "GP commitment: skin-in-the-game versus carry-loan financing",
         content:
-          "A GP earns management fees on committed capital for five years, then switches to invested capital. Why does this step-down matter for LP economics?",
+          "GP fund commitments — the GP's own capital invested alongside LPs — serve as an alignment signal. The industry convention is 1–3%, with institutional LPs increasingly expecting 2–3% for established managers: on a $2B fund, 1% = $20M, 3% = $60M. The alignment argument: a GP with meaningful personal capital at risk approaches investment decisions with a different loss-aversion calculus than one whose only downside is unrealized carry. Practical caveat: GP commitments are frequently financed through management fee distributions, portfolio company loans, or dedicated carry-loan programs that extend credit against future carry distributions. A GP who has borrowed 90% of their $40M commitment against anticipated carry has invested approximately $4M of their own capital — the alignment signal is $4M, not $40M. In a due diligence meeting: 'How is the GP commitment funded — personal liquidity, a loan against expected carry, or deferred management fees?' A GP who answers clearly signals confidence in their track record. One who deflects reveals that the commitment is partially or fully leveraged and the alignment signal is correspondingly weaker.",
+      },
+      {
+        type: "teaching",
+        title: "Governance provisions: LPAC, key-person, clawback enforceability",
+        content:
+          "Fee terms determine economic sharing; governance provisions determine whether LPs can enforce alignment when it breaks down. (a) LPAC: the limited partnership advisory committee represents a subset of large LPs and reviews conflicts of interest, approves unusual valuation approaches, and consents to major fund changes (term extensions, strategy modifications). LPAC has no authority over investment decisions — its role is fiduciary oversight of process and conflicts. Being a named LPAC member requires active engagement and legal resources; many LPs commit to funds without pursuing LPAC seats, limiting their oversight capability. (b) Key-person provisions: define the named individuals — typically 2–4 senior partners — whose continued active engagement triggers a key-person event if they depart, reducing their time, or lose GP decision-making authority. A key-person event suspends the investment period pending an LP vote to continue, restructure, or wind down. 'Principal involvement' defined loosely ('materially involved') is weaker than 'dedicated majority of professional time.' Read this clause carefully before signing. (c) Clawback: the GP's obligation to return carry that exceeded its ultimate entitlement is legally straightforward but operationally difficult. Clawback applies at wind-down and requires GPs to return carry distributed 7–10 years earlier — which may have been spent. Real enforceability requires escrow of 25–30% of carried interest distributions held until fund wind-down; without it, clawback is a claim on potentially illiquid former partners with limited practical recoverability.",
+      },
+      // ── Source note ───────────────────────────────────────────────────────
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "Fee structure and economic terms: ILPA Principles 3.0, Section 4 (economic terms, fee offsets, clawback), ilpa.org/principles. GP catch-up mechanics and waterfall sequencing: CAIA Association Level II, private equity fund terms chapters. Management fee step-down and fee offset practices: ILPA Fee Reporting Template and Fee Transparency Initiative (2016–2022 editions). Preferred return conventions and market data: Preqin Global Private Equity Report (annual); fund term surveys reporting median hurdle rates, carry rates, and GP commitment levels. Clawback enforceability and escrow practices: Institutional Investor survey data on LP-GP term negotiations; American Bar Association Private Equity and Venture Capital Committee resources. GP commitment financing: Pitchbook/NVCA Venture Monitor and Cambridge Associates manager survey data on GP co-investment structures. CFA Institute: Private Markets and Alternative Investments curriculum, carried interest calculation methodology.",
+      },
+      // ── Weak vs. strong answer ────────────────────────────────────────────
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: responding to a fee presentation",
+        content:
+          "The GP says: 'Our economics are industry-standard — 2% management fee, 20% carry above an 8% preferred return, consistent with our previous three funds.' Weak LP response: 'That's consistent with what we see across the market. Can you walk us through your current portfolio composition?' Why it's weak: the LP has accepted '2-and-20' as a complete description, missed the five variables that determine actual economics, and pivoted to a topic that doesn't address alignment at all. Strong LP response: 'Thank you. On the management fee, does the 2% step down post-investment period — and to what basis? On carry, is the catch-up full or partial, and is the preferred return compounded? And on fee offsets, what percentage of monitoring and transaction fees are credited back against the management fee?' Why it's strong: it demonstrates that the LP knows '2-and-20' is not a complete specification, probes the three variables with the largest dollar impact (fee step-down, catch-up structure, fee offsets), and signals to the GP that standard boilerplate will receive detailed scrutiny. This is the difference between an LP who knows PE economics and one who is following a checklist.",
+      },
+      // ── Inference boundary ────────────────────────────────────────────────
+      {
+        type: "inference-boundary",
+        title: "Inference boundary: what fee terms can and cannot tell you",
+        content:
+          "What fee terms reliably indicate: (1) The minimum LP return required before carry is triggered — the preferred return threshold is contractual and precise. (2) The economic cost of the management fee — basis and step-down terms can be modeled to project total dollar cost over the fund life. (3) Whether incentives are aligned on loss-avoidance — a GP with meaningful unfinanced fund commitment has real capital at risk on the downside, not just unrealized carry. What fee terms cannot reliably indicate: (1) Whether the GP will actually generate returns above the hurdle — terms indicate alignment but not skill. A perfectly structured fee agreement with a mediocre manager transfers less wealth from LP to GP only because there are fewer profits to share. (2) Whether the GP will exercise judgment conservatively during the catch-up window — a GP who has cleared the preferred return threshold and is collecting 100% during catch-up technically has strong incentive to delay final distributions, as each additional dollar of net proceeds earns them 100 cents. This is a real tension in full catch-up structures. (3) Whether clawback is economically meaningful — the legal provision exists in most LPAs; actual recoverability at wind-down depends on escrow mechanics and GP partner financial position, neither of which is visible from the term sheet alone.",
+      },
+      // ── Exercise ──────────────────────────────────────────────────────────
+      {
+        type: "exercise",
+        title: "Applied exercise: comparing two fee structures",
+        content:
+          "Fund A: $1.5B committed, 2% on committed capital for 10 years, 20% carry above 8% compound preferred return, 100% catch-up, 80% fee offset. Fund B: $1.5B committed, 2% on committed capital during 5-year investment period then 1.5% on invested capital ($1.3B deployed), 20% carry above 8% compound preferred return, 80% catch-up, 100% fee offset. Both funds have identical investment strategies and gross return assumptions. Work through the following: (a) Project total management fees for each fund over 10 years; assume $1.3B deployed by end of year 5. (b) In Fund A, the GP earns $25M in transaction fees on a major deal in year 3 with an 80% offset. How much of this reaches LPs versus the GP? In Fund B, the same transaction generates the same fees with 100% offset. What is the difference? (c) At exit, total LP profit above cost = $700M on each fund. Under Fund A's full catch-up, and Fund B's partial catch-up, describe how LP cash flows differ during the catch-up phase — even though the total GP carry is the same.",
+      },
+      // ── Meeting application ───────────────────────────────────────────────
+      {
+        type: "meeting-application",
+        title: "In the manager meeting: five targeted questions",
+        content:
+          "With the incentive stack fully mapped, these questions become natural. (1) 'On the management fee, does the 2% step down at investment period close — and what is the post-investment-period base, committed or invested?' — Probes the largest variable in cumulative fee drag. (2) 'What percentage of transaction and monitoring fees is offset against the management fee — and can you show us the fee offset ledger for Fund III?' — Identifies hidden GP compensation; a GP who resists showing the ledger has something to disclose. (3) 'Is the GP catch-up full or partial — and how was it structured in your prior fund?' — Tests consistency between fund terms and whether the GP is hardening on LP-unfavorable structures. (4) 'How is the GP commitment funded — is it personal capital, a loan against future carry, or deferred management fees?' — The single most revealing question about whether alignment is real or nominal. (5) 'What clawback protection do you provide — is there an escrow, and at what percentage of carry distributions?' — Tests whether the legal obligation is backed by real collateral.",
+      },
+      // ── Allocator application ─────────────────────────────────────────────
+      {
+        type: "meeting-application",
+        title: "Allocator application: fee drag and net return budgeting",
+        content:
+          "For an institutional LP building a PE program, fee structures aggregate across the portfolio. An LP with $500M committed across five $100M fund commitments, averaging 2%/20% with mixed step-down terms and 80% fee offsets, will transfer $50–75M in aggregate management fees and $80–120M in aggregate carry to GPs over 10 years — assuming a typical 1.7–2.0x net TVPI. This $130–195M total fee load represents 26–39% of LP committed capital. The correct LP budget posture: gross return targets must clear the hurdle by enough to generate an acceptable net return after total fee drag — typically a gross/net gap of 6–8 percentage points for a 2%/20% fund. When evaluating manager selection, the relevant comparison is not gross IRR versus benchmark but net IRR versus the LP's cost-of-capital and opportunity cost. A GP with 18% gross and 11% net who charges full catch-up and maintains committed-capital fee basis has poorer LP economics than a GP with 16% gross and 12% net under a step-down structure with 100% fee offsets — even though the gross IRR is lower.",
       },
     ],
     quiz: [
       {
         questionId: "d2q1",
         type: "multiple-choice",
-        prompt: "What does 'carried interest' represent?",
+        prompt:
+          "A GP charges 2% management fee on committed capital for 10 years on a $2B fund. An LP-friendly alternative steps down to 1.5% on invested capital ($1.7B) after the 5-year investment period. What is the approximate dollar difference in total management fees between these two structures?",
         options: [
-          "The LP's preferred return above the hurdle",
-          "The GP's share of fund profits above the hurdle rate",
-          "The management fee charged annually on committed capital",
-          "The interest rate on fund-level debt",
+          "Approximately $10M — the difference is marginal and does not meaningfully affect LP returns",
+          "Approximately $40M — the step-down saves LPs roughly one year's management fee",
+          "Approximately $72.5M — the step-down generates material savings over the harvest period",
+          "Approximately $127.5M — the step-down halves management fees for the entire harvest period",
         ],
-        correctAnswer: "The GP's share of fund profits above the hurdle rate",
+        correctAnswer:
+          "Approximately $72.5M — the step-down generates material savings over the harvest period",
       },
       {
         questionId: "d2q2",
         type: "multiple-choice",
-        prompt: "What is the purpose of a GP clawback?",
+        prompt:
+          "A PE fund has an 8% compound preferred return. The LP commits $500M; the average hold period is 7 years. Approximately how much preferred return must the LP receive before the GP can earn any carried interest?",
         options: [
-          "Allow the GP to call back LP capital for follow-on investments",
-          "Return excess carried interest to LPs if early wins are reversed by later losses",
-          "Give the GP the right to remove underperforming LPs",
-          "Extend the fund life beyond the original term",
+          "$280M — 8% × 7 years × $500M on a simple interest basis",
+          "$340M — approximately 8% compounded for 7 years on $500M",
+          "$500M — the LP must receive a full return of capital plus preferred return before any carry",
+          "$170M — preferred return applies only to the unreturned capital at the time of the first distribution",
         ],
         correctAnswer:
-          "Return excess carried interest to LPs if early wins are reversed by later losses",
+          "$340M — approximately 8% compounded for 7 years on $500M",
       },
       {
         questionId: "d2q3",
         type: "multiple-choice",
         prompt:
-          "Why do LPs typically negotiate a management fee step-down after the investment period?",
+          "Under a 100% GP catch-up provision, what happens to LP cash flows during the catch-up phase?",
         options: [
-          "To reduce GP carry once the hurdle is exceeded",
-          "Because deployed capital is a smaller base once investing stops",
-          "To align GP fees with public market benchmarks",
-          "To penalise GPs who miss deployment targets",
+          "LP receives 20% of all distributions during catch-up, matching the long-run carried interest split",
+          "LP cash flows pause entirely; 100% of distributions go to the GP until it has earned 20% of total profits",
+          "LP receives a return of capital distributions during catch-up, but no profit distributions",
+          "LP and GP share catch-up distributions 50/50 until the GP's carry target is reached",
         ],
         correctAnswer:
-          "Because deployed capital is a smaller base once investing stops",
+          "LP cash flows pause entirely; 100% of distributions go to the GP until it has earned 20% of total profits",
       },
       {
         questionId: "d2q4",
+        type: "multiple-choice",
+        prompt:
+          "A GP earns $20M in transaction fees from a portfolio company closing. The LPA specifies an 80% fee offset. Which outcome is correct?",
+        options: [
+          "$20M is credited against management fees owed, reducing LP costs by $20M",
+          "$16M is credited against management fees owed; the GP retains $4M as additional compensation",
+          "$4M is credited against management fees owed; the GP retains $16M as additional compensation",
+          "$20M is distributed directly to LPs as a special distribution outside the waterfall",
+        ],
+        correctAnswer:
+          "$16M is credited against management fees owed; the GP retains $4M as additional compensation",
+      },
+      {
+        questionId: "d2q5",
+        type: "multiple-choice",
+        prompt:
+          "Which statement best describes why a GP commitment funded through a carry loan has weaker alignment than one funded from personal liquidity?",
+        options: [
+          "Carry loans are illegal in most jurisdictions and signal governance risk",
+          "A carry-loan-financed commitment places no personal capital at risk — if the fund loses, the GP loses only unrealized carry, not actual wealth",
+          "Carry loans increase GP leverage, amplifying their upside but also their downside",
+          "A carry-loan GP commitment counts as LP capital and dilutes existing LPs' fund ownership",
+        ],
+        correctAnswer:
+          "A carry-loan-financed commitment places no personal capital at risk — if the fund loses, the GP loses only unrealized carry, not actual wealth",
+      },
+      {
+        questionId: "d2q6",
+        type: "multiple-choice",
+        prompt:
+          "A PE fund reaches wind-down with a clawback obligation of $30M. The LPA requires no carried interest escrow. Which risk does this create?",
+        options: [
+          "The LP must contribute $30M in additional capital to cover the clawback obligation",
+          "The GP can refuse the clawback if fewer than three LP partners request it",
+          "The GP may have already spent or distributed the excess carry, making the legal claim difficult to collect",
+          "The fund term automatically extends until the $30M clawback is fully recovered from future GP carry",
+        ],
+        correctAnswer:
+          "The GP may have already spent or distributed the excess carry, making the legal claim difficult to collect",
+      },
+      {
+        questionId: "d2q7",
+        type: "multiple-choice",
+        prompt:
+          "A fund with a partial (80/20) catch-up versus one with a full (100%) catch-up will, at final wind-down:",
+        options: [
+          "Pay the GP more total carry under the partial catch-up, because distributions are prolonged",
+          "Pay identical total carry in both cases — the difference is only the timing of LP cash flows during the catch-up phase",
+          "Pay the GP less carry under the partial catch-up because the LP receives 20% during the catch-up, reducing the GP's share",
+          "Depend entirely on fund size — partial catch-ups favor GPs on small funds but LPs on large funds",
+        ],
+        correctAnswer:
+          "Pay identical total carry in both cases — the difference is only the timing of LP cash flows during the catch-up phase",
+      },
+      {
+        questionId: "d2q8",
         type: "short-response",
         prompt:
-          "In one sentence, explain how carried interest aligns GP incentives with LP returns.",
+          "A colleague says: 'The management fee is just a cost of doing business — what really matters is carry.' Why is this framing incomplete, and what does a more rigorous view of management fees require?",
         modelAnswer:
-          "Carry is only paid on profits above the hurdle, so the GP earns meaningfully only when LPs have first recovered their capital plus preferred return — tying GP upside directly to LP outperformance.",
+          "Management fees are not just a cost of doing business — they are a significant, predictable, fee-basis-sensitive transfer from LPs to the GP that occurs regardless of fund performance. On a large fund, the difference between committed-capital and invested-capital basis over 10 years can exceed $50–70M. Unlike carry, management fees are not contingent on GP performance: a fund that underperforms the hurdle rate and earns zero carry still collects full management fees. The rigorous view requires modeling total management fee drag as a present value alongside carry economics, and comparing total GP compensation — not just carry rate — across managers. The management fee effectively pre-funds GP operations from LP capital before a single dollar is invested.",
+      },
+      {
+        questionId: "d2q9",
+        type: "short-response",
+        prompt:
+          "Walk through the GP catch-up arithmetic for a fund where LP preferred return = $300M and the GP's carry rate is 20%. What is the GP catch-up amount, and what does it represent?",
+        modelAnswer:
+          "The GP catch-up amount = $300M × (20 / 80) = $75M. This represents the amount the GP must receive after the preferred return tranche before the standard 80/20 carried interest split begins. The catch-up ensures that the GP's total carry equals exactly 20% of all profits distributed so far at the end of the catch-up phase. At that point: LP has received $300M in preferred return, GP has received $75M in catch-up. Total distributed in profits above cost = $375M. GP share = $75M / $375M = 20%; LP share = $300M / $375M = 80%. The subsequent 80/20 split maintains this ratio going forward.",
+      },
+      {
+        questionId: "d2q10",
+        type: "short-response",
+        prompt:
+          "An LP tells you their LPAC seat gives them effective oversight of the GP's investment decisions. What is the correct understanding of LPAC authority, and what does it actually cover?",
+        modelAnswer:
+          "LPAC has no authority over investment decisions — it cannot veto acquisitions, mandate exits, or override the GP on any portfolio management question. Its role is fiduciary oversight of governance: reviewing conflicts of interest (related-party transactions, allocation policies when the GP manages multiple funds), approving valuations for hard-to-mark assets, consenting to material fund changes (term extensions, strategy amendments), and providing input on key-person events. Investment decisions remain entirely within GP discretion per the LPA. The LP conflating LPAC authority with investment oversight is making a material error about their actual governance rights.",
+      },
+      {
+        questionId: "d2q11",
+        type: "short-response",
+        prompt:
+          "A GP's fund term sheet shows 20% carried interest. A rigorous LP analysis estimates total GP economics of 30%+ of net profits. How does this gap arise, and what does it imply for LP net return expectations?",
+        modelAnswer:
+          "The gap arises because '20% carry' describes only the profit-sharing step of the waterfall, excluding management fees. On a fund with $150M in management fees over 10 years and $1B in net profits, the carry = $200M (20%). Total GP economics = $350M = 35% of net profits. Management fees are not profit-sharing but they do reduce LP net proceeds from $1B to $850M, which is then further reduced by carry. The LP net return must be budgeted against total GP take — not just headline carry. Practically, this means a gross return well above the hurdle is required to produce adequate LP economics after total fee load. For a fund charging 2%/20% with committed-capital basis and no step-down, gross returns of 15%+ are typically required to produce 10%+ net IRR for LPs.",
       },
     ],
     sources: [
-      "ILPA Principles 3.0 — fee and alignment guidelines",
-      "CFA Institute alternative investments curriculum",
+      "ILPA Principles 3.0 — economic terms, fee offsets, clawback provisions (ilpa.org/principles)",
+      "ILPA Fee Reporting Template and Fee Transparency Initiative (2016–2022 editions)",
+      "CAIA Association Level II: private equity fund terms and GP/LP economics chapters",
+      "Preqin Global Private Equity Report (annual) — fund term surveys, median fee rates, GP commitment data",
+      "CFA Institute: Private Markets and Alternative Investments curriculum — carried interest calculation methodology",
+      "Cambridge Associates: PE fund economics and net-return benchmarking methodology",
     ],
   },
 
@@ -179,70 +580,255 @@ export const lessonContents: LessonContent[] = [
   {
     lessonId: "day-03",
     blocks: [
+      // ── Meeting cold open ─────────────────────────────────────────────────
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "The J-curve is the single most misunderstood pattern in PE performance reporting. Knowing it prevents you from mis-reading early negative IRRs.",
+          "A GP presents Fund III at your first meeting: 'We're three years in, net IRR is 4.8%, TVPI is 1.18x — we're tracking in line with where our prior funds were at this stage.' A cautious LP nods; a fluent one interrogates the claim. Year-3 metrics are structurally and mathematically dominated by fee drag and the absence of exits — not investment quality. The GP's 'in line with prior funds' statement is nearly always true and nearly always uninformative. This lesson gives you the analytical framework to understand precisely what is happening in those early fund years, why the numbers look the way they do, and what questions are actually worth asking.",
+      },
+      // ── Framing ───────────────────────────────────────────────────────────
+      {
+        type: "framing",
+        title: "The J-curve as structural arithmetic, not performance signal",
+        content:
+          "The J-curve is not a feature of PE markets — it is a direct arithmetic consequence of the fund structure. Management fees are charged from day one on committed capital. Capital is called before it generates returns. Exits lag investments by 3–7 years. These three facts, combined with IRR's sensitivity to early negative cash flows, guarantee that every well-run PE fund will show negative or near-zero net IRR in years 1–3 and low single-digit IRR in years 3–4. The inflection point — where exits begin offsetting cumulative fee drag — typically arrives at years 4–6. Meaningful performance signal (where IRR begins to reflect investment quality rather than structural mechanics) arrives around years 6–8, after 60–70% of fund economic life has elapsed. Understanding the J-curve as structure lets you correctly interpret early metrics and ask the right questions: not 'why is your IRR low?' but 'what does your current deployment pace imply for the trough depth and timing of inflection?'",
+      },
+      // ── Teaching blocks ───────────────────────────────────────────────────
+      {
+        type: "teaching",
+        title: "Capital call mechanics: anatomy, pacing, and what GPs can call for",
+        content:
+          "Capital calls are the operational trigger of the J-curve. Understanding their mechanics is prerequisite to understanding the curve's shape. A capital call notice formally requests LP funding, specifying: the amount called (in dollars and as a percentage of the LP's commitment), the intended use (platform acquisition, follow-on investment, management fees, fund expenses, or a combination), the funding date (typically 10 business days from notice, per LPA), and wire instructions. What GPs can legitimately call for: (1) New platform investments — the primary use during the investment period; (2) Follow-on investments in existing portfolio companies — permitted post-investment period; (3) Management fees — called pro-rata with other LP capital; (4) Fund-level expenses — legal, accounting, audit, administration. What they cannot call for post-investment-period close: new platform acquisitions. This constraint matters because it defines when LP unfunded commitment exposure shrinks from 'full commitment' to 'follow-on reserve only.' The call schedule is not uniform. Empirically, PE funds call capital unevenly: heavy front-loading (years 1–3), activity during core deployment (years 3–5), and lighter, opportunistic calls for follow-ons and fees in harvest years. An LP managing a $500M PE portfolio across 6 funds may receive 3–6 capital call notices in a single quarter during an active deployment environment.",
       },
       {
         type: "teaching",
-        title: "The J-curve",
+        title: "The J-curve arithmetic: why IRR is structurally negative in early years",
         content:
-          "In a fund's early years, management fees and any writedowns drag returns negative before exits generate cash. The result is a characteristic J-shaped return curve over time. Interim IRRs before year 4–5 are nearly meaningless.",
+          "IRR is the discount rate that sets the net present value of all cash flows to zero. In year one of a PE fund, the LP has paid in capital (negative cash flow) and received nothing back. The only 'return' is a GP-marked NAV — and NAV in year one is typically marked near cost, net of fees paid. Management fee drag alone — $20M/year on a $1B committed-capital fund — represents a −2% IRR contribution in year one if no capital is deployed. As capital is deployed across years 1–4, the IRR denominator grows (more capital paid in) while the numerator (distributions) remains near zero. The J-curve trough deepens as: more capital is called; fees compound; early investments are marked conservatively. The curve inflects as: the first exits produce cash distributions; DPI begins building; the return-of-capital numerator grows faster than the declining present value of those early negative flows. Numerical illustration: $1B fund calls $200M in year 1, pays $20M in fees. LP net position at year 1: −$220M cash out, NAV ≈ $180M (roughly cost minus fees). Implied 1-year IRR: approximately −(220 − 180)/200 = −20% on called capital. Not an investment loss — a structural consequence of calling capital before it generates returns. By year 3, $600M called, NAV ≈ $650M on rising marks, DPI = $0. Implied net IRR: still negative to low single digits. By year 6, first major exits produce $300M in distributions. IRR begins inflecting. By year 8–9, if exits are strong, IRR crosses 10–15%. The entire arc from −20% to +15% can describe a single excellent fund.",
       },
+      // ── Visual 1 ─────────────────────────────────────────────────────────
+      {
+        type: "visual",
+        title: "The J-Curve: Early Negative IRR Is Structural",
+        visualId: "j-curve",
+        caption:
+          "The J-curve's trough typically bottoms at years 2–4; the inflection point arrives at years 4–6 as exits begin. Meaningful performance signal starts around year 6–8. The same fund can show −10% IRR at year 2 and +15% IRR at year 9.",
+        whyItMatters:
+          "When a GP presents their current fund at a meeting and shows a low early IRR, the correct analytical response is to interpret the metric structurally — not as investment quality evidence. The signal in early-year metrics is deployment pace and portfolio composition, not return quality.",
+        sourceNote:
+          "J-curve mechanics and empirical timing: CAIA Association Level II; Cambridge Associates Private Equity Benchmark Commentary, interim performance methodology.",
+      },
+      {
+        type: "teaching",
+        title: "What determines trough depth and inflection timing",
+        content:
+          "Two funds with identical investment quality can show materially different J-curves depending on structural and operational factors. Trough deepens when: (1) Management fees are high relative to called capital — a 2% fee on $1B committed creates $20M/year drag before deployment; (2) Deployment is slow — capital called early but invested over 4–5 years extends the window of negative net cash flow; (3) Early write-downs occur — a distressed portfolio company marked below cost in year 2 deepens the trough without any realized loss; (4) No subscription line — LP capital is called at deal close (day zero). Trough is shallower when: (1) Deployment is fast — the gap between capital call and value creation is compressed; (2) Fee offsets are high — transaction fees credited against management fees reduce net drag; (3) Early profitable exits generate DPI — even one strong early exit changes the IRR trajectory significantly; (4) Subscription lines delay LP outflows — though this improves IRR optics, not LP economics (see next section). The investment implication: a GP with a shallow early J-curve is not necessarily a better performer — they may simply have used a subscription line or had one lucky early exit. Interrogate the source of any unusually shallow trough before concluding anything about quality.",
+      },
+      // ── Visual 2 ─────────────────────────────────────────────────────────
+      {
+        type: "visual",
+        title: "J-Curve Depth Factors",
+        visualId: "j-curve-depth-factors",
+        caption:
+          "Structural and operational factors shift the J-curve's depth and timing independently of investment quality. A fund with a shallower trough has not necessarily outperformed — it may have used a subscription line or benefited from an early exit.",
+        whyItMatters:
+          "Comparing two funds' early-year IRRs without understanding these depth factors leads to false conclusions about relative quality. The relevant questions are: how deep was the trough, why, and how quickly did the inflection arrive?",
+        sourceNote:
+          "Subscription line mechanics and J-curve effects: ILPA Subscription Line of Credit and Alignment of Interest Guidance (2017). Fee offset impact on IRR: ILPA Fee Reporting Template and accompanying technical notes.",
+      },
+      {
+        type: "teaching",
+        title: "Subscription line credit facilities: mechanics and IRR inflation",
+        content:
+          "A subscription line credit facility is a short-term revolving credit facility extended to the GP and secured against uncalled LP commitments. Mechanics: the GP uses the credit line to fund acquisitions immediately at close, then issues a capital call to LPs weeks or months later to repay the facility. From the LP's perspective, the cash outflow is delayed — which mathematically moves the investment's day-zero further forward in time, compressing the measured holding period and mechanically increasing reported IRR. Example: Fund closes a $150M acquisition on January 1. Without a subscription line, LP is called $150M on January 1 — the investment clock starts day zero. With a 90-day subscription line, the GP borrows the $150M, calls LP capital on April 1. From the IRR calculator's perspective, the LP funded the deal 90 days later — a compounded 8% annual rate over 90 days is approximately $150M × 2% = $3M of IRR benefit. This is not economic benefit to the LP — the LP still owns the same deal for the same duration — but it reduces the measured duration, inflating the IRR. ILPA's 2017 guidance specifically addresses this: it recommends reporting both subscription-adjusted and unadjusted IRR so LPs can see the inflation. In due diligence: 'Do you use a subscription line, and can you provide both adjusted and unadjusted IRR for Fund III?' A GP who cannot or will not provide unadjusted IRR is concealing mechanical inflation.",
+      },
+      // ── Worked example ────────────────────────────────────────────────────
       {
         type: "example",
-        title: "Mini example",
+        title: "Worked example: year-by-year J-curve for a $1.5B fund",
         content:
-          "A fund reports –8% IRR in year 2. This reflects fees paid before exits, not actual investment losses. The same fund reports +18% net IRR by year 8 after a strong exit cycle.",
+          "Fund V: $1.5B committed, 2%/20% structure, 8% preferred return, 5-year investment period. Management fee: $30M/year during investment period on committed capital. Year 1: $300M called ($30M fees + $270M invested, 3 platforms). NAV: ~$280M (invested at cost minus fees). Distributions: $0. Net IRR: −11% (fee drag on called capital before any appreciation). Year 2: Additional $400M called ($30M fees + $370M deployed, 3 more platforms). Total called: $700M. NAV: $780M (first marks up slightly). DPI: $0. Net IRR: −6%. Year 3: Additional $350M called. Total called: $1.05B. NAV: $1.2B (2 companies marked up on EBITDA growth). DPI: $0. Net IRR: −1%. Year 4 (inflection): First exit — Company A sold for $420M equity (invested $160M equity, 2.6x gross). Distribution: $420M. Total called: $1.2B. NAV: $1.35B (remaining portfolio). DPI: 0.35x. Net IRR: +8% — the inflection arrives with the first real exit. Year 5: Investment period closes. Two more exits. Total called: $1.45B. DPI: 0.65x. TVPI: 1.42x. Net IRR: 11%. Year 7 (harvest peak): Five of nine companies exited. DPI: 1.25x. TVPI: 1.72x. Net IRR: 16%. Year 9 (near wind-down): All but two companies exited. DPI: 1.65x. TVPI: 1.82x. Net IRR: 17.5%. Subscription line comparison: if Fund V used a 180-day subscription line for all calls, reported year-3 IRR might read +2% instead of −1% — a 3-point improvement from pure mechanics. Same deals, same exits, different reported curve. An LP comparing Fund V (with subscription line) to a peer fund (without) on year-3 IRR will draw a misleading conclusion about relative quality.",
       },
       {
-        type: "exercise",
-        title: "Quick exercise",
+        type: "teaching",
+        title: "J-curve variation across PE strategies",
         content:
-          "A GP presents their Fund III with a 5% net IRR at year 3. Should this concern you? Why or why not?",
+          "The J-curve depth and timing differ materially across PE sub-strategies: Buyout funds (the canonical J-curve): typical management fee of 1.5–2% on committed capital; 3–6 year average holds; first exits typically years 4–7; inflection at years 4–6. Trough is deep but recovers reliably with harvest. Growth equity funds: lower leverage, shorter holds (3–5 years typical), often lower management fees. Shallower trough. IRR signal arrives earlier because the multiple compression risk is lower and exits are more predictable. Venture capital (deepest J-curve): portfolios may hold companies 8–12 years; write-downs and write-offs in years 1–5 are common; management fees on a 2% committed basis with no exits create deep, prolonged troughs. Interim venture IRR at year 3 is almost entirely meaningless. The denominator effect (public market denominator expansion inflating apparent PE weight) is most pronounced for VC portfolios because venture NAVs can jump sharply on a financing round mark-up while unrealized risk remains high. Understanding which strategy you're analyzing is prerequisite to interpreting any J-curve metric.",
+      },
+      {
+        type: "teaching",
+        title: "LP pacing model: construction and liquidity buffer sizing",
+        content:
+          "A pacing model is the LP's tool for managing capital call timing against portfolio liquidity. The input variables: (1) Committed capital by fund (total obligation outstanding); (2) Expected call schedule by fund — modeled as S-curve deployment, typically 20–30% called in year 1, 50–60% by year 3, 85–95% by year 5 or end of investment period; (3) Management fee calls (predictable, annual); (4) Follow-on reserve estimates (typically 20–30% of committed held for follow-ons in existing portfolio). Output: projected capital call demands by quarter, against which the LP stress-tests liquid portfolio adequacy. The liquidity buffer: institutional LPs typically maintain 25–35% of uncalled commitments in near-liquid instruments. Stress test: what if three of your six fund managers simultaneously accelerate deployment in a strong deal environment? Each GP's investment period may be at different stages, but correlated macro conditions (e.g., 2021 deal environment) can drive simultaneous call acceleration across a vintage-diversified portfolio. A practical rule: the pacing model should be run quarterly, updated with actual call data, and stress-tested annually for simultaneous 30% acceleration by all managers in the same quarter. An LP who has not built a pacing model is managing capital call exposure by intuition — a structural mistake.",
+      },
+      // ── Source note ───────────────────────────────────────────────────────
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "Capital call mechanics and default provisions: ILPA Principles 3.0, Section 3 (LP default and notice periods). Subscription line credit facilities and IRR inflation: ILPA Subscription Line of Credit and Alignment of Interest Guidance (2017). J-curve timing and empirical patterns: Cambridge Associates Private Equity Benchmark Commentary, interim versus final performance methodology. Interim performance predictive validity: Harris, R., Jenkinson, T., and Kaplan, S. (2014), 'Private Equity Performance: What Do We Know?' Journal of Finance 69(5), 1851–1882. J-curve variation across strategies: CAIA Association Level II, private equity and venture capital performance chapters. LP pacing model methodology: ILPA educational materials on portfolio construction; Cambridge Associates LP portfolio construction guidance. IRR mechanics and cash flow sensitivity: CFA Institute, Private Markets and Alternative Investments curriculum.",
+      },
+      // ── Weak vs. strong answer ────────────────────────────────────────────
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: responding to a year-3 performance presentation",
+        content:
+          "The GP says: 'Fund III is tracking at 5.2% net IRR and 1.14x TVPI in year three — consistent with where our prior two funds were at the same stage.' Weak LP response: 'That's good to hear. Can you tell us about some of the portfolio companies — which ones are driving the TVPI?' Why it's weak: the LP has implicitly accepted the GP's framing that year-3 metrics are meaningful comparison points, pivoted to company-level color, and asked nothing that would actually test whether the fund is performing well or poorly. Strong LP response: 'Year-three metrics are mostly fee drag rather than performance signal — can you tell us your current deployment pace against the investment period, your first expected exit timeline, and how much of the TVPI is GP-marked appreciation versus fair-value marks near cost?' Why it's strong: it reframes the conversation to the metrics that are actually informative at year three (deployment pace, exit pipeline, NAV composition), refuses to treat interim IRR as performance evidence, and signals analytical literacy about the J-curve. A GP who responds defensively to this question should make you more cautious, not less.",
+      },
+      // ── Exercise ──────────────────────────────────────────────────────────
+      {
+        type: "exercise",
+        title: "Applied exercise: diagnosing a J-curve presentation",
+        content:
+          "A GP presents two scenarios for Fund IV at year 3: Scenario A shows −2% net IRR and 0.96x TVPI. The GP used no subscription line. Scenario B shows +3% net IRR and 1.07x TVPI. The GP used a 6-month subscription line for all calls. Both scenarios involve the same deals, same timing, same portfolio marks. Work through the following: (a) Is Scenario A or B a better-performing fund? What does the IRR difference actually reflect? (b) The GP offers the following comparison: 'Our peer fund at the same stage shows −5% net IRR — we're 8 points ahead.' The peer fund used no subscription line. What is the most likely explanation for the gap, and how would you test it? (c) If Fund IV's first significant exit (a 2.8x gross MOIC on the largest investment) occurs in year 4, what would you expect to happen to the reported net IRR? Would this be evidence of investment skill at that point?",
+      },
+      // ── Meeting application ───────────────────────────────────────────────
+      {
+        type: "meeting-application",
+        title: "In the manager meeting: five targeted questions on J-curve and calls",
+        content:
+          "With the J-curve framework internalized, these questions become natural checkpoints. (1) 'What is your current deployment pace against the investment period close date — and what percentage is reserved for follow-ons in existing portfolio companies?' — Establishes how much new-platform capacity remains versus how much capital is committed to incumbents. (2) 'For Fund III's current TVPI, how much is GP marks above cost versus capital actually returned?' — Probes whether the positive TVPI is confirmed economics or interim valuation; the DPI/RVPI split answers this directly. (3) 'Do you use a subscription line, and can you provide both adjusted and unadjusted IRR for Fund III?' — Tests whether reported IRR includes mechanical inflation. (4) 'When do you expect the first major exit from Fund IV — and is there a specific portfolio company where exit timing is most visible?' — Shifts the conversation from current metrics (mostly uninformative) to exit pipeline, where the actual performance signal lives. (5) 'When you say you're tracking in line with prior fund vintage — are you comparing adjusted or unadjusted IRR, and are the prior funds also at the same stage of economic life?' — Identifies whether the 'prior fund' comparison is valid or misleading.",
+      },
+      // ── Allocator application ─────────────────────────────────────────────
+      {
+        type: "meeting-application",
+        title: "Allocator application: pacing model and liquidity stress",
+        content:
+          "The J-curve has a direct allocator implication: your portfolio will show depressed IRRs and low DPI for the first 3–5 years of any new fund commitment, and you will face capital calls during that period with no offsetting distributions. Pacing model inputs: for each fund in the portfolio, model expected capital calls by quarter (using S-curve deployment), management fee calls (annual, predictable), and expected distribution timing (using rough exit scenarios). The output is a quarterly cash flow projection showing net capital outflow (calls minus distributions) and when you expect the program to become self-funding (distributions exceed calls). A typical institutional PE portfolio reaches net-positive cash flow 5–8 years after the program begins, assuming consistent vintage-year commitments. Liquidity stress: model the scenario where all fund managers simultaneously accelerate deployment by 30% in a given 12-month window. This is not hypothetical — it happened in 2021 and again in parts of 2024. An LP without a liquidity buffer specifically sized against uncalled commitments is exposed to forced liquidation of other portfolio assets at the worst time. The correct posture: treat uncalled PE commitments as a contingent liability in your liquidity policy, not as invested capital.",
       },
     ],
     quiz: [
       {
         questionId: "d3q1",
         type: "multiple-choice",
-        prompt: "What causes the J-curve in early fund years?",
+        prompt:
+          "A buyout fund reports −8% net IRR in year two. Which interpretation is most accurate?",
         options: [
-          "Poor deal selection in the first investment cycle",
-          "Management fees and early writedowns before exits generate cash",
-          "LPs withdrawing capital in the first two years",
-          "Currency losses on international investments",
+          "The fund has made poor early investments that have been written down significantly",
+          "The IRR reflects cumulative management fee drag before any exits have occurred — a structurally expected outcome",
+          "The GP has deployed capital too slowly, causing the IRR to lag peers at the same stage",
+          "The negative IRR will permanently impair the fund's ability to reach the preferred return threshold",
         ],
         correctAnswer:
-          "Management fees and early writedowns before exits generate cash",
+          "The IRR reflects cumulative management fee drag before any exits have occurred — a structurally expected outcome",
       },
       {
         questionId: "d3q2",
         type: "multiple-choice",
-        prompt: "When is an interim PE fund IRR most meaningful?",
+        prompt:
+          "Which factor would most directly DEEPEN the J-curve trough for a buyout fund?",
         options: [
-          "Year 1–2, when the portfolio is freshly valued",
-          "At the end of the investment period, around year 3–4",
-          "After 60–70% of fund life has passed and exits have occurred",
-          "Immediately after a capital call",
+          "An early profitable exit generating DPI in year 2",
+          "A 100% management fee offset on all transaction fees",
+          "A 2% management fee on committed capital with slow deployment over 5 years",
+          "A partial catch-up provision rather than a full catch-up",
         ],
         correctAnswer:
-          "After 60–70% of fund life has passed and exits have occurred",
+          "A 2% management fee on committed capital with slow deployment over 5 years",
       },
       {
         questionId: "d3q3",
+        type: "multiple-choice",
+        prompt:
+          "A GP uses a 6-month subscription line for all capital calls. Compared to a peer fund that calls capital at deal close, how does this affect the GP's reported IRR and LP economics?",
+        options: [
+          "IRR improves and LP economics improve — the subscription line creates real value by bridging deals efficiently",
+          "IRR improves mechanically because LP cash outflows are delayed, but LP cash-on-cash returns and MOIC are unchanged",
+          "IRR is unaffected; only the DPI calculation changes when subscription lines are used",
+          "IRR declines because the fund pays interest on the subscription line, which increases the cost basis of investments",
+        ],
+        correctAnswer:
+          "IRR improves mechanically because LP cash outflows are delayed, but LP cash-on-cash returns and MOIC are unchanged",
+      },
+      {
+        questionId: "d3q4",
+        type: "multiple-choice",
+        prompt:
+          "When does meaningful performance signal begin to emerge from a typical buyout fund's reported metrics?",
+        options: [
+          "Year 1–2, when interim marks reflect initial GP underwriting assumptions",
+          "Year 3–4, when the investment period is complete and the full portfolio is marked",
+          "Year 6–8, when 60–70% of fund economic life has elapsed and exits have occurred",
+          "Year 10 at wind-down, when all assets are liquidated and final IRR is calculated",
+        ],
+        correctAnswer:
+          "Year 6–8, when 60–70% of fund economic life has elapsed and exits have occurred",
+      },
+      {
+        questionId: "d3q5",
+        type: "multiple-choice",
+        prompt:
+          "A GP says 'Fund IV is tracking in line with where our prior two funds were at year three.' Which response most accurately evaluates this claim?",
+        options: [
+          "This is informative because cross-vintage IRR comparison at the same fund age eliminates vintage year bias",
+          "This comparison controls for subscription line use only if all three funds used identical line structures",
+          "Year-three metrics are structurally dominated by fee drag rather than investment quality, making this comparison nearly uninformative about relative performance",
+          "This is a reliable performance indicator provided the fund sizes are comparable across all three vintages",
+        ],
+        correctAnswer:
+          "Year-three metrics are structurally dominated by fee drag rather than investment quality, making this comparison nearly uninformative about relative performance",
+      },
+      {
+        questionId: "d3q6",
+        type: "multiple-choice",
+        prompt:
+          "An LP with $600M in uncalled PE commitments across six funds receives three simultaneous capital call notices in one quarter, totaling $90M. Why is having 'plenty of cash in the portfolio' insufficient liquidity planning for this situation?",
+        options: [
+          "The LP is legally required to maintain a dedicated bank account equal to 20% of total uncalled commitments",
+          "Cash held in money market funds does not satisfy capital call requirements; only wire transfers from designated accounts are accepted",
+          "The correct LP policy is a formal pacing model with a liquidity buffer explicitly sized against peak simultaneous call scenarios, not reliance on general portfolio cash",
+          "Three simultaneous calls from different GPs would trigger an automatic fund-level default clause requiring LP counsel review",
+        ],
+        correctAnswer:
+          "The correct LP policy is a formal pacing model with a liquidity buffer explicitly sized against peak simultaneous call scenarios, not reliance on general portfolio cash",
+      },
+      {
+        questionId: "d3q7",
+        type: "multiple-choice",
+        prompt:
+          "A venture capital fund reports −15% net IRR at year four. How does this compare analytically to a buyout fund reporting −4% at year four?",
+        options: [
+          "The VC fund is a worse performer — a −15% IRR at year four indicates early losses that are unlikely to recover",
+          "Both IRRs are structurally expected for their respective strategy types; VC funds typically show deeper troughs due to longer holds, more early write-downs, and binary exit profiles",
+          "The VC fund uses a different accounting standard, making direct IRR comparison impossible before year seven",
+          "The buyout fund's −4% indicates a subscription line is inflating its IRR relative to the VC fund's more conservative reporting",
+        ],
+        correctAnswer:
+          "Both IRRs are structurally expected for their respective strategy types; VC funds typically show deeper troughs due to longer holds, more early write-downs, and binary exit profiles",
+      },
+      {
+        questionId: "d3q8",
         type: "short-response",
         prompt:
-          "Why must LPs keep liquid reserves ready even though they know capital calls are coming?",
+          "Explain the J-curve in plain English to a pension fund trustee who has never seen private equity performance data before. Use the fee mechanics and timing to explain why early negative IRRs are structural rather than a sign of poor performance.",
         modelAnswer:
-          "GPs issue calls when deals close, not on a fixed schedule. LPs typically have only 10 business days to fund a call — so they must hold near-term liquidity that is not tied up in illiquid assets or longer-settlement instruments.",
+          "In a PE fund, the GP charges management fees from day one — before any investments are made or exits generate cash. When we calculate IRR in year one or two, the denominator is capital we've already paid in, but the numerator is zero because no investments have been exited yet. So the math gives us a negative number: we've paid in money and gotten nothing back yet, even though our investments may actually be performing well. The IRR only improves when exits produce actual cash distributions — which typically takes 3–5 years for a buyout fund. The J-curve is the visual representation of this: IRR starts negative, bottoms out around years 2–4, and then rises sharply as exits accumulate. A negative year-2 IRR tells you the fund is behaving normally. What you actually want to know is: how is the portfolio marked, how is deployment tracking, and when is the first exit expected?",
+      },
+      {
+        questionId: "d3q9",
+        type: "short-response",
+        prompt:
+          "Two funds at year four show the following: Fund A: net IRR +5%, no subscription line. Fund B: net IRR +9%, 6-month subscription line for all calls. What are the two alternative explanations for the gap, and how would you test which one is correct?",
+        modelAnswer:
+          "Two explanations: (1) Fund B is a better-performing fund — the IRR premium reflects superior investment quality, stronger exit timing, or a less fee-intensive structure. (2) Fund B's subscription line use has mechanically inflated its IRR by delaying LP cash outflows, making its reported IRR non-comparable to Fund A. Both effects can coexist. To test: ask Fund B for unadjusted IRR (excluding the subscription line timing benefit). If the unadjusted IRR is approximately 5–6%, the gap is largely or entirely mechanical. If unadjusted IRR is still materially above Fund A's 5%, there is genuine performance content in the gap. Additionally, compare MOIC (cash-on-cash multiple) which is unaffected by subscription line timing — if both funds have similar MOIC at year four, the IRR difference is predominantly mechanical.",
+      },
+      {
+        questionId: "d3q10",
+        type: "short-response",
+        prompt:
+          "Describe the key inputs and outputs of an LP pacing model, and explain what 'stress testing' a pacing model means in practice.",
+        modelAnswer:
+          "Inputs: committed capital by fund (total obligation), expected call schedule (S-curve deployment model per fund — typically 20–30% year one, 50–60% by year three, 85–95% by end of investment period), annual management fee calls, follow-on reserve estimates per portfolio (typically 20–30% of committed), and expected distribution timing (modeled from exit pipeline). Outputs: projected quarterly capital calls by fund, net cash flow (calls minus distributions) by quarter, and the point at which the program becomes net-positive (distributions exceed calls). Stress testing means modeling the simultaneous acceleration scenario: what if all active fund managers accelerate deployment by 25–30% in a single 12-month window? This models peak call demand without assuming any distributing fund provides offsetting cash. The stress output should be compared against the LP's near-liquid reserve pool; if the stress scenario exceeds liquid reserves, the LP either needs to hold larger buffers or reduce new commitment pacing.",
       },
     ],
     sources: [
-      "Cambridge Associates PE benchmark methodology",
-      "CAIA alternative investments curriculum",
+      "ILPA Principles 3.0 — capital call mechanics and default provisions, Section 3 (ilpa.org/principles)",
+      "ILPA Subscription Line of Credit and Alignment of Interest Guidance (2017)",
+      "Cambridge Associates Private Equity Benchmark Commentary — interim vs. final performance methodology",
+      "Harris, R., Jenkinson, T., and Kaplan, S. (2014). 'Private Equity Performance: What Do We Know?' Journal of Finance 69(5), 1851–1882",
+      "CAIA Association Level II: J-curve, capital call mechanics, and strategy-level performance chapters",
+      "CFA Institute: Private Markets and Alternative Investments curriculum — IRR mechanics and cash flow timing",
     ],
   },
 
