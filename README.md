@@ -32,7 +32,7 @@ One module: **Private Equity Foundations** (`pe-foundations`)
 - **20 lessons** (Day 1–20), ~20–30 min each
 - Difficulties: foundational → intermediate → advanced
 - Each lesson has prerequisites, learning objectives, content blocks, and a short quiz
-- **60 review cards** (3 per lesson): flashcards, mini-cases, and reteach cards
+- **~31 review cards** (~1–2 per lesson): flashcards, mini-cases, and reteach cards
 
 Day range overview:
 - Days 1–6: Fund mechanics, GP/LP, capital calls, J-curve, IRR, multiples, fund lifecycle
@@ -51,8 +51,14 @@ Day range overview:
 
 **Review queue** (`localStorage` key: `pe-app-review`)
 - Only lessons that are `in-progress` or `completed` surface review cards
-- Priority is computed from time since completion: in-progress = high; >7 days = high; 2–7 days = medium; <2 days = low
-- Cards are sorted high → medium → low, then by day number within each group
+- Priority is computed from a multi-factor score combining five signals:
+  - **Recency** — in-progress or completed >7 days ago scores highest; <2 days scores lowest
+  - **Quiz score** — fraction of questions correct; below 0.75 adds urgency, below 0.5 adds more
+  - **Confidence** — self-rating 1–5 after the quiz; ≤2 adds urgency, =3 adds a little
+  - **Struggle count** — times the user hit "Still learning" on this card in review sessions
+  - **Topic weakness** — average quiz score across all lessons sharing this card's topic; a weak topic area lifts every card in it
+- Scores map to bands: ≥4 → high, ≥2 → medium, else → low
+- Cards are sorted high → medium → low, then by day number within each band
 - "Done for now" dismisses a card for the rest of the calendar day; it reappears the next day
 
 **Quiz results** (`localStorage` key: `pe-app-quiz`) store score (fraction correct) and confidence per lesson.
@@ -82,7 +88,7 @@ Copy `.env.example` to `.env.local` (never commit `.env.local`):
 OPENROUTER_API_KEY=
 ```
 
-- `OPENROUTER_API_KEY` — your [OpenRouter](https://openrouter.ai) key. If set, AI helper buttons appear automatically on lesson and review pages. Leave blank (or omit) to disable AI entirely.
+- `OPENROUTER_API_KEY` — your [OpenRouter](https://openrouter.ai) key. When set, an "Explain this more simply" button appears on quiz questions, the confidence-rating step, and review cards (after the answer is revealed). The button calls the OpenRouter API (model: `anthropic/claude-haiku-4-5`) and returns a structured four-part explanation tailored for someone with a public-markets background: plain-English summary, PE-practitioner context, common pitfall, and a question to ask in a manager meeting. Leave blank (or omit) to disable AI entirely.
 
 The app works fully without AI. When the key is absent, all AI UI is hidden.
 
@@ -92,8 +98,8 @@ The app works fully without AI. When the key is absent, all AI UI is hidden.
 
 1. Push the repo to GitHub
 2. Import the project in [Vercel](https://vercel.com)
-3. Add environment variables in the Vercel project settings:
-   - `OPENROUTER_API_KEY` — set this to enable AI helper; omit to disable
+3. Add environment variables in the Vercel project settings (optional):
+   - `OPENROUTER_API_KEY` — set this to enable the AI helper; omit to disable
 4. Deploy — no build configuration needed beyond the defaults for Next.js
 
 Because all user data is in `localStorage`, there is nothing to provision server-side.
