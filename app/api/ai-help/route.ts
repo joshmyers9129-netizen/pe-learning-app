@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const SYSTEM_PROMPT = `You are a PE concepts explainer for a CFA charterholder with strong public-markets intuition but limited private equity fluency. Explain concepts clearly and draw analogies to public markets where useful. Be concise — 2 to 3 short paragraphs. Do not fabricate citations, invent specific fund names, or make up performance figures. If you do not know something, say so plainly.`;
+const EXPLAIN_PROMPT = `You are a PE concepts explainer for a CFA charterholder with strong public-markets intuition but limited private equity fluency. Explain concepts clearly and draw analogies to public markets where useful. Be concise — 2 to 3 short paragraphs. Do not fabricate citations, invent specific fund names, or make up performance figures. If you do not know something, say so plainly.`;
+
+const GRADE_PROMPT = `You are grading a short-response answer to a private equity question for a CFA charterholder learner. The learner has strong public-markets knowledge but is building PE fluency. Assess whether their answer captures the key concepts, then give: 1) a one-sentence verdict (Strong / Partial / Needs work), 2) what they got right, 3) what was missing or imprecise. Be direct and specific — 3 to 5 sentences total. Do not fabricate specific figures.`;
 
 export function GET() {
   return NextResponse.json({ available: !!process.env.OPENROUTER_API_KEY });
@@ -15,7 +17,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  let body: { prompt?: string };
+  let body: { prompt?: string; mode?: string };
   try {
     body = await req.json();
   } catch {
@@ -26,6 +28,8 @@ export async function POST(req: NextRequest) {
   if (!userPrompt) {
     return NextResponse.json({ error: "Missing prompt." }, { status: 400 });
   }
+
+  const systemPrompt = body.mode === "grade" ? GRADE_PROMPT : EXPLAIN_PROMPT;
 
   try {
     const response = await fetch(
@@ -39,12 +43,12 @@ export async function POST(req: NextRequest) {
           "X-Title": "PE Learning App",
         },
         body: JSON.stringify({
-          model: "meta-llama/llama-3.2-3b-instruct:free",
+          model: "anthropic/claude-haiku-4-5",
           messages: [
-            { role: "system", content: SYSTEM_PROMPT },
+            { role: "system", content: systemPrompt },
             { role: "user", content: userPrompt },
           ],
-          max_tokens: 400,
+          max_tokens: 600,
           temperature: 0.4,
         }),
       }

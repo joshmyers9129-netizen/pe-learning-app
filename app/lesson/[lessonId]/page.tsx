@@ -17,6 +17,60 @@ import { LESSON_VISUALS } from "@/components/visuals";
 
 const MODULE_ID = "pe-foundations";
 
+// ── markdown renderer ─────────────────────────────────────────────────────────
+// Lightweight inline parser — no external library.
+// Handles: **bold**, paragraph breaks (\n\n), bullet lists (- ), numbered lists (1. ).
+
+function renderInline(text: string): React.ReactNode[] {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+}
+
+function renderContent(text: string): React.ReactNode {
+  const paragraphs = text.split(/\n\n+/);
+  const nodes: React.ReactNode[] = [];
+
+  for (let i = 0; i < paragraphs.length; i++) {
+    const para = paragraphs[i].trim();
+    if (!para) continue;
+
+    const lines = para.split("\n");
+    const isBulletList = lines.every((l) => l.trimStart().startsWith("- "));
+    const isNumberedList = lines.every((l) => /^\d+\.\s/.test(l.trimStart()));
+
+    if (isBulletList) {
+      nodes.push(
+        <ul key={i} className="list-disc list-outside ml-4 space-y-1 text-[15px] text-[#000000] leading-[1.7]">
+          {lines.map((l, j) => (
+            <li key={j}>{renderInline(l.replace(/^-\s+/, ""))}</li>
+          ))}
+        </ul>
+      );
+    } else if (isNumberedList) {
+      nodes.push(
+        <ol key={i} className="list-decimal list-outside ml-4 space-y-1 text-[15px] text-[#000000] leading-[1.7]">
+          {lines.map((l, j) => (
+            <li key={j}>{renderInline(l.replace(/^\d+\.\s+/, ""))}</li>
+          ))}
+        </ol>
+      );
+    } else {
+      nodes.push(
+        <p key={i} className="text-[15px] text-[#000000] leading-[1.7]">
+          {renderInline(para)}
+        </p>
+      );
+    }
+  }
+
+  return <div className="space-y-2">{nodes}</div>;
+}
+
 // ── block renderer ────────────────────────────────────────────────────────────
 
 const BLOCK_STYLE: Record<
@@ -143,9 +197,9 @@ function Block({ block }: { block: LessonBlock }) {
           />
         )}
         {block.content && (
-          <p className="text-[15px] text-[#000000] leading-[1.7] mb-3">
-            {block.content}
-          </p>
+          <div className="text-[15px] text-[#000000] leading-[1.7] mb-3">
+            {renderContent(block.content)}
+          </div>
         )}
         {block.caption && (
           <p className="text-xs text-[#404040] italic mb-3">{block.caption}</p>
@@ -182,11 +236,11 @@ function Block({ block }: { block: LessonBlock }) {
         {block.title}
       </p>
       {block.content && (
-        <p
+        <div
           className={`text-[15px] text-[#000000] leading-[1.7] ${s.contentClass ?? ""}`}
         >
-          {block.content}
-        </p>
+          {renderContent(block.content)}
+        </div>
       )}
     </div>
   );
