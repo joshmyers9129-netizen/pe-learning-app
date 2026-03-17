@@ -4953,6 +4953,214 @@ export const lessonContents: LessonContent[] = [
     "Institutional private-markets governance materials linking fund finance, valuation, and LP oversight",
   ],
 },
+{
+  lessonId: "day-26",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The private markets programme looked well diversified on paper: buyout funds across vintages, a growing venture allocation, several private credit managers, and one open-end real estate vehicle. Then the stress arrives. Distributions slow, venture remains mostly unrealized, a credit sleeve faces refinancing pressure, the open-end real estate vehicle tightens liquidity terms, and public markets fall enough to make the denominator effect matter again. No single manager necessarily failed. The system became harder to fund, harder to rebalance, and harder to explain. This lesson teaches how allocators manage liquidity and commitments across a multi-sleeve private-markets programme when system behavior matters more than any one fund's story.",
+    },
+    {
+      type: "framing",
+      title: "OCIO-grade private-markets management is about system behavior under stress",
+      content:
+        "The learner already understands pacing basics from Day 14, the J-curve and capital calls from Day 3, secondaries from Day 15, portfolio role from Day 17, reporting infrastructure from Day 23, valuation credibility from Day 24, and fund-finance implications from Day 25. Day 26 integrates those concepts into a CIO-style question: can the private-markets programme remain governable and fundable through a stressed period when multiple sleeves behave badly at once?\n\nThis is a distinctly private-markets problem. Public markets make liquidity visible every day. Private markets hide liquidity strain inside commitments, delayed marks, slower distributions, vehicle terms, and governance complexity. The allocator's task is not to forecast exact cash flows. It is to build a system with enough liquidity discipline, reporting visibility, and governance flexibility to survive when cash conversion slows and contingent liquidity claims become real at the same time.",
+    },
+    {
+      type: "teaching",
+      title: "Move from return forecasting to cash-flow forecasting",
+      content:
+        "One of the most important allocator shifts in private markets is moving from 'what return do we expect?' to 'what cash behavior could we plausibly face?' Returns matter, but liquidity failures usually come from cash-flow mismanagement rather than from an incorrect ten-year IRR assumption.\n\nFor a private-markets programme, the core forecasting objects are:\n\n- expected capital calls by sleeve and by vintage\n- expected distributions by sleeve and by maturity bucket\n- unfunded commitments as contingent claims on future liquidity\n- recallable distributions and recycling rights where relevant\n- vehicle-level liquidity features such as gates, notice periods, or evergreen redemptions\n\nThis is why the programme should be modeled as a cash-flow system rather than as a collection of performance expectations. Venture, buyout, private credit, and real estate all produce different cash-flow shapes. The allocator who understands those shapes at the programme level has an advantage over the allocator who only sees each manager in isolation.",
+    },
+    {
+      type: "teaching",
+      title: "Why multi-sleeve pacing is harder than single-sleeve pacing",
+      content:
+        "Basic pacing assumes a relatively stable cash-flow pattern within one sleeve. Multi-sleeve pacing is harder because the sleeves differ structurally.\n\n**Buyout** often has a meaningful J-curve but may begin returning capital earlier than venture if exits are functioning.\n\n**Venture** tends to have a longer-duration profile, more dispersed outcomes, and slower distribution realization. A programme that is venture-heavy can look diversified by manager while remaining highly back-ended on cash conversion.\n\n**Private credit** may appear more income-like, but cash behavior depends on the vehicle and strategy. Closed-end lending funds, evergreen structures, specialty finance vehicles, and distressed strategies do not all behave alike.\n\n**Real estate** introduces another layer because vehicle structure matters a great deal. Closed-end opportunistic funds, open-end core funds, and real estate debt strategies have very different liquidity profiles.\n\nThe allocator implication is that 'vintage diversification' alone is not enough. Multi-sleeve liquidity design requires understanding how sleeve mix changes the shape of calls, distributions, valuation lag, and gating risk across the full programme.",
+    },
+    {
+      type: "teaching",
+      title: "Commitments are contingent liquidity claims, not just future opportunities",
+      content:
+        "Allocators often speak about unfunded commitments as dry powder or future exposure. That framing is incomplete. Unfunded commitments are also contingent claims on future liquidity.\n\nThat matters because the programme may look comfortably liquid until multiple things happen at once:\n\n- distributions slow\nn- call pace remains steady or accelerates\n- public-market values fall, shrinking the denominator\n- credit or real estate vehicles become less liquid than expected\n- governance bandwidth becomes tighter precisely when more decisions are required\n\nA disciplined allocator therefore treats commitments in two ways simultaneously:\n- as a tool for future deployment\n- as a liability-like claim that must be supported by a realistic liquidity plan\n\nThis is not a call to eliminate overcommitment. It is a call to operationalize it. The right question is not 'do we overcommit?' It is 'how much contingent liquidity strain can this institution actually absorb across all private sleeves under stress?'",
+    },
+    {
+      type: "teaching",
+      title: "Build a liquidity ladder, not just a pacing model",
+      content:
+        "A pacing model is necessary. A liquidity ladder is better. The pacing model estimates future calls and distributions. The liquidity ladder asks how the institution will fund those obligations under different market conditions and over different time horizons.\n\nA useful private-markets liquidity ladder can include:\n\n- immediate liquidity: cash, short-duration reserves, and committed sources available within days\n- near-term liquidity: assets likely monetizable within weeks or months without severe portfolio disruption\n- medium-term expected private distributions: only with appropriate haircut and confidence weighting\n- contingent tools: secondaries, pacing cuts, re-up deferrals, line management, and selective portfolio sales where available\n- constrained or low-confidence sources: gated vehicles, uncertain distributions, and marks that should not be treated as cash equivalents\n\nThe advantage of a ladder is that it forces the allocator to rank liquidity quality rather than simply sum nominal values. This becomes especially important when the programme includes open-end real estate or semi-liquid credit structures that may appear liquid in normal times but become conditionally liquid under stress.",
+    },
+    {
+      type: "teaching",
+      title: "Stress testing: the scenarios that actually matter",
+      content:
+        "A strong allocator does not build only a base-case liquidity model. They run scenario analysis that reflects how private-markets strain usually shows up in practice.\n\nHigh-value stress scenarios include:\n\n**Delayed-exit scenario**\nBuyout and growth distributions slow materially for several quarters or years. Mature funds remain unrealized longer than expected.\n\n**Accelerated-call scenario**\nManagers increase deployment or draw follow-on capital more quickly than expected, often after market dislocations create opportunities.\n\n**Denominator-effect scenario**\nPublic markets fall sharply while private marks adjust more slowly, causing the private allocation to appear too large and reducing institutional flexibility.\n\n**Refinancing-stress scenario**\nPrivate credit and leveraged buyout portfolios face tighter financing conditions, raising support-capital needs and reducing clean exit options.\n\n**Vehicle-friction scenario**\nAn open-end real estate or semi-liquid credit vehicle tightens redemptions, delays withdrawals, or otherwise behaves as less liquid than assumed.\n\nThe key is not to choose one stress case. It is to understand the interaction effects when several occur together. Private-markets programmes usually fail by correlation of inconvenience, not by one dramatic single event.",
+    },
+    {
+      type: "teaching",
+      title: "The liquidity toolkit: what allocators can actually do",
+      content:
+        "Liquidity management is not only forecasting. It is also having a practical toolkit when forecasts deteriorate.\n\nThe main toolkit items include:\n\n**Pacing changes**\nSlow or defer new commitments, especially in sleeves with the longest duration or weakest current liquidity support.\n\n**Re-up discipline**\nSeparate manager quality from programme funding capacity. A strong manager is not automatically a timely re-up if system liquidity is constrained.\n\n**Secondaries**\nLP-led secondary sales can reduce exposure and free liquidity, though often at a discount. GP-led processes may also reshape exposure, though with more conflict complexity.\n\n**Vehicle selection discipline**\nChoosing between closed-end, evergreen, semi-liquid, or open-end structures changes not just return profile but liquidity behavior under stress.\n\n**Fund-finance awareness**\nFacilities may buy time, but they can also add leverage and complicate interpretation of liquidity. They are tools, not free optionality.\n\n**Governance triage**\nIn stress, the programme needs decision rules for which commitments proceed, which are deferred, what data is required, and who has authority to act.\n\nThe important point is that secondaries and pacing changes should be treated as normal programme-management tools, not as admissions of failure.",
+    },
+    {
+      type: "teaching",
+      title: "Governance capacity is a binding liquidity constraint",
+      content:
+        "Day 17 introduced governance capacity as a real portfolio constraint. Day 26 extends that idea. In a multi-sleeve private-markets programme, liquidity strain is often worsened when the institution lacks enough decision bandwidth to respond quickly and coherently.\n\nExamples:\n- too many manager relationships to monitor intensively under stress\n- no agreed thresholds for when pacing changes are triggered\n- slow committee processes that delay secondary decisions or re-up changes\n- inconsistent data across managers, making liquidity aggregation slow and error-prone\n- unclear responsibility for stress testing, dashboard ownership, and escalation\n\nIn other words, governance capacity is not only a staffing issue. It is a liquidity issue. A system that cannot process information and make decisions fast enough may be forced into worse economic choices later.\n\nThe allocator should therefore treat governance design as part of liquidity design.",
+    },
+    {
+      type: "teaching",
+      title: "The private-markets liquidity dashboard",
+      content:
+        "A sophisticated programme should have a recurring dashboard that turns reporting data into liquidity control. This dashboard is not a generic risk report. It is a private-markets-specific operating tool.\n\nHigh-signal dashboard elements include:\n\n- total unfunded commitments by sleeve, vintage, and manager\n- expected call and distribution ranges over the next 12, 24, and 36 months\n- realized versus forecast distributions by sleeve\n- recallable distributions and recycling exposure where relevant\n- concentration in mature funds with high unrealized NAV and limited exit visibility\n- exposure to open-end or semi-liquid vehicles with gating or redemption frictions\n- facility usage where relevant, including fund-level leverage that may affect timing\n- governance alerts: pending re-ups, extensions, GP-led events, or liquidity-sensitive decisions\n\nThe bridge to Day 23 is important here. A dashboard is only as useful as the underlying data quality. This is why ILPA-style reporting discipline and structured data matter: without them, the liquidity dashboard becomes manual, lagged, and less reliable precisely when the allocator needs it most.",
+    },
+    {
+      type: "teaching",
+      title: "Cross-sleeve hidden risks: what a CIO should look for",
+      content:
+        "The biggest private-markets liquidity mistakes often come from underestimating hidden cross-sleeve interactions.\n\nExamples include:\n\n- a venture-heavy sleeve extending overall portfolio cash-conversion duration more than expected\n- a private credit sleeve that looks income-producing until refinancing stress slows repayments and reveals valuation lag\n- an open-end real estate sleeve treated as liquidity support until redemption friction appears\n- mature buyout funds that look self-funding until exits stall and follow-on needs rise\n- sector concentration across sleeves, such as software exposure embedded simultaneously in venture, growth, buyout, and credit portfolios\n\nThis is why CIO-grade private-markets management is a portfolio-of-portfolios exercise. Sleeve labels are not enough. The allocator needs to understand which risks are truly diversified and which are merely expressed through different vehicles with the same underlying macro driver.",
+    },
+    {
+      type: "example",
+      title: "Worked example: the illusion of diversification in a stressed programme",
+      content:
+        "Assume an institution has the following private-markets mix: a large buyout book, a growing venture programme, several direct-lending managers, and one open-end core real estate vehicle. In the base case, the programme appears balanced: buyout should distribute, venture should compound, credit should provide income, and real estate should offer some stability.\n\nThen stress emerges:\n- buyout exits slow sharply\n- venture remains mostly unrealized and demands more follow-on capital\n- one direct-lending manager faces refinancing stress in several borrowers, reducing clean cash returns\n- the open-end real estate vehicle tightens redemption flexibility\n- public equities fall, making the private allocation appear oversized on a denominator basis\n\nAllocator analysis path:\n\n**Step 1: separate labels from liquidity behavior**\nThe programme is diversified by asset-class label, but not by immediate cash-conversion reliability.\n\n**Step 2: rank contingent claims on liquidity**\nUnfunded commitments, follow-on support needs, and re-up decisions now compete for funding.\n\n**Step 3: identify which sources of expected liquidity are low confidence**\nReal-estate redemptions, venture realizations, and delayed buyout exits may all be weaker than the base case assumed.\n\n**Step 4: apply toolkit options**\nThe allocator may slow commitments, defer selected re-ups, consider secondary sales, and tighten governance thresholds around new commitments.\n\n**Step 5: update the liquidity dashboard and escalation process**\nThe problem is not only economic. It is operational. The institution now needs a faster and more disciplined decision process.\n\nThe lesson is that multi-sleeve diversification is not the same as liquidity diversification. Under stress, several sleeves can fail to convert to cash at once even if their return stories differ.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: ILPA-aligned reporting and transparency practices as the data backbone for liquidity management; practitioner materials on commitment pacing, secondaries, and private-markets cash-flow forecasting; institutional guidance on governance and stress testing for private programmes; market and regulatory context showing that allocator discipline must be durable even when disclosure regimes evolve. The learning objective is to design a private-markets programme that remains fundable and governable under stress.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to apparent programme diversification",
+      content:
+        "An investment committee member says: 'We are diversified across buyout, venture, private credit, and real estate, so I am less worried about private-markets liquidity risk.'\n\n**Weak response:** 'Agreed. The sleeves have different return drivers, so the programme should be resilient.'\n\nWhy it is weak: it confuses strategy labels with liquidity behavior and ignores delayed exits, gating risk, refinancing pressure, and denominator effects.\n\n**Strong response:** 'Diversification by sleeve is helpful, but it does not guarantee diversification of cash behavior under stress. We need to test how quickly each sleeve can convert to cash, how commitments behave if distributions slow, and whether governance capacity and reporting quality are strong enough to manage simultaneous strain across the programme.'\n\nWhy it is strong: it reframes the issue from category labels to system behavior and funding reliability.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what liquidity models can and cannot tell you",
+      content:
+        "**What strong liquidity modeling can support:**\n- better visibility into contingent funding needs across sleeves\n- earlier identification of denominator-effect and delayed-distribution pressure\n- clearer decision rules for pacing, secondaries, and re-up prioritization\n- stronger governance discipline through dashboarding and escalation\n\n**What it cannot guarantee:**\n- exact timing of calls or distributions\n- that historical sleeve behavior will repeat cleanly in the next stress period\n- that open-end or semi-liquid vehicles will behave as expected when markets are strained\n- that a diversified programme by manager count or asset-class label is truly diversified by cash behavior\n\nThe allocator should therefore use liquidity tools to improve resilience, not to create false precision. The goal is a governable system, not a perfect forecast.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: design a private-markets liquidity dashboard and stress test",
+      content:
+        "You are given a hypothetical programme with buyout, venture, private credit, and real estate allocations, plus a schedule of unfunded commitments, expected distributions, and one semi-liquid vehicle with quarterly redemption terms.\n\nBuild a one-page liquidity dashboard with five sections:\n\n1. **Current exposure and unfunded commitments**\n2. **12- to 36-month expected call and distribution ranges**\n3. **High-risk liquidity assumptions requiring haircut or caution**\n4. **Stress-case actions available to the allocator**\n5. **Governance triggers and escalation thresholds**\n\nThen run two scenarios:\n- a two-year exit drought in buyout and venture\n- a refinancing-stress scenario in private credit plus redemption friction in real estate\n\nFor each scenario, identify the three most important actions the allocator should consider first and explain why.",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager or programme review: five high-signal liquidity questions",
+      content:
+        "1. **'How should we expect this sleeve's cash-flow shape to behave relative to buyout pacing assumptions?'**\nThis tests whether the allocator is modeling each sleeve distinctly rather than importing a generic PE pattern.\n\n2. **'Which sources of expected liquidity in our programme are truly reliable, and which are conditional on market functioning or manager discretion?'**\nThis forces ranking of liquidity quality rather than simple nominal totals.\n\n3. **'What would happen to commitments, re-ups, and support-capital needs if distributions slowed materially for the next eight quarters?'**\nThis makes delayed-exit risk operational.\n\n4. **'Which vehicles in the programme have gating, redemption, or refinancing features that could reduce practical liquidity under stress?'**\nThis surfaces structure-specific friction.\n\n5. **'What dashboard, thresholds, and delegated authorities do we have in place before a liquidity problem emerges?'**\nThis tests whether governance capacity has been designed in advance.",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: what good multi-sleeve liquidity management looks like",
+      content:
+        "A disciplined allocator should be able to summarize the private-markets programme in one system-level memo that answers:\n\n- how much contingent liquidity the institution has promised through commitments\n- which sleeves are likely to return cash versus consume cash over the next several years\n- which assumed liquidity sources deserve haircut or skepticism\n- what actions are available if stress emerges, and who can authorize them\n- whether current reporting quality is strong enough to support timely stress decisions\n\nThis is the OCIO bridge. The question is no longer just whether the institution owns good managers. It is whether the programme's contracts, data, liquidity tools, and decision rights are strong enough to survive a difficult cycle without forced or poorly timed choices.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d26q1",
+      type: "multiple-choice",
+      prompt:
+        "What is the most important shift in mindset when managing a multi-sleeve private-markets programme?",
+      options: [
+        "Move from cash-flow forecasting to long-term IRR forecasting",
+        "Move from manager selection toward modeling the programme as a cash-flow system under stress",
+        "Treat all private-markets sleeves as having similar liquidity behavior once diversified by vintage",
+        "Assume overcommitment is safe as long as no single manager is too large",
+      ],
+      correctAnswer:
+        "Move from manager selection toward modeling the programme as a cash-flow system under stress",
+    },
+    {
+      questionId: "d26q2",
+      type: "multiple-choice",
+      prompt:
+        "Why is multi-sleeve pacing harder than single-sleeve pacing?",
+      options: [
+        "Because private-markets cash flows are legally prohibited from being modeled together",
+        "Because venture, buyout, private credit, and real estate can have materially different call, distribution, and liquidity profiles",
+        "Because only venture funds use unfunded commitments",
+        "Because denominator effects apply only to real estate",
+      ],
+      correctAnswer:
+        "Because venture, buyout, private credit, and real estate can have materially different call, distribution, and liquidity profiles",
+    },
+    {
+      questionId: "d26q3",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of unfunded commitments?",
+      options: [
+        "They are mostly optional future opportunities and should not be treated as liquidity-sensitive",
+        "They are contingent liquidity claims that must be supported by a realistic funding plan",
+        "They matter only for buyout programmes, not venture or credit",
+        "They can safely be counted as available liquidity because calls are gradual",
+      ],
+      correctAnswer:
+        "They are contingent liquidity claims that must be supported by a realistic funding plan",
+    },
+    {
+      questionId: "d26q4",
+      type: "multiple-choice",
+      prompt:
+        "Which of the following is the best example of a liquidity-quality distinction rather than a nominal-liquidity distinction?",
+      options: [
+        "Treating an open-end real estate redemption right as equally reliable as cash on hand",
+        "Ranking immediate cash reserves above expected private distributions that may slow under stress",
+        "Assuming all distributions from mature buyout funds are contractually fixed",
+        "Ignoring secondaries because they involve discounts",
+      ],
+      correctAnswer:
+        "Ranking immediate cash reserves above expected private distributions that may slow under stress",
+    },
+    {
+      questionId: "d26q5",
+      type: "multiple-choice",
+      prompt:
+        "Why is governance capacity a liquidity issue in private markets?",
+      options: [
+        "Because strong governance eliminates the need for stress testing",
+        "Because institutions that cannot aggregate data and make decisions quickly may be forced into worse economic choices later",
+        "Because LPACs directly manage all programme liquidity decisions",
+        "Because governance matters only when a fund is launched",
+      ],
+      correctAnswer:
+        "Because institutions that cannot aggregate data and make decisions quickly may be forced into worse economic choices later",
+    },
+    {
+      questionId: "d26q6",
+      type: "short-response",
+      prompt:
+        "Explain why diversification across buyout, venture, private credit, and real estate does not automatically produce liquidity diversification. Write two to four sentences.",
+      modelAnswer:
+        "Different sleeves can have different return drivers while still failing to convert to cash at the same time under stress. Buyout exits can stall, venture can remain unrealized and require follow-on support, private credit can face refinancing pressure, and open-end real estate can become less liquid than expected. Diversification by label is not the same as diversification of cash behavior.",
+    },
+    {
+      questionId: "d26q7",
+      type: "short-response",
+      prompt:
+        "A private-markets programme faces slower buyout distributions, higher venture follow-on needs, and redemption friction in an open-end real estate vehicle. What are the three most important allocator actions to evaluate first?",
+      modelAnswer:
+        "First, I would update the liquidity dashboard and restress expected calls, distributions, and reliable funding sources using appropriate haircuts. Second, I would review pacing and re-up decisions, because slowing new commitments is often the cleanest first lever. Third, I would assess contingent tools such as secondaries, vehicle-specific liquidity options, and governance escalation thresholds so the institution can act before the strain becomes acute.",
+    },
+  ],
+  sources: [
+    "ILPA-aligned reporting and transparency practices — data backbone for private-markets liquidity monitoring and dashboarding",
+    "Practitioner materials on private-markets pacing, commitment forecasting, and stress testing across sleeves",
+    "Institutional guidance on secondaries, programme liquidity management, and governance design under stress",
+    "Market and regulatory context on evolving private-fund disclosure expectations and the need for durable allocator discipline",
+    "CFA Institute: Private Markets and Alternative Investments curriculum — private-markets cash-flow, portfolio-construction, and governance context",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
