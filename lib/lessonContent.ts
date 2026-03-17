@@ -3623,33 +3623,129 @@ export const lessonContents: LessonContent[] = [
     blocks: [
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "ESG is no longer optional in institutional PE. Most large LPs have ESG policy requirements; regulators in Europe and increasingly in the US are expanding disclosure mandates; and GPs are integrating ESG into value creation plans. You need to distinguish substantive practice from marketing.",
+          "A GP says: 'ESG is fully embedded in our investment process.' The pitch deck includes a sustainability slide, a DEI statement, and a list of portfolio initiatives: emissions tracking, board diversity, employee engagement, cyber readiness. It sounds strong. But what do you actually know? Not much yet. The allocator's task is not to decide whether the GP says the right things. It is to determine whether ESG is a real underwriting and ownership discipline that changes decisions, protects downside, and improves exit outcomes, or whether it is mostly a marketing layer wrapped around a conventional process.",
+      },
+      {
+        type: "framing",
+        title: "Why ESG in PE should be assessed as an investment discipline",
+        content:
+          "In private equity, ESG is often discussed in two unhelpful ways. One camp treats it as a branding exercise. The other treats it as a moral overlay separate from financial underwriting. For an allocator, neither framing is sufficient.\n\nThe relevant question is: **how does ESG affect investment outcomes?** In PE, the answer can be meaningful because the GP has control or strong influence over portfolio companies. That means ESG is not just a screen or reporting category. It can shape:\n\n- what deals the GP avoids\n- what diligence issues get escalated before signing\n- how the company is governed after acquisition\n- which value-creation initiatives are prioritized during the hold\n- how attractive the asset is to strategic buyers or public markets at exit\n\nThis lesson therefore treats ESG as an allocator diligence topic, not a branding topic. The issue is not whether a GP has a policy. The issue is whether ESG is integrated into how capital is committed, risk is managed, and value is ultimately realized.",
       },
       {
         type: "teaching",
-        title: "ESG integration in PE vs. public markets",
+        title: "Why ESG matters more in PE than in public equities",
         content:
-          "In public equities, ESG integration typically means screening and tilting a portfolio based on third-party ratings. In PE, the GP controls the company — they can directly change governance structures, environmental practices, and social policies. This makes PE potentially more impactful than public ESG, but also harder to measure. PE ESG integration typically involves pre-investment ESG due diligence, value creation plans with ESG components (e.g. decarbonisation targets, board diversity), and exit preparation that anticipates ESG scrutiny from strategic buyers.",
+          "ESG can matter in any asset class, but PE has a distinctive feature: **control**. A public equity manager usually cannot change how a company is run. A PE GP often can.\n\nThat matters for three reasons:\n\n**1. PE underwriting is company-specific and concentrated**\nA buyout fund may hold only 8–15 companies. One major labor, environmental, regulatory, or governance failure at a single company can materially affect fund-level returns.\n\n**2. The GP has governance leverage**\nPE owners often appoint the board, influence management incentives, approve major capex, and shape reporting. ESG issues that would be passive observations in public markets can become active ownership decisions in PE.\n\n**3. Exit value can depend on ESG readiness**\nStrategic buyers, lenders, insurers, regulators, and large acquirers increasingly care about environmental liabilities, cyber controls, labor practices, governance quality, and reporting discipline. A company with weak ESG infrastructure may still perform operationally, yet command a weaker buyer universe or lower valuation at exit.\n\nFor those reasons, ESG in PE should not be reduced to policy language. It is part of company-risk assessment and ownership execution.",
       },
       {
         type: "teaching",
-        title: "ESG vs. impact investing",
+        title: "ESG integration, sustainability language, and impact investing are not the same thing",
         content:
-          "ESG integration aims to identify and manage material risks and opportunities — it is risk and return-motivated. Impact investing intentionally targets measurable positive social or environmental outcomes alongside financial returns. The distinction matters: a buyout fund integrating ESG is not an impact fund. Impact investing requires additionality (would the impact have happened without the investment?), measurability (standardised metrics), and intentionality. Blurring the two is a common form of greenwashing.",
+          "A common source of confusion is that three different ideas get blended together.\n\n**ESG integration** means incorporating material environmental, social, and governance risks and opportunities into investment selection, ownership, and exit planning. The objective is financial: protect downside, improve quality, and support returns.\n\n**Sustainability language** is broader and often vaguer. A GP may describe itself as sustainability-oriented, responsible, or purpose-driven without showing how those ideas actually affect deal decisions or ownership behavior.\n\n**Impact investing** is narrower and more demanding. It requires intentional pursuit of measurable social or environmental outcomes alongside financial return. A fund that reduces emissions at a portfolio company as part of operational improvement is not automatically an impact fund. To claim impact, the GP needs intentionality, measurable outcomes, and a theory of additionality.\n\nThe allocator implication is straightforward: do not let a GP substitute general sustainability language for evidence of process. And do not let a conventional buyout strategy market itself as impact simply because some ESG initiatives were implemented post-close.",
+      },
+      {
+        type: "teaching",
+        title: "What substantive ESG integration looks like in the PE process",
+        content:
+          "A serious ESG process should appear at multiple points in the investment lifecycle.\n\n**At origination and screening**\nThe GP should have a view on sectors or business models where ESG risks are structurally unacceptable or require special underwriting. This does not always mean exclusion. It does mean the GP knows where issues are likely to be material before spending full diligence resources.\n\n**During due diligence**\nMaterial ESG topics should be identified, investigated, and reflected in the investment memo. Examples include:\n- environmental remediation liabilities\n- worker safety record and claims history\n- customer concentration tied to controversial end markets\n- cyber preparedness and data privacy controls\n- governance weaknesses in founder-led or family-owned businesses\n- supply-chain dependence on problematic regions or counterparties\n\n**At investment committee**\nThe question is whether ESG findings can actually change the decision. A real process means some issues cause repricing, structural protections, post-close action plans, or even a pass.\n\n**During ownership**\nThe GP should be able to show specific ESG priorities translated into board agenda items, KPI tracking, management incentives, and operating initiatives.\n\n**At exit**\nA mature ESG process recognizes that buyer diligence will revisit these issues. The GP should prepare the company so ESG weaknesses do not become valuation discounts or process obstacles.\n\nIf ESG appears only in the annual LP report and not in the memo, board pack, or exit prep process, it is not truly integrated.",
+      },
+      {
+        type: "visual",
+        title: "Where ESG should show up in the PE lifecycle",
+        content:
+          "**A credible ESG process leaves evidence at each stage of the investment lifecycle:**\n\n| Stage | What real integration looks like |\n|---|---|\n| **Screening** | Sector-specific ESG risk map and early issue identification |\n| **Due diligence** | Company-specific ESG workstreams with findings reflected in the deal memo |\n| **IC decision** | ESG issues affect pricing, structuring, reserves, or pass decisions |\n| **Ownership** | Board oversight, KPI tracking, operating initiatives, and accountability |\n| **Exit** | ESG readiness supports buyer diligence and protects valuation |\n\nIf a GP cannot point to evidence across this chain, the process is likely more presentational than operational.",
+        caption:
+          "The key test is whether ESG affects decisions, not whether it appears in marketing materials.",
+        whyItMatters:
+          "LPs often over-credit GPs for having a policy and under-test whether the policy changes behavior. The lifecycle view makes that gap visible.",
+        sourceNote:
+          "Institutional PE ESG practice generally evaluates integration across the full investment lifecycle rather than at a single policy or reporting point.",
+      },
+      {
+        type: "teaching",
+        title: "Materiality: not every ESG issue matters equally",
+        content:
+          "One of the fastest ways for ESG diligence to become unhelpful is to treat every issue as equally important. Good ESG integration is based on **materiality**.\n\nA software company handling sensitive customer data may have modest environmental footprint but major cyber and data-governance risk. A specialty chemicals manufacturer may have the opposite profile: emissions, remediation, permitting, and worker-safety issues may be central. A healthcare staffing business may face labor, credentialing, and quality-of-care governance risks that are far more relevant than carbon reporting.\n\nThat means the allocator should not ask whether the GP has a generic ESG checklist and stop there. The better question is whether the GP understands which ESG issues matter most for this strategy and this company type.\n\nA generic checklist can be a useful baseline. It is not evidence of sophistication. Sophistication appears when the GP can explain why the top ESG risks differ by sector, how those risks influence underwriting, and how ownership plans are prioritized accordingly.",
+      },
+      {
+        type: "teaching",
+        title: "How ESG can create value and how it can protect downside",
+        content:
+          "The strongest PE ESG processes are usually not built on abstract virtue claims. They are built on concrete value and risk pathways.\n\n**Downside protection examples:**\n- avoiding environmental liabilities that later become remediation costs or buyer discounts\n- identifying weak cyber controls before an acquisition rather than after a breach\n- strengthening governance in founder-led businesses where controls are informal\n- improving worker safety and compliance to reduce litigation, disruption, and reputational damage\n\n**Value-creation examples:**\n- energy-efficiency or waste-reduction programs that improve margins\n- stronger governance and reporting that broaden the buyer universe\n- upgraded HR, retention, or training systems that support labor stability in tight talent markets\n- ESG reporting discipline that helps large strategic acquirers or infrastructure-style buyers diligence the asset more efficiently\n\nThe key point is that ESG value creation in PE is rarely separate from the operating plan. It is usually embedded in it. If a GP describes ESG as a parallel workstream disconnected from margin improvement, buyer readiness, governance quality, or risk reduction, that is a sign the process may be more cosmetic than real.",
       },
       {
         type: "example",
-        title: "Mini-case: ESG in a GP value creation plan",
+        title: "Worked example: ESG as a real underwriting issue",
         content:
-          "A mid-market industrial buyout GP acquires a manufacturing business. The value creation plan includes: reducing Scope 1 emissions by 30% over the hold period (lowers operating costs and expands the strategic buyer universe), installing an independent board with two new directors (improves governance for IPO readiness), and formalising supplier ESG audit requirements (reduces supply chain risk flagged by strategic buyers). Exit proceeds are 15% above initial target — the ESG initiatives directly supported the higher exit multiple from a strategic buyer with a net-zero supply chain commitment.",
+          "A buyout GP evaluates a niche industrial services company with stable cash flow and attractive margins. On conventional metrics, the deal looks appealing. During ESG diligence, the GP identifies three issues:\n\n1. The company has a weak safety record across field operations.\n2. Customer contracts increasingly require emissions and supplier-compliance disclosures the company cannot yet provide.\n3. Board oversight is informal, with founder-dominated decision-making and limited documented controls.\n\nA superficial ESG process would note these issues in a memo appendix and proceed.\n\nA substantive process could change the deal in at least three ways:\n- the GP reduces the entry price or requires a remediation reserve because the safety issues could create future claims and operational disruption\n- the GP builds a post-close plan for compliance reporting and buyer-readiness because customer requirements are changing\n- the GP formalizes governance early, recognizing that weak controls could depress exit value even if EBITDA grows\n\nIf those actions occur, ESG has functioned as real underwriting and ownership discipline. If the GP simply states later that the company now has an ESG dashboard, that is reporting, not decision-useful integration.",
+      },
+      {
+        type: "teaching",
+        title: "How greenwashing appears in PE manager presentations",
+        content:
+          "Greenwashing in PE is often subtler than an obviously false impact claim. It usually appears as a mismatch between broad language and thin evidence.\n\nCommon patterns include:\n\n**1. Policy-heavy, decision-light presentation**\nThe GP has a formal ESG policy, signs the right principles, and publishes attractive reports, but cannot show how ESG affected a specific deal decision.\n\n**2. Post-close initiative inflation**\nThe GP points to standard good ownership practices — new board members, improved controls, emissions measurement, employee surveys — and presents them as differentiated ESG alpha even when they are really baseline professional ownership.\n\n**3. Impact creep**\nA conventional fund describes ordinary risk management or operational upgrades as 'impact' without evidence of measurable intentional outcomes.\n\n**4. Universal materiality language**\nThe GP speaks as though all ESG topics matter equally across all sectors, which usually signals a checklist approach rather than a truly risk-based process.\n\n**5. No negative examples**\nA GP that cannot name a deal where ESG concerns affected pricing, structuring, or a decision to walk away is usually signaling that ESG is not meaningfully embedded in investment judgment.\n\nA sophisticated allocator does not ask whether the GP has ESG language. They ask where the language translated into changed behavior.",
+      },
+      {
+        type: "visual",
+        title: "Substantive ESG process vs. marketing ESG process",
+        content:
+          "**The distinction is usually visible in the evidence the GP can provide:**\n\n| Dimension | Substantive ESG integration | Marketing-led ESG process |\n|---|---|---|\n| **Deal examples** | Can name specific transactions where ESG changed price, structure, or decision | Speaks in generalities, no concrete examples |\n| **Materiality** | Sector-specific and company-specific priorities | Generic checklist applied uniformly |\n| **Ownership evidence** | KPI tracking, board oversight, operating initiatives, accountability | Annual ESG report with little connection to value creation |\n| **Exit linkage** | Can explain how ESG preparedness affected buyer process or valuation | No exit-based evidence |\n| **Impact language** | Used carefully and only when measurable | Broad claims with weak measurement |\n\nThe more the GP can connect ESG to real deal and ownership decisions, the more credible the process becomes.",
+        caption:
+          "The test is whether ESG changes behavior and outcomes.",
+        whyItMatters:
+          "Most PE managers now know the right vocabulary. Differentiation comes from evidence of application, not fluency in ESG terminology.",
+        sourceNote:
+          "LP ESG diligence frameworks generally focus on decision evidence, materiality, and ownership application rather than policy language alone.",
+      },
+      {
+        type: "teaching",
+        title: "How ESG should affect allocator diligence and monitoring",
+        content:
+          "For an allocator, ESG due diligence should operate at two levels.\n\n**Manager-level diligence**\nThis asks whether the GP has the people, process, and evidence to integrate ESG credibly. Relevant questions include:\n- Who owns ESG within the investment team?\n- Is ESG a separate advisory function or embedded in deal underwriting?\n- How are material issues escalated to IC?\n- What examples show ESG affecting a deal or ownership plan?\n\n**Portfolio-level monitoring**\nThis asks whether the GP's ongoing reporting and ownership behavior support the original claims. Relevant monitoring questions include:\n- Are ESG KPIs reported consistently over time?\n- Are the same issues discussed year after year with little progress?\n- Have there been controversies, incidents, fines, or governance failures not clearly contextualized in LP reporting?\n- Does the GP report outcomes at exit that validate prior ESG effort, such as improved buyer readiness or risk reduction?\n\nA manager can interview well on ESG and still monitor poorly. That is why ESG should not disappear from the diligence agenda after commitment.",
+      },
+      {
+        type: "example",
+        title: "Worked example: substantive ESG versus a polished pitch",
+        content:
+          "Two GPs both say ESG is deeply integrated.\n\n**GP A** provides:\n- a detailed ESG policy\n- annual portfolio carbon and diversity reporting\n- membership in multiple industry initiatives\n- no clear example of a deal declined, repriced, or restructured because of ESG findings\n\n**GP B** provides:\n- a simpler policy document\n- one example where cyber diligence revealed major remediation needs and the GP reduced price and required post-close investment\n- one example where an environmental liability reserve was built into the transaction structure\n- one exit case where governance and reporting improvements helped broaden the buyer universe\n\nWhich process is stronger? GP B is more credible even if its marketing materials are less polished. The allocator is not grading sophistication of language. They are grading evidence that ESG affected underwriting, ownership, and exit outcomes.\n\nThat does not mean GP A has no real ESG process. It means the allocator has not yet seen evidence strong enough to underwrite the claim.",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: reacting to 'we are fully ESG-integrated'",
+        content:
+          "The GP says: 'ESG is fully embedded in our process.'\n\n**Weak response:** 'That is great to hear. ESG is increasingly important to us as well. Can you send your ESG policy?'\n\nWhy it is weak: it validates the claim without asking for evidence that ESG affects decisions or outcomes.\n\n**Strong response:** 'Can you give us two specific examples where ESG findings materially changed a deal decision, price, or post-close ownership plan? And for one realized investment, how did ESG work during ownership affect downside protection or exit readiness?'\n\nWhy it is strong: it moves immediately from stated philosophy to verifiable application. It does not ask whether ESG exists. It asks where it mattered.",
+      },
+      {
+        type: "inference-boundary",
+        title: "Inference boundary: what ESG evidence can and cannot prove",
+        content:
+          "**What ESG evidence can tell you:**\n- whether the GP has thought seriously about material company-specific and sector-specific risks\n- whether ESG is likely to influence underwriting and ownership behavior rather than only reporting language\n- whether the GP can connect ESG work to downside protection, governance quality, or exit preparedness\n\n**What ESG evidence cannot prove by itself:**\n- that the fund will outperform because of ESG integration\n- that every reported ESG initiative produced measurable financial return\n- that a GP describing itself as sustainability-oriented is an impact investor\n- that strong ESG process eliminates cyclical, strategic, or valuation risk in the portfolio",
       },
       {
         type: "exercise",
-        title: "Quick exercise",
+        title: "Applied exercise: test whether ESG is real",
         content:
-          "A GP claims their fund is 'ESG-integrated' and provides a one-page ESG policy. What specific questions would you ask to determine whether the ESG integration is substantive?",
+          "A GP sends you a one-page ESG policy, a DEI statement, and a quarterly dashboard showing emissions, board diversity, and employee injury rates across the portfolio. Draft four diligence questions that would help you determine whether ESG is a real investment process or mainly a reporting and branding layer. A strong answer should test decision evidence, materiality, ownership execution, and exit relevance.",
+      },
+      {
+        type: "meeting-application",
+        title: "In the manager meeting: five questions that separate process from marketing",
+        content:
+          "1. **'Give us two examples where ESG findings changed the deal outcome — price, structure, reserves, or the decision to walk away.'** This is the single best test of whether ESG influences underwriting.\n\n2. **'Which ESG issues are most material for your strategy, and how does that differ across sectors you invest in?'** This tests whether the GP understands materiality rather than applying a generic checklist.\n\n3. **'Who owns ESG in the investment process — and how are issues escalated into the IC memo and decision?'** This clarifies whether ESG is embedded in investing or handled separately.\n\n4. **'For one realized investment, how did ESG work during ownership improve resilience, buyer readiness, or exit valuation?'** This tests whether ESG created actual operating or exit value.\n\n5. **'What is an example of an ESG initiative you chose not to pursue because it was not material or not economically justified?'** This is a subtle but powerful test of judgment rather than slogan use.",
+      },
+      {
+        type: "meeting-application",
+        title: "Allocator application: how to write about ESG in an approval note",
+        content:
+          "A strong approval or monitoring note should avoid generic statements such as 'the GP has a robust ESG framework.' Instead, write in three parts:\n\n**Process evidence** — how ESG is integrated into diligence, IC, and ownership\n\n**Decision relevance** — whether there is evidence that ESG has affected actual deal or portfolio decisions\n\n**Remaining limitation** — what is still unclear, such as weak realized evidence, thin reporting consistency, or lack of proof that ESG work has translated into exit outcomes\n\nThat structure keeps ESG analysis tied to underwriting quality rather than defaulting to broad positive language.",
+      },
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "UN PRI guidance for private equity ESG integration; ILPA ESG assessment and due diligence materials; CFA Institute and CAIA materials on ESG in private markets; institutional PE practice on governance, materiality, and ownership-based ESG application.",
       },
     ],
     quiz: [
@@ -3657,71 +3753,94 @@ export const lessonContents: LessonContent[] = [
         questionId: "d19q1",
         type: "multiple-choice",
         prompt:
-          "What is the key difference between ESG integration and impact investing?",
+          "What is the most accurate definition of ESG integration in private equity?",
         options: [
-          "ESG integration applies only to public equities; impact investing applies to private markets",
-          "ESG integration manages risk and return; impact investing intentionally targets measurable positive outcomes",
-          "Impact investing excludes fossil fuel companies; ESG integration does not",
-          "ESG integration is required by regulators; impact investing is voluntary",
+          "Using sustainability language in fundraising materials to attract LP demand",
+          "Incorporating material environmental, social, and governance issues into underwriting, ownership, and exit planning",
+          "Restricting all investments to companies with low carbon footprints",
+          "Pursuing measurable social or environmental outcomes as the primary objective of the fund",
         ],
         correctAnswer:
-          "ESG integration manages risk and return; impact investing intentionally targets measurable positive outcomes",
+          "Incorporating material environmental, social, and governance issues into underwriting, ownership, and exit planning",
       },
       {
         questionId: "d19q2",
         type: "multiple-choice",
         prompt:
-          "Why does PE have more potential ESG impact than public equity investing?",
+          "Why can ESG matter more directly in PE than in public equities?",
         options: [
-          "PE funds are exempt from ESG disclosure requirements, allowing more flexibility",
-          "PE GPs have controlling ownership and direct influence over portfolio company practices",
-          "PE investments are held longer, giving more time for ESG initiatives to compound",
-          "PE companies are smaller and more responsive to investor pressure than large public companies",
+          "Because PE is exempt from most disclosure requirements and therefore more flexible",
+          "Because PE managers typically have control or strong governance influence over portfolio companies",
+          "Because PE companies are inherently more sustainable than public companies",
+          "Because LPAs require all PE managers to implement ESG operating plans",
         ],
         correctAnswer:
-          "PE GPs have controlling ownership and direct influence over portfolio company practices",
+          "Because PE managers typically have control or strong governance influence over portfolio companies",
       },
       {
         questionId: "d19q3",
         type: "multiple-choice",
-        prompt: "What is 'greenwashing' in the context of PE ESG claims?",
+        prompt:
+          "Which of the following is the clearest sign of potential greenwashing in a PE manager presentation?",
         options: [
-          "A GP investing exclusively in environmental sectors such as clean energy",
-          "Overstating ESG integration or impact in marketing materials without substantive underlying practice",
-          "Applying public-equity ESG screening methods to PE portfolios",
-          "Excluding high-carbon industries from a fund regardless of financial merit",
+          "The GP provides examples of deals repriced or restructured due to ESG findings",
+          "The GP explains that material ESG issues differ across sectors and strategies",
+          "The GP has extensive policy language and reporting but cannot point to a specific investment decision changed by ESG work",
+          "The GP distinguishes clearly between ESG integration and impact investing",
         ],
         correctAnswer:
-          "Overstating ESG integration or impact in marketing materials without substantive underlying practice",
+          "The GP has extensive policy language and reporting but cannot point to a specific investment decision changed by ESG work",
       },
       {
         questionId: "d19q4",
         type: "multiple-choice",
         prompt:
-          "Which regulatory framework has most significantly increased ESG disclosure requirements for PE managers in recent years?",
+          "What is the key distinction between a conventional ESG-integrated buyout fund and an impact fund?",
         options: [
-          "Basel III — capital requirements for financial institutions",
-          "EU Sustainable Finance Disclosure Regulation (SFDR) — Article 8 and 9 fund classifications",
-          "ERISA fiduciary standards for US pension fund PE allocations",
-          "SEC Regulation D — private placement reporting requirements",
+          "The impact fund must invest only in renewable energy businesses",
+          "The ESG-integrated fund manages financially material risks and opportunities, while the impact fund intentionally targets measurable social or environmental outcomes",
+          "The ESG-integrated fund can use leverage, while the impact fund cannot",
+          "The impact fund reports annually, while the ESG-integrated fund reports quarterly",
         ],
         correctAnswer:
-          "EU Sustainable Finance Disclosure Regulation (SFDR) — Article 8 and 9 fund classifications",
+          "The ESG-integrated fund manages financially material risks and opportunities, while the impact fund intentionally targets measurable social or environmental outcomes",
       },
       {
         questionId: "d19q5",
+        type: "multiple-choice",
+        prompt:
+          "Which statement best describes a strong allocator approach to ESG diligence in PE?",
+        options: [
+          "Confirm that the GP has an ESG policy and annual reporting, then treat the issue as resolved",
+          "Ask whether the GP supports recognized ESG initiatives and infer process quality from membership",
+          "Test whether ESG findings have changed actual underwriting, ownership actions, or exit preparation",
+          "Require every GP to prioritize the same ESG metrics regardless of strategy or sector",
+        ],
+        correctAnswer:
+          "Test whether ESG findings have changed actual underwriting, ownership actions, or exit preparation",
+      },
+      {
+        questionId: "d19q6",
         type: "short-response",
         prompt:
-          "How would you distinguish a GP with substantive ESG integration from one using ESG as a marketing label?",
+          "A GP says ESG is fully integrated, but the evidence offered is a policy document, annual reporting, and general statements about responsible ownership. What additional proof would you want before giving that claim meaningful weight?",
         modelAnswer:
-          "Ask for specific evidence at the deal level: How does ESG diligence affect the investment decision — can they name a deal they passed on due to ESG risk? What ESG metrics are tracked across the portfolio and how are they reported to LPs? Are ESG KPIs built into value creation plans with measurable targets? Who on the investment team owns ESG diligence — a dedicated partner or a generic policy document? Finally, look at exits: did ESG improvements demonstrably expand the buyer universe or improve exit multiples? A GP who cannot give deal-specific answers is likely providing marketing language, not operational practice.",
+          "I would want deal-specific evidence showing that ESG changed behavior rather than just reporting. That includes examples where ESG findings affected price, structure, reserves, or a decision to walk away; evidence that material ESG issues were escalated into the IC memo; and at least one ownership example where ESG work improved governance, reduced risk, or supported exit readiness. I would also want the GP to explain how material issues differ by sector, because a generic checklist is not enough to prove a sophisticated process.",
+      },
+      {
+        questionId: "d19q7",
+        type: "short-response",
+        prompt:
+          "Why is materiality so important in evaluating ESG practice in PE?",
+        modelAnswer:
+          "Because not every ESG issue matters equally for every company or strategy. A credible process focuses on the environmental, social, and governance issues most likely to affect value, risk, or exitability for that specific business. Treating all ESG topics as equally important usually signals a checklist mentality rather than real underwriting judgment. In PE, materiality is what turns ESG from generic reporting into decision-useful investment analysis.",
       },
     ],
     sources: [
-      "UN Principles for Responsible Investment (UNPRI) — PE implementation guidance",
-      "EU SFDR Article 8 and 9 classification framework",
-      "ILPA ESG assessment framework",
-      "CFA Institute ESG investing — private markets application",
+      "UN PRI guidance for private equity ESG integration",
+      "ILPA ESG assessment and due diligence materials",
+      "CFA Institute and CAIA materials on ESG in private markets",
+      "Institutional PE practice on governance, materiality, and ownership-based ESG application",
     ],
   },
 
