@@ -7793,6 +7793,264 @@ export const lessonContents: LessonContent[] = [
     "CFA Institute and related private-markets educational materials providing context for realization timing, liquidity quality, and private-market exit discipline",
   ],
 },
+{
+  lessonId: "day-38",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The GP says: 'This is a late-stage company with strong revenue scale, blue-chip investors, and a clear path to IPO once the market reopens.' A venture-fluent allocator hears something more complicated. They ask: How much of the investment case depends on public-market multiple support? Is the company really late-stage venture, true growth equity, or a structured pre-IPO financing with more downside protection than the headline valuation implies? How long could the company remain private if the IPO window stays shut? And what part of the reported mark reflects common-equity value versus seniority, structure, and momentum? This lesson teaches late-stage venture and crossover dynamics as an allocator problem: where private growth meets public-market valuation logic, structure becomes more important, and duration can quietly lengthen just when marks look most impressive.",
+    },
+    {
+      type: "framing",
+      title: "Late-stage venture is where private and public valuation regimes collide",
+      content:
+        "Day 37 explained growth equity as a distinct strategy with its own evidence base, governance model, and return bridge. Day 38 now addresses the adjacent zone where late-stage venture, crossover capital, and pre-IPO growth rounds blur together. This is one of the most important transition areas in the whole curriculum because it is where many allocators lose classification discipline. Companies may be more mature, revenue scale may be much larger, and the investor roster may include public-market crossover funds or large multi-stage franchises. But those features do not necessarily make the economics cleaner.\n\nIn fact, late-stage venture can be one of the most dangerous parts of the private-markets ecosystem for allocators precisely because it often looks more legible than it really is. Entry prices are higher, ownership percentages may be lower, duration can still be long, and marks can become highly sensitive to public-market comparables and financing structure. A company that appears de-risked relative to early venture may still carry substantial valuation, liquidity, and structure risk.\n\nThe objective of this lesson is to give the learner a robust map of late-stage venture and crossover behavior: what defines the strategy, why it became such an important capital-formation zone, how structured rounds can mask declining economics, and what allocators should test before treating late-stage marks as high-confidence value.",
+    },
+    {
+      type: "teaching",
+      title: "What late-stage venture is actually underwriting",
+      content:
+        "Late-stage venture is generally underwriting a company that has already achieved meaningful commercial scale but has not yet fully converted into a public-market asset or a classic growth-equity company with stable monetization visibility. These businesses often have substantial revenue, stronger product validation, and more organizational maturity than earlier-stage companies. But they may still be exposed to significant public-market window risk, valuation compression risk, and financing structure complexity.\n\nWhat the investor is usually underwriting:\n- continued growth at a scale where deceleration becomes more consequential\n- enough market leadership or strategic relevance to support IPO or premium M&A pathways\n- the ability to finance through a longer private period if public liquidity stays unavailable\n- security terms that preserve acceptable downside if the company does not exit on schedule\n\nAllocator implication:\nLate-stage venture is not simply 'safer venture.' It is often venture with larger numbers, greater public-market sensitivity, and more complex financing mechanics. The central allocator question is not just whether the business is strong. It is whether the combination of entry price, duration, structure, and likely liquidity path still makes the investment attractive.",
+    },
+    {
+      type: "visual",
+      title: "Where late-stage venture sits in the private-markets map",
+      content:
+        "**Late-stage venture overlaps with growth equity and public-market logic, but it is not automatically either one.**\n\n| Dimension | Late-stage venture | Growth equity | Public-market growth |\n|---|---|---|---|\n| **Company maturity** | Large private company, often pre-IPO or strategic-scale | Established private scaler with clearer growth-underwriting framework | Public company with continuous pricing |\n| **Valuation anchor** | Private rounds plus public comp reference points | Private underwriting with clearer governance and business-compounding lens | Market-clearing public multiples |\n| **Liquidity** | Often delayed and episodic | Private exit pathways, sometimes clearer than late-stage VC | Daily tradability |\n| **Structure risk** | Often meaningful, especially in stressed rounds | Can matter, but usually less central than in crossover-heavy late-stage VC | Usually much lower at the security level |\n| **Main allocator risk** | High entry price, long duration, mark sensitivity | Growth durability and exit realism | Public multiple volatility and execution |\n\nThe allocator should use this table as a classification aid. Late-stage venture often borrows the language of both adjacent categories while still behaving like neither.",
+      caption:
+        "Late-stage venture looks more mature than early VC, but it remains a private, structure-sensitive, duration-exposed strategy.",
+      whyItMatters:
+        "This helps the learner keep late-stage venture distinct from both true growth equity and public equities.",
+      sourceNote:
+        "This reflects the Lesson 38 blueprint's emphasis on late-stage pricing, crossover participation, structure, duration, and public-market sensitivity.",
+    },
+    {
+      type: "teaching",
+      title: "Crossover capital: why public-market investors entered private late-stage rounds",
+      content:
+        "Crossover capital refers broadly to investors with public-market or hybrid mandates participating in private late-stage financings, often in companies seen as near-IPO candidates or strong public-market analogs. These investors became especially important when private companies stayed private longer and when large late-stage rounds allowed investors to access growth before listing.\n\nWhy crossover capital entered:\n- attractive high-growth companies remained private longer\n- private rounds offered access to public-like growth stories before IPO\n- benchmark pressure and growth-stock enthusiasm encouraged earlier entry into private names\n- large private rounds made position sizes large enough to matter for bigger pools of capital\n\nWhy allocators should care:\n- crossover demand can support higher private valuations than traditional VC economics alone might support\n- the mark on a late-stage company may become heavily linked to public-market sentiment, even before the company lists\n- when public comparables reprice, late-stage venture marks may face sharper pressure than earlier-stage venture marks\n- crossover withdrawal can change the financing environment dramatically, especially when the IPO window closes\n\nAllocator implication:\nThe presence of crossover investors is not inherently good or bad. But it often means the late-stage company is being underwritten with a more public-market-sensitive valuation framework. That increases mark sensitivity and can make the private holding period more fragile if public comps reset.",
+    },
+    {
+      type: "teaching",
+      title: "The late-stage risk triangle: price, duration, and structure",
+      content:
+        "A useful way to understand late-stage venture is through a three-part risk triangle.\n\n**1. Price risk**\nLate-stage rounds often happen at high valuations relative to current profitability because the company is being paid for expected future scale, margin expansion, and liquidity optionality.\n\n**2. Duration risk**\nThe company may still remain private for years longer than expected if the IPO market is closed, strategic buyers are cautious, or internal readiness slips.\n\n**3. Structure risk**\nIf markets weaken, new capital may still come in, but on terms that preserve headline valuation optics while changing the economics meaningfully for earlier or less-protected holders.\n\nWhy this matters:\nThese three risks can reinforce each other. A rich entry price becomes more dangerous when duration extends. Duration becomes more dangerous when interim marks depend on public comps or structured insider financings. Structure becomes more important when a company needs capital but wants to avoid an explicit valuation reset.\n\nAllocator implication:\nA strong late-stage investment must survive all three tests. It is not enough for the company to be large and growing. The LP should ask whether the company remains attractive if the IPO timeline slips, if public comps re-rate lower, and if the next round arrives with more structure than expected.",
+    },
+    {
+      type: "teaching",
+      title: "Why structured growth rounds matter most in late-stage venture",
+      content:
+        "Day 33 introduced structured rounds as a major venture valuation problem. In late-stage venture, they become even more important because the dollars are larger, the optics matter more, and the investor base is often more valuation-sensitive.\n\nCommon late-stage structured features can include:\n- stronger liquidation preferences\n- participating economics or return floors\n- ratchets or other anti-dilution style protections\n- milestone tranches\n- preferred terms that make the new security economically superior to prior common-like holders\n- governance features that increase the new investor's protection or control\n\nWhy this matters in late-stage:\n- companies may want to preserve valuation optics for recruiting, employee morale, signaling, or future IPO narrative\n- investors may still be willing to fund the company, but only with more downside protection\n- the resulting financing can look 'flat' or only modestly down while being materially worse for common-equity value\n\nAllocator implication:\nLate-stage venture is where terms literacy becomes essential. Many perceived 'valuation gains' are really seniority and structure, not common-equity value. The LP should therefore hear a flat late-stage round and immediately ask whether the economics are actually down for earlier holders.",
+    },
+    {
+      type: "example",
+      title: "Worked example 1: a flat late-stage round that is not really flat",
+      content:
+        "Assume a private software company raised capital eighteen months ago at a $6 billion headline valuation. Public software multiples have since compressed. The company now raises another round at the same $6 billion headline valuation.\n\nAdditional facts:\n- the round is smaller than initially targeted\n- the new security includes stronger downside protection than the prior round\n- most of the capital comes from existing investors and a small number of supportive crossover participants\n- the company remains at least twelve to eighteen months away from a plausible IPO\n\nAllocator analysis path:\n\n**Step 1: reject the headline interpretation**\nA same-valuation round does not mean the company's common-equity value is unchanged.\n\n**Step 2: identify the term substitution**\nIf the new investor bought a better-protected security, then the same nominal valuation may imply a lower common-equity-equivalent value.\n\n**Step 3: update the duration lens**\nIf the IPO path remains distant, the financing is buying more time, not necessarily crystallizing value.\n\n**Step 4: connect to marks**\nIf the fund owns less-protected prior preferred or common-like exposure, marking the position mechanically to the round headline likely overstates fair-value confidence.\n\nAllocator lesson:\nLate-stage venture can preserve valuation optics by changing structure rather than preserving economics. This is one of the clearest places where allocators must separate company narrative from position reality.",
+    },
+    {
+      type: "teaching",
+      title: "Public comps matter more here than in earlier venture, but they still are not the whole answer",
+      content:
+        "Late-stage venture is often much more sensitive to public comparables than earlier-stage venture because the companies are larger, more legible, and often closer in profile to public growth peers. But allocators should still avoid simplistic comp translation.\n\nWhy public comps matter:\n- crossover capital often prices private companies using a public-market frame\n- late-stage marks can move materially with public SaaS, internet, fintech, or healthcare comparables\n- the IPO path itself is partly a function of what public markets will reward\n\nWhy comps are still incomplete:\n- private companies may still have different margin profiles, governance realities, or liquidity discounts\n- the exact security being issued can change the economics materially\n- late-stage private marks can lag or smooth relative to public markets\n- a company may look 'public-like' in scale but still be operationally immature\n\nAllocator implication:\nPublic comps are more relevant here than in seed or early venture, but they remain calibration inputs, not self-executing truths. The stronger allocator question is:\n- how exposed is the mark to public comp resets?\n- how much valuation support depends on public-market reopening?\n- how much of the current pricing remains private-structure-dependent rather than public-quality-earned?",
+    },
+    {
+      type: "teaching",
+      title: "Round momentum and the illusion of inevitability",
+      content:
+        "Late-stage venture rounds often generate a sense of momentum and inevitability. Companies may have large financing announcements, prestigious investors, IPO preparation narratives, and benchmarked growth stories. Allocators should be careful because momentum can substitute for underwriting more easily in late-stage than in earlier venture.\n\nWhy:\n- larger companies attract stronger signaling dynamics\n- investor brand names can create circular validation\n- successive financings can create the impression that liquidity is only a matter of time\n- public-market analogies can make private valuations feel more objective than they really are\n\nWhat often goes wrong:\n- the next financing window closes\n- growth decelerates faster than the valuation framework assumed\n- the company remains private longer, forcing bridge rounds or structured financing\n- public comps re-rate and reset the acceptable exit range materially\n\nAllocator implication:\nRound momentum is not a substitute for exit realism. A manager should be able to explain why the company deserves its late-stage valuation independent of financing momentum and why the liquidity path remains credible if the market does not cooperate on schedule.",
+    },
+    {
+      type: "teaching",
+      title: "Why duration extension is especially dangerous in late-stage venture",
+      content:
+        "Duration is a risk in all venture. It becomes especially important in late-stage because entry prices are larger and public-market sensitivity is greater.\n\nWhy duration extension hurts late-stage investors:\n- the company may already be priced for a near- or medium-term liquidity event\n- each additional year private can increase mark uncertainty if comps and market appetite shift\n- reserve needs or bridge rounds may emerge when the original underwriting expected an IPO or sale\n- the opportunity cost of capital rises if very expensive private positions remain illiquid longer than planned\n\nAllocator implication:\nA late-stage investment should not be underwritten with a simplistic 'IPO next year' assumption. The LP should ask:\n- what happens if the company stays private for two or three more years?\n- does the company have enough balance-sheet resilience and financing flexibility?\n- how much of the return case degrades if the liquidity window slips materially?\n\nThe better growth-oriented private investments are not just good if markets cooperate. They remain defensible if markets are delayed.",
+    },
+    {
+      type: "visual",
+      title: "The late-stage stress test",
+      content:
+        "**A robust late-stage venture underwriting case should survive three stress questions.**\n\n| Stress question | What allocator is testing | Red flag if weak |\n|---|---|---|\n| **What if the IPO window stays closed?** | Duration resilience and financing endurance | Return case collapses without near-term listing |\n| **What if public comps de-rate materially?** | Mark sensitivity and valuation discipline | Fund mark depends on optimistic comp carry-over |\n| **What if the next round is structured?** | Common-equity protection and terms literacy | Headline valuation is preserved but economics deteriorate sharply |\n\nThe allocator should use this as a practical filter whenever a late-stage or crossover deal is pitched as 'de-risked growth.'",
+      caption:
+        "Late-stage venture is often underwritten as if success is close. Strong allocators force the strategy to survive delay, repricing, and structure risk first.",
+      whyItMatters:
+        "This turns late-stage venture from a marketing story into a stress-tested investment case.",
+      sourceNote:
+        "This visual translates the Lesson 38 blueprint into a simple allocator stress framework centered on price, duration, and structure risk.",
+    },
+    {
+      type: "teaching",
+      title: "Multi-stage funds and growth opportunity funds: where stage drift can hide",
+      content:
+        "Your roadmap explicitly calls out allocator evaluation of multi-stage funds and growth opportunity funds because late-stage exposure is one of the easiest places for stage drift to hide.\n\nWhy this happens:\n- a firm may market itself as broadly venture-oriented while a growing share of capital goes into late-stage, lower-ownership, higher-price deals\n- a growth opportunity vehicle may borrow the brand halo of the earlier-stage franchise without showing equally strong edge in late-stage underwriting\n- crossover behavior may creep into a strategy that allocators still mentally classify as classic VC\n\nAllocator implication:\nThe learner should ask:\n- how much of the fund's capital is actually going into late-stage or crossover-style rounds?\n- how does that exposure differ economically from the firm's core venture strategy?\n- what does ownership look like at entry in these deals?\n- how dependent are returns on liquidity-window timing and public-market valuation support?\n\nThis is one of the most important uses of Day 38. It helps allocators detect when a manager is no longer doing what the brand implies.",
+    },
+    {
+      type: "teaching",
+      title: "How late-stage venture should be diligenced differently from true growth equity",
+      content:
+        "Day 37 and Day 38 are intentionally adjacent because allocators must be able to separate true growth equity from late-stage venture. Some companies may look similar in revenue scale. The underwriting is still meaningfully different.\n\nLate-stage venture tends to involve:\n- more mark sensitivity to public comps\n- greater dependence on liquidity-window timing\n- more common use of structured rounds in stressed markets\n- lower governance influence in many cases\n- higher risk that valuation support outruns realizability\n\nTrue growth equity tends to involve:\n- clearer governance and influence rights\n- stronger emphasis on scaling quality and operational compounding\n- more explicit underwriting of growth durability relative to entry price\n- less dependence on IPO momentum alone\n\nAllocator implication:\nA manager presenting late-stage venture as growth equity should be pressed on:\n- governance rights\n- exit dependence on public listing\n- structure risk\n- duration assumptions\n- whether the return bridge is actually business compounding or mostly valuation continuation plus liquidity timing\n\nThis distinction is one of the key allocator upgrades of the whole venture-growth sequence.",
+    },
+    {
+      type: "example",
+      title: "Worked example 2: true growth opportunity fund or crossover-heavy late-stage vehicle?",
+      content:
+        "Assume a manager launches a 'growth opportunity' fund targeting companies with more than $100 million of revenue and pre-IPO potential.\n\nThe fund characteristics:\n- minority stakes\n- limited board influence\n- premium entry valuations relative to current profitability\n- emphasis on category leadership and future public-market readiness\n- several rounds completed with crossover investor participation\n- current unrealized marks rely heavily on the last financing round and public comp framing\n\nAllocator analysis path:\n\n**Step 1: classify the true underwriting regime**\nThis may not be classic growth equity if governance influence is weak and mark sensitivity to public comps is dominant.\n\n**Step 2: identify the return bridge**\nHow much depends on genuine business compounding versus reopening of public-market appetite?\n\n**Step 3: test structure and duration risk**\nIf IPO timing slips, what happens to valuation support, reserves, and exit realism?\n\n**Step 4: compare to the manager's earlier-stage franchise**\nIs the firm showing a new and distinct capability, or simply extending its brand into a more valuation-sensitive zone?\n\nAllocator lesson:\nThis is exactly the kind of strategy that can be misclassified. The learner should now have the tools to distinguish a true growth sleeve from a crossover-heavy late-stage vehicle wearing a smoother label.",
+    },
+    {
+      type: "teaching",
+      title: "Why late-stage venture is often where the biggest mark resets happen",
+      content:
+        "Your roadmap correctly identifies late-stage behavior as one of the places where the most dramatic mark resets occur.\n\nWhy:\n- the companies are larger, so valuation dollars are more substantial\n- marks are more tightly linked to public-market growth comparables\n- crossover capital can inflate pricing in favorable markets and disappear quickly in unfavorable ones\n- companies staying private longer may need bridge or structured rounds that reveal the true economics more abruptly\n\nAllocator implication:\nLate-stage venture is often where unrealized NAV looks strongest right before discipline matters most. That is why this lesson sits after Days 33 and 37. The learner should now understand that late-stage marks can look precise while actually resting on the most fragile mix of price, duration, and structure assumptions in the whole venture stack.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: venture-industry monitor materials on late-stage financing, venture-growth activity, and liquidity extension; allocator- and practitioner-oriented resources on crossover investing, structured growth rounds, and public/private valuation linkages; educational materials on late-stage venture mark sensitivity, liquidity timing, and structured-term interpretation. The goal is to teach late-stage venture as a distinct allocator problem where public-market comparables, financing structure, and duration risk interact directly.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a GP describing a late-stage round as de-risked growth",
+      content:
+        "The GP says: 'This is a de-risked late-stage company with a clear path to IPO.'\n\nWeak LP response: 'That sounds attractive. If the company is de-risked and near an IPO, the remaining upside should be high quality.'\n\nWhy it is weak: it accepts maturity language without testing price, duration, structure, and public-market sensitivity.\n\nStrong LP response: 'Please walk us through how much of the return case depends on public-market valuation support, what happens if the IPO window remains shut for two more years, what protections exist in the latest round, and whether the fund's security really benefits proportionally from the headline valuation. We are trying to separate business maturity from liquidity certainty and common-equity value.'\n\nWhy it is strong: it translates a polished late-stage narrative into the actual allocator risk triangle of price, duration, and structure.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what late-stage classification can and cannot tell you",
+      content:
+        "Late-stage classification can tell you whether the investment behaves more like crossover-sensitive venture, true growth equity, or something in between. It can improve interpretation of marks, structure, duration, and likely liquidity path. It can also help identify when a manager's stage exposure has drifted beyond what the brand implies.\n\nBut classification cannot guarantee that a company will exit well, that public comps will remain supportive, or that strong structure will rescue a weak business. Two late-stage investors can classify the same company correctly and still differ materially in pricing discipline, access, and sell judgment.\n\nThe allocator should therefore use this lesson as a precision tool. It improves classification, stress testing, and mark skepticism. It does not replace company-level or manager-level underwriting.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: build a late-stage deal-quality scoring rubric",
+      content:
+        "Design a one-page scoring rubric for evaluating a late-stage venture or crossover-style deal.\n\nInclude five sections:\n\n1. **Business maturity and proof** — what evidence shows the company is truly late-stage rather than still venture-fragile?\n2. **Valuation and public-comp sensitivity** — how dependent is the mark or return case on public-market support?\n3. **Structure and term quality** — do the round terms preserve optics more than economics?\n4. **Duration and liquidity realism** — what happens if IPO or strategic exit is delayed materially?\n5. **Manager fit and stage discipline** — is the GP genuinely built for this kind of deal, or is stage drift creeping in?\n\nThen answer three questions:\n- What single factor would make you most skeptical of a 'flat' late-stage round?\n- What one sign would most clearly distinguish true growth equity from crossover-heavy late-stage venture?\n- What one artifact or data set would you request first from the GP before forming a view?\n\nFinal task:\nWrite a short allocator memo titled 'Why this late-stage mark may be less stable than it looks.'",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal late-stage questions",
+      content:
+        "1. 'How much of your return case in this deal depends on public-market multiple support versus business progress that would matter even if the IPO window stays closed?' \n\n2. 'What exactly did the latest investor receive in terms of downside protection, and how should that affect our interpretation of common-equity value?' \n\n3. 'If the company remains private for two to three more years, what happens to reserves, mark confidence, and likely exit economics?' \n\n4. 'How do you distinguish true growth opportunity investing from crossover-style late-stage venture within your own platform?' \n\n5. 'Can you show a case where a late-stage or pre-IPO company looked de-risked on paper but the economics deteriorated because of structure, delayed liquidity, or public-comp repricing?'",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 38 should change late-stage diligence",
+      content:
+        "After Day 38, the learner should stop hearing late-stage venture as simply 'more mature venture' and start hearing it as a distinct risk regime where private and public valuation logics collide. That is the main allocator upgrade.\n\nThis should sharpen diligence in several ways. It should make the learner more skeptical of flat rounds with structure, more sensitive to duration extension, more precise about the role of crossover capital, and better able to distinguish true growth equity from crossover-heavy late-stage vehicles. It should also improve manager evaluation by making stage drift easier to detect. In late-stage venture, the most expensive mistakes often happen not because the company was bad, but because the allocator mistook maturity optics for economic clarity.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d38q1",
+      type: "multiple-choice",
+      prompt:
+        "Why is late-stage venture not automatically 'safer venture'?",
+      options: [
+        "Because higher entry prices, longer time to liquidity, and stronger dependence on public-market valuation support can create a different but still significant risk profile",
+        "Because late-stage companies never have real revenue",
+        "Because all late-stage rounds are insider-led",
+        "Because late-stage venture eliminates structure risk",
+      ],
+      correctAnswer:
+        "Because higher entry prices, longer time to liquidity, and stronger dependence on public-market valuation support can create a different but still significant risk profile",
+    },
+    {
+      questionId: "d38q2",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of crossover capital in late-stage venture?",
+      options: [
+        "It can support late-stage private valuations, but often increases sensitivity to public-market comps and liquidity-window conditions",
+        "It guarantees that a company will go public quickly",
+        "It eliminates the need for structure analysis",
+        "It makes private rounds equivalent to public-market trading",
+      ],
+      correctAnswer:
+        "It can support late-stage private valuations, but often increases sensitivity to public-market comps and liquidity-window conditions",
+    },
+    {
+      questionId: "d38q3",
+      type: "multiple-choice",
+      prompt:
+        "Why can a flat late-stage round still be economically down for earlier holders?",
+      options: [
+        "Because all flat rounds are legally defined as down rounds",
+        "Because stronger protections or structural features can preserve headline valuation while weakening common-equity economics",
+        "Because common stock always loses value in every financing",
+        "Because only insiders participate in flat rounds",
+      ],
+      correctAnswer:
+        "Because stronger protections or structural features can preserve headline valuation while weakening common-equity economics",
+    },
+    {
+      questionId: "d38q4",
+      type: "multiple-choice",
+      prompt:
+        "What is the late-stage risk triangle emphasized in this lesson?",
+      options: [
+        "Sector, team, and benchmark",
+        "Price, duration, and structure",
+        "Revenue, EBITDA, and debt paydown",
+        "IRR, TVPI, and DPI",
+      ],
+      correctAnswer:
+        "Price, duration, and structure",
+    },
+    {
+      questionId: "d38q5",
+      type: "multiple-choice",
+      prompt:
+        "Why should allocators be cautious when multi-stage or 'growth opportunity' funds move further into late-stage venture?",
+      options: [
+        "Because late-stage investing is prohibited for multi-stage firms",
+        "Because stage drift can hide under strong brand language, and the economics may shift toward public-comp sensitivity and structure risk",
+        "Because all growth opportunity funds are actually buyout funds",
+        "Because late-stage deals never require governance analysis",
+      ],
+      correctAnswer:
+        "Because stage drift can hide under strong brand language, and the economics may shift toward public-comp sensitivity and structure risk",
+    },
+    {
+      questionId: "d38q6",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator distinction between true growth equity and crossover-heavy late-stage venture?",
+      options: [
+        "Growth equity usually has a clearer governance and business-compounding framework, while late-stage venture is often more sensitive to public-market timing, structure, and mark dynamics",
+        "Growth equity never invests in software, while late-stage venture only invests in software",
+        "Late-stage venture always uses control buyouts",
+        "There is no meaningful distinction if revenue is large enough",
+      ],
+      correctAnswer:
+        "Growth equity usually has a clearer governance and business-compounding framework, while late-stage venture is often more sensitive to public-market timing, structure, and mark dynamics",
+    },
+    {
+      questionId: "d38q7",
+      type: "short-response",
+      prompt:
+        "Explain why duration extension is especially dangerous in late-stage venture. Write two to four sentences.",
+      modelAnswer:
+        "Late-stage companies are often priced with the expectation of relatively near-term liquidity, so additional years in the private market can make the entry valuation much harder to justify. If the IPO window remains shut or public comps re-rate lower, the company may need bridge capital or structured rounds that weaken earlier holders' economics. Duration therefore interacts directly with price risk and structure risk in a way that is especially acute late in the venture lifecycle.",
+    },
+    {
+      questionId: "d38q8",
+      type: "short-response",
+      prompt:
+        "A GP describes a pre-IPO company as de-risked growth. What are the three most important follow-up questions you should ask after this lesson?",
+      modelAnswer:
+        "First, I would ask how much of the return case depends on supportive public-market valuations rather than on business progress that stands on its own. Second, I would ask what happens if the company stays private for several more years, including the implications for reserves, financing needs, and mark confidence. Third, I would ask what terms were attached to the latest round and whether the fund's actual security benefits proportionally from the headline valuation or sits behind stronger newly issued protection.",
+    },
+  ],
+  sources: [
+    "Venture-industry monitor materials on late-stage financing, venture-growth activity, and private-company liquidity extension",
+    "Allocator- and practitioner-oriented resources on crossover investing, structured growth rounds, and public/private valuation linkages",
+    "Educational materials on late-stage venture mark sensitivity, pre-IPO financing behavior, and structured-term interpretation",
+    "Institutional venture diligence resources on stage drift, growth opportunity funds, and distinguishing late-stage venture from growth equity",
+    "CFA Institute and related private-markets educational materials providing context for valuation sensitivity, liquidity timing, and private-company duration risk",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
