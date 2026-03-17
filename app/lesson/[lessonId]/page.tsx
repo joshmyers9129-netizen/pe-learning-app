@@ -641,12 +641,14 @@ export default function LessonPage({
   // Saved result
   const [saved, setSaved] = useState(false);
 
-  // Load existing quiz result
+  // Load existing quiz result; auto-mark in-progress if not yet completed
   useEffect(() => {
     const existing = getQuizResult(lessonId);
     if (existing) {
       setConfidence(existing.confidence);
       setSaved(true);
+    } else {
+      setLessonStatus(MODULE_ID, lessonId, "in-progress");
     }
   }, [lessonId]);
 
@@ -657,6 +659,12 @@ export default function LessonPage({
       </main>
     );
   }
+
+  const lessons = module?.lessons ?? [];
+  const currentIndex = lessons.findIndex((l) => l.lessonId === lessonId);
+  const nextLesson = currentIndex >= 0 && currentIndex < lessons.length - 1
+    ? lessons[currentIndex + 1]
+    : null;
 
   const mcQuestions = content.quiz.filter(
     (q): q is MCQuestion => q.type === "multiple-choice"
@@ -721,7 +729,7 @@ export default function LessonPage({
           </a>
           <div className="flex items-baseline gap-2 mb-1">
             <span className="text-xs font-bold text-[#404040] uppercase tracking-widest">
-              Day {lesson.dayNumber}
+              Day {lesson.dayNumber} of {lessons.length}
             </span>
             <span className="text-xs text-[#D0C8C0]">·</span>
             <span className="text-xs text-[#404040]">
@@ -874,12 +882,21 @@ export default function LessonPage({
                 <span className="text-sm text-[#2294BD] font-medium">
                   Lesson complete — good work.
                 </span>
-                <a
-                  href="/modules"
-                  className="ml-auto text-xs text-[#2294BD] font-semibold hover:underline"
-                >
-                  Next →
-                </a>
+                {nextLesson ? (
+                  <a
+                    href={`/lesson/${nextLesson.lessonId}`}
+                    className="ml-auto text-xs text-[#2294BD] font-semibold hover:underline whitespace-nowrap"
+                  >
+                    Day {nextLesson.dayNumber} →
+                  </a>
+                ) : (
+                  <a
+                    href="/modules"
+                    className="ml-auto text-xs text-[#2294BD] font-semibold hover:underline"
+                  >
+                    All done →
+                  </a>
+                )}
               </div>
             )}
           </>

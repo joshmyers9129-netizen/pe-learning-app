@@ -160,7 +160,7 @@ function LessonRow({ lesson, status, onStatusChange }: LessonRowProps) {
       {/* Status dot */}
       <button
         onClick={() => onStatusChange(lesson.lessonId, next)}
-        className="flex-shrink-0 p-2 -m-1.5 rounded-full hover:scale-110 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2294BD]"
+        className="flex-shrink-0 p-3 -m-2 rounded-full hover:scale-110 transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2294BD]"
         title={`Mark as ${next}`}
         aria-label={`Toggle status for day ${lesson.dayNumber}`}
       >
