@@ -4549,6 +4549,208 @@ export const lessonContents: LessonContent[] = [
     "CAIA curriculum and industry materials on private fund reporting and allocator oversight",
   ],
 },
+{
+  lessonId: "day-24",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The GP says marks are conservative and policy-driven. The quarterly report shows only a modest NAV decline despite public comparables falling sharply, financing conditions tightening, and the fund's largest unrealized assets still carrying strong multiples. Nothing in the package is obviously false. But the allocator still has to decide whether the marks are credible, whether benchmarking is interpretable, and whether the valuation process deserves trust. This lesson teaches valuation governance as an allocator discipline: not how to build a discounted cash-flow model from scratch, but how to judge whether private-asset marks are produced through a process strong enough to support portfolio and manager decisions.",
+    },
+    {
+      type: "framing",
+      title: "Valuation is not just a number. It is a governance system.",
+      content:
+        "Private-markets allocators should not treat valuation as an isolated technical exercise. In private assets, marks influence benchmarking, manager narratives, fundraising optics, continuation pricing, portfolio-level risk measurement, pacing assumptions, and sometimes financing flexibility. That makes valuation governance a core allocator topic, not merely an accounting topic.\n\nThis lesson intentionally sits before the more detailed asset-class-specific valuation discussions that will appear later in the roadmap. It also serves as the conceptual bridge the curriculum already flagged between valuation credibility and benchmark interpretation. The learner has already seen in Day 18 that private marks can be stale and smoothed. Day 24 extends that idea by asking the harder question: what process actually produces the mark, what standards govern it, how much discretion remains, and how should an allocator calibrate trust in the output?",
+    },
+    {
+      type: "teaching",
+      title: "Why valuation governance matters so much in private markets",
+      content:
+        "In public markets, prices are externally observed and continuously refreshed. In private markets, valuations are periodic, model-based, evidence-weighted, and often produced inside a process run by the GP. That does not mean they are arbitrary. It does mean allocators need a framework for judging process quality.\n\nValuation governance matters for five reasons:\n\n- **Benchmark interpretation:** PME, quartiles, and peer comparisons are less informative if underlying marks are weak.\n- **Portfolio construction:** stale or optimistic marks can understate concentration, correlation, and liquidity risk.\n- **Manager evaluation:** a GP may appear more consistent or less volatile than reality warrants if marks lag operating or market evidence.\n- **Conflict-heavy events:** continuation vehicles, tender processes, and refinancing discussions often turn valuation into a bargaining variable, not just a reporting variable.\n- **Programme management:** pacing, denominator-effect planning, and re-up discussions all rely on NAVs that must be interpreted with some level of confidence.\n\nThe allocator is not trying to eliminate subjectivity. The allocator is trying to distinguish disciplined subjectivity from convenient subjectivity.",
+    },
+    {
+      type: "teaching",
+      title: "The main standards allocators should know: IPEV and ASC 820",
+      content:
+        "Allocators do not need to become valuation specialists, but they should recognize the main frameworks that shape private-asset marks.\n\n**IPEV Guidelines** provide a widely used framework for valuing private capital investments. They emphasize fair value as the price that would be received in an orderly transaction between market participants at the measurement date. In practice, IPEV matters because it provides a common language around methodology, calibration, consistency, and use of market evidence.\n\n**ASC 820** is the U.S. accounting framework for fair value measurement. It reinforces the idea that fair value is market-participant based rather than entity-specific. It also introduces the fair-value hierarchy, which matters conceptually even though private investments are typically Level 3 because they rely on unobservable inputs.\n\nFor allocators, the key point is not memorizing technical accounting language. It is understanding what these frameworks imply:\n- fair value is not management's preferred value or hold-to-maturity value\n- valuation should incorporate market evidence when relevant\n- methodology should be consistent but not mechanical\n- process quality and input quality matter more than stylistic claims of conservatism\n\nA GP can cite IPEV or ASC 820 and still produce marks that deserve skepticism. The framework is necessary. It is not sufficient.",
+    },
+    {
+      type: "teaching",
+      title: "Valuation process map: who proposes, who challenges, who approves",
+      content:
+        "A strong allocator should be able to map a manager's valuation process in institutional terms. The central question is simple: who is involved, and where is challenge introduced?\n\nA typical valuation process includes:\n\n- deal team or portfolio team prepares the initial mark recommendation\n- finance or valuation function gathers supporting evidence\n- methodology is selected or updated based on company-specific and market inputs\n- a valuation committee reviews the recommendation\n- in some cases, an external valuation firm provides support or range analysis\n- final marks are approved and reported\n\nWhat matters is not whether these boxes exist. It is how they work in practice.\n\nHigh-signal questions include:\n- Does the same team that owns the investment also control the final mark?\n- Is there a real valuation committee or only a rubber-stamp process?\n- When public comparables or transactions move materially, how quickly does that evidence enter the mark?\n- Are methodology changes explained clearly?\n- Is third-party support used consistently or only when politically useful?\n\nThe allocator should think of valuation governance the same way they think of underwriting governance. Independence, escalation, documentation, and challenge quality matter more than formal committee labels.",
+    },
+    {
+      type: "teaching",
+      title: "Methodologies allocators should understand at a high level",
+      content:
+        "This lesson is about governance, not building full models. But allocators still need a working grasp of the major valuation approaches because process credibility depends partly on whether the chosen methodology fits the asset and the moment.\n\nCommon methods include:\n\n- **market multiple approach:** applying a relevant revenue, EBITDA, or earnings multiple to current or forecast financials\n- **recent transaction or funding round:** using a recent arm's-length transaction as an anchor, often with calibration rather than blind carry-forward\n- **discounted cash flow:** more sensitive to assumptions and often less robust when uncertainty is high, but sometimes useful where cash flows are visible and market comps are weak\n- **industry-specific methods:** sector-specific approaches in real estate, infrastructure, asset-based finance, or other specialized sleeves\n\nAllocator relevance:\n- multiple-based marks require judgment on peer set, growth quality, margin durability, and public-private valuation gaps\n- transaction-based marks require scrutiny on recency, market context, and whether the transaction was actually arm's-length\n- DCF-based marks require skepticism when small input changes create large value changes\n- any methodology becomes weaker if it is applied mechanically without calibration to current evidence\n\nThe allocator does not need to choose the exact multiple. They do need to judge whether the chosen method is plausible, consistently applied, and responsive to changing evidence.",
+    },
+    {
+      type: "teaching",
+      title: "Calibration and backtesting: the discipline that separates process from storytelling",
+      content:
+        "One of the highest-signal concepts in private-asset valuation is calibration. Calibration means anchoring a mark to observable evidence at entry or at a later market event, then updating from that anchor as new information emerges.\n\nWhy calibration matters:\n- it forces the GP to explain what has changed since the last observable price\n- it makes methodology more repeatable across periods\n- it reduces the temptation to 'float' marks on narrative rather than evidence\n\nRelated to calibration is backtesting. Backtesting asks: how did prior marks compare with eventual exit prices or later financing rounds? No process will be perfect, but a GP that regularly marks assets close to eventual realizations in a reasonable range deserves more trust than one whose marks repeatedly look stable until a sharp end-stage reset.\n\nHigh-quality allocator questions:\n- How are initial transaction prices calibrated into future marks?\n- When a financing round or comparable set changes, how is that reflected in valuation?\n- Does the GP review prior mark accuracy over time?\n- Are there recurring patterns of late write-downs or sudden catches-up-to-reality?\n\nA valuation process that cannot explain calibration is often relying more on manager comfort than on disciplined fair-value updating.",
+    },
+    {
+      type: "teaching",
+      title: "Common valuation failure modes",
+      content:
+        "Valuation weaknesses in private markets usually appear as patterns rather than single errors. Allocators should recognize the most common failure modes.\n\n**1. Smoothing through delayed recognition**\nMarks move less than operating evidence or market conditions suggest, then adjust sharply later.\n\n**2. Selective use of market evidence**\nPositive public or transaction evidence is incorporated quickly; negative evidence is treated as temporary or 'not comparable.'\n\n**3. Methodology drift without clear explanation**\nA GP changes methods or weighting in ways that make quarter-to-quarter comparisons less informative.\n\n**4. Recency overreach**\nA financing round or transaction is treated as a durable mark anchor even though market conditions have changed materially since the event.\n\n**5. Concentration masking**\nThe largest unrealized winners remain marked strongly with limited challenge, which can overstate portfolio quality late in a fund's life.\n\n**6. Event sensitivity near conflicts**\nMarks become especially important near fundraising, GP-led transactions, or financing events, increasing the need for procedural rigor.\n\nA mature allocator does not accuse the GP of bad faith every time marks lag reality. They ask whether the pattern is understandable, method-driven, and consistently explained. Repeated one-directional optimism is the real concern.",
+    },
+    {
+      type: "teaching",
+      title: "Third-party valuation support: useful, but not a substitute for governance",
+      content:
+        "External valuation firms are often presented as evidence that a GP's marks are robust. They can improve process quality, but allocators should understand their limits.\n\nWhat third-party support can do:\n- provide an external check on methodology or assumptions\n- support committee challenge by offering ranges or comparative analysis\n- add discipline in conflict-heavy periods\n\nWhat it cannot do on its own:\n- eliminate GP influence over inputs, framing, or evidence selection\n- guarantee that the chosen methodology is the only reasonable one\n- replace internal governance if the valuation committee is weak\n- solve stale underlying company data or poor comparability\n\nImportant allocator questions include:\n- Is third-party support used on all positions, only large positions, or only selected cases?\n- Are ranges disclosed internally, and where within the range does the GP tend to land?\n- Does the GP ever override external views, and how is that documented?\n- Is the third-party review periodic, event-driven, or mostly decorative?\n\nThe practical principle is the same as in Day 22 with fairness opinions: external involvement can strengthen process, but it does not relieve the allocator of judgment about the underlying governance system.",
+    },
+    {
+      type: "teaching",
+      title: "How allocators should connect marks to benchmarking and portfolio decisions",
+      content:
+        "Valuation governance matters not just because marks appear in quarterly reports, but because allocators use those marks downstream in important decisions.\n\nExamples:\n- interpreting whether a strong unrealized TVPI is genuinely informative or mostly a mark-quality question\n- deciding whether quartile standing is meaningful if large unrealized positions have weak valuation support\n- determining whether a programme is more concentrated or less liquid than reported NAV suggests\n- assessing whether a re-up case relies too heavily on unrealized gains that may not be fully validated\n\nThis is why the sequencing note between Day 18 and Day 12 matters conceptually. Benchmarking is only as clean as the valuation inputs permit. The curriculum need not reorder the earlier lessons, but the learner should explicitly carry this mental bridge: valuation credibility conditions benchmarking credibility.\n\nA strong allocator therefore uses marks with a confidence interval in mind. The reported NAV is not ignored. It is interpreted through the quality of the process that produced it.",
+    },
+    {
+      type: "example",
+      title: "Worked example: modest markdown, large question mark",
+      content:
+        "Assume a growth-equity fund reports that one of its largest unrealized holdings declined only 8% during a quarter in which comparable public software names fell 30% and financing conditions tightened meaningfully. The GP explains that the company continues to grow revenue well and that public comps are not directly relevant because the business is higher quality.\n\nAllocator analysis path:\n\n**Step 1: separate company quality from valuation governance**\nThe company may indeed be stronger than the public peer set. That does not eliminate the need to test the mark.\n\n**Step 2: ask what methodology was used**\nWas the mark based on public multiples, a stale financing round, a DCF, or a weighted approach? What changed from the prior quarter?\n\n**Step 3: test calibration**\nWhat was the prior valuation anchor, and what evidence justified only a modest change despite a material market move?\n\n**Step 4: review process quality**\nWho challenged the mark? Was there valuation-committee escalation or third-party support? Were methodology weights changed?\n\n**Step 5: interpret downstream implications**\nIf the mark proves optimistic, unrealized performance, peer ranking, and the GP's reported consistency may all be overstated.\n\nThe allocator does not need to conclude that the mark is wrong. The allocator needs to determine whether the process and evidence make the mark credible enough to use with confidence.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: IPEV Valuation Guidelines; ASC 820 fair-value framework and related practitioner interpretation; institutional allocator guidance on private-asset valuation governance, committee process, calibration, and backtesting; industry materials on private-equity, venture, credit, and real-estate fair-value practices. The educational goal is to understand what makes a private mark more or less decision-useful for an allocator.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a GP's valuation comfort language",
+      content:
+        "The GP says: 'We follow IPEV and use a disciplined fair-value framework, so we are comfortable that our marks are appropriate.'\n\n**Weak LP response:** 'Understood. If you follow IPEV, that gives us comfort that the valuations are robust.'\n\nWhy it is weak: it treats compliance language as proof of credibility and skips over methodology choice, calibration, challenge process, and mark behavior through changing conditions.\n\n**Strong LP response:** 'Helpful. We would like to understand how that framework operates in practice: which methodologies were used on the largest positions, how marks were calibrated to prior observable events, what changed this quarter, who challenged the recommendations, and how prior marks have compared with later exits or financing events.'\n\nWhy it is strong: it converts valuation from framework language into process evidence.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what valuation governance can and cannot tell you",
+      content:
+        "**What strong valuation governance can support:**\n- more confidence that marks reflect a disciplined process rather than narrative convenience\n- cleaner interpretation of benchmarking, unrealized performance, and portfolio exposures\n- earlier detection of optimism, lag, or event-sensitive bias\n- better allocator judgment in re-up, pacing, and conflict-heavy situations\n\n**What it cannot guarantee:**\n- that every mark is 'correct' at a point in time\n- that exit prices will match reported fair values exactly\n- that third-party support eliminates subjectivity\n- that benchmark comparisons become perfectly clean simply because the process is strong\n\nThe allocator should therefore use valuation governance to calibrate confidence, not to seek false precision. A strong process narrows uncertainty. It does not erase it.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: assess mark credibility using a valuation-governance lens",
+      content:
+        "You are reviewing a hypothetical quarterly mark on a large unrealized asset. The GP reports only a modest change in fair value despite significant movement in public comparables and tighter financing conditions. The manager says the company is outperforming operationally and that public peers are lower quality.\n\nAssess the mark across five dimensions:\n\n1. **Methodology fit** — is the chosen valuation method plausible for this asset?\n2. **Calibration** — what prior observable events anchor the current mark?\n3. **Market responsiveness** — how should external evidence have affected valuation?\n4. **Governance process** — who challenged and approved the mark?\n5. **Downstream consequences** — what manager-evaluation or portfolio decisions depend on this mark?\n\nThen answer three questions:\n- What is the single most important follow-up question you would ask first?\n- Which concern is mainly about process, and which is mainly about the number itself?\n- Would you treat this as a monitoring issue, a benchmarking caveat, or a potential underwriting red flag?",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal valuation-governance questions",
+      content:
+        "1. **'Walk us through the valuation process on your largest unrealized positions: who proposes, who challenges, and who approves?'**\nThis reveals whether there is real process separation.\n\n2. **'How do you calibrate marks to the original transaction price, later financing rounds, or realized exits?'**\nThis tests whether the process is anchored to observable evidence.\n\n3. **'When public-market or transaction evidence moves sharply, how does that feed into your private marks?'**\nThis tests responsiveness rather than static policy language.\n\n4. **'How often have prior marks on exited assets proved materially too high or too low, and what did you learn from that?'**\nThis surfaces backtesting discipline.\n\n5. **'Where do external valuation providers add value in your process, and where do you retain internal discretion?'**\nThis prevents over-crediting third-party involvement.",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: using valuation governance in selection and monitoring",
+      content:
+        "A disciplined allocator should summarize valuation governance in the same concise, decision-useful way used for team, strategy, and alignment. The summary should address:\n\n- whether the manager's valuation process appears structured, challenged, and calibrated\n- whether methodology usage fits the assets and responds appropriately to changing evidence\n- whether marks are sufficiently credible to support benchmarking and re-up decisions\n- whether any pattern of smoothing, delayed recognition, or event-sensitive marking raises concern\n\nThis matters most when a manager's case depends heavily on unrealized performance or when portfolio-level decisions are being made on marks that may embed more uncertainty than the headline reporting suggests. The key allocator skill is not to reject all imperfect marks. It is to know how much confidence to place in them and what decisions should be caveated accordingly.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d24q1",
+      type: "multiple-choice",
+      prompt:
+        "Why is valuation governance especially important in private markets?",
+      options: [
+        "Because private-asset prices are continuously observable in public exchanges",
+        "Because marks affect benchmarking, portfolio construction, manager evaluation, and conflict-heavy transactions",
+        "Because valuations matter only when a fund is fully liquidated",
+        "Because governance fully eliminates subjectivity from fair value",
+      ],
+      correctAnswer:
+        "Because marks affect benchmarking, portfolio construction, manager evaluation, and conflict-heavy transactions",
+    },
+    {
+      questionId: "d24q2",
+      type: "multiple-choice",
+      prompt:
+        "What is the most allocator-relevant implication of IPEV and ASC 820?",
+      options: [
+        "Fair value is based on market-participant assumptions and relevant evidence, not simply management preference",
+        "They guarantee that all private marks will match eventual exit prices",
+        "They require all private assets to be valued with a discounted cash flow model",
+        "They eliminate the need for internal valuation committees",
+      ],
+      correctAnswer:
+        "Fair value is based on market-participant assumptions and relevant evidence, not simply management preference",
+    },
+    {
+      questionId: "d24q3",
+      type: "multiple-choice",
+      prompt:
+        "Which concept best describes anchoring a valuation to a prior observable price and updating it as new evidence emerges?",
+      options: [
+        "Smoothing",
+        "Calibration",
+        "Style drift",
+        "Vintage diversification",
+      ],
+      correctAnswer:
+        "Calibration",
+    },
+    {
+      questionId: "d24q4",
+      type: "multiple-choice",
+      prompt:
+        "Which of the following is the clearest valuation-governance red flag?",
+      options: [
+        "A manager explains methodology changes clearly and documents them",
+        "A valuation committee challenges the deal team's proposed marks",
+        "Public and operating evidence deteriorate materially, but marks remain unusually stable with little explanation",
+        "A GP uses more than one valuation methodology across different asset types",
+      ],
+      correctAnswer:
+        "Public and operating evidence deteriorate materially, but marks remain unusually stable with little explanation",
+    },
+    {
+      questionId: "d24q5",
+      type: "multiple-choice",
+      prompt:
+        "What is the best way to think about third-party valuation support?",
+      options: [
+        "It proves the GP's marks are correct",
+        "It can strengthen process quality, but it does not replace internal governance or allocator judgment",
+        "It matters only for real estate funds",
+        "It removes the GP's influence over assumptions and inputs",
+      ],
+      correctAnswer:
+        "It can strengthen process quality, but it does not replace internal governance or allocator judgment",
+    },
+    {
+      questionId: "d24q6",
+      type: "short-response",
+      prompt:
+        "Explain why valuation credibility and benchmarking credibility are linked in private markets. Write two to four sentences.",
+      modelAnswer:
+        "Benchmarking relies on NAVs and unrealized valuations that may contain varying degrees of lag, smoothing, or subjectivity. If the underlying marks are weak, then quartile rankings, PME-based interpretations, and relative-performance assessments become less reliable. Stronger valuation governance does not make benchmarking perfect, but it makes the inputs more decision-useful.",
+    },
+    {
+      questionId: "d24q7",
+      type: "short-response",
+      prompt:
+        "A GP says a large unrealized holding declined only modestly because the company is outperforming weaker public peers. What are the three most important valuation-governance questions you would ask next?",
+      modelAnswer:
+        "First, I would ask what methodology was used and whether it changed from the prior quarter. Second, I would ask how the current mark was calibrated to prior observable events such as the entry price, financing rounds, or comparable transactions. Third, I would ask who challenged and approved the mark, including whether a valuation committee or third-party support was involved and how external market evidence was incorporated.",
+    },
+  ],
+  sources: [
+    "IPEV Valuation Guidelines — fair value framework and methodology principles for private capital investments",
+    "ASC 820 fair-value framework and practitioner interpretation — market-participant perspective and Level 3 measurement context",
+    "Institutional allocator materials on private-asset valuation governance, committee process, calibration, and backtesting",
+    "Practitioner resources on private-equity, venture, credit, and real-estate valuation methods and control processes",
+    "CFA Institute: Private Markets and Alternative Investments curriculum — valuation, fair value, and benchmarking context",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
