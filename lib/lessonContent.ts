@@ -6307,6 +6307,184 @@ export const lessonContents: LessonContent[] = [
     "NVCA glossary and venture-finance vocabulary resources for shared terminology across early-stage financings",
   ],
 },
+{
+  lessonId: "day-31",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The GP says: 'We still own a meaningful percentage of the company, and the last round was done at a strong valuation.' A less experienced allocator may hear that as enough. A venture-fluent allocator asks the harder follow-up: 'What security do you own, what liquidation preference sits ahead of common, and how much of that headline valuation actually reaches your stake under different exit outcomes?' This lesson teaches preferred terms and company-level payout waterfalls from the allocator's perspective. Ownership percentage alone is not enough. In venture, what you own and where it sits in the stack can matter as much as how much of it you own.",
+    },
+    {
+      type: "framing",
+      title: "Ownership percentage is not payout percentage",
+      content:
+        "Day 29 taught that cap tables determine whether a manager owns enough of a winner for the company to matter economically. Day 30 then showed that seed instruments defer ownership economics rather than eliminating them. Day 31 adds the next necessary layer: even once the ownership percentage is known, the payout economics may still differ materially from the naive common-equity interpretation because preferred terms shape who gets paid first and how much.\n\nThis is one of the most important conceptual upgrades for allocators coming from public markets. In public equities, a share of common stock usually has a relatively straightforward claim on residual value. In venture, especially after multiple preferred rounds, ownership is mediated by liquidation preferences, participation features, and company-level waterfall mechanics. That means a 5% stake is not always a 5% economic claim on exit proceeds.\n\nThis lesson focuses on the first layer of that problem: basic preferred-stock mechanics and the intuition of company-level waterfalls. Day 32 will go further into anti-dilution, pro rata, and control rights. The goal here is to teach the learner how to translate venture financing terms into allocator-relevant payout math rather than stopping at headline valuations or nominal ownership percentages.",
+    },
+    {
+      type: "teaching",
+      title: "What preferred stock is doing economically",
+      content:
+        "Preferred stock is not just a label for institutional venture shares. Economically, it gives investors negotiated rights that change how value is allocated in financing and exit scenarios.\n\nThe most important intuition is simple:\n- common stock typically sits at the bottom of the stack and participates in residual upside after senior claims are satisfied\n- preferred stock often has rights that improve downside or middling-outcome protection relative to common, especially in weaker exits\n\nThat is why preferred shares matter so much to allocators. They alter the mapping between headline enterprise or equity value and actual realized proceeds to each security holder.\n\nA venture manager can honestly say a company raised capital at a strong valuation. That does not mean all shareholders benefit equally from that valuation in every exit scenario. If a company later sells below expectations, the preferred stack may absorb a large share of the proceeds before common equity participates meaningfully.\n\nThe allocator should therefore think of preferred stock as a contractual claim that changes both downside cushioning and payout sequencing. It is not enough to know the company value. The LP needs to know how that value is distributed through the stack.",
+    },
+    {
+      type: "visual",
+      title: "Common versus preferred: the allocator's payout lens",
+      content:
+        "**Two investors can own the same percentage headline and still have different economic outcomes because they sit in different places in the stack.**\n\n| Security type | Typical economic position | What allocator should infer |\n|---|---|---|\n| **Common stock** | Residual claimant after preference claims are satisfied | More exposed to weak or middling exits |\n| **Non-participating preferred** | Usually entitled to take a preference return or convert to common, whichever is higher | Better downside floor in weaker exits; capped in middling outcomes unless conversion makes sense |\n| **Participating preferred** | Usually entitled to take preference return and then also share in residual proceeds as if converted | Can outperform common in a wider range of exit outcomes |\n| **Multiple-liquidation-preference preferred** | Entitled to a multiple of invested capital before common participates | Shifts a larger share of weak-to-moderate exits away from common holders |\n\nThe key allocator question is never just 'what is the company worth?' It is 'at what exit values does our security generate strong returns, and what scenarios leave common holders with little after preferences are satisfied?'",
+    },
+    {
+      type: "teaching",
+      title: "Liquidation preference: the mechanics",
+      content:
+        "A liquidation preference is a contractual right that entitles preferred shareholders to receive a specified amount from exit proceeds before common shareholders receive anything.\n\nThe key variables are:\n\n**1. The preference multiple**\nMost standard venture preferred carries a 1x liquidation preference, meaning investors are entitled to receive their invested capital back before common participates. Some rounds, especially in distress or later-stage structures, carry 2x or higher multiples.\n\n**2. Participating versus non-participating**\nAfter taking the preference, participating preferred shares continue to receive a pro-rata share of remaining proceeds alongside common, as if the preferred had converted. Non-participating preferred must choose: take the liquidation preference, or convert to common and share proportionally. Non-participating preferred holders will convert when the as-converted payout exceeds the preference amount.\n\n**3. The preference stack**\nIn a company with multiple rounds of preferred, there is usually a seniority ordering. Later rounds are often senior to earlier rounds, though this varies. The practical effect is that in weak exits, later investors may receive their preference before earlier investors see anything, and earlier investors may receive their preference before common sees anything.\n\nFrom the allocator's perspective, the core insight is that the preference stack can absorb a large portion of exit proceeds in weaker scenarios, leaving common shareholders with little or nothing. In strong exits where conversion is attractive, preferred and common can behave more similarly. The preference mechanics matter most in the scenarios where a company sells for less than hoped.",
+    },
+    {
+      type: "teaching",
+      title: "Company-level waterfall: how proceeds flow",
+      content:
+        "A waterfall is the sequencing of how exit proceeds are distributed to all security holders. The allocator needs waterfall intuition to translate an exit value into an estimate of what the fund's stake actually receives.\n\nA simplified waterfall for a company with multiple preferred rounds typically works as follows:\n\n**Step 1: Senior preferred preference**\nThe most senior preferred shareholders (often the most recent round) receive their liquidation preference first. If proceeds are insufficient to cover this preference, they receive a pro-rata share of available proceeds and lower-stack holders receive nothing.\n\n**Step 2: Next preferred preference**\nIf proceeds remain after satisfying the senior preference, the next senior preferred holders receive their preference. This continues down the stack.\n\n**Step 3: Participation (if applicable)**\nIf preferred shares carry participation rights, after taking their preference, participating preferred holders share in remaining proceeds alongside common as if converted.\n\n**Step 4: Common residual**\nAfter all preference and participation claims are satisfied, common shareholders receive any remaining proceeds.\n\nThe critical allocator insight is that the crossover point — the exit value at which common equity begins to receive meaningful proceeds — can be substantially higher than total preference dollars invested, especially in participation structures. In a company with heavy preferred preferences, a $200 million exit that sounds like a strong outcome may deliver little to common after satisfying a $150 million preference stack.\n\nThis is why allocators should not evaluate venture outcomes by headline exit values alone. The question is what flows through the waterfall to the fund's specific security position.",
+    },
+    {
+      type: "example",
+      title: "Worked example: waterfall at two exit prices",
+      content:
+        "Assume the following simplified company structure:\n- Series A preferred: $20M invested, 1x non-participating liquidation preference, senior\n- Series B preferred: $50M invested, 1x participating liquidation preference, junior to Series A\n- Common stock: held by founders and employees, 30% of fully diluted shares\n- Series A owns 20% fully diluted, Series B owns 50% fully diluted\n\n**Scenario 1: Exit at $60M**\n\nStep 1: Series A takes $20M preference. Remaining: $40M.\nStep 2: Series B takes $50M preference. But only $40M remains, so Series B receives $40M. Common receives $0.\n\nNote: Series A must choose between keeping its $20M preference or converting. Converting to 20% of $60M = $12M, which is less than $20M, so Series A takes the preference. Series B cannot recover its full preference in this scenario.\n\nAllocator takeaway: At a $60M exit, Series B investors do not recover their full capital. Common holders receive nothing. The headline exit value tells you very little without knowing the preference stack.\n\n**Scenario 2: Exit at $200M**\n\nStep 1: Series A preference: $20M. Remaining: $180M.\nStep 2: Series B preference: $50M. Remaining: $130M.\nStep 3: Series B is participating. Series B shares in remaining $130M as if converted: 50% of $130M = $65M. Common receives 30% of $130M = $39M. Series A converts to 20% of $130M = $26M (better than holding $20M preference).\n\nActual payouts: Series A receives $26M (converted), Series B receives $50M + $65M = $115M, Common receives $39M.\nNote: Series A ownership claim: $26M / $200M = 13% of exit, not 20%. Series B: $115M / $200M = 57.5%. Common: $39M / $200M = 19.5%.\n\nAllocator takeaway: Even in a strong outcome, participation features shift economics away from other security holders. Ownership percentage does not equal economic percentage in exit proceeds.",
+    },
+    {
+      type: "teaching",
+      title: "What the allocator should ask the GP",
+      content:
+        "Understanding preferred terms and waterfalls allows the allocator to ask materially better questions during GP diligence.\n\n**On existing portfolio companies:**\n- What security does the fund hold in each major position, and what liquidation preferences sit ahead of common?\n- At what exit values does the fund's stake generate the return multiples cited in attribution?\n- For companies marked above the preference stack, has the manager stress-tested whether the implied common value is achievable?\n\n**On the fund's investment strategy:**\n- Does the manager typically lead rounds and set preferred terms, or follow and accept terms set by others?\n- What is the typical preference structure the fund negotiates or accepts?\n- Does the fund model waterfalls when projecting outcomes, or does it rely on ownership-times-valuation math?\n\n**On the historical track record:**\n- In prior exits, have the GPs broken out actual proceeds versus headline exit values to show what security holders actually received?\n- Were there situations where portfolio companies exited above initial cost but the fund's stake underperformed because of preference stack dynamics?\n\nThese questions move the diligence conversation from valuation to economics. A manager who is fluent in waterfall mechanics and can explain how proceeds flow through each portfolio company's structure is demonstrating a more sophisticated ownership framework than one who references only ownership percentage and headline marks.",
+    },
+    {
+      type: "teaching",
+      title: "Portfolio-level implications for the allocator",
+      content:
+        "Waterfall mechanics do not only affect individual company outcomes. They have implications for how the allocator should think about the entire fund.\n\n**TVPI and DPI can diverge from ownership math**\nIf a fund marks its positions based on ownership-times-valuation without adjusting for preference stack dynamics, the TVPI may overstate the likely DPI. The allocator should probe whether marks reflect as-converted common value, preference-adjusted value, or some other methodology.\n\n**Reserve adequacy depends on preference position**\nA fund that needs to protect pro-rata rights or lead follow-ons should assess whether investing additional capital in a later round changes its preference seniority position and how that affects existing economics. Adding capital is not always economically straightforward when preferred stacks are layered.\n\n**Secondary pricing reflects waterfall math**\nWhen secondary buyers price fund positions, they typically model waterfall mechanics at the company level. A fund trading at a discount on the secondary market may be signaling that secondary buyers believe the preference stack leaves little for the common-equivalent position the fund holds.\n\n**Manager incentive alignment**\nThe GP carry is typically calculated on fund returns to the LP, not on gross enterprise value. But the pathway from enterprise value to LP returns runs through the waterfall. A manager who understands waterfall mechanics is more likely to think clearly about what economic outcomes actually generate carry versus what produces valuation marks that do not translate to distributions.",
+    },
+    {
+      type: "misconception",
+      title: "Common allocator misreading: confusing headline valuation with realized economics",
+      content:
+        "The most common error allocators make with venture preferred terms is treating headline valuations as if they represent pro-rata claims on equity value.\n\nThe error looks like this:\n- Company raised a Series C at a $500M valuation\n- Fund owns 8% fully diluted\n- Allocator infers the fund's stake is worth approximately $40M\n\nThis can be directionally correct in strong exit scenarios where all preference is well-covered and common trades at or above the implied common value. It is materially misleading in weaker scenarios where:\n- The preference stack is large relative to exit value\n- Participating preferred absorbs a disproportionate share of proceeds\n- The company's operating performance has declined since the headline raise, meaning the $500M valuation is stale\n\nThe correction is not to abandon valuation-times-ownership as a useful heuristic. It is to treat it as the ceiling under strong exit conditions and to separately model the floor under weaker outcomes by working through preference mechanics.\n\nA rigorous allocator should be able to articulate: 'At what exit value does the fund's position begin generating meaningful returns, and how much cushion exists between today's implied valuation and the preference waterfall crossover point?' That question cannot be answered by headline valuation and ownership percentage alone.",
+    },
+    {
+      type: "summary",
+      title: "What this lesson establishes",
+      content:
+        "Preferred stock mechanics and company-level waterfalls are the second major conceptual layer allocators need to interpret venture ownership correctly. The first layer, covered in prior lessons, is understanding ownership percentage and cap table dilution. This lesson adds the translation step from ownership percentage to actual payout economics.\n\nKey points:\n- Preferred stock creates contractual claims that change payout sequencing and amounts relative to common equity\n- Liquidation preferences determine how much preferred holders receive before common participates\n- Participating preferred holders take preference amounts and then share in residual proceeds, shifting economics away from common and non-participating holders\n- Company-level waterfalls sequence claims across all security classes and determine how much of a given exit value flows to each holder\n- Allocators should model waterfalls at multiple exit values to understand at what exit levels the fund's position generates strong returns\n- Headline marks that are ownership-times-valuation without preference adjustment may overstate likely DPI in weaker exit scenarios\n\nDay 32 will extend this framework to anti-dilution provisions, pro-rata rights, and control terms, completing the core toolkit for evaluating how venture financing terms affect allocator economics.",
+    },
+    {
+      questionId: "d31q1",
+      type: "multiple-choice",
+      prompt:
+        "A fund owns 10% of a company on a fully diluted basis. The company exits for $80M. There is $90M of liquidation preference ahead of common. What does the fund receive if it holds common-equivalent shares?",
+      options: [
+        "$8M, because 10% of $80M equals $8M",
+        "$0, because the preference stack exceeds the exit value",
+        "$9M, because the preference is senior but the fund participates proportionally",
+        "$1M, because the preference is reduced pro-rata across all holders",
+      ],
+      correctAnswer:
+        "$0, because the preference stack exceeds the exit value",
+    },
+    {
+      questionId: "d31q2",
+      type: "multiple-choice",
+      prompt:
+        "What is the key difference between participating and non-participating preferred stock?",
+      options: [
+        "Non-participating preferred converts automatically at IPO; participating preferred does not",
+        "Participating preferred takes both its preference amount and a share of remaining proceeds; non-participating preferred must choose between the preference or converting to common",
+        "Non-participating preferred has a higher liquidation preference multiple",
+        "Participating preferred is always senior in the preference stack",
+      ],
+      correctAnswer:
+        "Participating preferred takes both its preference amount and a share of remaining proceeds; non-participating preferred must choose between the preference or converting to common",
+    },
+    {
+      questionId: "d31q3",
+      type: "multiple-choice",
+      prompt:
+        "A GP reports that a portfolio company is marked at $300M, and the fund owns 12% fully diluted. Which additional piece of information is most important for the allocator to assess whether the $36M implied value is realistic?",
+      options: [
+        "The company's revenue growth rate",
+        "The total liquidation preferences and participation features sitting ahead of common",
+        "The number of employees at the company",
+        "The fund's carried interest rate",
+      ],
+      correctAnswer:
+        "The total liquidation preferences and participation features sitting ahead of common",
+    },
+    {
+      questionId: "d31q4",
+      type: "multiple-choice",
+      prompt:
+        "In a waterfall with two preferred rounds, Series A is senior and Series B is junior. The company exits for $30M. Series A has a $25M preference and Series B has a $20M preference. What do Series B holders receive?",
+      options: [
+        "$20M, because their preference is paid in full before common",
+        "$5M, because Series A takes $25M first and $5M remains",
+        "$0, because Series B is junior and Series A absorbs all proceeds",
+        "$15M, because proceeds are split equally between A and B",
+      ],
+      correctAnswer:
+        "$5M, because Series A takes $25M first and $5M remains",
+    },
+    {
+      questionId: "d31q5",
+      type: "multiple-choice",
+      prompt:
+        "Why might a fund's secondary market discount signal waterfall-related risk?",
+      options: [
+        "Secondary buyers always apply a standard discount regardless of waterfall",
+        "Secondary buyers model waterfall mechanics and may believe the preference stack leaves little value for the fund's position at realistic exit scenarios",
+        "Discounts reflect only vintage year risk, not position-level economics",
+        "Secondary pricing is based on the fund's IRR, not individual company waterfalls",
+      ],
+      correctAnswer:
+        "Secondary buyers model waterfall mechanics and may believe the preference stack leaves little value for the fund's position at realistic exit scenarios",
+    },
+    {
+      questionId: "d31q6",
+      type: "multiple-choice",
+      prompt:
+        "A non-participating preferred investor holds a 1x liquidation preference of $10M in a company that exits for $120M. The investor owns 15% fully diluted. What is the investor's best economic outcome?",
+      options: [
+        "Take the $10M preference",
+        "Convert to common and receive 15% of $120M, which is $18M",
+        "Receive $10M preference plus 15% of remaining proceeds",
+        "Receive nothing because non-participating preferred cannot convert",
+      ],
+      correctAnswer:
+        "Convert to common and receive 15% of $120M, which is $18M",
+    },
+    {
+      questionId: "d31q7",
+      type: "short-response",
+      prompt:
+        "Explain why ownership percentage alone is insufficient for an allocator to evaluate a venture fund's position in a portfolio company. Write two to four sentences.",
+      modelAnswer:
+        "Ownership percentage tells you how much of the company's equity you nominally hold, but it does not tell you how exit proceeds are actually distributed. Preferred stock terms, liquidation preferences, and participation features determine payout sequencing and amounts before common holders receive anything. An allocator needs to understand the full preference stack and waterfall mechanics to estimate what the fund's stake actually generates at different exit values rather than assuming a fixed percentage of headline value.",
+    },
+    {
+      questionId: "d31q8",
+      type: "short-response",
+      prompt:
+        "A GP says a portfolio company exit at $150M was a strong outcome for the fund. What questions should you ask to verify that claim from a waterfall perspective?",
+      modelAnswer:
+        "I would ask what security the fund held and what liquidation preferences or participation rights applied to that security. I would ask what other preferred rounds sat ahead of the fund's position and how much preference capital was senior to the fund's stake. I would then ask how much of the $150M actually flowed to the fund's position after satisfying those preferences, rather than accepting the headline exit value as the measure of outcome quality.",
+    },
+  ],
+  sources: [
+    "NVCA Model Legal Documents and Venture Capital term sheet resources — baseline definitions for liquidation preferences, participation rights, preferred-stock mechanics, and standard venture financing structures",
+    "Allocator- and practitioner-oriented venture materials on preferred terms, waterfall modeling, and security-level payout economics",
+    "Institutional venture diligence frameworks linking financing terms to fund-level return outcomes and LP economics",
+    "Venture finance educational resources covering preference stacks, waterfall sequencing, conversion mechanics, and common-versus-preferred payout dynamics",
+    "Secondary market pricing literature and practitioner resources linking position-level waterfall analysis to secondary discount dynamics",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
