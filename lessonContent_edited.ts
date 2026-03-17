@@ -1,4 +1,4 @@
-import { LessonContent } from "./types";
+import { LessonContent } from "./lib/types";
 
 // Days 1–20: fully built lessons.
 export const lessonContents: LessonContent[] = [
