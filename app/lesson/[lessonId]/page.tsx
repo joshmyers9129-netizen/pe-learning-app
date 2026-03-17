@@ -242,6 +242,7 @@ function Block({ block }: { block: LessonBlock }) {
           <img
             src={block.src}
             alt={block.caption ?? block.title}
+            loading="lazy"
             className="w-full rounded-lg mb-4 object-contain max-h-80"
           />
         )}
@@ -641,12 +642,15 @@ export default function LessonPage({
   // Saved result
   const [saved, setSaved] = useState(false);
 
-  // Load existing quiz result
+  // Load existing quiz result and auto-advance status to in-progress
   useEffect(() => {
     const existing = getQuizResult(lessonId);
     if (existing) {
       setConfidence(existing.confidence);
       setSaved(true);
+    } else {
+      // Mark in-progress when lesson is first opened (only if not yet completed)
+      setLessonStatus(MODULE_ID, lessonId, "in-progress");
     }
   }, [lessonId]);
 

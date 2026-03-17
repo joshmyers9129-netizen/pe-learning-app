@@ -5,6 +5,7 @@ import { modules } from "@/lib/modules";
 import { useModuleProgress } from "@/hooks/useProgress";
 import { getAllQuizResults, getCardStruggleCounts } from "@/lib/progress";
 import { buildReviewQueue, groupByPriority } from "@/lib/reviewQueue";
+import { topicLabel } from "@/lib/topics";
 
 export default function Home() {
   const currentModule = modules[0];
@@ -140,9 +141,9 @@ export default function Home() {
                 {weakTopics.map((topic) => (
                   <span
                     key={topic}
-                    className="text-sm bg-[#D9532B]/10 text-[#D9532B] px-3 py-1 rounded-full font-medium capitalize"
+                    className="text-sm bg-[#D9532B]/10 text-[#D9532B] px-3 py-1 rounded-full font-medium"
                   >
-                    {topic.replace(/-/g, " ")}
+                    {topicLabel(topic)}
                   </span>
                 ))}
               </div>

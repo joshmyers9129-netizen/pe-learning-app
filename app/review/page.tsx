@@ -9,6 +9,7 @@ import {
   QueueCard,
 } from "@/lib/reviewQueue";
 import { CardType, Priority } from "@/lib/types";
+import { topicLabel } from "@/lib/topics";
 import { AiHelper } from "@/components/AiHelper";
 
 // ── constants ─────────────────────────────────────────────────────────────────
@@ -47,61 +48,6 @@ const PRIORITY_CONFIG: Record<
   medium: { label: "Medium", dot: "bg-[#FAA51A]", text: "text-[#9B6A00]" },
   low: { label: "Low", dot: "bg-[#2294BD]", text: "text-[#2294BD]" },
 };
-
-const TOPIC_LABELS: Record<string, string> = {
-  "fund-structure": "Fund Structure",
-  "capital-flow": "Capital Flow",
-  "gp-lp": "GP / LP",
-  incentives: "Incentives",
-  "carried-interest": "Carried Interest",
-  "capital-calls": "Capital Calls",
-  "j-curve": "J-Curve",
-  "cash-flows": "Cash Flows",
-  irr: "IRR",
-  "performance-measurement": "Performance",
-  tvpi: "TVPI",
-  dpi: "DPI",
-  rvpi: "RVPI",
-  "fund-lifecycle": "Fund Lifecycle",
-  "vintage-year": "Vintage Year",
-  buyout: "Buyout",
-  leverage: "Leverage",
-  "deal-structure": "Deal Structure",
-  "growth-equity": "Growth Equity",
-  venture: "Venture",
-  "value-creation": "Value Creation",
-  operations: "Operations",
-  "portfolio-companies": "Portfolio Cos",
-  exits: "Exits",
-  ipo: "IPO",
-  secondary: "Secondaries",
-  "fund-terms": "Fund Terms",
-  lpa: "LPA",
-  "manager-selection": "Manager Selection",
-  "due-diligence": "Due Diligence",
-  benchmarking: "Benchmarking",
-  pme: "PME",
-  pacing: "Pacing",
-  "portfolio-construction": "Portfolio Construction",
-  allocation: "Allocation",
-  liquidity: "Liquidity",
-  "gp-led": "GP-Led",
-  "co-investment": "Co-Investment",
-  "asset-allocation": "Asset Allocation",
-  reporting: "Reporting",
-  nav: "NAV",
-  valuation: "Valuation",
-  esg: "ESG",
-  impact: "Impact",
-  regulation: "Regulation",
-  synthesis: "Synthesis",
-  "meeting-fluency": "Meeting Fluency",
-  "allocator-thinking": "Allocator Thinking",
-};
-
-function topicLabel(t: string) {
-  return TOPIC_LABELS[t] ?? t.replace(/-/g, " ");
-}
 
 // ── card component ────────────────────────────────────────────────────────────
 

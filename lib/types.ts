@@ -6,7 +6,7 @@ export interface Lesson {
   title: string;
   estimatedMinutes: number;
   topics: string[];
-  difficulty: string;
+  difficulty: "foundational" | "intermediate" | "advanced";
   prerequisites: string[];
   learningObjectives: string[];
 }
