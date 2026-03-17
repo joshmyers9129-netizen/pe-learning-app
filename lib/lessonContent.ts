@@ -7277,6 +7277,270 @@ export const lessonContents: LessonContent[] = [
     "CFA Institute and related private-markets educational materials providing context for venture strategy differentiation and business-model-specific risk",
   ],
 },
+{
+  lessonId: "day-35",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The GP says: 'Our initial selection process is strong, and then we double down on our winners.' That sounds sensible until the allocator asks the harder questions: How are reserves actually set? What percentage of the fund is truly available for follow-ons after early checks are written? How does the firm decide whether a company deserves more capital versus merely more patience? And when the GP does not follow on, what signal does that send to the market, to founders, and to other investors? This lesson teaches venture portfolio management as capital-allocation discipline: how funds turn sourcing into ownership, how reserves shape economics, and why follow-on decisions are among the most important and most underanalyzed drivers of venture outcomes.",
+    },
+    {
+      type: "framing",
+      title: "In venture, portfolio management is not passive diversification. It is active re-underwriting.",
+      content:
+        "Day 27 established that venture is a power-law game. Day 28 showed that stage changes ownership opportunity, evidence, and reserve needs. Day 29 explained that cap tables and ownership retention determine whether good company selection actually becomes fund economics. Days 30 through 34 then layered in seed instruments, preferred terms, valuation interpretation, and business-model-specific underwriting. Day 35 now sits at the center of those topics. It addresses what the manager actually does after the first check.\n\nThis is a distinctly venture problem. In public markets, position management is continuous and highly liquid. In venture, follow-on decisions are episodic, capital is finite, ownership can dilute quickly, information is asymmetrically distributed, and each new round can materially reshape the economics of the position. That means venture portfolio management is not just monitoring. It is repeated capital-allocation under uncertainty.\n\nThe allocator's job is to understand whether the GP has a coherent reserve philosophy, whether follow-ons are used to preserve economics rather than to defend ego or optics, and whether the manager understands the signaling consequences of participating or refusing to participate in future rounds. This lesson is therefore about both economics and judgment.",
+    },
+    {
+      type: "teaching",
+      title: "Why venture portfolio management matters more than many allocators assume",
+      content:
+        "Many allocators intuitively focus most on sourcing and initial selection. Those are essential. But in venture, a meaningful share of the economic outcome is often determined later, through reserve deployment and follow-on discipline.\n\nWhy follow-on management matters so much:\n- ownership in winners can evaporate without continued participation\n- the best companies often require the largest absolute dollar defense\n- finite reserves force tradeoffs across the portfolio\n- each new financing event provides new information that may confirm or undermine the original thesis\n- manager signaling in later rounds can affect both company financing dynamics and the fund's practical access to future opportunity\n\nThis means venture portfolio management is one of the main mechanisms through which manager edge becomes real. A manager can be directionally good at initial selection and still deliver mediocre LP economics if reserves are weak, follow-ons are reactive, or capital is spread too thinly across too many names.\n\nAllocator implication:\nThe right diligence question is not simply 'did the GP back good companies?' It is 'did the GP allocate follow-on capital in a way that preserved economics in the companies that mattered most?'",
+    },
+    {
+      type: "visual",
+      title: "The allocator's venture portfolio-management map",
+      content:
+        "**A venture fund creates outcomes in two stages: initial selection and later capital allocation.**\n\n| Stage | Core question | Why allocator should care |\n|---|---|---|\n| **Initial check** | Did the GP enter the right companies at the right stage and ownership target? | Sourcing and first underwriting set the opportunity set |\n| **Reserve design** | How much capital was actually held back for follow-ons? | Reserve policy determines how many winners can be defended |\n| **Follow-on triage** | Which companies receive more capital, and why? | This is where concentration is built or lost |\n| **Ownership defense** | Did participation preserve meaningful economics in the winners? | Being right early is not enough without retained ownership |\n| **Signaling** | What does participation or non-participation communicate to the market? | Follow-on behavior can affect company financing outcomes |\n| **Fund outcome** | Did the manager convert selection into ownership-adjusted, realized economics? | Portfolio management is a core driver of venture performance |\n\nThe allocator should treat follow-on decisions as venture's version of active position sizing.",
+      caption:
+        "Initial selection creates the menu. Follow-on discipline decides how much of the menu turns into real economics.",
+      whyItMatters:
+        "This is the core idea of Day 35: venture portfolio management is repeated capital-allocation, not passive holding.",
+      sourceNote:
+        "This reflects the roadmap focus for Lesson 35: follow-ons, reserves, signaling, and how venture managers translate access into fund economics.",
+    },
+    {
+      type: "teaching",
+      title: "Reserve ratio: the hidden architecture of a venture fund",
+      content:
+        "Reserve ratio is one of the most important yet least understood elements of venture fund design. It refers, in practical terms, to how much of the fund is intended for initial checks versus future follow-on investment.\n\nWhy it matters:\n- a low-reserve strategy may create broad initial exposure but leave the fund unable to defend winners\n- a high-reserve strategy may preserve more ownership in breakouts, but can also crowd out new opportunities or create excessive dependence on a smaller set of later decisions\n- stage matters: seed funds, early-stage funds, and opportunity funds should not have identical reserve logic\n- reserve policy determines how concentrated the later-life economics of the fund can become\n\nA useful allocator framing is that reserves are the fund's future conviction budget. They are not simply cash left over. They represent the GP's ability to act when information improves and when ownership matters most.\n\nAllocator implication:\nA manager should be able to explain reserves in practical terms: how much is reserved, what is assumed about portfolio attrition, what share of companies are expected to receive follow-on capital, and how the reserve plan changes if the portfolio develops better or worse than expected. A vague answer here is a meaningful underwriting weakness.",
+    },
+    {
+      type: "teaching",
+      title: "Why follow-ons are really re-underwriting decisions",
+      content:
+        "A follow-on round is not just another check. It is a re-underwriting event.\n\nAt each follow-on decision, the GP should be reassessing:\n- whether the original thesis has strengthened or weakened\n- whether new information changes the company's expected outcome range\n- whether the price and terms of the new round still make sense\n- how much ownership the fund is at risk of losing if it does not participate\n- whether this company still deserves scarce capital relative to other portfolio companies and to new opportunities\n\nThis is why allocators should not accept 'we support our winners' as a sufficient portfolio-management philosophy. The stronger question is: what exactly counts as a winner at the time capital must be deployed? Is it revenue momentum, milestone achievement, founder quality, financing access, valuation discipline, or some combination?\n\nAllocator implication:\nStrong managers should be able to show that follow-ons are thesis-driven and opportunity-cost-aware. Weak managers often reveal themselves by treating follow-ons as relationship maintenance, fear of missed upside, or reflexive support of whatever is easiest to defend internally.",
+    },
+    {
+      type: "teaching",
+      title: "Reserve strategy should match stage, model, and ownership ambition",
+      content:
+        "Reserve design cannot be judged in isolation. It has to fit the strategy's stage and ownership goals.\n\nFor **seed funds**, reserves often need to account for:\n- very high early failure rates\n- the need to selectively defend into the small subset of companies that become breakout candidates\n- ownership that can dilute quickly if the fund lacks capacity to follow\n\nFor **Series A / early-stage funds**, reserves often need to support:\n- maintaining meaningful stakes into the company's scaling phase\n- concentrating behind the best emerging winners\n- avoiding over-support of promising but middling companies\n\nFor **late-stage or opportunity funds**, reserves may play a different role:\n- less about defending from tiny initial stakes\n- more about participating in later rounds with valuation and term sensitivity\n- more directly tied to exit-window judgment and downside structuring\n\nBusiness model matters too. Capital-intensive sectors such as biotech, some fintech models, hardware, and certain climate segments may require more follow-on endurance than asset-light workflow software.\n\nAllocator implication:\nA reserve model that sounds sensible in software may be inadequate in biotech. A reserve model that looks conservative in seed may be wasteful in later-stage. The learner should now judge reserves as strategy-specific design, not as a generic best practice.",
+    },
+    {
+      type: "teaching",
+      title: "Signaling: why non-participation can matter beyond the lost ownership",
+      content:
+        "Venture allocators need to understand signaling because follow-on behavior communicates information to the market, not just to the fund's capital account.\n\nWhen an existing investor participates strongly in a new round, that can signal:\n- continued conviction\n- willingness to defend ownership\n- support for the new financing process\n- alignment with the founder and syndicate\n\nWhen an existing investor declines to participate, that can signal:\n- reduced conviction\n- reserve scarcity\n- valuation disagreement\n- portfolio triage priorities elsewhere\n- internal concerns the investor may not state explicitly\n\nThe challenge is that the signal can be ambiguous. A high-quality GP may decline a follow-on because the price is unattractive, not because the company is broken. Another GP may participate mainly to avoid negative signaling, even when the company no longer deserves more capital.\n\nAllocator implication:\nThe learner should treat signaling as a real but noisy variable. A manager's follow-on behavior affects financing dynamics and market perception, but the meaning must be interpreted through reserves, valuation discipline, and broader portfolio context.",
+    },
+    {
+      type: "example",
+      title: "Worked example 1: the same non-participation can mean very different things",
+      content:
+        "Assume two managers each choose not to participate in a portfolio company's next round.\n\n**Manager A**\n- has strong reserve capacity\n- still has positive views on the company\n- believes the new valuation is too aggressive and the round terms are not attractive\n- communicates this clearly to the founder and syndicate\n\n**Manager B**\n- is reserve constrained\n- has lost conviction in the company's execution\n- declines to participate but frames the decision mainly as a portfolio-balancing choice\n\nAllocator analysis path:\n\n**Step 1: reject a simplistic signaling interpretation**\nThe same outward action can mean different things.\n\n**Step 2: identify what drove the decision**\nManager A's choice may reflect price discipline. Manager B's may reflect both lower conviction and limited capacity.\n\n**Step 3: assess what the decision implies for the fund**\nManager A may preserve overall fund discipline while accepting dilution in one position. Manager B may be revealing reserve weakness or earlier overcommitment.\n\n**Step 4: ask what evidence the GP can show**\nA strong GP should be able to explain whether non-participation was driven by valuation, reserves, thesis deterioration, or signaling tradeoffs.\n\nAllocator lesson:\nFollow-on behavior is only useful if the GP can translate it into a coherent capital-allocation rationale.",
+    },
+    {
+      type: "teaching",
+      title: "Follow-on frameworks: defending winners versus averaging into hope",
+      content:
+        "One of the most important distinctions in venture portfolio management is between concentrating behind true winners and averaging into uncertainty.\n\nStrong follow-on discipline usually includes:\n- a clear threshold for what has improved since the first check\n- willingness to increase exposure where evidence has genuinely strengthened\n- price awareness rather than blind ownership defense\n- readiness to stop supporting companies where the thesis has weakened materially\n\nWeak follow-on discipline often looks like:\n- continued support because 'we already know the company'\n- reserve deployment driven by sunk-cost thinking\n- inability to distinguish slower progress from structural breakage\n- spreading reserves too widely across many 'still interesting' companies\n- writing small defensive checks that preserve optionality but not real ownership\n\nAllocator implication:\nThe GP's language around winners is often revealing. Managers who cannot articulate what evidence causes them to increase exposure, and what evidence causes them to stop, are likely running a softer and more reactive reserve process than their brand suggests.",
+    },
+    {
+      type: "teaching",
+      title: "Opportunity cost is the real portfolio-management discipline",
+      content:
+        "Every follow-on decision competes with something else: another follow-on, a new initial check, or simply the preservation of future flexibility.\n\nThat is why opportunity cost is central to venture portfolio management. A manager who says 'we support our companies' without discussing tradeoffs is not yet giving an allocator-grade answer.\n\nUseful allocator questions include:\n- what percentage of companies typically receive follow-on capital?\n- how many follow-on decisions can the fund realistically support at once?\n- what has to be true for one company to receive more capital while another is allowed to dilute?\n- how does the manager rank a follow-on versus a brand-new opportunity at the same moment?\n\nThis is one of the strongest bridges back to Day 27. Because venture is power-law-driven, the GP should not allocate reserves evenly or sentimentally. The purpose of the reserve pool is to let the manager place more capital where the expected contribution to total fund outcome has improved enough to justify concentration.\n\nAllocator implication:\nThe quality of the GP's opportunity-cost framework is often more revealing than the quality of any single portfolio-company story.",
+    },
+    {
+      type: "visual",
+      title: "Reserve deployment decision tree",
+      content:
+        "**A disciplined venture follow-on decision should pass through several tests before new capital is committed.**\n\n| Decision layer | Core question | Failure mode if weak |\n|---|---|---|\n| **Thesis update** | Has the evidence actually improved since the first check? | Manager supports the company out of familiarity rather than conviction |\n| **Price / terms** | Is the new round economically attractive enough? | Ownership defense becomes valuation indifference |\n| **Reserve capacity** | Can the fund support the position without harming better opportunities? | Rights exist on paper but not in practice |\n| **Relative ranking** | Is this one of the highest-value uses of capital in the portfolio today? | Reserves get spread too broadly |\n| **Signaling impact** | What does participation or non-participation communicate? | Manager either ignores or overweights signaling |\n| **Ownership outcome** | Will this check preserve enough economics to matter? | Small defensive checks create noise, not fund impact |\n\nThe allocator should test whether the GP can walk through this logic explicitly.",
+      caption:
+        "Good venture portfolio management is not one decision. It is a sequence of re-underwriting filters.",
+      whyItMatters:
+        "This makes follow-on discipline concrete and gives the learner a repeatable way to interrogate manager behavior.",
+      sourceNote:
+        "This reflects the Lesson 35 roadmap emphasis on follow-ons, reserves, signaling, and ownership-aware capital allocation.",
+    },
+    {
+      type: "teaching",
+      title: "Ownership defense is necessary, but not always sufficient",
+      content:
+        "By Day 29, the learner knows that retained ownership matters. Day 35 adds an important refinement: defending ownership is not automatically the right answer.\n\nWhy:\n- the round price may be too rich\n- the terms may be unattractive\n- the company's risk-reward may no longer justify more capital\n- preserving ownership in a middling company can crowd out ownership in a true breakout elsewhere\n\nThis means allocators should evaluate ownership defense and valuation discipline together. A manager who always defends pro rata may preserve percentages but destroy returns. A manager who rarely defends may preserve discipline but fail to capture outliers. The right middle ground depends on strategy, stage, and portfolio opportunity set.\n\nAllocator implication:\nThe question is not 'do you defend ownership?' The better question is 'when do you defend ownership aggressively, when do you accept dilution, and what portfolio logic drives the distinction?'",
+    },
+    {
+      type: "teaching",
+      title: "How reserves interact with business model and sector",
+      content:
+        "Day 34 taught that business models fail differently. Day 35 extends that insight into reserve behavior.\n\nExamples:\n- a SaaS company with strong retention and improving sales efficiency may justify concentrated follow-on support because evidence of scalability is compounding\n- a biotech company may justify follow-ons based on milestone progression and financing endurance rather than conventional revenue proof\n- a marketplace may require more skepticism if apparent growth still depends heavily on incentives\n- a fintech lender may require reserve support only if underwriting quality and funding resilience remain strong, not just if volume is growing\n\nAllocator implication:\nA manager's reserve process should be business-model-specific. A GP who uses the same follow-on logic across software, biotech, fintech, and consumer is likely smoothing over real underwriting differences. This is another place where true specialists can show real edge, because the meaning of 'deserves more capital' differs across models.",
+    },
+    {
+      type: "teaching",
+      title: "Portfolio construction consequences: reserves shape concentration, duration, and exit dependence",
+      content:
+        "Reserve behavior changes the fund's economic shape over time.\n\nHow:\n- concentrated follow-ons increase dependence on a smaller number of companies\n- reserve-heavy support of long-duration businesses can extend the fund's time to realization\n- selective defense in later rounds can make final outcomes more dependent on fewer but more mature assets\n- weak reserve capacity can cause the fund to look diversified by company count while remaining economically underexposed to its true winners\n\nThis is why allocators should connect Day 35 not just to venture manager selection, but also to total-portfolio construction. A manager with aggressive reserve concentration may be attractive as a high-conviction venture sleeve but may also increase duration and mark sensitivity. A manager with shallow follow-ons may be easier to own operationally but may fail to convert sourcing into fund-moving outcomes.\n\nAllocator implication:\nReserve policy is a portfolio-shape decision. It affects concentration, liquidity timing, and the reliability with which early access turns into realized economics.",
+    },
+    {
+      type: "teaching",
+      title: "What great venture managers should be able to show allocators",
+      content:
+        "A high-quality venture manager should be able to provide evidence on portfolio management, not just sourcing.\n\nExamples of useful evidence:\n- actual reserve ratio versus original plan\n- percentage of companies receiving follow-on capital\n- concentration of reserve dollars into top eventual value contributors\n- historical ownership retention in major winners\n- cases where the manager declined to follow on and why\n- cases where the manager wrote large follow-ons and how that affected fund economics\n- evidence that the manager can distinguish signaling considerations from true conviction\n\nWhat weaker managers often show instead:\n- broad statements about 'supporting founders'\n- portfolio-wide narratives without capital-allocation specifics\n- ownership claims without reserve context\n- no meaningful attribution of fund outcomes to follow-on discipline\n\nAllocator implication:\nA strong manager should be able to make reserves and follow-ons empirically legible. If the GP cannot, portfolio management is probably weaker or less deliberate than the brand suggests.",
+    },
+    {
+      type: "example",
+      title: "Worked example 2: two funds, same sourcing quality, different reserve discipline",
+      content:
+        "Assume two early-stage funds each backed several strong companies.\n\n**Fund A**\n- reserved a large share of capital for follow-ons\n- concentrated reserve dollars heavily into the small subset of companies showing real breakout evidence\n- accepted dilution in many middling names\n- preserved meaningful ownership in the eventual top value contributors\n\n**Fund B**\n- reserved less capital overall\n- made many small follow-on checks across a broad set of companies\n- tried to avoid sending negative signals to founders\n- preserved little meaningful ownership in the biggest eventual winners\n\nAllocator analysis path:\n\n**Step 1: separate sourcing from economic capture**\nBoth funds may have identified good companies.\n\n**Step 2: compare reserve strategy**\nFund A treated reserves as concentration capital. Fund B treated reserves as relationship maintenance and broad optionality.\n\n**Step 3: connect to fund outcome**\nFund A is more likely to translate good picks into fund-moving economics. Fund B is more likely to under-own its winners despite wide exposure.\n\n**Step 4: connect to manager narrative**\nFund B may sound founder-friendly and supportive, but that support may not actually maximize LP economics.\n\nAllocator lesson:\nFollow-on discipline is one of the clearest places where manager quality shows up in venture. Two firms can see the same opportunities and still produce very different LP outcomes because of how they deploy reserves.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: allocator- and practitioner-oriented venture materials on reserve design, follow-on strategy, ownership retention, and fund construction; venture portfolio-construction resources focused on capital concentration, reserve ratios, and signal management in future rounds; institutional venture diligence materials on follow-on attribution and ownership retention in winners. The goal is to teach venture portfolio management as capital-allocation discipline rather than as generic company support.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a GP saying they double down on winners",
+      content:
+        "The GP says: 'We double down on our winners.'\n\nWeak LP response: 'That sounds like a strong strategy. Concentrating behind winners should improve returns.'\n\nWhy it is weak: it accepts a slogan without asking what counts as a winner, how reserves are allocated, whether valuation discipline is preserved, and whether the fund actually retains enough ownership for the extra capital to matter.\n\nStrong LP response: 'Please walk us through how you define a winner at the moment additional capital must be deployed, how much of the fund is truly available for follow-ons, and how you decide when to defend ownership versus accept dilution. We also want to understand how you distinguish concentration behind true breakouts from simply averaging into familiar names.'\n\nWhy it is strong: it converts a vague portfolio-management slogan into concrete questions about reserves, re-underwriting, and ownership economics.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what follow-on analysis can and cannot tell you",
+      content:
+        "Follow-on analysis can tell you whether a manager is likely to preserve ownership in winners, whether reserve policy is coherent, and whether later capital allocation appears thesis-driven rather than reactive. It can also reveal whether the GP understands signaling, opportunity cost, and concentration in a venture-appropriate way.\n\nBut follow-on analysis cannot guarantee that the manager will pick the right winners, that later rounds will remain attractively priced, or that preserving ownership will necessarily maximize returns in every company. It also cannot replace judgment on sourcing, business-model underwriting, or valuation discipline.\n\nThe allocator should therefore use this lesson as a way to test whether the GP can convert early access into economically meaningful outcomes. It sharpens evaluation. It does not eliminate uncertainty.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: build a reserve-allocation memo",
+      content:
+        "Assume you are reviewing a hypothetical early-stage fund with the following characteristics:\n- 35 initial portfolio companies\n- 50% of total fund capital reserved for follow-ons\n- 10 companies showing moderate promise\n- 4 companies showing strong breakout evidence\n- 2 companies needing insider-led bridge support\n- limited room for additional new investments\n\nBuild a one-page reserve-allocation memo with five sections:\n\n1. **Reserve philosophy** — what is the reserve pool trying to accomplish?\n2. **Triaging framework** — what distinguishes breakout, promising, bridge, and likely non-core names?\n3. **Ownership defense** — where does follow-on capital preserve meaningful economics versus only symbolic participation?\n4. **Signaling considerations** — where does participation or non-participation send the strongest market signal?\n5. **Opportunity cost** — what is being given up by supporting each category?\n\nThen answer three questions:\n- Which two categories should receive the largest share of follow-on capital, and why?\n- Where would you accept dilution intentionally?\n- What one data point would you most want from the GP before approving the reserve plan?",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal portfolio-management questions",
+      content:
+        "1. 'How much of the fund is truly available for follow-ons after first-check commitments, and how has that compared with your original reserve plan in prior funds?'\n\n2. 'What specifically has to improve for a company to deserve more capital from you, beyond simply remaining one of your better-known names?'\n\n3. 'How many companies typically receive follow-on capital, and what share of reserve dollars ends up in your top eventual value contributors?'\n\n4. 'Can you show a case where you intentionally accepted dilution in a company you still liked because the valuation or opportunity cost no longer justified defense?'\n\n5. 'How do you interpret the signaling effect of non-participation, and when are you willing to accept that signal in service of better fund economics?'",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 35 should change venture diligence",
+      content:
+        "After Day 35, the learner should stop viewing venture portfolio management as a vague commitment to 'support founders' and start viewing it as one of the primary mechanisms through which manager edge becomes LP economics. The better diligence question is not just whether the manager sourced well. It is whether the manager reserves and redeploys capital in a way that preserves ownership in true breakouts without averaging into hope or signaling-driven over-support.\n\nThat shift should improve allocator judgment materially. It should increase focus on reserve ratios, follow-on triage, ownership retention, and opportunity cost. It should also make the learner more skeptical of firms that sound supportive and founder-friendly but cannot show that support translated into retained economics in the names that drove the fund. In venture, portfolio management is not secondary to sourcing. It is one of the main ways sourcing is monetized.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d35q1",
+      type: "multiple-choice",
+      prompt:
+        "Why is reserve design one of the most important structural choices in a venture fund?",
+      options: [
+        "Because reserves are mainly a reporting convention and do not affect economics",
+        "Because reserve policy determines how much capital can be used to defend ownership and concentrate into emerging winners",
+        "Because only late-stage funds need reserves",
+        "Because reserve size alone guarantees top-decile outcomes",
+      ],
+      correctAnswer:
+        "Because reserve policy determines how much capital can be used to defend ownership and concentrate into emerging winners",
+    },
+    {
+      questionId: "d35q2",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of a follow-on investment in venture?",
+      options: [
+        "It is mostly a routine administrative step after the initial check",
+        "It is a re-underwriting decision that tests conviction, price discipline, reserve capacity, and opportunity cost",
+        "It matters only for signaling and not for economics",
+        "It is always preferable to a new initial investment",
+      ],
+      correctAnswer:
+        "It is a re-underwriting decision that tests conviction, price discipline, reserve capacity, and opportunity cost",
+    },
+    {
+      questionId: "d35q3",
+      type: "multiple-choice",
+      prompt:
+        "Why can signaling make follow-on decisions more complex than simple ownership defense?",
+      options: [
+        "Because non-participation may communicate reduced conviction even when the real reason is valuation discipline or reserve triage",
+        "Because signaling eliminates the need for price analysis",
+        "Because participation always means the company is healthy",
+        "Because signaling matters only after IPO",
+      ],
+      correctAnswer:
+        "Because non-participation may communicate reduced conviction even when the real reason is valuation discipline or reserve triage",
+    },
+    {
+      questionId: "d35q4",
+      type: "multiple-choice",
+      prompt:
+        "Which of the following is the clearest sign of weak follow-on discipline?",
+      options: [
+        "A manager can explain why some liked companies were allowed to dilute because the round price or opportunity cost was unattractive",
+        "A manager reserves capital mainly to maintain broad optionality across many familiar names without clear triage into true breakouts",
+        "A manager concentrates follow-ons where evidence has strengthened materially",
+        "A manager links reserve decisions to ownership retention in likely winners",
+      ],
+      correctAnswer:
+        "A manager reserves capital mainly to maintain broad optionality across many familiar names without clear triage into true breakouts",
+    },
+    {
+      questionId: "d35q5",
+      type: "multiple-choice",
+      prompt:
+        "Why should allocators evaluate reserves differently across software, biotech, fintech, and other venture sectors?",
+      options: [
+        "Because reserve logic is identical across all business models",
+        "Because business models differ in capital intensity, de-risking timelines, and ownership-defense needs",
+        "Because only biotech companies ever raise follow-on rounds",
+        "Because sector matters only for sourcing, not portfolio management",
+      ],
+      correctAnswer:
+        "Because business models differ in capital intensity, de-risking timelines, and ownership-defense needs",
+    },
+    {
+      questionId: "d35q6",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator description of venture portfolio management after this lesson?",
+      options: [
+        "Passive monitoring until exit",
+        "A relationship-maintenance exercise focused mainly on founder support",
+        "Active capital allocation under uncertainty, where reserves and follow-ons determine whether early selection becomes real fund economics",
+        "A process of avoiding all dilution whenever possible",
+      ],
+      correctAnswer:
+        "Active capital allocation under uncertainty, where reserves and follow-ons determine whether early selection becomes real fund economics",
+    },
+    {
+      questionId: "d35q7",
+      type: "short-response",
+      prompt:
+        "Explain why reserve strategy should be thought of as ownership strategy in venture. Write two to four sentences.",
+      modelAnswer:
+        "Reserve strategy determines whether the fund can preserve meaningful exposure in the small number of companies that may drive total fund returns. Without enough reserves, ownership in winners can dilute quickly even if initial sourcing was strong. With poorly disciplined reserves, capital can be spread too widely across middling names instead of concentrated where economics have improved most.",
+    },
+    {
+      questionId: "d35q8",
+      type: "short-response",
+      prompt:
+        "A GP says they 'double down on winners.' What are the three most important follow-up questions you should ask after this lesson?",
+      modelAnswer:
+        "First, I would ask how the GP defines a winner at the moment additional capital must be deployed and what specific evidence has improved since the initial investment. Second, I would ask how much of the fund is truly available for follow-ons and how reserve dollars are concentrated across the portfolio. Third, I would ask how the GP decides when to defend ownership aggressively versus accept dilution because valuation, opportunity cost, or conviction no longer justifies more capital.",
+    },
+  ],
+  sources: [
+    "Allocator- and practitioner-oriented venture materials on reserve ratios, follow-on strategy, ownership retention, and venture fund construction",
+    "Venture portfolio-construction resources focused on capital concentration, reserve deployment, and the economics of defending winners",
+    "Institutional venture diligence materials on follow-on attribution, signaling, and ownership retention in eventual top contributors",
+    "Industry educational materials on venture reserves, pro rata execution, and portfolio-management tradeoffs across stages",
+    "CFA Institute and related private-markets educational materials providing context for venture portfolio construction, concentration, and follow-on discipline",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
