@@ -4072,7 +4072,7 @@ export const lessonContents: LessonContent[] = [
       },
     ],
     quiz: [
-            {
+      {
         questionId: "d20q1",
         type: "multiple-choice",
         prompt:
@@ -4086,7 +4086,7 @@ export const lessonContents: LessonContent[] = [
         correctAnswer:
           "Start by separating confirmed value from unrealized marks before deciding how much weight the headline return deserves",
       },
-            {
+      {
         questionId: "d20q2",
         type: "multiple-choice",
         prompt:
@@ -4128,7 +4128,7 @@ export const lessonContents: LessonContent[] = [
         correctAnswer:
           "A memo that states the manager is impressive and recommends approval subject to standard documents, without discussing realization quality or repeatability",
       },
-            {
+      {
         questionId: "d20q5",
         type: "short-response",
         prompt:
@@ -4354,7 +4354,7 @@ export const lessonContents: LessonContent[] = [
       type: "intro",
       title: "Meeting cold open",
       content:
-        "The GP calls an LPAC meeting with 72 hours' notice. The agenda sounds procedural: approve a fund extension, review a valuation matter, and discuss a proposed GP-led transaction for the fund's largest remaining asset. A less experienced LP hears 'governance process' and assumes protection is working. A fluent allocator hears compressed timeline, conflict stack, and information asymmetry. This lesson teaches how governance actually functions in private markets: who decides, what LPACs really do, where conflicts recur, and how to distinguish real oversight from a polished process that mainly legitimizes GP discretion.",
+        "The GP calls an LP Advisory Committee (LPAC) meeting with 72 hours' notice. The agenda sounds procedural: approve a fund extension, review a valuation matter, and discuss a proposed GP-led transaction for the fund's largest remaining asset. A less experienced LP hears 'governance process' and assumes protection is working. A fluent allocator hears compressed timeline, conflict stack, and information asymmetry. This lesson teaches how governance actually functions in private markets: who decides, what LPACs really do, where conflicts recur, and how to distinguish real oversight from a polished process that mainly legitimizes GP discretion.",
     },
     {
       type: "framing",
@@ -5162,7 +5162,7 @@ export const lessonContents: LessonContent[] = [
       type: "framing",
       title: "OCIO-grade private-markets management is about system behavior under stress",
       content:
-        "The learner already understands pacing basics from Day 14, the J-curve and capital calls from Day 3, secondaries from Day 15, portfolio role from Day 17, reporting infrastructure from Day 23, valuation credibility from Day 24, and fund-finance implications from Day 25. Day 26 integrates those concepts into a CIO-style question: can the private-markets programme remain governable and fundable through a stressed period when multiple sleeves behave badly at once?\n\nThis is a distinctly private-markets problem. Public markets make liquidity visible every day. Private markets hide liquidity strain inside commitments, delayed marks, slower distributions, vehicle terms, and governance complexity. The allocator's task is not to forecast exact cash flows. It is to build a system with enough liquidity discipline, reporting visibility, and governance flexibility to survive when cash conversion slows and contingent liquidity claims become real at the same time.",
+        "The learner already understands pacing basics from Day 14, the J-curve and capital calls from Day 3, secondaries from Day 15, portfolio role from Day 17, reporting infrastructure from Day 23, valuation credibility from Day 24, and fund-finance implications from Day 25. Day 26 integrates those concepts into an OCIO-grade question: can the private-markets programme remain governable and fundable through a stressed period when multiple sleeves behave badly at once?\n\nThis is a distinctly private-markets problem. Public markets make liquidity visible every day. Private markets hide liquidity strain inside commitments, delayed marks, slower distributions, vehicle terms, and governance complexity. The allocator's task is not to forecast exact cash flows. It is to build a system with enough liquidity discipline, reporting visibility, and governance flexibility to survive when cash conversion slows and contingent liquidity claims become real at the same time.",
     },
     {
       type: "teaching",
@@ -5876,7 +5876,7 @@ export const lessonContents: LessonContent[] = [
       type: "teaching",
       title: "How cap-table complexity flows directly into marks and later lessons",
       content:
-        "The learner should also understand that cap-table mechanics do not stay confined to ownership analysis. They affect later topics directly.\n\n**Bridge to Lesson 30:** SAFEs and convertibles create hidden ownership math before a clean preferred round exists.\n\n**Bridge to Lessons 31 and 32:** preferred terms, anti-dilution, pay-to-play, and control rights all change the economic meaning of a nominal ownership percentage.\n\n**Bridge to Lesson 33:** venture marks can look cleaner than they are if the cap-table complexity and security stack are not interpreted correctly.\n\nThis is why Day 29 is a hinge lesson in the venture sequence. Without cap-table fluency, later discussions about preferred terms, down rounds, and mark credibility become partly conceptual rather than economically grounded.",
+        "The learner should also understand that cap-table mechanics do not stay confined to ownership analysis. They affect later topics directly.\n\n**Bridge to Lesson 30:** SAFEs and convertibles create hidden ownership math before a clean preferred round exists.\n\n**Bridge to Lessons 31 and 32:** preferred terms, anti-dilution, pay-to-play, and control rights all change the economic meaning of a nominal ownership percentage.\n\n**Bridge to valuation credibility (covered in Day 24):** venture marks can look cleaner than they are if the cap-table complexity and security stack are not interpreted correctly.\n\nThis is why Day 29 is a hinge lesson in the venture sequence. Without cap-table fluency, later discussions about preferred terms, down rounds, and mark credibility become partly conceptual rather than economically grounded.",
     },
     {
       type: "teaching",
@@ -6350,7 +6350,7 @@ export const lessonContents: LessonContent[] = [
       type: "example",
       title: "Worked example: waterfall at two exit prices",
       content:
-        "Assume the following simplified company structure:\n- Series A preferred: $20M invested, 1x non-participating liquidation preference, senior\n- Series B preferred: $50M invested, 1x participating liquidation preference, junior to Series A\n- Common stock: held by founders and employees, 30% of fully diluted shares\n- Series A owns 20% fully diluted, Series B owns 50% fully diluted\n\n**Scenario 1: Exit at $60M**\n\nStep 1: Series A takes $20M preference. Remaining: $40M.\nStep 2: Series B takes $50M preference. But only $40M remains, so Series B receives $40M. Common receives $0.\n\nNote: Series A must choose between keeping its $20M preference or converting. Converting to 20% of $60M = $12M, which is less than $20M, so Series A takes the preference. Series B cannot recover its full preference in this scenario.\n\nAllocator takeaway: At a $60M exit, Series B investors do not recover their full capital. Common holders receive nothing. The headline exit value tells you very little without knowing the preference stack.\n\n**Scenario 2: Exit at $200M**\n\nStep 1: Series A preference: $20M. Remaining: $180M.\nStep 2: Series B preference: $50M. Remaining: $130M.\nStep 3: Series B is participating. Series B shares in remaining $130M as if converted: 50% of $130M = $65M. Common receives 30% of $130M = $39M. Series A converts to 20% of $130M = $26M (better than holding $20M preference).\n\nActual payouts: Series A receives $26M (converted), Series B receives $50M + $65M = $115M, Common receives $39M.\nNote: Series A ownership claim: $26M / $200M = 13% of exit, not 20%. Series B: $115M / $200M = 57.5%. Common: $39M / $200M = 19.5%.\n\nAllocator takeaway: Even in a strong outcome, participation features shift economics away from other security holders. Ownership percentage does not equal economic percentage in exit proceeds.",
+        "Assume the following simplified company structure:\n- Series A preferred: $20M invested, 1x non-participating liquidation preference, senior\n- Series B preferred: $50M invested, 1x participating liquidation preference, junior to Series A\n- Common stock: held by founders and employees, 30% of fully diluted shares\n- Series A owns 20% fully diluted, Series B owns 50% fully diluted\n\n**Scenario 1: Exit at $60M**\n\nStep 1: Series A takes $20M preference. Remaining: $40M.\nStep 2: Series B takes $50M preference. But only $40M remains, so Series B receives $40M. Common receives $0.\n\nNote: Series A must choose between keeping its $20M preference or converting. Converting to 20% of $60M = $12M, which is less than $20M, so Series A takes the preference. Series B cannot recover its full preference in this scenario.\n\nAllocator takeaway: At a $60M exit, Series B investors do not recover their full capital. Common holders receive nothing. The headline exit value tells you very little without knowing the preference stack.\n\n**Scenario 2: Exit at $200M**\n\nSeries A must choose: take its $20M preference, or convert to 20% of proceeds. Converting yields more if 20% of the post-Series-B-preference pool exceeds $20M.\n\nStep 1: Series A elects to convert (forfeits its preference). Series B takes its $50M preference. Remaining: $150M.\nStep 2: Remaining $150M is distributed pro-rata among all fully diluted holders: Series A (20%) = $30M, Series B participating (50%) = $75M, Common (30%) = $45M.\n\nActual payouts: Series A receives $30M (converted), Series B receives $50M + $75M = $125M, Common receives $45M. Total: $200M.\nNote: Series A ownership claim: $30M / $200M = 15% of exit, not 20%. Series B: $125M / $200M = 62.5%. Common: $45M / $200M = 22.5%.\n\nAllocator takeaway: Even in a strong outcome, participation features shift economics away from other security holders. Ownership percentage does not equal economic percentage in exit proceeds.",
     },
     {
       type: "teaching",
