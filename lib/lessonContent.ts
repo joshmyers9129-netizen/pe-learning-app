@@ -6756,6 +6756,121 @@ export const lessonContents: LessonContent[] = [
       type: "intro",
       title: "Meeting cold open",
       content:
+        "A venture GP says: 'We back exceptional founders attacking massive markets in one of the most attractive sectors in venture.' That can sound compelling until the allocator asks the harder question: what kind of business is this actually, what evidence should exist at this stage, what is the most likely failure mode, and what kind of firm-specific edge would really matter here? A seed AI tooling company, a vertical SaaS platform, a fintech lender, a consumer marketplace, and a biotech company can all be sold with almost the same pitch language while requiring very different underwriting. This lesson teaches venture underwriting by business model and sector so the learner can translate manager narratives into concrete evidence, risk, and manager-specialization judgments.",
+    },
+    {
+      type: "framing",
+      title: "Venture underwriting is model-specific pattern recognition, not one generic growth story",
+      content:
+        "By this point in the sequence, the learner knows that venture is a power-law game, that stage changes ownership and reserve requirements, that cap tables and financing terms matter, and that marks must be interpreted through security structure. Day 34 adds the next essential layer: different venture businesses create value through different mechanisms, fail in different ways, and therefore must be underwritten through different evidence standards.\n\nThis matters because many public-markets-trained allocators bring instincts that are useful but incomplete. It is useful to care about growth quality, unit economics, competitive position, incentives, and durability. It is incomplete to assume those ideas look the same across enterprise software, marketplaces, fintech, AI infrastructure, and biotech. In venture, the meaning of 'proof' is business-model-specific. Product-market fit, go-to-market fit, regulatory de-risking, scientific validity, capital intensity, retention, and burn quality all show up differently depending on what the company is actually trying to become.\n\nThe learner is not being trained here to become a domain operator or founder. The objective is allocator usefulness: understand enough about business-model-specific underwriting that manager specialization claims, portfolio concentration, reserve needs, and sector narratives become analytically legible rather than impressionistic.",
+    },
+    {
+      type: "teaching",
+      title: "Start with business model, not sector branding",
+      content:
+        "One of the most common allocator mistakes in venture is to start with a broad sector label and stop there. 'AI,' 'fintech,' 'healthcare,' or 'consumer' are not yet underwriting categories. They are umbrellas. The stronger starting point is the business model.\n\nExamples:\n- an AI infrastructure company selling developer tooling behaves differently from an AI application company automating workflow\n- a fintech software vendor behaves differently from a lender, a payments processor, or a regulated infrastructure provider\n- a biotech company behaves differently from a healthcare workflow SaaS company\n- a marketplace behaves differently from a subscription consumer brand\n- a climate company building software for energy workflows behaves differently from a hardware- or project-linked energy-transition business\n\nBusiness model determines:\n- what kind of proof should exist at a given stage\n- which metrics matter most\n- what the likely failure mode looks like\n- whether capital intensity is moderate or severe\n- whether the manager's claimed edge should be domain-specific, go-to-market-specific, or founder-selection-specific\n\nAllocator implication:\nBefore evaluating the GP's narrative, classify how the company intends to create value. That one step reduces a large amount of category error.",
+    },
+    {
+      type: "visual",
+      title: "The allocator's venture underwriting sequence",
+      content:
+        "**A useful venture underwriting sequence is to classify the company before evaluating the manager's enthusiasm.**\n\n| Step | Core question | Why it matters |\n|---|---|---|\n| **Business model** | What kind of company is this really? | Determines the relevant proof points and likely failure modes |\n| **Stage** | What evidence should reasonably exist now? | Evidence quality must be judged relative to company maturity |\n| **Risk type** | Is the main risk product, go-to-market, regulatory, scientific, or capital intensity? | Changes what manager edge should look like |\n| **Sector overlay** | Does the sector add domain-specific complexity? | Helps distinguish real specialist edge from generic pattern recognition |\n| **Portfolio implication** | What does this model imply for reserves, duration, and concentration? | Business model shapes fund construction, not just company selection |\n\nThe allocator should not let a strong founder story substitute for this sequence.",
+      caption:
+        "Strong venture diligence starts with company classification, then moves to evidence, failure mode, and manager edge.",
+      whyItMatters:
+        "This framework helps the learner turn broad venture storytelling into a repeatable allocator process.",
+      sourceNote:
+        "This directly reflects the Lesson 34 blueprint: business model taxonomy, model-specific proof, failure modes, and how sector changes allocator interpretation.  [oai_citation:1‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)",
+    },
+    {
+      type: "teaching",
+      title: "What 'proof' means depends on the model",
+      content:
+        "A central lesson of venture underwriting is that 'traction' is not one thing. Proof is model-dependent.\n\nFor **enterprise software / SaaS**, proof often includes:\n- recurring revenue quality\n- customer retention and expansion behavior\n- evidence of workflow embedding\n- signs that sales efficiency is improving or at least not collapsing\n- gross margin trajectory consistent with software-like economics\n\nFor **marketplaces**, proof often includes:\n- durable liquidity on both sides of the market\n- repeat usage and cohort behavior\n- take-rate resilience\n- evidence that activity is not being created mainly through subsidy\n\nFor **fintech lenders or balance-sheet models**, proof often includes:\n- underwriting quality\n- loss or fraud behavior\n- funding stability\n- net unit economics after real credit and servicing costs\n- regulatory resilience\n\nFor **biotech and life sciences**, proof often includes:\n- scientific validity\n- trial or milestone progression\n- regulatory path credibility\n- syndicate quality and capital sufficiency to the next de-risking event\n- data quality rather than early revenue growth\n\nAllocator implication:\nA GP who describes all of these companies using similar language is not yet showing real model-specific underwriting depth. 'Strong traction' means different things in each case.",
+    },
+    {
+      type: "teaching",
+      title: "Enterprise software and vertical SaaS: familiar metrics, but not a free pass",
+      content:
+        "Enterprise software is often treated as the cleanest venture underwriting category because the metrics are relatively legible and the path from product to scale can be more familiar to allocators. That familiarity is useful, but it can also create false comfort.\n\nWhat usually matters:\n- retention and expansion quality\n- whether the product has meaningful workflow importance\n- repeatability of the go-to-market motion\n- sales efficiency and payback logic\n- margin trajectory and implementation burden\n- whether the business is truly software-like rather than tech-enabled services\n\nWhat often goes wrong:\n- the company solves a narrow pain point with low budget priority\n- founder-led growth masks weak scalable sales motion\n- strong early cohort behavior does not persist as the customer base broadens\n- gross margins look acceptable, but service intensity remains structurally high\n- valuation is underwritten like software while the model behaves more like services\n\nAllocator implication:\nA software specialist should be able to explain why growth is durable, why retention is economically meaningful, and whether the company is truly becoming system-of-record or merely a useful tool. The difference between 'good product' and 'good software company' is one of the most important distinctions in venture underwriting.",
+    },
+    {
+      type: "teaching",
+      title: "AI and data infrastructure: secular excitement does not eliminate model risk",
+      content:
+        "Your blueprint rightly anchors Lesson 34 around AI and healthcare/life sciences because they are dominant themes and concentration risks, not merely popular sectors.  [oai_citation:2‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)\n\nAllocator-relevant distinctions inside AI include:\n- infrastructure versus application layer\n- model-layer exposure versus workflow-layer embedding\n- software-like economics versus compute- or services-heavy economics\n- proprietary data or distribution advantage versus wrapper risk\n\nWhat usually matters:\n- whether the product has defensibility beyond temporary novelty\n- whether gross margins are durable after inference or compute costs\n- whether usage reflects real workflow adoption or experimentation\n- whether dependence on third-party model providers weakens long-term economics\n- whether pricing power is likely to survive rapid model commoditization\n\nWhat often goes wrong:\n- the company is a feature rather than a durable platform\n- usage growth is real but monetization durability is weak\n- cost structure is much worse than software multiples imply\n- customer behavior reflects experimentation budgets, not embedded demand\n- thematically similar companies crowd the field faster than defensibility develops\n\nAllocator implication:\nThe more concentrated a manager is in AI, the more important it is to distinguish theme exposure from true underwriting edge. A generalist can ride enthusiasm. A specialist should be able to explain data moats, workflow embedding, model dependence, and the difference between adoption and durable economics.",
+    },
+    {
+      type: "teaching",
+      title: "Marketplaces and consumer platforms: liquidity is not the same as defensibility",
+      content:
+        "Marketplace and consumer-platform businesses often create seductive venture narratives because top-line usage can grow quickly and network-effect language is compelling. But these businesses can be especially difficult because visible activity does not always turn into durable economics.\n\nWhat usually matters:\n- whether both sides of the market are engaged and sticky\n- whether local or category liquidity is real\n- whether take rates are durable\n- whether repeat usage exists without constant incentives\n- whether growth can persist without subsidy\n\nWhat often goes wrong:\n- one side of the network is weak or expensive to sustain\n- activity is incentive-driven rather than habit-driven\n- local-market liquidity does not generalize\n- take rates pressure participation or competition\n- customer acquisition overwhelms lifetime value\n\nAllocator implication:\nA GP claiming marketplace expertise should be able to distinguish between gross activity and true network durability. The right diligence question is often not 'how fast is GMV growing?' but 'how much of this activity would still exist if incentives were cut materially?'",
+    },
+    {
+      type: "teaching",
+      title: "Fintech: software, infrastructure, or hidden balance-sheet risk?",
+      content:
+        "Fintech is one of the broadest and most easily misclassified venture sectors because several very different business models sit inside the label.\n\nImportant distinctions include:\n- software sold to financial institutions\n- payments or financial infrastructure\n- underwriting- or balance-sheet-dependent lending models\n- compliance and workflow businesses with regulatory complexity\n\nWhat usually matters:\n- source and quality of revenue\n- exposure to credit, fraud, or funding risk\n- whether margins are truly software-like after losses and servicing\n- sensitivity to regulation and partner dependencies\n- whether the business is capital-light or capital-hungry\n\nWhat often goes wrong:\n- revenue is valued like software but economically resembles spread or underwriting income\n- growth is purchased through promotional economics\n- funding conditions tighten and expose fragility\n- fraud, compliance, or loss behavior overwhelms the topline narrative\n- a generalist GP describes the company in software language while underappreciating balance-sheet reality\n\nAllocator implication:\nFintech is where allocator classification discipline matters enormously. The better question is not 'is this fintech?' but 'what kind of fintech is this, and what risk are we actually underwriting?'",
+    },
+    {
+      type: "teaching",
+      title: "Healthcare and life sciences: proof is often clinical, not commercial",
+      content:
+        "Healthcare and life sciences justify extra allocator attention because the evidence of value creation often differs sharply from software-trained intuition. Your blueprint explicitly flags healthcare and life sciences as a dominant theme requiring sector literacy.  [oai_citation:3‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)\n\nImportant distinctions include:\n- healthcare IT and workflow software\n- tech-enabled services\n- diagnostics\n- medical devices\n- biotech and therapeutics\n\nWhat often matters in biotech and therapeutics:\n- scientific validity\n- quality of preclinical or clinical data\n- milestone design\n- regulatory path\n- capital sufficiency to the next genuine de-risking event\n- syndicate quality and scientific network\n\nWhat often matters in healthcare software or services:\n- reimbursement dynamics\n- workflow integration\n- implementation friction\n- provider or payer adoption cycle\n- compliance burden\n\nWhat often goes wrong:\n- scientific promise does not become clinical or regulatory progress\n- commercialization proves slower or more expensive than expected\n- the business needs more capital than the market is willing to provide\n- generalist investors overread interim milestones as broad de-risking\n\nAllocator implication:\nHealthcare and life sciences often justify specialist managers because domain fluency, network depth, and regulatory understanding can be genuinely differentiating. A generalist can still win, but should face a higher burden of proof on process depth.",
+    },
+    {
+      type: "teaching",
+      title: "Capital intensity and burn quality: growth is not enough",
+      content:
+        "One of the most useful cross-sector venture concepts is capital intensity. Some businesses can make meaningful progress with relatively modest incremental capital. Others require repeated financing to reach real de-risking milestones.\n\nWhy allocators should care:\n- capital intensity affects reserve burden\n- capital intensity affects dilution\n- capital intensity affects time to liquidity\n- capital intensity affects whether the company becomes a financing treadmill rather than a compounding business\n\nA useful allocator distinction is between:\n- **good burn**, where capital is retiring real risk or driving the company toward a genuine milestone\n- **bad burn**, where capital is mostly preserving runway or buying growth optics without improving structural economics\n\nThis is why burn multiple intuition can be helpful, but only when applied in a model-specific way. High burn is not automatically wrong in a company nearing a real de-risking event. Low burn is not automatically good if it simply reflects underinvestment in a weak or stalled model.\n\nAllocator implication:\nManagers should be able to explain why the capital consumed is proportionate to the uncertainty being retired. If they cannot, the learner should suspect a capital-structure trap rather than a clean growth story.",
+    },
+    {
+      type: "teaching",
+      title: "Failure modes: product-market fit, go-to-market fit, and capital-structure trap",
+      content:
+        "The best venture underwriters often begin by knowing how a company is most likely to fail. Three broad failure modes are especially useful to allocators.\n\n**1. Product-market-fit failure**\nThe product does not solve an important enough problem, or not for enough customers.\n\n**2. Go-to-market-fit failure**\nThe product may work, but customer acquisition, channel, or sales motion is not scalable or economic.\n\n**3. Capital-structure trap**\nThe company may have some real value, but it needs so much capital, for so long, with such uncertain future support, that ownership economics become unattractive even if the business improves.\n\nThese show up differently by model:\n- software often breaks first on product or go-to-market fit\n- marketplaces often break on liquidity formation and subsidy dependence\n- fintech often breaks on underwriting quality, fraud, or funding fragility\n- biotech often breaks on science, regulation, or financing endurance\n\nAllocator implication:\nWhen a GP describes edge, the LP should ask which failure mode the firm is genuinely equipped to detect earlier or navigate better than peers. 'We know great founders' is not enough. The stronger answer is almost always model-specific.",
+    },
+    {
+      type: "visual",
+      title: "Business model to failure mode map",
+      content:
+        "**Different venture models usually break in different places. That is why sector and model specialization can be real edge rather than branding.**\n\n| Business model | What success often requires | Common failure mode | What allocator should test in the GP |\n|---|---|---|---|\n| **Enterprise SaaS** | Retention, repeatable sales motion, software-like margins | Go-to-market fit fails before durable scale | Can the manager distinguish workflow value from temporary growth? |\n| **AI infrastructure / tooling** | Defensibility, durable economics, real developer or enterprise adoption | The company is a feature or margin structure is weaker than software optics imply | Does the manager understand data, compute, and platform dependence? |\n| **Marketplace / consumer platform** | Liquidity, repeat engagement, sustainable take rate | Growth is subsidy-driven or network depth is fragile | Can the manager separate usage growth from durable economics? |\n| **Fintech** | Clean revenue quality, risk control, manageable compliance burden | Underwriting, funding, or fraud risk overwhelms the software narrative | Does the manager know when fintech is really balance-sheet risk? |\n| **Biotech / life sciences** | Scientific validity, milestone progression, capital endurance | Clinical, regulatory, or financing de-risking fails | Does the manager have real domain and syndicate depth? |\n\nThe allocator should use this map to test whether the GP's claimed edge actually matches the model-specific risk.",
+      caption:
+        "Manager skill in venture is often failure-mode recognition as much as upside vision.",
+      whyItMatters:
+        "This helps the learner move from broad sector labels to allocator-relevant diligence questions.",
+      sourceNote:
+        "This reflects the Lesson 34 blueprint's emphasis on model-specific proof, AI and healthcare concentration, and failure-mode-aware manager edge.  [oai_citation:4‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)",
+    },
+    {
+      type: "teaching",
+      title: "What platform value-add actually means by sector",
+      content:
+        "Venture managers often describe themselves as value-added platforms. Allocators should be careful, because value-add is only real if it maps to the actual bottlenecks of the model being underwritten.\n\nExamples:\n- for enterprise software, value-add may mean GTM hiring, pricing, channel, and enterprise-sales introductions\n- for fintech, it may mean regulatory navigation, ecosystem partnerships, fraud/risk expertise, and funding relationships\n- for healthcare or biotech, it may mean clinical design, KOL access, regulatory strategy, scientific diligence, and strategic pharma relationships\n- for marketplaces, it may mean supply-side partnerships, trust-and-safety buildout, or local-market expansion expertise\n\nAllocator implication:\nA manager's platform should be judged relative to the business model's real scaling bottlenecks. Generic claims such as 'we help with hiring and strategy' are too weak unless they connect directly to what tends to break in that category. This is one of the strongest areas where true specialists can justify their existence.",
+    },
+    {
+      type: "teaching",
+      title: "Specialists versus generalists: when specialization is real edge",
+      content:
+        "The learner should not assume either specialists or generalists are automatically better. The allocator task is to understand what type of edge is plausible in a given segment.\n\nA sector specialist may have an advantage when:\n- domain expertise meaningfully improves company selection\n- scientific, regulatory, or technical diligence is genuinely difficult\n- networks are sector-specific and valuable\n- post-investment support is tightly linked to recurring sector bottlenecks\n\nA generalist may still win when:\n- the business model is easier to pattern-match across categories\n- the company is early enough that founder and company-formation judgment matter more than narrow domain depth\n- broad platform strength and access matter more than technical specialization\n\nAllocator implication:\nSector specialization should be treated as a hypothesis to test, not as an automatic quality signal. The right question is what kind of edge this model rewards, and whether the manager's process is actually built for that edge.",
+    },
+    {
+      type: "teaching",
+      title: "Sector concentration is a portfolio risk, not just a theme call",
+      content:
+        "Your blueprint deliberately anchors Lesson 34 around AI and healthcare/life sciences because concentration in dominant themes is an allocator risk, not merely a trend observation.  [oai_citation:5‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)\n\nThis matters at two levels.\n\n**Manager level**\nA fund may look diversified by company count but still be highly concentrated in one technical, regulatory, or valuation-sensitive theme.\n\n**Programme level**\nAcross multiple VC and growth managers, the allocator may accumulate hidden concentration to the same underlying theme through different labels. AI infrastructure, developer tooling, vertical software, data platforms, and application workflow automation may overlap more than manager branding suggests. The same is true across healthcare software, diagnostics, devices, and life-sciences-adjacent models.\n\nAllocator implication:\nSector literacy is part of portfolio construction, not just company underwriting. The learner should now be able to hear repeated exposure across managers and translate it into concentration, duration, reserve burden, and valuation sensitivity rather than mere secular excitement.",
+    },
+    {
+      type: "example",
+      title: "Worked example 1: SaaS growth deal versus biotech Series B",
+      content:
+        "Assume two managers each present a high-conviction opportunity.\n\n**Manager A: enterprise SaaS growth company**\nThe company has meaningful ARR growth, encouraging retention, improving margins, and early evidence of efficient expansion within the customer base. The GP emphasizes workflow embedding, sales efficiency, and a path to durable software economics.\n\n**Manager B: biotech Series B company**\nThe company has promising scientific data, a credible clinical plan, and a syndicate with recognized domain credibility. The GP emphasizes mechanism validity, milestone design, regulatory path, and capital sufficiency to the next major inflection point.\n\nAllocator analysis path:\n\n**Step 1: reject one-template diligence**\nThe relevant proof points differ materially.\n\n**Step 2: identify the primary risk being underwritten**\nManager A is underwriting adoption durability, GTM scaling, and margin progression. Manager B is underwriting science, regulation, and financing endurance.\n\n**Step 3: test manager edge against that risk**\nFor SaaS, the allocator wants evidence that the manager can separate real retention and software economics from noisy growth. For biotech, the allocator wants evidence of genuine scientific or regulatory edge.\n\n**Step 4: connect to portfolio implications**\nThe biotech position likely implies greater capital intensity and duration. The SaaS position may imply more sensitivity to valuation compression if growth quality weakens.\n\nThe lesson is that both companies can be compelling, but the allocator should ask different questions and expect different forms of manager specialization.",
+    },
+    {
+      type: "example",
+      title: "Worked example 2: fintech that looks like software until it doesn't",
+      content:
+        "Assume a venture manager pitches a fast-growing fintech company using largely software language: strong revenue growth, attractive gross margins, expanding customer base, and a large addressable market. On deeper review, the company is originating credit exposure and relying on partner balance sheets to fund the model.\n\nAllocator analysis path:\n\n**Step 1: relabel the company correctly**\nThis is not simply software. It is a model with underwriting and funding exposure embedded in it.\n\n**Step 2: identify what metrics now matter**\nThe allocator should care about losses, fraud, funding resilience, compliance burden, and net revenue after real risk costs, not just topline growth.\n\n**Step 3: test the GP's process**\nIf the GP continues to describe the company mainly in software terms, that may signal weak underwriting depth.\n\n**Step 4: update portfolio implications**\nThis business likely deserves different reserve, valuation, and concentration treatment than true software.\n\nAllocator lesson:\nBusiness-model classification is not semantics. It changes what risk is being taken and what kind of manager edge should be demanded.",
         "The GP says: 'The company raised at the same valuation as the prior round, so the mark held up well.' A venture-fluent allocator does not stop there. They ask: Was the round truly flat for common equity, or flat only in headline terms? Were the new shares issued with heavier liquidation preferences, guaranteed returns, ratchets, or other structure that makes the new price less informative for prior holders? Was the round led by new external capital, or was it an inside round designed mainly to extend runway and preserve optics? This lesson teaches venture valuation and marks as an allocator interpretation problem: how to decide when a financing event is real fair-value evidence, when it is only partial evidence, and when headline valuation language is economically misleading.",
     },
     {
@@ -6864,6 +6979,37 @@ export const lessonContents: LessonContent[] = [
       type: "source-note",
       title: "Sources for this lesson",
       content:
+        "Core source categories for this lesson: NVCA Yearbook-style venture materials for sector framing, stage and theme definitions, and concentration context; allocator- and practitioner-oriented resources on venture business models, unit economics, burn quality, and sector-specific underwriting; sector-specialist commentary on software, AI infrastructure, fintech, healthcare, biotech, and marketplace models. The purpose is not to make the learner a domain operator. It is to build enough model-specific literacy that manager specialization claims, portfolio concentrations, and underwriting narratives can be interpreted correctly.  [oai_citation:6‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a GP saying the company is in a great theme",
+      content:
+        "The GP says: 'We like the company because it sits in one of the strongest themes in venture right now.'\n\nWeak LP response: 'That is encouraging. Strong thematic exposure should improve the odds of finding major winners.'\n\nWhy it is weak: it treats theme as a substitute for underwriting and ignores model-specific proof, failure modes, and concentration risk.\n\nStrong LP response: 'Helpful. Please walk us through the actual business model, what proof should exist at this stage, what the primary failure mode is, and why your firm's edge in this segment is real rather than thematic enthusiasm. We also want to understand how much adjacent exposure the fund already has to this theme across other labels.'\n\nWhy it is strong: it turns a broad secular narrative into model-specific underwriting and portfolio-risk analysis.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what business-model analysis can and cannot tell you",
+      content:
+        "Business-model analysis can tell you what evidence should matter, what failure modes are most plausible, and whether a manager's claimed specialization maps credibly to the actual risks of the company. It can also improve portfolio interpretation by revealing whether multiple positions or managers are really exposed to the same underlying theme.\n\nBut business-model analysis cannot guarantee company success, prove that a manager has real edge, or replace stage, cap-table, ownership, and valuation work. Two GPs can classify the same company correctly and still differ materially in sourcing quality, pricing discipline, and follow-on judgment.\n\nThe allocator should therefore use this lesson as a translation tool. It sharpens diligence questions and reduces category error. It does not eliminate the need for judgment.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: design a sector-specific diligence checklist",
+      content:
+        "Choose one domain: enterprise software, AI infrastructure, fintech, biotech, or consumer marketplace.\n\nBuild a one-page allocator diligence checklist under five headings:\n\n1. **What proof should exist at this stage?**\n2. **What is the dominant failure mode?**\n3. **Which metrics matter most, and which popular metrics are less informative?**\n4. **What kind of manager specialization would be genuinely valuable here?**\n5. **What are the portfolio implications for reserves, duration, and concentration?**\n\nThen answer three questions:\n- What is the easiest mistake a generalist allocator could make in this domain?\n- What manager claim would you now treat with the most skepticism?\n- What one diligence artifact would you request first if a GP pitched this type of company?\n\nFinal task:\nWrite a short allocator memo titled 'What this business model requires us to believe.'",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal underwriting questions",
+      content:
+        "1. 'For this business model, what does real proof look like at this stage, and which metrics are you intentionally not over-weighting yet?'\n\n2. 'What is the dominant failure mode here: product-market fit, go-to-market execution, regulatory friction, scientific risk, or capital intensity?' \n\n3. 'What specific edge does your firm have in this model: technical diligence, scientific network, GTM pattern recognition, regulatory expertise, or something else?' \n\n4. 'How does this business model change your reserve expectations and ownership-defense strategy relative to a more standard software investment?' \n\n5. 'Across the fund and adjacent labels, how much real thematic exposure do you already have to this segment?'",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 34 should change venture diligence",
+      content:
+        "After Day 34, the learner should stop hearing venture pitches as generic founder-plus-market stories and start hearing them as claims about a specific business model, a specific proof standard, a specific failure mode, and a specific kind of manager edge. That is a meaningful upgrade in allocator usefulness.\n\nThis shift should improve diligence in several practical ways. It should make the learner more precise about which metrics matter in different categories, more skeptical of broad thematic language, more thoughtful about when specialists deserve extra credit, and more aware of hidden concentration across AI, healthcare, fintech, and other venture buckets. In venture, sector literacy is not a nice-to-have. It is part of underwriting reality.",
         "Core source categories for this lesson: IPEV fair-value guidance for calibration and evidence-weighted private marks; ASC 820 concepts and practitioner interpretation for security-specific fair value; NVCA and venture-finance vocabulary resources for financing, secondary, and security terminology; allocator- and practitioner-oriented venture materials on structured rounds, inside rounds, secondary signals, 409A reality, and mark discipline. The goal is to teach how venture marks should be interpreted, not to build full accounting models.",
     },
     {
@@ -6899,6 +7045,112 @@ export const lessonContents: LessonContent[] = [
   ],
   quiz: [
     {
+      questionId: "d34q1",
+      type: "multiple-choice",
+      prompt:
+        "Why should allocators start venture underwriting with business model rather than broad sector label alone?",
+      options: [
+        "Because sector labels are irrelevant in venture",
+        "Because business model determines what proof should exist, what failure modes are likely, and what manager edge should look like",
+        "Because only generalist managers invest across sectors",
+        "Because business model matters only after IPO",
+      ],
+      correctAnswer:
+        "Because business model determines what proof should exist, what failure modes are likely, and what manager edge should look like",
+    },
+    {
+      questionId: "d34q2",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of a company being in a powerful theme such as AI?",
+      options: [
+        "Theme exposure alone is enough because secular demand guarantees success",
+        "The allocator should distinguish thematic exposure from actual business-model defensibility, margin structure, and manager edge",
+        "Theme matters only in public markets",
+        "AI companies should always be valued like software",
+      ],
+      correctAnswer:
+        "The allocator should distinguish thematic exposure from actual business-model defensibility, margin structure, and manager edge",
+    },
+    {
+      questionId: "d34q3",
+      type: "multiple-choice",
+      prompt:
+        "Which of the following is most likely to be a core proof point for an enterprise SaaS company at scale-up stage?",
+      options: [
+        "Clinical milestone progression",
+        "Net retention, sales efficiency, and repeatable go-to-market",
+        "Commodity price sensitivity",
+        "Manufacturing yield curves only",
+      ],
+      correctAnswer:
+        "Net retention, sales efficiency, and repeatable go-to-market",
+    },
+    {
+      questionId: "d34q4",
+      type: "multiple-choice",
+      prompt:
+        "Why is fintech a sector where allocators need especially careful business-model classification?",
+      options: [
+        "Because all fintech businesses are basically SaaS",
+        "Because fintech ranges from software-like models to underwriting- and funding-intensive balance-sheet businesses",
+        "Because regulation never matters in fintech",
+        "Because fintech companies do not need reserves",
+      ],
+      correctAnswer:
+        "Because fintech ranges from software-like models to underwriting- and funding-intensive balance-sheet businesses",
+    },
+    {
+      questionId: "d34q5",
+      type: "multiple-choice",
+      prompt:
+        "Why do healthcare and life sciences often justify specialist managers?",
+      options: [
+        "Because those sectors never require commercial execution",
+        "Because scientific, clinical, and regulatory complexity can make domain expertise genuinely differentiating",
+        "Because specialists always outperform generalists",
+        "Because those sectors have no valuation risk",
+      ],
+      correctAnswer:
+        "Because scientific, clinical, and regulatory complexity can make domain expertise genuinely differentiating",
+    },
+    {
+      questionId: "d34q6",
+      type: "multiple-choice",
+      prompt:
+        "What is the allocator significance of capital intensity in venture underwriting?",
+      options: [
+        "It affects reserve burden, dilution risk, duration, and the risk that the company becomes a capital-structure trap",
+        "It matters only for industrial companies and never for software",
+        "It eliminates the need to analyze business model",
+        "It is mainly a branding issue, not an economics issue",
+      ],
+      correctAnswer:
+        "It affects reserve burden, dilution risk, duration, and the risk that the company becomes a capital-structure trap",
+    },
+    {
+      questionId: "d34q7",
+      type: "short-response",
+      prompt:
+        "Explain why 'traction' means different things across venture business models. Write two to four sentences.",
+      modelAnswer:
+        "Different business models create value through different mechanisms, so the evidence of real progress changes with the model. In SaaS, traction may mean retention and repeatable sales efficiency; in marketplaces, it may mean real liquidity and durable engagement; in biotech, it may mean scientific or clinical milestone progress rather than revenue. The allocator should therefore judge proof relative to the company's actual model, not through one generic growth lens.",
+    },
+    {
+      questionId: "d34q8",
+      type: "short-response",
+      prompt:
+        "A GP pitches a company as part of a powerful secular theme. What are the three most important follow-up questions you should ask after this lesson?",
+      modelAnswer:
+        "First, I would ask what the actual business model is and what proof should exist at this stage. Second, I would ask what the dominant failure mode is, such as product-market fit, go-to-market execution, regulatory complexity, scientific risk, or capital intensity. Third, I would ask what specific edge the manager has in this segment and whether the fund already has significant adjacent exposure to the same theme.",
+    },
+  ],
+  sources: [
+    "NVCA Yearbook-style venture materials for sector framing, stage and theme definitions, and concentration context",
+    "Allocator- and practitioner-oriented resources on venture business models, unit economics, burn quality, and sector-specific underwriting",
+    "Sector-specialist commentary on enterprise software, AI infrastructure, fintech, healthcare, biotech, and marketplace models",
+    "Institutional venture diligence resources linking business-model risk to manager specialization, reserves, and portfolio construction",
+    "CFA Institute and related private-markets educational materials providing context for venture strategy differentiation and business-model-specific risk",
       questionId: "d33q1",
       type: "multiple-choice",
       prompt:
