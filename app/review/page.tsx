@@ -212,6 +212,7 @@ function ReviewCardTile({
           )}
           <button
             onClick={() => onDismiss(card.cardId)}
+            title="Dismiss until tomorrow"
             className="text-xs text-[#404040] hover:text-[#D9532B] font-medium px-3 py-1.5 rounded-lg hover:bg-[#D9532B]/8 transition-colors"
           >
             Done for now
