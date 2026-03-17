@@ -18,26 +18,26 @@ export const lessonContents: LessonContent[] = [
         type: "framing",
         title: "Why the fund model is the foundation",
         content:
-          "Every PE metric — IRR, TVPI, DPI, PME — is anchored in the fund structure. Without the structural model, you cannot identify when IRR is being distorted — whether by subscription line mechanics (Day 3–4) or by early exit concentration — why NAV is not the same thing as value, or why a year-3 performance number is nearly useless for cross-fund comparison. A CFA charterholder approaching PE with a public-equity mental model — continuous liquidity, daily NAV, mark-to-market pricing — will have systematically wrong intuitions across every dimension of PE analysis. The fund model is not introductory material you learn once and shelve. It is the analytical skeleton on which all subsequent PE reasoning hangs.",
+          "Every PE metric, including IRR, TVPI, DPI, RVPI, and PME, is anchored in the fund structure. Without the structural model, you cannot identify when IRR is being distorted, whether by subscription line mechanics (Day 3) or by early exit concentration, why NAV is an estimate rather than a price, or why a year-3 performance number carries limited comparative value. A CFA charterholder approaching PE with a public-equity mental model, built around continuous liquidity, daily NAV, and mark-to-market pricing, will bring the wrong instincts into almost every PE discussion. The fund model is not introductory material you learn once and shelve. It is the analytical skeleton on which the rest of the curriculum sits.",
       },
       // ── Teaching blocks ───────────────────────────────────────────────────
       {
         type: "teaching",
         title: "The closed-end structure: design, not constraint",
         content:
-          "A PE fund is a closed-end vehicle — the capital pool is fixed at close, with no new subscriptions, no redemptions, and no daily NAV. The fund has a defined term (typically 10 years, with one or two one-year extension rights subject to LP approval). LPs cannot exit by redeeming their interest; secondary market sales to a willing buyer are the only exit path.\n\nThis design is deliberate. It enables three things the PE return model requires:\n\n- **Illiquidity premium** — LPs surrender liquidity and expect compensation in return\n- **Multi-year operational control** — a GP with a stable capital base can execute 3–5 year operational improvements without the threat of capital withdrawal\n- **Incentive alignment** — carry is earned on fund-level total returns across the fund's full life, not on quarterly NAV marks\n\nThe analogy to a listed closed-end fund (CEF) is imperfect: a CEF trades at a market price that may diverge sharply from NAV, while a PE fund has neither. The governing legal document — the limited partnership agreement (LPA) — defines the structure, terms, and GP authority.",
+          "A PE fund is a closed-end vehicle: the capital pool is generally fixed after fundraising, LPs do not have ordinary redemption rights, and there is no daily tradable NAV. The fund has a defined term, often around 10 years, commonly with one-year extension options whose mechanics are set by the LPA. LPs that want to exit before realization usually need to sell their interest in the secondary market, subject to transfer restrictions and buyer availability.\n\nThis design is deliberate. It supports three features the PE model depends on:\n\n- **A stable capital base** that lets the GP own and reshape companies over a multi-year period without daily liquidity pressure\n- **Cash-flow matching to illiquid assets** so capital is drawn as needed rather than funded up front and left idle\n- **Fund-level incentive design** in which carried interest is tied to realized fund economics under the governing waterfall rather than to short-term market marks\n\nThe analogy to a listed closed-end fund is only partial. A listed CEF has a quoted market price that can diverge from NAV; a PE fund usually has neither continuous pricing nor a redemption mechanism. The LPA, not a market exchange, defines the actual rights, constraints, and GP authority.",
       },
       {
         type: "teaching",
         title: "Capital commitment vs. capital calls: the operational mechanic",
         content:
-          "When an LP signs the LPA and commits $50 million, they are making a legally binding obligation to fund capital calls up to $50 million over the fund's life — not writing a check. The GP calls capital — issues a formal capital call notice — when funds are needed: to close an investment, pay management fees, or cover fund expenses. Notices typically require LP funding within 10 business days, though specific terms vary by LPA. This distinction is critical at every level of analysis. A fund with $2 billion in commitments and $800 million called at year 2 is an $800 million fund operationally — the remaining $1.2 billion is a contingent obligation on LP balance sheets. Deployment pace — the rate at which the GP calls and deploys capital — affects the fee base, shapes the J-curve, and drives the IRR calculation. An LP managing a $200 million PE allocation across six funds may have $120–150 million in uncalled commitments outstanding simultaneously, all callable with 10 days' notice. This is not a theoretical liquidity risk; it is a recurring operational reality for any institutional LP with a meaningful PE program.",
+          "When an LP signs the LPA and commits $50 million, they are making a legally binding obligation to fund capital calls up to that amount over the life of the fund, not wiring $50 million on day one. The GP calls capital through formal notices when funds are needed to close investments, fund follow-ons, pay management fees, or cover fund expenses. Notices often require funding within roughly 10 business days, but actual timing and notice requirements vary by LPA. This distinction matters operationally and analytically. A fund with $2 billion in commitments and $800 million called at year 2 is still a $2 billion fund legally, but only $800 million has been funded and can be analyzed as paid-in capital to date. The remaining $1.2 billion is an outstanding LP obligation. Deployment pace, the rate at which capital is called and invested, shapes fee drag, affects the J-curve, and changes what interim performance figures mean. For an institutional LP with a real PE programme, uncalled capital is not a footnote. It is part of day-to-day liquidity management.",
       },
       {
         type: "teaching",
         title: "Unfunded commitments: the hidden balance sheet item",
         content:
-          "Unfunded commitments — the gap between what an LP has committed and what has been called — sit as a contingent liability until drawn. This creates three structural risks that LPs frequently underestimate. First, timing correlation: GPs often accelerate capital calls during favorable deal environments, which historically coincide with periods when LP liquid portfolios face competing demands. Second, over-commitment mechanics: institutional LPs routinely commit 1.2–1.5x their target PE allocation on the empirical basis that GPs historically call 85–95% of commitments over a fund's life. This works until multiple GPs in a portfolio simultaneously reach high deployment in a single vintage year, concentrating liquidity demand. Third, default risk: failure to fund a capital call within the LPA-defined notice period triggers severe contractual penalties — typically suspension of voting rights, forced sale of LP interest at a significant discount (often 50–75 cents on the dollar), or forfeiture of the uncalled balance. ILPA Principles 3.0 recommends 15+ business days' notice as best practice, but this is advisory, not a legal requirement.",
+          "Unfunded commitments, the gap between what an LP has committed and what has been called, function as a contingent liquidity obligation until drawn. That creates three structural risks. First, timing correlation: GPs often accelerate capital calls when deal activity is strong, which can coincide with periods when the LP is also managing demands elsewhere in the portfolio. Second, over-commitment risk: institutional LPs commonly commit more than their target PE NAV on the expectation that funds will draw capital gradually and may never call 100% of commitments. That can work in normal conditions, but it becomes fragile when several managers deploy quickly at the same time. Third, default risk: failure to meet a call within the contractual notice period can trigger severe penalties under the LPA, including suspension of rights, forced transfer provisions, or other economic sanctions. The precise remedies vary widely by fund. ILPA Principles 3.0 recommends longer notice periods as a best practice, but that guidance is not self-executing.",
       },
       // ── Visual 1 ─────────────────────────────────────────────────────────
       {
@@ -62,7 +62,7 @@ export const lessonContents: LessonContent[] = [
         type: "teaching",
         title: "Capital flow anatomy: commitment to distribution",
         content:
-          "Tracing a dollar of committed capital through the fund lifecycle:\n\n(1) **LP commits $1.00** — the dollar sits in the LP's liquid portfolio, subject to call.\n(2) **GP issues a capital call**; LP funds approximately $0.90 net of management fee offsets called that year. GPs sometimes bridge acquisitions using a subscription line credit facility before calling LP capital, which delays the LP's cash outflow date and mechanically inflates reported IRR. Full subscription line mechanics in Day 3.\n(3) **GP closes an acquisition** — called equity plus debt financing (typically 4–6x EBITDA for a buyout) funds the enterprise value.\n(4) **Portfolio company operates**; GP marks it quarterly for NAV purposes — LP sees TVPI build, but it is unrealized until exit.\n(5) **GP exits** via trade sale, sponsor-to-sponsor transaction, or IPO; gross proceeds flow to the fund and are distributed through a waterfall: LP capital returned first, then preferred return, then GP carry on remaining profits. Full waterfall mechanics in Day 2.\n(6) **LP receives a net cash distribution.**\n\nDPI at any point reflects only what has been wired; RVPI reflects GP-determined interim value for the remaining portfolio. A fund with TVPI 1.8x and DPI 0.3x has mostly unrealized, unconfirmed returns — a distinction that is not cosmetic. Full multiple mechanics in Day 5.",
+          "Tracing a dollar of committed capital through the fund lifecycle:\n\n(1) **LP commits $1.00** and retains the cash in its liquid portfolio until called.\n(2) **GP issues a capital call** and the LP funds the requested amount. In some periods the GP may first bridge a transaction with a subscription line and call LP capital later, which can raise reported IRR by shortening the measured holding period. Full subscription line mechanics are in Day 3.\n(3) **GP closes an acquisition** using a mix of equity and, in buyout strategies, acquisition financing whose scale depends on the company, lender appetite, and market conditions.\n(4) **Portfolio company value changes over time** and the GP reports interim NAV marks. Those marks affect RVPI and TVPI, but they are not realized cash.\n(5) **GP exits the investment** and proceeds move through the fund waterfall. The sequence and timing of capital return, preferred return, catch-up, and carry depend on the actual waterfall design discussed in Day 11.\n(6) **LP receives a net cash distribution.**\n\nDPI reflects only cash actually distributed. RVPI reflects the GP's estimate of the remaining unrealized value. A fund with TVPI 1.8x and DPI 0.3x may still prove attractive, but most of the reported value remains unrealized and therefore less certain than the headline TVPI suggests. The full multiple framework is in Day 5.",
       },
       // ── Worked example ────────────────────────────────────────────────────
       {
@@ -88,7 +88,7 @@ export const lessonContents: LessonContent[] = [
         type: "teaching",
         title: "The blind pool: what the LP is actually buying",
         content:
-          "A PE fund is a blind pool — the LP commits capital before the portfolio is constructed. At the time of commitment, the GP may have one or two warehoused deals, but the majority of the portfolio is unidentified. The LP is buying GP judgment, sourcing capability, and operational capacity — not a portfolio. This structural fact has several decision-relevant implications. First, past performance is the primary evidence available in manager selection, which creates the question of what predictive content it carries — a contested empirical question covered in Day 12. Second, the LPA defines the investment mandate: permitted sectors, geographies, deal size ranges, concentration limits, and leverage parameters. An LP who has not reviewed the LPA (or at minimum the PPM summary) does not know what the GP is authorized to do with their capital. Third, fund sequence matters: a GP managing their final fund before a senior departure has different incentives than one building toward Fund V. GP team continuity and succession planning are frequently underweighted in LP diligence.",
+          "A PE fund is a blind pool: the LP commits capital before most of the underlying portfolio has been identified. At commitment, the GP may have one or two warehoused deals or a visible near-term pipeline, but the bulk of the portfolio is still to be sourced, underwritten, and exited. The LP is therefore underwriting GP judgment, sourcing access, portfolio construction discipline, and operational capability, not a known set of assets. That has several decision-relevant implications. First, past performance becomes one of the main pieces of evidence in manager selection, which is why the questions of repeatability, team continuity, and decision rights matter so much in Day 13. Second, the LPA and offering documents define the investable universe: sectors, geographies, concentration limits, leverage flexibility, and other boundaries. An LP that has not read those documents does not actually know what discretion it is granting. Third, fund sequence matters: a GP managing a successor fund during a leadership transition or after a major fund-size step-up may not present the same risk as the GP that built the historical track record.",
       },
       {
         type: "teaching",
@@ -101,7 +101,7 @@ export const lessonContents: LessonContent[] = [
         type: "source-note",
         title: "Sources for this lesson",
         content:
-          "Fund structure mechanics and LP governance: ILPA Principles 3.0 (ilpa.org/principles). Fund lifecycle and mechanics: CAIA Association Level II, private equity fund structure chapters. Capital call conventions and defaulting LP provisions: ILPA Principles 3.0, Section 3 (LP default provisions and recommended notice periods); specific penalty ranges reflect representative LPA terms as surveyed in ILPA educational materials — actual terms vary by fund. LP over-commitment practice and historical draw-down rates: Preqin Investor Outlook: Alternative Assets (LP survey, annual editions); the 85–95% historical call rate reflects Preqin and ILPA survey data and is not a contractual guarantee. Subscription line credit facilities and IRR impact: ILPA Subscription Line of Credit and Alignment of Interest Guidance (2017). PE NAV and fair value methodology: FASB ASC 820 (Fair Value Measurement); IPEV Valuation Guidelines, current edition (ipev.org). Benchmark timing thresholds: Cambridge Associates Private Equity Benchmark Commentary, interim vs. final performance methodology. Interim valuation predictive validity: Harris, R., Jenkinson, T., and Kaplan, S. (2014), 'Private Equity Performance: What Do We Know?' Journal of Finance 69(5), 1851–1882.",
+          "This capstone synthesizes the prior lessons and standard institutional PE diligence practice, including ILPA due-diligence and governance principles, PME and benchmarking research, fund-economics analysis, and allocator programme-construction disciplines. It should be read as an integration lesson rather than a source of new standalone doctrine.",
       },
       // ── Weak vs. strong answer ────────────────────────────────────────────
       {
@@ -115,7 +115,7 @@ export const lessonContents: LessonContent[] = [
         type: "inference-boundary",
         title: "Inference boundary: what year-4 metrics can and cannot tell you",
         content:
-          "**What year-4 metrics can tell you:**\n- Deployment pace — compare called capital to the investment period to assess whether the GP is behind, on pace, or ahead for new platforms\n- Confirmed realized value — DPI is cash actually wired to LPs, not subject to valuation interpretation\n- Whether any early exits have occurred\n\n**What year-4 metrics cannot tell you:**\n- Ultimate fund performance — year-4 IRR is mechanically distorted by the J-curve and by the timing of any early exits; a single early exit in year 3 can double the reported interim IRR regardless of portfolio quality\n- Whether RVPI marks are accurate — RVPI is GP-determined fair value per ASC 820 methodologies and while audited for process, is not market-confirmed\n- Quartile ranking reliability — Harris, Jenkinson, and Kaplan (2014) show fund quartile rankings based on early interim metrics shift substantially by final realization; a year-4 top-quartile label carries far less signal than a year-8 one\n\nThe professionally correct posture at year 4: treat DPI as confirmed value, deployment pace as a structural check, and RVPI and interim IRR as indicative only.",
+          "**What year-4 metrics can tell you:**\n- Deployment pace relative to the investment period, which is useful for understanding how much of the portfolio has actually been built\n- Confirmed realized value, because DPI is cash actually distributed to LPs\n- Whether any exits or recapitalizations have already occurred\n\n**What year-4 metrics usually cannot tell you with confidence:**\n- Ultimate fund performance, because interim IRR is still heavily affected by call timing, fee drag, and the presence or absence of a small number of early exits\n- Whether RVPI marks will convert cleanly into cash, even if the valuation process is defensible\n- Whether an apparent early quartile ranking will persist through final realization\n\nThe professionally correct posture at year 4 is to treat DPI as confirmed evidence, deployment pace as a structural check, and RVPI and interim IRR as informative but provisional.",
       },
       // ── Exercise ──────────────────────────────────────────────────────────
       {
@@ -2923,7 +2923,7 @@ export const lessonContents: LessonContent[] = [
         type: "teaching",
         title: "GP-led secondaries and continuation vehicles: what problem they are solving",
         content:
-          "In a GP-led secondary, the GP initiates the transaction rather than an LP seller. The most important GP-led structure is the **continuation vehicle (CV)**. In a typical CV, one or more assets are transferred out of the original fund into a new vehicle. Existing LPs in the old fund can usually choose either:\n\n- **Cash out** at the transaction price, or\n- **Roll** their interest into the new vehicle and continue holding the asset\n\nNew secondary capital funds the transaction and becomes the buyer-side capital base for the CV.\n\nWhy do GPs pursue this? In the best case, because the asset is genuinely high quality, still has substantial upside, and no longer fits well inside the original fund's life, diversification, or liquidity needs. In the worst case, because the GP wants to avoid crystallizing a weak exit market, continue charging fees on a known good asset, or manufacture realizations where ordinary exits are unattractive.\n\nThe structure is not inherently good or bad. The allocator's task is to identify whether the CV is solving a legitimate asset-duration problem or mainly creating a fee and carry reset opportunity for the GP.",
+          "In a GP-led secondary, the GP initiates the transaction rather than an LP seller. The most important GP-led structure is the **continuation vehicle (CV)**. In a typical CV, one or more assets are transferred out of the original fund into a new vehicle. Existing LPs in the selling fund can usually choose either to cash out at the transaction price or to roll into the new vehicle and keep exposure. New secondary capital funds the purchase and becomes the buyer-side capital base for the CV.\n\nWhy do GPs pursue this? In the strongest cases, because the asset is genuinely high quality, still has material remaining upside, and no longer fits cleanly inside the original fund's term, concentration limits, or liquidity needs. In weaker cases, because the GP would prefer not to exit into an unattractive market, wants to preserve fee-bearing exposure to a good asset, or is using the process to reset economics around a company it knows well.\n\nThe key allocator distinction is that a GP-led deal creates **two separate underwriting questions**. First, is the transaction fair to the existing LPs deciding whether to sell or roll? Second, is the new vehicle attractive for the capital entering at the transfer price and terms? Those are related questions, but they are not the same question. A strong asset does not by itself make the transfer fair, and a fair transfer price does not by itself make the new vehicle compelling.",
       },
       {
         type: "teaching",
@@ -3075,9 +3075,9 @@ export const lessonContents: LessonContent[] = [
       },
     ],
     sources: [
-      "ILPA guidance on GP-led secondaries and continuation vehicles",
-      "CFA Institute alternative investments and private markets materials on secondary market structures",
-      "Major secondary market adviser annual reports covering LP-led pricing, GP-led transactions, and market technicals",
+      "ILPA guidance on GP-led secondaries, continuation vehicles, and conflict management",
+      "Jefferies Global Secondary Market Review and other major adviser market reports on LP-led pricing, GP-led volume, and market technicals",
+      "CAIA and CFA private markets materials on secondaries, NAV discounts, and portfolio-management uses of the secondary market",
     ],
   },
 
@@ -3125,7 +3125,7 @@ export const lessonContents: LessonContent[] = [
         type: "teaching",
         title: "The adverse selection problem",
         content:
-          "The central analytical risk in co-investment is adverse selection. The LP must always ask: why is this specific deal being offered externally rather than absorbed fully inside the fund or by the GP's highest-priority capital base?\n\nAdverse selection can arise in several ways:\n\n**1. Size-driven syndication**\nThis is the cleanest version. The deal is attractive, but simply too large for the fund to hold alone while staying within concentration limits or prudent position-sizing boundaries. In this case, the co-invest may be entirely sensible.\n\n**2. Speed-driven syndication**\nThe GP needs quick capital to sign or close the transaction. This is not automatically a negative signal, but it should raise the underwriting standard. A process that requires extreme speed often compresses the LP's ability to verify the thesis independently.\n\n**3. Quality-driven syndication**\nThis is the version LPs worry about most. The deal is being shared because the GP does not want the fund carrying the full position size, because internal enthusiasm is mixed, or because the GP wants more external capital against a less compelling risk/reward profile.\n\nUnderlying all three variants is a structural information asymmetry. The GP has spent weeks — sometimes months — underwriting the company before offering the co-invest. The LP typically has days. That gap means the LP is always making a decision on inferior information relative to the person who controls the offer. This is not unique to co-invest, but it is acutely concentrated here because the LP is approving a single company, not a diversified process.\n\nThe most useful diagnostic across a relationship is to examine co-invest history in aggregate. If a GP's co-invest portfolio has historically underperformed the main fund on a risk-adjusted basis, that pattern is informative. It may reflect quality-driven syndication at the margin — the GP repeatedly offered co-invest on the less compelling subset of the deal flow. Conversely, a GP whose co-invest portfolio has tracked or exceeded fund performance is providing implicit evidence that the selection is not adversely skewed. LPs with long relationships should track this metric deliberately.\n\nA sophisticated allocator does not assume the worst. But they do force the GP to answer the question directly: why is this specific deal being syndicated, what share will the main fund hold after syndication, and how does that compare to the GP's typical conviction-weighted sizing? If the answer is vague, the LP should hear that as information, not noise.",
+          "The central analytical risk in co-investment is adverse selection. The LP should ask a direct question at the start: why is this specific deal being offered externally rather than absorbed entirely inside the fund or the GP's most preferred capital base?\n\nAdverse selection can arise in several ways:\n\n**1. Size-driven syndication**\nThis is often the cleanest explanation. The deal may be attractive, but too large for the fund to hold alone while staying inside concentration limits or prudent sizing boundaries. In that case, syndication can be entirely consistent with high conviction.\n\n**2. Speed-driven syndication**\nThe GP needs capital lined up quickly to sign or close. That is not automatically a negative signal, but it does increase the LP's execution burden and should raise the required underwriting standard.\n\n**3. Quality-driven syndication**\nThis is the version LPs worry about most. The GP may prefer to share the deal because conviction is mixed, the downside is harder to underwrite, or the sponsor does not want the fund carrying the full exposure.\n\nUnder all three variants, information asymmetry matters. The GP may have spent weeks or months underwriting the company before the LP sees the deal. The LP often has only days. That means the LP is always making a decision from a weaker informational starting point than the party controlling the offer.\n\nThe best way to evaluate this over time is not through a single anecdote, but through pattern recognition across the relationship. If prior co-invest opportunities were consistently offered on the largest, highest-conviction transactions and outcomes were at least consistent with the broader fund record, that supports a cleaner syndication explanation. If the GP struggles to explain sizing logic, retains a surprisingly small fund hold, or has a history of offering co-invest mainly on more marginal deals, that should be treated as real evidence. A sophisticated allocator does not assume every co-invest is adverse. But they do require the GP to make the syndication logic legible.",
       },
       {
         type: "teaching",
@@ -3283,9 +3283,9 @@ export const lessonContents: LessonContent[] = [
       },
     ],
     sources: [
-      "ILPA guidance and practitioner materials on co-investment structures and LP process design",
-      "CFA Institute and institutional private markets materials on co-invest economics, underwriting, and concentration risk",
-      "Industry surveys and private markets adviser materials on co-invest timelines, fee structures, and adverse-selection considerations",
+      "ILPA materials on co-investment governance, allocation, and LP process design",
+      "CAIA and CFA private markets materials on co-invest economics, concentration risk, and underwriting burden",
+      "Practitioner surveys and adviser materials on co-invest timelines, syndication patterns, and LP operating requirements",
     ],
   },
 
@@ -3503,10 +3503,10 @@ export const lessonContents: LessonContent[] = [
       },
     ],
     sources: [
-      "CFA Institute and CAIA curriculum materials on private markets in portfolio context",
-      "Institutional allocator literature on illiquid asset sizing, governance burden, and opportunity cost",
-      "Academic and practitioner literature on PE illiquidity premium, manager dispersion, and implementation dependence",
       "David Swensen and long-horizon institutional portfolio-construction frameworks for illiquid assets",
+      "CFA and CAIA materials on private markets in total-portfolio context and opportunity-cost analysis",
+      "Academic and practitioner literature on PE illiquidity premium, manager dispersion, and implementation dependence",
+      "Institutional allocator literature on liquidity budgeting, governance burden, and sizing illiquid programmes",
     ],
   },
 
@@ -3725,9 +3725,9 @@ export const lessonContents: LessonContent[] = [
     ],
     sources: [
       "FASB ASC 820 fair value framework",
-      "IPEV valuation principles and practitioner guidance",
-      "CFA Institute and CAIA materials on private asset valuation and reporting",
-      "Institutional private-markets literature on appraisal smoothing, valuation lag, and exit-to-carry analysis",
+      "IPEV valuation guidelines and related practitioner guidance",
+      "CAIA and CFA materials on private asset valuation, reporting, and appraisal-based smoothing",
+      "Institutional private-markets literature on valuation lag, denominator effects, and exit-to-mark analysis",
     ],
   },
 
@@ -3951,10 +3951,10 @@ export const lessonContents: LessonContent[] = [
       },
     ],
     sources: [
-      "UN PRI guidance for private equity ESG integration",
-      "ILPA ESG assessment and due diligence materials",
-      "CFA Institute and CAIA materials on ESG in private markets",
-      "Institutional PE practice on governance, materiality, and ownership-based ESG application",
+      "UN PRI guidance for private equity ESG integration and active ownership",
+      "ILPA ESG assessment framework and due-diligence materials",
+      "SASB and ISSB materiality frameworks as inputs to sector-specific issue identification",
+      "CAIA, CFA, and practitioner materials on ESG integration, governance, and impact distinction in private markets",
     ],
   },
 
@@ -3972,7 +3972,7 @@ export const lessonContents: LessonContent[] = [
         type: "framing",
         title: "This lesson is synthesis, not new theory",
         content:
-          "By this point, the objective is not to learn one more PE concept. It is to integrate the prior lessons into allocator judgment. That means moving from isolated knowledge to a disciplined recommendation process.\n\nThis synthesis draws on everything built across the prior nineteen lessons:\n- **Fund mechanics and fee economics** (Days 1–3): capital calls, fund lifecycle, management fees, waterfall arithmetic, and the J-curve\n- **Performance metrics** (Days 4–6): IRR mechanics, TVPI/DPI/RVPI multiples, vintage benchmarking\n- **Value creation and strategy** (Days 7–9): LBO return attribution, the value bridge, PE strategy comparison, portfolio-level value creation auditing\n- **Exit mechanics and fund governance** (Days 10–11): exit routes and timing, carry timing, clawback, recycling, GP-LP alignment\n- **Benchmarking rigor and manager underwriting** (Days 12–13): PME, quartile quality, four-lens evaluation framework\n- **Programme management** (Day 14): pacing, commitment sequencing, vintage diversification\n- **Market structures** (Days 15–16): secondaries, co-investments\n- **Allocation strategy and valuation discipline** (Days 17–18): PE sizing, illiquidity premium, NAV credibility, denominator effects\n- **ESG** (Day 19): integration rigor, materiality, impact distinction\n\nA strong PE recommendation does five things at once:\n- interprets the fund mechanics correctly\n- distinguishes realized evidence from interim marks\n- evaluates the GP's people, process, and portfolio construction realistically\n- places the opportunity in programme context, not just fund context\n- states the decision and the remaining open risks clearly\n\nThis lesson therefore functions as a capstone. The skill being tested is whether you can hear a GP presentation, separate signal from presentation quality, and write a recommendation that would survive investment committee scrutiny.",
+          "By this point, the objective is not to learn one more PE concept. It is to integrate the earlier lessons into allocator judgment. That means moving from isolated knowledge to a disciplined recommendation process.\n\nThis synthesis draws on the curriculum in the sequence it was actually built:\n- **Fund structure, economics, and cash-flow mechanics** (Days 1–3): commitments, calls, fees, waterfalls, and the J-curve\n- **Performance measurement and timing context** (Days 4–6): IRR, multiples, lifecycle effects, and vintage framing\n- **Deal mechanics, strategy differences, value creation, and exits** (Days 7–10): leverage, strategy role, attribution, and realization routes\n- **Terms, benchmarking, and manager underwriting** (Days 11–13): waterfalls, benchmarking tools, people, process, and repeatability\n- **Programme construction and market implementation** (Days 14–17): pacing, secondaries, co-invest, PE sizing, and opportunity cost\n- **Valuation discipline** (Day 18): mark credibility, lag, and exit-to-mark thinking\n- **ESG as an underwriting and ownership lens** (Day 19): materiality, process evidence, and impact distinction\n\nA strong PE recommendation does five things at once:\n- interprets the fund mechanics correctly\n- distinguishes realized evidence from interim marks\n- evaluates the GP's people, process, and portfolio construction realistically\n- places the opportunity in programme context, not just fund context\n- states the decision and the remaining open risks clearly\n\nThis lesson therefore functions as a capstone and as a bridge to later work. The skill being tested is whether you can hear a GP presentation, separate signal from polish, and produce a recommendation that would survive committee scrutiny.",
       },
       {
         type: "teaching",
@@ -4002,13 +4002,13 @@ export const lessonContents: LessonContent[] = [
         type: "teaching",
         title: "The most common capstone failure modes",
         content:
-          "At the end of a PE diligence process, allocators often fail in predictable ways. Each failure mode maps to a specific lesson that should have caught it.\n\n**1. Headline capture**\nThey anchor on net IRR, TVPI, and brand quality, then work backward to justify a positive conclusion. The fix is what Days 5 and 12 taught: separate DPI (what is confirmed) from RVPI (what is still a mark), and apply PME to see whether the IRR actually beat a public alternative.\n\n**2. Realization neglect**\nThey discuss track record strength without explicitly stating how much of the result is confirmed in cash. A fund at year 5 reporting 1.8x TVPI but 0.3x DPI has confirmed almost nothing. Day 18's valuation framework explains why the remaining 1.5x RVPI should be treated as a working estimate, not confirmed value.\n\n**3. Process-story mismatch**\nThey repeat the GP's value-creation claim without checking whether realized deal outcomes support it. Day 9's portfolio-level value creation framework applies here: was EBITDA growth organic or acquisition-driven? What share of return came from multiple expansion rather than operational improvement? If the story is 'operational excellence' but the attribution shows mostly entry/exit multiple arb, the GP's claimed edge is not well-supported.\n\n**4. Programme-blind approval**\nThey recommend a strong fund without checking pacing, vintage concentration, liquidity, or governance capacity. Day 17 covered this: PE sizing is a liquidity, governance, and PME question, not just a return preference. A strong GP at the wrong moment in pacing or portfolio context can still be the wrong decision.\n\n**5. Vague risk language**\nThey list generic risks such as key-person, valuation, or market conditions without identifying which one is most material and decision-relevant in this case. A recommendation that says 'usual PE risks apply' is not a risk statement. The relevant question is: which specific risk is the most likely reason this recommendation could be wrong, and what evidence would reveal that sooner?\n\nA good capstone answer avoids all five.",
+          "At the end of a PE diligence process, allocators often fail in predictable ways. Each failure mode maps to a specific lesson that should have caught it.\n\n**1. Headline capture**\nThey anchor on net IRR, TVPI, and brand quality, then work backward to justify a positive conclusion. The fix is what Days 4, 5, and 12 taught: separate IRR from multiples, separate DPI from RVPI, and use benchmarking tools such as PME with discipline rather than as decoration.\n\n**2. Realization neglect**\nThey discuss track record strength without explicitly stating how much of the result is confirmed in cash. A fund at year 5 reporting 1.8x TVPI but 0.3x DPI has confirmed only a small share of that total value. Day 18's valuation framework explains why the remaining RVPI should be treated as a working estimate, not confirmed wealth.\n\n**3. Process-story mismatch**\nThey repeat the GP's value-creation claim without checking whether realized deal outcomes support it. Day 9's value-creation framework applies here: was EBITDA growth organic or acquisition-driven? How much of the result came from multiple expansion rather than operational improvement? If the story is operational excellence but the attribution is mostly market re-rating, the claimed edge is weaker than advertised.\n\n**4. Programme-blind approval**\nThey recommend a strong fund without checking pacing, vintage concentration, liquidity, or governance capacity. Days 14 and 17 covered this: PE sizing is a programme-management question, not just a manager-quality question. A strong GP at the wrong moment in pacing or portfolio context can still be the wrong decision.\n\n**5. Vague risk language**\nThey list generic risks such as key person, valuation, or market conditions without identifying which one is most decision-relevant in this case. A recommendation that says 'usual PE risks apply' is not a risk statement. The real question is which specific risk is most likely to change the outcome and what evidence would reveal that sooner.\n\nA good capstone answer avoids all five.",
       },
       {
         type: "example",
         title: "Worked example: turning a meeting into a recommendation",
         content:
-          "A GP is raising Fund V, a $1.2B mid-market buyout fund. Prior fund data presented in the meeting:\n- Fund IV (2018 vintage, year 6): 2.1x net TVPI, 18% net IRR, 0.82x DPI, PME 1.14x versus Russell 2000\n- Top three deals account for 34% of realized value creation\n- Value bridge shows returns driven primarily by EBITDA growth and moderate debt paydown, with some multiple expansion but not the majority of the story\n- Team has one founder moving to chairman role, but three partners have named deal attribution and carry participation\n- Fund V is 20% larger than Fund IV\n- Terms are broadly market with 100% fee offset, but the waterfall is American and clawback escrow is not clearly specified\n\nA weak summary would say: 'Strong GP with attractive returns and good team continuity. Recommend approval subject to final terms review.'\n\nA stronger allocator-grade summary would say: 'We are positively inclined, but not yet at full approval. The strongest evidence is Fund IV's combination of substantial realization (0.82x DPI at year 6), positive PME, and return attribution that appears tied more to operational improvement than to pure market beta. Team risk is manageable but not resolved: founder transition appears partially institutionalized through named partner attribution and carry sharing, yet we still need clarity on decision rights post-transition. The main remaining economic issue is carry timing and protection under the American waterfall, specifically whether clawback is backed by meaningful escrow. From a programme perspective, the commitment is supportable if pacing remains within plan, but should not be justified solely by GP quality.'\n\nThat answer separates evidence, risk, and next steps clearly.",
+          "A GP is raising Fund V, a $1.2B mid-market buyout fund. Prior fund data presented in the meeting:\n- Fund IV (2018 vintage, year 6): 2.1x net TVPI, 18% net IRR, 0.82x DPI, PME 1.14x versus Russell 2000\n- Top three deals account for 34% of realized value creation\n- Value bridge shows returns driven primarily by EBITDA growth and moderate debt paydown, with some multiple expansion but not the majority of the story\n- Team has one founder moving to chairman role, but three partners have named deal attribution and carry participation\n- Fund V is 20% larger than Fund IV\n- Terms are broadly market with 100% fee offset, but the waterfall is American and clawback escrow is not clearly specified\n\nA weak summary would say: 'Strong GP with attractive returns and good team continuity. Recommend approval subject to final terms review.'\n\nA stronger allocator-grade summary would say: 'We are positively inclined, but not yet at full approval. The best evidence is Fund IV's combination of meaningful realization, positive PME, and return attribution that appears more consistent with operational improvement than with simple multiple tailwind. Team risk looks manageable rather than resolved: the founder transition appears partly institutionalized through named partner attribution and carry sharing, but we still need clarity on post-transition decision rights and whether the enlarged fund can preserve the same underwriting discipline. The main open economics issue is not headline fee level but carry timing and LP protection under the American waterfall, specifically whether clawback is supported by escrow or other credible backstops. From a programme perspective the commitment is supportable if pacing remains within plan, but GP quality alone is not enough to override those remaining diligence items.'\n\nThat answer separates evidence, inference, open risk, and next step in a form that committee members can actually use.",
       },
       {
         type: "teaching",
@@ -4032,7 +4032,7 @@ export const lessonContents: LessonContent[] = [
         type: "teaching",
         title: "The final synthesis: what allocator fluency should now look like",
         content:
-          "At the end of this foundations module, allocator fluency should look like this:\n\n**When performance is presented:** You ask how much is realized in DPI, not just TVPI. You reach for a PME comparison before accepting that the IRR was attractive. You test whether marks on the unrealized portfolio are credible by asking about exit history and valuation methodology (Days 5, 12, 18).\n\n**When value creation is claimed:** You ask for a value bridge — EBITDA growth vs. multiple expansion vs. leverage reduction — and you ask whether that attribution is consistent with the deals the GP actually executed (Days 7, 9).\n\n**When a team is described:** You ask who built the track record, what has changed in decision rights and carry participation, and whether fund size or strategy creep has moved faster than organizational depth (Day 13).\n\n**When terms are discussed:** You get past the headline fee rate and carry percentage and ask about carry timing, clawback protection, recycling treatment, and co-investment economics (Days 2, 11).\n\n**When someone proposes a secondary or co-invest:** You separate the asset quality from the transaction fairness (Day 15) and the fee economics from the adverse selection and underwriting burden (Day 16).\n\n**When the portfolio context comes up:** You ask whether the programme can sustain more PE given liquidity, governance, and PME disciplines — and you check whether marks, the denominator effect, or pacing timing have distorted the current picture (Days 17–18).\n\n**When ESG is on the table:** You ask for evidence of decisions affected, not policies adopted (Day 19).\n\nThat is the practical difference between vocabulary familiarity and allocator judgment. This lesson is not the end of PE learning. It is the point at which the tools built across nineteen days should now reinforce each other under time pressure.",
+          "At the end of this foundations module, allocator fluency should look like this:\n\n**When performance is presented:** You ask how much is realized in DPI, not just TVPI. You reach for a PME comparison before accepting that the IRR was attractive. You test whether marks on the unrealized portfolio are credible by asking about benchmarking context and valuation methodology (Days 4–5, 12, and 18).\n\n**When value creation is claimed:** You ask for a value bridge — EBITDA growth vs. multiple expansion vs. leverage reduction — and you ask whether that attribution is consistent with the deals the GP actually executed (Days 7 and 9).\n\n**When a team is described:** You ask who built the track record, what has changed in decision rights and carry participation, and whether fund size or strategy creep has moved faster than organizational depth (Day 13).\n\n**When terms are discussed:** You get past the headline fee rate and carry percentage and ask about carry timing, clawback protection, recycling treatment, and related alignment mechanics (Days 2 and 11).\n\n**When someone proposes a secondary or co-invest:** You separate the asset quality from the transaction fairness (Day 15) and the fee economics from the adverse-selection and underwriting burden (Day 16).\n\n**When the portfolio context comes up:** You ask whether the programme can sustain more PE given liquidity, governance, and opportunity-cost discipline, and you check whether marks, the denominator effect, or pacing timing have distorted the current picture (Days 14, 17, and 18).\n\n**When ESG is on the table:** You ask for evidence of decisions affected, not just policies adopted (Day 19).\n\nThat is the practical difference between vocabulary familiarity and allocator judgment. This lesson is not the end of PE learning. It is the point at which the tools built across nineteen days should now reinforce each other under time pressure.",
       },
       {
         type: "weak-answer",
@@ -4062,43 +4062,43 @@ export const lessonContents: LessonContent[] = [
         type: "meeting-application",
         title: "Allocator application: how to structure the final note",
         content:
-          "A strong final recommendation note can be organized in four parts:\n\n**Decision** — approve, conditional approve, defer, or decline\n\n**Best evidence** — the most important realized and benchmarked support for the decision\n\n**Main open risk** — the one issue most likely to change the outcome if viewed differently\n\n**Next step** — what diligence item, term clarification, or programme check must occur before final action\n\nThis structure forces clarity and prevents the note from becoming a loose summary of impressions.",
+          "A strong final recommendation note can be organized in four parts:\n\n**Decision**: approve, conditional approve, defer, or decline\n\n**Best evidence**: the most decision-relevant realized, benchmarked, and process-based support for the conclusion\n\n**Main open risk**: the one issue most likely to change the recommendation if viewed differently\n\n**Next step**: the specific diligence item, term clarification, or programme check that must occur before final action\n\nThis structure forces clarity and prevents the note from collapsing into a meeting recap. It is also the right bridge into later lessons, where recommendations need to extend from single-fund analysis into broader programme and portfolio decisions.",
       },
       {
         type: "source-note",
         title: "Sources for this lesson",
         content:
-          "This capstone synthesizes the prior lessons and standard institutional PE diligence practice, including ILPA principles and DDQ concepts, PME and benchmarking research, fund economics analysis, and allocator programme construction disciplines.",
+          "This capstone synthesizes the prior lessons and standard institutional PE diligence practice, including ILPA due-diligence and governance principles, PME and benchmarking research, fund-economics analysis, and allocator programme-construction disciplines. It should be read as an integration lesson rather than as a source of new standalone doctrine.",
       },
     ],
     quiz: [
-      {
+            {
         questionId: "d20q1",
         type: "multiple-choice",
         prompt:
-          "What is the most important first step when interpreting a PE fund's strong headline IRR in a recommendation memo?",
+          "A GP highlights a 21% net IRR and 2.0x net TVPI on its prior fund, but DPI is only 0.35x. What should your memo do first?",
         options: [
-          "Confirm whether the GP is well-known in the market",
-          "Determine how much of the result is realized versus still embedded in unrealized marks",
-          "Compare the fee rate to other managers in the same strategy",
-          "Ask whether the GP expects to raise the next fund quickly",
+          "Treat the track record as strong because TVPI already captures both realized and unrealized value",
+          "Start by separating confirmed value from unrealized marks before deciding how much weight the headline return deserves",
+          "Move immediately to team evaluation because the performance case is already established",
+          "Assume the unrealized portion is conservative if the GP is institutionally established",
         ],
         correctAnswer:
-          "Determine how much of the result is realized versus still embedded in unrealized marks",
+          "Start by separating confirmed value from unrealized marks before deciding how much weight the headline return deserves",
       },
-      {
+            {
         questionId: "d20q2",
         type: "multiple-choice",
         prompt:
-          "Which recommendation is strongest from an allocator perspective?",
+          "Which draft recommendation best reflects allocator-grade judgment?",
         options: [
-          "Approve because the GP is top quartile and highly regarded",
-          "Approve because the GP has raised multiple successful prior funds",
-          "Positive inclination based on realized evidence and coherent attribution, but final approval depends on resolving the identified open risks",
-          "Defer because no PE decision should be made before full fund realization",
+          "Approve. The GP is well known, top quartile, and has raised multiple prior funds successfully.",
+          "Approve. Terms are in line with the market and the team presented a coherent strategy.",
+          "Positive inclination based on meaningful realization, coherent attribution, and acceptable programme fit, but final approval depends on resolving the specific open risks identified.",
+          "Defer. No recommendation should be made until the prior fund is fully realized.",
         ],
         correctAnswer:
-          "Positive inclination based on realized evidence and coherent attribution, but final approval depends on resolving the identified open risks",
+          "Positive inclination based on meaningful realization, coherent attribution, and acceptable programme fit, but final approval depends on resolving the specific open risks identified.",
       },
       {
         questionId: "d20q3",
@@ -4128,13 +4128,13 @@ export const lessonContents: LessonContent[] = [
         correctAnswer:
           "A memo that states the manager is impressive and recommends approval subject to standard documents, without discussing realization quality or repeatability",
       },
-      {
+            {
         questionId: "d20q5",
         type: "short-response",
         prompt:
-          "A committee member says: 'The GP has a 2.2x net TVPI and 20% net IRR across the last fund — that is a strong track record. Why is additional analysis needed?' How would you respond?",
+          "A committee member says: 'The GP has a 2.2x net TVPI and 20% net IRR across the last fund. Why are you still talking about DPI, PME, and team change?' Respond in three to five sentences.",
         modelAnswer:
-          "Because TVPI and IRR together only tell you the GP's estimate of total value created and the rate at which capital moved. Neither answers the questions that matter most for a commitment decision. First, how much of the 2.2x is realized in DPI and how much is still an unrealized mark? A high TVPI at year four with low DPI may mean the GP is marking aggressively, not that value has been created. Second, did the 20% net IRR actually beat what the same capital would have returned in public equities on a timing-equivalent basis — that is, what is the PME? Third, what actually drove the return: operational improvement, multiple expansion, or favorable leverage? The answer determines whether the edge is repeatable. Fourth, is the team that built those numbers still in place with the same decision rights and incentive structure? Fifth, does adding this fund improve the programme, given current pacing, vintage concentration, and liquidity constraints? Strong headline metrics open the conversation. They do not close it.",
+          "Because those headline numbers are a starting point, not a finished recommendation. I still need to know how much of the reported value is realized in DPI versus still embedded in marks, whether the fund actually beat a public-market alternative on a timing-equivalent basis through PME, and whether the people and decision structure behind the track record are still intact for the next fund. A high IRR can coexist with low realization, favorable vintage conditions, or a changed team. The recommendation should underwrite repeatable evidence, not just attractive historical optics.",
       },
       {
         questionId: "d20q6",
@@ -4146,9 +4146,9 @@ export const lessonContents: LessonContent[] = [
       },
     ],
     sources: [
-      "ILPA principles and due diligence concepts",
-      "PME and private equity benchmarking research",
-      "Private equity fund economics and allocator programme construction frameworks",
+      "ILPA principles and institutional PE due-diligence concepts",
+      "PME, private equity benchmarking, and realization-quality research",
+      "Private equity fund economics, governance, and allocator programme-construction frameworks",
     ],
   },
 ];
