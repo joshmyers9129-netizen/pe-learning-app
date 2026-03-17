@@ -7541,6 +7541,258 @@ export const lessonContents: LessonContent[] = [
     "CFA Institute and related private-markets educational materials providing context for venture portfolio construction, concentration, and follow-on discipline",
   ],
 },
+{
+  lessonId: "day-36",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The GP says: 'We have several strong companies approaching liquidity.' A venture-fluent allocator does not hear that as one generic positive. They ask: What kind of liquidity are we talking about? IPO, strategic sale, tender, secondary, or a long private holding pattern with partial liquidity events? Who actually gets paid in each path, on what timeline, and at what level of certainty? In venture, exits are not just the happy ending to underwriting. They are a distinct area of portfolio reality. This lesson teaches venture exits and liquidity as an allocator problem: how companies actually convert paper value into realized value, why liquidity often arrives later and less cleanly than expected, and how managers should be judged on exit pathways rather than on valuation optics alone.",
+    },
+    {
+      type: "framing",
+      title: "In venture, liquidity is a path-dependent process, not a single event",
+      content:
+        "Day 27 established that venture is driven by a small number of outliers. Days 29 through 35 then explained how ownership, financing terms, mark quality, and reserve discipline determine whether those outliers can become fund-relevant economics. Day 36 now addresses the final conversion step: how unrealized value actually becomes cash.\n\nThis matters because venture allocators often spend enormous time on sourcing, ownership, and marks, then talk about exits in overly broad language. But the path to liquidity is one of the most important determinants of realized outcomes. IPOs, strategic sales, tenders, secondary sales, recapitalizations, and prolonged private holding periods can all produce very different economics, timing, and confidence levels. The same company can look like a major fund contributor on paper and still take years to produce clean DPI.\n\nThe allocator's goal is not to predict every exit precisely. It is to understand the major liquidity paths, what conditions support each one, what can go wrong, and how manager behavior around liquidity reveals discipline or weakness. This lesson therefore connects venture company analysis to actual fund monetization, which is one of the core bridges from venture enthusiasm to OCIO-grade judgment.",
+    },
+    {
+      type: "teaching",
+      title: "Why exit analysis deserves its own venture lesson",
+      content:
+        "A common mistake is to treat exits as a natural consequence of strong company building. Sometimes they are. But venture exits deserve separate analysis because the market path to realization has its own structure, timing, and failure modes.\n\nWhy exits need their own framework:\n- a company can be operationally strong but still illiquid for much longer than expected\n- a financing mark does not guarantee realizable proceeds\n- the most visible exit path is not always the most likely exit path\n- later-stage liquidity events can be partial, staged, or highly conditional\n- ownership and preference terms can shape who actually benefits from the exit\n\nAllocator implication:\nA manager who can source well and mark well may still underdeliver realized outcomes if the exit path is weak, delayed, or poorly managed. The LP therefore needs to evaluate not only whether companies are valuable, but whether value is likely to become distributable and on what timeline. That is a different question from company quality, and it matters directly for fund-level DPI, pacing assumptions, and portfolio liquidity realism.",
+    },
+    {
+      type: "visual",
+      title: "The venture liquidity map",
+      content:
+        "**Venture value can convert into LP cash through several very different channels.**\n\n| Liquidity path | What it is | Main allocator question |\n|---|---|---|\n| **IPO** | Public listing with staged monetization over time | How real and how near is true public liquidity? |\n| **Strategic M&A** | Sale to an acquirer for cash, stock, or mixed consideration | How clean is the payout, and what part of the value is actually realizable? |\n| **Tender / secondary** | Partial private liquidity before full exit | Is this a real monetization event or only a signal? |\n| **Recapitalization** | Balance-sheet or ownership restructuring that creates some liquidity | Is value being crystallized or merely re-levered? |\n| **Long private hold** | No near-term exit, but ongoing rounds and partial secondary options | How much of the mark should be treated as near-cash versus long-duration paper value? |\n\nThe allocator should separate 'valuable company' from 'liquid position' in every venture discussion.",
+      caption:
+        "Venture exits are not one thing. They are a range of monetization paths with different levels of certainty, timing, and economic clarity.",
+      whyItMatters:
+        "This is the core move of Day 36: turn vague exit optimism into a structured map of how liquidity actually arrives.",
+      sourceNote:
+        "This reflects the Lesson 36 roadmap emphasis on IPO, M&A, tenders, secondaries, and how liquidity pathways affect allocator interpretation.",
+    },
+    {
+      type: "teaching",
+      title: "IPO as liquidity: visible milestone, imperfect monetization",
+      content:
+        "The IPO is the most celebrated venture exit path, but allocators should treat it as a staged liquidity process rather than a single conversion from private value to cash.\n\nWhy IPOs are attractive:\n- they can validate the company publicly\n- they may create a benchmarked market value for the position\n- they can support very large absolute gains if the company becomes a durable public compounder\n\nWhy allocators should still be cautious:\n- lockups and staged selling delay true monetization\n- public-market volatility can materially change value between listing and actual exit\n- not all IPOs create immediate, deep liquidity for large holders\n- newly public companies may continue to trade on a venture-like expectation set with meaningful downside after listing\n\nAllocator implication:\nAn IPO should not be treated as equivalent to immediate DPI. It is better thought of as a liquidity transition event. The key questions are:\n- how much stock can actually be sold and when?\n- what ownership remains after listing?\n- what is the manager's sell discipline after the company becomes public?\n- how much of the marked gain is truly realized versus still exposed to market risk?\n\nThis is why IPO-heavy portfolios can still have lower realized DPI than the narrative of 'successful exits' suggests.",
+    },
+    {
+      type: "teaching",
+      title: "Strategic sale: often cleaner than IPO, but not always simpler",
+      content:
+        "Strategic M&A is often the cleanest venture liquidity path because it can convert ownership into cash more directly than a public listing. But allocators should still avoid treating M&A as automatically simple.\n\nWhat makes strategic sale attractive:\n- clearer monetization timeline\n- less post-event market exposure if consideration is mostly cash\n- potentially faster conversion of company success into fund distributions\n\nWhat still matters:\n- whether the consideration is cash, stock, or mixed\n- whether earn-outs, holdbacks, or other contingent elements reduce payout certainty\n- whether preferences or stack complexity change how the proceeds are actually split\n- whether the sale price reflects competitive tension or strategic necessity\n\nWhat often goes wrong:\n- the headline transaction value is quoted without enough clarity on what the fund actually receives\n- contingent consideration delays or weakens cash realization\n- stock consideration imports public-market exposure back into the exit\n\nAllocator implication:\nStrategic sale is often more DPI-friendly than IPO, but it still requires waterfall-aware and consideration-aware analysis. The LP should care about the cleanliness of proceeds, not just the existence of an acquisition headline.",
+    },
+    {
+      type: "teaching",
+      title: "Tender offers and private secondary liquidity: useful, but not the same as full exit",
+      content:
+        "Tender offers and secondary transactions matter because they have become a more important source of venture liquidity, especially as companies stay private longer.\n\nWhat they can do:\n- provide partial liquidity before a full exit\n- let investors, founders, or employees monetize some exposure\n- create pricing signals in otherwise illiquid periods\n- reduce pressure to force a premature IPO or sale\n\nWhy allocators should still be careful:\n- tenders are often partial, not full monetization events\n- the size of the liquidity may be limited relative to the fund's position\n- the price may be informative without being broadly market-clearing\n- tender or secondary activity does not necessarily mean the company is close to full exit\n\nAllocator implication:\nA tender can be highly useful, especially when it generates real cash and validates a portion of the mark. But it should not be confused with a complete liquidity solution. The right question is:\n- how much of the position was monetized?\n- at what price and on what share class?\n- what remains unrealized afterward?\n- does the tender improve confidence in fair value, or mainly improve the fund's ability to realize some proceeds?\n\nThis distinction is critical for interpreting venture DPI and remaining NAV simultaneously.",
+    },
+    {
+      type: "example",
+      title: "Worked example 1: same company, different liquidity quality",
+      content:
+        "Assume a venture fund owns a highly appreciated position in a strong late-stage private company.\n\nScenario A:\n- the company completes an IPO\n- the mark steps up\n- most shares remain locked for a period\n- the manager expects to sell over time after the lockup expires\n\nScenario B:\n- the company remains private\n- a structured tender allows a portion of shares to be sold at an attractive price\n- the fund monetizes part of the position but retains a large remainder\n\nAllocator analysis path:\n\n**Step 1: separate valuation from liquidity**\nBoth scenarios can improve confidence in value, but they do so differently.\n\n**Step 2: compare monetization quality**\nThe IPO is more visible and may eventually create deeper liquidity, but it still leaves significant market-risk exposure before full realization. The tender creates immediate partial cash, but not a full exit.\n\n**Step 3: interpret fund-level impact**\nScenario A may improve reported NAV more quickly than DPI. Scenario B may improve DPI modestly while leaving a large unrealized tail.\n\n**Step 4: update allocator expectations**\nNeither path is equivalent to a fully clean sale. The LP should describe both as partial progress toward monetization, not as fully realized outcomes.\n\nAllocator lesson:\nLiquidity quality matters as much as liquidity headline. A visible event is not always the same as a clean realization.",
+    },
+    {
+      type: "teaching",
+      title: "Recapitalizations and synthetic liquidity: cash today can still mean risk tomorrow",
+      content:
+        "Some venture-backed companies or later-stage situations generate liquidity through recapitalization or related balance-sheet events rather than through full sale or public listing.\n\nThese situations can include:\n- debt-funded distributions\n- ownership restructurings\n- partial sponsor-style recap events\n- transactions that create cash for some holders while leaving substantial risk in the company\n\nWhy allocators should care:\n- recap-generated cash can improve DPI without fully derisking the position\n- additional leverage can change the risk profile of the remaining ownership\n- the headline of 'liquidity event' may sound cleaner than the economic reality\n\nAllocator implication:\nThe LP should ask whether cash was created through true value crystallization or through financial engineering that leaves meaningful residual risk. Recaps can be rational. But they should not be confused with clean exit quality.\n\nThis mirrors a broader lesson from private markets: not all distributions mean the same thing economically. In venture, recap cash can be helpful, but it often deserves a different confidence weight than an all-cash strategic sale.",
+    },
+    {
+      type: "teaching",
+      title: "Long private duration: when good companies stay illiquid",
+      content:
+        "One of the biggest practical changes in venture over the last cycle has been the longer duration of private company ownership. Strong companies can remain private for far longer than older venture models assumed.\n\nWhy this matters to allocators:\n- realized DPI may lag far behind mark appreciation\n- private secondary and tender markets become more relevant\n- reserve needs may persist longer\n- manager sell discipline becomes more important in partial-liquidity windows\n- benchmark interpretation becomes more dependent on mark quality\n\nA long private hold is not automatically a problem. In some cases, it can be value-maximizing if the company compounds strongly while private. But allocators should not confuse long-duration unrealized value with near-liquidity.\n\nAllocator implication:\nThe right question is not simply 'is the company strong?' It is 'how long might this value remain private, and what realistic monetization paths exist before a full exit?' That distinction matters for pacing, liquidity expectations, and confidence in unrealized performance.",
+    },
+    {
+      type: "teaching",
+      title: "Exit timing is not just market timing. It is governance, discipline, and liquidity judgment",
+      content:
+        "Managers often describe exits as market-dependent, which is partly true. But exit timing also reveals discipline.\n\nExamples of real manager judgment:\n- whether to support a company staying private longer rather than forcing an exit\n- whether to sell stock after an IPO gradually or aggressively\n- whether to participate in a tender or hold through it\n- whether to accept a strategic sale that is good but not perfect\n- whether to keep backing a company whose mark is high but exit clarity remains weak\n\nAllocator implication:\nExit behavior should be read as a governance and judgment signal, not merely as a reaction to market windows. A disciplined manager should be able to explain:\n- what makes an IPO path attractive enough\n- when partial liquidity is worth taking\n- when holding for more upside is justified\n- how they think about the tradeoff between maximizing gross outcome and creating realizable LP economics\n\nThis is one of the best places to test whether a GP thinks like a steward of fund economics or mainly like a perpetual company backer.",
+    },
+    {
+      type: "visual",
+      title: "Exit quality versus headline success",
+      content:
+        "**A venture exit should be judged on both outcome size and liquidity quality.**\n\n| Exit feature | What sounds good | What allocator still needs to ask |\n|---|---|---|\n| **IPO** | 'The company went public' | How much is actually monetizable, on what timeline, and with what remaining market risk? |\n| **M&A sale** | 'The company was acquired at a strong value' | Was consideration cash, stock, or contingent, and how did the stack affect payout? |\n| **Tender / secondary** | 'We generated liquidity before exit' | How much was actually sold, and how much risk remains? |\n| **Recap** | 'The fund received cash' | Was value crystallized, or was leverage layered onto the remaining risk? |\n| **Long private hold** | 'The company keeps compounding' | Is this durable value creation or just prolonged paper value with delayed realization? |\n\nThe allocator should not confuse headline success with distribution quality.",
+      caption:
+        "The best exit is not always the one with the loudest headline. It is the one that turns value into realizable economics most effectively.",
+      whyItMatters:
+        "This helps the learner distinguish exit optics from exit quality, which is the core allocator upgrade of Day 36.",
+      sourceNote:
+        "This reflects the Lesson 36 roadmap focus on IPOs, M&A, tenders, secondaries, and how each pathway should be interpreted differently at the fund level.",
+    },
+    {
+      type: "teaching",
+      title: "How exits affect benchmarking and manager evaluation",
+      content:
+        "Exits matter for allocator judgment not only because they produce cash, but because they change the confidence level around the entire portfolio and manager track record.\n\nWhy:\n- realized gains are higher-quality evidence than unrealized marks\n- realized exit distribution reveals whether earlier valuation and ownership assumptions were sound\n- a manager whose best outcomes remain largely unrealized for long periods may deserve more caution than headline TVPI suggests\n- DPI timing matters for programme liquidity, pacing, and benchmark interpretation\n\nAllocator implication:\nWhen a manager highlights strong unrealized venture performance, the LP should ask:\n- what share of value has actually been monetized?\n- what kinds of exits have produced the DPI so far?\n- are the strongest marks supported by credible partial-liquidity evidence or mostly by private financing optics?\n- how does the manager behave after IPO or partial liquidity events?\n\nThis is where venture exits become central to OCIO-style thinking. A CIO cares not just about company value creation, but about how reliably and on what timeline value becomes cash in the broader private-markets system.",
+    },
+    {
+      type: "teaching",
+      title: "Common allocator mistakes in venture exit analysis",
+      content:
+        "Several predictable mistakes recur when allocators treat exits too casually.\n\n**Mistake 1: equating IPO with full realization**\nAn IPO often improves mark visibility more quickly than it improves DPI.\n\n**Mistake 2: equating tender activity with full liquidity**\nTenders are often partial and may leave most of the economic exposure outstanding.\n\n**Mistake 3: treating M&A headline value as identical to clean cash proceeds**\nStock consideration, holdbacks, or stack effects can alter realized economics meaningfully.\n\n**Mistake 4: underestimating long private duration**\nA valuable company can remain illiquid far longer than older fund models assumed.\n\n**Mistake 5: treating recap cash as equivalent to full derisking**\nSynthetic liquidity can improve DPI without eliminating substantial risk.\n\n**Mistake 6: evaluating venture managers on marks without understanding monetization behavior**\nA manager's sell discipline, tender behavior, and exit timing judgment matter materially.\n\nThe upgraded allocator instinct should now be: every exit headline must be translated into liquidity quality, timing, and actual fund-level monetization.",
+    },
+    {
+      type: "example",
+      title: "Worked example 2: a manager with great marks but slow DPI",
+      content:
+        "Assume a venture manager has a high unrealized TVPI driven by several late-stage companies. Over the last two years:\n- one company completed an IPO but remains only partially monetized\n- another executed a tender that monetized a modest slice of the position\n- a third remains private at a high mark with no clean near-term exit path\n- realized DPI remains lower than peers despite strong headline NAV\n\nAllocator analysis path:\n\n**Step 1: identify value versus liquidity**\nThe portfolio may genuinely contain strong assets. That does not mean the liquidity profile is strong.\n\n**Step 2: classify each path**\nThe IPO created visibility but not full realization. The tender created partial cash. The private hold remains mainly a paper gain.\n\n**Step 3: assess manager behavior**\nDid the GP show sell discipline after IPO? Did it use the tender well? Does it have a coherent plan for the long private hold, or is it mainly relying on continued mark strength?\n\n**Step 4: update benchmark confidence**\nThe high TVPI may still be real, but the LP should attach lower confidence to near-term monetization than the headline return suggests.\n\nAllocator lesson:\nThis is why exit analysis is indispensable. Two managers can show similar venture NAV and very different liquidity quality.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: allocator- and practitioner-oriented venture materials on IPO exits, M&A, secondaries, tenders, and the increasing duration of private-company holding periods; venture portfolio-construction resources on realization timing, post-IPO sell discipline, and partial-liquidity interpretation; institutional venture diligence materials linking exit pathways to DPI quality, valuation confidence, and broader programme liquidity. The goal is to teach venture exit analysis as a fund-economics discipline rather than as generic celebration of company success.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a GP saying several companies are approaching liquidity",
+      content:
+        "The GP says: 'We have several strong companies approaching liquidity.'\n\nWeak LP response: 'That is encouraging. It sounds like the fund should begin realizing meaningful value soon.'\n\nWhy it is weak: it treats all liquidity paths as economically similar and ignores the difference between IPO transition, strategic sale, partial tender, recapitalization, and prolonged private holding.\n\nStrong LP response: 'Helpful. Please break down what kind of liquidity each company is approaching, how much of the position is realistically monetizable in each case, what the expected timeline is, and how much residual exposure will remain afterward. We are trying to separate visibility events from actual DPI-quality realization.'\n\nWhy it is strong: it turns vague exit optimism into concrete questions about liquidity quality, timing, and fund-level monetization.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what exit-path analysis can and cannot tell you",
+      content:
+        "Exit-path analysis can tell you how likely value is to become realizable, how clean or partial the liquidity path is, and whether reported venture gains deserve high or low confidence as future DPI. It can also reveal whether a manager has good sell discipline and realistic exit judgment rather than simply relying on continued mark strength.\n\nBut exit-path analysis cannot guarantee timing, protect against post-IPO volatility, or fully resolve whether the highest-marked private companies will exit on attractive terms. It also cannot replace broader work on business quality, ownership, or financing structure.\n\nThe allocator should therefore use this lesson as a monetization framework. It improves realism about venture liquidity. It does not eliminate uncertainty.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: classify venture exit quality",
+      content:
+        "Take five hypothetical portfolio companies and assign each one to the most likely near-term liquidity path: IPO, strategic sale, tender/secondary, recapitalization, or long private hold.\n\nFor each company, write a short allocator note under five headings:\n\n1. **Likely path to liquidity**\n2. **Why that path is plausible**\n3. **Main risk to realization**\n4. **How much of the current value should be treated as near-cash versus long-duration paper value**\n5. **What evidence would most improve confidence in the path**\n\nThen answer three questions:\n- Which path deserves the highest confidence as a source of near-term DPI, and why?\n- Which path is most vulnerable to valuation illusion rather than monetization?\n- What one follow-up question would you ask the GP first across all five companies?\n\nFinal task:\nWrite a short allocator memo titled 'Why venture exit visibility is not the same as venture liquidity.'",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal exit questions",
+      content:
+        "1. 'When you say a company is approaching liquidity, what exact path do you mean: IPO, M&A, tender, recap, or something else?'\n\n2. 'How much of the position is realistically monetizable on the first liquidity event, and what residual exposure typically remains?' \n\n3. 'Can you show how your past IPO exits translated into actual DPI timing rather than just initial mark recognition?' \n\n4. 'When you choose to hold through a tender or post-IPO period rather than sell more aggressively, what economic test are you applying?' \n\n5. 'Across your strongest unrealized positions, which ones have the cleanest exit path and which are most dependent on continued valuation support without near-term liquidity?'",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 36 should change venture diligence",
+      content:
+        "After Day 36, the learner should stop treating 'liquidity' as a generic positive and start classifying what type of liquidity is actually in sight, how much cash it is likely to produce, how much residual risk remains, and how much confidence the fund should attach to the path. That is a meaningful improvement in venture allocator judgment.\n\nThis shift should sharpen diligence in several ways. It should make the learner more careful with IPO language, more realistic about tenders and secondaries, more sensitive to the difference between value and realizability, and better able to connect venture manager evaluation to programme-level liquidity planning. In venture, exits are not just celebratory endpoints. They are one of the main tests of whether paper value was ever truly economically real.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d36q1",
+      type: "multiple-choice",
+      prompt:
+        "Why is an IPO not the same thing as immediate full realization for a venture fund?",
+      options: [
+        "Because IPOs are not real liquidity events",
+        "Because lockups, staged selling, and post-listing market risk can delay or alter actual monetization",
+        "Because venture funds are prohibited from selling after IPO",
+        "Because IPOs eliminate all remaining price risk",
+      ],
+      correctAnswer:
+        "Because lockups, staged selling, and post-listing market risk can delay or alter actual monetization",
+    },
+    {
+      questionId: "d36q2",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of a tender or private secondary transaction?",
+      options: [
+        "It is always equivalent to a full exit",
+        "It can provide useful partial liquidity and pricing evidence, but it is not the same as complete monetization",
+        "It is irrelevant unless the company later goes public",
+        "It automatically proves the current mark for every share class",
+      ],
+      correctAnswer:
+        "It can provide useful partial liquidity and pricing evidence, but it is not the same as complete monetization",
+    },
+    {
+      questionId: "d36q3",
+      type: "multiple-choice",
+      prompt:
+        "Why should allocators evaluate strategic M&A exits carefully even when the headline sale price looks attractive?",
+      options: [
+        "Because all acquisitions are stock-only transactions",
+        "Because consideration mix, contingent payouts, and stack effects can change actual realized proceeds materially",
+        "Because M&A never produces DPI",
+        "Because venture-backed companies cannot be acquired for cash",
+      ],
+      correctAnswer:
+        "Because consideration mix, contingent payouts, and stack effects can change actual realized proceeds materially",
+    },
+    {
+      questionId: "d36q4",
+      type: "multiple-choice",
+      prompt:
+        "What is the best allocator description of a recapitalization-based liquidity event?",
+      options: [
+        "It always means the company has fully derisked",
+        "It can create cash for investors, but may leave substantial residual risk and should not be treated as equivalent to a clean sale",
+        "It is the same as a public-market sell-down",
+        "It eliminates the need to analyze remaining leverage",
+      ],
+      correctAnswer:
+        "It can create cash for investors, but may leave substantial residual risk and should not be treated as equivalent to a clean sale",
+    },
+    {
+      questionId: "d36q5",
+      type: "multiple-choice",
+      prompt:
+        "Why does long private duration matter for venture allocators?",
+      options: [
+        "Because strong companies staying private longer can delay DPI even when marks are rising",
+        "Because private companies cannot create value until they are public",
+        "Because duration matters only for biotech and not software",
+        "Because long private duration automatically improves liquidity quality",
+      ],
+      correctAnswer:
+        "Because strong companies staying private longer can delay DPI even when marks are rising",
+    },
+    {
+      questionId: "d36q6",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of a manager saying several companies are 'approaching liquidity'?",
+      options: [
+        "The fund should soon convert most unrealized value into cash",
+        "The allocator should ask what type of liquidity each company is approaching and how much of each position is actually likely to be monetized",
+        "All liquidity paths can be evaluated the same way",
+        "The statement is enough to improve benchmark confidence materially",
+      ],
+      correctAnswer:
+        "The allocator should ask what type of liquidity each company is approaching and how much of each position is actually likely to be monetized",
+    },
+    {
+      questionId: "d36q7",
+      type: "short-response",
+      prompt:
+        "Explain why venture exit visibility is not the same as venture liquidity. Write two to four sentences.",
+      modelAnswer:
+        "A company can have a visible path to IPO, tender activity, or strategic interest without converting most of the fund's value into cash immediately. Lockups, partial liquidity, contingent consideration, and residual ownership can all leave substantial unrealized exposure in place. The allocator should therefore separate visibility of an exit path from the actual quality and timing of monetization.",
+    },
+    {
+      questionId: "d36q8",
+      type: "short-response",
+      prompt:
+        "A GP says several portfolio companies are approaching liquidity. What are the three most important follow-up questions you should ask after this lesson?",
+      modelAnswer:
+        "First, I would ask what exact liquidity path is in view for each company, such as IPO, M&A, tender, recap, or continued private holding. Second, I would ask how much of each position is realistically monetizable on the first event and what residual exposure would remain afterward. Third, I would ask how the manager has behaved in similar past situations, including post-IPO selling, tender participation, and the balance between maximizing gross upside and generating realizable DPI.",
+    },
+  ],
+  sources: [
+    "Allocator- and practitioner-oriented venture materials on IPOs, strategic M&A, secondaries, tenders, and the increasing duration of private-company holding periods",
+    "Venture portfolio-construction resources on realization timing, post-IPO sell discipline, and interpretation of partial-liquidity events",
+    "Institutional venture diligence materials linking exit pathways to DPI quality, valuation confidence, and programme-level liquidity realism",
+    "Industry educational materials on venture secondary markets, tenders, recapitalizations, and exit mechanics across late-stage private companies",
+    "CFA Institute and related private-markets educational materials providing context for realization timing, liquidity quality, and private-market exit discipline",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
