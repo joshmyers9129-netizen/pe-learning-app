@@ -43,7 +43,9 @@ export type LessonBlockType =
   | "weak-answer"
   | "exercise"
   | "meeting-application"
-  | "source-note";
+  | "source-note"
+  | "misconception"
+  | "summary";
 
 export interface LessonBlock {
   type: LessonBlockType;

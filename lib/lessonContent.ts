@@ -6376,6 +6376,8 @@ export const lessonContents: LessonContent[] = [
       content:
         "Preferred stock mechanics and company-level waterfalls are the second major conceptual layer allocators need to interpret venture ownership correctly. The first layer, covered in prior lessons, is understanding ownership percentage and cap table dilution. This lesson adds the translation step from ownership percentage to actual payout economics.\n\nKey points:\n- Preferred stock creates contractual claims that change payout sequencing and amounts relative to common equity\n- Liquidation preferences determine how much preferred holders receive before common participates\n- Participating preferred holders take preference amounts and then share in residual proceeds, shifting economics away from common and non-participating holders\n- Company-level waterfalls sequence claims across all security classes and determine how much of a given exit value flows to each holder\n- Allocators should model waterfalls at multiple exit values to understand at what exit levels the fund's position generates strong returns\n- Headline marks that are ownership-times-valuation without preference adjustment may overstate likely DPI in weaker exit scenarios\n\nDay 32 will extend this framework to anti-dilution provisions, pro-rata rights, and control terms, completing the core toolkit for evaluating how venture financing terms affect allocator economics.",
     },
+  ],
+  quiz: [
     {
       questionId: "d31q1",
       type: "multiple-choice",
