@@ -6485,6 +6485,270 @@ export const lessonContents: LessonContent[] = [
     "Secondary market pricing literature and practitioner resources linking position-level waterfall analysis to secondary discount dynamics",
   ],
 },
+{
+  lessonId: "day-32",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The GP says: 'We still like the company, but the new round is being done on tougher terms.' That can mean many things. For a venture-fluent allocator, it immediately raises more specific questions: Is the round down or flat? What anti-dilution protection exists? Is there a pay-to-play provision? Who controls the board after the financing? And how do those terms change both ownership and actual bargaining power? This lesson teaches the second layer of venture financing mechanics: the rights that shape dilution, future participation, and control when the company is no longer moving cleanly up and to the right.",
+    },
+    {
+      type: "framing",
+      title: "Venture terms are not just legal protection. They are dynamic economics and control.",
+      content:
+        "Day 31 taught that ownership percentage is not the same as payout percentage because preferred terms and liquidation preferences shape company-level waterfalls. Day 32 extends that logic into the next set of terms that matter once the company continues financing through weaker or more complicated outcomes. Anti-dilution, pay-to-play, protective provisions, pro rata rights, and board-control terms all affect what ownership means in practice and how investor influence changes when the company becomes stressed, capital-hungry, or strategically contested.\n\nThis matters for allocators because venture manager narratives often sound cleanest when the company is winning. The harder allocator work starts when later financings reveal who is actually protected, who must keep writing checks to preserve those protections, and who has the ability to shape the next chapter of the company. These are not edge-case legal details. They are part of the economic and control architecture of venture portfolios.\n\nThe objective of this lesson is not to make the learner a term-sheet lawyer. It is to build enough fluency that when a GP says 'the terms got tougher' or 'we maintained our rights,' the allocator can translate that into concrete implications for ownership, reserves, downside economics, and governance.",
+    },
+    {
+      type: "teaching",
+      title: "Why venture terms become most important when things stop going well",
+      content:
+        "Many venture terms feel invisible in successful companies because they do not always bind in strong outcomes. They become much more consequential in stress, middling financings, or down-round situations.\n\nThat is precisely why allocators should care. In top-performing companies, upside often overwhelms structural nuance. In weaker companies, structural nuance can dominate the economics.\n\nTerms matter because they shape:\n- how dilution is allocated when a company raises capital below prior expectations\n- whether investors must continue supporting the company to keep their protections\n- who has consent rights over future financings, exits, and major corporate actions\n- whether earlier ownership can be preserved or is forcibly repriced\n- how much influence a manager retains as the company moves into a more complex state\n\nThe allocator should therefore think of these terms as stress-case venture economics. They do not replace company quality or sourcing edge. But they often determine how much of that edge survives when a company encounters financing difficulty or strategic dispute.",
+    },
+    {
+      type: "visual",
+      title: "Term-sheet layer two: what changes after basic ownership and preference",
+      content:
+        "**Once the learner understands ownership and liquidation preference, the next layer is how future financings change both economics and control.**\n\n| Term family | Main function | Why allocator should care |\n|---|---|---|\n| **Anti-dilution** | Reprices earlier investors economically when later shares are sold more cheaply | Ownership and economics can shift materially in down rounds |\n| **Pay-to-play** | Forces investors to keep funding to preserve rights or economics | Reserve capacity and conviction become binding |\n| **Pro rata / major investor rights** | Shapes access to future rounds and information | Rights only matter if usable where it counts |\n| **Protective provisions** | Gives consent rights over major actions | Control can move without a simple change in ownership percentage |\n| **Board rights** | Determines who can shape company decisions under stress | Governance can matter as much as economics in difficult cases |\n\nThe allocator should see these terms as the link between ownership today and bargaining power tomorrow.",
+      caption:
+        "Day 31 explained who gets paid first. Day 32 explains who gets protected, diluted, or empowered in the next financing.",
+      whyItMatters:
+        "The strongest venture allocators do not stop at payout waterfalls. They also understand how later financings reshape both economics and control.",
+      sourceNote:
+        "This visual operationalizes the Lesson 32 blueprint's focus on anti-dilution, pro rata, control rights, and term-driven allocator implications.",
+    },
+    {
+      type: "teaching",
+      title: "Anti-dilution: the basic allocator intuition",
+      content:
+        "Anti-dilution provisions are designed to protect earlier preferred investors when the company later issues shares at a lower price than those investors paid. The simplest allocator intuition is that anti-dilution partially rewrites the economic bargain of the earlier round when the next round is worse.\n\nWhy this matters:\n- down rounds do not just hurt optics and valuation\n- they can also change the distribution of ownership and economic claims among investors\n- anti-dilution protection can cushion earlier investors while making the impact harsher for common and less protected holders\n\nFrom an allocator perspective, anti-dilution is not just a technical adjustment. It affects:\n- how severe the economic penalty is in a weak financing\n- how later ownership should be interpreted\n- how supportive or punitive the financing is to founders, employees, and prior common-like holders\n- whether a manager's prior positions remain economically attractive after repricing\n\nThe critical lesson is that a down round is not one event. It is a repricing event filtered through negotiated protections. The allocator should ask not only whether the round was down, but how that downside was allocated across the stack.",
+    },
+    {
+      type: "teaching",
+      title: "Weighted-average anti-dilution: the baseline protection",
+      content:
+        "The most common conceptual starting point is weighted-average anti-dilution. The core idea is that if the company issues new shares at a lower price, the earlier investor's conversion economics are adjusted, but not as severely as if the entire prior round were repriced to the new level.\n\nAllocator intuition:\n- weighted-average protection softens the blow of a down round for earlier preferred investors\n- the magnitude of the adjustment depends on both the lower price and the amount of new capital raised\n- the more modest the dilutive issuance relative to the existing capitalization, the smaller the repricing effect tends to be\n\nThis is usually considered more balanced than the harshest alternatives because it recognizes that not every down issuance should fully reset the old investor's economics. For allocators, the important point is not memorizing the full formula. It is understanding that weighted-average anti-dilution makes dilution path-dependent and size-dependent.\n\nThat means two down rounds at the same headline price can have very different economic consequences depending on how much capital is raised and how the capitalization definition is constructed. The allocator should always ask whether the protection is broad-based or narrow-based and how meaningful the issuance is relative to the existing cap table.",
+    },
+    {
+      type: "teaching",
+      title: "Broad-based versus narrow-based weighted average",
+      content:
+        "Once the allocator understands weighted-average anti-dilution in principle, the next distinction is broad-based versus narrow-based.\n\nA **broad-based weighted-average** formula generally includes a wider share base in the calculation, often resulting in a less extreme adjustment in favor of earlier investors.\n\nA **narrow-based weighted-average** formula includes a smaller denominator, which can make the anti-dilution adjustment more protective for the earlier investor and more punitive to others.\n\nAllocator interpretation:\n- broad-based tends to be viewed as the more moderate structure\n- narrow-based gives stronger protection to the protected class\n- both are still less aggressive than full ratchet, but the difference can still matter economically in stressed financings\n\nThe LP does not need to run the formula in every case. But they do need to know that 'weighted average' is not one thing. A manager who says anti-dilution is weighted-average without specifying the type may be giving an incomplete economic description.\n\nThis is another example of a pattern that repeats throughout the venture curriculum: the headline label is often directionally true but economically incomplete.",
+    },
+    {
+      type: "teaching",
+      title: "Full ratchet anti-dilution: the bluntest form of protection",
+      content:
+        "Full ratchet anti-dilution is the clearest way to understand why financing terms can dramatically redistribute economics in a down round. Under full ratchet logic, if the company later issues shares at a lower price, the earlier investor's conversion economics are adjusted as if the entire original preferred investment had been made at that new lower price, regardless of the size of the new issuance.\n\nAllocator intuition:\n- full ratchet is highly protective for the earlier investor\n- it can be highly punitive to founders, employees, and less protected investors\n- it can create severe ownership shifts even when the down round is not especially large in dollars\n\nThis is why full ratchet is usually viewed as much more aggressive than weighted-average structures. For allocators, the main lesson is not that full ratchet is common everywhere. It is that the severity of anti-dilution protection can differ materially, and those differences are not cosmetic.\n\nA manager investing into rounds with aggressive anti-dilution protection may be buying downside protection at the expense of other stakeholders. That may be sensible in some opportunity or distressed venture contexts, but it should be understood as a different economic posture than a cleaner common-upside story.",
+    },
+    {
+      type: "example",
+      title: "Worked example 1: weighted average versus full ratchet intuition",
+      content:
+        "Assume an earlier investor bought preferred stock at $10 per share. The company later raises a down round at $5 per share.\n\nUnder **weighted-average anti-dilution**, the earlier investor's conversion price would move down, but usually not all the way to $5, because the adjustment reflects both the lower price and the relative size of the new issuance.\n\nUnder **full ratchet anti-dilution**, the earlier investor's effective conversion price could reset all the way to $5, regardless of how many new shares were issued.\n\nAllocator interpretation:\nThe difference is enormous. Weighted average says, in effect, 'the earlier investor should receive some protection because the new round was worse.' Full ratchet says, in effect, 'the earlier investor should be treated as though the original price had been the lower price all along.'\n\nThis is why a manager saying 'we have anti-dilution protection' is only the beginning of the story. The LP needs to know what kind, how strong, and who absorbs the resulting pain.",
+    },
+    {
+      type: "teaching",
+      title: "Pay-to-play: protection that requires writing another check",
+      content:
+        "Pay-to-play provisions are among the most allocator-relevant venture terms because they connect legal rights directly to reserve capacity and follow-on discipline.\n\nThe basic idea is simple:\n- if the investor wants to preserve certain rights, economics, or preferred status in a future financing\n- then the investor must participate in the new round, often pro rata or at another specified level\n\nWhy this matters:\n- rights are no longer passive protections\n- they become contingent on the investor's willingness and ability to continue funding the company\n- reserve capacity and conviction become binding constraints\n\nAllocator interpretation:\nPay-to-play exposes an important reality of venture. Some protections are not free. They require the fund to keep investing, often in a company that is raising capital under less attractive circumstances than before.\n\nThis is why pay-to-play should be treated as a reserve and portfolio-construction term, not merely a legal one. A manager can have strong formal protections on paper but still lose them if the fund lacks reserves, if the GP has lost conviction, or if the opportunity cost of defending the position is too high.",
+    },
+    {
+      type: "teaching",
+      title: "Pro rata rights, major-investor rights, and why access is not enough",
+      content:
+        "Day 29 introduced pro rata as an ownership-defense tool. Day 32 places it alongside the broader category of future-participation and information rights.\n\n**Pro rata rights** help preserve ownership in future rounds.\n**Major-investor rights** may include information rights, participation rights, and other privileges reserved for investors above a certain ownership or investment threshold.\n\nAllocator implications:\n- rights matter because they determine whether the fund can continue to participate meaningfully in winners\n- rights can also change how much information the manager receives during the life of the company\n- thresholds matter: falling below a major-investor threshold can weaken both access and visibility\n\nThe key allocator insight is that these rights can erode. If the fund dilutes below the relevant threshold, or if the documents attach rights only to certain holders, the manager may gradually lose informational and economic leverage. That means ownership slippage is not only about value capture. It can also reduce governance visibility and future influence.\n\nThis is another reason venture allocators should not separate ownership, reserves, and control into independent topics. They compound.",
+    },
+    {
+      type: "teaching",
+      title: "Protective provisions: control rights without majority ownership",
+      content:
+        "One of the most underappreciated features of venture financings is that control can move materially even when no investor owns anything close to a majority of the company.\n\nProtective provisions are consent rights that give preferred investors or specific classes the ability to block or approve certain major corporate actions. These can include:\n- issuing new securities\n- amending governing documents\n- selling the company\n- changing board composition\n- increasing option pools\n- taking certain strategic actions that affect the rights of the class\n\nAllocator relevance:\n- a manager may have limited headline ownership but still hold meaningful blocking or consent power\n- conversely, a manager may own a visible stake but have less influence than the ownership percentage suggests if protective rights sit elsewhere\n- later financings can reallocate these rights even without dramatic changes in headline ownership\n\nThe allocator takeaway is that venture governance is contractual control. This should sound familiar from Day 21. The difference here is that the contractual control sits at the company financing level rather than the fund-document level. Either way, the same allocator instinct applies: ask who can actually stop or shape the next decision.",
+    },
+    {
+      type: "teaching",
+      title: "Board seats, observer rights, and practical control",
+      content:
+        "Board rights matter because information and influence often flow through them before they show up in cap-table changes or financing headlines.\n\nCommon governance positions include:\n- voting board seats\n- observer seats\n- informal influence through syndicate leadership even without formal control\n\nAllocator interpretation:\n- a board seat can increase visibility and influence, but also creates responsibility and conflict complexity\n- an observer seat provides access without the same formal authority\n- loss of board presence over time may indicate weakening influence, even if the fund still owns shares\n\nThe allocator should not romanticize board seats. A board seat does not guarantee good decisions, and some investors influence outcomes heavily through syndicate position rather than seat count alone. But governance placement still matters materially in difficult financings, CEO transitions, or strategic disputes.\n\nThis is why control rights belong in the allocator's venture toolkit. They affect not only theoretical influence, but also information quality, negotiation leverage, and the manager's ability to protect the fund's economics when the company is under pressure.",
+    },
+    {
+      type: "visual",
+      title: "Economic rights versus control rights",
+      content:
+        "**Venture terms often split into two linked categories: who gets paid and who gets to decide.**\n\n| Right type | Typical examples | Main allocator question |\n|---|---|---|\n| **Economic rights** | Liquidation preference, anti-dilution, participation, pro rata | How does this change payout, dilution, or ownership retention? |\n| **Control rights** | Board seats, observer rights, protective provisions, class consents | Who can shape or block the next financing, exit, or strategic move? |\n\nA manager can be weak in one dimension and strong in the other. Allocators need to track both.",
+      caption:
+        "Fund economics can weaken even when governance is strong, and governance can weaken even when nominal ownership remains visible.",
+      whyItMatters:
+        "This visual helps the learner stop collapsing all venture terms into one bucket. Some rights change cash outcomes. Others change bargaining power and information flow.",
+      sourceNote:
+        "This reflects the Lesson 32 blueprint's emphasis on both economic and control rights inside venture term structures.",
+    },
+    {
+      type: "teaching",
+      title: "Why these terms matter for marks and venture reporting",
+      content:
+        "The learner should also understand that these terms affect more than downside legal scenarios. They also affect how venture portfolios should be reported and interpreted in normal LP monitoring.\n\nExamples:\n- a down round with strong anti-dilution protection may leave one investor economically less hurt than the headline valuation drop suggests\n- a financing with aggressive preferences may make the latest round price a weak proxy for common-equity value\n- loss of major-investor status or board rights may reduce the manager's future information advantage even if the position remains marked attractively\n- a pay-to-play decision can reveal both reserve strength and genuine conviction, which should inform allocator judgment beyond the specific company\n\nThis is why venture reporting should not be read as if the latest financing price cleanly updates all positions proportionally. Terms matter. Security type matters. Control rights matter. The LP should use these concepts to pressure-test whether marks and narratives remain economically coherent after financing complexity increases.",
+    },
+    {
+      type: "teaching",
+      title: "Common allocator mistakes with rights and control terms",
+      content:
+        "Several mistakes recur when allocators are still learning this part of venture finance.\n\n**Mistake 1: treating anti-dilution as a technicality**\nIt can materially redistribute pain in a down round.\n\n**Mistake 2: assuming rights have value without reserve capacity**\nPay-to-play and pro rata become much less meaningful if the fund cannot or will not write the next check.\n\n**Mistake 3: equating ownership with control**\nProtective provisions and board rights can matter more than simple ownership percentage.\n\n**Mistake 4: ignoring threshold-based erosion**\nMajor-investor rights can weaken quietly as ownership falls below thresholds.\n\n**Mistake 5: assuming the latest round's headline economics apply cleanly to all holders**\nComplex rights mean the same financing can affect different holders very differently.\n\nThe upgraded allocator instinct should now be: every difficult venture round changes not only valuation, but also the relative economics and control of the participants. If a GP cannot explain those changes clearly, the LP should be cautious.",
+    },
+    {
+      type: "example",
+      title: "Worked example 2: a difficult financing reveals both economics and control",
+      content:
+        "Assume a venture-backed company is raising a new round at a lower price than the prior round. The existing lead investor has broad-based weighted-average anti-dilution protection, pro rata rights, a board seat, and pay-to-play obligations if it wants to preserve full preferred status.\n\nAllocator analysis path:\n\n**Step 1: identify the economic protection**\nThe investor's anti-dilution rights partially cushion the repricing.\n\n**Step 2: identify the cost of preserving rights**\nIf pay-to-play applies, the investor may need to commit additional capital to maintain those protections fully.\n\n**Step 3: identify the control position**\nThe board seat and protective provisions may let the investor shape the financing process more than its raw ownership suggests.\n\n**Step 4: connect to fund-level implications**\nThe financing is not just a weaker valuation event. It is also a reserve deployment decision and a governance test. A fund with insufficient reserves or weaker rights would experience the same company very differently.\n\nAllocator lesson:\nThis is why venture LPs should not reduce difficult financings to 'up round versus down round.' The real question is how the terms changed ownership, economics, and control for the fund.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: NVCA and related venture-finance educational materials on anti-dilution, pay-to-play, major-investor rights, protective provisions, and board governance; practitioner resources explaining broad-based versus narrow-based weighted average and full-ratchet anti-dilution intuition; allocator-oriented venture materials linking rights structures to reserve strategy, control, and mark interpretation. The purpose is allocator fluency in the economic and governance consequences of venture term structures rather than drafting expertise.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a GP saying the round terms are tougher",
+      content:
+        "The GP says: 'The new round is tougher, but we still support the company.'\n\nWeak LP response: 'Understood. If you still support the company, then the financing probably remains economically reasonable.'\n\nWhy it is weak: it treats support as a generic positive signal and ignores whether tougher terms changed dilution, rights, reserve needs, and control.\n\nStrong LP response: 'Please walk us through exactly how the terms got tougher. We would like to understand the anti-dilution treatment, whether pay-to-play applies, what rights or protections are preserved only if you continue funding, and whether the financing changed your board or consent position. We are trying to separate generic support language from the actual economics and control consequences.'\n\nWhy it is strong: it turns vague financing commentary into concrete allocator analysis of downside allocation and bargaining power.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what rights analysis can and cannot tell you",
+      content:
+        "Rights analysis can tell you a great deal about how future financings may redistribute economics and control among stakeholders. It can clarify whether a manager is protected, whether reserve capacity is likely to become binding, and whether nominal ownership meaningfully overstates or understates real influence.\n\nBut rights analysis cannot by itself tell you whether a company deserves additional capital, whether the manager is making the right follow-on decision, or whether board control will be used skillfully. Strong rights can protect a weak company, and weak rights can still sit inside a successful company. The allocator still needs underwriting judgment.\n\nThe correct use of this lesson is therefore interpretive. It improves understanding of how terms alter outcomes. It does not replace evaluating company quality, market opportunity, or manager edge.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: compare three difficult financing structures",
+      content:
+        "Work through the following cases and explain the economic and control consequences in allocator terms.\n\n**Scenario 1: weighted-average down round**\nA company raises a modestly sized down round. Existing preferred investors have broad-based weighted-average anti-dilution. Explain who is protected, who still bears pain, and why the magnitude of the issuance matters.\n\n**Scenario 2: full-ratchet repricing**\nA company raises a small but sharply down round. Earlier investors have full-ratchet protection. Explain why the economic pain can shift dramatically to common and less protected holders even if the new-money round is not large.\n\n**Scenario 3: pay-to-play financing**\nAn existing investor can preserve preferred protections only by participating in the new round. Explain why this turns rights into a reserve-capacity question and what the allocator should infer if the manager participates or declines.\n\nFor each case, answer:\n- What is the key economic protection?\n- What is the key control or leverage implication?\n- What single follow-up question would you ask the GP first?\n\nFinal task:\nWrite a short allocator memo titled 'What this financing changed besides the valuation.'",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal questions on venture rights and control",
+      content:
+        "1. 'In your weaker financings, what has mattered more economically: anti-dilution protection, reserve capacity, or board-level influence, and why?'\n\n2. 'How often do your positions lose major-investor or information rights as ownership dilutes over time, and how much does that impair future decision-making?' \n\n3. 'Can you show a case where pay-to-play changed your reserve decision materially?' \n\n4. 'When you say you maintained your rights in a difficult round, which rights specifically do you mean: economic protections, pro rata access, board representation, or consent rights?' \n\n5. 'How do you reflect control-rights changes in your monitoring and valuation interpretation after a difficult financing?'",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 32 should change venture diligence",
+      content:
+        "After Day 32, the learner should stop hearing venture financing terms as narrow legal jargon and start hearing them as a map of who absorbs downside, who must keep funding to preserve protections, and who can still influence what happens next. That is a meaningful upgrade in allocator fluency.\n\nThis change should sharpen diligence in several ways. It should make the learner more attentive to anti-dilution severity, more realistic about the cost of preserving rights, more careful about equating ownership with control, and better prepared to interpret later lessons on venture marks, down rounds, and crossover dynamics. In venture, rights are not an appendix to economics. They are one of the main ways economics are expressed.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d32q1",
+      type: "multiple-choice",
+      prompt:
+        "Why is anti-dilution allocator-relevant in venture?",
+      options: [
+        "Because it can redistribute the economic pain of a down round across stakeholders",
+        "Because it eliminates all future dilution",
+        "Because it matters only after an IPO",
+        "Because it applies only to common stock",
+      ],
+      correctAnswer:
+        "Because it can redistribute the economic pain of a down round across stakeholders",
+    },
+    {
+      questionId: "d32q2",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest intuition for weighted-average anti-dilution?",
+      options: [
+        "It fully resets the original investor's price to the new lower price regardless of round size",
+        "It partially adjusts the earlier investor's economics based on both the lower price and the relative size of the new issuance",
+        "It removes the need to understand later financing terms",
+        "It is identical to participating preferred",
+      ],
+      correctAnswer:
+        "It partially adjusts the earlier investor's economics based on both the lower price and the relative size of the new issuance",
+    },
+    {
+      questionId: "d32q3",
+      type: "multiple-choice",
+      prompt:
+        "Why is full-ratchet anti-dilution considered more aggressive than weighted-average protection?",
+      options: [
+        "Because it can reset the earlier investor's economics to the lower round price regardless of the size of the new issuance",
+        "Because it eliminates liquidation preferences entirely",
+        "Because it applies only to founders",
+        "Because it gives no protection at all in down rounds",
+      ],
+      correctAnswer:
+        "Because it can reset the earlier investor's economics to the lower round price regardless of the size of the new issuance",
+    },
+    {
+      questionId: "d32q4",
+      type: "multiple-choice",
+      prompt:
+        "Why is pay-to-play especially allocator-relevant?",
+      options: [
+        "Because it turns rights protection into a reserve-capacity and conviction decision",
+        "Because it guarantees the investor will want to keep funding the company",
+        "Because it applies only in successful up rounds",
+        "Because it removes the importance of pro rata rights",
+      ],
+      correctAnswer:
+        "Because it turns rights protection into a reserve-capacity and conviction decision",
+    },
+    {
+      questionId: "d32q5",
+      type: "multiple-choice",
+      prompt:
+        "Why can ownership percentage be a weak proxy for control in venture?",
+      options: [
+        "Because ownership never matters in governance",
+        "Because protective provisions, board seats, and consent rights can materially affect control even without majority ownership",
+        "Because only founders hold voting rights",
+        "Because all venture financings give identical governance rights",
+      ],
+      correctAnswer:
+        "Because protective provisions, board seats, and consent rights can materially affect control even without majority ownership",
+    },
+    {
+      questionId: "d32q6",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of major-investor rights?",
+      options: [
+        "They matter only for prestige and reputation",
+        "They can affect both future participation rights and information access, and may erode if ownership falls below thresholds",
+        "They replace the need for board rights",
+        "They are irrelevant once a company has raised a Series A",
+      ],
+      correctAnswer:
+        "They can affect both future participation rights and information access, and may erode if ownership falls below thresholds",
+    },
+    {
+      questionId: "d32q7",
+      type: "short-response",
+      prompt:
+        "Explain why a difficult venture financing changes more than the valuation. Write two to four sentences.",
+      modelAnswer:
+        "A difficult financing can change how dilution is allocated, whether earlier investors are protected by anti-dilution terms, whether they must keep funding the company to preserve rights, and who controls key decisions going forward. That means the round affects both economics and governance, not just the price at which new capital came in. The allocator should therefore analyze the rights reset, not just the headline valuation change.",
+    },
+    {
+      questionId: "d32q8",
+      type: "short-response",
+      prompt:
+        "A GP says a new round is being done on tougher terms. What are the three most important follow-up questions you should ask after this lesson?",
+      modelAnswer:
+        "First, I would ask what anti-dilution treatment applies and how the economic pain of the round is being allocated across holders. Second, I would ask whether pay-to-play or related participation requirements mean the fund must commit more capital to preserve its rights. Third, I would ask whether the financing changed the manager's board, consent, or major-investor position, because control can shift materially even if ownership still looks meaningful.",
+    },
+  ],
+  sources: [
+    "NVCA and related venture-finance educational materials covering anti-dilution, pay-to-play, major-investor rights, protective provisions, and board governance",
+    "Practitioner resources explaining broad-based versus narrow-based weighted-average anti-dilution and full-ratchet intuition",
+    "Allocator-oriented venture materials linking rights structures to reserve strategy, ownership retention, and control",
+    "Institutional venture diligence resources on financing-term analysis, governance rights, and post-financing interpretation",
+    "CFA Institute and industry materials providing venture finance context for security rights, dilution, and control mechanics",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
