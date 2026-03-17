@@ -5761,6 +5761,282 @@ export const lessonContents: LessonContent[] = [
     "CAIA and industry materials on venture strategy classification, manager differentiation, and stage-specific evidence",
   ],
 },
+{
+  lessonId: "day-29",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "A venture GP says: 'We backed the breakout winner early, and it became one of the best companies in the portfolio.' A public-markets-trained allocator may hear that as enough. A venture-fluent allocator asks four follow-ups immediately: 'What was your ownership at entry? What is your ownership today on a fully diluted basis? How much capital did it take to defend that ownership? And where do liquidation preferences sit ahead of you?' Those questions turn a good company story into an actual fund-economics story. This lesson builds the allocator vocabulary for cap tables, dilution, and ownership math so that venture outcomes can be analyzed in economic rather than anecdotal terms.",
+    },
+    {
+      type: "framing",
+      title: "Ownership is the position size of venture",
+      content:
+        "In public markets, position size is explicit. You know how many shares you own, what percentage of the portfolio the name represents, and how that weight changes when you trade. In venture, position size is more slippery. It is embedded in cap tables, financing rounds, option-pool adjustments, convertible instruments, pro rata rights, and exit waterfalls. That makes ownership one of the most important, and most commonly underanalyzed, parts of venture allocator work.\n\nDay 27 established that venture is a power-law game. Day 28 showed that stage exposure changes ownership opportunity, evidence quality, reserve burden, and price paid. Day 29 makes that logic mechanical. If outliers drive venture returns, and if a manager's ability to benefit from outliers depends on retained ownership, then cap-table math is not a legal sidebar. It is the transmission mechanism between being right and getting paid.\n\nThis lesson is intentionally allocator-focused. It does not teach startup fundraising tactics or corporate-law drafting. It teaches the minimum cap-table fluency required to judge manager claims about ownership, follow-ons, valuation, and eventual fund-level contribution.",
+    },
+    {
+      type: "teaching",
+      title: "Cap-table first principles: what the allocator is actually looking at",
+      content:
+        "A capitalization table is the ownership ledger of a company. It shows who owns the business, in what form, and on what assumptions. At any point in time, a cap table usually includes some combination of founder common shares, employee option pool, preferred stock from priced rounds, warrants, SAFEs, convertible notes, and other securities that may convert into equity.\n\nFor allocators, the cap table answers questions that matter directly to fund outcomes:\n- how much ownership the manager bought initially\n- how much ownership remains after financings and dilution\n- what instruments or terms sit above common equity in an exit\n- how much follow-on capital was needed to preserve economics\n- whether the manager's reported company success is likely to be meaningful at the fund level\n\nThe core allocator mistake is to treat venture company selection and venture ownership as separable topics. They are not. A manager may identify a great company and still fail to produce strong LP economics if the cap table evolves against them. Conversely, a manager with disciplined ownership retention can turn a smaller number of correct calls into stronger fund results than a broader but more diluted portfolio.",
+    },
+    {
+      type: "visual",
+      title: "The allocator's cap-table lens",
+      content:
+        "**When a GP shows a venture winner, the allocator should move through these questions in order:**\n\n| Layer | Core question | Why it matters |\n|---|---|---|\n| **Entry** | What ownership did the fund buy at first check? | Entry stake is the starting point for all later economics |\n| **Basis** | Is the quoted ownership basic or fully diluted? | Basic ownership can overstate economic participation |\n| **Dilution path** | What rounds, option-pool changes, or conversions reduced ownership? | Ownership is dynamic, not static |\n| **Defense** | Did the fund use reserves and pro rata rights to maintain exposure? | Being right early is not enough without ownership defense |\n| **Stack position** | What terms sit ahead of the stake at exit? | A company win can still produce weaker common-equity economics than expected |\n| **Fund relevance** | Can the retained stake actually move the fund? | Great company outcomes do not automatically become great fund outcomes |\n\nThis framework is meant to replace vague admiration of company logos with a repeatable allocator process for turning cap-table data into fund-level judgment.",
+      caption:
+        "In venture, ownership is not a fixed fact. It is a path-dependent economic claim that evolves round by round.",
+      whyItMatters:
+        "Most weak venture diligence discussions stop at company quality. Stronger diligence asks whether the fund owned enough, preserved enough, and sat high enough in the stack for that quality to matter economically.",
+      sourceNote:
+        "This framework synthesizes the Lesson 29 blueprint's emphasis on pre-money/post-money, fully diluted ownership, option pools, dilution, and liquidation-stack intuition into an allocator decision sequence.",
+    },
+    {
+      type: "teaching",
+      title: "Pre-money and post-money: the ownership math allocators must be fluent in",
+      content:
+        "Pre-money and post-money valuation are basic venture terms, but allocators need to understand them as ownership tools rather than glossary items.\n\n**Pre-money valuation** is the agreed equity value of the company immediately before a new financing round.\n**Post-money valuation** equals pre-money valuation plus new money invested in that round.\n\nA simple example:\n- pre-money valuation = $20M\n- new capital raised = $5M\n- post-money valuation = $25M\n\nIf the investor puts in the full $5M, that investor owns 20% post-money, because $5M / $25M = 20%.\n\nThis sounds straightforward, but the allocator needs to watch three complications:\n\n**1. Share-count basis matters**\nThe valuation is often discussed in dollar terms, but ownership is ultimately determined by share count, not just valuation headline.\n\n**2. Option pool treatment matters**\nIf the option pool is increased before the round and included in the pre-money capitalization, existing holders absorb more dilution than a casual reader might expect.\n\n**3. Convertibles matter**\nIf SAFEs or notes convert in the round, the fully diluted share count may expand materially, changing the practical ownership result.\n\nThe allocator lesson is that pre-money and post-money are not simply company-pricing language. They are the first step in determining how much of the upside the fund actually buys for its dollars.",
+    },
+    {
+      type: "teaching",
+      title: "Basic cap-table build: founders, option pool, preferred rounds, and convertibles",
+      content:
+        "A useful allocator mental model is to build the company in layers.\n\n**Layer 1: founder common equity**\nThis is the initial ownership base. At inception, founders may own nearly everything.\n\n**Layer 2: employee option pool**\nA company typically sets aside shares for current and future employees. This is economically important because option-pool creation and expansion dilute existing holders.\n\n**Layer 3: preferred stock from priced rounds**\nAs the company raises capital through seed, Series A, Series B, and later rounds, investors receive preferred shares with negotiated economics and control rights.\n\n**Layer 4: SAFEs and convertible notes**\nThese are claims that may not immediately show up as common or preferred stock but can convert later into equity and meaningfully alter the fully diluted capitalization.\n\n**Layer 5: later financing complexity**\nAdditional rounds, structured terms, warrants, secondary sales, and M&A-related issuance can all change the economics further.\n\nAllocators do not need every legal nuance. They need to recognize that ownership is being shaped by an evolving security stack, not by one simple purchase decision. That is why venture cap tables are economically richer than the common share count of a public stock position.",
+    },
+    {
+      type: "teaching",
+      title: "Basic versus fully diluted ownership",
+      content:
+        "One of the fastest ways for an allocator to get misled is to accept an ownership number without asking what basis it is quoted on.\n\n**Basic ownership** usually reflects current outstanding shares without fully incorporating every potential dilutive security.\n\n**Fully diluted ownership** attempts to reflect ownership after taking into account all shares and share-equivalents that are expected or potentially expected to convert into common equity, including employee options, SAFEs, notes, warrants, and other relevant instruments depending on the convention used.\n\nWhy the distinction matters:\n- the same investment can appear materially larger on a basic basis than on a fully diluted basis\n- option pools and convertibles can create meaningful hidden dilution\n- a manager who quotes ownership inconsistently makes longitudinal analysis harder and can unintentionally flatter outcomes\n\nFor allocator purposes, fully diluted ownership is usually the more decision-useful number because it is closer to the economic claim that will matter at exit or in a later financing. That does not mean every fully diluted convention is identical. It does mean the LP should demand clarity on what is included.\n\nA practical diligence habit is simple: every time a GP cites ownership in a winner, ask 'basic or fully diluted, and as of what date?'",
+    },
+    {
+      type: "teaching",
+      title: "The option-pool shuffle: where dilution really lands",
+      content:
+        "The option pool is one of the most important and most poorly understood sources of venture dilution. The issue is not merely that employees receive equity. That is expected and often necessary. The issue is how and when the option pool is resized relative to financing rounds.\n\nA common structure works like this:\n- the company and new investors agree the option pool should be increased\n- the pool increase happens before the new financing closes\n- that means the dilution from the larger pool falls disproportionately on existing holders, not on the new-money investors to the same degree they would bear it if the pool were added after the financing\n\nThis is sometimes referred to informally as the option-pool shuffle.\n\nAllocator relevance:\n- early investors can lose more ownership than the valuation headline alone suggests\n- ownership targets at entry may prove less durable than expected if repeated pool expansions occur\n- a GP that does not model pre-round pool expansion carefully may overestimate its future economics\n\nThis is why allocators should not stop at 'what percent did you buy?' They should ask 'what cap-table assumptions sat underneath that percentage, including option-pool size and planned expansion?' In venture, a surprisingly large amount of economic reality sits inside assumptions that can look administratively minor.",
+    },
+    {
+      type: "visual",
+      title: "Dilution map: the main ways ownership gets smaller",
+      content:
+        "**A venture fund's ownership typically declines through several recurring channels:**\n\n| Dilution source | How it works | Why allocators should care |\n|---|---|---|\n| **New priced round** | New preferred shares are issued to incoming investors | Ownership falls if the fund does not participate proportionally |\n| **Option-pool expansion** | Additional employee equity is created, often pre-financing | Existing holders may absorb more dilution than expected |\n| **SAFE / note conversion** | Previously unpriced instruments turn into equity | Fully diluted share count jumps at the priced round |\n| **Stock-based M&A** | Equity is issued to buy another company | Ownership falls even if no financing round occurs |\n| **Warrants / special issuance** | Additional rights create future share claims | Can complicate both current and exit economics |\n\nNot all dilution is bad. It can accompany value-creating growth. The allocator question is whether the fund preserves enough of the upside after dilution for the company to remain fund-relevant.",
+      caption:
+        "The key is not eliminating dilution. It is understanding which dilution is expected, which is hidden, and which the fund can defend against.",
+      whyItMatters:
+        "Many venture decks celebrate company growth while leaving the ownership path implicit. This table makes the ownership path explicit.",
+      sourceNote:
+        "This visual implements the Lesson 29 blueprint's requirement to cover option pools, dilution, fully diluted shares, and pro forma ownership in allocator-relevant form.",
+    },
+    {
+      type: "teaching",
+      title: "Pro forma ownership: the number that matters after the round closes",
+      content:
+        "Allocators should distinguish between ownership before a financing and ownership after the full round mechanics are applied. The relevant number for economic analysis is usually pro forma post-round ownership.\n\nThat number should reflect:\n- the new-money shares issued in the round\n- any option-pool top-up associated with the round\n- conversion of relevant SAFEs or notes, where applicable\n- the fund's participation or non-participation in the financing\n\nWhy this matters:\n- pre-round ownership can flatter the size of the fund's position\n- reported ownership that ignores conversion or pool changes can overstate economic participation\n- venture managers may honestly describe an entry stake that is no longer the right number for allocator interpretation\n\nPro forma ownership is therefore the better bridge from company financing to fund economics. When the learner later studies SAFE conversion, anti-dilution terms, and structured rounds, pro forma thinking becomes even more important. It is the discipline of asking: 'after all the moving pieces settle, what does the fund actually own?'",
+    },
+    {
+      type: "teaching",
+      title: "Pro rata rights: valuable, but only if they are economically usable",
+      content:
+        "Pro rata rights allow an investor to buy enough in a later financing round to maintain its ownership percentage, subject to the terms of the round and practical access. These rights matter because they can preserve a fund's economics in the rare companies that become truly important.\n\nBut allocators should resist romanticizing them.\n\nA right is not the same as a result. To be economically useful, pro rata requires:\n- enough reserves in the fund to write the check\n- willingness to concentrate more capital in the winner\n- access in the round, especially if the deal is oversubscribed or allocation is politically controlled\n- internal conviction that the company is still worth supporting at the new price and terms\n\nThe best companies are often the most expensive to defend. That means a fund may need to commit more dollars than originally expected just to hold its percentage. If the manager lacks reserves, discipline, or access, nominal pro rata rights may not save the economics.\n\nThis is why reserve strategy is inseparable from ownership analysis. A GP that advertises strong pro rata rights but cannot show consistent execution where it mattered most should be underwritten cautiously.",
+    },
+    {
+      type: "teaching",
+      title: "Ownership targets by stage: why stage and cap-table math must be linked",
+      content:
+        "Day 28 emphasized that stage changes the tradeoff among evidence, ownership opportunity, and price. Cap-table analysis makes that tradeoff concrete.\n\nAt earlier stages, managers often target higher ownership at entry because:\n- evidence is thinner, so they need more upside if they are right\n- future dilution is expected\n- later winners may require multiple rounds of defense\n\nAt later stages, managers may accept lower ownership percentages because:\n- the company is more de-risked operationally in some respects\n- the dollars invested are larger\n- the expected multiple from entry to exit may be narrower\n\nAllocator implication:\nA stated ownership target is meaningless in isolation. It has to be interpreted together with:\n- stage\n- entry price\n- expected dilution path\n- reserve burden\n- target portfolio size\n\nFor example, a 10% seed ownership target may be economically strong if the manager has reserves and the cap-table is clean. A similar-looking late-stage target can mean something very different because the dollars required, expected upside, and round complexity are different. Ownership is not a universal number. It is a stage-specific economic claim.",
+    },
+    {
+      type: "teaching",
+      title: "Reserve strategy is ownership strategy",
+      content:
+        "This is one of the most important sentences in the venture curriculum: reserve strategy is ownership strategy.\n\nA venture fund's reserve design determines:\n- which portfolio companies can be defended\n- how often the fund can maintain or improve ownership in winners\n- how concentrated the later-round exposure becomes\n- whether the manager is forced to choose between new opportunities and ownership defense\n\nThis is why allocator diligence should not treat reserves as a technical appendix. Reserve discipline is often the difference between having access to great companies and actually capturing great fund economics.\n\nToo little reserve capacity can produce chronic dilution in winners.\nToo much undisciplined reserve capacity can lead to over-support of middling companies and under-concentration in the true breakouts.\n\nA strong allocator therefore asks not only how much the manager reserves in total, but how the reserve model is linked to ownership targets, stage, and expected dilution. A weak reserve model usually shows up later as a weak ownership story.",
+    },
+    {
+      type: "teaching",
+      title: "From company outcome to fund outcome: the ownership-adjusted value bridge",
+      content:
+        "Cap-table fluency becomes most useful when translating company-level success into fund-level relevance.\n\nA simple ownership-adjusted value bridge works like this:\n\n**Step 1: start with company equity value at exit or current mark**\nThis is the gross company outcome.\n\n**Step 2: apply the fund's relevant ownership percentage**\nPreferably on a fully diluted and economically realistic basis.\n\n**Step 3: adjust mentally for the security stack**\nIf liquidation preferences or senior securities sit ahead of the stake, the common-equity intuition may be too optimistic. Lesson 31 will deepen this.\n\n**Step 4: compare to invested capital and total fund size**\nThis shows whether the position is simply a good investment or a genuinely fund-moving one.\n\n**Step 5: incorporate reserve dollars**\nA large current stake may reflect substantial follow-on capital, so the return should be interpreted against total invested cost, not only the first check.\n\nThis is what many manager presentations omit. They tell the company story, not the ownership-adjusted economics story. Allocators should insist on the latter.",
+    },
+    {
+      type: "visual",
+      title: "From company success to fund relevance",
+      content:
+        "**A strong venture outcome only matters to LPs if the economics travel through the cap table cleanly:**\n\n| Step | Question | Typical failure mode |\n|---|---|---|\n| **Company value** | Did the company become valuable? | LPs stop the analysis here |\n| **Fund ownership** | What percent does the fund actually own now? | Entry ownership is cited instead of current or exit ownership |\n| **Dilution basis** | Is that ownership fully diluted and pro forma? | Basic ownership overstates economics |\n| **Security stack** | Do preferences or senior terms absorb value first? | Common-equity intuition is applied too early |\n| **Capital invested** | How much follow-on capital was required? | First-check bragging hides later cost |\n| **Fund impact** | Can this outcome move total fund returns? | Great company, weak fund contribution |\n\nThe allocator should treat this sequence as venture's version of a value-bridge analysis.",
+      caption:
+        "A breakout company is not automatically a breakout fund contributor. Ownership, dilution, terms, and reserve usage decide the translation.",
+      whyItMatters:
+        "This is the core lesson of Day 29: company logos and valuation headlines are not enough. The LP needs the ownership-adjusted bridge.",
+      sourceNote:
+        "This visual extends the blueprint's allocator takeaway that venture attribution often reduces to entry terms, ownership retained through follow-ons, and liquidation-stack outcomes.",
+    },
+    {
+      type: "teaching",
+      title: "How cap-table complexity flows directly into marks and later lessons",
+      content:
+        "The learner should also understand that cap-table mechanics do not stay confined to ownership analysis. They affect later topics directly.\n\n**Bridge to Lesson 30:** SAFEs and convertibles create hidden ownership math before a clean preferred round exists.\n\n**Bridge to Lessons 31 and 32:** preferred terms, anti-dilution, pay-to-play, and control rights all change the economic meaning of a nominal ownership percentage.\n\n**Bridge to Lesson 33:** venture marks can look cleaner than they are if the cap-table complexity and security stack are not interpreted correctly.\n\nThis is why Day 29 is a hinge lesson in the venture sequence. Without cap-table fluency, later discussions about preferred terms, down rounds, and mark credibility become partly conceptual rather than economically grounded.",
+    },
+    {
+      type: "teaching",
+      title: "The most common allocator mistakes in ownership analysis",
+      content:
+        "Several mistakes recur when allocators are not yet fluent in venture ownership math.\n\n**1. Stopping at the logo**\nThe allocator gives too much credit for having invested in an important company without asking what stake remained.\n\n**2. Accepting entry ownership as if it were current ownership**\nEntry percentage is only the beginning of the economic story.\n\n**3. Ignoring the basis of the ownership number**\nA basic-share figure may materially overstate true economic participation.\n\n**4. Treating pro rata rights as equivalent to pro rata execution**\nRights without reserves, access, and conviction do not preserve ownership.\n\n**5. Ignoring option-pool and convertible dilution**\nThese can meaningfully shrink economics even when the company is progressing well.\n\n**6. Forgetting that fund relevance depends on total invested cost**\nA large ownership stake defended through many rounds may still generate weaker net economics than the headline suggests if follow-on dollars were heavy and pricing rose sharply.\n\nThe practical allocator upgrade after Day 29 is simple: every great company story should now trigger an ownership and dilution checklist automatically.",
+    },
+    {
+      type: "example",
+      title: "Worked example: same company, different fund economics",
+      content:
+        "Assume two venture managers invested in the same software company at roughly similar early stages.\n\n**Manager A**\n- first check bought 12% ownership on a clean cap table\n- the fund had meaningful reserves and used pro rata consistently\n- after option-pool expansion, SAFE conversion, and two priced rounds, the fund still owns 7% on a fully diluted basis\n- total invested capital in the company is 2.5x the original check because follow-ons were substantial\n\n**Manager B**\n- first check bought 8% ownership\n- reserve capacity was tighter and the fund participated selectively\n- after similar financing events, the fund owns only 2.5% on a fully diluted basis\n- total invested capital is only modestly above the original check\n\nAssume the company exits at a strong equity value.\n\nAllocator analysis path:\n\n**Step 1: separate sourcing credit from ownership economics**\nBoth managers deserve credit for selecting the company. That does not mean both funds captured the same economics.\n\n**Step 2: compare retained ownership, not just entry ownership**\nManager A preserved a materially larger economic claim.\n\n**Step 3: compare reserve burden as well as stake size**\nManager A spent more to defend the winner, which may be exactly the right decision. But the LP should evaluate outcome versus total dollars invested, not only versus the first check.\n\n**Step 4: assess fund relevance**\nA 7% fully diluted stake in a breakout may be fund-moving. A 2.5% stake may still be good, but much less likely to drive the fund.\n\nThe lesson is not that bigger ownership is always better. The lesson is that venture manager evaluation is incomplete unless it converts company success into ownership-adjusted fund economics.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Shared vocabulary for venture finance and ownership mechanics: NVCA Yearbook glossary and related venture financing educational materials. Cap-table and conversion concepts: Y Combinator SAFE documentation and supporting explanatory materials for post-money versus pre-money treatment. Allocator-relevant framing on venture ownership, reserves, dilution, and fund-level economics: institutional and practitioner venture portfolio-construction resources, including materials on ownership targets by stage and concentration of value in winners. This lesson is designed to make the learner economically fluent in ownership mechanics rather than legally exhaustive.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a venture winner slide",
+      content:
+        "The GP says: 'We were early in one of the most successful companies in the portfolio, and that validates our sourcing edge.'\n\nWeak LP response: 'That is compelling. Getting in early is what matters most in venture.'\n\nWhy it is weak: the LP has accepted sourcing credit without testing whether the economics of being right were actually captured. The response ignores entry ownership, current ownership, dilution, reserves, and the security stack.\n\nStrong LP response: 'Please walk us through the ownership path from first check to current fully diluted ownership, including option-pool changes, any convertibles, your participation in later rounds, and what total capital was required to maintain the stake. We want to understand not just whether you were right early, but whether LPs retained enough of the economics for the outcome to matter at the fund level.'\n\nWhy it is strong: it turns a narrative success slide into a fund-economics discussion. That is the actual allocator job.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what cap-table analysis can and cannot tell you",
+      content:
+        "Cap-table analysis can tell you whether a venture fund is plausibly positioned to benefit from a company's success. It can clarify ownership basis, dilution path, reserve burden, and the extent to which manager claims about winners translate into likely fund economics.\n\nBut cap-table analysis cannot tell you everything. It cannot guarantee the company will succeed, that current ownership will survive future rounds, that pro rata access will remain available in hot financings, or that nominal ownership equals common-equity value once the preferred stack is considered. It also cannot replace judgment on entry price, underwriting quality, or manager discipline.\n\nThe practical lesson is that cap-table fluency narrows ambiguity. It does not eliminate it. The allocator should use ownership math to pressure-test economic plausibility, not to create false precision.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: three dilution scenarios",
+      content:
+        "Work through the following three situations and explain the ownership impact in allocator terms.\n\n**Scenario 1: option-pool increase**\nA fund owns 15% of a company before a financing. The company increases the option pool materially before the round closes. Explain where the dilution falls and why the fund's effective economics may weaken even if the headline valuation discussion sounds unchanged.\n\n**Scenario 2: new preferred round without full participation**\nA fund owns 12% before a Series B but chooses not to take its full pro rata allocation. Explain how ownership changes, what that implies for future fund relevance, and why reserves matter even if the company is still progressing well.\n\n**Scenario 3: SAFE conversion plus new money**\nA fund quotes its ownership based on the last priced round, but a large SAFE stack converts in the next financing. Explain why the fully diluted percentage may drop more than expected and how that affects allocator interpretation of the manager's original ownership claims.\n\nFor each scenario, answer:\n- What is the main source of dilution?\n- Is the issue economic, reporting-related, or both?\n- What single follow-up question would you ask the GP first?",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal ownership questions",
+      content:
+        "1. 'What ownership do you target at entry by stage, and what ownership do you typically retain in your biggest eventual winners on a fully diluted basis?'\n\n2. 'When you show us a breakout company, can you also show the round-by-round ownership path, including option-pool changes, convertibles, and your later participation decisions?'\n\n3. 'How often have you had great company outcomes that failed to become great fund outcomes because the fund diluted too far?'\n\n4. 'How does your reserve model map to ownership defense in your expected winners rather than simply to a generic percentage of fund size?'\n\n5. 'When a round is oversubscribed, how often have you been unable to take your full pro rata allocation in your best-performing companies, and what did that do to the economics?'",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 29 should change venture diligence",
+      content:
+        "After Day 29, the learner should no longer accept venture winner narratives at face value. The better diligence habit is to convert every major company example into an ownership case study: entry stake, fully diluted stake, dilution path, reserve dollars, and likely fund relevance.\n\nThat change improves allocator judgment in several ways. It makes follow-on discipline easier to evaluate, connects stage exposure to real economics, creates a cleaner bridge into later lessons on SAFEs and preferred terms, and reduces the risk of over-crediting managers for company selection that did not translate into meaningful LP capture. In venture, ownership is not a footnote. It is the economic spine of the strategy.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d29q1",
+      type: "multiple-choice",
+      prompt:
+        "Why is cap-table fluency allocator-relevant in venture?",
+      options: [
+        "Because it shows whether company selection actually translated into meaningful economic ownership for the fund",
+        "Because it eliminates the need to evaluate venture managers qualitatively",
+        "Because dilution affects only founders, not investors",
+        "Because ownership matters only after an IPO",
+      ],
+      correctAnswer:
+        "Because it shows whether company selection actually translated into meaningful economic ownership for the fund",
+    },
+    {
+      questionId: "d29q2",
+      type: "multiple-choice",
+      prompt:
+        "What is the difference between pre-money and post-money valuation?",
+      options: [
+        "Pre-money includes new capital raised in the round, while post-money excludes it",
+        "Post-money equals pre-money plus the new capital raised in the round",
+        "They are interchangeable terms if the company has an option pool",
+        "Post-money matters only for late-stage venture funds",
+      ],
+      correctAnswer:
+        "Post-money equals pre-money plus the new capital raised in the round",
+    },
+    {
+      questionId: "d29q3",
+      type: "multiple-choice",
+      prompt:
+        "Why is fully diluted ownership usually more decision-useful than basic ownership?",
+      options: [
+        "Because it reflects a more complete view of securities that can become equity and affect economic participation",
+        "Because it is always higher than basic ownership",
+        "Because it removes the effect of future financing rounds",
+        "Because it matters only for companies with employee options",
+      ],
+      correctAnswer:
+        "Because it reflects a more complete view of securities that can become equity and affect economic participation",
+    },
+    {
+      questionId: "d29q4",
+      type: "multiple-choice",
+      prompt:
+        "What is the allocator significance of the option-pool shuffle?",
+      options: [
+        "It means new investors absorb all employee-equity dilution automatically",
+        "It can cause more dilution to fall on existing holders if the pool is expanded before the financing closes",
+        "It eliminates the need to analyze option grants later",
+        "It matters only in public-company follow-on offerings",
+      ],
+      correctAnswer:
+        "It can cause more dilution to fall on existing holders if the pool is expanded before the financing closes",
+    },
+    {
+      questionId: "d29q5",
+      type: "multiple-choice",
+      prompt:
+        "Which statement best describes pro rata rights from an allocator perspective?",
+      options: [
+        "They guarantee ownership defense in every future round",
+        "They are irrelevant if the company is performing well",
+        "They matter only if the fund has enough reserves, access, and conviction to use them where it matters",
+        "They replace the need for a reserve strategy",
+      ],
+      correctAnswer:
+        "They matter only if the fund has enough reserves, access, and conviction to use them where it matters",
+    },
+    {
+      questionId: "d29q6",
+      type: "multiple-choice",
+      prompt:
+        "Why should reserve strategy be thought of as ownership strategy?",
+      options: [
+        "Because reserves determine whether the fund can preserve meaningful exposure in winners through later rounds",
+        "Because reserves are mainly an accounting convention",
+        "Because reserves matter only in seed funds and not in later-stage venture",
+        "Because reserve size alone guarantees outlier capture",
+      ],
+      correctAnswer:
+        "Because reserves determine whether the fund can preserve meaningful exposure in winners through later rounds",
+    },
+    {
+      questionId: "d29q7",
+      type: "short-response",
+      prompt:
+        "Explain why being right about a company early is not the same as capturing meaningful fund economics from that company. Write two to four sentences.",
+      modelAnswer:
+        "A manager can identify a strong company early and still generate limited fund benefit if the initial stake was modest, ownership diluted materially, or the fund lacked reserves and access to defend the position in later rounds. Venture economics depend on retained ownership, not just sourcing credit. The allocator therefore needs ownership-adjusted outcomes, not just company success stories.",
+    },
+    {
+      questionId: "d29q8",
+      type: "short-response",
+      prompt:
+        "A GP highlights a breakout winner in the portfolio. What are the three most important follow-up ownership questions you should ask after Day 29?",
+      modelAnswer:
+        "First, I would ask what ownership the fund had at entry and what ownership it holds now or held at exit on a fully diluted basis. Second, I would ask what the major sources of dilution were, including option-pool changes, SAFEs or notes converting, and later financing rounds. Third, I would ask what reserve dollars and pro rata participation were required to preserve the stake and whether that pattern is typical of the manager's process.",
+    },
+  ],
+  sources: [
+    "NVCA Yearbook glossary and related venture-finance educational materials — shared vocabulary for pre-money, post-money, dilution, preferred stock, and capitalization concepts",
+    "Y Combinator SAFE documentation and explanatory materials — practical reference for conversion concepts, capitalization definitions, and ownership treatment",
+    "Institutional and practitioner venture portfolio-construction materials on ownership targets, reserves, and dilution management",
+    "Allocator-oriented venture diligence resources linking ownership retention to fund-return concentration and power-law capture",
+    "CFA Institute and related private-markets educational materials providing venture fund-economics context for ownership and follow-on strategy",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
