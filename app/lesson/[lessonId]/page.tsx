@@ -1,13 +1,16 @@
 "use client";
 
-import { use, useState, useEffect } from "react";
+import { use, useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { getLessonContent } from "@/lib/lessonContent";
-import { getModuleById } from "@/lib/modules";
-import { saveQuizResult, setLessonStatus, getQuizResult } from "@/lib/progress";
+import { getModuleById, modules } from "@/lib/modules";
+import { saveQuizResult, setLessonStatus, getQuizResult, getLessonProgress } from "@/lib/progress";
+import { allReviewCards } from "@/lib/reviewCards";
 import {
   LessonBlock,
   LessonBlockType,
   MCQuestion,
+  MCOption,
   SRQuestion,
   QuizQuestion,
   QuizResult,
@@ -322,9 +325,11 @@ function MCQuestionCard({
       </p>
 
       <div className="space-y-2">
-        {q.options.map((opt) => {
-          const isSelected = selected === opt;
-          const isRight = opt === q.correctAnswer;
+        {q.options.map((rawOpt) => {
+          const optText = typeof rawOpt === "string" ? rawOpt : rawOpt.text;
+          const optExplanation = typeof rawOpt === "string" ? undefined : rawOpt.explanation;
+          const isSelected = selected === optText;
+          const isRight = optText === q.correctAnswer;
 
           let style =
             "border border-[#E8DDD4] bg-white text-[#000000] hover:border-[#2294BD]/50 hover:bg-[#2294BD]/5";
@@ -347,23 +352,30 @@ function MCQuestionCard({
           }
 
           return (
-            <button
-              key={opt}
-              disabled={submitted}
-              onClick={() => onSelect(opt)}
-              className={`w-full text-left rounded-xl px-4 py-3 text-sm transition-colors flex items-start gap-2 ${style}`}
-            >
-              {icon && (
-                <span
-                  className={`flex-shrink-0 font-bold text-sm leading-snug ${
-                    isRight ? "text-[#2294BD]" : "text-[#D9532B]"
-                  }`}
-                >
-                  {icon}
-                </span>
+            <div key={optText}>
+              <button
+                disabled={submitted}
+                onClick={() => onSelect(optText)}
+                className={`w-full text-left rounded-xl px-4 py-3 text-sm transition-colors flex items-start gap-2 ${style}`}
+              >
+                {icon && (
+                  <span
+                    className={`flex-shrink-0 font-bold text-sm leading-snug ${
+                      isRight ? "text-[#2294BD]" : "text-[#D9532B]"
+                    }`}
+                  >
+                    {icon}
+                  </span>
+                )}
+                <span className="leading-snug">{optText}</span>
+              </button>
+              {/* Wrong-answer explanation */}
+              {submitted && !isRight && isSelected && optExplanation && (
+                <p className="mt-1 ml-1 text-xs text-[#D9532B]/80 leading-relaxed">
+                  {optExplanation}
+                </p>
               )}
-              <span className="leading-snug">{opt}</span>
-            </button>
+            </div>
           );
         })}
       </div>
@@ -640,6 +652,11 @@ export default function LessonPage({
   const [confidence, setConfidence] = useState<number | null>(null);
   // Saved result
   const [saved, setSaved] = useState(false);
+  // Jump to Quiz button visibility
+  const [showJumpBtn, setShowJumpBtn] = useState(true);
+  const quizRef = useRef<HTMLDivElement>(null);
+  // Unmet prerequisites
+  const [unmetPrereqs, setUnmetPrereqs] = useState<{ lessonId: string; title: string }[]>([]);
 
   // Load existing quiz result
   useEffect(() => {
@@ -649,6 +666,34 @@ export default function LessonPage({
       setSaved(true);
     }
   }, [lessonId]);
+
+  // Check prerequisites
+  useEffect(() => {
+    if (!lesson) return;
+    const allLessons = modules[0]?.lessons ?? [];
+    const unmet = lesson.prerequisites
+      .map((prereqId) => {
+        const prereqLesson = allLessons.find((l) => l.lessonId === prereqId);
+        if (!prereqLesson) return null;
+        const progress = getLessonProgress(MODULE_ID, prereqId);
+        if (progress.status === "completed") return null;
+        return { lessonId: prereqId, title: prereqLesson.title };
+      })
+      .filter((x): x is { lessonId: string; title: string } => x !== null);
+    setUnmetPrereqs(unmet);
+  }, [lesson]);
+
+  // IntersectionObserver: hide Jump button when quiz is visible
+  useEffect(() => {
+    const el = quizRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowJumpBtn(!entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   if (!content || !lesson) {
     return (
@@ -708,8 +753,27 @@ export default function LessonPage({
     (wrongMcDetails ? `\nI also got these MC questions wrong:\n${wrongMcDetails}` : "") +
     `\n\nHelp me solidify my understanding of these PE concepts.`;
 
+  // Lesson navigation helpers
+  const allLessons = modules[0]?.lessons ?? [];
+  const lessonIndex = allLessons.findIndex((l) => l.lessonId === lessonId);
+  const prevLesson = lessonIndex > 0 ? allLessons[lessonIndex - 1] : null;
+  const nextLesson = lessonIndex < allLessons.length - 1 ? allLessons[lessonIndex + 1] : null;
+
+  // Summary card data
+  const reviewCardCount = allReviewCards.filter((c) => c.lessonId === lessonId).length;
+
   return (
     <main className="min-h-screen bg-[#FBF7F3]">
+      {/* Jump to Quiz sticky button */}
+      {showJumpBtn && (
+        <button
+          onClick={() => quizRef.current?.scrollIntoView({ behavior: "smooth" })}
+          className="fixed bottom-6 right-6 z-50 bg-[#000000] text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg hover:bg-[#222] transition-colors"
+        >
+          Jump to Quiz ↓
+        </button>
+      )}
+
       <div className="max-w-2xl mx-auto px-4 py-8 sm:py-10">
         {/* Header */}
         <div className="mb-8">
@@ -733,6 +797,27 @@ export default function LessonPage({
           </h1>
         </div>
 
+        {/* Prerequisite warning banner */}
+        {unmetPrereqs.length > 0 && (
+          <div className="mb-6 rounded-xl border border-[#FAA51A]/40 bg-[#FAA51A]/10 px-4 py-3">
+            <p className="text-sm text-[#9B6A00]">
+              <span className="font-semibold">Heads up:</span> This lesson builds on{" "}
+              {unmetPrereqs.map((p, i) => (
+                <span key={p.lessonId}>
+                  {i > 0 && " and "}
+                  <Link
+                    href={`/lesson/${p.lessonId}`}
+                    className="underline font-medium hover:text-[#7a5200]"
+                  >
+                    {p.title}
+                  </Link>
+                </span>
+              ))}
+              . Consider completing {unmetPrereqs.length === 1 ? "it" : "them"} first.
+            </p>
+          </div>
+        )}
+
         {/* Learning blocks */}
         <div className="mb-8">
           {content.blocks.map((block, i) => (
@@ -741,7 +826,7 @@ export default function LessonPage({
         </div>
 
         {/* Quiz */}
-        <div className="rounded-2xl border border-[#E8DDD4] bg-white px-6 py-6 mb-4">
+        <div ref={quizRef} id="quiz-section" className="rounded-2xl border border-[#E8DDD4] bg-white px-6 py-6 mb-4">
           <div className="flex items-center justify-between mb-6">
             <div>
               <h2 className="text-[10px] font-bold text-[#404040] uppercase tracking-widest mb-0.5">
@@ -869,20 +954,119 @@ export default function LessonPage({
               </button>
             )}
             {saved && (
-              <div className="mt-3 rounded-xl bg-[#2294BD]/10 border border-[#2294BD]/20 px-4 py-3 flex items-center gap-2">
-                <span className="text-[#2294BD] font-bold">✓</span>
-                <span className="text-sm text-[#2294BD] font-medium">
-                  Lesson complete — good work.
-                </span>
-                <a
-                  href="/modules"
-                  className="ml-auto text-xs text-[#2294BD] font-semibold hover:underline"
-                >
-                  Next →
-                </a>
+              /* End-of-lesson summary card */
+              <div className="mt-3 rounded-2xl border-2 border-[#2A9D60]/40 bg-[#2A9D60]/5 px-6 py-5">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-[#2A9D60] text-lg font-bold">✓</span>
+                  <span className="text-[15px] font-semibold text-[#000000]">
+                    Lesson complete
+                  </span>
+                </div>
+                <p className="text-[17px] font-bold text-[#000000] leading-snug mb-4">
+                  {lesson.title}
+                </p>
+                <div className="grid grid-cols-2 gap-3 mb-4">
+                  <div className="rounded-xl border border-[#2A9D60]/20 bg-white px-4 py-3">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-[#2A9D60] mb-1">
+                      Quiz score
+                    </p>
+                    <p className="text-[22px] font-bold text-[#000000]">
+                      {Math.round(mcScore * mcQuestions.length)}/{mcQuestions.length}
+                    </p>
+                    <p className="text-xs text-[#404040]">
+                      {mcQuestions.length > 0
+                        ? `${Math.round(mcScore * 100)}% correct`
+                        : "Short response only"}
+                    </p>
+                  </div>
+                  <div className="rounded-xl border border-[#2A9D60]/20 bg-white px-4 py-3">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-[#2A9D60] mb-1">
+                      Confidence
+                    </p>
+                    <p className="text-[22px] font-bold text-[#000000]">
+                      {confidence}/5
+                    </p>
+                    <p className="text-xs text-[#404040]">
+                      {CONFIDENCE_LABELS[(confidence ?? 1) - 1]}
+                    </p>
+                  </div>
+                </div>
+                {lesson.topics.length > 0 && (
+                  <div className="mb-3">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-[#404040] mb-1.5">
+                      Topics covered
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {lesson.topics.map((t) => (
+                        <span
+                          key={t}
+                          className="text-xs bg-[#2A9D60]/10 text-[#1A6B42] px-2.5 py-1 rounded-lg font-medium"
+                        >
+                          {t.replace(/-/g, " ")}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {reviewCardCount > 0 && (
+                  <p className="text-sm text-[#404040] mb-4">
+                    <span className="font-semibold text-[#000000]">{reviewCardCount}</span>{" "}
+                    review {reviewCardCount === 1 ? "card" : "cards"} unlocked for spaced repetition.
+                  </p>
+                )}
+                <div className="flex gap-2">
+                  <Link
+                    href="/modules"
+                    className="flex-1 text-center text-sm font-semibold text-[#2A9D60] bg-[#2A9D60]/10 hover:bg-[#2A9D60]/18 px-4 py-2.5 rounded-xl transition-colors"
+                  >
+                    Back to modules
+                  </Link>
+                  {nextLesson && (
+                    <Link
+                      href={`/lesson/${nextLesson.lessonId}`}
+                      className="flex-1 text-center text-sm font-semibold text-white bg-[#2A9D60] hover:bg-[#22854f] px-4 py-2.5 rounded-xl transition-colors"
+                    >
+                      Next lesson →
+                    </Link>
+                  )}
+                </div>
               </div>
             )}
           </>
+        )}
+
+        {/* Prev / Next lesson navigation */}
+        {(prevLesson || nextLesson) && (
+          <div className="flex items-center justify-between mt-8 pt-6 border-t border-[#E8DDD4]">
+            {prevLesson ? (
+              <Link
+                href={`/lesson/${prevLesson.lessonId}`}
+                className="flex flex-col items-start text-sm group"
+              >
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#9A918A] mb-0.5">
+                  ← Previous
+                </span>
+                <span className="text-[#2294BD] group-hover:underline font-medium">
+                  Day {prevLesson.dayNumber}: {prevLesson.title}
+                </span>
+              </Link>
+            ) : (
+              <div />
+            )}
+            {nextLesson && (
+              <Link
+                href={`/lesson/${nextLesson.lessonId}`}
+                className="flex flex-col items-end text-sm group"
+              >
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#9A918A] mb-0.5">
+                  Next →
+                </span>
+                <span className="text-[#2294BD] group-hover:underline font-medium">
+                  Day {nextLesson.dayNumber}: {nextLesson.title}
+                </span>
+              </Link>
+            )}
+          </div>
         )}
 
         {/* Sources */}

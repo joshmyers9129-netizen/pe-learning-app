@@ -146,10 +146,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "Which statement most precisely describes how LP committed capital works in a PE fund?",
         options: [
-          "Committed capital is transferred to the fund at final close and held in a segregated escrow account until the GP deploys it into investments",
+          { text: "Committed capital is transferred to the fund at final close and held in a segregated escrow account until the GP deploys it into investments", explanation: "No cash moves at close — committed capital stays at the LP until the GP issues a capital call." },
           "Committed capital is a binding LP obligation to fund capital calls issued by the GP, up to the committed amount, over the fund's investment period",
-          "Committed capital establishes the GP's maximum debt financing capacity across portfolio company acquisitions",
-          "Committed capital is recorded as paid-in capital on the fund's financial statements from the date of the LP's subscription agreement",
+          { text: "Committed capital establishes the GP's maximum debt financing capacity across portfolio company acquisitions", explanation: "Committed capital is an LP funding obligation, not a GP borrowing limit; portfolio company leverage is arranged separately at the deal level." },
+          { text: "Committed capital is recorded as paid-in capital on the fund's financial statements from the date of the LP's subscription agreement", explanation: "Paid-in capital only reflects cash actually transferred to the fund after a capital call — not the subscription commitment date." },
         ],
         correctAnswer:
           "Committed capital is a binding LP obligation to fund capital calls issued by the GP, up to the committed amount, over the fund's investment period",
@@ -160,10 +160,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "An LP commits $100 million to a PE fund at final close. Two years later, the GP has called $35 million. Which statement is correct?",
         options: [
-          "The LP has fully satisfied its commitment; no further calls can be made",
-          "The LP owes $35 million — only the amount already called constitutes ongoing obligation",
+          { text: "The LP has fully satisfied its commitment; no further calls can be made", explanation: "Only the called portion ($35M) is satisfied — the remaining $65M is still a binding legal obligation." },
+          { text: "The LP owes $35 million — only the amount already called constitutes ongoing obligation", explanation: "The $35M is already paid; the ongoing obligation is the remaining uncalled $65M." },
           "The LP has $65 million in uncalled commitment remaining, constituting a binding legal obligation",
-          "The remaining obligation is determined by fund NAV at the time of each future call",
+          { text: "The remaining obligation is determined by fund NAV at the time of each future call", explanation: "Uncalled commitment is fixed contractually at subscription amount minus capital called to date — fund NAV is irrelevant." },
         ],
         correctAnswer:
           "The LP has $65 million in uncalled commitment remaining, constituting a binding legal obligation",
@@ -174,10 +174,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "A buyout fund reports TVPI 1.55x and DPI 0.20x at year 5. Which interpretation is most accurate?",
         options: [
-          "The fund has outperformed — 1.55x exceeds the historical buyout median TVPI",
+          { text: "The fund has outperformed — 1.55x exceeds the historical buyout median TVPI", explanation: "TVPI at year 5 is mostly unrealized GP-marked NAV; comparing it to a final median without adjusting for lifecycle stage is misleading." },
           "Most of the apparent return is unrealized, GP-marked NAV; only 20 cents per dollar has been confirmed via actual distribution",
-          "The fund has returned most LP capital; a DPI of 0.20x represents the majority of net proceeds",
-          "The fund is deep in the harvest phase, with the majority of exits already completed",
+          { text: "The fund has returned most LP capital; a DPI of 0.20x represents the majority of net proceeds", explanation: "DPI of 0.20x means only 20 cents per dollar committed has been returned in cash — the majority has not been returned." },
+          { text: "The fund is deep in the harvest phase, with the majority of exits already completed", explanation: "With DPI of only 0.20x at year 5, most of the portfolio remains unrealized — the fund is still primarily in the hold phase." },
         ],
         correctAnswer:
           "Most of the apparent return is unrealized, GP-marked NAV; only 20 cents per dollar has been confirmed via actual distribution",
@@ -187,10 +187,10 @@ export const lessonContents: LessonContent[] = [
         type: "multiple-choice",
         prompt: "The J-curve in PE fund performance primarily reflects:",
         options: [
-          "A deliberate return-smoothing policy applied by GP accountants during the investment period",
-          "Sequential losses on early investments later recovered through portfolio follow-on investments",
+          { text: "A deliberate return-smoothing policy applied by GP accountants during the investment period", explanation: "The J-curve is a structural arithmetic outcome of PE fund mechanics, not a deliberate accounting policy." },
+          { text: "Sequential losses on early investments later recovered through portfolio follow-on investments", explanation: "The J-curve occurs even in successful funds with no losses — it is caused by fee drag and the timing gap between calls and exits." },
           "The drag of management fees and early-period valuation marks before exits generate meaningful distributions",
-          "The mathematical effect of reinvesting portfolio company earnings during the holding period",
+          { text: "The mathematical effect of reinvesting portfolio company earnings during the holding period", explanation: "PE portfolio companies don't distribute earnings to the fund during the hold period; this describes dividend reinvestment in public equities." },
         ],
         correctAnswer:
           "The drag of management fees and early-period valuation marks before exits generate meaningful distributions",
@@ -201,10 +201,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "An LP receives a capital call notice requiring funding in 10 business days during a period of significant public equity market stress. Which risk is most specific to the PE fund model?",
         options: [
-          "The GP may permanently reduce the fund size if the LP does not respond promptly",
+          { text: "The GP may permanently reduce the fund size if the LP does not respond promptly", explanation: "Fund size reductions are not triggered by a single LP's late payment; the GP's remedy is a default process, not a fund size reduction." },
           "The LP may need to liquidate depressed public equity holdings to meet the call, creating forced selling at a poor time",
-          "The fund's IRR will be permanently impaired proportionally to the LP's response delay",
-          "The GP will substitute another institutional LP within 5 business days if the original LP does not respond",
+          { text: "The fund's IRR will be permanently impaired proportionally to the LP's response delay", explanation: "A short delay affects the LP's specific cost basis but does not permanently impair fund-level IRR, which is based on all LP cash flows." },
+          { text: "The GP will substitute another institutional LP within 5 business days if the original LP does not respond", explanation: "Substituting an LP within 5 days is operationally implausible; the default process takes weeks to months." },
         ],
         correctAnswer:
           "The LP may need to liquidate depressed public equity holdings to meet the call, creating forced selling at a poor time",
@@ -367,10 +367,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "A GP charges 2% management fee on committed capital for 10 years on a $2B fund. An LP-friendly alternative steps down to 1.5% on invested capital ($1.7B) after the 5-year investment period. What is the approximate dollar difference in total management fees between these two structures?",
         options: [
-          "Approximately $10M — the difference is marginal and does not meaningfully affect LP returns",
-          "Approximately $40M — the step-down saves LPs roughly one year's management fee",
+          { text: "Approximately $10M — the difference is marginal and does not meaningfully affect LP returns", explanation: "The math shows $400M vs. $327.5M in total fees — a $72.5M difference, far from marginal at fund scale." },
+          { text: "Approximately $40M — the step-down saves LPs roughly one year's management fee", explanation: "One year's fee is $40M, but the savings from the step-down over the 5 harvest years totals $72.5M, not $40M." },
           "Approximately $72.5M — the step-down generates material savings over the harvest period",
-          "Approximately $127.5M — the step-down halves management fees for the entire harvest period",
+          { text: "Approximately $127.5M — the step-down halves management fees for the entire harvest period", explanation: "The step-down reduces the harvest-period fee from $40M to $25.5M/yr — saving $14.5M × 5 = $72.5M, not $127.5M." },
         ],
         correctAnswer:
           "Approximately $72.5M — the step-down generates material savings over the harvest period",
@@ -381,10 +381,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "A PE fund has an 8% compound preferred return. The LP commits $500M; the average hold period is 7 years. Approximately how much preferred return must the LP receive before the GP can earn any carried interest?",
         options: [
-          "$280M — 8% × 7 years × $500M on a simple interest basis",
+          { text: "$280M — 8% × 7 years × $500M on a simple interest basis", explanation: "Simple interest gives $280M, but the LPA specifies compound preferred return: $500M × (1.08^7 − 1) ≈ $340M." },
           "$340M — approximately 8% compounded for 7 years on $500M",
-          "$500M — the LP must receive a full return of capital plus preferred return before any carry",
-          "$170M — preferred return applies only to the unreturned capital at the time of the first distribution",
+          { text: "$500M — the LP must receive a full return of capital plus preferred return before any carry", explanation: "Return of capital ($500M) is a separate prior waterfall step; the preferred return is calculated on profits above that, not on top of capital return again." },
+          { text: "$170M — preferred return applies only to the unreturned capital at the time of the first distribution", explanation: "Preferred return accrues on all paid-in capital over the full hold period, not just unreturned capital at the moment of first distribution." },
         ],
         correctAnswer:
           "$340M — approximately 8% compounded for 7 years on $500M",
@@ -395,10 +395,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "Under a 100% GP catch-up provision, what happens to LP cash flows during the catch-up phase?",
         options: [
-          "LP receives 20% of all distributions during catch-up, matching the long-run carried interest split",
+          { text: "LP receives 20% of all distributions during catch-up, matching the long-run carried interest split", explanation: "That describes the post-catch-up 80/20 split, not the catch-up itself — during a 100% catch-up, LP receives nothing." },
           "LP cash flows pause entirely; 100% of distributions go to the GP until it has earned 20% of total profits",
-          "LP receives a return of capital distributions during catch-up, but no profit distributions",
-          "LP and GP share catch-up distributions 50/50 until the GP's carry target is reached",
+          { text: "LP receives a return of capital distributions during catch-up, but no profit distributions", explanation: "Return of capital is a prior waterfall step completed before catch-up begins; once catch-up starts, LP receives nothing under a 100% structure." },
+          { text: "LP and GP share catch-up distributions 50/50 until the GP's carry target is reached", explanation: "A 50/50 split is neither the catch-up structure nor the carried interest split; under 100% catch-up all distributions go to the GP." },
         ],
         correctAnswer:
           "LP cash flows pause entirely; 100% of distributions go to the GP until it has earned 20% of total profits",
@@ -409,10 +409,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "A GP earns $20M in transaction fees from a portfolio company closing. The LPA specifies an 80% fee offset. Which outcome is correct?",
         options: [
-          "$20M is credited against management fees owed, reducing LP costs by $20M",
+          { text: "$20M is credited against management fees owed, reducing LP costs by $20M", explanation: "A 100% offset would credit $20M, but the LPA specifies 80% — the GP retains 20% ($4M) as additional compensation." },
           "$16M is credited against management fees owed; the GP retains $4M as additional compensation",
-          "$4M is credited against management fees owed; the GP retains $16M as additional compensation",
-          "$20M is distributed directly to LPs as a special distribution outside the waterfall",
+          { text: "$4M is credited against management fees owed; the GP retains $16M as additional compensation", explanation: "This inverts the math: 80% of $20M = $16M credited to LP; the GP retains the remaining 20% = $4M, not $16M." },
+          { text: "$20M is distributed directly to LPs as a special distribution outside the waterfall", explanation: "Fee offsets reduce the management fee owed to the GP — they are not distributed directly to LPs outside the waterfall." },
         ],
         correctAnswer:
           "$16M is credited against management fees owed; the GP retains $4M as additional compensation",
@@ -423,10 +423,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "Which statement best describes why a GP commitment funded through a carry loan has weaker alignment than one funded from personal liquidity?",
         options: [
-          "Carry loans are illegal in most jurisdictions and signal governance risk",
+          { text: "Carry loans are illegal in most jurisdictions and signal governance risk", explanation: "Carry loans are legal and common; the alignment concern is economic (no personal capital at risk), not legal." },
           "A carry-loan-financed commitment places no personal capital at risk — if the fund loses, the GP loses only unrealized carry, not actual wealth",
-          "Carry loans increase GP leverage, amplifying their upside but also their downside",
-          "A carry-loan GP commitment counts as LP capital and dilutes existing LPs' fund ownership",
+          { text: "Carry loans increase GP leverage, amplifying their upside but also their downside", explanation: "A carry loan backed by future carry means the GP's downside is only losing unrealized carry — they bear no personal capital loss if the fund underperforms." },
+          { text: "A carry-loan GP commitment counts as LP capital and dilutes existing LPs' fund ownership", explanation: "GP commitment capital is a separate GP tranche; it does not dilute existing LP ownership percentages in fund economics." },
         ],
         correctAnswer:
           "A carry-loan-financed commitment places no personal capital at risk — if the fund loses, the GP loses only unrealized carry, not actual wealth",
@@ -587,10 +587,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "A buyout fund reports −8% net IRR in year two. Which interpretation is most accurate?",
         options: [
-          "The fund has made poor early investments that have been written down significantly",
+          { text: "The fund has made poor early investments that have been written down significantly", explanation: "Negative year-2 IRR is structurally normal from fee drag alone even in funds with zero write-downs — it cannot diagnose investment quality at this stage." },
           "The IRR reflects cumulative management fee drag before any exits have occurred — a structurally expected outcome",
-          "The GP has deployed capital too slowly, causing the IRR to lag peers at the same stage",
-          "The negative IRR will permanently impair the fund's ability to reach the preferred return threshold",
+          { text: "The GP has deployed capital too slowly, causing the IRR to lag peers at the same stage", explanation: "Slow deployment would actually reduce J-curve depth by slowing fee accrual; early negative IRR is caused by fee drag relative to capital deployed, not deployment pace." },
+          { text: "The negative IRR will permanently impair the fund's ability to reach the preferred return threshold", explanation: "Early negative IRR is temporary and recoverable; many funds with year-2 negative IRR ultimately clear the preferred return as exits materialize." },
         ],
         correctAnswer:
           "The IRR reflects cumulative management fee drag before any exits have occurred — a structurally expected outcome",
@@ -601,10 +601,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "Which factor would most directly DEEPEN the J-curve trough for a buyout fund?",
         options: [
-          "An early profitable exit generating DPI in year 2",
-          "A 100% management fee offset on all transaction fees",
+          { text: "An early profitable exit generating DPI in year 2", explanation: "An early exit produces distributions that offset fee drag and actually shallows the J-curve trough — it has the opposite effect." },
+          { text: "A 100% management fee offset on all transaction fees", explanation: "Full fee offsets reduce the effective management fee burden, which would shallow the J-curve, not deepen it." },
           "A 2% management fee on committed capital with slow deployment over 5 years",
-          "A partial catch-up provision rather than a full catch-up",
+          { text: "A partial catch-up provision rather than a full catch-up", explanation: "Catch-up provisions affect distribution sequencing during harvest, not the J-curve during the investment period when no exits have occurred." },
         ],
         correctAnswer:
           "A 2% management fee on committed capital with slow deployment over 5 years",
@@ -615,10 +615,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "A GP uses a 6-month subscription line for all capital calls. Compared to a peer fund that calls capital at deal close, how does this affect the GP's reported IRR and LP economics?",
         options: [
-          "IRR improves and LP economics improve — the subscription line creates real value by bridging deals efficiently",
+          { text: "IRR improves and LP economics improve — the subscription line creates real value by bridging deals efficiently", explanation: "The subscription line only delays LP cash outflows mechanically; LP economics (MOIC, total distributions) are unchanged or slightly worse due to line interest costs." },
           "IRR improves mechanically because LP cash outflows are delayed, but LP cash-on-cash returns and MOIC are unchanged",
-          "IRR is unaffected; only the DPI calculation changes when subscription lines are used",
-          "IRR declines because the fund pays interest on the subscription line, which increases the cost basis of investments",
+          { text: "IRR is unaffected; only the DPI calculation changes when subscription lines are used", explanation: "IRR is directly inflated by subscription line use because delaying LP capital calls compresses the denominator period — this is precisely why ILPA flagged the practice." },
+          { text: "IRR declines because the fund pays interest on the subscription line, which increases the cost basis of investments", explanation: "The interest cost is typically small relative to the IRR inflation from delayed LP cash flows; net reported IRR almost always rises with subscription line use." },
         ],
         correctAnswer:
           "IRR improves mechanically because LP cash outflows are delayed, but LP cash-on-cash returns and MOIC are unchanged",
@@ -629,10 +629,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "When does meaningful performance signal begin to emerge from a typical buyout fund's reported metrics?",
         options: [
-          "Year 1–2, when interim marks reflect initial GP underwriting assumptions",
-          "Year 3–4, when the investment period is complete and the full portfolio is marked",
+          { text: "Year 1–2, when interim marks reflect initial GP underwriting assumptions", explanation: "Year 1-2 marks are almost entirely cost-basis NAV dominated by J-curve mechanics — they carry no meaningful signal about ultimate performance." },
+          { text: "Year 3–4, when the investment period is complete and the full portfolio is marked", explanation: "Even with full deployment, year 3-4 metrics are still dominated by fee drag and unexited GP marks without DPI confirmation — performance signal remains weak." },
           "Year 6–8, when 60–70% of fund economic life has elapsed and exits have occurred",
-          "Year 10 at wind-down, when all assets are liquidated and final IRR is calculated",
+          { text: "Year 10 at wind-down, when all assets are liquidated and final IRR is calculated", explanation: "While year 10 gives final figures, meaningful signal emerges at years 6-8 when substantial DPI confirms performance — waiting until wind-down sacrifices actionable insight." },
         ],
         correctAnswer:
           "Year 6–8, when 60–70% of fund economic life has elapsed and exits have occurred",
@@ -643,10 +643,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "A GP says 'Fund IV is tracking in line with where our prior two funds were at year three.' Which response most accurately evaluates this claim?",
         options: [
-          "This is informative because cross-vintage IRR comparison at the same fund age eliminates vintage year bias",
-          "This comparison controls for subscription line use only if all three funds used identical line structures",
+          { text: "This is informative because cross-vintage IRR comparison at the same fund age eliminates vintage year bias", explanation: "Same-age comparison across different vintage years does not eliminate vintage bias — macro environments, entry multiples, and credit conditions differ materially across vintages." },
+          { text: "This comparison controls for subscription line use only if all three funds used identical line structures", explanation: "Even controlling for subscription line structure, year-3 metrics are structurally dominated by fee drag and carry almost no signal about investment quality." },
           "Year-three metrics are structurally dominated by fee drag rather than investment quality, making this comparison nearly uninformative about relative performance",
-          "This is a reliable performance indicator provided the fund sizes are comparable across all three vintages",
+          { text: "This is a reliable performance indicator provided the fund sizes are comparable across all three vintages", explanation: "Fund size comparability does not rescue year-3 metrics from J-curve distortion; the structural fee drag effect is size-agnostic." },
         ],
         correctAnswer:
           "Year-three metrics are structurally dominated by fee drag rather than investment quality, making this comparison nearly uninformative about relative performance",
@@ -846,10 +846,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "IRR is calculated as the discount rate that makes the NPV of all fund cash flows equal to zero. Which property of this calculation creates the most significant challenge for cross-fund comparison?",
         options: [
-          "IRR uses compound interest, while MOIC uses simple interest, making them mathematically incompatible",
+          { text: "IRR uses compound interest, while MOIC uses simple interest, making them mathematically incompatible", explanation: "Both metrics are valid and complementary; the challenge with IRR is its sensitivity to cash flow timing, not mathematical incompatibility with MOIC." },
           "IRR is sensitive to the timing of LP cash flows, which can be partially controlled by the GP through subscription line use and exit sequencing",
-          "IRR can only be calculated after all fund assets are fully realized, making interim comparisons impossible",
-          "IRR double-counts management fees because they are charged on committed capital before deployment",
+          { text: "IRR can only be calculated after all fund assets are fully realized, making interim comparisons impossible", explanation: "IRR can be (and routinely is) calculated on interim cash flows using current NAV as a terminal value — the issue is reliability, not impossibility." },
+          { text: "IRR double-counts management fees because they are charged on committed capital before deployment", explanation: "Management fees reduce net cash flows and thus net IRR, but they appear once as a reduction in distributions — there is no double-counting." },
         ],
         correctAnswer:
           "IRR is sensitive to the timing of LP cash flows, which can be partially controlled by the GP through subscription line use and exit sequencing",
@@ -860,10 +860,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "Fund A reports 28% gross IRR and 16% net IRR. Fund B reports 22% gross IRR and 15% net IRR. Which comparison is most analytically sound for an LP evaluating these funds?",
         options: [
-          "Fund A is stronger — higher gross IRR indicates superior investment selection before fees",
-          "The funds are approximately equivalent on an LP-economics basis — the 1 percentage point net difference is within normal margin of error",
+          { text: "Fund A is stronger — higher gross IRR indicates superior investment selection before fees", explanation: "Gross IRR excludes management fees and carry that LPs actually bear; an LP evaluates net IRR, not gross, for economic comparison." },
+          { text: "The funds are approximately equivalent on an LP-economics basis — the 1 percentage point net difference is within normal margin of error", explanation: "A 1pp net IRR difference compounds significantly over 10 years; more importantly, Fund A's 12pp gross-to-net gap vs. Fund B's 7pp gap signals materially different fee structures worth examining." },
           "Net IRR is the only relevant LP comparison; Fund A's 16% net may reflect a less favorable fee structure than Fund B's 15% net if gross returns differ by 6 points",
-          "Fund B is stronger because a smaller gross-to-net gap of 7 points indicates better fee terms than Fund A's 12-point gap",
+          { text: "Fund B is stronger because a smaller gross-to-net gap of 7 points indicates better fee terms than Fund A's 12-point gap", explanation: "While Fund B's fee structure appears more LP-friendly, Fund A still delivers higher net returns (16% vs. 15%) — the correct takeaway is that net IRR is the primary LP metric, not the gross-to-net gap alone." },
         ],
         correctAnswer:
           "Net IRR is the only relevant LP comparison; Fund A's 16% net may reflect a less favorable fee structure than Fund B's 15% net if gross returns differ by 6 points",
@@ -875,9 +875,9 @@ export const lessonContents: LessonContent[] = [
           "A GP uses a 12-month subscription line for all capital calls. A peer GP in the same vintage year does not use a subscription line. All else equal, how does this affect the comparison of their reported net IRRs?",
         options: [
           "The subscription line GP's IRR is overstated because the delayed LP cash outflows compress the effective investment period, inflating the annualized rate without improving LP economics",
-          "The subscription line GP's IRR is understated because the fund incurs interest expense on the credit line, increasing the cost basis of investments",
-          "Both GPs' IRRs are equally valid because the LP economics — MOIC and total distributions — are identical regardless of subscription line use",
-          "The subscription line GP's IRR is only comparable after converting both funds to a committed-capital denominator basis",
+          { text: "The subscription line GP's IRR is understated because the fund incurs interest expense on the credit line, increasing the cost basis of investments", explanation: "The interest cost is typically small relative to the IRR inflation from delayed LP cash flows; net reported IRR almost always rises with subscription line use, not falls." },
+          { text: "Both GPs' IRRs are equally valid because the LP economics — MOIC and total distributions — are identical regardless of subscription line use", explanation: "MOIC is largely unaffected, but IRRs are not equally valid for comparison because the timing distortion from the subscription line inflates the reported rate." },
+          { text: "The subscription line GP's IRR is only comparable after converting both funds to a committed-capital denominator basis", explanation: "Committed-capital denominator is a concept for MOIC calculation, not IRR; the correct adjustment for subscription line IRR inflation is to restate cash flows from LP commitment date." },
         ],
         correctAnswer:
           "The subscription line GP's IRR is overstated because the delayed LP cash outflows compress the effective investment period, inflating the annualized rate without improving LP economics",
@@ -888,10 +888,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "Investment X: $8M invested, $36M returned in 18 months (4.5x MOIC, approximately 250% IRR). Investment Y: $300M invested, $720M returned in 8 years (2.4x MOIC, approximately 11.5% IRR). Which conclusion is most accurate?",
         options: [
-          "Investment X is superior — a 250% IRR dramatically exceeds Investment Y's 11.5%",
+          { text: "Investment X is superior — a 250% IRR dramatically exceeds Investment Y's 11.5%", explanation: "IRR is distorted by Investment X's tiny capital base and short duration; it cannot be compared without considering absolute dollar wealth created ($28M vs. $420M)." },
           "Investment Y created more LP wealth in absolute dollar terms ($420M vs. $28M), though Investment X's IRR is higher due to the small capital base and rapid return",
-          "Investment Y is superior — the longer hold period and larger capital base indicate a more sophisticated investment strategy",
-          "Both investments are equivalent for a portfolio context because IRR and MOIC are always proportional",
+          { text: "Investment Y is superior — the longer hold period and larger capital base indicate a more sophisticated investment strategy", explanation: "Hold period and capital size don't determine superiority; the correct framing compares absolute dollar wealth created alongside IRR — this example is meant to illustrate the trade-off, not rank strategies." },
+          { text: "Both investments are equivalent for a portfolio context because IRR and MOIC are always proportional", explanation: "IRR and MOIC are not always proportional — they diverge significantly at different hold periods and capital sizes, which is precisely the point this example illustrates." },
         ],
         correctAnswer:
           "Investment Y created more LP wealth in absolute dollar terms ($420M vs. $28M), though Investment X's IRR is higher due to the small capital base and rapid return",
@@ -902,10 +902,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "What does a Kaplan-Schoar PME of 1.12x indicate about a PE fund's performance?",
         options: [
-          "The fund returned 1.12x more than LP committed capital — equivalent to a 12% gross MOIC",
+          { text: "The fund returned 1.12x more than LP committed capital — equivalent to a 12% gross MOIC", explanation: "PME of 1.12x is not a MOIC on committed capital; it compares PE terminal value to what an equivalent public-market investment would have returned on matched cash flows." },
           "The fund outperformed the public market benchmark on a matched cash-flow basis: LP capital deployed in PE generated 12% more terminal value than if it had been invested in the public index at the same times",
-          "The fund's net IRR exceeded the public market IRR by 1.12 percentage points on an annualized basis",
-          "12% of the fund's returns are attributable to market beta and 88% to GP alpha",
+          { text: "The fund's net IRR exceeded the public market IRR by 1.12 percentage points on an annualized basis", explanation: "PME of 1.12x is a ratio of terminal values, not an IRR spread; Direct Alpha is the metric that expresses PME outperformance as an annualized return difference." },
+          { text: "12% of the fund's returns are attributable to market beta and 88% to GP alpha", explanation: "PME does not decompose returns into beta and alpha components; it benchmarks total PE returns against a public index on a cash-flow-matched basis." },
         ],
         correctAnswer:
           "The fund outperformed the public market benchmark on a matched cash-flow basis: LP capital deployed in PE generated 12% more terminal value than if it had been invested in the public index at the same times",
@@ -1096,10 +1096,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "TVPI is reported on paid-in capital of $1.2B for one fund and on invested capital of $1.05B for another. Distributions and NAV are identical for both funds at $2.1B combined value. Which conclusion is correct?",
         options: [
-          "The second fund has better performance — a higher TVPI on invested capital reflects superior deployment efficiency",
+          { text: "The second fund has better performance — a higher TVPI on invested capital reflects superior deployment efficiency", explanation: "A higher TVPI calculated on a smaller denominator (invested vs. paid-in) simply reflects arithmetic, not better performance; the underlying distributions and NAV are identical." },
           "The TVPI figures are not comparable without harmonizing to the same denominator basis; the 0.15x difference is denominator-driven, not performance-driven",
-          "The first fund has better performance because the ILPA paid-in standard produces a more conservative and reliable TVPI",
-          "TVPI denominator choice does not affect comparison validity because both figures measure the same underlying investment outcome",
+          { text: "The first fund has better performance because the ILPA paid-in standard produces a more conservative and reliable TVPI", explanation: "While ILPA recommends paid-in as the denominator for standardization, the denominator choice doesn't make one fund perform better — the underlying economics are identical." },
+          { text: "TVPI denominator choice does not affect comparison validity because both figures measure the same underlying investment outcome", explanation: "Denominator choice directly changes the TVPI ratio; using paid-in vs. invested capital on the same fund produces materially different TVPI figures even with identical cash flows." },
         ],
         correctAnswer:
           "The TVPI figures are not comparable without harmonizing to the same denominator basis; the 0.15x difference is denominator-driven, not performance-driven",
@@ -1110,10 +1110,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "A buyout fund in year 9 reports TVPI 1.9x and DPI 0.55x. Which statement most accurately characterizes this fund's performance status?",
         options: [
-          "The fund is a strong performer — 1.9x TVPI at year 9 is above the historical buyout median",
+          { text: "The fund is a strong performer — 1.9x TVPI at year 9 is above the historical buyout median", explanation: "TVPI alone at year 9 is insufficient; with DPI of only 0.55x, 1.35x of RVPI remains unconfirmed GP-marked NAV late in fund life — a significant red flag regardless of the TVPI headline." },
           "The fund has a significant realized-versus-estimated mismatch: only 0.55x in cash has been confirmed, while 1.35x (the RVPI component) remains in GP-marked NAV at year 9 — a late-lifecycle red flag",
-          "The fund's DPI of 0.55x indicates that most LP capital has been returned, with the remainder distributed via NAV marks",
-          "The fund is in the early harvest phase and the DPI will build rapidly in the next 12 months",
+          { text: "The fund's DPI of 0.55x indicates that most LP capital has been returned, with the remainder distributed via NAV marks", explanation: "DPI of 0.55x means only 55 cents per dollar has been returned in actual cash — less than half of LP capital — which is unusually low for year 9 of a buyout fund." },
+          { text: "The fund is in the early harvest phase and the DPI will build rapidly in the next 12 months", explanation: "Year 9 of a typical 10-year buyout fund is late in the harvest phase, not early; a DPI of 0.55x at year 9 is a red flag, not a timing normality." },
         ],
         correctAnswer:
           "The fund has a significant realized-versus-estimated mismatch: only 0.55x in cash has been confirmed, while 1.35x (the RVPI component) remains in GP-marked NAV at year 9 — a late-lifecycle red flag",
@@ -1124,10 +1124,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "DPI = 1.0x at a fund's current reporting date. What does this precisely indicate?",
         options: [
-          "The fund has returned all gross proceeds — invested capital plus all profits",
+          { text: "The fund has returned all gross proceeds — invested capital plus all profits", explanation: "DPI of 1.0x means capital has been returned in cash distributions, not that all profits have been paid; profit distributions above cost would push DPI above 1.0x." },
           "The fund has returned LP paid-in capital in cash distributions; LP has recouped contributed capital but not yet received any profit in cash",
-          "The fund has achieved its preferred return threshold and the GP will now begin earning carried interest",
-          "The fund is in the top quartile for DPI relative to its vintage year peers",
+          { text: "The fund has achieved its preferred return threshold and the GP will now begin earning carried interest", explanation: "DPI reaching 1.0x means capital has been returned, but preferred return (typically 8% compounded) must also be satisfied before carry is triggered — DPI of 1.0x alone doesn't confirm preferred return clearance." },
+          { text: "The fund is in the top quartile for DPI relative to its vintage year peers", explanation: "DPI of 1.0x may or may not be top quartile depending on fund age and vintage; the metric tells you what it means (capital returned), not how it ranks against peers." },
         ],
         correctAnswer:
           "The fund has returned LP paid-in capital in cash distributions; LP has recouped contributed capital but not yet received any profit in cash",
@@ -1138,10 +1138,10 @@ export const lessonContents: LessonContent[] = [
         prompt:
           "A GP is valuing a portfolio company using 11x EV/EBITDA when current comparable transaction multiples in the sector are 9x. The company's EBITDA is unchanged from entry. Under ASC 820, which statement is most accurate?",
         options: [
-          "The GP's valuation is non-compliant because ASC 820 requires that current transaction multiples be used as the primary Level 2 input",
+          { text: "The GP's valuation is non-compliant because ASC 820 requires that current transaction multiples be used as the primary Level 2 input", explanation: "ASC 820 allows GPs to document a reasonable basis for departing from current market multiples; Level 3 valuations involve significant judgment and are not automatically non-compliant for using a premium multiple." },
           "The GP's valuation may be technically ASC 820-compliant if they can document a reasonable basis for the premium, but it embeds significant exit risk if sector multiples remain at 9x",
-          "The GP's valuation is automatically validated by the external auditor's sign-off on the annual financial statements",
-          "The 11x multiple is appropriate because ASC 820 requires forward-looking assumptions that may anticipate multiple recovery",
+          { text: "The GP's valuation is automatically validated by the external auditor's sign-off on the annual financial statements", explanation: "Auditors verify that the GP followed a fair-value-compliant process, not that the resulting valuation is accurate; audit sign-off does not guarantee marks will be realized at exit." },
+          { text: "The 11x multiple is appropriate because ASC 820 requires forward-looking assumptions that may anticipate multiple recovery", explanation: "ASC 820 requires fair value based on observable market inputs where available; using 11x when comparables trade at 9x requires explicit documented justification — it is not automatically appropriate." },
         ],
         correctAnswer:
           "The GP's valuation may be technically ASC 820-compliant if they can document a reasonable basis for the premium, but it embeds significant exit risk if sector multiples remain at 9x",
@@ -1153,9 +1153,9 @@ export const lessonContents: LessonContent[] = [
           "Two funds have identical TVPI of 1.75x at year 8. Fund P has DPI 1.40x, RVPI 0.35x. Fund Q has DPI 0.55x, RVPI 1.20x. Which is the most accurate characterization?",
         options: [
           "Fund P is superior — a higher DPI confirms a larger proportion of the TVPI in cash, with minimal remaining uncertainty",
-          "The funds are equivalent because TVPI is the comprehensive performance metric that subsumes both DPI and RVPI",
-          "Fund Q is superior because high RVPI indicates active value creation still underway in the portfolio",
-          "Neither fund can be evaluated without knowing their respective net IRRs and management fee structures",
+          { text: "The funds are equivalent because TVPI is the comprehensive performance metric that subsumes both DPI and RVPI", explanation: "TVPI combines realized and unrealized returns, but RVPI is GP-marked NAV subject to valuation uncertainty; two identical TVPIs with different DPI/RVPI splits carry very different risk profiles." },
+          { text: "Fund Q is superior because high RVPI indicates active value creation still underway in the portfolio", explanation: "High RVPI at year 8 more likely signals an inability or unwillingness to exit rather than active value creation — it represents unconfirmed, potentially overstated GP marks." },
+          { text: "Neither fund can be evaluated without knowing their respective net IRRs and management fee structures", explanation: "Net IRR and fees provide additional context, but the DPI/RVPI split at the same TVPI is itself a meaningful and actionable signal about confirmed vs. estimated return quality." },
         ],
         correctAnswer:
           "Fund P is superior — a higher DPI confirms a larger proportion of the TVPI in cash, with minimal remaining uncertainty",

@@ -61,11 +61,16 @@ export interface LessonBlock {
   whyItMatters?: string;
 }
 
+export interface MCOption {
+  text: string;
+  explanation?: string; // shown after submission for wrong options
+}
+
 export interface MCQuestion {
   questionId: string;
   type: "multiple-choice";
   prompt: string;
-  options: string[];
+  options: (string | MCOption)[];
   correctAnswer: string;
 }
 
