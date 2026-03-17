@@ -13,10 +13,13 @@ export default function NavBar() {
   const path = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E8DDD4] z-10" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
+    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-[#E8DDD4] z-10" role="navigation" aria-label="Main" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
       <div className="max-w-2xl mx-auto flex">
         {TABS.map(({ href, label }) => {
-          const active = path === href;
+          // Lesson pages are children of the Modules tab
+          const active = href === "/modules"
+            ? path === href || path.startsWith("/lesson/")
+            : path === href;
           return (
             <Link
               key={href}

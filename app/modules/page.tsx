@@ -217,7 +217,7 @@ export default function ModulesPage() {
 
   return (
     <main className="min-h-screen bg-[#FBF7F3]">
-      <div className="max-w-2xl mx-auto px-4 py-6">
+      <div className="max-w-2xl mx-auto px-4 py-6 pb-24">
         {/* Header */}
         <div className="mb-5">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-[#404040]">

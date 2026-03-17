@@ -184,34 +184,34 @@ export const allReviewCards: ReviewCard[] = [
     front: "The hurdle rate is not guaranteed — it is a preferential return threshold.",
     back: "LPs receive distributions first until they recover capital plus the hurdle (usually 8%). Only then does carry kick in. But if deals underperform, LPs may not hit the hurdle and the GP earns no carry.",
   },
-  // Day 12
+  // Day 12 — PME and the Benchmarking Toolkit
   {
-    cardId: "d12-mc1",
+    cardId: "d12-fc1",
     lessonId: "day-12",
     dayNumber: 12,
+    cardType: "flashcard",
+    topic: "pme",
+    front: "What does PME (Public Market Equivalent) measure?",
+    back: "PME benchmarks PE returns against a hypothetical public-market investment with the same cash flow timing. A PME > 1.0 means the PE fund outperformed the index on a like-for-like basis.",
+  },
+  // Day 13 — Manager Selection and GP Underwriting
+  {
+    cardId: "d13-mc1",
+    lessonId: "day-13",
+    dayNumber: 13,
     cardType: "mini-case",
     topic: "manager-selection",
     front: "A GP shows top-quartile IRR across three funds. The lead partner recently retired and the team has turned over 40% in two years. Do you re-up?",
     back: "This is a classic key-person risk situation. Past performance was likely tied to the departed partner. Re-underwrite the team independently. The track record may not transfer. Most institutions would require a smaller commitment or pass.",
   },
   {
-    cardId: "d12-fc1",
-    lessonId: "day-12",
-    dayNumber: 12,
-    cardType: "flashcard",
-    topic: "due-diligence",
-    front: "What is 'attribution analysis' in PE due diligence?",
-    back: "Breaking down a fund's returns into deal-level contributors — identifying which deals drove performance, whether wins were concentrated, and whether the GP repeated a consistent strategy or got lucky on one outlier.",
-  },
-  // Day 13
-  {
     cardId: "d13-fc1",
     lessonId: "day-13",
     dayNumber: 13,
     cardType: "flashcard",
-    topic: "pme",
-    front: "What does PME (Public Market Equivalent) measure?",
-    back: "PME benchmarks PE returns against a hypothetical public-market investment with the same cash flow timing. A PME > 1.0 means the PE fund outperformed the index on a like-for-like basis.",
+    topic: "due-diligence",
+    front: "What is 'attribution analysis' in PE due diligence?",
+    back: "Breaking down a fund's returns into deal-level contributors — identifying which deals drove performance, whether wins were concentrated, and whether the GP repeated a consistent strategy or got lucky on one outlier.",
   },
   // Day 14
   {
@@ -252,25 +252,25 @@ export const allReviewCards: ReviewCard[] = [
     front: "Co-investments reduce fees but introduce adverse selection risk.",
     back: "GPs offer co-invest on deals that are too large for the fund alone — or sometimes deals they couldn't fully fill in the fund. LPs must assess whether they're getting the best deals or the overflow.",
   },
-  // Day 17
+  // Day 17 — Reporting, NAV, and Mark Integrity
   {
     cardId: "d17-fc1",
     lessonId: "day-17",
     dayNumber: 17,
     cardType: "flashcard",
-    topic: "asset-allocation",
-    front: "What is the illiquidity premium argument for PE?",
-    back: "Investors accepting lock-up and illiquidity should earn a premium over public markets. Empirical evidence is mixed — net-of-fee PE returns need to materially exceed public benchmarks to justify the illiquidity cost.",
+    topic: "nav",
+    front: "Why does PE NAV smooth volatility relative to public markets?",
+    back: "PE NAV is based on lagged appraisals, not daily market prices. This creates artificially low reported volatility and correlation — a feature that can mislead portfolio risk models.",
   },
-  // Day 18
+  // Day 18 — PE in the Portfolio: Allocation and the Illiquidity Premium
   {
     cardId: "d18-fc1",
     lessonId: "day-18",
     dayNumber: 18,
     cardType: "flashcard",
-    topic: "nav",
-    front: "Why does PE NAV smooth volatility relative to public markets?",
-    back: "PE NAV is based on lagged appraisals, not daily market prices. This creates artificially low reported volatility and correlation — a feature that can mislead portfolio risk models.",
+    topic: "asset-allocation",
+    front: "What is the illiquidity premium argument for PE?",
+    back: "Investors accepting lock-up and illiquidity should earn a premium over public markets. Empirical evidence is mixed — net-of-fee PE returns need to materially exceed public benchmarks to justify the illiquidity cost.",
   },
   // Day 19
   {

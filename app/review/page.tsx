@@ -311,7 +311,7 @@ export default function ReviewPage() {
 
   return (
     <main className="min-h-screen bg-[#FBF7F3]">
-      <div className="max-w-2xl mx-auto px-4 py-6">
+      <div className="max-w-2xl mx-auto px-4 py-6 pb-24">
         {/* Header */}
         <div className="flex items-center justify-between mb-5">
           <div>
@@ -327,11 +327,12 @@ export default function ReviewPage() {
 
           {/* Group toggle — only show when there are cards */}
           {!isEmpty && (
-            <div className="flex items-center bg-white border border-[#E8DDD4] rounded-xl p-0.5 text-xs font-medium">
+            <div className="flex items-center bg-white border border-[#E8DDD4] rounded-xl p-0.5 text-xs font-medium" role="group" aria-label="Group cards by">
               {(["priority", "topic"] as GroupMode[]).map((m) => (
                 <button
                   key={m}
                   onClick={() => setGroupMode(m)}
+                  aria-pressed={groupMode === m}
                   className={`px-3 py-1.5 rounded-lg capitalize transition-colors ${
                     groupMode === m
                       ? "bg-[#2294BD] text-white shadow-sm"

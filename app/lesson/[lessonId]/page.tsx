@@ -504,7 +504,18 @@ function SRQuestionCard({
           )}
 
           {feedbackError && (
-            <p className="mt-2 text-sm text-[#D9532B]">{feedbackError}</p>
+            <div className="mt-2 rounded-xl border border-[#D9532B]/20 bg-[#D9532B]/5 px-4 py-3 flex items-start gap-2">
+              <span className="text-[#D9532B] text-xs mt-0.5">✗</span>
+              <div>
+                <p className="text-xs text-[#D9532B] font-medium">{feedbackError}</p>
+                <button
+                  onClick={handleGetFeedback}
+                  className="text-xs text-[#404040] underline mt-1"
+                >
+                  Try again
+                </button>
+              </div>
+            </div>
           )}
 
           {feedback && (
@@ -655,7 +666,18 @@ export default function LessonPage({
   if (!content || !lesson) {
     return (
       <main className="min-h-screen bg-[#FBF7F3] flex items-center justify-center">
-        <p className="text-sm text-[#404040]">Lesson not found.</p>
+        <div className="text-center">
+          <h1 className="text-lg font-bold text-[#000000] mb-2">Lesson not found</h1>
+          <p className="text-sm text-[#404040] mb-4">
+            The lesson &ldquo;{lessonId}&rdquo; doesn&apos;t exist.
+          </p>
+          <a
+            href="/modules"
+            className="text-sm font-medium text-[#2294BD] bg-[#2294BD]/10 hover:bg-[#2294BD]/18 px-4 py-2 rounded-xl transition-colors"
+          >
+            Back to Modules
+          </a>
+        </div>
       </main>
     );
   }
@@ -718,7 +740,7 @@ export default function LessonPage({
 
   return (
     <main className="min-h-screen bg-[#FBF7F3]">
-      <div className="max-w-2xl mx-auto px-4 py-8 sm:py-10">
+      <div className="max-w-2xl mx-auto px-4 py-8 pb-24 sm:py-10 sm:pb-24">
         {/* Header */}
         <div className="mb-8">
           <a
@@ -856,6 +878,15 @@ export default function LessonPage({
             />
           ))}
         </div>
+
+        {/* SR completion hint */}
+        {mcSubmitted && srQuestions.length > 0 && !srAllSubmitted && (
+          <div className="rounded-xl border border-[#FAA51A]/20 bg-[#FAA51A]/5 px-4 py-3 mb-4">
+            <p className="text-sm text-[#9B6A00] font-medium">
+              Complete the short-response question{srQuestions.length > 1 ? "s" : ""} above to finish the quiz.
+            </p>
+          </div>
+        )}
 
         {/* Confidence + save */}
         {quizComplete && (
