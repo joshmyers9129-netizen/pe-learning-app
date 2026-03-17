@@ -4151,6 +4151,202 @@ export const lessonContents: LessonContent[] = [
       "Private equity fund economics, governance, and allocator programme-construction frameworks",
     ],
   },
+  {
+    lessonId: "day-22",
+    blocks: [
+      {
+        type: "intro",
+        title: "Meeting cold open",
+        content:
+          "The GP calls an LPAC meeting with 72 hours' notice. The agenda sounds procedural: approve a fund extension, review a valuation matter, and discuss a proposed GP-led transaction for the fund's largest remaining asset. A less experienced LP hears 'governance process' and assumes protection is working. A fluent allocator hears compressed timeline, conflict stack, and information asymmetry. This lesson teaches how governance actually functions in private markets: who decides, what LPACs really do, where conflicts recur, and how to distinguish real oversight from a polished process that mainly legitimizes GP discretion.",
+      },
+      {
+        type: "framing",
+        title: "Governance in private markets is procedural control, not equal control",
+        content:
+          "Public-markets-trained investors often overestimate how much direct control LPs have once capital is committed. In private funds, governance is rarely about running the portfolio. It is about procedural rights around conflicts, information flow, approvals, and escalation. That makes governance quality less visible than investment performance, but often more important when relationships are stressed.\n\nThis lesson builds directly on Day 21. Day 21 taught that allocator control is contractual. Day 22 teaches how that control is exercised in practice: through LPAC mechanics, conflict review, valuation process, extension requests, and GP-led transactions. The objective is not to turn the learner into fund counsel or a process purist. It is to help them recognize when governance is functioning as a genuine risk-control system and when it is mainly a ritual that ratifies GP decisions already made.",
+      },
+      {
+        type: "teaching",
+        title: "What the LPAC is for — and what it is not for",
+        content:
+          "The LP Advisory Committee is one of the most misunderstood features in private funds. Many newer allocators treat the LPAC as if it were a governing board. It usually is not.\n\nIn most private funds, the LPAC's primary job is to address conflicts, exceptions, and consent items specified in the LPA. Common LPAC topics include:\n\n- related-party or affiliate transactions\n- valuation issues where conflicts are heightened\n- fund term extensions\n- key-person waivers or related exceptions\n- continuation vehicles and other GP-led transactions\n- cross-fund conflicts and allocation disputes\n- certain borrowing or fund-finance matters, depending on the documents\n\nWhat LPACs usually do **not** do:\n- approve ordinary portfolio company investments\n- supervise day-to-day underwriting\n- replace the GP's discretion in normal fund operations\n- provide broad fiduciary governance equivalent to a corporate board\n\nThat distinction matters. A fund can have an active LPAC and still leave the GP with very wide practical discretion. The allocator's task is not simply to ask whether an LPAC exists. It is to understand what decisions require LPAC approval, what information the LPAC receives, how quickly decisions must be made, and whether the committee can realistically influence outcomes before they are locked in.",
+      },
+      {
+        type: "teaching",
+        title: "Conflict taxonomy: the recurring situations that matter most",
+        content:
+          "Private fund conflicts are not random. They tend to recur in recognizable buckets. Allocators should know the main categories because governance quality is often easiest to judge when these situations arise.\n\n**1. GP-led transactions**\nContinuation vehicles, strip sales, tender offers, and other GP-led restructurings create an obvious conflict: the GP sits on both sides of the process in some economic sense, because it influences valuation, process timing, and whether old-fund LPs sell, roll, or stay exposed.\n\n**2. Cross-fund conflicts**\nA GP with multiple vehicles may face allocation issues around which fund gets an investment, how broken-deal costs are shared, or whether one vehicle sells an asset to another.\n\n**3. Valuation conflicts**\nWhenever marks influence fee optics, performance claims, financing capacity, continuation pricing, or redemption mechanics, valuation is not a neutral accounting exercise. It is a governance issue.\n\n**4. Affiliate and related-party arrangements**\nOperating partners, consultants, administrators, real estate operators, financing affiliates, or service providers connected to the GP can create economics leakage or process bias even when formally disclosed.\n\n**5. Fund-finance and liquidity-management conflicts**\nFund-level leverage, especially when used to support distributions, bridge exits, or manage portfolio stress, can create incentives that are not identical across the GP, existing LPs, and prospective buyers in a secondary or GP-led process.\n\nAllocators should not treat all conflicts as evidence of bad behavior. Many are unavoidable in scaled private-markets platforms. The relevant question is whether the GP identifies them early, frames them clearly, provides decision-useful information, and allows enough time and process for LPs or the LPAC to respond intelligently.",
+      },
+      {
+        type: "teaching",
+        title: "How governance decisions really get made: timeline, information, and leverage",
+        content:
+          "Formal rights matter, but practical governance often turns on three operational variables: timing, information quality, and LP coordination.\n\n**Timing:** An LPAC with approval rights can still be weak in practice if materials arrive late, meetings are rushed, or alternatives are presented as urgent and unavoidable. A short timeline often shifts the balance of power toward the GP, even when the formal consent right sits with LPs.\n\n**Information quality:** Governance works only if the allocator receives enough information to judge the issue. For a GP-led transaction, that means process details, valuation support, rationale, economics reset terms, and election consequences. For a valuation issue, it means methodology, assumptions, and what changed.\n\n**LP coordination:** A right requiring a supermajority of dispersed LPs may be far weaker than it appears. LPs differ in size, access, interests, and willingness to challenge the GP. In practice, some rights are easier to document than to use.\n\nA disciplined allocator therefore reads governance in two layers:\n\n- **formal layer:** what the documents say\n- **practical layer:** whether the process makes the right usable under time pressure and imperfect information\n\nThis is why good governance is best observed in stress cases, not marketing decks. The allocator should ask: when conflict arises, does the GP slow down and illuminate the process, or accelerate and compress it?",
+      },
+      {
+        type: "teaching",
+        title: "GP-led transactions as the governance stress test",
+        content:
+          "GP-led transactions are one of the clearest governance stress tests in private markets because they combine valuation, conflicts, process fairness, and time pressure.\n\nA typical GP-led scenario might involve a high-quality remaining asset in an older fund. The GP argues that the company needs more time and capital, and proposes moving it into a continuation vehicle. Existing LPs are asked to choose among three paths:\n\n- sell for cash at the transaction price\n- roll into the new vehicle\n- in some cases, partially sell and partially roll\n\nThe allocator governance questions are predictable and high signal:\n\n- What problem is the transaction solving?\n- Was there a real market check with multiple buyers?\n- Who set the price and what validation exists?\n- What information package was given to LPs and how complete was it?\n- What are the fees and carry in the new vehicle?\n- What role did the LPAC play, and when did it engage?\n- Were conflicts disclosed early, or only once the transaction was substantially formed?\n\nA sophisticated allocator does not start by asking whether continuation vehicles are good or bad. They start by asking whether the process is credible, whether the election is genuinely informed, and whether the economics reset is justified. Governance quality is the bridge between those questions and the final commitment decision.",
+      },
+      {
+        type: "teaching",
+        title: "Valuation oversight is governance, not just accounting",
+        content:
+          "Many allocators treat valuation review as a technical accounting matter. In private markets, valuation oversight is also governance because marks affect bargaining power, fundraising narratives, continuation pricing, financing capacity, and sometimes fee-related optics.\n\nGood governance around valuation usually includes some combination of:\n\n- a clear valuation policy with defined escalation points\n- committee structures separating deal-team enthusiasm from final mark approval\n- use of third-party valuation support where appropriate\n- disclosure of methodology changes or unusual assumptions\n- consistency between portfolio developments and reported marks\n\nWeak governance patterns often look like this:\n- valuations that stay smooth while public or transactional evidence deteriorates sharply\n- unusual optimism in the largest remaining assets near fundraising or restructuring events\n- selective use of third-party support only when convenient\n- minimal explanation of why marks did not move despite obvious market change\n\nThe allocator does not need perfect precision. They need a process they can trust enough to interpret the numbers with calibrated skepticism. That is why valuation governance belongs in the governance module before the dedicated valuation lesson. Marks are outputs. Governance is part of the process that creates them.",
+      },
+      {
+        type: "teaching",
+        title: "Independent opinions: useful process control, not a substitute for judgment",
+        content:
+          "Fairness opinions and third-party valuation opinions are often cited as evidence that a conflicted transaction or valuation process is robust. They can be helpful, but they are not self-executing protections.\n\nWhat these opinions can do:\n- provide a procedural check that the GP cannot ignore completely\n- create an external reference point for boards, LPACs, or investors\n- support a process narrative that the transaction was reviewed beyond the deal team\n\nWhat they do **not** do on their own:\n- prove that the price is the best available price\n- eliminate structural conflicts\n- replace a genuine market process\n- solve incomplete disclosure or rushed election timelines\n\nAllocators should therefore interpret an independent opinion as one control among several. A weak process with a fairness opinion can still be weak. A strong process usually includes more than the opinion: broad buyer outreach, early LPAC engagement, clear disclosure, and enough time for an informed decision.\n\nThe practical rule is simple: do not mistake external validation for complete governance. Ask what the opinion covers, what assumptions it relies on, and what it leaves unresolved.",
+      },
+      {
+        type: "teaching",
+        title: "Governance red flags: what should make an allocator uncomfortable",
+        content:
+          "Some governance failures are dramatic. More often, the warning signs are procedural.\n\nCommon red flags include:\n\n- LPAC materials delivered too close to the decision date\n- selective disclosure, where some LPs appear better informed than others\n- repeated use of 'urgency' to justify compressed process\n- reliance on vague 'market-standard' explanations instead of specific mechanics\n- advisory committees asked to bless matters after commercial terms are largely fixed\n- unclear distinction between review, consultation, and approval rights\n- abrupt changes in valuation assumptions around fundraising, financing, or GP-led events\n- sparse explanation of affiliate economics, broken-deal allocations, or cost-sharing\n- a pattern of governance requests that consistently expand GP flexibility while preserving limited LP visibility\n\nNone of these alone proves a GP is poor. But repeated procedural asymmetry is often a leading indicator that the allocator will discover problems only after economic leverage is gone.\n\nA strong allocator treats governance patterns as predictive evidence. The question is not 'did something illegal happen?' The question is 'does this process increase the probability of future negative surprise?'",
+      },
+      {
+        type: "example",
+        title: "Worked example: LPAC review of a continuation vehicle proposal",
+        content:
+          "Assume a buyout fund is in year nine and holds one large software asset representing 28% of NAV. The GP proposes a continuation vehicle, arguing that the company needs two more years of operational work and a tuck-in acquisition. Existing LPs can sell at the deal price or roll into the new vehicle.\n\nFacts presented to the LPAC:\n- one lead buyer has agreed to anchor the deal\n- a fairness opinion will be delivered before signing\n- the fund term also needs a one-year extension if the transaction is delayed\n- the GP intends to earn carry in the new vehicle under a new waterfall\n- materials are delivered four days before the LPAC meeting\n\nAllocator analysis path:\n\n**Step 1: identify the conflict stack**\nThe GP has influence over process, price framing, timing, and future economics. This is a classic conflict-heavy event.\n\n**Step 2: separate process quality from asset quality**\nThe asset may be excellent. That does not make the governance process acceptable by default.\n\n**Step 3: ask what market check actually occurred**\nWas there broad buyer outreach or just one anchored buyer? Was pricing tension created, or was the deal largely bilateral?\n\n**Step 4: assess information sufficiency**\nDid LPs receive enough detail on valuation methodology, buyer outreach, new-vehicle economics, and the rationale for not simply extending the existing fund?\n\n**Step 5: assess timing and LP leverage**\nFour days is usually enough to read materials, not enough to create comfort in a major conflicted process. Compressed time weakens effective oversight.\n\n**Step 6: judge whether the fairness opinion is additive or cosmetic**\nA fairness opinion can help, but it does not cure a thin process or limited buyer outreach.\n\nThe allocator conclusion may still be that the transaction is reasonable. But that conclusion should come from process credibility plus asset logic, not from the GP's confidence alone.",
+      },
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "Core source categories for this lesson: ILPA Principles 3.0 for alignment, governance, and transparency expectations; ILPA guidance on continuation funds and GP-led transactions for LP process, disclosure, and conflict-management expectations; institutional private fund governance materials on LPAC scope, conflict review, and valuation oversight. The learning objective is to understand governance as allocator risk control, not to memorize committee formalities.",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: responding to a compressed conflict process",
+        content:
+          "The GP says: 'We know the timeline is tight, but this is a high-quality asset and we have independent support on price. We hope the LPAC can review and move quickly.'\n\n**Weak LP response:** 'Understood. If the asset is strong and a fairness opinion is coming, we are probably fine to proceed.'\n\nWhy it is weak: it collapses governance into asset quality and external validation. It ignores process sufficiency, market check quality, and whether LP rights are usable in practice.\n\n**Strong LP response:** 'Before we focus on outcome, we need confidence in process. Please walk us through buyer outreach, timeline rationale, the exact role of the LPAC under the documents, what information all LPs will receive, and why the proposed economics reset is justified versus simply extending the current fund. A fairness opinion is helpful, but not sufficient on its own.'\n\nWhy it is strong: it treats governance as a distinct underwriting dimension and tests whether the process is designed for informed LP decision-making rather than speed alone.",
+      },
+      {
+        type: "inference-boundary",
+        title: "Inference boundary: what good governance signals and what it does not",
+        content:
+          "**What good governance can signal:**\n- the GP is willing to expose conflict situations to scrutiny rather than bury them\n- LPs are more likely to receive timely and decision-useful information\n- valuation and conflict processes may be more trustworthy under stress\n- future surprises may be less likely because issues are escalated earlier\n\n**What good governance does not guarantee:**\n- that every conflicted transaction is attractive\n- that valuations are perfectly accurate\n- that LPs will coordinate effectively in every stressed situation\n- that an LPAC right will always be exercised forcefully in practice\n\nThe allocator should therefore use governance as a quality-of-process indicator. It improves the odds of better outcomes, but it does not replace judgment on economics, valuation, or strategy.",
+      },
+      {
+        type: "exercise",
+        title: "Applied exercise: build a governance checklist for a conflicted fund event",
+        content:
+          "You are reviewing a simplified scenario involving three concurrent issues: a one-year fund extension request, a valuation dispute on the largest remaining asset, and a possible GP-led continuation transaction.\n\nBuild a governance checklist under five headings:\n\n1. **Decision rights** — what requires LPAC review, LPAC approval, or broader LP consent?\n2. **Information package** — what minimum materials must LPs receive to make an informed decision?\n3. **Timing** — what timeline would be reasonable for a conflict-heavy process?\n4. **Independent validation** — where would fairness or valuation opinions help, and where are they insufficient?\n5. **Conflict disclosure** — what potential GP incentives should be disclosed explicitly?\n\nThen rank the top three process weaknesses that would make you most uncomfortable, even if the asset itself appears strong.",
+      },
+      {
+        type: "meeting-application",
+        title: "In the manager or LPAC discussion: five high-signal governance questions",
+        content:
+          "1. **'What specific decision right is being exercised here — consultation, approval, waiver, or formal consent — and where is that right defined?'**\nThis forces precision on what the LPAC or LPs can actually do.\n\n2. **'When did the GP first identify this as a conflict matter, and why are LPs seeing it on this timeline?'**\nThis tests whether the GP escalated early or only after commercial decisions were substantially formed.\n\n3. **'What alternatives were considered, and why is the proposed path preferable for existing LPs rather than only operationally easier for the GP?'**\nThis checks whether process included genuine alternatives.\n\n4. **'What independent validation exists, what does it cover, and what does it not cover?'**\nThis prevents overreliance on fairness or valuation opinions.\n\n5. **'How will information be shared across the full LP base, and are any LPs receiving materially different access or timing?'**\nThis surfaces information asymmetry and side-channel governance risk.",
+      },
+      {
+        type: "meeting-application",
+        title: "Allocator application: summarize governance as an underwriting factor",
+        content:
+          "A disciplined allocator should be able to summarize governance quality in a short, decision-useful note using the same style applied to economics and portfolio construction. The note should answer:\n\n- where the GP has broad discretion\n- where LPs or the LPAC have real procedural leverage\n- where conflicts are most likely to recur\n- whether information flow is strong enough to support informed oversight\n- whether recent governance behavior raises or lowers confidence in future processes\n\nThis summary is especially useful in re-up situations, where relationship familiarity can blunt skepticism, and in scaled programmes, where the cost of poor governance compounds across multiple managers and years. A strong commitment case can withstand explicit governance scrutiny. A weak one often tries to bypass it.",
+      },
+    ],
+    quiz: [
+      {
+        questionId: "d22q1",
+        type: "multiple-choice",
+        prompt:
+          "What is the most accurate general description of an LPAC in a private fund?",
+        options: [
+          "A body that usually approves every portfolio company investment before closing",
+          "A committee primarily focused on conflicts, exceptions, and specific consent matters defined in the fund documents",
+          "A board equivalent that directly manages the fund's portfolio strategy",
+          "A committee that automatically represents all LPs as a fiduciary in every dispute",
+        ],
+        correctAnswer:
+          "A committee primarily focused on conflicts, exceptions, and specific consent matters defined in the fund documents",
+      },
+      {
+        questionId: "d22q2",
+        type: "multiple-choice",
+        prompt:
+          "Which of the following is the clearest example of a conflict-heavy governance event?",
+        options: [
+          "A routine quarterly portfolio update",
+          "A GP-led continuation vehicle proposal for a major remaining asset",
+          "An ordinary follow-on investment in an existing portfolio company",
+          "A standard capital call for a previously approved deal",
+        ],
+        correctAnswer:
+          "A GP-led continuation vehicle proposal for a major remaining asset",
+      },
+      {
+        questionId: "d22q3",
+        type: "multiple-choice",
+        prompt:
+          "Why can a formally strong LP consent right still be weak in practice?",
+        options: [
+          "Because LPs usually have no economic interest in governance matters",
+          "Because the right may be undermined by compressed timelines, incomplete information, and coordination difficulty across LPs",
+          "Because private funds are required to ignore LP votes in conflict situations",
+          "Because fairness opinions automatically replace LP decision rights",
+        ],
+        correctAnswer:
+          "Because the right may be undermined by compressed timelines, incomplete information, and coordination difficulty across LPs",
+      },
+      {
+        questionId: "d22q4",
+        type: "multiple-choice",
+        prompt:
+          "Which statement best captures the role of a fairness opinion in a conflicted transaction?",
+        options: [
+          "It proves the process was fully competitive and the price is the best available price",
+          "It eliminates the need for LPAC review",
+          "It can support process credibility, but it does not replace market testing, disclosure quality, or allocator judgment",
+          "It converts a conflicted process into an arm's-length one",
+        ],
+        correctAnswer:
+          "It can support process credibility, but it does not replace market testing, disclosure quality, or allocator judgment",
+      },
+      {
+        questionId: "d22q5",
+        type: "multiple-choice",
+        prompt:
+          "Why does valuation oversight belong inside a governance discussion?",
+        options: [
+          "Because private fund valuations are set only by external auditors",
+          "Because marks can influence bargaining power, reported performance, financing flexibility, and conflict-heavy transactions",
+          "Because valuation questions are irrelevant until a fund is fully realized",
+          "Because LPACs always set every portfolio valuation directly",
+        ],
+        correctAnswer:
+          "Because marks can influence bargaining power, reported performance, financing flexibility, and conflict-heavy transactions",
+      },
+      {
+        questionId: "d22q6",
+        type: "short-response",
+        prompt:
+          "Explain why a rushed LPAC process can weaken allocator protection even when the documents technically require LPAC approval. Write two to four sentences.",
+        modelAnswer:
+          "Formal approval rights matter only if LPs or LPAC members have enough time and information to use them intelligently. A compressed process reduces the ability to review alternatives, challenge assumptions, coordinate with other investors, and understand conflicts before commercial terms are effectively fixed. In practice, rushed timing can shift power back toward the GP even when the legal consent right still exists on paper.",
+      },
+      {
+        questionId: "d22q7",
+        type: "short-response",
+        prompt:
+          "A GP says a continuation vehicle is being proposed because the remaining asset is excellent and deserves more time. What are the three most important governance questions you would ask before focusing on whether the asset is attractive?",
+        modelAnswer:
+          "First, I would ask what process was run: buyer outreach, pricing tension, and whether there was a genuine market check. Second, I would ask what information and timeline LPs are being given, because an informed election requires enough detail and enough time. Third, I would ask how conflicts are being managed: LPAC role, independent validation, and what new fees or carry economics the GP would receive in the continuation vehicle.",
+      },
+    ],
+    sources: [
+      "ILPA Principles 3.0 — governance, transparency, and GP-LP alignment baseline",
+      "ILPA guidance on continuation funds and GP-led transactions — LPAC process, conflict management, and disclosure expectations",
+      "Institutional private fund governance materials on LPAC scope, approvals, waivers, and conflict review",
+      "Practitioner materials on valuation oversight, fairness opinions, and conflicted private-market processes",
+      "CFA Institute: Private Markets and Alternative Investments curriculum — governance and private fund oversight context",
+    ],
+  },
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
