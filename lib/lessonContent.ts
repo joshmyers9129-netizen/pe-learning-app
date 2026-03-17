@@ -5559,6 +5559,208 @@ export const lessonContents: LessonContent[] = [
     "CAIA and industry materials on venture construction, manager dispersion, and the economics of outlier-driven returns",
   ],
 },
+{
+  lessonId: "day-28",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "A venture GP says they invest 'from seed through growth' and have built a full-platform model that can support companies across the lifecycle. That can sound impressive until the allocator asks harder questions: where does the firm actually win, what check sizes and ownership targets apply at each stage, how do reserve needs change, and are these really one coherent strategy or several different businesses under one roof? This lesson teaches the venture stage map and fund archetypes so the learner can distinguish a true venture strategy from a vague all-stage story.",
+    },
+    {
+      type: "framing",
+      title: "Stage exposure is one of the most important choices in venture",
+      content:
+        "Day 27 established that venture is governed by power-law outcomes, not by smooth average portfolio performance. Day 28 adds the next layer: where in the company lifecycle a manager invests changes the shape of that power law, the ownership math, the reserve burden, the evidence available at entry, the likely duration to exit, and the allocator's expectations for manager edge.\n\nThis matters because many venture firms describe themselves broadly while actually operating with clear stage preferences and structural constraints. Seed, Series A, Series B, late-stage venture, and growth-oriented rounds are not interchangeable versions of the same activity. They involve different sourcing ecosystems, underwriting inputs, portfolio-construction logic, and manager archetypes. The allocator needs a clean map, because without it, later lessons on cap tables, financing terms, valuation, portfolio management, and diligence will blur together.",
+    },
+    {
+      type: "teaching",
+      title: "The core stage map: seed, early venture, breakout venture, and late-stage",
+      content:
+        "A useful allocator stage map is more practical than purely legal or marketing-based labels. The goal is to classify where risk sits and what evidence exists, not simply to memorize round names.\n\n**Seed / pre-seed**\nAt this stage, the company may have limited revenue, an unproven go-to-market model, and a product that is still early in development. The key underwriting inputs are often founder quality, market insight, early product signal, technical differentiation, and the plausibility of company formation rather than demonstrated business model durability.\n\n**Series A / early venture**\nThe company usually has a clearer product, early commercial traction, and more defined financing needs. Underwriting begins to include signs of repeatability, customer adoption quality, and the possibility of scaling the initial wedge into a real company.\n\n**Series B / breakout venture**\nThe business is further along, often with stronger revenue signal, more visible market fit, and larger capital needs. The underwriting emphasis shifts toward scaling quality, retention, unit economics direction, category leadership potential, and whether the company can become one of the few fund-driving winners.\n\n**Late-stage venture / pre-IPO**\nThe company is more mature, but not necessarily lower risk. Operating data is richer, yet valuation sensitivity, financing structure, mark quality, and crossover-investor behavior often matter more. Upside may be narrower in multiple terms even if absolute-dollar outcomes remain significant.\n\nThis stage map matters because a manager's real strategy is partly defined by where it is willing to bear uncertainty and what kind of evidence it requires before underwriting a company.",
+    },
+    {
+      type: "teaching",
+      title: "Stage determines the tradeoff between ownership, evidence, and price",
+      content:
+        "One of the cleanest ways to understand stage investing is to see it as a changing tradeoff among three variables: ownership potential, evidence at entry, and price paid.\n\nAt earlier stages:\n- ownership opportunity is typically higher\n- evidence is thinner\n- price may be lower in absolute terms, though not necessarily 'cheap' relative to uncertainty\n\nAt later stages:\n- evidence is stronger\n- business-model risk may be lower in some respects\n- ownership opportunity for a given dollar invested is usually lower\n- valuation and financing-structure risk may become more important\n\nThis is one reason stage exposure matters so much for allocators. It is not simply a risk ladder from high risk to low risk. Later-stage funds may reduce some company-formation risk, but they can increase sensitivity to valuation compression, structured rounds, duration mismatch, and crowded-capital dynamics. Early-stage funds may take more fundamental uncertainty but preserve more upside if they identify real outliers early and maintain ownership.\n\nThe allocator should therefore avoid the simplistic view that later stage is just 'safer venture.' It is different venture, with a different balance of underwriting inputs and outcome drivers.",
+    },
+    {
+      type: "teaching",
+      title: "Fund archetypes: what kinds of venture firms allocators should recognize",
+      content:
+        "The venture market is easier to underwrite when the learner recognizes recurring manager archetypes rather than treating all firms as generic VC brands.\n\nImportant fund archetypes include:\n\n**Seed specialists**\nThese firms focus on very early company formation and often compete on founder access, judgment under sparse data, and portfolio support during company creation. They typically need broad portfolios, smaller initial checks, and disciplined reserves.\n\n**Series A / early-stage franchises**\nThese firms often emphasize conviction at the first institutional round, sector pattern recognition, and the ability to identify which early traction is truly scalable.\n\n**Multi-stage venture firms**\nThese firms invest across several stages, sometimes from seed through late-stage. The allocator must determine whether this is one coherent investing platform with differentiated edge at each stage or multiple strategies sharing a brand.\n\n**Opportunity or late-stage funds**\nThese vehicles invest further along the company lifecycle, often with larger checks, lower ownership percentages for a given company, and more exposure to valuation, market-window, and exit-timing risk.\n\n**Sector-specialist venture firms**\nThese managers focus on domains such as enterprise software, fintech, healthcare, biotech, climate, industrial tech, or deep tech. Their edge may be stronger pattern recognition within a specific domain, but the allocator must still judge whether specialization improves outcomes or simply narrows the opportunity set.\n\nThe point of this taxonomy is not to rank archetypes. It is to help the allocator match strategy description to actual construction, reserves, and edge claims.",
+    },
+    {
+      type: "teaching",
+      title: "Why multi-stage is not automatically a strength",
+      content:
+        "Many allocators are drawn to multi-stage firms because they seem diversified and flexible. Sometimes that is true. But multi-stage can also create analytical slippage.\n\nPotential strengths of a true multi-stage platform:\n- the firm can support companies through multiple financing stages\n- information may compound across the lifecycle\n- portfolio companies may have a built-in capital path within one platform\n- the firm may have broader market visibility\n\nPotential weaknesses or questions:\n- is the firm genuinely differentiated at every stage, or strong at one stage and opportunistic at others?\n- are stage-specific decision processes really distinct, or is the same brand covering too much ground?\n- do reserve and ownership decisions become muddled across vehicles?\n- is the allocator underwriting one venture strategy or several adjacent strategies wearing the same label?\n\nA sophisticated allocator should not grant automatic credit for breadth. Breadth is useful only if the platform can show clear edge, discipline, and portfolio logic by stage. Otherwise, multi-stage can become a polite description for weak strategy boundaries.",
+    },
+    {
+      type: "teaching",
+      title: "Stage exposure changes portfolio construction and reserve burden",
+      content:
+        "Stage is not just an underwriting input. It changes how a fund must be built.\n\n**Seed-oriented funds** often need:\n- more company count to handle very high early failure rates\n- smaller initial checks\n- reserve discipline that balances optionality with over-support risk\n- explicit ownership targets that recognize future dilution\n\n**Early-stage funds** often need:\n- enough concentration to let true winners matter\n- a repeatable framework for deciding when to double down\n- a reserve model that supports maintaining meaningful ownership through breakout stages\n\n**Late-stage funds** often need:\n- disciplined price and structure sensitivity\n- clearer exit assumptions\n- tighter construction around fewer, larger positions\n- more skepticism around mark quality and financing terms\n\nThis is why the allocator cannot assess portfolio construction without stage context. A 25-company seed fund and a 25-company late-stage fund may share a portfolio count but represent very different construction philosophies and risk profiles. Stage determines what a sensible company count, reserve ratio, and ownership target should look like.",
+    },
+    {
+      type: "teaching",
+      title: "Stage exposure changes what evidence matters in diligence",
+      content:
+        "Day 27 established that venture evidence must be interpreted through power-law logic. Day 28 sharpens that idea by stage.\n\nFor **seed managers**, relevant evidence often includes:\n- founder sourcing network quality\n- historical ability to access and select before broad market validation\n- ownership achieved at entry\n- reserve and dilution outcomes in winners\n- pattern recognition in company formation and early product-market fit\n\nFor **early-stage managers**, evidence often includes:\n- consistency in selecting the first institutional rounds that became true winners\n- ability to distinguish early traction from durable scaling signal\n- follow-on discipline and ownership preservation\n\nFor **late-stage or opportunity managers**, evidence often includes:\n- price discipline\n- behavior in hot markets versus cold markets\n- exposure to structured terms and downside protection\n- exit path realism and mark credibility\n\nThe allocator takeaway is that 'good venture evidence' is not one thing. It is stage-specific. A manager who is excellent at seed may not have evidence that translates cleanly to late-stage, and vice versa.",
+    },
+    {
+      type: "teaching",
+      title: "Sector overlays: the stage map is not the whole story",
+      content:
+        "Stage taxonomy is necessary but incomplete. Sector matters because some sectors naturally fit different capital and evidence profiles.\n\nExamples:\n- **enterprise software** can support classic seed-to-growth venture paths with recurring-revenue and retention data appearing relatively early\n- **biotech** may remain highly binary even at later stages, with technical and regulatory milestones mattering more than conventional commercial scaling at first\n- **deep tech or industrial tech** may require longer development timelines, more capital intensity, and different commercialization assumptions\n- **fintech** may blend software-like growth with regulatory, credit, or balance-sheet exposure that changes underwriting at each stage\n- **climate and energy transition** can span asset-light software, hardware, infrastructure-adjacent, and project-linked models that do not fit one simple stage template\n\nThis is why the learner should not over-abstract stage labels. The same round label can imply different underlying risks depending on sector. The stage map is a framework, not a substitute for sector-aware underwriting.",
+    },
+    {
+      type: "teaching",
+      title: "What allocators should listen for in a manager's self-description",
+      content:
+        "Venture firms often describe themselves with broad language: founder-first, full-stack, multi-stage, conviction-led, sector-specialist, partner-driven, or platform-enabled. The allocator needs to translate that language into concrete stage exposure.\n\nHigh-signal translation questions include:\n- what is the actual first-check stage for most investments?\n- what ownership does the manager target at entry by stage?\n- how much of the fund is reserved for follow-ons?\n- how many companies are expected in the portfolio?\n- what percentage of capital is typically deployed in later rounds versus first checks?\n- when the firm says 'multi-stage,' which stage actually drives returns historically?\n\nThis matters because stage ambiguity often hides one of three things:\n- strategy drift\n- marketing-driven breadth\n- unclear allocation discipline across vehicles\n\nThe allocator should leave a manager meeting able to state the real stage map in one sentence. If that is not possible, the strategy description is still too vague.",
+    },
+    {
+      type: "example",
+      title: "Worked example: one brand, two very different venture strategies",
+      content:
+        "Assume a well-known venture platform raises two funds under the same brand.\n\n**Fund A:** an early-stage vehicle targeting seed and Series A, 35 to 45 initial portfolio companies, modest first checks, and a large reserve pool for the top decile of breakout names.\n\n**Fund B:** an opportunity fund investing in Series C through pre-IPO companies, 10 to 15 names, larger check sizes, lower target ownership percentages at entry, and greater sensitivity to valuation and exit-window timing.\n\nThe platform markets both as parts of one integrated lifecycle strategy. That may be true organizationally. But allocator analysis should separate them.\n\n**Step 1: identify stage-specific edge claims**\nFund A is being underwritten on early judgment, sourcing, and reserve discipline. Fund B is being underwritten on pricing, structure, and exit-timing judgment.\n\n**Step 2: compare construction logic**\nA broader portfolio with high loss rates may be sensible in Fund A and completely inappropriate in Fund B.\n\n**Step 3: compare evidence standards**\nThe right evidence for Fund A includes access and early ownership outcomes. The right evidence for Fund B includes mark realism, structure sensitivity, and exit history.\n\n**Step 4: resist brand-level halo effects**\nA strong firm brand does not make every vehicle equally compelling. The allocator must underwrite each stage exposure on its own terms.\n\nThe lesson is that stage map and fund archetype are not marketing details. They are core parts of the actual strategy.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: institutional and practitioner materials on venture stage taxonomy, portfolio construction by stage, and venture-fund archetypes; allocator-oriented venture education on reserves, ownership, and stage-specific risk; reputable industry commentary on seed, early-stage, late-stage, and multi-stage venture platforms. The goal is to help the learner classify venture managers accurately before moving into cap-table, financing, and underwriting detail.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a GP saying they invest 'across stages'",
+      content:
+        "The GP says: 'We invest across stages so we can back great founders throughout the company lifecycle.'\n\n**Weak LP response:** 'That sounds attractive because it should diversify risk and give you flexibility to follow your winners.'\n\nWhy it is weak: it assumes breadth is automatically a strength and does not test whether the manager has true edge, discipline, and distinct construction logic at each stage.\n\n**Strong LP response:** 'Please break down where you actually lead first checks, where you mainly follow, how ownership targets differ by stage, how reserves are allocated across vehicles, and which stage has historically driven your strongest outcomes. We want to understand whether this is one coherent strategy or several different businesses under a shared brand.'\n\nWhy it is strong: it translates a broad self-description into stage-specific underwriting questions.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what a stage map can and cannot tell you",
+      content:
+        "**What a strong stage map can support:**\n- clearer understanding of what uncertainty the manager is being paid to bear\n- better interpretation of ownership targets, reserve needs, and portfolio-construction choices\n- stronger alignment between the manager's self-description and the actual strategy being underwritten\n- more stage-appropriate diligence questions in later lessons\n\n**What it cannot guarantee:**\n- that a manager has real edge at the stage they claim\n- that a multi-stage platform is well coordinated rather than loosely assembled\n- that later-stage venture is inherently safer or earlier-stage venture inherently superior\n- that sector-specific realities fit neatly into generic round labels\n\nThe allocator should therefore treat stage mapping as a classification tool that sharpens judgment, not as proof of quality by itself.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: classify three venture managers by real stage exposure",
+      content:
+        "You are given three hypothetical manager descriptions:\n\n- **Manager A:** 60 first checks per fund, mostly pre-seed and seed, small initial ownership, heavy emphasis on founder sourcing, large portfolio, and selective reserves\n- **Manager B:** 20 to 25 first checks, mostly Series A and Series B, higher ownership targets, concentrated reserve strategy, and focus on enterprise software scaling\n- **Manager C:** 12 to 15 positions in Series C to pre-IPO companies, larger checks, modest entry ownership, and active use of structured terms in weak markets\n\nFor each manager, classify:\n\n1. primary stage exposure\n2. likely fund archetype\n3. main source of edge being claimed\n4. biggest construction risk\n5. most important diligence question that follows from the stage map\n\nThen answer: which two managers are most different economically even if all three call themselves venture managers, and why?",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal stage questions after Day 28",
+      content:
+        "1. **'Where do you actually lead first checks, and where do you mainly support existing winners or follow the market?'**\nThis separates real stage exposure from broad branding language.\n\n2. **'What ownership do you target at entry by stage, and how much of that is typically preserved through later rounds?'**\nThis links stage map to economics.\n\n3. **'How does your reserve model differ across seed, Series A, and later-stage opportunities?'**\nThis tests whether the manager understands stage-specific capital-allocation needs.\n\n4. **'When you say multi-stage, which stage has historically generated the most differentiated outcomes for the firm?'**\nThis surfaces the true center of gravity.\n\n5. **'How do sector realities change your stage framework? For example, what does a Series A in biotech mean versus a Series A in enterprise software?'**\nThis tests whether the manager's stage model is genuinely nuanced.",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 28 should sharpen venture underwriting",
+      content:
+        "A disciplined allocator should now be able to describe a venture manager more precisely than 'seed,' 'early-stage,' or 'multi-stage.' The better description identifies where the manager bears uncertainty, what ownership and reserve model they need, what evidence should exist at entry, and what kind of portfolio-construction mistakes would be most damaging.\n\nThat sharper classification should improve manager underwriting in practical ways. It should prevent brand halo from obscuring stage-specific weaknesses, make multi-stage claims easier to test, and set up later lessons on cap tables, terms, marks, and diligence with far less confusion. If Day 27 taught the learner that venture is power-law-driven, Day 28 teaches where in the company lifecycle that power law is actually being pursued.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d28q1",
+      type: "multiple-choice",
+      prompt:
+        "Why is stage exposure one of the most important choices in venture?",
+      options: [
+        "Because round labels are mostly cosmetic and do not affect economics",
+        "Because stage changes the balance among ownership opportunity, evidence at entry, reserve burden, duration, and valuation sensitivity",
+        "Because only seed funds experience power-law outcomes",
+        "Because later-stage venture eliminates dilution risk",
+      ],
+      correctAnswer:
+        "Because stage changes the balance among ownership opportunity, evidence at entry, reserve burden, duration, and valuation sensitivity",
+    },
+    {
+      questionId: "d28q2",
+      type: "multiple-choice",
+      prompt:
+        "Which description best fits a seed specialist venture fund archetype?",
+      options: [
+        "A fund focused on pre-seed or seed investing, broad portfolios, sparse-data judgment, and disciplined reserves",
+        "A fund focused mainly on pre-IPO structured rounds and exit-window timing",
+        "A fund that only invests after EBITDA turns positive",
+        "A fund that avoids follow-on decisions by design",
+      ],
+      correctAnswer:
+        "A fund focused on pre-seed or seed investing, broad portfolios, sparse-data judgment, and disciplined reserves",
+    },
+    {
+      questionId: "d28q3",
+      type: "multiple-choice",
+      prompt:
+        "Why is later-stage venture not simply 'safer venture'?",
+      options: [
+        "Because later-stage investing removes valuation risk completely",
+        "Because it may reduce some company-formation risk while increasing exposure to valuation compression, structured terms, and exit-timing risk",
+        "Because later-stage funds usually have no need for ownership targets",
+        "Because late-stage companies cannot still fail",
+      ],
+      correctAnswer:
+        "Because it may reduce some company-formation risk while increasing exposure to valuation compression, structured terms, and exit-timing risk",
+    },
+    {
+      questionId: "d28q4",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of a GP describing itself as 'multi-stage'?",
+      options: [
+        "Breadth automatically means stronger diversification and lower underwriting risk",
+        "The allocator should test whether the platform has true stage-specific edge and clear construction logic, rather than assuming one brand equals one coherent strategy",
+        "It means the fund can be evaluated using the same evidence at every stage",
+        "It means reserves are less important because the platform can invest whenever it wants",
+      ],
+      correctAnswer:
+        "The allocator should test whether the platform has true stage-specific edge and clear construction logic, rather than assuming one brand equals one coherent strategy",
+    },
+    {
+      questionId: "d28q5",
+      type: "multiple-choice",
+      prompt:
+        "Why should sector be treated as an overlay to stage taxonomy in venture?",
+      options: [
+        "Because sector never changes the meaning of a financing round",
+        "Because a given round label can imply different risks and evidence depending on whether the company is software, biotech, fintech, deep tech, or climate-related",
+        "Because only generalist venture managers invest by stage",
+        "Because stage matters only in software investing",
+      ],
+      correctAnswer:
+        "Because a given round label can imply different risks and evidence depending on whether the company is software, biotech, fintech, deep tech, or climate-related",
+    },
+    {
+      questionId: "d28q6",
+      type: "short-response",
+      prompt:
+        "Explain why stage should be understood as a tradeoff among ownership, evidence, and price rather than as a simple risk ladder. Write two to four sentences.",
+      modelAnswer:
+        "Earlier stages usually offer more ownership upside but much thinner evidence, while later stages provide more operating proof but often at higher prices, lower ownership percentages, and greater sensitivity to valuation and exit timing. That means stage is not just a move from risky to safe. It is a change in what kind of uncertainty the manager is underwriting and how the economics of success are captured.",
+    },
+    {
+      questionId: "d28q7",
+      type: "short-response",
+      prompt:
+        "A venture firm says it invests from seed through growth. What are the three most important follow-up questions you should ask after Day 28?",
+      modelAnswer:
+        "First, I would ask where the firm actually leads first checks versus mainly following or supporting existing winners. Second, I would ask how ownership targets and reserve allocation differ by stage and by vehicle. Third, I would ask which stage has historically produced the strongest differentiated outcomes, because that reveals whether the platform is truly multi-stage or simply broad in marketing language.",
+    },
+  ],
+  sources: [
+    "Institutional and practitioner materials on venture stage taxonomy and portfolio construction by stage",
+    "Allocator-oriented resources on venture fund archetypes, reserves, ownership, and stage-specific underwriting",
+    "Reputable industry commentary on seed, early-stage, breakout, late-stage, and multi-stage venture platforms",
+    "CFA Institute: Private Markets and Alternative Investments curriculum — venture context, portfolio role, and stage distinctions",
+    "CAIA and industry materials on venture strategy classification, manager differentiation, and stage-specific evidence",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
