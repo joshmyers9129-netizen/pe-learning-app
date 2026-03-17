@@ -199,3 +199,229 @@ None of Days 16–20 fulfill the `modules.ts` learning objectives (which are det
 - `lesson-schema.json` contains only Day 1 and does not reflect current content structure (it's a reference artifact, not used at runtime).
 - The critical live issue: `modules.ts` and `lessonContent.ts` are currently out of sync for days 12–13 (topic-swapped) and 17–18 (topic-swapped). If you write new content for Day 12 targeting PME, it will be served under the `day-12` lessonId, and the module page will display it with the modules.ts Day 12 title "PME and the Benchmarking Toolkit" — which is correct. But the existing `lessonContent.ts` day-12 (manager selection) needs to move to `day-13`, and vice versa. Same resolution needed for days 17 and 18. **Write against modules.ts learning objectives, not current lessonContent.ts block content.**
 - Days 11–15 in modules.ts have detailed, quantitative learning objectives that were rewritten in the last PR but the lesson body content has not been updated to match. The modules.ts objectives are the authoritative spec.
+
+---
+
+## 7. Lessons 21–50 Roadmap Skeleton
+
+_Note: Valuation / mark credibility (covered in Lesson 17) conceptually precedes benchmarking interpretation (Lesson 12) and NAV reporting (Lesson 18), but Lessons 1–20 remain unchanged._
+
+---
+
+**Lesson 21: Fund Documentation Literacy (LPA, Side Letters, MFN)**
+- Objective: Build fluency with the key documents governing LP commitments. Identify the provisions that most directly affect LP economics, governance rights, and flexibility.
+- Prerequisites: 2, 11
+- Allocator takeaway: An LP who has not read the LPA and negotiated side-letter terms before closing is flying blind on economics and control.
+
+---
+
+**Lesson 22: Governance and Conflicts in Practice (LPAC, Valuations, GP-Led Actions)**
+- Objective: Explain how LPACs function and the categories of conflicts they are designed to catch. Understand how valuation committees and GP-led transaction approvals interact with LP governance.
+- Prerequisites: 11, 21
+- Allocator takeaway: LPAC representation is only as valuable as the LP's willingness to vote against the GP and the information quality provided to make that decision.
+
+---
+
+**Lesson 23: Reporting and Data Quality (ILPA Templates as Allocator Infrastructure)**
+- Objective: Explain the ILPA Reporting Template standard and what it enables for portfolio-level aggregation. Identify the data quality failures that make cross-GP comparison unreliable.
+- Prerequisites: 5, 12, 21
+- Allocator takeaway: Standardized reporting is not an administrative nicety — it is the prerequisite for running a multi-manager programme with any analytical discipline.
+
+---
+
+**Lesson 24: Valuation Governance for Private Assets (IPEV, ASC 820, Mark Credibility)**
+- Objective: Explain the IPEV and ASC 820 frameworks and the governance structures that produce credible interim marks. Distinguish valuation methodology from valuation judgment.
+- Prerequisites: 5, 17
+- Allocator takeaway: A GP with no independent valuation oversight and no exit-surprise track record is asking you to trust marks that have never been tested.
+
+---
+
+**Lesson 25: Fund Finance Beyond Subscription Lines (NAV Facilities and Implications)**
+- Objective: Explain NAV-based credit facilities — how they are structured, why GPs use them, and the LP risks they introduce. Distinguish subscription lines from NAV facilities in economic and governance terms.
+- Prerequisites: 3, 11, 21
+- Allocator takeaway: NAV facilities can manufacture DPI without realizing value — allocators must adjust for this when assessing fund performance.
+
+---
+
+**Lesson 26: Liquidity and Commitment Management Across a Multi-Sleeve Program**
+- Objective: Build a liquidity framework that integrates capital call obligations, distribution expectations, and secondary optionality across multiple fund vintages and strategies. Quantify the liquidity buffer required to avoid forced selling.
+- Prerequisites: 3, 14, 15, 25
+- Allocator takeaway: A programme with no liquidity reserve and no secondary access plan is one bad vintage away from a forced asset sale.
+
+---
+
+**Lesson 27: Venture as a Power-Law Game (Return Distributions and Implications)**
+- Objective: Explain why VC fund returns follow a power-law distribution and what this means for portfolio construction, manager selection, and benchmark interpretation. Contrast with buyout return distributions.
+- Prerequisites: 4, 5, 8
+- Allocator takeaway: VC benchmarking and manager selection logic must be rebuilt around power-law expectations — applying buyout intuitions produces the wrong decisions.
+
+---
+
+**Lesson 28: Venture Map and Stage Taxonomy (Seed to Growth; Fund Archetypes)**
+- Objective: Map the venture ecosystem by stage and fund archetype, from pre-seed to late-stage/crossover. Identify the analytical and governance differences between stage categories that matter for allocator diligence.
+- Prerequisites: 8, 27
+- Allocator takeaway: Stage confusion is the most common allocator error in VC — each stage has a different return driver, risk profile, and evaluation standard.
+
+---
+
+**Lesson 29: Cap Tables and Ownership Math for Allocators**
+- Objective: Read a cap table and calculate LP ownership, dilution, and economic entitlement through financing rounds. Understand pro rata rights and their portfolio management implications.
+- Prerequisites: 28
+- Allocator takeaway: An allocator who cannot read a cap table cannot assess whether a GP is defending LP economics or letting it erode.
+
+---
+
+**Lesson 30: Seed Instruments (SAFEs / Convertibles) and Allocator Implications**
+- Objective: Explain SAFE and convertible note mechanics — conversion triggers, valuation caps, and discount rates — and translate them into LP economic impact at conversion.
+- Prerequisites: 29
+- Allocator takeaway: Seed instrument terms determine who captures value at Series A — allocators should understand whether the GP negotiated those terms from strength or defaulted to founder-friendly structures.
+
+---
+
+**Lesson 31: Preferred Terms I (Liquidation Preference and Company-Level Waterfalls)**
+- Objective: Construct a company-level distribution waterfall using liquidation preference mechanics. Quantify LP economic outcomes under multiple exit scenarios including below-preference exits.
+- Prerequisites: 29, 30
+- Allocator takeaway: The liquidation preference stack in a late-stage company is the primary determinant of LP recovery in a flat or down exit — understand it before treating RVPI as face value.
+
+---
+
+**Lesson 32: Preferred Terms II (Anti-Dilution, Pro Rata, Control Rights)**
+- Objective: Explain anti-dilution protection mechanics (broad-based vs. full ratchet), pro rata investment rights, and information and board control provisions. Assess how these terms affect LP outcomes in down rounds and control contests.
+- Prerequisites: 31
+- Allocator takeaway: Anti-dilution and control provisions separate managers who protect LP economics from those who let it drift — these terms are diligence inputs, not boilerplate.
+
+---
+
+**Lesson 33: Venture Valuation and Marks (Down Rounds, Structured Rounds, 409A Reality)**
+- Objective: Explain how VC interim marks are set, how structured rounds can mask flat or down performance, and how 409A appraisals relate to LP-reported NAV. Identify the mark inflation techniques common in late-stage portfolios.
+- Prerequisites: 24, 31, 32
+- Allocator takeaway: A fund with concentrated late-stage exposure and no structured-round disclosure deserves extra scrutiny on whether RVPI reflects realisable value.
+
+---
+
+**Lesson 34: Venture Underwriting by Business Model and Sector**
+- Objective: Apply business-model-specific underwriting logic to SaaS, marketplace, deep tech, and consumer categories. Identify the key value-creation assumptions and the failure modes specific to each model.
+- Prerequisites: 28, 29
+- Allocator takeaway: A GP who applies generic VC underwriting across business models is likely to be outcompeted by specialists in the sectors that require domain depth.
+
+---
+
+**Lesson 35: Venture Portfolio Management (Follow-Ons, Reserves, Signaling)**
+- Objective: Explain GP reserve management mechanics, the follow-on decision framework, and the signaling effects of a GP's participation or non-participation in a subsequent round. Quantify the impact of reserve allocation decisions on fund-level returns.
+- Prerequisites: 27, 29, 31
+- Allocator takeaway: Reserve discipline is one of the clearest signals of a VC manager's portfolio management skill — ask how it is governed and who makes the call.
+
+---
+
+**Lesson 36: Venture Exits and Liquidity (IPO, M&A, Tenders, Secondaries)**
+- Objective: Explain the mechanics and timing dynamics of each VC exit route, including lock-up implications for IPOs, tender offer structures, and secondary transactions at the company level. Quantify the LP liquidity and DPI implications of each path.
+- Prerequisites: 10, 35
+- Allocator takeaway: IPO is not a liquidity event for LPs until lock-up expires — DPI from VC funds is structurally delayed relative to buyout and requires a distribution policy in advance.
+
+---
+
+**Lesson 37: Growth Equity Mechanics (Minority Investing and Value Creation)**
+- Objective: Explain growth equity deal structures, minority protections, and the return drivers specific to minority investing in high-growth businesses. Distinguish growth equity value creation logic from buyout and VC.
+- Prerequisites: 8, 29, 31
+- Allocator takeaway: Growth equity returns depend on revenue growth and multiple maintenance, not leverage — a GP pitching growth equity with buyout-style return attribution is misrepresenting the strategy.
+
+---
+
+**Lesson 38: Late-Stage Venture and Crossover Dynamics (Structure, Duration, Marks)**
+- Objective: Explain the structural features of late-stage and crossover rounds, the duration and mark risk they introduce to VC portfolios, and the conflicts that arise when crossover investors hold both public and private stakes.
+- Prerequisites: 33, 36, 37
+- Allocator takeaway: Late-stage VC exposure extends fund duration and introduces structured instrument complexity that requires the same scrutiny as private credit.
+
+---
+
+**Lesson 39: Allocator Diligence for VC and Growth Managers (Evidence, Ownership, Discipline)**
+- Objective: Apply a VC-specific diligence framework covering ownership concentration, reserve governance, follow-on discipline, and mark credibility. Identify the questions that separate signal from noise in a VC manager meeting.
+- Prerequisites: 13, 27, 35, 38
+- Allocator takeaway: VC diligence requires a different evidentiary standard than buyout — the key questions are about portfolio construction discipline and mark integrity, not leverage and EBITDA.
+
+---
+
+**Lesson 40: Private Credit Strategy Map (Direct Lending, Mezz, Distressed, ABF)**
+- Objective: Map the private credit universe by sub-strategy, risk/return position, and structural characteristics. Establish the analytical vocabulary required before entering any sub-strategy in depth.
+- Prerequisites: 8
+- Allocator takeaway: Private credit is not a single strategy — conflating direct lending, distressed, and ABF in a single allocation is a portfolio construction error with meaningful risk consequences.
+
+---
+
+**Lesson 41: Direct Lending Underwriting (Unitranche, Collateral, Sponsor Dynamics)**
+- Objective: Explain unitranche structure and economics, the underwriting variables that determine lender outcomes, and how sponsor relationships shape deal flow and pricing. Identify the credit metrics that distinguish strong from weak direct lending underwriting.
+- Prerequisites: 40
+- Allocator takeaway: Direct lending return quality depends entirely on underwriting discipline and sponsor alignment — a manager with concentrated exposure to one sponsor channel carries concentration risk that AUM growth compounds.
+
+---
+
+**Lesson 42: Credit Agreements and Lender Protections (Covenants, EBITDA Add-Backs, Cov-Lite)**
+- Objective: Read a credit agreement for the provisions that matter to LP outcomes: financial covenants, EBITDA definition scope, and the implications of cov-lite structures for early intervention. Quantify the information loss to lenders in cov-lite deals.
+- Prerequisites: 41
+- Allocator takeaway: A GP who cannot explain their covenant package and EBITDA definition methodology in a meeting does not have adequate underwriting oversight.
+
+---
+
+**Lesson 43: Private Credit Portfolio Construction and Risk Measurement (Defaults, Recovery, Valuation, Liquidity)**
+- Objective: Build a private credit portfolio risk framework covering default rate assumptions, recovery rate sensitivity, mark-to-model valuation risk, and liquidity mismatch. Stress-test a direct lending portfolio under a recession scenario.
+- Prerequisites: 24, 41, 42
+- Allocator takeaway: Private credit NAV is only as credible as the default and recovery assumptions behind it — demand stress-case disclosure, not just base-case marks.
+
+---
+
+**Lesson 44: Distressed and Special Situations Credit (Workouts and Control Rights)**
+- Objective: Explain distressed investing strategies — pre-petition purchasing, DIP lending, and loan-to-own — and the governance rights that flow from each. Identify the analytical and legal capabilities required to execute distressed strategies with LP capital at risk.
+- Prerequisites: 40, 42
+- Allocator takeaway: Distressed credit is a legal and operational capability business, not just a credit business — diligence must extend beyond return history to restructuring team depth.
+
+---
+
+**Lesson 45: Asset-Based Finance and Specialty Credit (Different Underwriting DNA)**
+- Objective: Explain the underwriting logic for asset-based finance — how collateral quality, prepayment optionality, and structural subordination replace traditional cash-flow underwriting. Identify the risk factors specific to ABF that do not apply to sponsor-backed direct lending.
+- Prerequisites: 40, 41
+- Allocator takeaway: ABF underwriting is collateral-first and prepayment-sensitive — allocators who apply direct lending diligence frameworks to ABF will miss the structural risks that matter.
+
+---
+
+**Lesson 46: Private Credit Vehicles (Closed-End vs. Evergreen; BDCs; Gating and Conflicts)**
+- Objective: Compare closed-end and evergreen private credit fund structures across liquidity, fee, and governance dimensions. Explain BDC mechanics and the gating and conflict-of-interest risks specific to retail-accessible credit vehicles.
+- Prerequisites: 1, 40, 43
+- Allocator takeaway: Evergreen and BDC structures create liquidity mismatches that closed-end vehicles do not — the terms governing redemption and gating are the first thing to read in any private credit vehicle document.
+
+---
+
+**Lesson 47: Real Estate Strategy Map and Benchmarks (NPI, ODCE; Appraisal-Based Issues)**
+- Objective: Map the real estate strategy universe by risk tier (core, value-add, opportunistic) and explain the NPI and ODCE benchmark methodologies and their appraisal-based limitations. Identify how benchmark construction distorts apparent volatility and correlation.
+- Prerequisites: 8, 24
+- Allocator takeaway: Real estate benchmark smoothing is more severe than PE — reported volatility and correlation understate actual risk, and an allocator who uses them at face value will overprice diversification.
+
+---
+
+**Lesson 48: Real Estate Underwriting and Risk (NOI, Cap Rates, Leases, Leverage, Refinancing)**
+- Objective: Apply a real estate underwriting framework from NOI projection through cap rate selection, lease structure risk, and leveraged return attribution. Stress-test a value-add acquisition against a cap rate expansion and refinancing risk scenario.
+- Prerequisites: 47
+- Allocator takeaway: Cap rate assumptions and lease rollover risk are the two most commonly optimistic underwriting inputs — interrogate both before accepting a GP's projected return.
+
+---
+
+**Lesson 49: Real Estate Debt (Senior, Mezz, Pref; Loss Waterfalls)**
+- Objective: Explain real estate capital stack construction from senior loan through mezzanine and preferred equity, including loss waterfall mechanics and the inflection points that determine LP recovery. Compare real estate debt to direct lending across risk, recovery, and structural protection dimensions.
+- Prerequisites: 42, 48
+- Allocator takeaway: Real estate mezz and preferred equity carry equity-like risk at credit-like nominal yields — the loss waterfall position is the only fact that matters under stress.
+
+---
+
+**Lesson 50: CIO-Style Private Markets Integration (Targets, Pacing, Governance, Risk, Rebalancing)**
+- Objective: Integrate private markets allocation across PE, VC, private credit, and real assets into a coherent programme — setting targets, managing pacing, governing manager relationships, and rebalancing within liquidity constraints. Apply a total-portfolio risk lens to private markets concentration and correlation assumptions.
+- Prerequisites: 14, 18, 26, 39, 43, 46, 49
+- Allocator takeaway: The CIO job in private markets is not manager selection — it is building a programme architecture that generates the targeted exposure reliably across cycles while staying within governance and liquidity constraints.
+
+---
+
+## Appendices
+
+### Sector / sub-strategy appendix
+Placeholder for later buildout.
+
+### Firms / manager archetypes appendix
+Placeholder for later buildout.
