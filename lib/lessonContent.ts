@@ -3087,103 +3087,205 @@ export const lessonContents: LessonContent[] = [
     blocks: [
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "Co-investments are one of the most marketed LP benefits in PE — and one of the least understood. Done well, they reduce fees and build portfolio concentration in your highest-conviction managers. Done poorly, they expose you to adverse selection, concentrated risk, and deals you are not equipped to underwrite.",
+          "A GP calls Friday at 4:30 p.m. with a co-investment opportunity that needs an answer by Monday morning. The pitch is familiar: 'zero fee, zero carry, same economics as the fund, and one of our highest-conviction deals of the year.' In three sentences, the GP has presented the three things LPs find hardest to resist: lower fees, apparent access, and implied scarcity. None of them answers the allocator's real question: why is this deal being offered to us, and are we equipped to underwrite it on a single-name basis under this timeline? This lesson builds the framework for answering that question correctly.",
+      },
+      {
+        type: "framing",
+        title: "Why co-invest is attractive and dangerous at the same time",
+        content:
+          "Co-investments are often marketed as one of the clearest ways for LPs to improve private equity economics. The appeal is real: lower or zero management fees, reduced or no carried interest, more capital concentrated with a high-conviction GP, and the ability to shape portfolio exposure more precisely than through blind-pool commitments alone.\n\nBut co-investment is not a free upgrade from primary fund investing. It changes the risk package in several important ways. The LP is no longer just underwriting the GP and the fund process. The LP is underwriting a single company, often on a compressed timeline, with far less diversification and often with less access to full diligence materials than the GP itself had. The economics improve, but the underwriting burden and concentration risk both increase.\n\nThat is why sophisticated allocators do not ask 'is the fee break attractive?' as the first question. They ask: what problem is this co-invest solving for the GP, what does that imply about adverse selection risk, and do our underwriting process and portfolio constraints allow us to say yes intelligently rather than enthusiastically?",
       },
       {
         type: "teaching",
-        title: "How co-investments work",
+        title: "What a co-investment actually is",
         content:
-          "A co-investment is a direct investment alongside a GP into a specific portfolio company — outside the main fund. The GP offers co-invest to select LPs (typically larger, more sophisticated ones) when a deal exceeds the fund's concentration limit or the GP wants to move faster than the fund can commit. Co-investments are typically offered at zero or reduced fees and carry — a meaningful economic advantage over fund-level economics.",
+          "A co-investment is a direct investment by an LP alongside a GP into a specific portfolio company or transaction, outside the main fund vehicle. The GP remains the lead sponsor and decision-maker. The LP participates economically in the specific deal, typically on reduced-fee terms relative to the primary fund.\n\nCo-investments are usually offered for one of several reasons:\n\n- **Concentration management:** the deal is too large for the fund to hold alone under its concentration limits\n- **Fund-capacity constraint:** the GP wants to pursue a larger deal than the fund can prudently absorb\n- **Speed / certainty:** the GP wants additional capital lined up quickly to improve execution certainty\n- **Relationship management:** the GP wants to deepen engagement with key LPs by offering selective access\n\nThe crucial point is that 'high-conviction deal' and 'needs co-invest capital' are not contradictory. Many attractive deals genuinely require co-invest because of size. But the reason a deal is being syndicated matters. An LP should always distinguish between a co-invest offered because the deal is too large for the fund and a co-invest offered because the GP wants outside validation or balance-sheet relief on a marginal opportunity.",
+      },
+      {
+        type: "teaching",
+        title: "Why the economics look so attractive",
+        content:
+          "The headline economic appeal of co-investments is usually straightforward: they are often offered at zero management fee and zero carry, or at materially reduced economics relative to the main fund. For an LP that already has conviction in the GP, this creates an obvious attraction: access to the same sponsor's underwriting and portfolio oversight, but with far less fee drag.\n\nThat economic improvement can be meaningful. If a buyout fund charges roughly 2% management fee and 20% carry, and a co-invest is offered with no fee and no carry, the LP keeps much more of the gross return. Over a multi-year hold period, that can add hundreds of basis points of net return relative to putting the same capital through a standard fund structure.\n\nBut reduced fee drag does not eliminate investment risk. It simply means the break-even underwriting quality required from the LP is lower. The right allocator framing is: the fee savings are real, but they are compensation for taking on a more concentrated, less diversified, more time-compressed underwriting process. Treating fee savings as a substitute for diligence is one of the most expensive mistakes an LP can make.",
+      },
+      {
+        type: "visual",
+        title: "Why co-invest can outperform and still be riskier",
+        content:
+          "**Co-investments improve economics while increasing several other risks at the same time:**\n\n| Dimension | Main Fund Exposure | Co-Invest Exposure |\n|---|---|---|\n| **Fee burden** | Full fund management fee and carry | Typically zero or reduced fee/carry |\n| **Diversification** | Spread across many portfolio companies | Single-name or small-basket exposure |\n| **Underwriting burden** | GP underwrites; LP underwrites GP/fund | LP must underwrite GP and the individual deal |\n| **Timeline** | Commitment decision over weeks to months | Often days, not weeks |\n| **Control** | Indirect through fund structure | Still indirect; GP remains sponsor |\n| **Downside concentration** | One weak deal diluted by portfolio breadth | One weak deal has direct, visible impact |\n\nBetter economics do not make the risk disappear. They repackage it.",
+        caption:
+          "Co-invest is not 'the same deal but cheaper.' It is a different bundle of economics, concentration, and process risk.",
+        whyItMatters:
+          "LPs are often drawn to co-invest because the fee advantage is easy to quantify. The harder part is recognizing that the underwriting challenge and portfolio concentration are also materially different from a primary fund commitment.",
+        sourceNote:
+          "Institutional co-investment practice consistently frames co-invest as a trade between lower fee load and higher concentration and execution risk.",
       },
       {
         type: "teaching",
         title: "The adverse selection problem",
         content:
-          "The core risk is adverse selection: GPs may offer co-invest on deals that are too large for the fund (size-driven), where the GP needs certainty of close (timing-driven), or where the deal quality is mixed (quality-driven). Top GPs with oversubscribed funds rarely need to offer co-invest — they fill deals internally. GPs who routinely need co-invest capital may be signalling that their LP base is not willing to let the fund take full exposure. Always ask: why is this deal being offered to us?",
+          "The central analytical risk in co-investment is adverse selection. The LP must always ask: why is this specific deal being offered externally rather than absorbed fully inside the fund or by the GP's highest-priority capital base?\n\nAdverse selection can arise in several ways:\n\n**1. Size-driven syndication**\nThis is the cleanest version. The deal is attractive, but simply too large for the fund to hold alone while staying within concentration limits or prudent position-sizing boundaries. In this case, the co-invest may be entirely sensible.\n\n**2. Speed-driven syndication**\nThe GP needs quick capital to sign or close the transaction. This is not automatically a negative signal, but it should raise the underwriting standard. A process that requires extreme speed often compresses the LP's ability to verify the thesis independently.\n\n**3. Quality-driven syndication**\nThis is the version LPs worry about most. The deal is being shared because the GP does not want the fund carrying the full position size, because internal enthusiasm is mixed, or because the GP wants more external capital against a less compelling risk/reward profile.\n\nA sophisticated allocator does not assume the worst. But they do force the GP to answer the question directly: why is this specific deal being syndicated, what share will the main fund hold after syndication, and how does that compare to the GP's typical conviction-weighted sizing? If the answer is vague, the LP should hear that as information, not noise.",
+      },
+      {
+        type: "teaching",
+        title: "Concentration risk: the fee savings are real, but so is the single-name exposure",
+        content:
+          "The most obvious structural difference between co-invest and fund investing is concentration. A primary fund commitment spreads exposure across a portfolio of companies. A co-investment adds direct exposure to one name, one capital structure, one management team, and one exit path.\n\nThat matters in two ways.\n\nFirst, the downside is no longer diluted by the fund's breadth. If the company underperforms, the LP feels the result directly. In the fund, the same deal might have been one of ten or twelve positions; in co-invest, it can be a large stand-alone exposure.\n\nSecond, LPs often already have indirect exposure to the same company through the fund. The co-invest may therefore create **look-through concentration** greater than it first appears. A $10M co-invest alongside a $50M fund commitment is not just a $10M exposure if the fund itself already owns a meaningful position in the company.\n\nThe correct portfolio question is not 'is this co-invest sized reasonably by itself?' It is 'what is our total economic exposure to this company across the fund and the co-invest, and is that total exposure appropriate relative to the rest of the programme?' Many LPs underwrite the direct co-invest amount but fail to calculate the combined look-through exposure. That is a basic portfolio-construction mistake.",
+      },
+      {
+        type: "teaching",
+        title: "Speed is not a nuisance. It is a risk factor.",
+        content:
+          "Most co-investment opportunities arrive with shorter timelines than primary commitments. That is not merely an operational inconvenience. It is a substantive part of the risk package.\n\nA compressed process creates several disadvantages for the LP:\n\n- less time to diligence the company, industry, and underwriting assumptions\n- less opportunity to challenge management's numbers or the GP's downside case\n- less ability to compare the opportunity against other uses of capital\n- higher chance that internal approval becomes process-light simply to meet the deadline\n\nThe allocator should read an aggressive timeline as data. Sometimes the reason is benign: a live deal process, a financing deadline, or the practical realities of M&A execution. Sometimes it reflects a harder truth: the GP wants certainty of capital before questions become too numerous.\n\nA disciplined LP has a simple rule: never let the GP's clock substitute for your underwriting standard. If the LP cannot evaluate the opportunity adequately in the time available, the correct answer may be no — even if the deal is good. Missing a good co-investment is cheaper than approving one you were not actually equipped to underwrite.",
+      },
+      {
+        type: "teaching",
+        title: "What an LP needs operationally to run a credible co-invest programme",
+        content:
+          "Many institutions want co-investment economics. Far fewer have the operating model required to execute co-invest well.\n\nA credible co-invest programme requires at least four capabilities:\n\n**1. Fast internal decision-making**\nThe institution must be able to evaluate and approve transactions in days, not weeks. If legal, investment, and governance processes require multiple sequential meetings, the LP will either miss opportunities or relax standards under pressure.\n\n**2. Deal-level underwriting capability**\nFund selection skill is not enough. The team must be able to assess a company, market, leverage structure, downside case, and exit path on a stand-alone basis. Some LPs have that capability internally; others rely on external advisers. Either way, it must exist.\n\n**3. Portfolio look-through analytics**\nThe LP must track not only the co-investment itself, but its combined exposure with the related fund and any parallel vehicles. Without look-through exposure analysis, concentration creeps up invisibly.\n\n**4. Relationship selectivity**\nCo-invest works best when offered by GPs the LP already knows well. That allows the LP to leverage existing conviction in the GP's process, sector expertise, and governance style. A stand-alone co-invest with a weakly known sponsor can be one of the hardest private equity exposures to evaluate well.\n\nThe allocator lesson is straightforward: co-invest should be treated as a programme with real infrastructure requirements, not as a side benefit that can be accepted opportunistically without operational preparation.",
       },
       {
         type: "example",
-        title: "Mini-case: fee savings vs. concentration risk",
+        title: "Worked example: fee savings do not answer the underwriting question",
         content:
-          "An LP commits $50M to a buyout fund (2% fee, 20% carry) and receives a $20M co-invest opportunity in the fund's largest deal at zero fee and carry. The fee savings over five years are roughly $2M. But the co-invest adds $20M of single-company exposure on top of the fund's existing position in that same company. If the deal fails, the LP loses more than if they had only the fund exposure. The fee savings are real; the concentration risk must be priced in.",
+          "An LP has a $40M commitment to a buyout fund and is offered a $15M co-investment in the fund's largest transaction. Terms are zero fee, zero carry. The GP describes the deal as one of the highest-conviction investments in the current fund.\n\nThe headline economics look compelling. Assume the deal generates a 2.5x gross MOIC over five years. In the fund structure, full management fees and carry would materially reduce the net outcome to the LP. In the co-invest, the LP captures substantially more of the gross economics.\n\nBut now layer in concentration. Assume the main fund itself will still have a 12% look-through exposure to the company after syndicating the co-invest. The LP's $40M fund commitment therefore already carries indirect exposure to the same company. If the fund is $1B and the company position is sized at 12%, the LP's indirect exposure through the fund is approximately:\n\n$40M / $1B × 12% × $1B = $4.8M look-through exposure\n\nAdd the direct $15M co-invest, and the LP's total economic exposure to the company is roughly $19.8M.\n\nThe question is no longer 'is a $15M co-invest reasonable?' It is 'is approximately $20M of total exposure to this one company appropriate in the context of the full programme?' The fee savings remain attractive. But the sizing decision must be made against total exposure, not the direct sleeve alone.",
+      },
+      {
+        type: "example",
+        title: "Worked example: when a rushed co-invest should probably be declined",
+        content:
+          "A GP sends a co-invest package on Friday evening requiring soft commitment by Monday. The package includes an IC memo, limited management-call availability, and a one-page sensitivity table. The deal is a consumer business with cyclical demand, 6.5x leverage, and a margin-improvement thesis.\n\nThere are two ways to think about the opportunity.\n\nA weak allocator response is to focus on the sponsor relationship and zero-fee economics: 'We know the GP well, and these deals are hard to access. Let's get comfortable quickly.'\n\nA stronger allocator response starts with underwriting asymmetry. The GP has spent weeks on diligence. The LP has 48 hours, one weekend, and no time for independent customer or industry work. The leverage is meaningful, the industry is cyclical, and the thesis depends on execution rather than simple multiple arbitrage.\n\nEven if the deal may ultimately work, the LP should recognize that they are being asked to approve a complex single-name exposure without enough time to pressure-test the downside. In that setting, declining is not a failure of access. It is evidence of process discipline.",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: responding to a co-investment offer",
+        content:
+          "The GP says: 'This is one of our highest-conviction deals, and we can offer it to you at no fee, no carry.'\n\n**Weak LP response:** 'That sounds attractive. If you are putting the fund into it and the economics are clean, we are interested.'\n\nWhy it is weak: it confuses GP conviction with LP underwriting and treats fee savings as though they answer the adverse-selection and concentration questions. They do not.\n\n**Strong LP response:** 'We appreciate the opportunity. Before evaluating economics, we need to understand why this deal is being syndicated, what percentage the main fund will retain, what our total look-through exposure would be across fund and co-invest, and whether the timeline allows enough diligence to reach an independent view. Please walk us through those four points first.'\n\nWhy it is strong: it sequences the decision correctly. Reason for syndication, retained GP exposure, total LP concentration, and process adequacy come before enthusiasm about fee terms.",
+      },
+      {
+        type: "inference-boundary",
+        title: "Inference boundary: what a co-invest offer can and cannot tell you",
+        content:
+          "**What a co-invest offer can tell you:**\n- that the GP is willing to share economics on a specific deal, often because of size, concentration, or relationship priorities\n- that the LP may be able to improve net economics relative to the main fund if the underwriting is sound\n- that the LP is being given access to a more targeted expression of conviction than a blind-pool commitment\n\n**What a co-invest offer cannot tell you:**\n- that the deal is especially attractive simply because the GP calls it high conviction\n- that reduced fee and carry make the risk-adjusted outcome superior; single-name concentration may still dominate the economics\n- that a rushed timeline is harmless; process compression itself is part of the risk package\n- that the GP is offering the LP its very best opportunities; some co-invest is clean size management, but some reflects capital-raising need or mixed internal conviction",
       },
       {
         type: "exercise",
-        title: "Quick exercise",
+        title: "Applied exercise: build a co-invest go / no-go checklist",
         content:
-          "A GP calls on Friday afternoon offering a $15M co-investment that must close by Monday. What does the short timeline tell you about the deal, and how do you respond?",
+          "A GP offers a $12M co-investment in a healthcare services transaction with five business days to decide. Build a practical go / no-go checklist using five headings:\n\n1. **Reason for syndication** — what exactly is the GP solving?\n2. **Deal quality** — what is the underwriting case and what could break it?\n3. **Portfolio fit** — what is the LP's total look-through exposure including the main fund?\n4. **Process sufficiency** — can the LP complete enough diligence in the time available?\n5. **Economic attractiveness** — are the reduced fees enough compensation for concentration and process risk?\n\nThen state whether the checklist is designed to help you approve more deals or decline weakly underwritten ones faster. A strong answer should recognize that the real value of a co-invest process is often disciplined refusal, not just access.",
+      },
+      {
+        type: "meeting-application",
+        title: "In the GP conversation: five high-signal co-invest questions",
+        content:
+          "1. **'Why is this specific deal being syndicated, and what percentage will the main fund retain after the co-invest closes?'** This is the clearest first test of whether the syndication is size-driven or something less clean.\n\n2. **'What is your downside case, not just the base case, and what assumptions have to fail before this becomes a capital impairment rather than a lower-return outcome?'** This tests whether the LP is hearing a real underwriting discussion rather than a marketing version.\n\n3. **'How should we think about our total economic exposure through both the fund and the co-invest?'** This forces look-through concentration into the conversation.\n\n4. **'What work did you do over the last three to four weeks that we cannot realistically replicate in the next five days?'** This is one of the best questions for surfacing process asymmetry directly.\n\n5. **'Have you offered co-invest on similar deals in prior funds, and how did those opportunities perform relative to the fund as a whole?'** This gives the LP a way to evaluate whether the GP's co-invest programme has historically been additive or selectively weaker.",
+      },
+      {
+        type: "meeting-application",
+        title: "Allocator application: when co-invest belongs in the programme",
+        content:
+          "Co-invest belongs in a PE programme only when three conditions are true.\n\n**First, the LP already has strong sponsor conviction.** Co-invest should usually deepen relationships with GPs you already know well, not substitute for fund-level underwriting.\n\n**Second, the LP has the operating capability to move quickly without dropping underwriting standards.** A slow institution with weak single-name diligence capacity is often better off declining co-invest systematically than pretending it has a scalable programme.\n\n**Third, the programme can absorb concentrated exposures.** Co-invest works best when it is sized intentionally inside the broader private markets portfolio, not accepted opportunistically deal by deal.\n\nUsed well, co-invest can improve economics and sharpen portfolio construction. Used casually, it is one of the fastest ways for an otherwise disciplined PE programme to accumulate hidden concentration and process risk.",
+      },
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "Institutional co-investment practice and governance: ILPA guidance and practitioner materials on co-investment structures, adverse selection, and LP process design. Private markets curriculum references on co-invest economics, concentration risk, and underwriting considerations: CFA Institute and related institutional allocator materials. Market practice observations on co-invest timelines, fee structures, and relationship selectivity: major private markets advisers and industry surveys.",
       },
     ],
     quiz: [
       {
         questionId: "d16q1",
         type: "multiple-choice",
-        prompt: "What is the primary economic advantage of a co-investment for an LP?",
+        prompt:
+          "What is the most accurate description of a private equity co-investment?",
         options: [
-          "Co-investments provide guaranteed returns above the fund hurdle rate",
-          "Co-investments are typically offered at zero or reduced management fees and carry",
-          "Co-investments allow LPs to redeem capital faster than the main fund",
-          "Co-investments provide priority distributions ahead of other LPs",
+          "A redemption right allowing an LP to reduce its commitment to the main fund and reallocate to a specific deal",
+          "A direct investment by an LP alongside a GP into a specific transaction, typically outside the main fund and often on reduced-fee terms",
+          "A secondary purchase of another LP's interest in the GP's fund at a discount to NAV",
+          "An LPAC-approved side vehicle used only when a fund breaches its concentration limits",
         ],
         correctAnswer:
-          "Co-investments are typically offered at zero or reduced management fees and carry",
+          "A direct investment by an LP alongside a GP into a specific transaction, typically outside the main fund and often on reduced-fee terms",
       },
       {
         questionId: "d16q2",
         type: "multiple-choice",
-        prompt: "What is adverse selection risk in the co-investment context?",
+        prompt:
+          "What is the core adverse-selection question an LP should ask when evaluating a co-investment?",
         options: [
-          "The risk that the LP selects co-investments in sectors outside their expertise",
-          "The risk that GPs offer co-invest on their weaker deals while keeping best deals fully in-fund",
-          "The risk of investing in a company at a higher valuation than the fund paid",
-          "The risk that other LPs in the same co-invest decline, leaving the LP with excess exposure",
+          "Whether the GP's management fee in the main fund is above peer median",
+          "Why this specific deal is being offered externally rather than absorbed fully inside the fund or GP's preferred capital base",
+          "Whether the co-invest uses the same auditor as the main fund",
+          "Whether other LPs in the main fund are also increasing their fund commitments",
         ],
         correctAnswer:
-          "The risk that GPs offer co-invest on their weaker deals while keeping best deals fully in-fund",
+          "Why this specific deal is being offered externally rather than absorbed fully inside the fund or GP's preferred capital base",
       },
       {
         questionId: "d16q3",
         type: "multiple-choice",
         prompt:
-          "An LP holds a $30M position in a buyout fund that owns 15% of Company X. The LP also co-invests $10M directly into Company X. What risk does this create?",
+          "Why can a zero-fee, zero-carry co-investment still be unattractive on a risk-adjusted basis?",
         options: [
-          "The LP now pays double management fees on the Company X exposure",
-          "The LP has concentrated exposure to Company X beyond what the fund alone would have provided",
-          "The co-invest invalidates the LP's MFN rights in the main fund",
-          "The LP's IRR on the fund will be diluted by the co-invest",
+          "Because co-investments usually have less upside than main-fund investments",
+          "Because the fee advantage may be outweighed by single-name concentration, process asymmetry, and compressed diligence timelines",
+          "Because co-investments are always subordinated to the main fund in the capital structure",
+          "Because regulators require LPs to hold co-investments to maturity",
         ],
         correctAnswer:
-          "The LP has concentrated exposure to Company X beyond what the fund alone would have provided",
+          "Because the fee advantage may be outweighed by single-name concentration, process asymmetry, and compressed diligence timelines",
       },
       {
         questionId: "d16q4",
         type: "multiple-choice",
         prompt:
-          "A GP consistently offers co-investments to LPs on nearly every deal. What might this signal?",
+          "What is the most important portfolio-construction mistake LPs make with co-investments?",
         options: [
-          "The GP is exceptionally well-aligned with LPs by sharing deal flow broadly",
-          "The fund may be undersized relative to the deals being pursued, or the GP's LP base is not confident enough to let the fund take full positions",
-          "The GP is maximising LP fee savings as a competitive differentiator",
-          "The GP's LPA requires co-investment offers on all deals above $50M",
+          "Assuming co-invest performance should be benchmarked only to public equities",
+          "Evaluating the direct co-invest amount without calculating total look-through exposure including the related fund position",
+          "Refusing to accept any co-invest offered with less than ten business days to decide",
+          "Treating co-investments as part of the same fee budget as fund commitments",
         ],
         correctAnswer:
-          "The fund may be undersized relative to the deals being pursued, or the GP's LP base is not confident enough to let the fund take full positions",
+          "Evaluating the direct co-invest amount without calculating total look-through exposure including the related fund position",
       },
       {
         questionId: "d16q5",
+        type: "multiple-choice",
+        prompt:
+          "A GP offers a co-invest opportunity with a 48-hour deadline. Which interpretation is most analytically sound?",
+        options: [
+          "The short timeline proves the deal is especially attractive and highly competitive",
+          "The short timeline is irrelevant if the GP has a strong historical track record",
+          "The short timeline is itself part of the risk package because it reduces the LP's ability to underwrite independently and should be treated as a substantive diligence issue",
+          "The short timeline mainly affects legal documentation, not investment quality",
+        ],
+        correctAnswer:
+          "The short timeline is itself part of the risk package because it reduces the LP's ability to underwrite independently and should be treated as a substantive diligence issue",
+      },
+      {
+        questionId: "d16q6",
         type: "short-response",
         prompt:
-          "What three questions would you ask before accepting a co-investment opportunity from a GP?",
+          "An LP is offered a co-investment by a GP it knows well. What are the three most important questions the LP should answer before saying yes?",
         modelAnswer:
-          "First: Why is this being offered to us — is the fund at its concentration limit, or does the GP need capital to close quickly? A timing-driven offer deserves more scrutiny. Second: What is the fund's position in this company, and what will our total exposure be across both the fund and the co-invest? You want to understand portfolio-level concentration. Third: What is the full investment thesis, and do we have the internal capability to underwrite a single-name direct position? Co-investments require deal-level diligence, not just fund-level diligence.",
+          "First, why is the deal being syndicated, and what percentage will the main fund retain after the co-invest closes? This helps assess whether the syndication is cleanly size-driven or potentially reflects weaker conviction. Second, what is the LP's total look-through exposure across both the main fund and the direct co-invest? The direct check alone understates concentration if the fund already owns the company. Third, can the LP complete enough independent underwriting in the time available to justify a single-name exposure? Lower fees are valuable, but they do not replace diligence or concentration discipline.",
+      },
+      {
+        questionId: "d16q7",
+        type: "short-response",
+        prompt:
+          "Why is a well-run co-invest programme an operational capability, not just a relationship benefit from top GPs?",
+        modelAnswer:
+          "Because executing co-invest well requires real internal infrastructure: fast decision-making, deal-level underwriting capability, portfolio look-through analytics, and clear sizing discipline. Relationship access may get an LP invited into opportunities, but it does not ensure the LP can evaluate or size them intelligently. Without the operating model to underwrite and approve deals under compressed timelines, co-invest access becomes a source of process risk rather than an advantage. In practice, a credible co-invest programme is defined as much by disciplined declines as by accepted deals.",
       },
     ],
     sources: [
-      "ILPA co-investment best practices guidance",
-      "CFA Institute alternative investments — co-investment structures",
-      "Preqin co-investment market analysis",
+      "ILPA guidance and practitioner materials on co-investment structures and LP process design",
+      "CFA Institute and institutional private markets materials on co-invest economics, underwriting, and concentration risk",
+      "Industry surveys and private markets adviser materials on co-invest timelines, fee structures, and adverse-selection considerations",
     ],
   },
 
