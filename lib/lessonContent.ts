@@ -3516,104 +3516,218 @@ export const lessonContents: LessonContent[] = [
     blocks: [
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "PE NAV is not a market price — it is an estimate. Understanding how it is calculated and where it can be manipulated is essential for interpreting quarterly reports, understanding volatility, and identifying GPs who are managing marks rather than managing companies.",
+          "A GP presents quarterly results and reports that portfolio company valuations were 'largely stable despite broader market volatility.' Public-market peers in the same sectors are down 25%, financing costs have risen sharply, and comparable transaction activity has slowed. The GP explains that the portfolio is high quality, operationally resilient, and therefore not directly comparable to public multiples. That may be true. It may also be a polite way of saying the marks have not yet fully moved. This lesson gives you the framework to tell the difference.",
+      },
+      {
+        type: "framing",
+        title: "NAV is an estimate, not a price",
+        content:
+          "Private equity NAV often gets treated as though it were a market-clearing number. It is not. NAV is a **fair-value estimate** based on appraisal methods, judgment, and selected market inputs. That does not make it meaningless. It does mean it should be interpreted differently from a quoted stock price.\n\nThis distinction matters because PE performance, allocation weights, benchmark comparisons, and re-up decisions all rely on NAV at some point. If the allocator treats NAV as if it were a current market price, they will overstate certainty, understate volatility, and risk drawing false conclusions from quarter-to-quarter changes.\n\nThe correct mental model is: NAV is a disciplined estimate of exit value under current assumptions, produced under accounting and valuation frameworks, but still subject to judgment and lag. The professional task is not to dismiss it or blindly trust it. It is to assess how credible the estimate is.",
       },
       {
         type: "teaching",
-        title: "How PE NAV is calculated",
+        title: "How PE portfolio companies are valued in practice",
         content:
-          "PE portfolio companies are valued using appraisal methods: comparable company multiples (EV/EBITDA relative to public peers), discounted cash flow, recent transaction comparables, or cost for early-stage companies. The GP estimates the value quarterly; the fund's auditor reviews annually. FASB ASC 820 (fair value accounting) requires GPs to mark at 'exit price' — the price a market participant would pay — but the inputs involve significant judgment. Valuations are self-reported between annual audits.",
+          "Private equity portfolio companies are typically valued using a combination of appraisal approaches rather than observable market prices. The most common methods are:\n\n**1. Comparable-company multiple approach**\nApply a selected EV/EBITDA, EV/revenue, or other market multiple drawn from public peers or precedent transactions to the portfolio company's financial metric. Then adjust for debt, cash, and other balance-sheet items to reach equity value.\n\n**2. Recent transaction approach**\nUse a recent arm's-length financing round, acquisition price, or meaningful market transaction as an anchor for value, adjusted if conditions have changed.\n\n**3. Discounted cash flow (DCF)**\nProject future cash flows and discount them using a required return or weighted average cost of capital. In PE, DCF is often used as a cross-check rather than the primary method, especially where market multiples are available.\n\n**4. Cost or conservative proxy methods**\nUsed more often for very early-stage or recently acquired assets where little information has changed since entry.\n\nIn buyout portfolios, the market-multiple method dominates. That means the key judgments usually are:\n- which peer set is chosen\n- which multiple within the peer range is applied\n- whether current or forward financials are used\n- whether the company deserves a premium or discount to peers\n- how debt and other claims are treated when moving from enterprise value to equity value\n\nThis is why two GPs can both claim to be following fair-value standards and still report materially different marks on similar assets.",
       },
       {
         type: "teaching",
-        title: "Smoothing, stale marks, and the correlation illusion",
+        title: "ASC 820 and fair value: what the standard requires",
         content:
-          "Because PE valuations are lagged and based on appraisals rather than daily prices, they do not move in sync with public markets. This creates artificially low reported volatility and correlation with equities — a statistical artefact, not a real portfolio benefit. In a market downturn, PE NAVs fall with a lag of one to two quarters. This smoothing makes PE look like a diversifier in short-term analysis. Over full market cycles, the correlation to equity markets is substantially higher than quarterly data suggest.",
+          "Under US GAAP, PE funds generally value investments under **ASC 820 fair value** principles. The core concept is the **exit price**: the price that would be received to sell the asset in an orderly transaction between market participants at the measurement date.\n\nThat sounds precise, but the practical challenge is obvious: the company is not actually being sold at each quarter-end. The GP must estimate what a market participant would pay.\n\nASC 820 also distinguishes among input levels:\n\n- **Level 1**: observable quoted prices in active markets\n- **Level 2**: observable inputs other than quoted prices, such as comparable market data\n- **Level 3**: unobservable inputs requiring significant judgment\n\nMost PE portfolio company marks are fundamentally **Level 3**. Even when they reference public comps or precedent transactions, the final mark depends on judgment about comparability, financial normalization, scale discount or premium, and current transaction reality.\n\nThe allocator implication is important: an audited fair-value process does not mean the number is objectively correct. It means the GP has applied a defensible valuation framework. Accuracy still has to be tested over time — most importantly through eventual exits.",
+      },
+      {
+        type: "teaching",
+        title: "Why marks lag public markets",
+        content:
+          "One of the defining features of PE reporting is that NAV usually adjusts more slowly than public-market prices. That lag is structural.\n\nPublic equities reprice continuously as information changes. PE marks are updated quarterly, based on appraisal inputs, and usually move only after the GP decides that market changes, company performance, or financing conditions have become sufficiently durable to justify a revised estimate.\n\nThis lag comes from several sources:\n\n**1. Quarterly cadence**\nValuations are typically set at quarter-end, not daily.\n\n**2. Appraisal judgment**\nGPs often avoid marking every move in public comps one-for-one, particularly if they believe public dislocations are temporary or not fully relevant to the specific company.\n\n**3. Transaction scarcity**\nWhen deal activity slows, there are fewer real market-clearing observations to anchor value.\n\n**4. Incentive asymmetry**\nWhile many GPs act in good faith, they are not indifferent to marks. Higher marks support reported performance, fundraising narratives, and internal morale. This does not mean marks are manipulated in a crude sense. It does mean the burden of proof for downward moves may be practically higher than for upward stability.\n\nThe result is that PE often appears more stable than public markets during fast-moving drawdowns. That does not necessarily mean the underlying businesses are materially more stable. It often means the valuation method adjusts more slowly.",
+      },
+      {
+        type: "visual",
+        title: "Why PE marks look smoother than public markets",
+        content:
+          "**Observed PE stability often reflects the valuation process, not just business resilience:**\n\n| Feature | Public equities | Private equity NAV |\n|---|---|---|\n| **Pricing frequency** | Continuous market price | Quarterly appraisal estimate |\n| **Primary basis** | Executed trades | Modeled fair value using selected inputs |\n| **Sensitivity to sentiment** | Immediate | Delayed and filtered through judgment |\n| **Volatility pattern** | Visible in real time | Smoothed over reporting periods |\n| **Correlation to equity markets** | Observable immediately | Often understated in short windows because marks lag |\n\nThis is why PE can appear less volatile and less correlated than it really is on a short-horizon reported basis.",
+        caption:
+          "Reported PE stability and true economic stability are not the same thing.",
+        whyItMatters:
+          "Allocators who treat reported PE volatility as directly comparable to public-market volatility are misreading the data. Smoothing changes the observed statistics.",
+        sourceNote:
+          "Private asset valuation literature and institutional performance analysis consistently note appraisal smoothing as a major reason reported PE volatility and correlation appear lower than underlying economic exposure would suggest.",
+      },
+      {
+        type: "teaching",
+        title: "Smoothing, stale marks, and the false diversification signal",
+        content:
+          "Because PE NAV moves more slowly than public-market prices, it can create an illusion of diversification in portfolio analytics.\n\nSuppose public equities fall 20% in a quarter while PE marks are only down 3%. The portfolio now appears to hold an asset that is less volatile and weakly correlated with equities. But that appearance may be temporary and partly mechanical. If PE marks catch down over the next two to three quarters, the diversification benefit looks much smaller over a full cycle than it did in the initial shock quarter.\n\nThis matters in two places:\n\n**1. Risk budgeting**\nA committee may conclude that PE can be increased because historical measured volatility looks low. If that volatility is appraisal-smoothed, the true economic risk budget is being understated.\n\n**2. Asset-allocation interpretation**\nDuring market drawdowns, lagged PE marks can make the PE allocation appear less impaired than public equities. That can distort rebalancing decisions and make denominator-effect analysis look milder at first than it eventually becomes.\n\nThe professional takeaway is not that PE has no diversification benefit. It is that short-horizon reported correlations and volatility are contaminated by valuation lag. They should be interpreted with caution.",
+      },
+      {
+        type: "teaching",
+        title: "What aggressive versus conservative marking looks like",
+        content:
+          "Not all marking styles are the same. Some GPs are structurally conservative. Others are slower to concede lower value or quicker to embed optimistic assumptions. You rarely identify this from one quarter alone. You identify it through pattern recognition.\n\n**Signs of more conservative marking:**\n- marks move reasonably with peer multiples and financing conditions\n- GP can articulate clearly why a company deserves a premium or discount to public comps\n- exits tend to occur at or above prior carrying values\n- the GP is willing to mark down despite ongoing fundraising activity or difficult optics\n\n**Signs of more aggressive marking:**\n- marks remain unusually stable while comparable sectors re-rate materially downward\n- GP relies heavily on forward numbers without adequate haircut or execution adjustment\n- multiple premiums are justified with generic language like 'quality asset' rather than company-specific evidence\n- exits repeatedly occur below the last reported carrying value\n\nA key nuance: aggressive marking is not only about using a higher multiple. It can also appear through optimistic EBITDA normalization, generous add-backs, use of peak-cycle comparables, or failure to reflect tighter financing conditions in the valuation framework.",
+      },
+      {
+        type: "teaching",
+        title: "How LPs should test mark credibility",
+        content:
+          "There are several practical ways to evaluate whether a GP's marks are credible.\n\n**1. Compare marks to public comps and transaction multiples**\nIf a sector's public multiple has fallen from 14x to 10x and transaction activity is sparse, a GP marking a similar private company at 13x needs to explain why. A premium may be justified, but it should be specific and evidence-based.\n\n**2. Study exit-to-carrying-value history**\nOne of the best tests of mark quality is simple: when the GP exits assets, do realizations occur above, around, or below prior marks? A GP that routinely exits below carrying value has been overstating NAV. A GP that consistently exits above carrying value may be conservative or simply lucky in timing, but either way the historical bias is more favorable.\n\n**3. Watch quarter-to-quarter asymmetry**\nDoes the GP mark up quickly when comparables improve but delay marking down when comparables fall? That asymmetry is a useful signal.\n\n**4. Ask about methodology, not just outcomes**\nWhat peer set is being used? Are marks based on trailing or forward EBITDA? Are debt levels and financing conditions incorporated consistently? How are company-specific adjustments applied?\n\n**5. Examine concentration risk**\nThe credibility of aggregate NAV depends heavily on the largest positions. If two companies represent 50% of NAV, the valuation quality of those two matters far more than the rest of the portfolio.",
+      },
+      {
+        type: "visual",
+        title: "Five practical tests of NAV credibility",
+        content:
+          "**A disciplined LP does not ask only 'what is the mark?' but 'why should I trust it?'**\n\n| Test | What you are looking for |\n|---|---|\n| **Public comp comparison** | Are the selected multiples and peer set plausible under current market conditions? |\n| **Exit-to-mark history** | Do realized exits validate or undermine prior carrying values? |\n| **Quarterly asymmetry** | Does the GP respond symmetrically to market moves up and down? |\n| **Methodology transparency** | Can the GP explain peer choice, metric choice, and adjustments clearly? |\n| **Concentration analysis** | Are a few large marks dominating the fund-level NAV story? |\n\nA GP with strong answers on all five dimensions deserves materially more confidence than one relying on generalized statements about quality and resilience.",
+        caption:
+          "NAV credibility is evaluated through method, pattern, and realization evidence.",
+        whyItMatters:
+          "LPs often focus on whether the headline NAV seems high or low. The better question is whether the process and pattern behind the mark are credible.",
+        sourceNote:
+          "Institutional PE monitoring practice commonly relies on comp checks, exit-vs-carry analysis, and concentration review to assess valuation credibility.",
       },
       {
         type: "example",
-        title: "Mini-case: stale marks in 2022",
+        title: "Worked example: are these marks believable?",
         content:
-          "In 2022, public equity markets fell 20%. Many PE funds reported flat or slightly negative NAVs through Q3 2022, citing 'portfolio company resilience.' By Q1 2023, many had marked down 10–15% as audits forced reconciliation with market reality. LPs who relied on Q3 2022 NAV for asset allocation decisions were working with stale data. The lesson: in a rapidly moving market, treat recent PE NAVs as lagged indicators, not current values.",
+          "A buyout fund holds a software-enabled services company marked at 12.0x forward EBITDA. The public comp set the GP uses now trades at 9.5x on average, down from 13.0x a year ago. The GP argues the company deserves a premium because it has higher margins, lower churn, and better organic growth than the public peer group.\n\nThat may be reasonable. But the allocator needs to quantify the claim.\n\nAssume current forward EBITDA is $40M. At 12.0x, enterprise value is $480M. At 9.5x, enterprise value is $380M. That is a $100M gap in EV. If net debt is $140M, then equity value is:\n- **At 12.0x:** $480M - $140M = $340M\n- **At 9.5x:** $380M - $140M = $240M\n\nThe premium assumption therefore creates a $100M difference in equity value, or more than 40% relative to the lower mark. The question is not whether any premium is deserved. It is whether the evidence supports a premium large enough to justify that magnitude of difference.\n\nA disciplined follow-up would ask:\n- What specific public peers are being used?\n- What are this company's growth and margin metrics relative to them?\n- Has the GP historically exited premium-marked assets at or above carrying value?\n- If financing markets remain constrained, how realistic is a 12.0x exit price from a strategic or financial buyer?\n\nA credible premium can exist. But it must be underwritten, not asserted.",
+      },
+      {
+        type: "example",
+        title: "Worked example: exit history as the best valuation audit",
+        content:
+          "A GP's last three exits were carried in the prior quarter at $210M, $165M, and $95M, respectively. They were ultimately realized at $205M, $168M, and $72M.\n\nWhat does this pattern show?\n\n- Exit 1: realized essentially in line with carrying value\n- Exit 2: realized modestly above carrying value\n- Exit 3: realized materially below carrying value\n\nThe overall conclusion is not simply 'marks are bad' or 'marks are fine.' It is more nuanced. The first two exits suggest the GP is broadly capable of marking credibly. The third exit suggests either that company-specific deterioration occurred late, or that the prior carrying value had embedded optimism that the market did not validate.\n\nThe allocator's next question should be: was Exit 3 an exception or part of a pattern? If one disappointing realization sits among many accurate ones, the inference is limited. If realizations repeatedly land below prior NAV, the GP's valuation style is biased upward. Over time, exit history is the most powerful reality check available.",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: reacting to 'stable marks despite volatility'",
+        content:
+          "The GP says: 'Our valuations were largely stable this quarter despite public-market volatility because the portfolio is high quality.'\n\n**Weak response:** 'That is reassuring. It sounds like the portfolio is holding up better than public markets.'\n\nWhy it is weak: it accepts the conclusion without testing the valuation method, peer set, financing assumptions, or whether the portfolio's marks have historically been validated at exit.\n\n**Strong response:** 'Help us understand what drove the stability. Which public and transaction comparables are you using, how have those multiples moved, and why do the largest portfolio companies deserve the premium or stability implied by your marks? Also, looking at your prior exits, how often have realizations come in above or below the last carrying values?'\n\nWhy it is strong: it shifts the discussion from reassurance to evidence. It does not assume stable marks are wrong. It asks the GP to show why they are credible.",
+      },
+      {
+        type: "inference-boundary",
+        title: "Inference boundary: what NAV can and cannot tell you",
+        content:
+          "**What NAV can tell you:**\n- the GP's current estimate of fair value under an accounting and valuation framework\n- how the GP sees company performance, peer comparables, and capital structure at the measurement date\n- broad directional information about whether portfolio value is improving or deteriorating over time\n\n**What NAV cannot tell you with certainty:**\n- what the company would actually clear for in a live sale process tomorrow\n- whether a reported quarter-to-quarter stability pattern reflects true resilience or just slower recognition of market change\n- whether reported low volatility means low underlying economic risk\n- whether the carrying value will be validated at exit; that requires realization evidence",
       },
       {
         type: "exercise",
-        title: "Quick exercise",
+        title: "Applied exercise: pressure-test the quarter",
         content:
-          "A GP's quarterly report shows portfolio company valuations unchanged despite a 25% decline in the public-market peer group multiple. What questions would you ask at the next LP call?",
+          "A GP reports that NAV across its top five positions was flat this quarter. Public peers in the same sectors declined 18%, 22%, 15%, 11%, and 27%, and debt financing costs rose materially. Draft a short list of four questions you would ask on the LP call to determine whether the flat NAV result reflects genuine portfolio resilience or stale/aggressive marks. A strong answer should focus on valuation methodology, peer-set logic, concentration, and historical exit validation.",
+      },
+      {
+        type: "meeting-application",
+        title: "In the LP call: five questions that improve a valuation discussion",
+        content:
+          "1. **'What methodology drove the mark on the top three positions this quarter, and what changed from the prior quarter?'** This forces specificity on process rather than comfort language.\n\n2. **'Which public and transaction comps are you relying on, and where do your selected multiples sit relative to those ranges?'** This tests whether the mark is anchored in current market reality.\n\n3. **'Are you using trailing or forward financials, and what haircut are you applying to forward expectations?'** This matters most when marks rely on projected improvement.\n\n4. **'Across the last fund's exits, how did realized values compare with prior carrying values?'** This tests valuation credibility with real evidence.\n\n5. **'If we marked your top two positions at the public comp median rather than your selected premium, how much would fund NAV change?'** This reveals sensitivity to the GP's assumptions.",
+      },
+      {
+        type: "meeting-application",
+        title: "Allocator application: how to write about PE NAV in committee materials",
+        content:
+          "A strong committee write-up should never present PE NAV as though it were equivalent to a liquid market price. Instead, characterize it in three layers:\n\n**Reported value** — what the fund states the NAV is today\n\n**Valuation context** — what methodology and market assumptions appear to be driving that number, especially for the largest positions\n\n**Credibility assessment** — whether recent mark behavior and historical exit evidence suggest the GP is conservative, balanced, or aggressive in its valuation approach\n\nThat structure keeps the committee focused on what is known, what is estimated, and what still needs validation.",
+      },
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "FASB ASC 820 fair value framework; IPEV valuation principles and practitioner guidance; institutional private-markets reporting practice on appraisal smoothing, valuation lag, and exit-to-carry analysis; CFA Institute and CAIA materials on private asset valuation and reporting.",
       },
     ],
     quiz: [
       {
         questionId: "d18q1",
         type: "multiple-choice",
-        prompt: "How do PE GPs typically value portfolio companies between liquidity events?",
+        prompt:
+          "What is the most accurate description of PE fund NAV?",
         options: [
-          "Using daily market prices from comparable public companies",
-          "Using appraisal methods including comparable multiples, DCF, and recent transaction comparables",
-          "Using the original cost of the investment adjusted for inflation",
-          "Using a standardised formula set by the LPAC",
+          "A market-clearing price established by active trading in the portfolio companies",
+          "A fair-value estimate based on appraisal methods, selected market inputs, and GP judgment",
+          "The original cost of the fund's investments adjusted only for realized exits",
+          "A regulatory capital measure rather than an economic valuation",
         ],
         correctAnswer:
-          "Using appraisal methods including comparable multiples, DCF, and recent transaction comparables",
+          "A fair-value estimate based on appraisal methods, selected market inputs, and GP judgment",
       },
       {
         questionId: "d18q2",
         type: "multiple-choice",
         prompt:
-          "Why does PE appear to have lower volatility and correlation to public equities than it actually does?",
+          "Why do PE marks often lag public-market moves?",
         options: [
-          "PE investments are structurally uncorrelated to equity market risk factors",
-          "PE NAV is based on lagged appraisals rather than daily market prices, creating a smoothing effect",
-          "PE managers hedge currency and equity risk at the portfolio company level",
-          "PE reporting standards require smoothing over a four-quarter rolling average",
+          "Because PE funds are prohibited from changing valuations between annual audits",
+          "Because PE companies are economically insulated from public-market valuation shifts",
+          "Because PE valuations are updated on a slower reporting cycle and filtered through appraisal judgment rather than continuous trading",
+          "Because LPAs require GPs to hold prior-quarter multiples constant unless the LPAC approves a change",
         ],
         correctAnswer:
-          "PE NAV is based on lagged appraisals rather than daily market prices, creating a smoothing effect",
+          "Because PE valuations are updated on a slower reporting cycle and filtered through appraisal judgment rather than continuous trading",
       },
       {
         questionId: "d18q3",
         type: "multiple-choice",
         prompt:
-          "What is the most reliable time to assess the accuracy of a fund's reported NAV?",
+          "What is the main reason reported PE volatility can look lower than true underlying economic volatility?",
         options: [
-          "At each quarter-end, when the GP submits its self-reported marks",
-          "Following the annual independent audit, when auditors have reviewed valuations",
-          "At fund inception, when entry prices were set at arm's length",
-          "After each capital call, when the GP revalues the full portfolio",
+          "PE managers hedge operating-company exposure more effectively than public companies do",
+          "PE funds hold only defensive sectors and therefore structurally avoid macro shocks",
+          "Appraisal-based smoothing and valuation lag dampen observed quarter-to-quarter movements",
+          "PE marks exclude debt and therefore show less movement than equity prices",
         ],
         correctAnswer:
-          "Following the annual independent audit, when auditors have reviewed valuations",
+          "Appraisal-based smoothing and valuation lag dampen observed quarter-to-quarter movements",
       },
       {
         questionId: "d18q4",
         type: "multiple-choice",
         prompt:
-          "A GP consistently marks portfolio companies at the high end of the public peer multiple range. What concern does this raise?",
+          "Which of the following is the strongest single test of a GP's historical mark credibility?",
         options: [
-          "The GP may be violating FASB ASC 820 fair value requirements",
-          "The GP may be managing marks upward to support fundraising or performance reporting",
-          "Portfolio company revenue must be growing faster than peers to justify higher multiples",
-          "High multiples reduce the fund's DPI relative to TVPI",
+          "Whether the GP describes its assets as high quality during quarterly calls",
+          "Whether reported realizations at exit tend to occur above, near, or below prior carrying values",
+          "Whether the GP uses forward rather than trailing EBITDA in its models",
+          "Whether the GP publishes a formal valuation policy in the annual report",
         ],
         correctAnswer:
-          "The GP may be managing marks upward to support fundraising or performance reporting",
+          "Whether reported realizations at exit tend to occur above, near, or below prior carrying values",
       },
       {
         questionId: "d18q5",
+        type: "multiple-choice",
+        prompt:
+          "A GP marks a portfolio company at a substantial premium to public-market peers. What is the most appropriate allocator response?",
+        options: [
+          "Assume the premium is inappropriate because private companies should always be marked below public peers",
+          "Accept the premium if the GP has historically generated strong IRR",
+          "Ask for company-specific evidence supporting the premium and test whether similar premiums have historically been validated at exit",
+          "Reject the mark unless the LPAC independently values the company each quarter",
+        ],
+        correctAnswer:
+          "Ask for company-specific evidence supporting the premium and test whether similar premiums have historically been validated at exit",
+      },
+      {
+        questionId: "d18q6",
         type: "short-response",
         prompt:
-          "What are two practical ways an LP can assess whether a GP's NAV marks are credible?",
+          "Why is it a mistake to treat PE's lower reported quarterly volatility as proof that PE is economically much less risky than public equities?",
         modelAnswer:
-          "First, compare reported valuations to the public-market peer group multiples over time. If the GP's marks have not moved while comparable public companies declined 20–30%, the marks are likely stale. Ask specifically: what multiple is being applied and why is it above/below the peer median? Second, track the 'exit multiple surprise' across prior fund exits — when deals were sold, did they exit at valuations above or below the last reported NAV? GPs who consistently exit above NAV are conservative markers; those who exit below NAV were holding inflated marks. A pattern of downward surprises at exit is a significant credibility concern.",
+          "Because much of PE's lower reported volatility comes from the valuation method rather than from the underlying businesses being insulated from macro and market risk. PE NAV is appraisal-based, updated quarterly, and adjusted with a lag, while public equities reprice continuously. That smoothing dampens observed quarter-to-quarter moves and can understate measured correlation to public markets. Over a full cycle, PE is much more equity-like than the reported short-term volatility series suggests.",
+      },
+      {
+        questionId: "d18q7",
+        type: "short-response",
+        prompt:
+          "A GP says portfolio marks were stable because the assets are 'higher quality than the public comp set.' What follow-up information would you want before accepting that explanation?",
+        modelAnswer:
+          "I would want the specific peer set being used, the company's growth, margin, and retention or cash-flow characteristics relative to those peers, and a clear explanation of why those differences justify the implied premium. I would also want to know whether the GP has historically exited similarly premium-marked assets at or above carrying value. Finally, I would ask how tighter financing conditions and weaker transaction activity are reflected in the mark, because quality alone does not eliminate exit-market reality.",
       },
     ],
     sources: [
-      "FASB ASC 820 — fair value measurement standards",
-      "ILPA reporting and valuation best practices",
-      "CFA Institute alternative investments — PE valuation and reporting",
+      "FASB ASC 820 fair value framework",
+      "IPEV valuation principles and practitioner guidance",
+      "CFA Institute and CAIA materials on private asset valuation and reporting",
+      "Institutional private-markets literature on appraisal smoothing, valuation lag, and exit-to-carry analysis",
     ],
   },
 
