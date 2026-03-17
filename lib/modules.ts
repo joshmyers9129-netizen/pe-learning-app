@@ -310,3 +310,13 @@ export const modules: Module[] = [
 export function getModuleById(moduleId: string): Module | undefined {
   return modules.find((m) => m.moduleId === moduleId);
 }
+
+/** The default module used when no explicit module is specified. */
+export const DEFAULT_MODULE_ID = "pe-foundations";
+
+/** Convenience: get the default module. */
+export function getDefaultModule(): Module {
+  const m = getModuleById(DEFAULT_MODULE_ID);
+  if (!m) throw new Error(`Default module "${DEFAULT_MODULE_ID}" not found`);
+  return m;
+}

@@ -1,8 +1,8 @@
 "use client";
 
-import { modules } from "@/lib/modules";
+import { getDefaultModule } from "@/lib/modules";
 import { useModuleProgress } from "@/hooks/useProgress";
-import { Lesson, LessonStatus } from "@/lib/types";
+import { Difficulty, Lesson, LessonStatus } from "@/lib/types";
 
 // ── status helpers ────────────────────────────────────────────────────────────
 
@@ -36,6 +36,8 @@ function StatusDot({ status }: { status: LessonStatus }) {
     <span
       className={`inline-block w-2.5 h-2.5 rounded-full flex-shrink-0 ${cfg.dot}`}
       title={cfg.label}
+      role="img"
+      aria-label={cfg.label}
     />
   );
 }
@@ -53,8 +55,8 @@ function StatusBadge({ status }: { status: LessonStatus }) {
 
 // ── sub-components ────────────────────────────────────────────────────────────
 
-function DifficultyPip({ level }: { level: string }) {
-  const colors: Record<string, string> = {
+function DifficultyPip({ level }: { level: Difficulty }) {
+  const colors: Record<Difficulty, string> = {
     foundational: "bg-[#2294BD]",
     intermediate: "bg-[#FAA51A]",
     advanced: "bg-[#D9532B]",
@@ -194,7 +196,7 @@ function LessonRow({ lesson, status, onStatusChange }: LessonRowProps) {
 
 export default function ModulesPage() {
   // For now always show the first module as "current"
-  const currentModule = modules[0];
+  const currentModule = getDefaultModule();
   const { progress, updateLesson } = useModuleProgress(currentModule.moduleId);
 
   const lessons = currentModule.lessons;
@@ -234,7 +236,7 @@ export default function ModulesPage() {
 
         {/* Next up callout */}
         {nextLesson && completed < lessons.length && (
-          <div className="flex items-center gap-3 bg-white border border-[#FAA51A]/30 rounded-xl px-4 py-3 mb-5 shadow-sm">
+          <a href={`/lesson/${nextLesson.lessonId}`} className="flex items-center gap-3 bg-white border border-[#FAA51A]/30 rounded-xl px-4 py-3 mb-5 shadow-sm hover:border-[#2294BD]/50 hover:bg-[#2294BD]/3 transition-colors">
             <span className="text-lg">→</span>
             <div>
               <p className="text-xs text-[#404040] uppercase tracking-wide font-semibold">
@@ -247,7 +249,7 @@ export default function ModulesPage() {
             <span className="ml-auto text-xs text-[#404040] bg-[#F0E6DD] px-2 py-1 rounded-lg whitespace-nowrap">
               {nextLesson.estimatedMinutes} min
             </span>
-          </div>
+          </a>
         )}
 
         {/* Legend */}

@@ -2,7 +2,7 @@
 
 import { use, useState, useEffect } from "react";
 import { getLessonContent } from "@/lib/lessonContent";
-import { getModuleById } from "@/lib/modules";
+import { DEFAULT_MODULE_ID, getModuleById } from "@/lib/modules";
 import { saveQuizResult, setLessonStatus, getQuizResult } from "@/lib/progress";
 import {
   LessonBlock,
@@ -15,7 +15,7 @@ import {
 import { AiHelper } from "@/components/AiHelper";
 import { LESSON_VISUALS } from "@/components/visuals";
 
-const MODULE_ID = "pe-foundations";
+const MODULE_ID = DEFAULT_MODULE_ID;
 
 // ── markdown renderer ─────────────────────────────────────────────────────────
 // Lightweight inline parser — no external library.
