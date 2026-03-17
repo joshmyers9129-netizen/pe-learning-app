@@ -2885,104 +2885,199 @@ export const lessonContents: LessonContent[] = [
     blocks: [
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "The secondary market has grown from a niche liquidity mechanism into a $100B+ annual market that creates genuine opportunities for both buyers and sellers. Understanding it means you can use it proactively — not just react when an LP needs an exit.",
+          "A CIO says: 'We need liquidity, but we do not want to blow up the private markets programme.' On the same day, a GP tells you their best-performing company deserves more time and proposes a continuation vehicle. In one conversation, the secondary market is a portfolio-management tool for the LP. In the other, it is an asset-management tool for the GP. Both may be sensible. Both can also transfer value away from the LP if the pricing, process, or governance is weak. This lesson builds the allocator's framework for reading secondary transactions correctly.",
+      },
+      {
+        type: "framing",
+        title: "Why secondaries are not just a distress market anymore",
+        content:
+          "The secondary market used to be thought of mainly as an exit route for forced sellers. That framing is outdated. Today, secondaries serve several distinct functions: LPs use them to rebalance portfolios, reduce manager count, manage liquidity, or clean up legacy exposures; buyers use them to acquire seasoned portfolios with shorter-duration cash flows and less blind-pool risk; GPs use continuation vehicles and other GP-led structures to hold good assets longer than the original fund term allows.\n\nThe allocator's job is not to decide whether secondaries are 'good' or 'bad.' It is to identify what problem the transaction is solving, who captures the economics created by that solution, and whether the process protects the existing LP appropriately. This requires a different mindset for LP-led deals versus GP-led deals. It also requires separating a quoted discount to NAV from actual value. A 10% discount may be attractive if NAV is conservative and realizations are near; it may be expensive if NAV is stale and the remaining assets are weak.",
       },
       {
         type: "teaching",
-        title: "LP-led secondaries",
+        title: "LP-led secondaries: what is actually being sold",
         content:
-          "In an LP-led secondary, an existing LP sells their fund interest to a secondary buyer — typically at a discount to NAV. Sellers include LPs managing over-allocation, rebalancing portfolios, or exiting legacy relationships. Buyers acquire a seasoned portfolio at a discount, with reduced J-curve effect and known underlying assets. Pricing depends on fund quality, age, sector, and market conditions. Discounts widened significantly in 2022–23 as rates rose and PE NAVs were slow to mark down.",
+          "In an LP-led secondary, an existing LP sells its interest in one or more private equity funds to a secondary buyer. The buyer steps into the seller's place in the fund, assuming rights to future distributions and obligations for remaining unfunded commitments. At a high level, the seller is monetizing a position that cannot otherwise be redeemed.\n\nLP-led transactions usually happen for one of four reasons:\n\n- **Liquidity need:** the seller needs cash more than it values holding to realization\n- **Rebalancing:** PE exposure is above target or manager count has become too high\n- **Governance simplification:** the seller wants to exit small, older, or non-core relationships\n- **View change:** the seller has reduced conviction in a manager, strategy, or vintage\n\nFor the buyer, the attraction is clear: the portfolio is seasoned, the underlying assets are partially known, and the J-curve is reduced because capital has already been deployed. The buyer is not underwriting a blind pool. They are underwriting a known or partially-known set of remaining assets, remaining unfunded obligations, and expected timing of distributions.\n\nThe key allocator point: an LP-led sale is not automatically a negative signal about asset quality. Many strong portfolios are sold for balance-sheet or governance reasons. But the seller's reason matters because it shapes how aggressively you should interrogate NAV quality, unfunded exposure, and timing of cash flows.",
       },
       {
         type: "teaching",
-        title: "GP-led secondaries and continuation vehicles",
+        title: "Why secondary interests trade at discounts or premiums to NAV",
         content:
-          "In a GP-led secondary, the GP — not the LP — initiates the transaction. The most common structure is a continuation vehicle (CV): the GP moves one or more portfolio companies from the original fund into a new vehicle. Existing LPs can cash out at NAV or roll their interest into the CV. New capital (from secondary buyers) enters the CV. The CV allows the GP to extend the hold on high-quality assets beyond the fund's term. Conflict of interest is significant: the GP is both seller (old fund) and buyer (new vehicle). LPAC approval and independent valuation are critical.",
+          "Secondary pricing is commonly quoted as a percentage of the fund's most recent reported NAV. That quote is useful shorthand, but it is not the economics. What matters is whether the quoted price appropriately reflects the quality, timing, and credibility of the remaining value.\n\nA fund interest typically trades at a **discount to NAV** when one or more of the following are true:\n\n- the NAV is believed to be stale or optimistic relative to current exit conditions\n- the underlying portfolio is concentrated, low-quality, or difficult to exit\n- the fund has meaningful remaining unfunded commitments\n- the seller needs speed and certainty, reducing bargaining power\n- financing markets for secondary buyers have tightened, lowering bid levels across the market\n\nA fund interest may trade at a **premium to NAV** when:\n\n- the reported NAV is conservative relative to visible realizable value\n- near-term distributions are highly likely\n- the portfolio contains particularly attractive assets that the market values above carrying marks\n- the GP is high quality and the buyer expects favorable future optionality, including co-investment or continuation opportunities\n\nThe allocator's discipline is to stop thinking of '95% of NAV' as a price and start thinking of it as a claim about value. A fund trading at 95% of an overstated NAV may still be expensive. A fund trading at 105% of a conservative NAV with near-term cash flows may still be attractive.",
+      },
+      {
+        type: "visual",
+        title: "Secondary pricing framework: what a NAV discount is really saying",
+        content:
+          "**A discount or premium to NAV is shorthand for a view on four things:**\n\n| Dimension | Favors Higher Price | Favors Lower Price |\n|---|---|---|\n| **NAV quality** | Conservative marks, credible exit comps, recent realizations above carrying value | Stale marks, optimistic multiples, weak recent exits |\n| **Duration / cash-flow timing** | Near-term distributions, mature assets, low remaining unfunded | Long hold duration, uncertain exit path, heavy unfunded |\n| **Portfolio quality** | Diversified, stronger companies, high-conviction GP, visible buyers | Concentrated, weak assets, challenged GP, no clear exit routes |\n| **Market / technicals** | Competitive buyer market, cheap financing, limited supply | Forced sellers, expensive financing, risk-off environment |\n\nA quoted price like '90% of NAV' is only interpretable after all four dimensions are assessed.",
+        caption:
+          "A secondary bid is not a valuation opinion on today's NAV alone. It is a combined judgment on NAV credibility, remaining asset quality, duration, and market technicals.",
+        whyItMatters:
+          "LPs often anchor on the percentage-of-NAV quote and ignore the quality of the denominator. That is a basic error. The denominator itself may be wrong, and the timing of realization matters almost as much as the reported mark.",
+        sourceNote:
+          "Secondary pricing frameworks are consistent with institutional secondary market practice and major adviser reports covering discounts, unfunded obligations, and NAV quality assessment.",
+      },
+      {
+        type: "teaching",
+        title: "GP-led secondaries and continuation vehicles: what problem they are solving",
+        content:
+          "In a GP-led secondary, the GP initiates the transaction rather than an LP seller. The most important GP-led structure is the **continuation vehicle (CV)**. In a typical CV, one or more assets are transferred out of the original fund into a new vehicle. Existing LPs in the old fund can usually choose either:\n\n- **Cash out** at the transaction price, or\n- **Roll** their interest into the new vehicle and continue holding the asset\n\nNew secondary capital funds the transaction and becomes the buyer-side capital base for the CV.\n\nWhy do GPs pursue this? In the best case, because the asset is genuinely high quality, still has substantial upside, and no longer fits well inside the original fund's life, diversification, or liquidity needs. In the worst case, because the GP wants to avoid crystallizing a weak exit market, continue charging fees on a known good asset, or manufacture realizations where ordinary exits are unattractive.\n\nThe structure is not inherently good or bad. The allocator's task is to identify whether the CV is solving a legitimate asset-duration problem or mainly creating a fee and carry reset opportunity for the GP.",
+      },
+      {
+        type: "teaching",
+        title: "The core conflict in GP-led deals",
+        content:
+          "GP-led secondaries create a structural conflict that does not exist in the same way in LP-led transactions. The GP is effectively involved on both sides of the deal:\n\n- as fiduciary to the selling fund and its existing LPs\n- as sponsor of the continuation vehicle, with incentives to retain the asset, reset economics, and preserve relationships with new buyers\n\nThat conflict can show up in several places:\n\n**Pricing conflict:** Is the sale price fair to the existing LPs cashing out, or does it favor the economics of the new vehicle?\n\n**Process conflict:** Was there a genuine market check with multiple buyers, or was the price effectively negotiated with one preferred counterparty?\n\n**Economics reset:** Are carry and fees being reset in a way that allows the GP to earn economics twice on the same asset base?\n\n**Option framing:** Are existing LPs being given a real, informed choice between cashing out and rolling, or are they being nudged toward the GP's preferred outcome?\n\nA high-quality GP-led transaction does not eliminate these conflicts. It manages them transparently through independent valuation work, robust LPAC oversight, a credible market process, and clean disclosure of the GP's economic interests before and after the transaction.",
+      },
+      {
+        type: "teaching",
+        title: "What makes a secondary transaction attractive to a buyer",
+        content:
+          "A buyer in the secondary market is usually not looking for novelty. They are looking for asymmetry created by information, seasoning, and pricing.\n\n**Attractive features for an LP-led buyer:**\n- reported NAV that appears conservative relative to observable value\n- mature assets with shorter-duration cash flows and limited blind-pool uncertainty\n- manageable remaining unfunded commitments\n- diversified exposure where a few weak assets do not dominate the position\n- a GP whose reporting, governance, and exit discipline are credible\n\n**Attractive features for a GP-led buyer / CV investor:**\n- a single asset or small portfolio with visible further upside that was not fully realized in the original fund\n- high confidence in the management team and value-creation runway\n- transaction pricing that leaves room for a strong return from the rollover price, not just from the original fund's entry price\n- a process that provides evidence the transfer price is market-clearing rather than GP-preferred\n\nThe crucial allocator point: secondary buyers underwrite the **next leg** of return from today's price, not the quality of the asset from original acquisition cost. A great company can still be a bad secondary purchase if the transfer price leaves too little upside.",
       },
       {
         type: "example",
-        title: "Mini-case: LP portfolio sale",
+        title: "Worked example: discount to NAV does not automatically mean cheap",
         content:
-          "A pension fund holds 22 PE fund interests worth $850M at reported NAV. It decides to exit 15 of them to reduce manager count and free liquidity. A secondary buyer offers 88 cents on the dollar ($748M) for the full portfolio. The pension accepts — not because the assets are bad, but because the liquidity and simplification are worth the 12% discount. For the buyer: acquiring known, mature assets at an 88-cent entry point with a shorter path to distributions and no blind-pool risk.",
+          "An LP is selling an interest in a 2019-vintage buyout fund. The most recent quarterly report shows:\n\n- Reported NAV: $120M\n- Unfunded commitment: $20M\n- Buyer bid: 90% of NAV = $108M purchase price\n- Portfolio: 5 remaining companies, with two names representing 65% of NAV\n- Largest two companies marked at 12.0x EV/EBITDA; current public and transaction comps suggest 9.5x to 10.0x\n\nAt first glance, 90% of NAV looks attractive. But now adjust the denominator.\n\nIf the two largest positions are really worth 10.0x instead of 12.0x, their value is overstated by roughly 16.7%. If those two positions represent 65% of NAV, the total fund NAV is overstated by about 10.8% overall. Adjusted NAV is therefore closer to:\n\n$120M × (1 - 0.108) ≈ $107M\n\nNow compare the buyer's $108M purchase price to adjusted NAV of $107M. The buyer is no longer buying at a discount. They are paying approximately par to adjusted value — before considering the $20M of remaining unfunded commitment.\n\nIf expected future distributions are near-term and the GP is strong, that may still be acceptable. But the phrase 'bought at 90% of NAV' would be misleading as a shorthand for attractiveness. The real underwriting question is whether $108M plus the burden of the $20M unfunded creates an attractive return from here.",
+      },
+      {
+        type: "example",
+        title: "Worked example: continuation vehicle governance test",
+        content:
+          "A GP proposes a continuation vehicle for its best remaining asset, a healthcare software company. The original fund is in year 10 and the company is marked at $400M. The GP argues that with two to three more years of hold time, the asset could be worth $550M.\n\nExisting LPs are offered two choices:\n- cash out at the transaction price based on $400M enterprise value, or\n- roll into the new vehicle\n\nAt face value, the proposal sounds attractive: liquidity for those who want it, upside retention for those who do not. But the allocator's job is to test the process:\n\n1. Was there a broad auction or a narrow process?\n2. Did an independent valuation provider support the price range?\n3. Are the new fees and carry reset from the $400M transfer price, and if so, on what terms?\n4. Is the GP effectively re-underwriting the same asset with a fresh economics package?\n5. Does the old-fund LP receive a truly fair cash-out price, or is the price being set low enough to make the CV highly attractive to new money?\n\nA well-run transaction can still be worth doing. But the LP should think of this as a new investment decision with embedded conflicts, not as a simple administrative extension.",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: reacting to a continuation vehicle proposal",
+        content:
+          "The GP says: 'This is our best asset, and we believe keeping it for three more years is in everyone's interest.'\n\n**Weak LP response:** 'That sounds sensible. If it is your best asset, we are inclined to roll.'\n\nWhy it is weak: it confuses asset quality with transaction fairness. A strong asset can still be transferred at an LP-unfavorable price, with weak governance, or with economics reset in a way that benefits the GP disproportionately.\n\n**Strong LP response:** 'We agree the asset may still have upside, but we need to evaluate the transaction separately from the company. Please walk us through the market process, independent valuation support, the economics reset in the continuation vehicle, and the specific conflicts reviewed by the LPAC. We also want to understand the return case for a new investor from the transfer price, not from the original fund's entry price.'\n\nWhy it is strong: it separates belief in the asset from approval of the structure. That is the allocator discipline GP-led secondaries require.",
+      },
+      {
+        type: "inference-boundary",
+        title: "Inference boundary: what a secondary price can and cannot tell you",
+        content:
+          "**What a secondary price can tell you:**\n- what a buyer is willing to pay today given reported marks, portfolio quality, remaining duration, and market technicals\n- whether the market appears to view the reported NAV as conservative, fair, or optimistic\n- how liquid or illiquid the seller's position really is under current market conditions\n\n**What a secondary price cannot tell you:**\n- whether the reported NAV is actually correct; the buyer may be wrong, the seller may be constrained, and market conditions may be dislocated\n- whether the asset or fund is attractive in absolute terms; a discount to NAV is not the same as a margin of safety if the denominator is stale\n- whether a GP-led continuation vehicle is fair to existing LPs; fairness depends on process, pricing support, and economics reset, not just the transfer price\n- whether the buyer's expected return is strong; that depends on future realizations from the transfer price, not on the discount statistic itself",
       },
       {
         type: "exercise",
-        title: "Quick exercise",
+        title: "Applied exercise: evaluate the seller's motivation and the buyer's edge",
         content:
-          "A GP approaches you with a continuation vehicle for their best-performing portfolio company, offering existing LPs the option to cash out at NAV or roll in. What conflict-of-interest concerns do you raise, and what governance protections do you require?",
+          "An endowment is considering selling a portfolio of older PE fund interests. Reported NAV is $300M; unfunded commitments are $25M; the best bid is 92% of NAV. The CIO says the main reasons to sell are manager-count reduction and improved liquidity flexibility. Before deciding, work through four questions:\n\n1. Is the sale being driven by liquidity need, governance simplification, reduced conviction, or some combination?\n2. What evidence would you need to determine whether the 92% bid is attractive relative to adjusted NAV rather than reported NAV?\n3. How much of the remaining value is near-term and likely realizable versus long-duration and uncertain?\n4. If the portfolio is fundamentally sound, is the governance simplification worth the discount being paid?\n\nThen write a short recommendation on whether the sale solves a genuine programme problem at an acceptable economic cost.",
+      },
+      {
+        type: "meeting-application",
+        title: "In the manager or adviser meeting: five questions on secondaries",
+        content:
+          "1. **'For an LP-led sale, what is the seller trying to solve — liquidity, governance simplification, reduced conviction, or something else?'** This clarifies whether the transaction is being driven by asset quality or seller circumstance.\n\n2. **'What is the buyer underwriting from today's price — adjusted NAV, remaining unfunded, and expected timing of distributions?'** This forces the conversation away from headline discount-to-NAV shorthand.\n\n3. **'For a continuation vehicle, what did the market process look like and how many buyers were engaged?'** This is the first governance test of whether the pricing is credible.\n\n4. **'What independent valuation support exists for the transfer price, and where did the final deal clear relative to that range?'** This is the second governance test and often the most revealing.\n\n5. **'How are fees and carry structured in the new vehicle, and what economics is the GP effectively resetting?'** This identifies whether the LP is being asked to re-pay for upside already substantially created in the old fund.",
+      },
+      {
+        type: "meeting-application",
+        title: "Allocator application: when secondaries solve a real problem",
+        content:
+          "Secondaries are most useful when they solve a specific programme problem more efficiently than the available alternatives.\n\n**Good reasons to use the secondary market:**\n- reduce over-allocation more quickly than waiting for organic distributions\n- simplify a legacy portfolio with too many small, low-governance-value relationships\n- exit low-conviction managers where waiting to full realization is not worth the governance burden\n- acquire seasoned exposure with reduced J-curve and more visible underlying value\n\n**Weak reasons to use the secondary market:**\n- reacting emotionally to short-term mark volatility\n- treating a discount to reported NAV as inherently attractive without underwriting the denominator\n- accepting a GP-led transaction because the asset sounds good, without separately evaluating transaction fairness\n\nThe programme-level question is always the same: what problem is being solved, and is the discount, fee load, or governance complexity worth solving it this way?",
+      },
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "Secondary market structures and pricing: major secondary market adviser annual reviews and institutional private markets references on LP-led and GP-led transactions. Governance standards for GP-led secondaries: ILPA guidance on GP-led secondary transactions, continuation vehicles, conflicts, and LPAC oversight. Institutional allocator practice on NAV discounts, unfunded obligations, and seasoning effects: CFA Institute and practitioner materials covering private equity secondary market mechanics.",
       },
     ],
     quiz: [
       {
         questionId: "d15q1",
         type: "multiple-choice",
-        prompt: "In an LP-led secondary transaction, who initiates the sale?",
+        prompt:
+          "What is the most accurate description of an LP-led secondary transaction?",
         options: [
-          "The GP, seeking to return capital early to LPs",
-          "An existing LP selling their fund interest to a secondary buyer",
-          "The portfolio company's management team seeking a liquidity event",
-          "The fund's placement agent facilitating a transfer",
+          "A GP transfers a portfolio company into a new vehicle so existing LPs can extend the hold period",
+          "An existing LP sells its fund interest to a buyer, who assumes rights to future distributions and obligations for remaining unfunded commitments",
+          "A portfolio company is sold from one PE fund to another PE fund managed by the same GP",
+          "An LP redeems capital directly from the fund at the most recent reported NAV",
         ],
         correctAnswer:
-          "An existing LP selling their fund interest to a secondary buyer",
+          "An existing LP sells its fund interest to a buyer, who assumes rights to future distributions and obligations for remaining unfunded commitments",
       },
       {
         questionId: "d15q2",
         type: "multiple-choice",
         prompt:
-          "What is the primary advantage of a secondary purchase for the buyer versus a primary fund commitment?",
+          "Why can a fund interest trade at a discount to NAV without necessarily being cheap?",
         options: [
-          "Secondary buyers receive lower management fees than primary LPs",
-          "Secondary buyers acquire seasoned assets with known holdings, reduced J-curve, and a shorter path to distributions",
-          "Secondary buyers can redeem their interest on demand unlike primary LPs",
-          "Secondary purchases provide access to GP co-investment rights",
+          "Because secondary buyers always require a minimum 10% discount regardless of asset quality",
+          "Because the reported NAV itself may be stale or optimistic relative to current realizable value, and the buyer may still be paying full value on an adjusted basis",
+          "Because discounts to NAV automatically include the cost of unfunded commitments",
+          "Because GPs intentionally understate NAV before secondary processes begin",
         ],
         correctAnswer:
-          "Secondary buyers acquire seasoned assets with known holdings, reduced J-curve, and a shorter path to distributions",
+          "Because the reported NAV itself may be stale or optimistic relative to current realizable value, and the buyer may still be paying full value on an adjusted basis",
       },
       {
         questionId: "d15q3",
         type: "multiple-choice",
         prompt:
-          "What is a continuation vehicle (CV) and who typically initiates it?",
+          "What is the defining conflict in a GP-led continuation vehicle transaction?",
         options: [
-          "A new fund raised by an LP to hold their legacy PE positions; initiated by the LP",
-          "A new vehicle initiated by the GP to extend the hold on select portfolio companies beyond the original fund term",
-          "A regulatory structure used to wind down a PE fund's remaining assets",
-          "A feeder fund structure used by smaller LPs to access large buyout funds",
+          "The GP is forced to choose between public-market and private-market valuation standards",
+          "The GP is effectively involved on both sides of the transaction, as fiduciary to the selling fund and sponsor of the new vehicle",
+          "Existing LPs are legally required to either sell or roll, eliminating optionality",
+          "Secondary buyers set the transaction price without GP involvement",
         ],
         correctAnswer:
-          "A new vehicle initiated by the GP to extend the hold on select portfolio companies beyond the original fund term",
+          "The GP is effectively involved on both sides of the transaction, as fiduciary to the selling fund and sponsor of the new vehicle",
       },
       {
         questionId: "d15q4",
         type: "multiple-choice",
         prompt:
-          "Why does a GP-led secondary create a significant conflict of interest?",
+          "Which of the following would most increase confidence that a GP-led continuation vehicle was fair to existing LPs?",
         options: [
-          "The GP earns double management fees during the transition period",
-          "The GP acts as both seller on behalf of the old fund and buyer setting the price for the new vehicle",
-          "Existing LPs are forced to sell at a discount set by the secondary buyer",
-          "The GP's carry is forfeited in the old fund and restarted in the new vehicle",
+          "The GP describes the asset as their highest-conviction company in the portfolio",
+          "The transaction clears after a broad buyer process, supported by independent valuation work and LPAC review of the conflicts and economics",
+          "Most existing LPs choose to roll into the new vehicle",
+          "The continuation vehicle resets management fees and carry at market rates",
         ],
         correctAnswer:
-          "The GP acts as both seller on behalf of the old fund and buyer setting the price for the new vehicle",
+          "The transaction clears after a broad buyer process, supported by independent valuation work and LPAC review of the conflicts and economics",
       },
       {
         questionId: "d15q5",
+        type: "multiple-choice",
+        prompt:
+          "Why are secondary buyers often willing to pay attractive prices for seasoned fund interests?",
+        options: [
+          "Because they receive voting control over the GP's investment decisions",
+          "Because seasoned portfolios reduce blind-pool risk and often shorten the path to distributions relative to a new primary commitment",
+          "Because secondary interests are exempt from management fees and carried interest",
+          "Because sellers are required to disclose future exit prices during the process",
+        ],
+        correctAnswer:
+          "Because seasoned portfolios reduce blind-pool risk and often shorten the path to distributions relative to a new primary commitment",
+      },
+      {
+        questionId: "d15q6",
         type: "short-response",
         prompt:
-          "As an LP, what protections would you require before approving a GP-led continuation vehicle?",
+          "An LP portfolio is offered at 93% of reported NAV. What are the three most important things you would want to know before deciding whether that price is attractive?",
         modelAnswer:
-          "Three key protections: first, an independent third-party valuation of the assets being transferred — the price should not be set solely by the GP. Second, LPAC approval with a genuine ability to reject the transaction, not just rubber-stamp it. Third, a real choice: existing LPs should receive a fair cash-out option at the independent valuation, not be pressured to roll in. Additionally, new carry economics in the CV should be reset with a fresh hurdle — not carry on gains already earned in the original fund. Transparency about what the GP is receiving in management fees and carry from the new vehicle is essential.",
+          "First, I would want to assess NAV quality: are the carrying values credible relative to current market comparables and recent realizations, or does the denominator itself need to be adjusted downward? Second, I would want to understand remaining duration and unfunded commitments: a 93% price may be attractive for a mature portfolio with near-term distributions and low unfunded, but less so for a long-duration portfolio with meaningful remaining capital obligations. Third, I would want to understand portfolio quality and concentration: if a few large assets dominate the NAV, the discount may not be enough compensation for single-asset risk and uncertainty around exits.",
+      },
+      {
+        questionId: "d15q7",
+        type: "short-response",
+        prompt:
+          "A GP proposes a continuation vehicle for its best asset and argues that this alone makes the transaction attractive. Why is that reasoning incomplete, and what should an allocator evaluate separately?",
+        modelAnswer:
+          "That reasoning is incomplete because asset quality and transaction fairness are different questions. A strong asset can still be transferred at a weak price for existing LPs, through a narrow process, with economics reset in a way that disproportionately benefits the GP. The allocator should separately evaluate the market process, independent valuation support, LPAC governance, and the new fee and carry terms. The right question is not 'is this a good company?' but 'is this a fair transaction for existing LPs and an attractive new investment from the transfer price?'",
       },
     ],
     sources: [
-      "Evercore secondary market advisory — annual secondary market report",
-      "CFA Institute alternative investments — secondary market structures",
-      "ILPA GP-led secondaries guidance and best practices",
+      "ILPA guidance on GP-led secondaries and continuation vehicles",
+      "CFA Institute alternative investments and private markets materials on secondary market structures",
+      "Major secondary market adviser annual reports covering LP-led pricing, GP-led transactions, and market technicals",
     ],
   },
 
