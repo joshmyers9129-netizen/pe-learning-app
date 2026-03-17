@@ -6750,7 +6750,7 @@ export const lessonContents: LessonContent[] = [
   ],
 },
 {
-  lessonId: "day-34",
+  lessonId: "day-33",
   blocks: [
     {
       type: "intro",
@@ -6871,6 +6871,109 @@ export const lessonContents: LessonContent[] = [
       title: "Worked example 2: fintech that looks like software until it doesn't",
       content:
         "Assume a venture manager pitches a fast-growing fintech company using largely software language: strong revenue growth, attractive gross margins, expanding customer base, and a large addressable market. On deeper review, the company is originating credit exposure and relying on partner balance sheets to fund the model.\n\nAllocator analysis path:\n\n**Step 1: relabel the company correctly**\nThis is not simply software. It is a model with underwriting and funding exposure embedded in it.\n\n**Step 2: identify what metrics now matter**\nThe allocator should care about losses, fraud, funding resilience, compliance burden, and net revenue after real risk costs, not just topline growth.\n\n**Step 3: test the GP's process**\nIf the GP continues to describe the company mainly in software terms, that may signal weak underwriting depth.\n\n**Step 4: update portfolio implications**\nThis business likely deserves different reserve, valuation, and concentration treatment than true software.\n\nAllocator lesson:\nBusiness-model classification is not semantics. It changes what risk is being taken and what kind of manager edge should be demanded.",
+        "The GP says: 'The company raised at the same valuation as the prior round, so the mark held up well.' A venture-fluent allocator does not stop there. They ask: Was the round truly flat for common equity, or flat only in headline terms? Were the new shares issued with heavier liquidation preferences, guaranteed returns, ratchets, or other structure that makes the new price less informative for prior holders? Was the round led by new external capital, or was it an inside round designed mainly to extend runway and preserve optics? This lesson teaches venture valuation and marks as an allocator interpretation problem: how to decide when a financing event is real fair-value evidence, when it is only partial evidence, and when headline valuation language is economically misleading.",
+    },
+    {
+      type: "framing",
+      title: "Venture NAV is an estimate built on evidence hierarchy, not a clean market price",
+      content:
+        "Day 18 introduced stale marks and smoothing at the private-markets level. Day 24 then established that valuation is a governance system, not just a number. Days 29 through 32 added the venture-specific layers that make this even harder: cap tables, SAFEs, liquidation preferences, anti-dilution, and control rights all affect what a financing price actually means for the fund's position. Day 33 now integrates those ideas into the central allocator question for venture: how should you interpret marks when most of the portfolio is unrealized and the available price signals are partial, structured, delayed, or security-specific?\n\nThis matters because venture performance is often unrealized for long periods. That means allocators inevitably depend on marks, and the quality of those marks shapes benchmarking, portfolio construction, re-up judgment, and perceived manager quality. The learner is not being asked to become a valuation accountant. The goal is narrower and more practical: build the ability to rank valuation evidence, identify when last-round pricing is misleading, and attach an appropriate confidence level to venture NAV rather than accepting it mechanically.",
+    },
+    {
+      type: "teaching",
+      title: "Start with the core distinction: transaction price versus fair value",
+      content:
+        "The most important idea in this lesson is that a transaction price is not automatically fair value for the fund's position.\n\nA **transaction price** tells you what one buyer paid for one negotiated security at a point in time, under a specific set of terms.\n\n**Fair value**, by contrast, asks what the fund's actual position is worth now, given the security the fund owns, the rights attached to it, the current cap-table context, the market environment, and the quality of the available evidence.\n\nWhy this distinction matters in venture:\n- the new investor may be buying a more protected security than the fund holds\n- the financing may be small relative to total capitalization and therefore not fully price-discovering\n- the round may be insider-led rather than tested by fresh external demand\n- the company's fundamentals or market context may have shifted materially since the last true market-clearing event\n- a headline valuation may apply to preferred stock economics while the fund's real exposure behaves more like common\n\nThe allocator's task is therefore not to reject financing prices. It is to translate them. The better question is: what does this financing event actually say about the value of the specific security the fund owns?",
+    },
+    {
+      type: "visual",
+      title: "The allocator's venture mark translation framework",
+      content:
+        "**A venture financing event should be translated through five questions before it becomes a mark.**\n\n| Step | Allocator question | Why it matters |\n|---|---|---|\n| **Security** | What security was priced in the transaction? | The new round may not be economically comparable to the fund's stake |\n| **Terms** | Did the new investor receive stronger protections? | Headline valuation may overstate common-equity value |\n| **Independence** | Was the round broad and externally led, or insider-led and strategic? | Price-discovery quality can vary materially |\n| **Context** | What changed in public comps, liquidity conditions, and company fundamentals? | A stale price anchor may no longer be decision-useful |\n| **Translation** | How was the event converted into fair value for the fund's actual position? | Marks should reflect interpretation, not simple price copying |\n\nThe allocator should think in terms of evidence quality, not price headline alone.",
+      caption:
+        "A financing event is only the starting point. The real work is translating it into fair value for the specific position held.",
+      whyItMatters:
+        "This is the core discipline of Day 33. Good venture allocators do not ask only what the round price was. They ask how informative that price really is.",
+      sourceNote:
+        "This visual reflects the Lesson 33 blueprint's emphasis on transaction price versus fair value, structured rounds, secondary evidence, and integration with prior valuation-governance lessons.  [oai_citation:1‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)",
+    },
+    {
+      type: "teaching",
+      title: "Why 'last round valuation' is often an economically weak shortcut",
+      content:
+        "The phrase 'last round valuation' sounds precise, but it can be economically weak for several reasons.\n\n**1. Security mismatch**\nThe latest round may price a preferred security with stronger rights than the fund's existing position. If so, the new price is not a clean mark for common-like or less-protected earlier stakes.\n\n**2. Limited price discovery**\nA small extension round or strategic bridge can set a price reference without proving that broad market capital would support the company at scale on similar terms.\n\n**3. Term substitution**\nCompanies may preserve valuation optics by improving investor protections rather than by preserving true common-equity value.\n\n**4. Time decay**\nEven if the last round was strong evidence when completed, it becomes weaker as public comps, exit markets, company performance, and financing conditions evolve.\n\n**5. Incentive distortion**\nManagement, boards, employees, and investors can all have reasons to preserve headline valuation optics even when the underlying economics have softened.\n\nAllocator implication:\nA last round is often a useful anchor. It is rarely the whole answer. The LP should hear 'last round valuation' and immediately ask: what exactly was valued, under what terms, by whom, and how long ago?",
+    },
+    {
+      type: "teaching",
+      title: "Structured rounds: when valuation optics and common-equity economics diverge",
+      content:
+        "Structured rounds are one of the most important reasons venture marks require translation rather than mechanical updating. A round can be described as up, flat, or only modestly down in headline valuation terms while still representing materially worse economics for existing common or earlier investors.\n\nCommon structured features include:\n- stronger liquidation preferences\n- guaranteed return floors\n- participation features\n- ratchets or resets\n- milestones or tranches tied to future performance\n- special rights that make the new security economically superior to plain preferred or common exposure\n\nAllocator interpretation:\nThe more structure embedded in the new security, the less reliable the headline valuation is as a direct signal of common-equity value. In other words, a 'flat' round may be economically down if the new investor received much stronger protection than prior holders.\n\nThis matters especially in late-stage venture and growth settings where investors may want to avoid an explicit markdown but still demand downside protection before committing capital. The result is that the headline valuation can remain stable while the common-equity equivalent valuation falls.\n\nThe allocator should therefore ask not just 'what valuation was this round done at?' but 'what did the buyer receive for paying that price?' Often, that second question is the one that reveals the real mark implication.",
+    },
+    {
+      type: "example",
+      title: "Worked example 1: a 'flat' round that is economically down",
+      content:
+        "Assume a company previously raised at a $1.0 billion post-money valuation. Twelve months later, the company raises new capital again at a $1.0 billion headline post-money valuation. On the surface, the round looks flat.\n\nNow add structure:\n- the new security has stronger liquidation preference than the prior round\n- the financing is relatively small and mainly extends runway\n- most of the capital comes from insiders and a limited number of supportive investors\n- the company has not yet reopened a clean IPO or M&A path\n\nAllocator analysis path:\n\n**Step 1: reject the mechanical interpretation**\nA flat headline valuation does not imply flat common-equity economics.\n\n**Step 2: identify the term substitution**\nIf the buyer received stronger downside protection, the same nominal price may imply weaker value for the less-protected stock already in the portfolio.\n\n**Step 3: downgrade evidence quality**\nThe smaller, more insider-led the round is, the weaker the independent price-discovery signal becomes.\n\n**Step 4: update the mark with translation, not copying**\nIf the fund owns earlier common-like or less-protected preferred, the carrying value may deserve a more cautious interpretation than the headline round suggests.\n\nAllocator lesson:\nA flat round can preserve valuation optics while being economically down for common. The LP should learn to hear that possibility automatically.",
+    },
+    {
+      type: "teaching",
+      title: "409A reality: why common stock can be worth less than the preferred headline suggests",
+      content:
+        "Allocators also need a basic understanding of 409A because it often appears in venture discussions as if it were either irrelevant or proof that someone is wrong. The better view is more nuanced.\n\nA 409A valuation is generally used to establish the fair market value of common stock for employee option-grant purposes. That is a different economic question from pricing the latest preferred financing.\n\nWhy the gap can exist:\n- preferred stock may have liquidation preferences and other protections that common does not\n- the latest preferred price may reflect rights not available to employees or earlier common holders\n- the company's common-equity economics may be weaker than the preferred headline implies, especially in structured or middling scenarios\n\nAllocator implication:\nA lower 409A does not automatically mean the latest preferred financing was wrong. But it is a useful reminder that security-specific valuation matters. It can also be a signal that the common-equity reality is meaningfully softer than the financing headline suggests.\n\nThis should sound familiar from Days 31 and 32. Ownership and valuation in venture are security-specific. 409A is another lens showing the same principle.",
+    },
+    {
+      type: "teaching",
+      title: "Inside rounds: useful evidence, but weaker independence",
+      content:
+        "An inside round is a financing led primarily by existing investors. These rounds are not automatically bad, and allocators should resist simplistic cynicism. Existing investors may know the company best and may be acting rationally to support a business through temporary dislocation.\n\nBut inside rounds usually provide weaker independent price discovery than broad new external rounds.\n\nWhy:\n- existing investors may be motivated by prior exposure, signaling concerns, or a desire to avoid harsh optics\n- there may be limited competitive tension in the process\n- the financing may be designed to extend runway rather than test true market-clearing price\n- the round may reflect syndicate pragmatism more than fresh demand\n\nAllocator implication:\nAn inside round should still be analyzed, but with a lower confidence weight than a broad external round. The better question is not 'inside equals bad?' The better question is 'how much new information did this round really add about fair value?'",
+    },
+    {
+      type: "teaching",
+      title: "Tender offers and secondary blocks as valuation evidence",
+      content:
+        "Secondary transactions can be extremely useful for allocator interpretation because they provide another kind of market signal besides primary financings. These include employee tenders, secondary block sales, investor liquidity transactions, and other partial-liquidity events.\n\nWhy they matter:\n- they may show what informed buyers are willing to pay for existing shares\n- they can provide evidence when primary financings are infrequent\n- they can improve confidence around mature private-company pricing where IPO timing remains delayed\n\nBut allocators still need to ask:\n- what class of shares traded?\n- how large was the transaction?\n- who was selling, and were they motivated sellers?\n- who was buying, and what rights or information came with the purchase?\n- was the transaction broad and competitive, or highly negotiated and idiosyncratic?\n\nA tender price can therefore be a valuable signal, but not an automatic carrying value. Like financing rounds, secondary prices need interpretation through security class, scale, and process quality.",
+    },
+    {
+      type: "teaching",
+      title: "Calibration: how marks should move after financing or secondary events",
+      content:
+        "Day 24 introduced calibration as the discipline of anchoring marks to observable events and then updating from those anchors as new evidence arrives. In venture, calibration is essential because financing events often become the most visible evidence in a portfolio where continuous public pricing does not exist.\n\nA disciplined calibration process asks:\n- what was the last meaningful observable transaction?\n- what security was involved?\n- how comparable is that security to the fund's current holding?\n- what has changed since that event in company performance, market context, and liquidity conditions?\n- does the event support a direct mark, a translated mark, or only a softer directional update?\n\nThe point of calibration is not to copy the latest price. It is to anchor the mark to evidence and then adjust intelligently. That may mean:\n- discounting a flat structured round\n- attaching less confidence to an insider-led bridge\n- using secondary evidence to supplement stale primary-round prices\n- marking more cautiously even without a formal down round if other evidence has deteriorated\n\nAllocator implication:\nThe best venture marks are not mechanically transaction-based or mechanically model-based. They are evidence-weighted and explicitly translated through security structure.",
+    },
+    {
+      type: "visual",
+      title: "Evidence hierarchy for venture marks",
+      content:
+        "**Not all price signals deserve equal weight in venture valuation.**\n\n| Evidence type | Typical signal strength | Main allocator question |\n|---|---|---|\n| **Broad new external round** | Stronger | What security was issued, and on what terms? |\n| **Structured round** | Mixed | How much of the price reflects protection rather than common-equity value? |\n| **Inside round** | Lower independence | How much new information did the round really provide? |\n| **Tender / secondary block** | Useful but context-sensitive | What class traded, at what scale, and under what conditions? |\n| **Stale prior round** | Weakening over time | What changed in fundamentals and market context since then? |\n| **409A update** | Supporting evidence | What does the gap say about preferred versus common economics? |\n\nThe allocator should think in weighted evidence, not one-price certainty.",
+      caption:
+        "The question is not whether an event happened. It is how much confidence the event deserves as valuation evidence.",
+      whyItMatters:
+        "This gives the learner a practical hierarchy for comparing rounds, tenders, secondaries, and internal marks without collapsing them into one bucket.",
+      sourceNote:
+        "This visual reflects the Lesson 33 blueprint's emphasis on calibration, secondary transactions, inside rounds, and structured equity as valuation evidence.  [oai_citation:2‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)",
+    },
+    {
+      type: "teaching",
+      title: "Impairment triggers: marks should respond before a formal crash round",
+      content:
+        "One of the most important allocator upgrades is learning that a venture mark should not move only when the company finally completes an explicit down round. There are many situations where skepticism or impairment should begin earlier.\n\nCommon triggers include:\n- sharp deterioration in public comparables or valuation environment\n- missed product, growth, or commercialization milestones central to prior underwriting\n- materially weaker fundraising conditions or failed process attempts\n- a need for insider-led bridge capital under pressure\n- structured rounds that preserve optics but weaken economics\n- secondary pricing that points to softer common-equity value than prior marks imply\n- burn that is rising without corresponding de-risking progress\n\nAllocator implication:\nA manager who waits only for formal repricing events may be smoothing. A manager who updates marks thoughtfully as evidence deteriorates is likely demonstrating stronger valuation governance.\n\nThis links directly back to Day 24. A venture mark is credible not because it moves a lot or a little. It is credible because it moves in a way that is explainable relative to the evidence hierarchy.",
+    },
+    {
+      type: "teaching",
+      title: "How venture mark quality affects benchmarking and manager judgment",
+      content:
+        "This lesson matters not just because LPs need cleaner quarterly marks. It matters because venture benchmarking is especially fragile when unrealized value depends on noisy or weakly independent financing evidence.\n\nAllocator implications include:\n- unrealized TVPI may overstate strength if the mark base rests on stale or highly structured rounds\n- quartile standing is less informative when peer funds differ in valuation rigor\n- a manager with stable unrealized NAV may not actually be lower risk if the stability reflects delayed recognition rather than stronger companies\n- a fund with headline valuation support may still deserve lower confidence if the supporting evidence is mostly insider-led or structurally protected\n\nThis is the bridge back to Lesson 12 and Lesson 24. Benchmarking credibility is conditioned by valuation credibility. The learner should explicitly carry that bridge into venture manager research.\n\nThe right allocator habit is not to ignore venture NAV. It is to apply a confidence level to it. Some unrealized performance deserves more trust than others.",
+    },
+    {
+      type: "teaching",
+      title: "Common allocator mistakes in venture valuation analysis",
+      content:
+        "Several mistakes recur when allocators are still too casual with venture marks.\n\n**Mistake 1: treating the last round price as self-executing fair value**\nThis skips the translation step from negotiated security to actual fund position.\n\n**Mistake 2: treating flat rounds as neutral by default**\nThey may still be economically down for common or earlier holders.\n\n**Mistake 3: ignoring 409A, tender, or secondary evidence**\nThese can reveal that preferred-round optics and common-equity reality are diverging.\n\n**Mistake 4: assuming inside rounds provide equivalent price discovery to external rounds**\nThey often do not.\n\n**Mistake 5: benchmarking marked venture portfolios without confidence adjustment**\nThis can lead to over-crediting unrealized value built on weak evidence.\n\n**Mistake 6: focusing on company valuation rather than position valuation**\nThe LP owns a specific security, not the abstract company headline.\n\nThe upgraded instinct after Day 33 should be: every venture mark is a claim about evidence quality, not just a number in a table.",
+    },
+    {
+      type: "example",
+      title: "Worked example 2: a mark that looks stable but deserves less confidence",
+      content:
+        "Assume a growth-stage software company raised a large round eighteen months ago at a premium valuation. Since then:\n- public software multiples have compressed materially\n- the company has missed some efficiency targets but is still growing\n- the most recent financing was a smaller insider-led extension at the same headline valuation\n- the new capital came with meaningfully stronger downside protection\n- employee tender activity has occurred at a discount to the headline preferred valuation\n- the 409A remains materially below the preferred-round level\n\nAllocator analysis path:\n\n**Step 1: identify all evidence, not just the latest round**\nThere is more than one signal here, and the signals are mixed.\n\n**Step 2: rank the evidence by independence and economic relevance**\nThe insider-led extension is weaker evidence than a broad external round. The tender and 409A may be imperfect, but they are useful supporting signals that common-equity economics are softer.\n\n**Step 3: interpret the structure**\nA same-valuation round with stronger protection may imply lower common-equity value.\n\n**Step 4: connect to the fund's actual stake**\nIf the fund owns earlier common-like or less-protected preferred, a mechanical flat mark likely overstates fair value confidence.\n\n**Step 5: update benchmark interpretation**\nThe company may still be good, but the fund's unrealized gain deserves more caution than the headline stable valuation implies.\n\nAllocator lesson:\nThis is what strong venture mark interpretation looks like. It is not anti-growth or anti-company. It is evidence-ranked, security-aware, and confidence-adjusted.",
     },
     {
       type: "source-note",
@@ -6907,6 +7010,37 @@ export const lessonContents: LessonContent[] = [
       title: "Allocator application: how Day 34 should change venture diligence",
       content:
         "After Day 34, the learner should stop hearing venture pitches as generic founder-plus-market stories and start hearing them as claims about a specific business model, a specific proof standard, a specific failure mode, and a specific kind of manager edge. That is a meaningful upgrade in allocator usefulness.\n\nThis shift should improve diligence in several practical ways. It should make the learner more precise about which metrics matter in different categories, more skeptical of broad thematic language, more thoughtful about when specialists deserve extra credit, and more aware of hidden concentration across AI, healthcare, fintech, and other venture buckets. In venture, sector literacy is not a nice-to-have. It is part of underwriting reality.",
+        "Core source categories for this lesson: IPEV fair-value guidance for calibration and evidence-weighted private marks; ASC 820 concepts and practitioner interpretation for security-specific fair value; NVCA and venture-finance vocabulary resources for financing, secondary, and security terminology; allocator- and practitioner-oriented venture materials on structured rounds, inside rounds, secondary signals, 409A reality, and mark discipline. The goal is to teach how venture marks should be interpreted, not to build full accounting models.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a manager citing the latest round",
+      content:
+        "The GP says: 'The latest financing supports our carrying value.'\n\nWeak LP response: 'Understood. If new money came in at that price, that seems to validate the mark.'\n\nWhy it is weak: it assumes that transaction price equals fair value and ignores security mismatch, terms, insider participation, and the quality of price discovery.\n\nStrong LP response: 'Helpful. We would like to understand what security was issued, how independent the financing process really was, whether stronger downside terms supported the headline valuation, and how you translated that round into fair value for the specific security the fund holds. We are trying to distinguish real price discovery from optics-preserving financing evidence.'\n\nWhy it is strong: it turns a headline financing into a valuation-governance discussion rather than accepting it mechanically.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what venture valuation evidence can and cannot tell you",
+      content:
+        "Venture valuation evidence can improve allocator judgment by showing whether a financing, tender, or secondary event provides strong, mixed, or weak support for a mark. It can also clarify whether the latest price is more representative of preferred-round economics, common-equity economics, or a negotiated compromise between the two.\n\nBut it cannot guarantee future realizability, eliminate the possibility of later repricing, or fully solve cross-fund comparability when different managers apply different levels of rigor to structured and stale marks. It also cannot substitute for manager judgment about company quality, follow-on discipline, or exit realism.\n\nThe correct allocator use of this lesson is therefore interpretive. The goal is not false precision. The goal is to know how much confidence to place in reported NAV and what caveats should travel with it.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: rank the valuation evidence and decide the mark confidence",
+      content:
+        "Work through the following three cases and assess the quality of valuation evidence.\n\n**Scenario 1: broad external round**\nA company raises a substantial new round led by multiple new outside investors, with clean terms and no obvious structural sweeteners.\n\n**Scenario 2: flat but structured round**\nA company raises at the same headline valuation as the prior round, but the new security includes stronger liquidation preference and additional downside protection.\n\n**Scenario 3: insider bridge plus mixed secondary signals**\nA company extends runway through an inside round while employee tender activity and 409A indications suggest lower common-equity value than the preferred headline implies.\n\nFor each case, answer:\n- How strong is the price-discovery signal?\n- What is the main reason the headline valuation could mislead an allocator?\n- How should a cautious allocator describe confidence in the mark: high, moderate, or low?\n- What one follow-up question would you ask the GP first?\n\nFinal task:\nWrite a short allocator memo titled 'How much confidence should we place in this company's mark, and why?'",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal questions on venture marks",
+      content:
+        "1. 'When you mark to the latest financing, how do you distinguish transaction price from fair value for the security the fund actually holds?'\n\n2. 'Have any recent flat or modestly down rounds included structure that makes the common-equity economics weaker than the headline valuation suggests?'\n\n3. 'How do you weigh broad external rounds, inside rounds, tenders, secondary blocks, and 409A signals in your valuation process?' \n\n4. 'Can you show a case where you marked more conservatively than the headline financing might suggest because the quality of price discovery or the security terms were weaker?' \n\n5. 'When public comps, exit windows, and company execution move against the prior financing anchor, what specifically causes you to impair before a formal down round occurs?'",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 33 should change venture diligence",
+      content:
+        "After Day 33, the learner should no longer hear 'the last round was at X valuation' as a sufficient valuation statement. The better allocator habit is now to ask what security was priced, how independent the process was, what terms were attached, what other evidence exists, and how that evidence was translated into fair value for the fund's actual position.\n\nThat shift materially improves venture diligence. It makes the learner more careful with flat structured rounds, more thoughtful about 409A and secondary signals, more disciplined about impairment triggers, and more realistic about benchmark confidence. It also sets up the remaining venture lessons well, because the learner can now distinguish a strong company story, a strong financing story, and a strong fair-value story. Those are related, but they are not the same thing.",
     },
   ],
   quiz: [
@@ -7017,6 +7151,112 @@ export const lessonContents: LessonContent[] = [
     "Sector-specialist commentary on enterprise software, AI infrastructure, fintech, healthcare, biotech, and marketplace models",
     "Institutional venture diligence resources linking business-model risk to manager specialization, reserves, and portfolio construction",
     "CFA Institute and related private-markets educational materials providing context for venture strategy differentiation and business-model-specific risk",
+      questionId: "d33q1",
+      type: "multiple-choice",
+      prompt:
+        "Why is the latest financing price not automatically the same as fair value for a venture fund's position?",
+      options: [
+        "Because venture funds are prohibited from using financing prices in valuation",
+        "Because a financing price reflects a negotiated security at a point in time, while fair value requires interpretation of the specific position the fund holds",
+        "Because 409A values always override financing prices",
+        "Because only public-market prices can be used in private-company valuation",
+      ],
+      correctAnswer:
+        "Because a financing price reflects a negotiated security at a point in time, while fair value requires interpretation of the specific position the fund holds",
+    },
+    {
+      questionId: "d33q2",
+      type: "multiple-choice",
+      prompt:
+        "Why can a flat venture round still be economically down for common equity?",
+      options: [
+        "Because all flat rounds are secretly down rounds by legal definition",
+        "Because stronger investor protections can preserve headline valuation while weakening common-equity economics",
+        "Because common stock automatically loses value in every new financing",
+        "Because only insiders can participate in flat rounds",
+      ],
+      correctAnswer:
+        "Because stronger investor protections can preserve headline valuation while weakening common-equity economics",
+    },
+    {
+      questionId: "d33q3",
+      type: "multiple-choice",
+      prompt:
+        "What is the allocator significance of a 409A valuation in venture?",
+      options: [
+        "It is usually a reminder that common stock value may differ materially from preferred-round pricing",
+        "It always proves the preferred round was mispriced",
+        "It is relevant only after IPO filing",
+        "It fully replaces the need to analyze security terms",
+      ],
+      correctAnswer:
+        "It is usually a reminder that common stock value may differ materially from preferred-round pricing",
+    },
+    {
+      questionId: "d33q4",
+      type: "multiple-choice",
+      prompt:
+        "Why should allocators treat inside rounds more cautiously than broad externally led rounds as valuation evidence?",
+      options: [
+        "Because inside rounds are always improper",
+        "Because they often provide weaker independent price discovery and may be influenced by existing investors' signaling or mark-protection incentives",
+        "Because inside rounds cannot legally set a financing price",
+        "Because outside investors never have incentives",
+      ],
+      correctAnswer:
+        "Because they often provide weaker independent price discovery and may be influenced by existing investors' signaling or mark-protection incentives",
+    },
+    {
+      questionId: "d33q5",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of secondary transactions or tenders?",
+      options: [
+        "They should automatically become the carrying value for all positions",
+        "They are useful valuation signals, but size, share class, process, and motivation still matter",
+        "They are irrelevant unless the company is public",
+        "They always provide stronger evidence than primary financings",
+      ],
+      correctAnswer:
+        "They are useful valuation signals, but size, share class, process, and motivation still matter",
+    },
+    {
+      questionId: "d33q6",
+      type: "multiple-choice",
+      prompt:
+        "Why should benchmarking confidence fall when venture mark evidence is weak or highly structured?",
+      options: [
+        "Because benchmarking is impossible in private markets",
+        "Because unrealized TVPI, quartile ranking, and relative performance become less reliable when the underlying marks are economically noisy",
+        "Because only realized DPI ever matters",
+        "Because venture funds should be judged only on narrative quality",
+      ],
+      correctAnswer:
+        "Because unrealized TVPI, quartile ranking, and relative performance become less reliable when the underlying marks are economically noisy",
+    },
+    {
+      questionId: "d33q7",
+      type: "short-response",
+      prompt:
+        "Explain why a structured venture round can preserve valuation optics while still implying lower economic value for common-equity holders. Write two to four sentences.",
+      modelAnswer:
+        "A structured round can keep the same headline valuation while issuing a new security with stronger liquidation preferences, downside protection, or other investor-favorable rights. That means the new investor may be paying the same nominal price for a more protected claim, which can imply that common-equity value is actually lower than the headline suggests. The optics of the round can therefore look stable even as the economic value of less-protected holdings weakens.",
+    },
+    {
+      questionId: "d33q8",
+      type: "short-response",
+      prompt:
+        "A GP says the latest round supports the current mark. What are the three most important follow-up questions you should ask after this lesson?",
+      modelAnswer:
+        "First, I would ask what security was issued and whether the terms differ materially from the security the fund holds. Second, I would ask how independent and price-discovering the round really was, including whether it was insider-led or heavily structured. Third, I would ask how the manager translated that financing event into fair value for the fund's position rather than simply copying the headline round price.",
+    },
+  ],
+  sources: [
+    "IPEV fair-value guidance and related private-investment valuation materials for calibration and evidence-weighted marks",
+    "ASC 820 concepts and practitioner interpretation relevant to security-specific fair value and private-company valuation",
+    "NVCA and venture-finance educational materials covering financing terms, secondary transactions, common versus preferred economics, and venture terminology",
+    "Allocator- and practitioner-oriented materials on venture marks, structured rounds, inside rounds, tender signals, and impairment discipline",
+    "Institutional venture diligence resources linking mark quality, price-discovery strength, and benchmark confidence",
   ],
 },
 ];
