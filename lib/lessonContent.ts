@@ -3850,33 +3850,111 @@ export const lessonContents: LessonContent[] = [
     blocks: [
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "This final lesson is not new content — it is a synthesis. PE fluency is not about memorising definitions. It is about being able to walk into a manager meeting, listen critically, ask better questions than the GP expects, and leave with a clearer view of whether this is a manager worth backing.",
+          "You are in the final fifteen minutes of an investment committee discussion on a new buyout fund commitment. The GP has a strong brand, attractive headline returns, and a polished presentation. The open questions are familiar but decisive: how much of the track record is actually realized, how repeatable is the value creation, how much of the result came from favorable vintage conditions, how much team risk is embedded in the next fund, and whether the terms and programme context justify action now. The challenge is no longer remembering definitions. The challenge is converting everything you have learned into a clean recommendation under time pressure.",
+      },
+      {
+        type: "framing",
+        title: "This lesson is synthesis, not new theory",
+        content:
+          "By this point, the objective is not to learn one more PE concept. It is to integrate the prior lessons into allocator judgment. That means moving from isolated knowledge to a disciplined recommendation process.\n\nA strong PE recommendation does five things at once:\n- interprets the fund mechanics correctly\n- distinguishes realized evidence from interim marks\n- evaluates the GP's people, process, and portfolio construction realistically\n- places the opportunity in programme context, not just fund context\n- states the decision and the remaining open risks clearly\n\nThis lesson therefore functions as a capstone. The skill being tested is whether you can hear a GP presentation, separate signal from presentation quality, and write a recommendation that would survive investment committee scrutiny.",
       },
       {
         type: "teaching",
-        title: "The mental model: from fund mechanics to allocator judgment",
+        title: "The capstone decision framework: five layers of judgment",
         content:
-          "The 20-day curriculum built a layered mental model. Layers 1–5: how PE funds work — structure, incentives, cash flows, IRR, multiples. You can now read a performance summary and know what is real and what is a reporting artefact. Layers 6–10: how strategies work — fund life cycles, buyout mechanics, sub-strategy differences, value creation, exits. You can evaluate whether a GP's narrative is consistent with their data. Layers 11–15: how programmes are managed — LPA terms, manager selection, benchmarking, pacing, secondaries. You can structure a PE programme and negotiate like an institutional LP. Layers 16–20: advanced topics — co-investments, allocation sizing, reporting quality, ESG. You can run a complete diligence process.",
+          "A complete PE recommendation can be organized into five layers.\n\n**1. Performance quality**\nStart by asking what is real, what is estimated, and what is benchmarked correctly. This means looking at DPI, TVPI, RVPI, PME, and vintage-relative context together. High IRR with low DPI is a different fact pattern from high IRR with substantial realizations.\n\n**2. Return source**\nThen ask what actually drove results. Were returns driven by broad operational improvement, by multiple expansion, by leverage, or by a few outlier deals? A GP whose returns are coherent with the claimed edge is more underwriteable than one whose story and attribution do not match.\n\n**3. Team and process durability**\nNext ask whether the people and process that created the track record are still intact and likely to persist into the next fund. Team change, succession uncertainty, strategy drift, and fund-size creep all matter here.\n\n**4. Terms and alignment**\nThen evaluate whether the legal and economic package supports LP outcomes. Headline fee and carry are only the start. Carry timing, clawback protection, recycling, extension rights, and GP commitment shape real alignment.\n\n**5. Programme fit**\nFinally ask whether the commitment makes sense in the context of the allocator's broader PE programme. Even a strong GP can be a poor decision if pacing, vintage concentration, liquidity, or governance bandwidth argue for restraint.\n\nA recommendation that skips one of these layers is usually incomplete.",
+      },
+      {
+        type: "visual",
+        title: "The five-layer PE recommendation stack",
+        content:
+          "**A complete recommendation should move through the layers in order:**\n\n| Layer | Core question | Typical failure if skipped |\n|---|---|---|\n| **Performance quality** | What is realized, benchmarked, and credible? | Headline IRR accepted without testing DPI, PME, or marks |\n| **Return source** | What actually drove returns? | Market beta or leverage mistaken for repeatable skill |\n| **Team and process durability** | Can this track record plausibly repeat? | Old performance underwritten to a changed team or larger fund |\n| **Terms and alignment** | Do economics and governance protect LP outcomes? | 'Market terms' accepted without understanding carry timing or protection gaps |\n| **Programme fit** | Does the commitment improve the total programme? | Good manager approved in the wrong pacing or vintage context |\n\nThis stack is intended as a practical recommendation checklist, not a conceptual summary.",
+        caption:
+          "The recommendation should move from what happened, to why it happened, to whether it is repeatable, to whether the LP should act now.",
+        whyItMatters:
+          "Many weak PE recommendations contain good observations but no decision structure. The stack forces the observations into an allocator-grade sequence.",
+        sourceNote:
+          "This framework synthesizes the prior curriculum into a practical recommendation structure rather than introducing new content.",
       },
       {
         type: "teaching",
-        title: "The five questions that matter most in a manager meeting",
+        title: "What a strong recommendation sounds like",
         content:
-          "1. What drove your returns — walk me through the value bridge on your last three exits. (Tests whether returns are real and repeatable.) 2. Where have you been wrong, and what did you learn? (Tests intellectual honesty and process quality.) 3. How does your PME compare to the relevant public benchmark? (Tests whether PE outperformed the alternative.) 4. What has changed in your team and strategy since your last fund? (Tests key-person and strategy-drift risk.) 5. What terms are you offering, and what side letters exist for other LPs? (Tests economic alignment and fairness.)",
+          "A strong PE recommendation is not a transcript of the meeting. It is a judgment memo compressed into a few clean paragraphs.\n\nIt should:\n- lead with the decision or current inclination\n- identify the strongest supporting evidence\n- name the biggest unresolved risk explicitly\n- distinguish confirmed facts from inference\n- state what additional diligence would change the view\n\nIt should not:\n- hide behind generic language such as 'appears attractive' or 'worth further consideration' without saying why\n- overstate certainty when most of the current fund value is still unrealized\n- treat a strong brand as a substitute for evidence\n- ignore programme fit because the GP is high quality\n\nThe quality threshold is this: could someone else read the note and understand both the decision and the reasoning without attending the meeting?",
+      },
+      {
+        type: "teaching",
+        title: "The most common capstone failure modes",
+        content:
+          "At the end of a PE diligence process, allocators often fail in predictable ways.\n\n**1. Headline capture**\nThey anchor on net IRR, TVPI, and brand quality, then work backward to justify a positive conclusion.\n\n**2. Realization neglect**\nThey discuss track record strength without explicitly stating how much of the result is confirmed in DPI versus still embedded in unrealized marks.\n\n**3. Process-story mismatch**\nThey repeat the GP's edge claim without checking whether realized deal outcomes actually support it.\n\n**4. Programme-blind approval**\nThey recommend a strong fund without checking pacing, vintage concentration, liquidity, or governance capacity.\n\n**5. Vague risk language**\nThey list generic risks such as key-person, valuation, or market conditions without identifying which one is most material and decision-relevant in this case.\n\nA good capstone answer avoids all five.",
       },
       {
         type: "example",
-        title: "Full meeting scenario",
+        title: "Worked example: turning a meeting into a recommendation",
         content:
-          "A mid-market GP presents Fund V: 'Top-quartile IRR of 24% net, 2.6x TVPI, strong operational track record.' Your checklist: Ask for PME — the GP says 1.15x vs. Russell 2000. Ask for value bridge — three of five exits show EBITDA growth > 40%; two are flat with multiple expansion. Ask about team — the GP's founding partner moved to chairman; a new CIO joined two years ago. Ask about fund size — Fund V is $1.2B, up from $600M. Ask about terms — 2/20 with 100% fee offset, MFN available. Assessment: strong PME, mostly real operational alpha, but key-person transition and fund size doubling are yellow flags requiring deeper team diligence.",
+          "A GP is raising Fund V, a $1.2B mid-market buyout fund. Prior fund data presented in the meeting:\n- Fund IV (2018 vintage, year 6): 2.1x net TVPI, 18% net IRR, 0.82x DPI, PME 1.14x versus Russell 2000\n- Top three deals account for 34% of realized value creation\n- Value bridge shows returns driven primarily by EBITDA growth and moderate debt paydown, with some multiple expansion but not the majority of the story\n- Team has one founder moving to chairman role, but three partners have named deal attribution and carry participation\n- Fund V is 20% larger than Fund IV\n- Terms are broadly market with 100% fee offset, but the waterfall is American and clawback escrow is not clearly specified\n\nA weak summary would say: 'Strong GP with attractive returns and good team continuity. Recommend approval subject to final terms review.'\n\nA stronger allocator-grade summary would say: 'We are positively inclined, but not yet at full approval. The strongest evidence is Fund IV's combination of substantial realization (0.82x DPI at year 6), positive PME, and return attribution that appears tied more to operational improvement than to pure market beta. Team risk is manageable but not resolved: founder transition appears partially institutionalized through named partner attribution and carry sharing, yet we still need clarity on decision rights post-transition. The main remaining economic issue is carry timing and protection under the American waterfall, specifically whether clawback is backed by meaningful escrow. From a programme perspective, the commitment is supportable if pacing remains within plan, but should not be justified solely by GP quality.'\n\nThat answer separates evidence, risk, and next steps clearly.",
+      },
+      {
+        type: "teaching",
+        title: "How to think under uncertainty at the recommendation stage",
+        content:
+          "Not every good PE decision ends with certainty. Many real decisions are made with incomplete realization, partial team transition, or unresolved terms detail. The allocator's job is not to eliminate uncertainty. It is to state clearly what is known, what is not, and whether the remaining uncertainty is acceptable.\n\nUseful categories are:\n- **High-conviction positive**: evidence is broad, realized enough, coherent, and programme fit is clear\n- **Conditional positive**: likely approve, but one or two specific issues still need resolution\n- **Watchful neutral**: interesting manager, but evidence or fit is not strong enough yet\n- **Negative**: either evidence quality is weak, repeatability is doubtful, or programme context argues against action\n\nWhat matters is not sounding decisive for its own sake. It is being precise about the basis for conviction.",
+      },
+      {
+        type: "visual",
+        title: "Recommendation language: weak vs. strong",
+        content:
+          "**Use decision language that matches the evidence quality:**\n\n| Evidence state | Weak phrasing | Strong phrasing |\n|---|---|---|\n| **Broad, realized, coherent** | 'Looks attractive' | 'Recommend approval based on realized track record, coherent attribution, and manageable open risks' |\n| **Good but unresolved** | 'Probably a strong opportunity' | 'Positive inclination, but approval should depend on resolving X and Y' |\n| **Interesting but thin evidence** | 'Would like to stay close to the story' | 'Not ready to approve because realized evidence and repeatability remain insufficient' |\n| **Programme fit is the main issue** | 'Good manager but perhaps not now' | 'Quality acknowledged, but pacing/vintage/liquidity argue against committing in the current programme state' |\n\nGood recommendation language is specific, evidence-linked, and scaled to certainty.",
+        caption:
+          "The recommendation should sound proportionate to the evidence, not more confident than the facts allow.",
+        whyItMatters:
+          "Investment committee writing fails when tone outruns evidence. This framework helps calibrate conviction language correctly.",
+        sourceNote:
+          "This table is intended as a practical writing aid for PE recommendation notes.",
+      },
+      {
+        type: "teaching",
+        title: "The final synthesis: what allocator fluency should now look like",
+        content:
+          "At the end of this foundations module, allocator fluency should look like this:\n\nYou can hear a GP describe returns and immediately ask how much is realized.\nYou can hear a value-creation claim and ask what actually drove the equity outcome.\nYou can hear a strong fundraising narrative and test whether the team, process, and fund size are still aligned with the old evidence base.\nYou can hear 'market terms' and ask where the real economic protections sit.\nAnd you can step back from the manager entirely and ask whether the commitment improves the overall PE programme.\n\nThat is the practical difference between vocabulary familiarity and allocator judgment. This lesson is not the end of PE learning. It is the point at which the concepts should now work together.",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: final committee recommendation",
+        content:
+          "**Weak recommendation:**\n'This is a strong brand-name GP with top-quartile returns, and we recommend approval subject to standard documentation.'\n\nWhy it is weak: it relies on brand and headline metrics, says nothing about realization quality, does not explain the source of returns, does not identify the most important open risk, and ignores programme fit.\n\n**Strong recommendation:**\n'We are positive but not unconditional. The best evidence is the combination of meaningful realization, positive PME, and return attribution that appears more operational than market-driven. The most important remaining risk is whether the current team and decision rights are sufficiently institutionalized after the founder transition. We also need final clarity on clawback protection under the American waterfall. Subject to satisfactory resolution of those two points and confirmation that the commitment fits current pacing, we would support approval.'\n\nWhy it is strong: it states the direction, the evidence, the main open risk, the key term issue, and the programme condition in a form that committee members can actually use.",
+      },
+      {
+        type: "inference-boundary",
+        title: "Inference boundary: what you still cannot know at the end of diligence",
+        content:
+          "Even after strong diligence, you still cannot know with certainty:\n\n- whether the next vintage environment will favor or punish the strategy\n- whether current unrealized marks will fully convert to cash\n- whether the next fund's team dynamic will match the prior one exactly\n- whether operational strengths in prior funds will scale perfectly into a larger or more competitive opportunity set\n\nWhat you can know is whether the available evidence is strong enough, coherent enough, and realized enough to justify taking those remaining risks. That is the decision standard.",
       },
       {
         type: "exercise",
-        title: "Final exercise",
+        title: "Final exercise: write the recommendation",
         content:
-          "Write a one-paragraph investment memo summary for the GP described in the example above: what are the two strongest positives and the two most important risks you would continue to diligence before making a commitment decision?",
+          "A GP is raising a successor buyout fund. The prior fund shows 1.95x net TVPI, 0.88x DPI, positive PME, moderate fund-size growth, and a mostly coherent value-creation story. However, there is one founder transition, a modest increase in strategy breadth, and incomplete clarity on clawback escrow. Write a short recommendation paragraph that states: (1) your current inclination, (2) the strongest supporting evidence, (3) the biggest remaining risk, and (4) what would change your view.",
+      },
+      {
+        type: "meeting-application",
+        title: "In the manager meeting: the final five questions",
+        content:
+          "1. **'What proportion of current performance is confirmed in DPI, and what remains dependent on unrealized marks?'** This keeps realization quality front and center.\n\n2. **'What most clearly explains your outperformance: operational improvement, multiple expansion, leverage, or a small number of outlier deals?'** This forces attribution discipline.\n\n3. **'What has changed in the team, decision structure, and fund size since the track record we are underwriting was built?'** This tests repeatability rather than nostalgia.\n\n4. **'Under your economics, where are LP protections strongest and where are they weakest in practice?'** This moves beyond headline terms.\n\n5. **'Why does this fund make sense for our programme now, not just as a standalone manager?'** This is the allocator's final filter.",
+      },
+      {
+        type: "meeting-application",
+        title: "Allocator application: how to structure the final note",
+        content:
+          "A strong final recommendation note can be organized in four parts:\n\n**Decision** — approve, conditional approve, defer, or decline\n\n**Best evidence** — the most important realized and benchmarked support for the decision\n\n**Main open risk** — the one issue most likely to change the outcome if viewed differently\n\n**Next step** — what diligence item, term clarification, or programme check must occur before final action\n\nThis structure forces clarity and prevents the note from becoming a loose summary of impressions.",
+      },
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "This capstone synthesizes the prior lessons and standard institutional PE diligence practice, including ILPA principles and DDQ concepts, PME and benchmarking research, fund economics analysis, and allocator programme construction disciplines.",
       },
     ],
     quiz: [
@@ -3884,72 +3962,79 @@ export const lessonContents: LessonContent[] = [
         questionId: "d20q1",
         type: "multiple-choice",
         prompt:
-          "A GP presents 26% gross IRR and 2.4x TVPI for their latest fund. What is the single most important additional metric to request?",
+          "What is the most important first step when interpreting a PE fund's strong headline IRR in a recommendation memo?",
         options: [
-          "The fund's DPI to understand how much has been realised",
-          "The fund's management fee rate",
-          "The number of portfolio companies in the fund",
-          "The fund's vintage year relative to the prior fund",
+          "Confirm whether the GP is well-known in the market",
+          "Determine how much of the result is realized versus still embedded in unrealized marks",
+          "Compare the fee rate to other managers in the same strategy",
+          "Ask whether the GP expects to raise the next fund quickly",
         ],
         correctAnswer:
-          "The fund's DPI to understand how much has been realised",
+          "Determine how much of the result is realized versus still embedded in unrealized marks",
       },
       {
         questionId: "d20q2",
         type: "multiple-choice",
         prompt:
-          "After 20 days of study, which statement best describes the role of PME in PE manager evaluation?",
+          "Which recommendation is strongest from an allocator perspective?",
         options: [
-          "PME is a secondary metric used only when IRR is unavailable",
-          "PME is the most rigorous benchmark because it controls for cash flow timing and compares PE to the actual alternative investment",
-          "PME is only relevant for buyout funds, not growth equity or venture",
-          "PME measures GP skill independent of market conditions",
+          "Approve because the GP is top quartile and highly regarded",
+          "Approve because the GP has raised multiple successful prior funds",
+          "Positive inclination based on realized evidence and coherent attribution, but final approval depends on resolving the identified open risks",
+          "Defer because no PE decision should be made before full fund realization",
         ],
         correctAnswer:
-          "PME is the most rigorous benchmark because it controls for cash flow timing and compares PE to the actual alternative investment",
+          "Positive inclination based on realized evidence and coherent attribution, but final approval depends on resolving the identified open risks",
       },
       {
         questionId: "d20q3",
         type: "multiple-choice",
         prompt:
-          "Which combination of findings in a manager meeting should most increase your conviction in a GP?",
+          "Why is programme fit a separate layer of judgment from manager quality?",
         options: [
-          "Top-quartile IRR, large fund size increase, and new senior hires replacing founding partners",
-          "Strong PME, broad-based EBITDA growth across exits, stable team, and disciplined fund size",
-          "High gross IRR driven by one outlier deal, low DPI, and an aggressive catch-up clause",
-          "Top-quartile ranking in a strong vintage, high RVPI, and extensive co-investment programme",
+          "Because programme fit matters only for funds above $1B",
+          "Because even a strong GP can be a poor commitment if pacing, vintage concentration, liquidity, or governance capacity argue against adding exposure now",
+          "Because programme fit is determined only by the board-approved target allocation",
+          "Because manager quality and programme fit are two names for the same concept",
         ],
         correctAnswer:
-          "Strong PME, broad-based EBITDA growth across exits, stable team, and disciplined fund size",
+          "Because even a strong GP can be a poor commitment if pacing, vintage concentration, liquidity, or governance capacity argue against adding exposure now",
       },
       {
         questionId: "d20q4",
         type: "multiple-choice",
         prompt:
-          "Which of the following is the best single indicator that a PE fund's reported returns are built on repeatable skill rather than market conditions?",
+          "Which of the following is the clearest example of a weak capstone recommendation?",
         options: [
-          "The fund is top quartile in its vintage year peer group",
-          "The fund's value bridge shows consistent EBITDA margin improvement across multiple portfolio companies in different sectors",
-          "The fund's IRR exceeds the hurdle rate in every quarterly report",
-          "The fund manager has more than 20 years of PE experience",
+          "A memo that names the strongest evidence, the key risk, and the required final diligence step",
+          "A memo that distinguishes realized performance from interim marks before recommending approval",
+          "A memo that states the manager is impressive and recommends approval subject to standard documents, without discussing realization quality or repeatability",
+          "A memo that supports approval only if programme pacing remains within plan",
         ],
         correctAnswer:
-          "The fund's value bridge shows consistent EBITDA margin improvement across multiple portfolio companies in different sectors",
+          "A memo that states the manager is impressive and recommends approval subject to standard documents, without discussing realization quality or repeatability",
       },
       {
         questionId: "d20q5",
         type: "short-response",
         prompt:
-          "You are preparing a one-paragraph recommendation on whether to commit to a PE fund. Name the five data points you would prioritise and briefly explain why each matters.",
+          "Why is it not enough to say a GP has strong returns when making a recommendation?",
         modelAnswer:
-          "1. Net IRR and PME: together these tell you the absolute return and whether it beat the public-market alternative after accounting for cash flow timing. 2. DPI: separates real cash returned from paper marks — critical for assessing how much of the GP's track record is realised. 3. Value bridge across exits: shows whether returns were driven by repeatable operational improvement or by market-timing and leverage — the former is more durable. 4. Team continuity since the track record was built: the track record belongs to the people who made the decisions; a changed team is a different product. 5. Fund size relative to prior funds: a large size increase strains strategy, deal sourcing, and GP attention — it must be justified by a credible explanation of how the strategy scales.",
+          "Because strong returns alone do not tell you how much is realized, what actually drove the result, whether the track record is repeatable with the current team and strategy, whether the economics protect LPs appropriately, or whether the commitment fits the allocator's programme. A recommendation must connect returns to evidence quality, attribution, durability, alignment, and programme fit.",
+      },
+      {
+        questionId: "d20q6",
+        type: "short-response",
+        prompt:
+          "Write two to four sentences giving a conditional-positive recommendation on a PE fund where realized evidence is good, team transition risk is manageable but unresolved, and programme fit is acceptable if pacing remains on plan.",
+        modelAnswer:
+          "We are positively inclined based on the combination of meaningful realization, credible benchmark context, and evidence that returns were driven more by operational execution than by pure market tailwind. The key remaining issue is team transition: current evidence suggests the platform is becoming more institutionalized, but final conviction depends on confirming decision rights and succession depth beyond the founding partner. Subject to that confirmation and a final pacing check at the programme level, we would support approval.",
       },
     ],
     sources: [
-      "CFA Institute alternative investments — full curriculum synthesis",
-      "CAIA Level I and II — private equity comprehensive review",
-      "ILPA principles and due diligence guidance — complete framework",
-      "Kaplan and Schoar (2005); Harris, Jenkinson, Kaplan (2014) — PE performance research",
+      "ILPA principles and due diligence concepts",
+      "PME and private equity benchmarking research",
+      "Private equity fund economics and allocator programme construction frameworks",
     ],
   },
 ];
