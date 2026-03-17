@@ -4151,6 +4151,202 @@ export const lessonContents: LessonContent[] = [
       "Private equity fund economics, governance, and allocator programme-construction frameworks",
     ],
   },
+  {
+  lessonId: "day-21",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The GP says: 'Our docs are all market standard. Nothing unusual.' Then the draft package arrives: the LPA permits broad fund-level leverage, recycling of realized proceeds, affiliate transactions with LPAC disclosure but not approval, and a side-letter framework with MFN elections that expire 30 days after notice. None of that changes the headline fee and carry. All of it changes allocator risk. This lesson teaches how to read the governing documents as a practical control map rather than a legal formality.",
+    },
+    {
+      type: "framing",
+      title: "Why fund documentation is allocator infrastructure",
+      content:
+        "For a public-markets analyst, many rights are embedded in market structure, securities law, exchange rules, or board governance norms. In private markets, those protections are far more contractual. What the GP can do, what requires LP consent, what information you will receive, how conflicts are handled, whether leverage is allowed, whether capital can be recycled, and what happens when key people leave are all shaped by documents, not assumptions. That is why documentation literacy is not legal trivia. It is allocator risk management.\n\nThis lesson builds on the existing foundation from Day 1 (fund structure), Day 2 (economics), Day 11 (waterfalls and alignment), and Day 15 (secondaries and continuation vehicles) by shifting from economic intuition to contractual control. The objective is not to turn the learner into fund counsel. It is to teach them how to translate clauses into decision-relevant risk: economics leakage, governance weakness, information asymmetry, liquidity timing, and conflict exposure.",
+    },
+    {
+      type: "teaching",
+      title: "The document stack: where different rights actually live",
+      content:
+        "Private fund governance is not contained in one document. Allocators need a map of the full document stack and what each piece usually governs.\n\n**LPA (Limited Partnership Agreement):** the core governing document. It defines the fund's mandate, economics, governance rights, key-person mechanics, LPAC scope, conflicts framework, leverage permissions, recycling, term and extension rights, removal thresholds, reporting obligations, and transfer rules.\n\n**PPM (Private Placement Memorandum):** the marketing and disclosure document. It explains the strategy, risks, team, and headline terms, but it is not usually the controlling source if the LPA says something different. LPs often read the PPM first and assume it is enough. It is not.\n\n**Subscription Agreement:** the LP's formal commitment document. It covers representations, investor status, tax and regulatory elections, and the LP's agreement to be bound by the LPA.\n\n**Side Letters:** bilateral agreements between the fund and a specific LP. These often modify economics, reporting, excuse rights, information rights, co-invest rights, ESG obligations, or regulatory accommodations.\n\n**MFN Election Package:** the mechanism by which eligible LPs can elect side-letter terms granted to other LPs, usually subject to eligibility thresholds, carve-outs, and election deadlines.\n\n**Amendments / Consents / LPAC Resolutions:** later modifications that can materially change the operating reality even if the original documents looked acceptable.\n\nThe practical rule is simple: the allocator should know which document controls the issue before concluding they understand the issue. A PPM may say the fund expects conservative use of leverage. The LPA may still permit more leverage than the allocator assumed. The difference is not semantic. It is the actual risk.",
+    },
+    {
+      type: "teaching",
+      title: "Clause-to-risk translation: how allocators should read documents",
+      content:
+        "Most LPs make the same mistake when reading fund documents: they treat terms as legal categories instead of translating them into allocator outcomes. The right question is never just 'what does the clause say?' It is 'what does this clause allow the GP to do, and what can go wrong for the LP if exercised aggressively?'\n\nExamples of clause-to-risk translation:\n\n- **Broad fund-expense definition** -> higher economics leakage to LPs through broken-deal costs, consultant fees, travel, compliance build-out, or affiliate charges.\n- **Permissive affiliate transaction language** -> increased risk that the GP routes value to related entities while remaining technically within disclosure rules.\n- **Weak reporting covenant** -> delayed visibility into valuation issues, leverage usage, and portfolio stress.\n- **Broad leverage permission** -> hidden financing risk at the fund level, even if the strategy is presented as conventional buyout.\n- **Recycling and recallability rights** -> effective exposure can exceed what the LP informally thought of as the committed risk.\n- **Loose key-person drafting** -> suspension rights may not actually trigger when the economically important people step back.\n\nA good allocator reads each major clause in two steps: first, legal meaning; second, portfolio implication. The second step is the one that matters in practice.",
+    },
+    {
+      type: "teaching",
+      title: "LPA anatomy: the clauses that matter most to allocators",
+      content:
+        "Not every LPA clause carries equal analytical weight. The highest-signal provisions tend to cluster into five groups.\n\n**1. Economics leakage**\nThis includes management fee basis, offset treatment, broken-deal expenses, affiliate costs, transaction-fee treatment, and definitions of fund expenses. The issue is not whether fees are 'market.' It is whether the documents allow more leakage than the headline terms imply.\n\n**2. Governance and control**\nThis includes key-person events, removal for cause, removal without cause, suspension of the investment period, LP voting thresholds, and LPAC authority. These clauses determine whether LPs can do anything meaningful if the team changes or conflicts intensify.\n\n**3. Leverage and capital flexibility**\nThis includes subscription lines, asset-level and fund-level borrowing permissions, NAV facilities, recycling, recallability, and cross-fund financing boundaries. These terms shape both performance optics and real risk.\n\n**4. Reporting and transparency**\nThis includes frequency, timing, and scope of reporting: quarterly financials, portfolio company detail, fee and expense disclosure, valuation methodology, ESG or regulatory reporting, and capital account transparency. Reporting is not a courtesy. It is an enforceable information right if written properly.\n\n**5. Transfer, liquidity, and term**\nThis includes fund term, extension mechanics, transfer restrictions, excuse and exclusion rights, and whether LP interests can be transferred or restructured in stress or secondary situations.\n\nAn allocator does not need to memorize the full LPA. They need to know where these five categories live and how to identify the clauses within each category that actually change outcomes.",
+    },
+    {
+      type: "teaching",
+      title: "Side letters and MFN: private rights inside a pooled vehicle",
+      content:
+        "Side letters exist because not all LPs enter the fund with the same needs or bargaining power. Large LPs, strategic seeders, government plans, tax-sensitive investors, and heavily regulated institutions often receive bespoke terms that do not appear in the base LPA.\n\nCommon side-letter categories include:\n\n- fee breaks or step-down improvements\n- enhanced reporting or earlier reporting delivery\n- co-investment rights or priority access\n- regulatory and tax accommodations\n- ESG, sanctions, or policy restrictions\n- excuse or exclusion rights for prohibited sectors or jurisdictions\n- transparency around affiliate arrangements or valuation\n\nThe existence of side letters is not itself a red flag. The allocator issue is whether the fund has an MFN mechanism that lets similarly situated LPs elect favorable terms granted to others.\n\n**MFN mechanics matter.** A headline statement that 'MFN is available' is not enough. Important details include:\n- who is eligible based on commitment size or investor type\n- which side-letter terms are excluded from MFN election\n- whether economic terms are carved out\n- whether the election window is short or burdensome\n- whether elections are provision-by-provision or all-or-nothing\n\nA favored LP may receive earlier reporting, stronger co-invest rights, and a fee break tied to size. Another LP may technically have MFN rights but be ineligible for the economics, too small for the reporting tier, and required to elect within an administratively tight window. In that case, the practical MFN right is much narrower than the headline suggests.\n\nThis is why allocators should think of side letters as a second layer of fund governance, not a miscellaneous appendix.",
+    },
+    {
+      type: "teaching",
+      title: "Key-person events, suspension rights, and who actually counts",
+      content:
+        "The key-person clause is one of the most important governance protections in a private fund, and one of the most misunderstood. At a high level, it is supposed to protect LPs if the people whose judgment they backed are no longer meaningfully running the strategy.\n\nBut the effectiveness of the provision depends on drafting specifics:\n\n- **Who is named?** Founders only, or also the actual current deal leaders?\n- **What is the test?** Departure, death, disability, reduction in time commitment, or loss of effective control?\n- **What counts as reduced involvement?** 'Substantially all business time' is stronger than vague formulations like 'material involvement.'\n- **What happens when triggered?** Automatic suspension of the investment period is meaningful. Mere LPAC consultation is much weaker.\n- **Is there a cure period?** A long cure period may let the GP preserve flexibility while LP protections are delayed.\n\nA frequent allocator error is to ask whether a key-person clause exists. Almost every serious fund has one. The real question is whether it would trigger in the specific scenario the allocator is worried about. A clause naming two founders may not trigger even if the economically relevant sector partner who actually drove performance leaves. Conversely, a broader clause can create real leverage for LPs to reassess the relationship before new investments continue.\n\nThe practical translation is simple: a key-person clause is only as good as its answer to 'if our actual source of judgment disappears, do we really get a pause button?'",
+    },
+    {
+      type: "teaching",
+      title: "Removal rights, LPAC authority, and the limits of LP control",
+      content:
+        "LPs often overestimate how much direct control they have once they are in a private fund. Removal rights and LPAC rights exist, but they are usually narrower and more cumbersome than first-time readers expect.\n\n**Removal rights** usually come in two forms:\n- **for cause**, typically tied to fraud, willful misconduct, gross negligence, or material breach\n- **without cause**, typically requiring a high supermajority vote and often carrying practical consequences such as loss of carry only prospectively rather than retroactively\n\nA strong on-paper removal right may still be difficult to use because LPs are dispersed, thresholds are high, and large LPs may be reluctant to fracture a relationship publicly.\n\n**LPAC authority** is also frequently misunderstood. The LPAC is generally not there to run the fund or approve ordinary investments. Its main role is conflict oversight: affiliate transactions, valuation conflicts, term extensions, GP-led restructurings, and certain waivers or exceptions.\n\nThat makes LPAC scope important, but also limited. If the documents only require LPAC notification for a conflict instead of approval, the protection is weaker than many LPs assume. If the LPAC can review but not block certain actions, its role is more advisory than controlling.\n\nThe allocator lesson is not cynicism. It is realism. LP protections are meaningful, but they are procedural and threshold-dependent. A fund with weak removal mechanics and narrow LPAC rights is telling you that once committed, you should assume the default state is GP control unless a very high bar is met.",
+    },
+    {
+      type: "teaching",
+      title: "The silent killers: expenses, affiliate transactions, leverage, and recallability",
+      content:
+        "Some of the most consequential LPA language sits in definitions and back-half provisions that receive less attention than headline economics. These are the clauses that often create the gap between 'market-standard' expectations and actual LP experience.\n\n**Fund expenses:** What exactly can be charged to the fund? Broken-deal costs are usually expected. But what about operating-partner time, consultant retainers, travel, data subscriptions, regulatory implementation, or affiliate staffing support? Broad definitions allow more economics leakage than many LPs realize.\n\n**Affiliate transactions:** Can the GP sell services to portfolio companies through affiliated entities? Are those arrangements merely disclosed, or approved? Is there a fee offset? The issue is not just optics. It is whether value is being extracted from LP-owned assets through related channels.\n\n**Fund-level leverage permissions:** Does the LPA permit only subscription lines, or broader borrowing including NAV-based facilities? Can leverage be used for liquidity management, distributions, investments, or bridge purposes? These clauses matter because they can alter both risk and reported performance.\n\n**Recycling and recallability:** Can distributions be recalled? Can realized proceeds be recycled into new investments? Within what period and under what cap? These terms determine whether the economic exposure of the fund can exceed what the LP informally assumed from the original commitment.\n\nThese provisions are called silent killers not because they are always abusive, but because they often live in definitions, schedules, and drafting nuance. They are easy to overlook and materially relevant when exercised.",
+    },
+    {
+      type: "example",
+      title: "Worked example: side letter, MFN, and practical inequality among LPs",
+      content:
+        "Assume a $1.5B buyout fund with three relevant LPs:\n\n- **LP A:** $150M commitment, receives a side letter with quarterly reporting 15 days early, access to one co-investment review slot per year, and a 10bp management fee reduction\n- **LP B:** $75M commitment, eligible for MFN if the elected terms are available to LPs at $75M+\n- **LP C:** $25M commitment, MFN eligible only for non-economic terms available to LPs at $25M+\n\nNow assume the side letter package states:\n- economic terms are only electable by LPs with equal or greater commitment size\n- co-invest rights are deemed relationship-based and excluded from MFN\n- reporting rights are tiered by commitment band\n- election window is 20 business days after circulation of the MFN package\n\n**What happens in practice:**\nLP B may be able to elect the earlier reporting if it qualifies for that reporting tier, but not the fee reduction if the size threshold is not met, and not the co-invest right because it is excluded. LP C may receive none of the most meaningful benefits even though the fund technically offers MFN.\n\nThe lesson is that MFN is not a yes/no feature. It is a structure with eligibility rules, carve-outs, and administrative frictions. The allocator should analyze whether MFN produces substantive equalization or mostly preserves hierarchy while sounding fair.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: ILPA Principles 3.0 for alignment, governance, and transparency baseline; ILPA DDQ / diligence frameworks for standard LP inquiry areas; representative LPA and side-letter structures as used in institutional PE practice; practitioner references on key-person, removal, LPAC, recycling, and fund-finance permissions. The key educational objective is not clause memorization. It is translating document language into allocator control, economics leakage, and information-rights implications.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to 'our docs are market standard'",
+      content:
+        "The GP says: 'Our docs are market standard. There is nothing unusual here.'\n\n**Weak LP response:** 'Understood. We assume counsel will confirm that.'\n\nWhy it is weak: it outsources allocator judgment to legal review and treats 'market standard' as a substitute for understanding what the fund actually permits. Counsel can identify drafting issues. The allocator still needs to know which terms are economically and governance-relevant.\n\n**Strong LP response:** 'Helpful. We would still like to focus on the clauses that most affect allocator outcomes: fund-expense definition, affiliate transaction treatment, leverage permissions, recycling and recallability, side-letter and MFN mechanics, and the exact consequences of a key-person event. We are less interested in whether the drafting is typical than in how these provisions operate in practice.'\n\nWhy it is strong: it moves the discussion from legal comfort language to the specific contractual terms that shape economics, control, and transparency.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what documents can and cannot tell you",
+      content:
+        "**What documents can tell you:**\n- what the GP is contractually allowed to do\n- what consent rights LPs actually have\n- what reporting and transparency are owed, if properly drafted\n- where economics leakage, leverage, and recycling flexibility can arise\n- how conflicts are meant to be governed when they emerge\n\n**What documents cannot tell you:**\n- whether the GP will exercise every permissive right aggressively\n- whether LPs will be willing in practice to use voting and removal rights\n- whether the GP's culture is genuinely LP-friendly beyond the minimum required by the LPA\n- whether a side-letter right you technically can elect through MFN will be operationally easy to capture and use\n\nThe allocator should therefore use the documents as a floor for understanding risk, not as proof that the relationship will function well in every stress case.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: build a clause-to-risk map from a simplified LPA excerpt",
+      content:
+        "You are given a simplified LPA excerpt containing the following features: broad fund-expense language, LPAC consultation but not approval for certain affiliate transactions, fund-level leverage permission beyond subscription lines, recycling of realized proceeds during the investment period, a key-person event tied only to two founders, and quarterly reporting due 60 days after quarter-end.\n\nCreate a five-part clause-to-risk map:\n\n1. **Economics leakage:** which clauses could increase LP-paid costs?\n2. **Governance / consent:** where do LPs have real control versus mere notice?\n3. **Leverage / balance-sheet risk:** what borrowing flexibility is being granted?\n4. **Valuation / reporting:** where could information delays weaken allocator oversight?\n5. **Liquidity / exposure timing:** how do recycling and recallability change effective exposure?\n\nThen rank the top three allocator concerns and explain why they matter more than the others.",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal document questions",
+      content:
+        "1. **'Which document controls reporting obligations, and what exactly do LPs receive beyond standard financial statements?'**\nThis tests whether reporting is contractual or merely relationship-based.\n\n2. **'Walk us through your key-person mechanics using the current team structure. If the actual sector leads left tomorrow, what would happen under the LPA?'**\nThis tests whether the clause maps to real decision-makers.\n\n3. **'What is included in fund expenses, and which affiliate costs or broken-deal costs have historically been charged to prior funds?'**\nThis surfaces economics leakage that headline fee terms do not capture.\n\n4. **'How does MFN work in practice: who is eligible, what is carved out, and how are elections administered?'**\nThis distinguishes real from cosmetic side-letter equalization.\n\n5. **'What leverage, recycling, and recallability rights are permitted, and how have you used them in prior funds?'**\nThis converts contractual flexibility into actual historical behavior.",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how documentation should affect a commitment decision",
+      content:
+        "A disciplined allocator should summarize fund documents in the same categories used elsewhere in the underwriting process: economics, governance, reporting, leverage, and liquidity timing. The goal is not to produce a legal memo. It is to produce a practical control memo that says: here is what the GP can do; here is what LPs can stop; here is where value could leak; here is where information could arrive late; and here is where the economic exposure could exceed informal assumptions.\n\nThat summary becomes especially important in three situations: re-ups where familiarity can make teams complacent, continuation-vehicle or conflict-heavy situations where LPAC rights become real, and scaled programmes where reporting consistency and side-letter terms shape how effectively the allocator can monitor across managers.\n\nThe most important final test is whether the allocator can answer this question in one sentence: **if the relationship goes wrong, where in the documents do we actually have leverage, and where do we not?**",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d21q1",
+      type: "multiple-choice",
+      prompt:
+        "Which document is most likely to be the primary governing source for the fund's mandate, LP rights, GP permissions, and core economics?",
+      options: [
+        "Private Placement Memorandum (PPM)",
+        "Limited Partnership Agreement (LPA)",
+        "Subscription Agreement",
+        "Capital Call Notice",
+      ],
+      correctAnswer:
+        "Limited Partnership Agreement (LPA)",
+    },
+    {
+      questionId: "d21q2",
+      type: "multiple-choice",
+      prompt:
+        "A GP says a side-letter term is 'subject to MFN.' Which follow-up question is most important before assuming you can obtain the same right?",
+      options: [
+        "Whether the GP believes the term is commercially reasonable",
+        "Whether your counsel has seen the GP's prior side letters",
+        "Whether you are eligible under the MFN thresholds, carve-outs, and election mechanics for that specific term",
+        "Whether the LPAC has approved the side-letter package",
+      ],
+      correctAnswer:
+        "Whether you are eligible under the MFN thresholds, carve-outs, and election mechanics for that specific term",
+    },
+    {
+      questionId: "d21q3",
+      type: "multiple-choice",
+      prompt:
+        "Why can a key-person clause provide less protection than an LP initially assumes?",
+      options: [
+        "Because it automatically removes the GP whenever any partner resigns",
+        "Because it may name only founders or use vague involvement tests that do not map to the actual investment decision-makers",
+        "Because key-person provisions apply only after the fund term has expired",
+        "Because they are usually found only in side letters, not in the LPA",
+      ],
+      correctAnswer:
+        "Because it may name only founders or use vague involvement tests that do not map to the actual investment decision-makers",
+    },
+    {
+      questionId: "d21q4",
+      type: "multiple-choice",
+      prompt:
+        "Which of the following is the best example of clause-to-risk translation?",
+      options: [
+        "The clause is common in market practice, so it should not matter much",
+        "The clause is legally enforceable, which means the GP will probably never use it aggressively",
+        "Broad recycling language may increase effective capital-at-risk beyond what the LP informally assumed from the original commitment",
+        "LPAC disclosure is equivalent to LPAC approval in most conflict situations",
+      ],
+      correctAnswer:
+        "Broad recycling language may increase effective capital-at-risk beyond what the LP informally assumed from the original commitment",
+    },
+    {
+      questionId: "d21q5",
+      type: "multiple-choice",
+      prompt:
+        "An LPA allows affiliate transactions with LPAC consultation but not approval. What is the main allocator implication?",
+      options: [
+        "The GP is prohibited from engaging in any related-party activity",
+        "The LPAC can veto all related-party activity before execution",
+        "The GP retains more practical discretion, and the LPAC's role is more oversight than control",
+        "The affiliate transaction must be priced at a discount to market",
+      ],
+      correctAnswer:
+        "The GP retains more practical discretion, and the LPAC's role is more oversight than control",
+    },
+    {
+      questionId: "d21q6",
+      type: "short-response",
+      prompt:
+        "Explain why 'market-standard documents' is not enough information for an allocator. Write two to four sentences.",
+      modelAnswer:
+        "Market-standard language does not tell the allocator what the documents actually permit or how those permissions affect economics, governance, reporting, leverage, and liquidity timing. Two funds can both be described as market-standard while giving LPs very different practical protections on key-person events, affiliate transactions, recycling, fund expenses, or MFN access. The allocator needs clause-to-risk translation, not comfort language.",
+    },
+    {
+      questionId: "d21q7",
+      type: "short-response",
+      prompt:
+        "You learn that a favored LP received a side letter with earlier reporting, limited co-invest priority, and a fee break. What are the three most important MFN issues you would check before assuming you can match those rights?",
+      modelAnswer:
+        "First, I would check eligibility thresholds — whether my commitment size or investor category qualifies me to elect those terms. Second, I would review carve-outs — especially whether economics or co-invest rights are excluded from MFN. Third, I would check election mechanics, including whether the election is provision-by-provision, whether the window is short, and whether there are operational hurdles that make the right narrower in practice than it appears.",
+    },
+  ],
+  sources: [
+    "ILPA Principles 3.0 — alignment, governance, and transparency baseline for GP-LP partnerships",
+    "ILPA Due Diligence Questionnaire (DDQ) — standard allocator inquiry framework for fund terms, governance, and reporting",
+    "Representative institutional private fund LPAs and side-letter structures — used conceptually for document-stack and clause-to-risk analysis",
+    "CFA Institute: Private Markets and Alternative Investments curriculum — fund structures, LP rights, and governance context",
+    "CAIA Level II: private equity fund terms, investor protections, and partnership governance",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
