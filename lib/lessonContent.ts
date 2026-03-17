@@ -5161,6 +5161,208 @@ export const lessonContents: LessonContent[] = [
     "CFA Institute: Private Markets and Alternative Investments curriculum — private-markets cash-flow, portfolio-construction, and governance context",
   ],
 },
+{
+  lessonId: "day-27",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The GP says the fund only needs one or two truly exceptional outcomes to drive the entire result. That sounds like marketing hyperbole until the underlying math is laid out: most companies will fail, muddle through, or generate modest returns, while a very small number may account for the majority of gross value. For an allocator trained in public markets, this can feel unintuitive because portfolio quality is not primarily about average hit rate or smooth attribution. This lesson teaches venture as a power-law game and explains why that return shape changes underwriting, portfolio construction, manager selection, and portfolio-role expectations.",
+    },
+    {
+      type: "framing",
+      title: "Venture is not just early-stage growth. It is a different return distribution.",
+      content:
+        "The learner already understands from Day 8 that venture differs from buyout and growth in return drivers, J-curve shape, and portfolio role. Day 27 goes deeper. The most important conceptual upgrade is that venture should be understood less as a familiar manager-research problem with different company stages and more as a strategy defined by extreme skew in outcomes.\n\nThis matters because many public-markets instincts do not port over cleanly. In public equities, analysts often evaluate broad portfolio quality, downside capture, consistency, and aggregate attribution across many names. In venture, the relationship between median outcome and fund outcome is much looser. A few companies, a few decisions, and often a few ownership positions can dominate the final result. That changes what evidence matters, how construction should be judged, and why many superficially reasonable venture portfolios still fail to produce top-tier returns.",
+    },
+    {
+      type: "teaching",
+      title: "Power-law logic: why venture outcomes are so skewed",
+      content:
+        "A power-law distribution means a small number of observations account for a disproportionately large share of total value. In venture, this usually means a small number of portfolio companies generate most of the returns while many investments produce low multiples, capital loss, or only modest gains.\n\nWhy this happens:\n\n- the downside of an individual investment is capped at invested capital\n- the upside can be many multiples of cost if the company compounds and the ownership stake remains meaningful\n- innovation adoption is highly uneven, so category winners often take disproportionate value\n- private valuations move in step changes around financing rounds and exits rather than in continuous public pricing\n\nThe allocator implication is fundamental: average company quality is not the right anchor for judging venture. A fund can have many respectable outcomes and still disappoint if it does not own enough of the rare outliers that matter. Conversely, a fund can look messy at the company level and still succeed if it captures a few truly exceptional winners.\n\nThis is the conceptual foundation for the rest of the venture sequence. Once the learner internalizes the distribution shape, later lessons on stage exposure, reserves, cap tables, and underwriting discipline become much easier to interpret.",
+    },
+    {
+      type: "teaching",
+      title: "Why hit rate is a weak shortcut in venture",
+      content:
+        "Newer venture learners often ask about batting average: how many portfolio companies were successful? That question is understandable, but it is usually not the best one.\n\nA venture manager can have:\n- a high hit rate of small wins and still produce mediocre fund outcomes\n- a lower apparent hit rate but one or two breakout winners that drive top-tier performance\n\nThis does not mean hit rate is irrelevant. It means it must be subordinated to return concentration and ownership in the winners.\n\nAllocator-relevant questions are stronger than simple hit-rate questions:\n- how many companies returned the fund?\n- how many generated outcomes large enough to matter at the fund level?\n- what percentage of gross value came from the top one, three, and five positions?\n- did the manager preserve enough ownership through follow-ons for winners to remain economically meaningful?\n\nA public-markets-trained allocator may instinctively prefer broad contribution and smoother attribution. Venture punishes that instinct if it turns into portfolio construction that is too diluted, too index-like, or too eager to optimize for 'not losing money' rather than for owning enough of the rare winners.",
+    },
+    {
+      type: "teaching",
+      title: "Fund-level consequences: what power laws mean for construction",
+      content:
+        "Power-law behavior changes what good venture portfolio construction looks like. Construction is not just diversification. It is diversification in service of still having enough exposure to rare outliers.\n\nAllocator-relevant construction implications include:\n\n- **position count matters differently**: too few names can create fragile dependence on idiosyncratic outcomes, but too many names can dilute ownership and reduce the chance that any one winner matters enough\n- **initial check size is only part of the story**: reserves and follow-on discipline often matter as much as sourcing the original deal\n- **ownership matters**: a great company outcome with a heavily diluted stake may not move the fund enough\n- **stage mix matters**: seed, Series A, and later-stage exposure can produce very different outcome distributions and capital-allocation needs\n- **time horizon matters**: because value creation and realization are long-dated, construction must support a long duration of uncertainty\n\nThis is why venture portfolio construction should not be judged using buyout-style concentration logic or public-equity-style diversification logic. The right question is whether the fund is structured to capture enough of the positive skew without becoming so concentrated that one miss destroys the strategy.",
+    },
+    {
+      type: "teaching",
+      title: "Power laws and allocator expectations for evidence",
+      content:
+        "Power-law strategies create a distinctive evidence problem for allocators. In buyout, realized value bridges, exit history, and operating attribution can often support a relatively linear story. In venture, the distribution is noisier and the sample of truly meaningful outcomes is smaller.\n\nThat means allocators should ask for evidence differently.\n\nUseful evidence types include:\n- distribution of outcomes across portfolio companies, not just blended fund metrics\n- concentration of gross value in top winners\n- realized versus unrealized composition of the winners\n- ownership levels at entry and through later rounds\n- reserve deployment into eventual winners versus losers\n- stage-specific and sector-specific outcome patterns\n\nWeak evidence patterns include:\n- heavy reliance on TVPI without showing where value sits\n- emphasizing markups without showing financing context or ownership retention\n- celebrating many positive markups that are too small to matter at the fund level\n- presenting a broad portfolio narrative without identifying whether any company can realistically drive fund-level returns\n\nThe allocator does not need every venture manager to have a fully realized top-decile history. But they do need enough evidence to judge whether the construction and decision process are compatible with power-law reality.",
+    },
+    {
+      type: "teaching",
+      title: "Why median outcomes can mislead in venture",
+      content:
+        "One reason venture feels alien to public-markets analysts is that the median portfolio company can be a poor guide to the fund's economics. In many venture portfolios, the median company may be mediocre or unsuccessful even when the fund itself performs very well.\n\nThis creates several practical consequences:\n\n- portfolio company 'quality averages' can be misleading\n- manager commentary focused on broad portfolio health may obscure where the actual economic value sits\n- early unrealized markups can create false confidence if they are spread across many positions that will never reach fund-moving scale\n- the true underwriting question is often less 'how many good companies are here?' and more 'which ones can become disproportionately important, and does the manager own enough of them?'\n\nThe allocator should therefore avoid importing public-equity habits like broad weighted-average scorecards without adaptation. Venture is not evaluated well through average portfolio characteristics alone. It requires attention to extreme winners, ownership math, and reserve behavior that can preserve or lose the economics of those winners.",
+    },
+    {
+      type: "teaching",
+      title: "Portfolio role: why venture should not be sold as just another growth sleeve",
+      content:
+        "Because venture is power-law-driven, its role in an institutional portfolio is different from more linear private strategies. It is not simply a smaller, earlier, or racier version of growth equity.\n\nVenture tends to involve:\n- longer duration before clean realization\n- wider dispersion of manager outcomes\n- heavier dependence on manager-specific access, judgment, and portfolio-construction discipline\n- greater sensitivity to mark quality in unrealized periods\n- more path dependence through reserves, follow-ons, and ownership retention\n\nFor an allocator, this means venture should be framed as a sleeve where manager selection matters intensely and where interim metrics need more humility. It is also why venture generally deserves more educational depth than a generic private-markets roadmap gives it. If the learner wants OCIO-grade fluency, they need to understand not only what venture is but why its distribution shape makes it unusually difficult to underwrite, benchmark, and size responsibly.",
+    },
+    {
+      type: "teaching",
+      title: "Common allocator mistakes when they do not respect power-law reality",
+      content:
+        "Several recurring mistakes come from underestimating how different venture really is.\n\n**Mistake 1: importing buyout instincts**\nExpecting smoother attribution, stronger median portfolio quality, and more linear value creation than venture usually provides.\n\n**Mistake 2: overvaluing breadth without ownership**\nPreferring many names and apparent diversification even when the likely effect is to reduce exposure to the few companies that could matter.\n\n**Mistake 3: focusing on mark count instead of value concentration**\nTreating many up-rounds or markup events as proof of a strong fund even when the ultimate economics are unclear.\n\n**Mistake 4: underweighting reserves and follow-ons**\nIgnoring the fact that initial sourcing is only part of the job. Venture managers often win or lose economically through later capital-allocation discipline.\n\n**Mistake 5: evaluating venture with generic manager-research language**\nGeneral manager quality still matters, but venture allocators need more specific questions around stage mix, ownership targets, concentration tolerance, reserve strategy, and evidence of actually capturing outliers.\n\nThe learner should view this lesson as a reset. Venture is not impossible to evaluate. But it must be evaluated on terms that fit its distribution shape.",
+    },
+    {
+      type: "teaching",
+      title: "What this lesson sets up for the rest of the venture sequence",
+      content:
+        "Day 27 is intentionally conceptual. It gives the learner the mental model needed for the next set of venture lessons.\n\nIt sets up:\n- Day 28 on stage map and venture fund archetypes, because stage exposure affects the shape of the power law and the role of reserves\n- Day 29 on cap tables and ownership math, because outlier capture depends on actual ownership, not just company selection\n- Day 30 through Day 33 on instruments, terms, and marks, because venture economics are shaped materially by financing structure and valuation reality\n- Day 34 through Day 39 on underwriting, portfolio management, exits, growth equity, crossover dynamics, and allocator diligence, because every one of those topics becomes clearer once the learner understands that venture is a winner-concentration game\n\nThe allocator takeaway is straightforward: if you do not start with the distribution shape, you will ask the wrong diligence questions later.",
+    },
+    {
+      type: "example",
+      title: "Worked example: same hit rate, different fund outcome",
+      content:
+        "Assume two early-stage venture funds each invest in 30 companies.\n\n**Fund A**\n- 18 companies return less than cost or only a small fraction of cost\n- 8 companies return between 1.5x and 3x invested capital\n- 3 companies return 5x to 8x\n- 1 company returns 40x and the manager maintained meaningful ownership through follow-ons\n\n**Fund B**\n- 8 companies lose money\n- 18 companies return between 1.5x and 4x\n- 4 companies return 5x to 8x\n- no company becomes a true outlier\n\nAt first glance, Fund B may look like the 'better picker' because the batting average is higher and the portfolio appears healthier overall. But Fund A may produce the stronger fund-level result because one exceptional winner dominates the economics.\n\nAllocator analysis path:\n\n**Step 1: ignore superficial portfolio neatness**\nThe cleaner-looking company-level pattern is not automatically the better fund.\n\n**Step 2: identify fund-returning companies**\nHow many positions can individually matter enough to drive the total fund?\n\n**Step 3: evaluate ownership preservation**\nDid the manager actually retain enough ownership in the outlier for it to matter economically?\n\n**Step 4: connect results to construction**\nWas the portfolio sized and reserved in a way that made the big winner count?\n\nThe lesson is that venture allocators must care more about value concentration and ownership in exceptional companies than about broad portfolio batting average alone.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: institutional and practitioner materials on venture return distributions, power-law portfolio construction, and venture fund economics; venture benchmarking and portfolio-construction commentary from reputable LP, academic, and industry sources; allocator-oriented materials on ownership, reserves, and outcome concentration. The goal is to give the learner a durable mental model for how venture really works before moving into stage, cap-table, and financing mechanics.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a venture manager's portfolio summary",
+      content:
+        "The GP says: 'Most of our portfolio is progressing well, and we have a strong overall hit rate across the fund.'\n\n**Weak LP response:** 'That is encouraging. A high hit rate suggests the portfolio is broadly healthy and should support a strong outcome.'\n\nWhy it is weak: it treats venture like a linear strategy where average portfolio quality is the main driver of results.\n\n**Strong LP response:** 'Helpful, but we would like to understand where the value concentration sits. How many companies are realistically capable of returning the fund, what ownership do you hold in them today, and how did your reserve strategy affect that ownership? In venture, the shape of the winners matters more than hit rate alone.'\n\nWhy it is strong: it reframes the diligence discussion around the economics that actually drive venture outcomes.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what power-law logic can and cannot tell you",
+      content:
+        "**What power-law logic can support:**\n- better interpretation of why venture construction, reserves, and ownership matter so much\n- a more realistic view of why hit rate and median outcomes are incomplete shortcuts\n- stronger diligence questions around whether a manager can actually capture outliers\n- better portfolio-role framing for venture within an institutional programme\n\n**What it cannot guarantee:**\n- that every concentrated winner narrative is real rather than mark-driven\n- that a manager with one outlier in one fund has a repeatable edge\n- that a power-law-friendly portfolio construction will necessarily produce a top-tier outcome in any given fund\n- that interim unrealized concentration will survive dilution or convert cleanly at exit\n\nThe allocator should therefore use power-law thinking as a framework for asking better questions, not as a shortcut to automatic conviction.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: analyze a venture portfolio through a power-law lens",
+      content:
+        "You are given a simplified venture fund outcome table showing 25 portfolio companies, their invested cost, current fair value, realized proceeds where relevant, and current ownership percentages in the top holdings.\n\nAnalyze the fund under five headings:\n\n1. **Value concentration** — what share of gross value sits in the top one, three, and five companies?\n2. **Fund-return potential** — how many companies look capable of returning a meaningful portion of the fund?\n3. **Ownership quality** — does the manager still own enough of the apparent winners for them to matter?\n4. **Reserve effectiveness** — do the follow-on patterns appear to have reinforced winners or merely averaged into the portfolio?\n5. **Evidence quality** — how much of the concentration is realized versus still dependent on marks?\n\nThen answer three questions:\n- Is this portfolio structured in a way that respects power-law reality?\n- What is the single most important additional data point you would want?\n- Would you describe the current evidence as strong, promising but incomplete, or weak for allocator underwriting?",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal venture questions after Day 27",
+      content:
+        "1. **'How many companies across your last several funds have actually returned the fund or had the potential to do so?'**\nThis shifts the discussion from hit rate to economically meaningful winners.\n\n2. **'What share of gross value typically comes from your top one, three, and five positions?'**\nThis tests whether the GP understands and manages the distribution shape explicitly.\n\n3. **'How do you size initial checks and reserves so that outlier winners can still matter at the fund level?'**\nThis links construction to power-law capture.\n\n4. **'How often have you had strong company outcomes that did not translate into strong fund economics because ownership diluted too far?'**\nThis tests self-awareness on ownership preservation.\n\n5. **'When you review a prior fund, what do you study more closely: hit rate, average markup, or concentration in true outliers, and why?'**\nThis surfaces whether the GP evaluates itself using venture-relevant economics rather than generic success language.",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 27 should change venture underwriting",
+      content:
+        "A disciplined allocator should now be able to summarize venture in one sentence more accurately than before: venture is a strategy where a small number of companies often dominate returns, so manager evaluation must focus on the ability to source, recognize, fund, and maintain enough ownership in rare outliers.\n\nThat summary should change underwriting in practical ways. It should increase the allocator's focus on ownership math, reserve policy, concentration of value, and evidence that winners can become fund-moving outcomes. It should also lower confidence in superficial indicators such as broad portfolio health, simple hit rate, or many small markups. The learner should carry this lens into every subsequent venture lesson.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d27q1",
+      type: "multiple-choice",
+      prompt:
+        "What is the best description of a power-law return distribution in venture?",
+      options: [
+        "Most portfolio companies contribute roughly equally to total fund returns",
+        "A small number of investments contribute a disproportionately large share of total value",
+        "All losses are offset automatically by diversification",
+        "Returns are mainly determined by management fees and fund expenses",
+      ],
+      correctAnswer:
+        "A small number of investments contribute a disproportionately large share of total value",
+    },
+    {
+      questionId: "d27q2",
+      type: "multiple-choice",
+      prompt:
+        "Why is hit rate usually an incomplete shortcut for evaluating venture funds?",
+      options: [
+        "Because venture managers do not report enough portfolio data to measure it",
+        "Because a high percentage of modest wins can still produce mediocre fund outcomes if the fund lacks true outliers",
+        "Because hit rate matters only in growth equity, not venture",
+        "Because venture funds are required to own equal stakes in all companies",
+      ],
+      correctAnswer:
+        "Because a high percentage of modest wins can still produce mediocre fund outcomes if the fund lacks true outliers",
+    },
+    {
+      questionId: "d27q3",
+      type: "multiple-choice",
+      prompt:
+        "Which of the following is most important for turning a great company outcome into a fund-moving venture outcome?",
+      options: [
+        "Maintaining meaningful ownership through financing rounds and follow-ons",
+        "Having the largest possible number of portfolio companies",
+        "Minimizing all portfolio-company failures",
+        "Using only realized DPI to evaluate interim venture funds",
+      ],
+      correctAnswer:
+        "Maintaining meaningful ownership through financing rounds and follow-ons",
+    },
+    {
+      questionId: "d27q4",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of a venture GP saying the portfolio has a 'strong overall hit rate'?",
+      options: [
+        "That alone is enough to infer likely top-tier fund performance",
+        "It is useful background, but the allocator should ask where value concentration sits and whether the fund owns enough of the true winners",
+        "It means the fund probably has low duration and low manager dispersion",
+        "It means follow-on reserve decisions were not important",
+      ],
+      correctAnswer:
+        "It is useful background, but the allocator should ask where value concentration sits and whether the fund owns enough of the true winners",
+    },
+    {
+      questionId: "d27q5",
+      type: "multiple-choice",
+      prompt:
+        "Why should venture not be framed simply as another growth sleeve in an institutional portfolio?",
+      options: [
+        "Because venture typically has more linear outcomes than buyout",
+        "Because venture is defined by longer duration, wider manager dispersion, and stronger dependence on rare outliers and ownership retention",
+        "Because venture has no meaningful valuation issues",
+        "Because venture portfolios do not require diversification",
+      ],
+      correctAnswer:
+        "Because venture is defined by longer duration, wider manager dispersion, and stronger dependence on rare outliers and ownership retention",
+    },
+    {
+      questionId: "d27q6",
+      type: "short-response",
+      prompt:
+        "Explain why median portfolio-company outcomes can be misleading when evaluating a venture fund. Write two to four sentences.",
+      modelAnswer:
+        "In venture, the median company can be mediocre or unsuccessful even if the fund performs very well, because a small number of exceptional winners often drive most of the economics. Looking only at average company quality or broad portfolio health can therefore miss whether the fund actually owns enough of the rare outliers that matter. The right question is not just how the typical company did, but which companies can drive fund-level returns and what ownership remains in them.",
+    },
+    {
+      questionId: "d27q7",
+      type: "short-response",
+      prompt:
+        "A venture manager presents a fund with many positive markups and a high hit rate. What are the three most important follow-up questions you should ask after Day 27?",
+      modelAnswer:
+        "First, I would ask what share of gross value is concentrated in the top one, three, and five positions. Second, I would ask how many companies are realistically capable of returning a meaningful portion of the fund. Third, I would ask what ownership the manager still holds in those apparent winners and how reserve decisions affected that ownership.",
+    },
+  ],
+  sources: [
+    "Institutional and practitioner materials on venture return distributions and power-law portfolio construction",
+    "Allocator-oriented venture benchmarking and outcome-concentration commentary from reputable LP, academic, and industry sources",
+    "Practitioner resources on venture ownership, reserves, and fund-level economics",
+    "CFA Institute: Private Markets and Alternative Investments curriculum — venture strategy context and portfolio-role framing",
+    "CAIA and industry materials on venture construction, manager dispersion, and the economics of outlier-driven returns",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
