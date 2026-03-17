@@ -10,10 +10,12 @@ import {
 } from "@/lib/reviewQueue";
 import { CardType, Priority } from "@/lib/types";
 import { AiHelper } from "@/components/AiHelper";
+import { topicLabel } from "@/lib/topics";
+import { DEFAULT_MODULE_ID } from "@/lib/modules";
 
 // ── constants ─────────────────────────────────────────────────────────────────
 
-const MODULE_ID = "pe-foundations";
+const MODULE_ID = DEFAULT_MODULE_ID;
 
 const CARD_TYPE_CONFIG: Record<
   CardType,
@@ -47,61 +49,6 @@ const PRIORITY_CONFIG: Record<
   medium: { label: "Medium", dot: "bg-[#FAA51A]", text: "text-[#9B6A00]" },
   low: { label: "Low", dot: "bg-[#2294BD]", text: "text-[#2294BD]" },
 };
-
-const TOPIC_LABELS: Record<string, string> = {
-  "fund-structure": "Fund Structure",
-  "capital-flow": "Capital Flow",
-  "gp-lp": "GP / LP",
-  incentives: "Incentives",
-  "carried-interest": "Carried Interest",
-  "capital-calls": "Capital Calls",
-  "j-curve": "J-Curve",
-  "cash-flows": "Cash Flows",
-  irr: "IRR",
-  "performance-measurement": "Performance",
-  tvpi: "TVPI",
-  dpi: "DPI",
-  rvpi: "RVPI",
-  "fund-lifecycle": "Fund Lifecycle",
-  "vintage-year": "Vintage Year",
-  buyout: "Buyout",
-  leverage: "Leverage",
-  "deal-structure": "Deal Structure",
-  "growth-equity": "Growth Equity",
-  venture: "Venture",
-  "value-creation": "Value Creation",
-  operations: "Operations",
-  "portfolio-companies": "Portfolio Cos",
-  exits: "Exits",
-  ipo: "IPO",
-  secondary: "Secondaries",
-  "fund-terms": "Fund Terms",
-  lpa: "LPA",
-  "manager-selection": "Manager Selection",
-  "due-diligence": "Due Diligence",
-  benchmarking: "Benchmarking",
-  pme: "PME",
-  pacing: "Pacing",
-  "portfolio-construction": "Portfolio Construction",
-  allocation: "Allocation",
-  liquidity: "Liquidity",
-  "gp-led": "GP-Led",
-  "co-investment": "Co-Investment",
-  "asset-allocation": "Asset Allocation",
-  reporting: "Reporting",
-  nav: "NAV",
-  valuation: "Valuation",
-  esg: "ESG",
-  impact: "Impact",
-  regulation: "Regulation",
-  synthesis: "Synthesis",
-  "meeting-fluency": "Meeting Fluency",
-  "allocator-thinking": "Allocator Thinking",
-};
-
-function topicLabel(t: string) {
-  return TOPIC_LABELS[t] ?? t.replace(/-/g, " ");
-}
 
 // ── card component ────────────────────────────────────────────────────────────
 
@@ -172,7 +119,8 @@ function ReviewCardTile({
             ) : (
               <button
                 onClick={() => setFlipped(true)}
-                className="w-full text-sm text-[#2294BD] font-medium bg-[#2294BD]/8 hover:bg-[#2294BD]/15 rounded-xl py-2.5 transition-colors"
+                aria-label={`Show answer for: ${card.front.slice(0, 60)}`}
+                className="w-full text-sm text-[#2294BD] font-medium bg-[#2294BD]/8 hover:bg-[#2294BD]/15 rounded-xl py-2.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2294BD]"
               >
                 Show answer
               </button>
@@ -205,7 +153,8 @@ function ReviewCardTile({
           {bodyVisible && (
             <button
               onClick={() => { onStruggle(card.cardId); onDismiss(card.cardId); }}
-              className="text-xs text-[#FAA51A] hover:text-[#9B6A00] font-medium px-3 py-1.5 rounded-lg hover:bg-[#FAA51A]/10 transition-colors"
+              aria-label="Mark as still learning and dismiss"
+              className="text-xs text-[#FAA51A] hover:text-[#9B6A00] font-medium px-3 py-1.5 rounded-lg hover:bg-[#FAA51A]/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAA51A]"
             >
               Still learning
             </button>
@@ -213,7 +162,8 @@ function ReviewCardTile({
           <button
             onClick={() => onDismiss(card.cardId)}
             title="Dismiss until tomorrow"
-            className="text-xs text-[#404040] hover:text-[#D9532B] font-medium px-3 py-1.5 rounded-lg hover:bg-[#D9532B]/8 transition-colors"
+            aria-label="Dismiss card until tomorrow"
+            className="text-xs text-[#404040] hover:text-[#D9532B] font-medium px-3 py-1.5 rounded-lg hover:bg-[#D9532B]/8 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D9532B]"
           >
             Done for now
           </button>

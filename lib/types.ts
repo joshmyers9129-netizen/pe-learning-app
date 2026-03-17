@@ -1,12 +1,14 @@
 export type LessonStatus = "not-started" | "in-progress" | "completed";
 
+export type Difficulty = "foundational" | "intermediate" | "advanced";
+
 export interface Lesson {
   lessonId: string;
   dayNumber: number;
   title: string;
   estimatedMinutes: number;
   topics: string[];
-  difficulty: string;
+  difficulty: Difficulty;
   prerequisites: string[];
   learningObjectives: string[];
 }

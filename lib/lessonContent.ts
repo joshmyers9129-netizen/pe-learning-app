@@ -3291,7 +3291,7 @@ export const lessonContents: LessonContent[] = [
 
   // ── Day 17 ─────────────────────────────────────────────────────────────────
   {
-    lessonId: "day-17",
+    lessonId: "day-18",
     blocks: [
       {
         type: "intro",
@@ -3512,7 +3512,7 @@ export const lessonContents: LessonContent[] = [
 
   // ── Day 18 ─────────────────────────────────────────────────────────────────
   {
-    lessonId: "day-18",
+    lessonId: "day-17",
     blocks: [
       {
         type: "intro",
