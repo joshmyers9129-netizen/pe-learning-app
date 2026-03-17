@@ -7541,6 +7541,270 @@ export const lessonContents: LessonContent[] = [
     "CFA Institute and related private-markets educational materials providing context for venture portfolio construction, concentration, and follow-on discipline",
   ],
 },
+{
+  lessonId: "day-37",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The GP says: 'We invest in category leaders after product-market fit, before buyout, and with much less leverage than traditional private equity.' That sounds clear until the allocator tries to classify what is actually being underwritten. Is this late-stage venture, classic growth equity, or a lightly levered buyout wearing growth language? How much of the return case comes from business compounding versus multiple expansion or financial engineering? How much control does the investor really have? And where does the strategy belong in a private-markets portfolio? This lesson teaches growth equity as a distinct strategy rather than as a vague middle ground between venture and buyout.",
+    },
+    {
+      type: "framing",
+      title: "Growth equity is not just older venture or lower-leverage buyout",
+      content:
+        "By this point in the sequence, the learner understands venture as a power-law, ownership-sensitive, mark-heavy strategy with long duration and highly variable liquidity. The learner also already knows the buyout toolkit from the earlier lessons: control, leverage, EBITDA-based value creation, and exit-route analysis. Day 37 sits between those two worlds. Its purpose is to explain what is genuinely distinctive about growth equity and why allocators should not collapse it into either adjacent category.\n\nGrowth equity usually targets companies that are beyond the earliest venture uncertainty but still earlier than classic mature buyout targets. These companies often have real revenue, a clearer product, stronger customer validation, and more operating evidence than venture-backed early-stage businesses. At the same time, they may still be growing faster, carrying less leverage, and requiring more reinvestment than traditional buyout assets. That means growth equity underwriting is neither a pure venture bet on emergence nor a classic buyout bet on control and capital-structure optimization.\n\nThe allocator's challenge is that many firms use the label loosely. Some 'growth' funds are effectively late-stage venture. Others are buyout funds targeting faster-growing software or healthcare businesses. The goal of this lesson is to build a classification framework so the learner can distinguish true growth equity from adjacent strategies, understand what drives returns, and evaluate where the sleeve belongs in an institutional portfolio.",
+    },
+    {
+      type: "teaching",
+      title: "What growth equity is trying to buy",
+      content:
+        "At a high level, growth equity is trying to buy into businesses that have passed some of the existential uncertainty of early venture but still have substantial runway for revenue, cash-flow, and enterprise-value expansion. The manager is typically underwriting a company that already has real commercial proof, but is not yet fully mature operationally or strategically.\n\nCommon characteristics include:\n- demonstrated product-market fit or at least a meaningfully stronger evidence base than early venture\n- substantial revenue growth opportunity still ahead\n- need for growth capital to fund product expansion, sales buildout, geographic expansion, acquisitions, or balance-sheet flexibility\n- lower use of leverage than classic buyout, though not always zero leverage\n- less formal control than buyout in many cases, though governance influence can still be meaningful\n\nWhat the GP is usually buying is not just current performance. It is the right to participate in an already emerging compounder before that compounder becomes fully mature or fully public-market valued. That is why the strategy often relies more on business compounding than on debt paydown and more on operational scaling than on pure capital-structure engineering.\n\nAllocator implication:\nGrowth equity should be viewed as a strategy focused on scaling economics and runway quality. The central question is whether the company has enough evidence to reduce venture-style uncertainty, but still enough reinvestment opportunity to justify paying a premium for growth.",
+    },
+    {
+      type: "visual",
+      title: "The allocator's spectrum: venture, growth equity, buyout",
+      content:
+        "**Growth equity sits between venture and buyout, but not as a simple midpoint. The underlying economics, control, and evidence base change across the spectrum.**\n\n| Dimension | Venture | Growth equity | Buyout |\n|---|---|---|---|\n| **Company maturity** | Early to emerging | Commercially validated but still scaling | More mature and cash-flow visible |\n| **Main risk** | Company formation, product, and market emergence | Scaling quality, durability, and valuation discipline | Operational execution, leverage, and exit timing |\n| **Control profile** | Usually minority, limited control | Often minority or shared-control influence | Usually control ownership |\n| **Leverage use** | Minimal at company level in most cases | Usually low to moderate | Often material |\n| **Return driver** | Outliers and power-law outcomes | Business compounding plus multiple and execution | EBITDA growth, leverage, multiple, debt paydown |\n| **Evidence at entry** | Sparse to moderate | Meaningful but incomplete | More developed and financially legible |\n| **Portfolio role** | High dispersion, long duration | Growth-oriented private compounding sleeve | Control-oriented private equity core |\n\nThe allocator should use this table as a classification tool rather than as a rigid rulebook.",
+      caption:
+        "Growth equity is a distinct underwriting regime. It is not simply 'later venture' or 'lighter buyout' by default.",
+      whyItMatters:
+        "This is the central framing move of Day 37: give the learner a way to classify strategies that often blur together in manager marketing.",
+      sourceNote:
+        "This visual reflects the Lesson 37 purpose of distinguishing growth equity from both venture and buyout in allocator-useful terms.",
+    },
+    {
+      type: "teaching",
+      title: "The core return engine in growth equity",
+      content:
+        "The return engine in growth equity is usually a combination of business compounding, operating scaling, and multiple realization, with leverage often playing a smaller role than in buyout.\n\nImportant components include:\n- sustained revenue growth\n- improvement in unit economics, margins, and organizational scalability\n- greater confidence in the durability of the business model over time\n- sometimes multiple support or expansion if the company becomes more public-market-like or strategically desirable\n- in some cases, selective M&A or capital-structure optimization, though typically with less dependence than buyout\n\nThis matters because allocators should not underwrite growth equity through the wrong return template. If the manager presents the strategy as mostly a leverage-light version of buyout, the LP should ask whether the operational and scaling engine is genuinely strong enough. If the manager presents the strategy as mostly a de-risked version of venture, the LP should ask whether the outcomes are actually still power-law enough to justify venture-like valuation risk.\n\nAllocator implication:\nA strong growth strategy should show that business compounding itself can do meaningful work. The manager should not need extreme leverage or heroic multiple assumptions to make the return case credible.",
+    },
+    {
+      type: "teaching",
+      title: "Control without buyout-style control",
+      content:
+        "One of the most important differences between growth equity and buyout is the control profile. Growth investors often do not own outright control in the same way buyout firms do. But that does not mean they are passive.\n\nCommon growth-control realities include:\n- minority ownership with significant negotiated governance rights\n- board seats or observer rights\n- consent rights over major actions\n- strong influence through syndicate position and capital importance\n- ability to shape hiring, strategic pacing, financing discipline, or acquisition decisions without full control\n\nAllocator implication:\nThe learner should stop thinking in a simple binary of control versus no control. Growth equity often occupies a middle ground where governance influence matters a great deal even if full buyout-style control is absent. That means manager value-add, board behavior, and governance rights are often central to underwriting.\n\nThe key allocator question is:\nWhat level of influence does the GP actually need to execute the strategy? Some growth businesses can benefit from an influential but non-controlling investor. Others may be too messy to underwrite unless governance rights are strong enough to shape the operating path meaningfully.",
+    },
+    {
+      type: "teaching",
+      title: "Where growth equity most often lives: software, fintech, healthcare, and fragmented services",
+      content:
+        "Growth equity often appears most naturally in sectors where companies can demonstrate meaningful commercial traction before becoming fully mature. Common areas include:\n- enterprise software and vertical SaaS\n- fintech infrastructure and workflow businesses\n- healthcare IT and tech-enabled healthcare\n- internet platforms or marketplaces with proven liquidity\n- fragmented business-services models with tech-enabled scaling potential\n- certain consumer, industrial-tech, or data businesses that have crossed into repeatable growth but are not yet classic buyout targets\n\nWhy these sectors fit growth:\n- they can show meaningful revenue proof before reaching mature-state economics\n- they often need growth capital to scale sales, product, geography, or tuck-in acquisition plans\n- they can support substantial reinvestment while still becoming more financially legible over time\n\nWhat allocators should watch:\n- some sectors support true growth equity naturally, while others use the label more loosely\n- software-heavy growth funds may really be late-stage venture funds if mark sensitivity and minority-position dependence remain dominant\n- services-heavy growth funds may really be lighter-leverage buyouts if the business quality and governance profile are closer to control investing\n\nAllocator implication:\nSector fit helps classification, but does not settle it. The strategy still needs to be judged on evidence base, leverage use, control profile, and return logic.",
+    },
+    {
+      type: "teaching",
+      title: "What 'proof' should exist at growth-equity entry",
+      content:
+        "A defining feature of growth equity is that the company should generally have more proof than a classic venture investment, even if meaningful uncertainty remains.\n\nWhat proof often looks like:\n- recurring or repeatable revenue base\n- evidence that the product solves a real and durable customer problem\n- some visibility into customer acquisition efficiency or sales productivity\n- cohort or retention behavior that supports durability\n- margins or unit economics that show a plausible path to stronger cash-generation over time\n- management capacity to scale beyond founder-led improvisation\n\nWhat still may be uncertain:\n- whether growth remains durable at larger scale\n- whether the organization can mature operationally fast enough\n- whether valuation already discounts too much of the upside\n- whether the company will eventually exit through IPO, strategic sale, or sponsor route at attractive economics\n\nAllocator implication:\nThe right diligence standard is not 'venture proof plus one.' It is whether the business has crossed into a zone where scaling quality can be underwritten with enough evidence to justify a concentrated private investment at growth-style pricing.",
+    },
+    {
+      type: "example",
+      title: "Worked example 1: true growth equity versus mislabeled late-stage venture",
+      content:
+        "Assume two funds both describe themselves as growth investors.\n\n**Fund A**\n- invests in companies with meaningful recurring revenue\n- targets businesses with strong retention, visible sales efficiency, and some margin structure\n- typically negotiates board rights and meaningful governance influence\n- uses little leverage\n- expects returns to come mainly from business compounding and better scale economics\n\n**Fund B**\n- invests in companies with rapid topline growth but still limited operating maturity\n- often enters at high valuations based on future market leadership narratives\n- has less governance leverage\n- depends heavily on continued financing support or future public-market receptivity\n- emphasizes category leadership and market momentum more than operating scale quality\n\nAllocator analysis path:\n\n**Step 1: compare the evidence base**\nFund A appears to underwrite commercial and scaling proof. Fund B still looks more dependent on venture-style narrative and future capital-market tolerance.\n\n**Step 2: compare control and influence**\nFund A appears to have a more growth-equity-like governance posture. Fund B looks more like late-stage venture minority investing.\n\n**Step 3: compare return logic**\nFund A expects compounding from business scaling. Fund B seems more reliant on valuation continuation and future exit-window support.\n\nAllocator lesson:\nNot every fund using the growth label is doing the same job. The learner should classify the strategy by evidence base, governance, and return engine, not by brand language alone.",
+    },
+    {
+      type: "teaching",
+      title: "Valuation discipline matters differently in growth than in venture or buyout",
+      content:
+        "Growth equity sits in a difficult valuation zone. Companies are often expensive relative to current cash flow, yet more de-risked than early venture. That makes valuation discipline central.\n\nWhy:\n- less leverage means the return case often depends more directly on business compounding relative to entry price\n- the company may not yet have enough mature profitability to anchor valuation through classic buyout logic\n- public comparables may be relevant, but only partially, depending on scale, growth durability, and profitability\n- later-stage market enthusiasm can compress future returns even if the business itself is strong\n\nAllocator implication:\nA growth-equity GP should be able to explain what valuation discipline looks like in practice:\n- what growth durability is being paid for\n- what margin or operating improvement is needed to justify the price\n- what exit route is plausible at that entry multiple\n- what happens if growth slows faster than expected\n\nThis is also where growth investing can become deceptively risky. A strong business bought at an undisciplined price can still be a weak investment. The allocator should therefore listen carefully for whether the manager's underwriting is based on business quality alone or on business quality relative to entry price and exit realism.",
+    },
+    {
+      type: "teaching",
+      title: "Growth equity downside is usually not venture downside and not buyout downside",
+      content:
+        "Allocators should also understand that growth-equity downside has its own shape.\n\nIt is usually not pure venture downside because:\n- the company often has more real customers, revenue, and operating infrastructure\n- the business may be less likely to go to zero suddenly\n\nIt is usually not classic buyout downside because:\n- leverage may be lower\n- free cash flow may still be immature\n- the business may still be priced for growth rather than for current cash yield\n\nTypical growth-equity downside drivers include:\n- growth deceleration that compresses the valuation framework\n- inability to professionalize operations at the needed pace\n- rising acquisition costs or weaker retention\n- capital-market window closure that delays or worsens exit outcomes\n- governance limitations in minority positions when execution begins to slip\n\nAllocator implication:\nThe learner should underwrite growth downside as a combination of execution risk and multiple-risk. The company may survive, but the economics can still disappoint materially if growth quality weakens or public-market tolerance for premium growth assets falls.",
+    },
+    {
+      type: "teaching",
+      title: "The role of leverage in growth equity",
+      content:
+        "One of the most common marketing claims in growth equity is 'we use less leverage than buyout.' That is often true, but allocators should ask a more precise question: how important is leverage to the return case, and what form does it take?\n\nPossible realities include:\n- truly low leverage, with returns driven mainly by business growth\n- moderate leverage used as a supporting tool rather than a primary driver\n- selective leverage at holdco or opco level that still meaningfully affects risk\n- acquisition financing embedded in a roll-up or platform-building strategy\n\nAllocator implication:\nA growth strategy that relies little on leverage may genuinely offer a different return pattern from buyout. But a strategy that claims growth identity while using meaningful debt or consolidation logic may be closer to lightly levered buyout than to true growth equity.\n\nThis matters for portfolio role. Some allocators want growth as a private compounding sleeve with lower leverage sensitivity. Others may be comfortable with more hybrid strategies. The key is classification, not ideology.",
+    },
+    {
+      type: "visual",
+      title: "Growth equity return bridge",
+      content:
+        "**A useful growth-equity return bridge helps separate business compounding from financing effects.**\n\n| Return component | What it means | What allocator should test |\n|---|---|---|\n| **Revenue growth** | The company keeps expanding commercially | Is growth durable and of high quality? |\n| **Margin improvement** | Scale, pricing, or operating maturity improve profitability | Is there a credible path or just hoped-for operating leverage? |\n| **Multiple realization** | Exit market rewards the company at an attractive valuation | Is the entry price already too optimistic? |\n| **Governance / execution** | Investor influence helps scale the business more effectively | Does the GP have enough control or influence to matter? |\n| **Leverage** | Debt amplifies returns modestly or materially | Is leverage supplementary or central to the thesis? |\n\nA strong growth strategy should not need heroic assumptions in all five categories simultaneously.",
+      caption:
+        "The best growth-equity underwriting separates business compounding from multiple optimism and financing effects.",
+      whyItMatters:
+        "This gives the learner a practical way to test whether growth returns are truly business-driven or dependent on fragile assumptions.",
+      sourceNote:
+        "This visual operationalizes the Lesson 37 goal of distinguishing growth-equity return logic from both venture and buyout templates.",
+    },
+    {
+      type: "teaching",
+      title: "Portfolio construction in growth equity",
+      content:
+        "Growth-equity portfolios are often more concentrated than early-stage venture and less concentrated than classic buyout, but those are only tendencies. The real issue is what concentration means in a strategy where company-specific execution and exit multiple both matter.\n\nAllocator-relevant dimensions include:\n- number of portfolio companies\n- average ownership and governance rights\n- sector concentration, especially in software and healthcare\n- reserve needs for follow-ons or staged support\n- reliance on a small number of very large winners versus broader compounding across the book\n\nCompared with venture:\n- growth often has less extreme power-law behavior\n- but a few names can still dominate outcomes, especially when entry sizes are larger and reserve support is concentrated\n\nCompared with buyout:\n- growth portfolios can carry more valuation sensitivity and less leverage-driven downside\n- portfolio companies may be less uniformly controllable\n\nAllocator implication:\nThe learner should assess whether construction matches the underwriting regime. A concentrated growth portfolio may be sensible if the GP truly has strong evidence, governance leverage, and valuation discipline. It may be dangerous if the concentration mainly reflects narrative confidence without enough control or downside buffering.",
+    },
+    {
+      type: "teaching",
+      title: "What true growth-equity managers should be able to explain clearly",
+      content:
+        "A strong growth-equity manager should be able to explain five things with unusual clarity.\n\n**1. Classification**\nWhy is this strategy growth equity rather than late-stage venture or light buyout?\n\n**2. Proof standard**\nWhat business evidence must exist before the firm invests?\n\n**3. Governance model**\nWhat level of influence does the firm require to improve outcomes?\n\n**4. Valuation discipline**\nWhat has to be true operationally for the entry price to work?\n\n**5. Exit realism**\nWhat exit channels are credible, and what happens if the IPO window is shut or strategic buyers are cautious?\n\nWeak managers often default to generic language:\n- 'large markets'\n- 'category leaders'\n- 'proven but still early'\n- 'less risky than venture, more upside than buyout'\n\nThose phrases may all be directionally true. They are not yet allocator-useful. The allocator should demand that the GP show what those claims mean operationally and economically.",
+    },
+    {
+      type: "example",
+      title: "Worked example 2: true growth sleeve versus lighter-leverage buyout",
+      content:
+        "Assume two managers target vertical software businesses with recurring revenue.\n\n**Manager A**\n- takes sizable minority stakes\n- negotiates strong board and consent rights\n- uses minimal leverage\n- underwrites value creation through continued revenue growth, pricing, product expansion, and margin maturation\n\n**Manager B**\n- acquires control\n- uses moderate leverage\n- emphasizes operational tightening, tuck-in acquisitions, and exit optimization\n- still targets faster-growing assets than traditional buyout\n\nAllocator analysis path:\n\n**Step 1: separate growth language from economic model**\nBoth may invest in attractive software businesses, but the control and leverage model differ materially.\n\n**Step 2: identify the true return engine**\nManager A is more clearly growth equity. Manager B may be better classified as growth-oriented buyout.\n\n**Step 3: connect to portfolio role**\nManager A may fit a private-compounding growth sleeve. Manager B may fit a more traditional PE allocation with a faster-growth bias.\n\n**Step 4: evaluate risk correctly**\nManager A is likely more valuation-sensitive and less leverage-sensitive. Manager B is likely more operational-control- and leverage-sensitive.\n\nAllocator lesson:\nCompany sector overlap does not mean strategy overlap. The learner should classify the strategy by ownership, leverage, influence, and return bridge.",
+    },
+    {
+      type: "teaching",
+      title: "Where growth equity belongs in a private-markets programme",
+      content:
+        "For allocators, growth equity is often most useful when treated as its own sleeve rather than as a vague extension of either venture or buyout.\n\nPossible portfolio roles include:\n- a private compounding sleeve with lower leverage than buyout\n- a complement to venture for allocators who want less early-stage company-formation risk\n- a complement to buyout for allocators who want more organic growth exposure and less dependence on financial engineering\n\nWhat makes the sleeve useful:\n- access to companies with meaningful scaling runway\n- more operating evidence than venture\n- often less balance-sheet dependence than buyout\n\nWhat makes the sleeve risky:\n- expensive entry pricing\n- minority control limitations\n- exit dependence on public-market or strategic appetite for growth assets\n- thematic concentration, especially in software and healthcare\n\nAllocator implication:\nGrowth equity can be highly valuable, but only when its role is understood correctly. It should not be sold as 'venture with less risk' or 'buyout with more upside' without a specific explanation of what those phrases mean in return, governance, and liquidity terms.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: allocator- and practitioner-oriented materials on growth equity strategy, minority governance rights, business compounding, and exit pathways; educational resources distinguishing growth equity from venture and buyout; institutional private-markets materials on portfolio role, leverage use, and valuation discipline in growth investing. The goal is to teach growth equity as a distinct underwriting regime rather than a marketing midpoint.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a GP saying growth equity has less risk than venture and more upside than buyout",
+      content:
+        "The GP says: 'Growth equity gives you less risk than venture and more upside than buyout.'\n\nWeak LP response: 'That sounds attractive. It seems like the best of both worlds.'\n\nWhy it is weak: it accepts a positioning slogan without asking what kind of company is being underwritten, what control exists, what leverage is used, what valuation assumptions are embedded, and how exits actually work.\n\nStrong LP response: 'Please walk us through what specifically makes the strategy different from late-stage venture and from growth-oriented buyout. We want to understand the proof standard at entry, the governance model, the role of leverage, the return bridge, and the exit channels you are really relying on.'\n\nWhy it is strong: it turns a broad marketing statement into a strategy-classification and underwriting discussion.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what growth-equity classification can and cannot tell you",
+      content:
+        "Growth-equity classification can tell you whether the strategy's evidence base, governance profile, leverage use, and return logic make sense as a distinct sleeve. It can also help you identify when a manager is really doing late-stage venture or growth-oriented buyout under a more convenient label.\n\nBut classification cannot guarantee that the manager has strong sourcing, pricing discipline, or execution skill. Two firms can both be genuine growth investors and still differ materially in valuation discipline, sector selection, and exit realism. Classification improves clarity. It does not replace underwriting judgment.\n\nThe allocator should therefore use this lesson as a strategic map. It reduces category error and improves portfolio-role thinking. It does not eliminate manager-specific uncertainty.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: classify three adjacent strategies",
+      content:
+        "You are given three hypothetical funds.\n\n**Fund A**\nMinority investments in software and healthcare companies with strong revenue growth, meaningful board rights, little leverage, and return cases driven mainly by scaling economics.\n\n**Fund B**\nMinority investments in high-growth companies with premium valuations, weaker governance influence, and outcomes highly dependent on public-market receptivity and later financings.\n\n**Fund C**\nControl deals in recurring-revenue businesses with moderate leverage, tuck-in acquisitions, and operational-improvement plans.\n\nFor each fund, classify:\n1. primary strategy type\n2. key return engine\n3. main downside risk\n4. likely portfolio role\n5. biggest diligence question that still needs answering\n\nThen answer three questions:\n- Which fund is most clearly true growth equity, and why?\n- Which fund is most vulnerable to being mislabeled?\n- What one metric or evidence set would you want first for each fund?\n\nFinal task:\nWrite a short allocator memo titled 'Why growth equity needs to be classified, not assumed.'",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal growth-equity questions",
+      content:
+        "1. 'What specific proof must exist before you invest, and how does that proof differ from what a late-stage venture investor might accept?'\n\n2. 'What governance influence do you require to execute your strategy, and when would a minority position be too weak to underwrite confidently?'\n\n3. 'How much of your return case depends on business compounding versus valuation support, leverage, or exit-window conditions?'\n\n4. 'Can you show a case where you passed on a strong company because the growth-quality-to-price tradeoff was not attractive enough?'\n\n5. 'Across your portfolio, where should we think of the strategy as most vulnerable: execution, valuation compression, or exit timing?'",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 37 should change growth-equity diligence",
+      content:
+        "After Day 37, the learner should stop hearing growth equity as a broad in-between label and start hearing it as a distinct underwriting regime with its own evidence base, control profile, leverage profile, valuation challenges, and portfolio role. That is the key allocator upgrade.\n\nThis shift should sharpen diligence in several ways. It should make the learner more precise about classification, more skeptical of generic 'best-of-both-worlds' language, more focused on governance influence and valuation discipline, and more thoughtful about how growth belongs alongside venture and buyout in a private-markets programme. In growth equity, the hardest work is often not deciding whether the company is attractive. It is deciding what strategy the manager is actually running and whether the economics fit that label.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d37q1",
+      type: "multiple-choice",
+      prompt:
+        "Why is growth equity not simply the midpoint between venture and buyout?",
+      options: [
+        "Because it has its own mix of commercial proof, governance influence, leverage use, and return drivers",
+        "Because it is defined entirely by fund size",
+        "Because growth funds never invest in software",
+        "Because only buyout funds can create operational value",
+      ],
+      correctAnswer:
+        "Because it has its own mix of commercial proof, governance influence, leverage use, and return drivers",
+    },
+    {
+      questionId: "d37q2",
+      type: "multiple-choice",
+      prompt:
+        "What is usually the most important return engine in true growth equity?",
+      options: [
+        "Pure leverage amplification",
+        "Business compounding and scaling economics, often with less reliance on leverage than buyout",
+        "Only multiple expansion with no operating change",
+        "Power-law outliers identical to seed venture",
+      ],
+      correctAnswer:
+        "Business compounding and scaling economics, often with less reliance on leverage than buyout",
+    },
+    {
+      questionId: "d37q3",
+      type: "multiple-choice",
+      prompt:
+        "Why is valuation discipline especially important in growth equity?",
+      options: [
+        "Because companies are often more proven than venture but still priced on substantial future growth, making entry price central to the return case",
+        "Because growth investors can always rely on debt paydown to rescue returns",
+        "Because valuation matters only in public markets",
+        "Because growth funds never face exit risk",
+      ],
+      correctAnswer:
+        "Because companies are often more proven than venture but still priced on substantial future growth, making entry price central to the return case",
+    },
+    {
+      questionId: "d37q4",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of minority ownership in growth equity?",
+      options: [
+        "Minority automatically means passive and non-influential",
+        "Minority can still be viable if governance rights and syndicate position provide enough influence to execute the strategy",
+        "Minority positions are appropriate only in venture, never growth",
+        "Minority ownership eliminates exit risk",
+      ],
+      correctAnswer:
+        "Minority can still be viable if governance rights and syndicate position provide enough influence to execute the strategy",
+    },
+    {
+      questionId: "d37q5",
+      type: "multiple-choice",
+      prompt:
+        "Which of the following is the clearest sign a fund may be mislabeled as growth equity?",
+      options: [
+        "The manager can explain proof standards, governance model, and return bridge clearly",
+        "The strategy depends heavily on narrative continuation and later financing support while offering limited governance influence",
+        "The fund invests in software and healthcare",
+        "The manager uses little leverage",
+      ],
+      correctAnswer:
+        "The strategy depends heavily on narrative continuation and later financing support while offering limited governance influence",
+    },
+    {
+      questionId: "d37q6",
+      type: "multiple-choice",
+      prompt:
+        "Why should allocators think of growth equity as a distinct portfolio sleeve?",
+      options: [
+        "Because it can provide private compounding exposure with a different balance of evidence, control, and leverage than either venture or buyout",
+        "Because it always outperforms venture and buyout",
+        "Because it is simply a branding term for all late-stage private investments",
+        "Because it has no valuation sensitivity",
+      ],
+      correctAnswer:
+        "Because it can provide private compounding exposure with a different balance of evidence, control, and leverage than either venture or buyout",
+    },
+    {
+      questionId: "d37q7",
+      type: "short-response",
+      prompt:
+        "Explain why a strong company can still be a weak growth-equity investment. Write two to four sentences.",
+      modelAnswer:
+        "A growth-equity investment can disappoint even in a strong company if the entry price already discounts too much of the future upside, if governance influence is too weak to shape execution, or if the exit path depends on an overly supportive market window. Growth investing is not just about business quality. It is about business quality relative to price, influence, and realistic monetization.",
+    },
+    {
+      questionId: "d37q8",
+      type: "short-response",
+      prompt:
+        "A GP says their strategy offers less risk than venture and more upside than buyout. What are the three most important follow-up questions you should ask after this lesson?",
+      modelAnswer:
+        "First, I would ask what proof must exist before the firm invests and how that differs from late-stage venture. Second, I would ask what governance influence and leverage profile the strategy actually uses, because those determine whether the fund behaves more like growth or like buyout. Third, I would ask what the real return bridge is, including how much depends on business compounding versus valuation support and exit timing.",
+    },
+  ],
+  sources: [
+    "Allocator- and practitioner-oriented materials on growth equity strategy, minority governance rights, business compounding, and exit pathways",
+    "Educational resources distinguishing growth equity from venture and buyout through company maturity, control, leverage, and return drivers",
+    "Institutional private-markets materials on portfolio role, valuation discipline, and governance influence in growth investing",
+    "Industry resources on recurring-revenue growth investing, software and healthcare growth models, and growth-oriented private-equity classification",
+    "CFA Institute and related private-markets educational materials providing context for growth equity as a distinct sleeve within a private-markets programme",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
