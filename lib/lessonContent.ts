@@ -3295,103 +3295,218 @@ export const lessonContents: LessonContent[] = [
     blocks: [
       {
         type: "intro",
-        title: "Why this matters",
+        title: "Meeting cold open",
         content:
-          "Adding PE to a portfolio is not just a return decision — it is a liquidity, governance, and complexity decision. Understanding how PE fits in a broader allocation framework helps you size it correctly and set realistic expectations for what it can and cannot do.",
+          "An investment committee is debating whether to raise private equity from 12% of plan assets to 18%. The argument in favor sounds familiar: 'private equity has outperformed public markets over time, we have strong manager access, and illiquidity is something we can afford to harvest.' The argument against sounds cautious but incomplete: 'we already have enough complexity, liquidity is valuable, and the last two years showed that marks can lag reality.' Both sides are partly right. Neither is asking the most important question: what role is private equity supposed to play in this specific portfolio, and what evidence do we have that it is earning that role net of fees, illiquidity, governance burden, and opportunity cost? This lesson provides the framework for answering that question.",
+      },
+      {
+        type: "framing",
+        title: "Private equity is not just a return sleeve",
+        content:
+          "Allocators often describe private equity as a return-enhancing allocation. That is directionally correct, but incomplete. PE is simultaneously:\n\n- a **return-seeking asset class** with a claim to an illiquidity premium\n- a **liquidity-consuming programme** that requires multi-year commitment planning\n- a **governance-intensive activity** that demands manager selection, pacing discipline, reporting review, and relationship management\n- a **risk transfer decision** away from daily marked liquidity toward valuation lag, manager dispersion, and capital-call uncertainty\n\nThat means the decision to allocate to PE is never just 'do we think returns will be good?' It is also:\n\n- can this portfolio tolerate the illiquidity?\n- can this institution govern the programme well enough to capture the premium rather than donate it to fees and weak manager selection?\n- what is the relevant opportunity cost versus public equities, credit, or other illiquid alternatives?\n\nThe allocator's job is not to admire PE's best historical outcomes. It is to determine whether PE deserves a larger, smaller, or unchanged role in the total portfolio given the institution's actual constraints.",
       },
       {
         type: "teaching",
-        title: "The illiquidity premium argument",
+        title: "The illiquidity premium argument: theory versus practice",
         content:
-          "The theoretical case for PE rests on an illiquidity premium: investors who accept locked-up capital, complex reporting, and manager-selection risk should earn more than a passive public-market investor. Empirically, evidence is mixed. Net-of-fee PE returns have outperformed public equities in some periods and underperformed in others depending on vintage, strategy, and manager selection. The premium is not guaranteed — it must be earned through manager selection and programme discipline.",
+          "The theoretical case for private equity is straightforward. Investors who accept long lock-ups, uncertain cash-flow timing, complex structures, and higher manager-selection risk should earn a return premium over liquid public equities. That premium is often described as the **illiquidity premium**.\n\nBut in practice, the premium is not automatic. It has to survive four deductions:\n\n**1. Fees**\nPE fee structures are materially heavier than public-market index exposure. Management fees, carried interest, transaction costs, and portfolio company-level fee leakage all consume gross return.\n\n**2. Manager dispersion**\nUnlike broad public equity beta, PE outcomes vary dramatically by manager. A weak manager can easily erase whatever illiquidity premium the asset class might have offered in aggregate.\n\n**3. Implementation quality**\nVintage diversification, pacing discipline, strategy selection, and re-up decisions all matter. A poorly run PE programme may underperform not because PE as an asset class failed, but because the allocator captured a weak subset of the opportunity set.\n\n**4. Opportunity cost**\nThe relevant comparison is not abstract historical outperformance. It is whether the PE programme beat what the institution could realistically have done in liquid markets or alternative uses of capital over the same period, with similar timing. This is why PME-style thinking matters.\n\nThe professional conclusion is not 'PE earns an illiquidity premium.' It is: PE may earn one, but only for institutions with the governance, access, and discipline required to capture it net of costs and programme mistakes.",
       },
       {
         type: "teaching",
-        title: "Sizing PE in a portfolio",
+        title: "Why PE belongs in some portfolios and not others",
         content:
-          "PE sizing depends on three constraints. Liquidity: PE capital is locked up for 7–12 years; the allocation must be sized within the portfolio's liquidity budget — typically no more than 20–30% for an endowment, less for a pension with near-term liabilities. Return objective: PE should be expected to beat the equivalent public-market benchmark by enough to justify illiquidity and complexity — often targeted at 200–300bps net of fees over a PME benchmark. Governance capacity: PE requires ongoing manager selection, pacing management, and reporting — it is a resource-intensive asset class.",
+          "Private equity is not universally appropriate. Its suitability depends on the structure of the institution more than on enthusiasm for the asset class.\n\n**PE tends to fit best where three conditions hold:**\n\n- the investor has a long time horizon and limited forced-liquidity needs\n- the investor has enough governance capacity to select and monitor managers well\n- the investor can tolerate periods when the PE allocation drifts above target because capital cannot be rebalanced quickly\n\nThat is why PE often fits naturally in endowments, some foundations, and large institutions with stable capital bases and dedicated private markets teams.\n\nPE is harder to justify where one or more of those conditions fails. A portfolio with near-term liability needs, weak internal private markets staffing, or limited tolerance for denominator-effect volatility may still invest in PE, but the allocation should usually be smaller and the programme simpler.\n\nThe allocator question is not whether PE is 'good.' It is whether this institution can live with the actual operating characteristics of PE without being forced into poor decisions during stress.",
+      },
+      {
+        type: "visual",
+        title: "When PE fits the portfolio",
+        content:
+          "**PE suitability depends on more than return appetite:**\n\n| Portfolio characteristic | PE more suitable | PE less suitable |\n|---|---|---|\n| **Time horizon** | Long-dated or perpetual capital base | Near-term asset-liability matching needs |\n| **Liquidity burden** | Modest near-term cash demands | Significant recurring payout or liability needs |\n| **Governance capacity** | Dedicated private markets staff / strong external support | Limited team bandwidth and weak monitoring capacity |\n| **Tolerance for drift** | Can accept temporary allocation overshoots and valuation lag | Requires frequent precise rebalancing |\n| **Manager access** | Strong sourcing and re-up discipline | Limited access, mostly commoditized fund exposure |\n\nPE is most attractive where the institution can absorb its operational reality, not just admire its headline returns.",
+        caption:
+          "Private equity is a fit decision as much as a return decision.",
+        whyItMatters:
+          "A portfolio can believe in PE's return potential and still be poorly suited to run a large PE programme. Suitability and expected return are separate questions.",
+        sourceNote:
+          "Institutional asset allocation practice consistently treats illiquid alternatives as a function of horizon, liquidity tolerance, and governance strength, not just expected return.",
+      },
+      {
+        type: "teaching",
+        title: "Sizing PE: the three real constraints",
+        content:
+          "Private equity allocation sizing is usually constrained by three things, not one.\n\n**1. Liquidity constraint**\nThis is the most obvious. The institution must be able to meet spending, liabilities, capital calls, and other obligations without relying on PE distributions arriving on schedule. PE should be sized inside the liquidity budget, not on top of it.\n\n**2. Governance constraint**\nThis is underappreciated. A larger PE programme requires more manager diligence, more pacing oversight, more quarterly reporting review, more side-letter and legal coordination, and often more LPAC participation. An institution with thin staffing can easily build a PE allocation too large for its governance resources.\n\n**3. Opportunity-cost constraint**\nPE should not just produce high nominal returns. It should produce sufficiently better net-of-fee, risk-aware outcomes than public-market alternatives to justify the liquidity and complexity burden. If an institution cannot access strong managers or cannot run the programme well, a simpler public-market solution may be superior despite lower headline upside.\n\nThe mistake many committees make is to size PE using only strategic optimism: 'we want more return, therefore we want more PE.' The professional version asks how much PE the institution can actually absorb and execute well.",
+      },
+      {
+        type: "teaching",
+        title: "Allocator type matters: the right PE weight is institution-specific",
+        content:
+          "A common error in committee discussions is to treat PE allocation ranges as universal. They are not. The right PE weight is highly dependent on allocator type.\n\n**Endowments**\nLong horizons, relatively stable capital, and high tolerance for complexity often support larger PE allocations. The key risk is not just liquidity, but governance sprawl and overconfidence in manager access.\n\n**Foundations**\nFoundations often have perpetual capital, but spending requirements can create a more binding liquidity need than committees initially recognize. PE can fit well, but only if the payout burden and grant cadence are properly modeled.\n\n**Defined benefit pensions**\nPensions must consider benefit-payment obligations, funded status, and balance-sheet sensitivity. PE can still play a meaningful role, but the allocation often needs to be sized more conservatively than in perpetual-capital pools because liquidity and cash-flow reliability matter more.\n\n**Family offices**\nThe range is wide. Some have highly flexible balance sheets and can tolerate large illiquid allocations. Others face concentrated operating-business or family-liquidity needs that make a heavy PE programme unwise. Governance capacity is often more constrained than headline wealth suggests.\n\n**Insurers and liability-sensitive pools**\nThese portfolios often place a much higher premium on asset-liability matching and regulatory capital treatment. PE may still belong, but usually in a smaller role than in endowment-style models.\n\nThe practical conclusion: 'peer institutions allocate 25% to PE' is not evidence that you should. Peer practices are only relevant after adjusting for liquidity structure, liability profile, and governance capacity.",
+      },
+      {
+        type: "teaching",
+        title: "PE's real portfolio role: what is it substituting for?",
+        content:
+          "One of the most useful portfolio-construction questions is simple: if we increase PE, what are we reducing?\n\nBecause PE is usually treated as a growth asset, the substitute is often public equities. But that substitution is not one-for-one in risk terms. PE differs from public equities in several ways:\n\n- lower reported short-term volatility due to valuation lag, not necessarily lower economic risk\n- higher manager-selection risk\n- less liquidity and slower rebalancing capacity\n- different leverage exposure at the asset level, especially in buyouts\n- heavier governance demands\n\nThat means replacing public equities with PE is not just a beta swap. It is a trade between liquidity and complexity on one side, and the potential for higher net returns on the other.\n\nIn some portfolios, PE may instead substitute for other illiquid growth assets, such as private credit, real estate, or venture capital. The comparison should always be explicit. A recommendation to raise PE without naming the funding source is incomplete because it hides the actual portfolio trade-off.",
+      },
+      {
+        type: "teaching",
+        title: "Why reported diversification benefits can be overstated",
+        content:
+          "Some committees are drawn to PE because historical reporting often shows lower volatility and lower correlation to public equities than listed stocks. That should be interpreted carefully.\n\nPE valuations are appraisal-based and lag public markets. As a result, quarterly PE returns are smoothed relative to daily public-market prices. This creates the appearance of lower volatility and lower contemporaneous correlation.\n\nEconomically, PE still owns operating businesses that are exposed to the same macro forces as public companies: revenue cycles, margins, financing costs, and valuation multiples. Over a full cycle, PE is much more equity-like than short-term reported statistics suggest.\n\nThis does not mean PE has no diversification value. Strategy mix, sector exposure, leverage, and active ownership can all matter. But a committee should not size PE on the assumption that the historical volatility series reflects true liquid-market resilience. Doing so mistakes valuation method for economic diversification.",
+      },
+      {
+        type: "visual",
+        title: "What a larger PE allocation really asks the institution to do",
+        content:
+          "**Increasing PE asks for more than tolerance for illiquidity:**\n\n| If PE increases... | The institution must also accept... |\n|---|---|\n| **Higher return-seeking exposure** | Greater dependence on manager selection skill |\n| **More funded NAV over time** | Slower rebalancing and more denominator-effect risk |\n| **More commitments and relationships** | Higher governance load and monitoring burden |\n| **More illiquid capital** | Less flexibility to fund spending or redeploy during stress |\n| **Potentially higher net returns** | A higher burden of proof versus public-market opportunity cost |\n\nA larger PE allocation is an operating commitment, not just a strategic asset-allocation line item.",
+        caption:
+          "Allocating more to PE means accepting more governance and liquidity burden in exchange for expected return improvement.",
+        whyItMatters:
+          "Committees often debate PE at the level of expected return only. The real decision includes operational and governance consequences that can outweigh the return case if ignored.",
+        sourceNote:
+          "Institutional private-markets practice consistently treats PE programme scale as jointly determined by return goals, liquidity, and governance capacity.",
       },
       {
         type: "example",
-        title: "Mini-case: sizing for a pension vs. endowment",
+        title: "Worked example: should the foundation double PE?",
         content:
-          "A university endowment with no near-term spending constraints (other than a 5% annual distribution) can allocate 25–35% to PE — long time horizon, perpetual capital. A corporate pension fund with defined benefit obligations payable in 5–10 years might target 8–12% — liquidity needs constrain the illiquid allocation. Both are rational. The PE allocation is a function of liability structure as much as return expectations.",
+          "A foundation with a $900M portfolio currently has a 9% PE allocation and is considering moving to 18% over time. The committee's argument is that the foundation has perpetual capital, can tolerate illiquidity, and wants to improve long-run returns.\n\nThat is the start of the analysis, not the end.\n\n**What supports the increase:**\n- perpetual capital base\n- moderate spending rate relative to assets\n- ability to accept long-horizon investments\n- access to a few high-quality relationships with established managers\n\n**What may argue against a sharp increase:**\n- the investment office has limited private-markets staffing\n- quarterly liquidity forecasting is still basic rather than robust\n- the current PE programme is manager-light and not well diversified by strategy or geography\n- the committee has not defined whether the extra PE will be funded from public equities or other illiquid assets\n\nNow frame the real question: should the foundation raise PE because it believes in the long-run premium, or should it first strengthen its implementation capacity so that a larger PE allocation has a realistic chance of earning that premium?\n\nA disciplined answer may be: increase, but gradually. Move from 9% toward 12–14% first, while improving governance infrastructure, liquidity modeling, and manager diversification. A direct jump toward 18% assumes implementation capacity that the current programme may not yet have. The problem is not the strategic thesis. It is the operational readiness.",
+      },
+      {
+        type: "example",
+        title: "Worked example: why a pension may rationally keep PE smaller",
+        content:
+          "A defined benefit pension with a $4B portfolio and a meaningful annual benefit-payment burden currently holds 11% in PE and is considering a move to 15%. The consultant notes that peer plans allocate more and that the plan's long-term return target is demanding.\n\nThe case for more PE is easy to state. The harder question is whether the pension's liability profile and governance model support a larger illiquid allocation.\n\nSuppose the pension relies on liquid assets to help fund near- and medium-term benefit payments, and suppose the plan's private markets team is relatively small. In that case, the institution may face real trade-offs:\n\n- less flexibility during public-market drawdowns\n- heavier dependence on distributions arriving from PE at the wrong moments\n- greater denominator-effect risk if public assets fall\n- more governance burden without a matching increase in internal staffing\n\nIn that setting, holding PE at 10–12% may be entirely rational even if the committee believes PE offers some long-run premium. The institution is not rejecting PE because it doubts the asset class in theory. It is sizing PE to the portfolio and liability structure it actually has.",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: arguing for more PE",
+        content:
+          "The committee says: 'Private equity has higher expected returns than public equities, so we should raise the allocation.'\n\n**Weak response:** 'Agreed. If we can tolerate illiquidity, we should own more of the higher-returning asset class.'\n\nWhy it is weak: it assumes the premium is automatic, ignores governance and manager-access constraints, and fails to identify what asset is being reduced to fund the increase.\n\n**Strong response:** 'Maybe, but only if we can articulate the role PE plays in this portfolio, what asset class it would replace, and why we believe our programme can earn a sufficient premium net of fees and implementation costs. We also need to test whether our liquidity profile and governance resources can support a larger PE allocation without forcing poor decisions in stressed markets. Higher expected return is a necessary argument, not a sufficient one.'\n\nWhy it is strong: it reframes PE sizing as a portfolio design question rather than a simple return preference.",
+      },
+      {
+        type: "inference-boundary",
+        title: "Inference boundary: what past PE outperformance can and cannot tell you",
+        content:
+          "**What historical PE outperformance can tell you:**\n- that PE has, in some periods and segments, delivered strong net returns relative to public markets\n- that long-horizon institutions with strong manager selection and governance have often been able to capture a meaningful premium\n- that PE can be an important part of a growth-oriented portfolio when implemented well\n\n**What it cannot tell you:**\n- that this institution will capture the same premium; implementation quality matters enormously\n- that a larger allocation is automatically better; governance and liquidity burdens rise with programme size\n- that PE's reported short-term volatility reflects true economic resilience; valuation lag affects the data\n- that peer allocations are suitable analogies for your own portfolio; institution type matters",
       },
       {
         type: "exercise",
-        title: "Quick exercise",
+        title: "Applied exercise: write the case for and against increasing PE",
         content:
-          "A foundation asks you whether to increase its PE allocation from 10% to 20%. What three questions do you ask before making a recommendation?",
+          "A foundation currently allocates 10% to PE and is considering raising the target to 15%. Write two short cases:\n\n1. **The case for increasing PE** — using expected return, time horizon, and portfolio role\n2. **The case against increasing PE right now** — using liquidity, governance, and implementation risk\n\nThen decide which side is stronger based on one missing fact you would most want before making the recommendation. A strong answer should recognize that PE allocation size is not a belief statement about the asset class. It is a judgment about fit, execution capability, and opportunity cost.",
+      },
+      {
+        type: "meeting-application",
+        title: "In the committee discussion: five questions that improve the PE sizing debate",
+        content:
+          "1. **'What exactly is PE replacing in the portfolio if we increase it?'** This forces the committee to make the portfolio trade-off explicit.\n\n2. **'What net premium do we believe this programme can earn over a liquid public-market alternative after fees and implementation costs?'** This shifts the discussion from headline return to actual expected value-add.\n\n3. **'What are the binding constraints on a larger PE programme: liquidity, governance, access, or something else?'** This identifies the real ceiling on allocation size.\n\n4. **'Which peer institutions are truly comparable to us in liquidity needs and governance capacity?'** This prevents lazy peer comparison.\n\n5. **'If public markets fell sharply next year, would we still feel comfortable with the larger PE target?'** This stress-tests the recommendation against denominator-effect conditions rather than benign markets.",
+      },
+      {
+        type: "meeting-application",
+        title: "Allocator application: how to characterize PE in a strategic asset-allocation memo",
+        content:
+          "A strong asset-allocation memo should not describe PE as simply 'higher-returning public equity.' It should characterize PE in four dimensions:\n\n**Return role** — expected source of excess return and how it will be judged versus public-market opportunity cost\n\n**Liquidity role** — how the allocation fits within the portfolio's liquidity budget and stress-case funding needs\n\n**Governance role** — what internal or external capabilities are required to execute the programme successfully\n\n**Risk role** — what new risks the portfolio is taking on, including manager dispersion, valuation lag, concentration in vintages or strategies, and slower rebalancing capacity\n\nIf the memo cannot clearly explain all four, the PE allocation case is underdeveloped.",
+      },
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "Institutional asset allocation frameworks for illiquid assets: CFA Institute and CAIA curriculum materials on private markets in portfolio context. Foundational endowment and long-horizon allocator perspectives on illiquid allocation sizing and governance burden: David Swensen and institutional practitioner literature. Research and practitioner debate on PE's illiquidity premium, manager dispersion, and implementation dependence: academic PE performance literature and institutional benchmarking practice.",
       },
     ],
     quiz: [
       {
         questionId: "d17q1",
         type: "multiple-choice",
-        prompt: "What is the theoretical basis for expecting a PE return premium over public equities?",
+        prompt:
+          "What is the most accurate description of the private equity illiquidity premium?",
         options: [
-          "PE managers have access to better macroeconomic forecasts than public equity managers",
-          "Investors accepting illiquidity, complexity, and manager risk should be compensated with higher expected returns",
-          "PE portfolios are more diversified than public equity indices",
-          "PE fees are lower than mutual fund fees, improving net returns",
+          "A guaranteed excess return over public equities earned simply by accepting locked-up capital",
+          "A potential return premium that must survive fees, manager dispersion, and implementation quality to be realized by the allocator",
+          "A regulatory premium created by lower accounting volatility for private assets",
+          "A premium available only to venture capital funds and not buyout funds",
         ],
         correctAnswer:
-          "Investors accepting illiquidity, complexity, and manager risk should be compensated with higher expected returns",
+          "A potential return premium that must survive fees, manager dispersion, and implementation quality to be realized by the allocator",
       },
       {
         questionId: "d17q2",
         type: "multiple-choice",
         prompt:
-          "Which factor most limits the appropriate PE allocation size for a defined benefit pension fund?",
+          "Which of the following is most likely to justify a larger PE allocation?",
         options: [
-          "Regulatory restrictions on alternative investments",
-          "Near-term liquidity needs to fund benefit payments",
-          "Manager concentration limits in the LPA",
-          "The fund's inability to conduct co-investments",
+          "A belief that peer institutions allocate more to PE, even if their liquidity needs differ",
+          "A long-horizon capital base, strong governance capacity, and evidence that the institution can access and implement the asset class well",
+          "The fact that PE's reported volatility is lower than public equities on quarterly data",
+          "A desire to avoid public-market mark-to-market volatility in committee materials",
         ],
-        correctAnswer: "Near-term liquidity needs to fund benefit payments",
+        correctAnswer:
+          "A long-horizon capital base, strong governance capacity, and evidence that the institution can access and implement the asset class well",
       },
       {
         questionId: "d17q3",
         type: "multiple-choice",
         prompt:
-          "A PE programme targets 250bps of net outperformance over a public-market PME benchmark. What does this mean in practice?",
+          "Why is governance capacity a real constraint on PE allocation size?",
         options: [
-          "The PE portfolio must beat the S&P 500 IRR by 2.5% annualised net of all fees",
-          "The PME of the PE programme should be at least 1.0 plus a 2.5% annual excess return equivalent",
-          "The GP's gross IRR must exceed the LP's hurdle rate by 2.5%",
-          "The PE allocation must produce a 2.5x TVPI above the public benchmark TVPI",
+          "Because regulators cap PE allocations based on staff headcount",
+          "Because a larger PE programme requires more manager diligence, pacing oversight, reporting review, and relationship management",
+          "Because every PE fund requires monthly LPAC participation",
+          "Because GPs require dedicated internal operating partners from each LP",
         ],
         correctAnswer:
-          "The PME of the PE programme should be at least 1.0 plus a 2.5% annual excess return equivalent",
+          "Because a larger PE programme requires more manager diligence, pacing oversight, reporting review, and relationship management",
       },
       {
         questionId: "d17q4",
         type: "multiple-choice",
         prompt:
-          "Why is 'governance capacity' a genuine constraint on PE allocation size?",
+          "What is the most important flaw in the statement 'PE reduces portfolio volatility because historical reported PE volatility is lower than public equities'?",
         options: [
-          "PE governance requires board approval for every co-investment",
-          "PE requires ongoing manager diligence, pacing management, and complex reporting that demands internal staff resources",
-          "ERISA rules require governance reviews for every PE commitment above $10M",
-          "Larger PE allocations require more frequent LPAC participation, consuming staff time",
+          "PE volatility is irrelevant because PE is always held to maturity",
+          "PE volatility is lower only because PE funds hedge macro risk more actively than public companies",
+          "Reported PE volatility is partly an artifact of appraisal-based valuation lag and smoothing rather than proof of lower underlying economic risk",
+          "PE volatility matters only for venture capital, not buyouts",
         ],
         correctAnswer:
-          "PE requires ongoing manager diligence, pacing management, and complex reporting that demands internal staff resources",
+          "Reported PE volatility is partly an artifact of appraisal-based valuation lag and smoothing rather than proof of lower underlying economic risk",
       },
       {
         questionId: "d17q5",
+        type: "multiple-choice",
+        prompt:
+          "Which institution is most likely, all else equal, to support a higher strategic PE allocation?",
+        options: [
+          "A perpetual-capital endowment with strong private-markets staffing and modest liquidity needs",
+          "A defined benefit plan with heavy near-term payout obligations and thin internal staff",
+          "An insurer prioritizing asset-liability matching and regulatory capital efficiency",
+          "A foundation with high annual spending needs and no reliable liquidity model",
+        ],
+        correctAnswer:
+          "A perpetual-capital endowment with strong private-markets staffing and modest liquidity needs",
+      },
+      {
+        questionId: "d17q6",
         type: "short-response",
         prompt:
-          "Explain why the illiquidity premium in PE is not guaranteed and what conditions must be met to earn it.",
+          "Why is the question 'Should we own more PE because it has higher expected returns?' incomplete as a portfolio-construction argument?",
         modelAnswer:
-          "The illiquidity premium is a compensation for accepting locked-up capital, manager risk, and complexity — but it is not automatic. It must be earned through above-median manager selection (PE dispersion is wide, so median managers may not outperform public markets net of fees), disciplined vintage year diversification (a single bad vintage can drag programme returns), and sustained programme governance (pacing, diligence, and relationships). Empirically, the premium has been realised by sophisticated institutional investors with strong governance and long track records in the asset class, but not by all investors. A poorly constructed PE programme can underperform public equities after fees.",
+          "Because PE allocation is not just a return decision. It is also a liquidity, governance, and opportunity-cost decision. A larger PE allocation may be justified only if the institution can tolerate the illiquidity, govern the programme well enough to capture the premium net of fees and manager dispersion, and explain what asset class PE is replacing in the portfolio. Without that full portfolio context, the higher-expected-return argument is incomplete. It states the attraction of PE without testing whether this specific institution can implement it successfully.",
+      },
+      {
+        questionId: "d17q7",
+        type: "short-response",
+        prompt:
+          "A foundation wants to increase PE from 10% to 15%. What are the three most important questions you would want answered before recommending the change?",
+        modelAnswer:
+          "First, what is PE replacing in the portfolio, and what is the expected net benefit relative to that alternative after fees and implementation costs? Second, can the foundation's liquidity profile and spending obligations comfortably support a larger illiquid allocation through stressed markets, not just normal conditions? Third, does the institution have the governance capacity and manager access required to run a larger PE programme well? Those three questions determine whether the increase is a disciplined portfolio choice or just a belief statement about the asset class.",
       },
     ],
     sources: [
-      "CFA Institute alternative investments — PE in the portfolio context",
-      "CAIA Level II — alternative asset allocation",
-      "Swensen, David — Pioneering Portfolio Management (endowment framework)",
+      "CFA Institute and CAIA curriculum materials on private markets in portfolio context",
+      "Institutional allocator literature on illiquid asset sizing, governance burden, and opportunity cost",
+      "Academic and practitioner literature on PE illiquidity premium, manager dispersion, and implementation dependence",
+      "David Swensen and long-horizon institutional portfolio-construction frameworks for illiquid assets",
     ],
   },
 
