@@ -1,9 +1,18 @@
 "use client";
 
-import { use, useState, useEffect } from "react";
-import { getLessonContent } from "@/lib/lessonContent";
-import { DEFAULT_MODULE_ID, getModuleById } from "@/lib/modules";
-import { saveQuizResult, setLessonStatus, getQuizResult } from "@/lib/progress";
+import { use, useState, useEffect, useRef, useCallback } from "react";
+import { getLessonContent, lessonContents } from "@/lib/lessonContent";
+import { DEFAULT_MODULE_ID, getModuleById, getDefaultModule } from "@/lib/modules";
+import {
+  setLessonStatus,
+  getQuizResult,
+  getModuleProgress,
+  saveQuizAttempt,
+  getQuizHistory,
+  recordWrongAnswers,
+  saveLessonPosition,
+  getLessonPosition,
+} from "@/lib/progress";
 import {
   LessonBlock,
   LessonBlockType,
@@ -11,6 +20,8 @@ import {
   SRQuestion,
   QuizQuestion,
   QuizResult,
+  QuizAttempt,
+  WrongAnswer,
 } from "@/lib/types";
 import { AiHelper } from "@/components/AiHelper";
 import { LESSON_VISUALS } from "@/components/visuals";
@@ -588,7 +599,7 @@ function ConfidenceRating({
         How confident do you feel?
       </p>
       <p className="text-sm text-[#404040] mb-4">
-        Rate your understanding of today's material.
+        Rate your understanding of today&apos;s material.
       </p>
       <div className="flex gap-2 justify-between">
         {CONFIDENCE_LABELS.map((label, i) => {
@@ -616,6 +627,320 @@ function ConfidenceRating({
   );
 }
 
+// ── Spaced quiz injection ─────────────────────────────────────────────────────
+
+type InjectedQuestion = MCQuestion & { sourceLessonId: string; sourceDayNumber: number };
+
+function pickInjectedQuestions(currentLessonId: string, count: number): InjectedQuestion[] {
+  if (typeof window === "undefined") return [];
+  const progress = getModuleProgress(MODULE_ID);
+  const mod = getDefaultModule();
+  const pool: InjectedQuestion[] = [];
+
+  for (const lesson of mod.lessons) {
+    if (lesson.lessonId === currentLessonId) continue;
+    if (progress[lesson.lessonId]?.status !== "completed") continue;
+    const content = lessonContents.find((c) => c.lessonId === lesson.lessonId);
+    if (!content) continue;
+    for (const q of content.quiz) {
+      if (q.type === "multiple-choice") {
+        pool.push({
+          ...q,
+          // Prefix ID to avoid collision with current lesson questions
+          questionId: `injected:${q.questionId}`,
+          sourceLessonId: lesson.lessonId,
+          sourceDayNumber: lesson.dayNumber,
+        });
+      }
+    }
+  }
+
+  // Shuffle and pick
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, count);
+}
+
+function InjectedQuestionCard({
+  q,
+  submitted,
+  selected,
+  onSelect,
+}: {
+  q: InjectedQuestion;
+  submitted: boolean;
+  selected: string | null;
+  onSelect: (v: string) => void;
+}) {
+  const isCorrect = selected === q.correctAnswer;
+
+  return (
+    <div className="mb-7">
+      <div className="flex items-center gap-2 mb-2">
+        <p className="text-[10px] font-bold text-[#7C5CBF] uppercase tracking-widest">
+          Spaced recall · Day {q.sourceDayNumber}
+        </p>
+      </div>
+      <p className="text-[15px] font-medium text-[#000000] leading-snug mb-3">
+        {q.prompt}
+      </p>
+
+      <div className="space-y-2">
+        {q.options.map((opt) => {
+          const isSelected = selected === opt;
+          const isRight = opt === q.correctAnswer;
+
+          let style =
+            "border border-[#7C5CBF]/20 bg-white text-[#000000] hover:border-[#7C5CBF]/50 hover:bg-[#7C5CBF]/5";
+          let icon: string | null = null;
+
+          if (submitted) {
+            if (isRight) {
+              style = "border-2 border-[#2294BD] bg-[#2294BD]/10 text-[#000000]";
+              icon = "\u2713";
+            } else if (isSelected && !isRight) {
+              style = "border-2 border-[#D9532B] bg-[#D9532B]/8 text-[#D9532B] line-through";
+              icon = "\u2717";
+            } else {
+              style = "border border-[#E8DDD4] bg-[#F9F6F3] text-[#9A918A] cursor-default";
+            }
+          } else if (isSelected) {
+            style = "border-2 border-[#7C5CBF] bg-[#7C5CBF]/8 text-[#000000]";
+          }
+
+          return (
+            <button
+              key={opt}
+              disabled={submitted}
+              onClick={() => onSelect(opt)}
+              className={`w-full text-left rounded-xl px-4 py-3 text-sm transition-colors flex items-start gap-2 ${style}`}
+            >
+              {icon && (
+                <span className={`flex-shrink-0 font-bold text-sm leading-snug ${isRight ? "text-[#2294BD]" : "text-[#D9532B]"}`}>
+                  {icon}
+                </span>
+              )}
+              <span className="leading-snug">{opt}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {submitted && (
+        <div
+          className={`mt-3 rounded-xl px-4 py-2.5 text-sm font-medium flex items-center gap-2 ${
+            isCorrect
+              ? "bg-[#2294BD]/10 text-[#2294BD] border border-[#2294BD]/20"
+              : "bg-[#D9532B]/8 text-[#D9532B] border border-[#D9532B]/20"
+          }`}
+        >
+          <span>{isCorrect ? "\u2713 Correct" : "\u2717 Incorrect"}</span>
+          {!isCorrect && (
+            <span className="text-[#404040] font-normal">
+              — correct answer highlighted above
+            </span>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Prereq knowledge gate ─────────────────────────────────────────────────────
+
+function PrereqGate({
+  prereqIds,
+  onPass,
+  onSkip,
+}: {
+  prereqIds: string[];
+  onPass: () => void;
+  onSkip: () => void;
+}) {
+  const mod = getModuleById(MODULE_ID);
+  const [questions] = useState<(MCQuestion & { lessonTitle: string })[]>(() => {
+    if (!mod) return [];
+    const qs: (MCQuestion & { lessonTitle: string })[] = [];
+    for (const pid of prereqIds) {
+      const lesson = mod.lessons.find((l) => l.lessonId === pid);
+      const content = lessonContents.find((c) => c.lessonId === pid);
+      if (!lesson || !content) continue;
+      const mcQs = content.quiz.filter(
+        (q): q is MCQuestion => q.type === "multiple-choice"
+      );
+      if (mcQs.length > 0) {
+        const pick = mcQs[Math.floor(Math.random() * mcQs.length)];
+        qs.push({ ...pick, lessonTitle: lesson.title });
+      }
+    }
+    return qs;
+  });
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [submitted, setSubmitted] = useState(false);
+  const [score, setScore] = useState(0);
+
+  if (questions.length === 0) {
+    // No prereq questions available, auto-pass
+    onPass();
+    return null;
+  }
+
+  function handleSubmit() {
+    const correct = questions.filter(
+      (q) => answers[q.questionId] === q.correctAnswer
+    ).length;
+    setScore(correct);
+    setSubmitted(true);
+    if (correct === questions.length) {
+      setTimeout(onPass, 1500);
+    }
+  }
+
+  const allAnswered = questions.every((q) => answers[q.questionId]);
+
+  return (
+    <div className="rounded-2xl border border-[#FAA51A]/30 bg-white p-5 mb-6">
+      <p className="text-xs font-bold text-[#9B6A00] uppercase tracking-widest mb-1">
+        Prerequisite check
+      </p>
+      <p className="text-[15px] font-semibold text-[#000000] mb-2">
+        Quick recall from prior lessons
+      </p>
+      <p className="text-sm text-[#404040] mb-4">
+        Answer these to confirm you remember the foundations for this lesson.
+      </p>
+
+      {questions.map((q, qi) => (
+        <div key={q.questionId} className="mb-5">
+          <p className="text-[10px] font-bold text-[#404040] uppercase tracking-widest mb-1">
+            From: {q.lessonTitle}
+          </p>
+          <p className="text-sm font-medium text-[#000000] leading-snug mb-2">
+            {q.prompt}
+          </p>
+          <div className="space-y-1.5">
+            {q.options.map((opt) => {
+              const isSelected = answers[q.questionId] === opt;
+              const isRight = opt === q.correctAnswer;
+              let style =
+                "border border-[#E8DDD4] bg-white text-[#000000] hover:border-[#2294BD]/50";
+              if (submitted) {
+                if (isRight)
+                  style =
+                    "border-2 border-[#2294BD] bg-[#2294BD]/10 text-[#000000]";
+                else if (isSelected && !isRight)
+                  style =
+                    "border-2 border-[#D9532B] bg-[#D9532B]/8 text-[#D9532B]";
+                else
+                  style =
+                    "border border-[#E8DDD4] bg-[#F9F6F3] text-[#9A918A] cursor-default";
+              } else if (isSelected) {
+                style =
+                  "border-2 border-[#2294BD] bg-[#2294BD]/8 text-[#000000]";
+              }
+              return (
+                <button
+                  key={`${q.questionId}-${qi}-${opt}`}
+                  disabled={submitted}
+                  onClick={() =>
+                    setAnswers((prev) => ({
+                      ...prev,
+                      [q.questionId]: opt,
+                    }))
+                  }
+                  className={`w-full text-left rounded-lg px-3 py-2 text-sm transition-colors ${style}`}
+                >
+                  {opt}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+
+      {!submitted && (
+        <div className="flex gap-2">
+          <button
+            disabled={!allAnswered}
+            onClick={handleSubmit}
+            className="text-sm font-medium text-white bg-[#000000] hover:bg-[#222] disabled:opacity-30 disabled:cursor-not-allowed px-4 py-2 rounded-xl transition-colors"
+          >
+            Check
+          </button>
+          <button
+            onClick={onSkip}
+            className="text-sm font-medium text-[#404040] hover:text-[#000000] px-4 py-2 rounded-xl transition-colors"
+          >
+            Skip check
+          </button>
+        </div>
+      )}
+
+      {submitted && (
+        <div
+          className={`rounded-xl px-4 py-3 text-sm font-medium ${
+            score === questions.length
+              ? "bg-[#2294BD]/10 text-[#2294BD] border border-[#2294BD]/20"
+              : "bg-[#D9532B]/8 text-[#D9532B] border border-[#D9532B]/20"
+          }`}
+        >
+          {score === questions.length ? (
+            "✓ All correct — proceeding to lesson."
+          ) : (
+            <div>
+              <p>
+                {score}/{questions.length} correct — consider reviewing
+                prerequisites first.
+              </p>
+              <div className="flex gap-2 mt-2">
+                <button
+                  onClick={onPass}
+                  className="text-xs font-medium text-[#404040] bg-white border border-[#E8DDD4] px-3 py-1.5 rounded-lg hover:bg-[#F0E6DD] transition-colors"
+                >
+                  Continue anyway
+                </button>
+                <a
+                  href="/modules"
+                  className="text-xs font-medium text-[#2294BD] bg-[#2294BD]/10 px-3 py-1.5 rounded-lg hover:bg-[#2294BD]/18 transition-colors"
+                >
+                  Go to modules
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Quiz attempt history ─────────────────────────────────────────────────────
+
+function QuizHistory({ attempts }: { attempts: QuizAttempt[] }) {
+  if (attempts.length <= 1) return null;
+  return (
+    <div className="mb-4">
+      <p className="text-[10px] font-bold text-[#404040] uppercase tracking-widest mb-2">
+        Previous attempts
+      </p>
+      <div className="flex gap-2 flex-wrap">
+        {attempts.map((a) => (
+          <div
+            key={a.attemptNumber}
+            className="text-xs bg-[#F0E6DD] text-[#404040] px-2.5 py-1.5 rounded-lg"
+          >
+            <span className="font-medium">#{a.attemptNumber}</span>{" "}
+            {Math.round(a.score * 100)}% · {a.confidence}/5 conf ·{" "}
+            {new Date(a.completedAt).toLocaleDateString()}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ── page ──────────────────────────────────────────────────────────────────────
 
 export default function LessonPage({
@@ -625,8 +950,15 @@ export default function LessonPage({
 }) {
   const { lessonId } = use(params);
   const content = getLessonContent(lessonId);
-  const module = getModuleById(MODULE_ID);
-  const lesson = module?.lessons.find((l) => l.lessonId === lessonId);
+  const currentModule = getModuleById(MODULE_ID);
+  const lesson = currentModule?.lessons.find((l) => l.lessonId === lessonId);
+
+  // Spaced quiz injection — pick 2-3 questions from old completed lessons
+  const [injectedQuestions] = useState<InjectedQuestion[]>(() =>
+    pickInjectedQuestions(lessonId, 3)
+  );
+  const [injectedAnswers, setInjectedAnswers] = useState<Record<string, string>>({});
+  const [injectedSubmitted, setInjectedSubmitted] = useState(false);
 
   // MC answers: questionId → selected option
   const [mcAnswers, setMcAnswers] = useState<Record<string, string>>({});
@@ -636,21 +968,90 @@ export default function LessonPage({
   >({});
   // Whether MC section has been submitted
   const [mcSubmitted, setMcSubmitted] = useState(false);
-  // Confidence
-  const [confidence, setConfidence] = useState<number | null>(null);
-  // Saved result
-  const [saved, setSaved] = useState(false);
-
-  // Load existing quiz result; auto-mark in-progress if not yet completed
-  useEffect(() => {
+  // Initialize from localStorage
+  const [initState] = useState(() => {
+    if (typeof window === "undefined") return { confidence: null as number | null, saved: false, quizHistory: [] as QuizAttempt[], prereqPassed: false };
     const existing = getQuizResult(lessonId);
-    if (existing) {
-      setConfidence(existing.confidence);
-      setSaved(true);
-    } else {
+    const history = getQuizHistory(lessonId);
+
+    // Auto-mark in-progress
+    if (!existing) {
       setLessonStatus(MODULE_ID, lessonId, "in-progress");
     }
+
+    // Check prereqs
+    let prereqOk = false;
+    if (!lesson || lesson.prerequisites.length === 0) {
+      prereqOk = true;
+    } else {
+      const progress = getModuleProgress(MODULE_ID);
+      const lessonProg = progress[lessonId];
+      if (lessonProg?.status === "completed" || lessonProg?.status === "in-progress") {
+        prereqOk = true;
+      }
+      const noneComplete = lesson.prerequisites.some((p) => !progress[p] || progress[p].status === "not-started");
+      if (!noneComplete) {
+        // All prereqs at least started — show gate if lesson not started
+      } else {
+        prereqOk = true; // Some prereqs not done, auto-pass
+      }
+    }
+
+    return {
+      confidence: existing?.confidence ?? null,
+      saved: !!existing,
+      quizHistory: history,
+      prereqPassed: prereqOk,
+    };
+  });
+
+  // Confidence
+  const [confidence, setConfidence] = useState<number | null>(initState.confidence);
+  // Saved result
+  const [saved, setSaved] = useState(initState.saved);
+  // Quiz retake
+  const [retaking, setRetaking] = useState(false);
+  const [quizHistory, setQuizHistory] = useState<QuizAttempt[]>(initState.quizHistory);
+  // Prereq gate
+  const [prereqPassed, setPrereqPassed] = useState(initState.prereqPassed);
+  // Resume position
+  const blocksRef = useRef<HTMLDivElement>(null);
+  const positionRestoredRef = useRef(false);
+
+  // Restore scroll position
+  useEffect(() => {
+    if (positionRestoredRef.current) return;
+    positionRestoredRef.current = true;
+    const pos = getLessonPosition(lessonId);
+    if (pos && pos.scrollY > 0) {
+      setTimeout(() => {
+        window.scrollTo({ top: pos.scrollY, behavior: "instant" as ScrollBehavior });
+      }, 100);
+    }
   }, [lessonId]);
+
+  // Save scroll position periodically
+  const savePosition = useCallback(() => {
+    if (!blocksRef.current) return;
+    const blocks = blocksRef.current.children;
+    let blockIndex = 0;
+    for (let i = 0; i < blocks.length; i++) {
+      const rect = blocks[i].getBoundingClientRect();
+      if (rect.top > 0) break;
+      blockIndex = i;
+    }
+    saveLessonPosition(lessonId, blockIndex, window.scrollY);
+  }, [lessonId]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Debounce: save position on scroll end
+      clearTimeout((window as unknown as Record<string, ReturnType<typeof setTimeout>>).__posTimer);
+      (window as unknown as Record<string, ReturnType<typeof setTimeout>>).__posTimer = setTimeout(savePosition, 500);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [savePosition]);
 
   if (!content || !lesson) {
     return (
@@ -660,7 +1061,7 @@ export default function LessonPage({
     );
   }
 
-  const lessons = module?.lessons ?? [];
+  const lessons = currentModule?.lessons ?? [];
   const currentIndex = lessons.findIndex((l) => l.lessonId === lessonId);
   const nextLesson = currentIndex >= 0 && currentIndex < lessons.length - 1
     ? lessons[currentIndex + 1]
@@ -694,9 +1095,37 @@ export default function LessonPage({
       confidence,
       completedAt: new Date().toISOString(),
     };
-    saveQuizResult(lessonId, result);
+    // Save as attempt in history + update latest
+    const attempt = saveQuizAttempt(lessonId, result);
+    setQuizHistory((prev) => [...prev, attempt]);
     setLessonStatus(MODULE_ID, lessonId, "completed");
+
+    // Track wrong answers for drill mode
+    const wrong: WrongAnswer[] = mcQuestions
+      .filter((q) => mcAnswers[q.questionId] && mcAnswers[q.questionId] !== q.correctAnswer)
+      .map((q) => ({
+        lessonId,
+        questionId: q.questionId,
+        selectedAnswer: mcAnswers[q.questionId],
+        attemptDate: new Date().toISOString(),
+      }));
+    if (wrong.length > 0) {
+      recordWrongAnswers(wrong);
+    }
+
     setSaved(true);
+    setRetaking(false);
+  }
+
+  function handleRetake() {
+    setMcAnswers({});
+    setSrStates({});
+    setMcSubmitted(false);
+    setInjectedAnswers({});
+    setInjectedSubmitted(false);
+    setConfidence(null);
+    setSaved(false);
+    setRetaking(true);
   }
 
   const questionIndex = (q: QuizQuestion) => allQuestions.indexOf(q);
@@ -741,8 +1170,17 @@ export default function LessonPage({
           </h1>
         </div>
 
+        {/* Prereq gate */}
+        {!prereqPassed && lesson.prerequisites.length > 0 && (
+          <PrereqGate
+            prereqIds={lesson.prerequisites}
+            onPass={() => setPrereqPassed(true)}
+            onSkip={() => setPrereqPassed(true)}
+          />
+        )}
+
         {/* Learning blocks */}
-        <div className="mb-8">
+        <div className="mb-8" ref={blocksRef}>
           {content.blocks.map((block, i) => (
             <Block key={i} block={block} />
           ))}
@@ -757,12 +1195,74 @@ export default function LessonPage({
               </h2>
               <p className="text-[15px] font-semibold text-[#000000]">Quiz</p>
             </div>
-            {saved && (
-              <span className="text-xs text-[#2294BD] bg-[#2294BD]/10 px-2.5 py-1 rounded-lg font-medium">
-                Completed
-              </span>
-            )}
+            <div className="flex items-center gap-2">
+              {saved && !retaking && (
+                <button
+                  onClick={handleRetake}
+                  className="text-xs text-[#404040] hover:text-[#2294BD] font-medium px-2.5 py-1 rounded-lg border border-[#E8DDD4] hover:border-[#2294BD]/50 transition-colors"
+                >
+                  Retake quiz
+                </button>
+              )}
+              {saved && !retaking && (
+                <span className="text-xs text-[#2294BD] bg-[#2294BD]/10 px-2.5 py-1 rounded-lg font-medium">
+                  Completed
+                </span>
+              )}
+              {retaking && (
+                <span className="text-xs text-[#FAA51A] bg-[#FAA51A]/10 px-2.5 py-1 rounded-lg font-medium">
+                  Attempt #{quizHistory.length + 1}
+                </span>
+              )}
+            </div>
           </div>
+
+          {/* Quiz attempt history */}
+          <QuizHistory attempts={quizHistory} />
+
+          {/* Spaced recall injection — questions from older lessons */}
+          {injectedQuestions.length > 0 && (
+            <div className="mb-6">
+              <div className="rounded-xl border border-[#7C5CBF]/15 bg-[#7C5CBF]/[0.03] px-5 py-4">
+                <p className="text-[10px] font-bold text-[#7C5CBF] uppercase tracking-widest mb-1">
+                  Spaced recall
+                </p>
+                <p className="text-xs text-[#404040] mb-4">
+                  These questions are from earlier lessons — quick retrieval practice to keep older material fresh.
+                </p>
+                {injectedQuestions.map((q) => (
+                  <InjectedQuestionCard
+                    key={q.questionId}
+                    q={q}
+                    submitted={injectedSubmitted}
+                    selected={injectedAnswers[q.questionId] ?? null}
+                    onSelect={(v) => {
+                      if (!injectedSubmitted)
+                        setInjectedAnswers((prev) => ({ ...prev, [q.questionId]: v }));
+                    }}
+                  />
+                ))}
+                {!injectedSubmitted && (
+                  <button
+                    disabled={!injectedQuestions.every((q) => injectedAnswers[q.questionId])}
+                    onClick={() => setInjectedSubmitted(true)}
+                    className="w-full rounded-xl bg-[#7C5CBF] text-white text-sm font-semibold py-2.5 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#6B4DAE] transition-colors"
+                  >
+                    Check recall
+                  </button>
+                )}
+                {injectedSubmitted && (
+                  <div className={`rounded-xl px-4 py-2.5 text-sm font-medium border ${
+                    injectedQuestions.every((q) => injectedAnswers[q.questionId] === q.correctAnswer)
+                      ? "bg-[#2294BD]/10 text-[#2294BD] border-[#2294BD]/20"
+                      : "bg-[#FAA51A]/10 text-[#9B6A00] border-[#FAA51A]/20"
+                  }`}>
+                    {injectedQuestions.filter((q) => injectedAnswers[q.questionId] === q.correctAnswer).length}/{injectedQuestions.length} recalled from earlier lessons
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* MC questions */}
           {mcQuestions.map((q) => (

@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { getModuleProgress, dismissCard, getDismissedToday, getAllQuizResults, getCardStruggleCounts, recordCardStruggle } from "@/lib/progress";
+import { useState } from "react";
+import { getModuleProgress, dismissCard, getDismissedToday, getAllQuizResults, getCardStruggleCounts, recordCardStruggle, updateSRS, getAllSRSStates } from "@/lib/progress";
 import {
   buildReviewQueue,
   groupByPriority,
   groupByTopic,
   QueueCard,
 } from "@/lib/reviewQueue";
-import { CardType, Priority } from "@/lib/types";
+import { CardType, Priority, SRSCardState } from "@/lib/types";
 import { AiHelper } from "@/components/AiHelper";
 import { topicLabel } from "@/lib/topics";
 import { DEFAULT_MODULE_ID } from "@/lib/modules";
@@ -52,16 +52,28 @@ const PRIORITY_CONFIG: Record<
 
 // ── card component ────────────────────────────────────────────────────────────
 
+const SRS_RATINGS = [
+  { quality: 1, label: "Again", color: "text-[#D9532B] bg-[#D9532B]/10 hover:bg-[#D9532B]/18" },
+  { quality: 3, label: "Hard", color: "text-[#FAA51A] bg-[#FAA51A]/10 hover:bg-[#FAA51A]/18" },
+  { quality: 4, label: "Good", color: "text-[#2294BD] bg-[#2294BD]/10 hover:bg-[#2294BD]/18" },
+  { quality: 5, label: "Easy", color: "text-[#1A6B42] bg-[#2A9D60]/10 hover:bg-[#2A9D60]/18" },
+];
+
 function ReviewCardTile({
   card,
+  srsState,
   onDismiss,
   onStruggle,
+  onSRSRate,
 }: {
   card: QueueCard;
+  srsState?: SRSCardState;
   onDismiss: (id: string) => void;
   onStruggle: (id: string) => void;
+  onSRSRate: (id: string, quality: number) => void;
 }) {
   const [flipped, setFlipped] = useState(false);
+  const [rated, setRated] = useState(false);
   const typeCfg = CARD_TYPE_CONFIG[card.cardType];
   const priCfg = PRIORITY_CONFIG[card.priority];
   const isFlipCard = card.cardType === "flashcard";
@@ -70,6 +82,15 @@ function ReviewCardTile({
     `Card type: ${typeCfg.label} | Topic: ${topicLabel(card.topic)}\n\n` +
     `Prompt: "${card.front}"\nAnswer: "${card.back}"\n\n` +
     `Help me understand this PE concept deeply.`;
+
+  function handleRate(quality: number) {
+    onSRSRate(card.cardId, quality);
+    if (quality < 3) {
+      onStruggle(card.cardId);
+    }
+    setRated(true);
+    onDismiss(card.cardId);
+  }
 
   return (
     <div
@@ -97,6 +118,14 @@ function ReviewCardTile({
           </span>
           <span className="text-[#D0C8C0] ml-1">·</span>
           <span className="text-xs text-[#404040]">Day {card.dayNumber}</span>
+          {srsState && (
+            <>
+              <span className="text-[#D0C8C0] ml-1">·</span>
+              <span className="text-[10px] text-[#9A918A]">
+                {srsState.interval}d interval
+              </span>
+            </>
+          )}
         </div>
       </div>
 
@@ -144,30 +173,50 @@ function ReviewCardTile({
         )}
       </div>
 
-      {/* AI helper + dismiss */}
+      {/* AI helper + SRS rating + dismiss */}
       <div className="px-4 pb-4 pt-1">
         {bodyVisible && (
           <AiHelper prompt={aiPrompt} label="Help me understand this" />
         )}
-        <div className="flex justify-end gap-2 mt-2">
-          {bodyVisible && (
+
+        {/* SRS rating buttons — shown after answer is visible */}
+        {bodyVisible && !rated && (
+          <div className="mt-3">
+            <p className="text-[10px] font-bold text-[#404040] uppercase tracking-widest mb-2">
+              How well did you know this?
+            </p>
+            <div className="flex gap-1.5">
+              {SRS_RATINGS.map((r) => (
+                <button
+                  key={r.quality}
+                  onClick={() => handleRate(r.quality)}
+                  className={`flex-1 text-xs font-medium py-2 rounded-lg transition-colors ${r.color}`}
+                >
+                  {r.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {rated && (
+          <div className="mt-3 text-xs text-[#2294BD] font-medium">
+            ✓ Scheduled for next review
+          </div>
+        )}
+
+        {!rated && (
+          <div className="flex justify-end gap-2 mt-2">
             <button
-              onClick={() => { onStruggle(card.cardId); onDismiss(card.cardId); }}
-              aria-label="Mark as still learning and dismiss"
-              className="text-xs text-[#FAA51A] hover:text-[#9B6A00] font-medium px-3 py-1.5 rounded-lg hover:bg-[#FAA51A]/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FAA51A]"
+              onClick={() => onDismiss(card.cardId)}
+              title="Dismiss without rating"
+              aria-label="Dismiss card"
+              className="text-xs text-[#404040] hover:text-[#D9532B] font-medium px-3 py-1.5 rounded-lg hover:bg-[#D9532B]/8 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D9532B]"
             >
-              Still learning
+              Skip
             </button>
-          )}
-          <button
-            onClick={() => onDismiss(card.cardId)}
-            title="Dismiss until tomorrow"
-            aria-label="Dismiss card until tomorrow"
-            className="text-xs text-[#404040] hover:text-[#D9532B] font-medium px-3 py-1.5 rounded-lg hover:bg-[#D9532B]/8 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D9532B]"
-          >
-            Done for now
-          </button>
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -206,13 +255,17 @@ const PRIORITY_ORDER: Priority[] = ["high", "medium", "low"];
 function GroupedByPriority({
   cards,
   dismissed,
+  srsStates,
   onDismiss,
   onStruggle,
+  onSRSRate,
 }: {
   cards: QueueCard[];
   dismissed: Set<string>;
+  srsStates: Record<string, SRSCardState>;
   onDismiss: (id: string) => void;
   onStruggle: (id: string) => void;
+  onSRSRate: (id: string, quality: number) => void;
 }) {
   const groups = groupByPriority(cards);
   return (
@@ -232,7 +285,7 @@ function GroupedByPriority({
             </div>
             <div className="space-y-3">
               {visible.map((c) => (
-                <ReviewCardTile key={c.cardId} card={c} onDismiss={onDismiss} onStruggle={onStruggle} />
+                <ReviewCardTile key={c.cardId} card={c} srsState={srsStates[c.cardId]} onDismiss={onDismiss} onStruggle={onStruggle} onSRSRate={onSRSRate} />
               ))}
             </div>
           </section>
@@ -245,13 +298,17 @@ function GroupedByPriority({
 function GroupedByTopic({
   cards,
   dismissed,
+  srsStates,
   onDismiss,
   onStruggle,
+  onSRSRate,
 }: {
   cards: QueueCard[];
   dismissed: Set<string>;
+  srsStates: Record<string, SRSCardState>;
   onDismiss: (id: string) => void;
   onStruggle: (id: string) => void;
+  onSRSRate: (id: string, quality: number) => void;
 }) {
   const groups = groupByTopic(cards);
   const topics = Object.keys(groups).sort();
@@ -270,7 +327,7 @@ function GroupedByTopic({
             </div>
             <div className="space-y-3">
               {visible.map((c) => (
-                <ReviewCardTile key={c.cardId} card={c} onDismiss={onDismiss} onStruggle={onStruggle} />
+                <ReviewCardTile key={c.cardId} card={c} srsState={srsStates[c.cardId]} onDismiss={onDismiss} onStruggle={onStruggle} onSRSRate={onSRSRate} />
               ))}
             </div>
           </section>
@@ -285,17 +342,32 @@ function GroupedByTopic({
 type GroupMode = "priority" | "topic";
 
 export default function ReviewPage() {
-  const [cards, setCards] = useState<QueueCard[]>([]);
-  const [dismissed, setDismissed] = useState<Set<string>>(() => getDismissedToday());
   const [groupMode, setGroupMode] = useState<GroupMode>("priority");
-  const [hasProgress, setHasProgress] = useState(false);
+  const [srsStates, setSrsStates] = useState<Record<string, SRSCardState>>(() => {
+    if (typeof window === "undefined") return {};
+    return getAllSRSStates();
+  });
 
-  useEffect(() => {
+  // Compute initial state synchronously to avoid effect warnings
+  const [initialData] = useState(() => {
+    if (typeof window === "undefined") return { cards: [] as QueueCard[], hasProgress: false, dismissed: new Set<string>(), srs: {} as Record<string, SRSCardState> };
     const progress = getModuleProgress(MODULE_ID);
     const hasAny = Object.keys(progress).length > 0;
-    setHasProgress(hasAny);
-    setCards(buildReviewQueue(progress, getAllQuizResults(), getCardStruggleCounts()));
-  }, []);
+    const allCards = buildReviewQueue(progress, getAllQuizResults(), getCardStruggleCounts());
+    const today = new Date().toISOString().slice(0, 10);
+    const srs = getAllSRSStates();
+    const filtered = allCards.filter((c) => {
+      const state = srs[c.cardId];
+      if (!state) return true;
+      return state.nextReviewDate <= today;
+    });
+    return { cards: filtered, hasProgress: hasAny, dismissed: getDismissedToday(), srs };
+  });
+
+  const [cards] = useState<QueueCard[]>(initialData.cards);
+  const [dismissed, setDismissed] = useState<Set<string>>(initialData.dismissed);
+  const [hasProgress] = useState(initialData.hasProgress);
+
 
   const dismiss = (id: string) => {
     dismissCard(id);
@@ -304,6 +376,11 @@ export default function ReviewPage() {
 
   const struggle = (id: string) => {
     recordCardStruggle(id);
+  };
+
+  const handleSRSRate = (cardId: string, quality: number) => {
+    const updated = updateSRS(cardId, quality);
+    setSrsStates((prev) => ({ ...prev, [cardId]: updated }));
   };
 
   const visible = cards.filter((c) => !dismissed.has(c.cardId));
@@ -371,15 +448,19 @@ export default function ReviewPage() {
           <GroupedByPriority
             cards={cards}
             dismissed={dismissed}
+            srsStates={srsStates}
             onDismiss={dismiss}
             onStruggle={struggle}
+            onSRSRate={handleSRSRate}
           />
         ) : (
           <GroupedByTopic
             cards={cards}
             dismissed={dismissed}
+            srsStates={srsStates}
             onDismiss={dismiss}
             onStruggle={struggle}
+            onSRSRate={handleSRSRate}
           />
         )}
       </div>

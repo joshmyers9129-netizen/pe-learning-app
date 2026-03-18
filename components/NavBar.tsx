@@ -6,7 +6,10 @@ import { usePathname } from "next/navigation";
 const TABS = [
   { href: "/", label: "Today" },
   { href: "/modules", label: "Modules" },
+  { href: "/practice", label: "Practice" },
   { href: "/review", label: "Review" },
+  { href: "/search", label: "Search" },
+  { href: "/concepts", label: "Map" },
 ] as const;
 
 export default function NavBar() {
@@ -21,7 +24,7 @@ export default function NavBar() {
             <Link
               key={href}
               href={href}
-              className={`flex-1 flex items-center justify-center py-3.5 text-sm font-medium transition-colors ${
+              className={`flex-1 flex items-center justify-center py-3.5 text-xs font-medium transition-colors ${
                 active
                   ? "text-[#2294BD] border-t-2 border-[#2294BD] -mt-px"
                   : "text-[#404040] hover:text-[#000000]"
