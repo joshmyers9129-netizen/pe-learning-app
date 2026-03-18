@@ -23,13 +23,14 @@ export function GET() {
 }
 
 export async function POST(req: NextRequest) {
-  const apiKey = process.env.OPENROUTER_API_KEY;
+  const apiKey = process.env.OPENROUTER_API_KEY?.trim();
   if (!apiKey) {
     return NextResponse.json(
       { error: "AI helper is not configured." },
       { status: 503 }
     );
   }
+  console.log("API key debug:", apiKey.slice(0, 12) + "..., length:", apiKey.length);
 
   let body: { prompt?: string };
   try {
