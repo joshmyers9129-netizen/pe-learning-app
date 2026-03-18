@@ -138,7 +138,6 @@ export const lessonContents: LessonContent[] = [
         content:
           "The fund model creates three structural portfolio management challenges for any LP allocating across multiple PE managers.\n\n1. **Pacing risk:** an LP committing $150 million per year across four to six funds simultaneously may have $400–600 million in uncalled commitments outstanding at any time. A pacing model projecting expected capital calls by fund and year is not optional — it is a basic operational tool. Over-commitment works until multiple GPs simultaneously accelerate calls in a strong vintage year, creating a call crisis against a single LP's liquidity position.\n2. **Vintage year concentration:** the fund model's 3–5 year investment periods mean that two sequential fund commitments may acquire companies at materially different macro conditions. A PE portfolio concentrated in two or three vintage years carries macro-entry risk that is invisible on a portfolio NAV report but often materializes in the harvest phase.\n3. **The denominator effect:** when public markets sell off sharply, PE NAVs are slow to mark down because GP interim valuations lag market conditions. This mechanically inflates the apparent portfolio weight of PE even as the economic value of those companies has likely declined — a structural artifact, not a signal of PE outperformance.",
       },
-    ],
     {
       type: "teaching",
       title: "Real-world allocator case: the denominator effect turns fund mechanics into governance pressure",
@@ -152,6 +151,7 @@ export const lessonContents: LessonContent[] = [
         "After this lesson, a strong allocator should treat commitment pacing as a balance-sheet design question, not as a return-seeking afterthought. In practice that means translating each new fund commitment into expected call timing, overlap with existing vintages, likely distribution support, and the amount of liquid assets that must remain available if distributions slow.\n\nIn an IC or staff memo, the right language is not 'we like the manager and have room in the program.' The better language is 'we can support this commitment without impairing liquidity discipline under a stress case in which distributions slow materially and public-market declines raise the private allocation mechanically.' That is the fund model applied correctly.",
     },
 
+    ],
     quiz: [
       {
         questionId: "d1q1",
@@ -372,7 +372,6 @@ export const lessonContents: LessonContent[] = [
         content:
           "For an institutional LP building a PE program, fee structures aggregate across the portfolio. An LP with $500M committed across five $100M fund commitments, averaging 2%/20% with mixed step-down terms and 80% fee offsets, will transfer $50–75M in aggregate management fees and $80–120M in aggregate carry to GPs over 10 years — assuming a typical 1.7–2.0x net TVPI. This $130–195M total fee load represents 26–39% of LP committed capital. The correct LP budget posture: gross return targets must clear the hurdle by enough to generate an acceptable net return after total fee drag — typically a gross/net gap of 6–8 percentage points for a 2%/20% fund. When evaluating manager selection, the relevant comparison is not gross IRR versus benchmark but net IRR versus the LP's cost-of-capital and opportunity cost. A GP with 18% gross and 11% net who charges full catch-up and maintains committed-capital fee basis has poorer LP economics than a GP with 16% gross and 12% net under a step-down structure with 100% fee offsets — even though the gross IRR is lower.",
       },
-    ],
     {
       type: "teaching",
       title: "Real-world allocator case: fee drag compounds most when deployment is slow",
@@ -386,6 +385,7 @@ export const lessonContents: LessonContent[] = [
         "Consider two funds with similar target gross returns. Fund A has a standard preferred return and a full catch-up, but also a sizeable GP commitment, strong fee offsets, and a robust escrow or guarantee supporting the clawback. Fund B advertises a more LP-friendly headline carry presentation, but the GP commitment is financed, fee offsets are weaker, and clawback collectability is less clear.\n\nAllocator lesson:\nMost LPs spend too much time reacting to one waterfall term in isolation. The stronger analysis looks at the entire economic package: management fees, offset mechanics, GP capital at risk, timing of carry crystallization, and whether any overdistributed carry is actually recoverable. In other words, the question is not whether a catch-up exists. The question is whether the full economic design aligns the GP with durable net value creation.",
     },
 
+    ],
     quiz: [
       {
         questionId: "d2q1",
@@ -3051,7 +3051,6 @@ export const lessonContents: LessonContent[] = [
         content:
           "Secondary market structures and pricing: major secondary market adviser annual reviews and institutional private markets references on LP-led and GP-led transactions. Governance standards for GP-led secondaries: ILPA guidance on GP-led secondary transactions, continuation vehicles, conflicts, and LPAC oversight. Institutional allocator practice on NAV discounts, unfunded obligations, and seasoning effects: CFA Institute and practitioner materials covering private equity secondary market mechanics.",
       },
-    ],
     {
       type: "teaching",
       title: "Real-world case study: Yale's 2025 exploration of secondary sales shows why portfolio management and manager selection intersect",
@@ -3065,6 +3064,7 @@ export const lessonContents: LessonContent[] = [
         "A strong allocator should leave this lesson with a more exact continuation-vehicle script. Ask why the asset was not sold outright, what evidence supports the reset value, who provided fairness or price-validation input, how rollover and cash-out LPs were treated, what new economics the GP is earning, and what the downside case looks like if the holding period extends again.\n\nThe key upgrade is that you are no longer reacting to the transaction as a generic liquidity event. You are underwriting it as a fresh deal with embedded conflicts, selective information advantages, and a new alignment package. That is what separates modern secondary fluency from simply knowing the vocabulary.",
     },
 
+    ],
     quiz: [
       {
         questionId: "d15q1",
@@ -4179,7 +4179,6 @@ export const lessonContents: LessonContent[] = [
         content:
           "This capstone synthesizes the prior lessons and standard institutional PE diligence practice, including ILPA due-diligence and governance principles, PME and benchmarking research, fund-economics analysis, and allocator programme-construction disciplines. It should be read as an integration lesson rather than as a source of new standalone doctrine.",
       },
-    ],
     {
       type: "teaching",
       title: "Real-world case study: recommendation quality matters most when the facts are mixed, not when they are easy",
@@ -4193,6 +4192,7 @@ export const lessonContents: LessonContent[] = [
         "Assume a buyout manager has a credible team, acceptable alignment, and repeatable sourcing, but also shows narrower sector breadth, higher valuation sensitivity, and weaker downside resilience than the strongest peers. A weak memo would still push toward a generic approval because there is no obvious red flag. A stronger memo would redefine the portfolio role.\n\nAllocator lesson:\nThe improved recommendation is not 'we like the manager.' It is 'we view the strategy as usable only as a complement within a diversified PE program, not as a core anchor, because upside capture appears intact but downside protection and breadth are weaker than top-tier alternatives.' That is a better investment judgment because it links evidence to role sizing and implementation, not just to a binary vote.",
     },
 
+    ],
     quiz: [
       {
         questionId: "d20q1",
@@ -4449,6 +4449,57 @@ The case is a reminder that final underwriting is not only about returns, sector
         "Terra Firma's 2007 acquisition of EMI became a cautionary case because a recognizable asset and confident deal thesis did not overcome leverage, cyclicality, and downside fragility. Private Equity International later noted that the ill-fated investment cost investors in Terra Firma's second and third funds around £1.6 billion, while Citigroup ultimately took control of EMI after the debt burden proved unsustainable.\n\nAllocator lesson:\nA capstone recommendation cannot stop at asset familiarity, sponsor conviction, or upside narrative. It has to ask whether capital structure, downside cases, and dependence on favorable operating conditions leave enough room for the thesis to survive. The point of the recommendation stack is precisely to stop a persuasive story from outrunning the evidence.",
     },
 
+    {
+      type: "teaching",
+      title: "Final recommendations should separate approval logic from sizing logic",
+      content:
+        "One of the most common allocator mistakes at the capstone stage is to collapse two separate decisions into one sentence. Approval asks whether the manager and strategy clear the quality bar. Sizing asks how much programme capital should be exposed given pacing, vintage concentration, style overlap, governance capacity, and current opportunity cost. A manager can deserve approval but still merit only a modest initial ticket because the programme is already heavy in the same sleeve or because the team wants a measured learning position before a larger relationship develops.\n\nThis distinction matters because committees often react more favorably to a disciplined recommendation that says yes with constraints than to an overconfident recommendation that forces every dimension of conviction into a single binary vote. The strongest capstone memos therefore state three things explicitly: why the fund is approvable, what prevents higher conviction today, and what evidence would justify a larger commitment next time.",
+    },
+    {
+      type: "example",
+      title: "Real-world case study: why large LPs often approve a strong GP before they scale the relationship",
+      content:
+        "Large institutional programmes regularly phase into new GP relationships rather than moving directly to a full target allocation. In practice, that is how many LPs approached newer vintages from scaled franchises such as EQT, Hg, or Thoma Bravo when strategy scope, team breadth, or portfolio fit was still being assessed at the programme level. The manager might clear the approval threshold on quality, but the LP still has to decide how the exposure interacts with existing commitments, sector concentration, and vintage pacing.\n\nAllocator lesson: a recommendation memo is stronger when it shows that approval and sizing are separate levers. That framing sounds more like a real investment committee. It also gives the team a cleaner way to revisit conviction later as references, post-close reporting, and actual execution evidence accumulate.",
+    },
+
+    {
+      type: "teaching",
+      title: "A strong secondary buyer is really underwriting someone else's old decision",
+      content:
+        "The hardest part of secondaries is that the buyer inherits a portfolio built for another owner, often at another point in the cycle, under another underwriting memo. That means the secondary investor must reverse-engineer asset quality, remaining value-creation runway, incentive alignment, and exit timing from a partially matured portfolio rather than from a clean primary commitment.\n\nFor allocator diligence, this changes what manager skill looks like. The strongest secondary firms do not merely source discounts. They show evidence of referenceable judgment around concentration, residual duration, GP quality, and where NAV is most likely to prove soft. That is why a good secondaries manager meeting should sound as much like a portfolio-triage exercise as a market-overview discussion.",
+    },
+    {
+      type: "example",
+      title: "Real-world case study: Ardian, Lexington, and the industrialization of secondaries",
+      content:
+        "The evolution of firms such as Ardian and Lexington Partners is useful because it demonstrates that secondaries is no longer a niche distress trade. These platforms built scaled capabilities around LP portfolio purchases, GP-led transactions, pricing discipline, and manager underwriting at a level that resembles a specialized form of portfolio construction rather than a simple discount capture strategy.\n\nAllocator lesson: when a secondaries GP presents itself as providing liquidity at attractive discounts, the real diligence question is how the platform converts scale into better underwriting rather than just more volume. The best managers can explain where information advantages, relationship advantages, and portfolio-construction discipline make them meaningfully better than a generalist buyer.",
+    },
+
+    {
+      type: "teaching",
+      title: "The closed-end structure is what allows private equity to survive periods when exits disappear",
+      content:
+        "A good way to understand the fund model is to ask what would happen without it. If private-equity vehicles offered daily or monthly liquidity, managers would be forced to sell assets into weak markets precisely when operational work and patience matter most. The closed-end structure is therefore not an inconvenience layered onto the strategy. It is the legal mechanism that aligns asset duration, manager discretion, and LP expectations when realizations become cyclical rather than continuous.\n\nThis point matters for OCIO work because many discussions about private equity still frame illiquidity as if it were merely a pricing premium. In practice, the structure also changes behavior. It gives the GP time to manage through disruption, but it also obliges the LP to reserve for a long decision cycle and to judge success over a full vintage arc rather than through short-term marks.",
+    },
+    {
+      type: "example",
+      title: "Real-world case study: the global financial crisis as a test of the closed-end model",
+      content:
+        "The 2008-2009 period is one of the clearest real-world demonstrations of why private equity is organized through closed-end funds. Large buyout firms such as Blackstone, KKR, TPG, and others faced an environment where exits slowed dramatically, financing markets became unreliable, and portfolio companies required hands-on intervention rather than quick monetization. The structure did not eliminate losses or mistakes, but it prevented the forced-liquidity dynamic that would have made a bad period much worse.\n\nAllocator lesson: when assessing private equity, the analyst should view the lockup as part of the risk-management architecture. The right question is not whether illiquidity is pleasant. It is whether the asset class could function as intended without a structure that allows ownership through disrupted exit markets.",
+    },
+
+    {
+      type: "teaching",
+      title: "Fee analysis should be done in dollars and pathways, not in headline percentages",
+      content:
+        "Many newer analysts memorize private-equity fees as a simple 2-and-20 formula and then stop there. But the real allocator task is to trace how management fees, fee offsets, broken-deal expenses, transaction costs, and carried-interest mechanics interact across the life of the fund. Two vehicles can advertise similar headline economics while producing very different net outcomes depending on when fees step down, how offsets are shared, and whether carry is calculated deal by deal or on a whole-fund basis.\n\nThat is why committee-ready fee work should translate percentages into cash flows. How many dollars leave the LP during the investment period before value creation is visible. How quickly does carry start to matter. Which fee terms preserve alignment and which terms quietly widen the gap between gross and net performance. Good fee analysis is really incentive analysis expressed through fund mechanics.",
+    },
+    {
+      type: "example",
+      title: "Real-world case study: SEC scrutiny of monitoring fees and the importance of fee offsets",
+      content:
+        "The SEC's scrutiny of private-equity monitoring-fee practices during the 2010s is a useful allocator teaching case because it showed how much headline alignment can depend on the fine print. Across the industry, attention increased on whether transaction fees, monitoring fees, and similar payments were being fully offset against management fees or whether the GP was effectively being paid twice for related economic activity.\n\nAllocator lesson: a fee schedule should be read as a map of incentives, not as a marketing summary. A manager that claims strong alignment should be able to show clearly how offsets work, what the LP actually bears, and where the GP's economics become meaningfully richer if the documents are permissive.",
+    },
   ],
   quiz: [
     {
@@ -4536,58 +4587,6 @@ The case is a reminder that final underwriting is not only about returns, sector
         "You learn that a favored LP received a side letter with earlier reporting, limited co-invest priority, and a fee break. What are the three most important MFN issues you would check before assuming you can match those rights?",
       modelAnswer:
         "First, I would check eligibility thresholds — whether my commitment size or investor category qualifies me to elect those terms. Second, I would review carve-outs — especially whether economics or co-invest rights are excluded from MFN. Third, I would check election mechanics, including whether the election is provision-by-provision, whether the window is short, and whether there are operational hurdles that make the right narrower in practice than it appears.",
-    },
-
-    {
-      type: "teaching",
-      title: "Final recommendations should separate approval logic from sizing logic",
-      content:
-        "One of the most common allocator mistakes at the capstone stage is to collapse two separate decisions into one sentence. Approval asks whether the manager and strategy clear the quality bar. Sizing asks how much programme capital should be exposed given pacing, vintage concentration, style overlap, governance capacity, and current opportunity cost. A manager can deserve approval but still merit only a modest initial ticket because the programme is already heavy in the same sleeve or because the team wants a measured learning position before a larger relationship develops.\n\nThis distinction matters because committees often react more favorably to a disciplined recommendation that says yes with constraints than to an overconfident recommendation that forces every dimension of conviction into a single binary vote. The strongest capstone memos therefore state three things explicitly: why the fund is approvable, what prevents higher conviction today, and what evidence would justify a larger commitment next time.",
-    },
-    {
-      type: "example",
-      title: "Real-world case study: why large LPs often approve a strong GP before they scale the relationship",
-      content:
-        "Large institutional programmes regularly phase into new GP relationships rather than moving directly to a full target allocation. In practice, that is how many LPs approached newer vintages from scaled franchises such as EQT, Hg, or Thoma Bravo when strategy scope, team breadth, or portfolio fit was still being assessed at the programme level. The manager might clear the approval threshold on quality, but the LP still has to decide how the exposure interacts with existing commitments, sector concentration, and vintage pacing.\n\nAllocator lesson: a recommendation memo is stronger when it shows that approval and sizing are separate levers. That framing sounds more like a real investment committee. It also gives the team a cleaner way to revisit conviction later as references, post-close reporting, and actual execution evidence accumulate.",
-    },
-
-    {
-      type: "teaching",
-      title: "A strong secondary buyer is really underwriting someone else's old decision",
-      content:
-        "The hardest part of secondaries is that the buyer inherits a portfolio built for another owner, often at another point in the cycle, under another underwriting memo. That means the secondary investor must reverse-engineer asset quality, remaining value-creation runway, incentive alignment, and exit timing from a partially matured portfolio rather than from a clean primary commitment.\n\nFor allocator diligence, this changes what manager skill looks like. The strongest secondary firms do not merely source discounts. They show evidence of referenceable judgment around concentration, residual duration, GP quality, and where NAV is most likely to prove soft. That is why a good secondaries manager meeting should sound as much like a portfolio-triage exercise as a market-overview discussion.",
-    },
-    {
-      type: "example",
-      title: "Real-world case study: Ardian, Lexington, and the industrialization of secondaries",
-      content:
-        "The evolution of firms such as Ardian and Lexington Partners is useful because it demonstrates that secondaries is no longer a niche distress trade. These platforms built scaled capabilities around LP portfolio purchases, GP-led transactions, pricing discipline, and manager underwriting at a level that resembles a specialized form of portfolio construction rather than a simple discount capture strategy.\n\nAllocator lesson: when a secondaries GP presents itself as providing liquidity at attractive discounts, the real diligence question is how the platform converts scale into better underwriting rather than just more volume. The best managers can explain where information advantages, relationship advantages, and portfolio-construction discipline make them meaningfully better than a generalist buyer.",
-    },
-
-    {
-      type: "teaching",
-      title: "The closed-end structure is what allows private equity to survive periods when exits disappear",
-      content:
-        "A good way to understand the fund model is to ask what would happen without it. If private-equity vehicles offered daily or monthly liquidity, managers would be forced to sell assets into weak markets precisely when operational work and patience matter most. The closed-end structure is therefore not an inconvenience layered onto the strategy. It is the legal mechanism that aligns asset duration, manager discretion, and LP expectations when realizations become cyclical rather than continuous.\n\nThis point matters for OCIO work because many discussions about private equity still frame illiquidity as if it were merely a pricing premium. In practice, the structure also changes behavior. It gives the GP time to manage through disruption, but it also obliges the LP to reserve for a long decision cycle and to judge success over a full vintage arc rather than through short-term marks.",
-    },
-    {
-      type: "example",
-      title: "Real-world case study: the global financial crisis as a test of the closed-end model",
-      content:
-        "The 2008-2009 period is one of the clearest real-world demonstrations of why private equity is organized through closed-end funds. Large buyout firms such as Blackstone, KKR, TPG, and others faced an environment where exits slowed dramatically, financing markets became unreliable, and portfolio companies required hands-on intervention rather than quick monetization. The structure did not eliminate losses or mistakes, but it prevented the forced-liquidity dynamic that would have made a bad period much worse.\n\nAllocator lesson: when assessing private equity, the analyst should view the lockup as part of the risk-management architecture. The right question is not whether illiquidity is pleasant. It is whether the asset class could function as intended without a structure that allows ownership through disrupted exit markets.",
-    },
-
-    {
-      type: "teaching",
-      title: "Fee analysis should be done in dollars and pathways, not in headline percentages",
-      content:
-        "Many newer analysts memorize private-equity fees as a simple 2-and-20 formula and then stop there. But the real allocator task is to trace how management fees, fee offsets, broken-deal expenses, transaction costs, and carried-interest mechanics interact across the life of the fund. Two vehicles can advertise similar headline economics while producing very different net outcomes depending on when fees step down, how offsets are shared, and whether carry is calculated deal by deal or on a whole-fund basis.\n\nThat is why committee-ready fee work should translate percentages into cash flows. How many dollars leave the LP during the investment period before value creation is visible. How quickly does carry start to matter. Which fee terms preserve alignment and which terms quietly widen the gap between gross and net performance. Good fee analysis is really incentive analysis expressed through fund mechanics.",
-    },
-    {
-      type: "example",
-      title: "Real-world case study: SEC scrutiny of monitoring fees and the importance of fee offsets",
-      content:
-        "The SEC's scrutiny of private-equity monitoring-fee practices during the 2010s is a useful allocator teaching case because it showed how much headline alignment can depend on the fine print. Across the industry, attention increased on whether transaction fees, monitoring fees, and similar payments were being fully offset against management fees or whether the GP was effectively being paid twice for related economic activity.\n\nAllocator lesson: a fee schedule should be read as a map of incentives, not as a marketing summary. A manager that claims strong alignment should be able to show clearly how offsets work, what the LP actually bears, and where the GP's economics become meaningfully richer if the documents are permissive.",
     },
   ],
   sources: [
@@ -5687,6 +5686,18 @@ The practical lesson is that NAV finance should be read as a signal about both p
       content:
         "A disciplined allocator should be able to summarize the private-markets programme in one system-level memo that answers:\n\n- how much contingent liquidity the institution has promised through commitments\n- which sleeves are likely to return cash versus consume cash over the next several years\n- which assumed liquidity sources deserve haircut or skepticism\n- what actions are available if stress emerges, and who can authorize them\n- whether current reporting quality is strong enough to support timely stress decisions\n\nThis is the OCIO bridge. The question is no longer just whether the institution owns good managers. It is whether the programme's contracts, data, liquidity tools, and decision rights are strong enough to survive a difficult cycle without forced or poorly timed choices.",
     },
+    {
+      type: "teaching",
+      title: "Liquidity management fails most often when governance reacts too late",
+      content:
+        "Most private-markets liquidity crises are not caused by one bad model. They are caused by governance systems that wait too long to acknowledge that the old assumptions no longer hold. Distribution slowdowns, public-market drawdowns, delayed fundraising, or unusual capital-call clustering can all be manageable if the institution responds early. They become dangerous when the team keeps underwriting to the prior-state base case while flexibility is quietly shrinking.\n\nFor an OCIO or committee context, that means the pacing framework should include explicit trigger points. At what level of unfunded commitments, reserve coverage, denominator pressure, or distribution miss does the team pause new commitments, resize commitments, raise liquidity, or explore secondaries. Good governance converts a cash-flow model into a decision system before the stress shows up in forced selling.",
+    },
+    {
+      type: "example",
+      title: "Real-world case study: Harvard's 2009 liquidity strain and why pacing discipline matters",
+      content:
+        "Harvard's well-known liquidity strain during the global financial crisis remains one of the clearest allocator teaching cases in private markets. The issue was not simply that markets fell. The deeper problem was that capital commitments, operating liquidity needs, and reduced flexibility converged at the wrong time, forcing the institution to rethink commitments and asset sales under pressure.\n\nAllocator lesson: pacing is not an abstract portfolio-construction topic. It is a governance topic. A programme can look diversified and well planned in benign conditions yet still become fragile if the institution lacks pre-agreed decision rules for what happens when distributions slow, the denominator shrinks, and commitments made in optimistic conditions become binding claims on liquidity.",
+    },
   ],
   quiz: [
     {
@@ -5774,19 +5785,6 @@ The practical lesson is that NAV finance should be read as a signal about both p
         "A private-markets programme faces slower buyout distributions, higher venture follow-on needs, and redemption friction in an open-end real estate vehicle. What are the three most important allocator actions to evaluate first?",
       modelAnswer:
         "First, I would update the liquidity dashboard and restress expected calls, distributions, and reliable funding sources using appropriate haircuts. Second, I would review pacing and re-up decisions, because slowing new commitments is often the cleanest first lever. Third, I would assess contingent tools such as secondaries, vehicle-specific liquidity options, and governance escalation thresholds so the institution can act before the strain becomes acute.",
-    },
-
-    {
-      type: "teaching",
-      title: "Liquidity management fails most often when governance reacts too late",
-      content:
-        "Most private-markets liquidity crises are not caused by one bad model. They are caused by governance systems that wait too long to acknowledge that the old assumptions no longer hold. Distribution slowdowns, public-market drawdowns, delayed fundraising, or unusual capital-call clustering can all be manageable if the institution responds early. They become dangerous when the team keeps underwriting to the prior-state base case while flexibility is quietly shrinking.\n\nFor an OCIO or committee context, that means the pacing framework should include explicit trigger points. At what level of unfunded commitments, reserve coverage, denominator pressure, or distribution miss does the team pause new commitments, resize commitments, raise liquidity, or explore secondaries. Good governance converts a cash-flow model into a decision system before the stress shows up in forced selling.",
-    },
-    {
-      type: "example",
-      title: "Real-world case study: Harvard's 2009 liquidity strain and why pacing discipline matters",
-      content:
-        "Harvard's well-known liquidity strain during the global financial crisis remains one of the clearest allocator teaching cases in private markets. The issue was not simply that markets fell. The deeper problem was that capital commitments, operating liquidity needs, and reduced flexibility converged at the wrong time, forcing the institution to rethink commitments and asset sales under pressure.\n\nAllocator lesson: pacing is not an abstract portfolio-construction topic. It is a governance topic. A programme can look diversified and well planned in benign conditions yet still become fragile if the institution lacks pre-agreed decision rules for what happens when distributions slow, the denominator shrinks, and commitments made in optimistic conditions become binding claims on liquidity.",
     },
   ],
   sources: [
@@ -6914,7 +6912,6 @@ The case comparison teaches a core allocator skill: do not let a venture brand b
         content:
           "Good Technology's 2015 sale to BlackBerry is frequently cited in venture circles because it illustrated how a seemingly substantial acquisition price can still leave common shareholders and employees with little once liquidation preferences are honored. The company had raised multiple rounds of capital, and by the time it sold, the preference stack had become economically decisive. The allocator takeaway is not the exact legal detail of that transaction. It is the general lesson that late-stage financing terms can materially redirect who actually gets paid in a non-home-run exit.\n\nFor diligence, this means a GP's mark on a late-stage company should never be evaluated on headline enterprise value alone. You need to know where the fund sits in the stack, what amount of preference is senior to it or pari passu with it, and what realistic exit range would be needed before the common really participates. Good Technology is a useful teaching case because it forces the allocator to replace a simplistic ownership lens with a payout-waterfall lens.",
       },
-    ],
     {
       type: "teaching",
       title: "Real-world case study: preference overhang can make a high paper value far less valuable than it looks",
@@ -6928,6 +6925,7 @@ The case comparison teaches a core allocator skill: do not let a venture brand b
         "After this lesson, one of the highest-signal questions you can ask is: 'For your five largest unrealized winners, where do you actually sit in the payout waterfall and how much exit value needs to be realized before common meaningfully participates?' That question forces the GP to connect mark narratives to security-level economics.\n\nA sophisticated follow-up is to ask for sensitivity analysis across three exit values rather than a single base case. If a large portion of reported upside disappears once you move one turn lower on exit value, then the position may be economically more fragile than the headline carrying value suggests.",
     },
 
+  ],
   quiz: [
     {
       questionId: "d31q1",
@@ -9503,7 +9501,6 @@ The comparison helps the learner see that growth equity is strongest when busine
       content:
         "After Day 41, the learner should stop hearing direct lending as 'senior secured floating-rate income' and start hearing it as a negotiated underwriting package. That means more attention to adjusted EBITDA quality, downside coverage, refinance dependence, sponsor incentives, and the practical value of documentation.\n\nIt should also sharpen manager comparison. Two managers may both say they focus on first-lien sponsor-backed lending, yet one may run lower leverage, tighter docs, and deeper monitoring while the other is effectively selling structure for spread. The allocator's job is to detect that difference before the next credit cycle forces it into the open.",
     },
-  ],
     {
       type: "teaching",
       title: "Direct lending case study: Pluralsight showed how lender outcomes can still depend on sponsor behavior and market access",
@@ -9517,6 +9514,7 @@ The comparison helps the learner see that growth equity is strongest when busine
         "A strong direct-lending GP should be able to produce three things quickly: a base, downside, and severe-downside leverage case for a representative deal; a covenant or documentation summary showing where control rights actually sit; and a portfolio maturity schedule showing where refinancing pressure is concentrated.\n\nThese three exhibits matter because they convert marketing language into lender reality. If the manager cannot show them cleanly, it becomes much harder to believe that underwriting discipline is genuinely stronger than the pitch book suggests.",
     },
 
+  ],
   quiz: [
     {
       questionId: "d41q1",
@@ -10051,7 +10049,6 @@ PetSmart and Chewy remain a useful discipline device. When a GP says the loan is
       content:
         "After Day 43, the learner should monitor private credit less like a low-volatility bond sleeve and more like a portfolio of negotiated underwriting positions. That means more attention to expected loss, covenant headroom, maturity clustering, non-accrual trends, and valuation realism.\n\nIt should also change how the learner hears stability claims. A manager with low volatility, low realized losses, and stable income may indeed be good. But the allocator now has a sharper way to test that claim: by asking what is happening underneath the marks and whether the current environment is deferring recognition or genuinely validating the underwriting.",
     },
-  ],
     {
       type: "teaching",
       title: "Real-world case study: semi-liquid private-credit funds in 2025 and 2026 highlighted vehicle-level risk",
@@ -10065,6 +10062,7 @@ PetSmart and Chewy remain a useful discipline device. When a GP says the loan is
         "Imagine two managers hold comparable pools of sponsor-backed first-lien loans. Manager A runs a closed-end drawdown fund with no redemption feature. Manager B runs a semi-liquid interval structure that offers periodic repurchases to wealth-channel investors. Asset quality may be similar, but the portfolio-management problem is not.\n\nAllocator lesson:\nManager B must reserve more liquidity, sequence originations with more care, and manage valuation and cash forecasting with greater discipline because investor flows can become a forcing function. The stronger allocator conclusion is that vehicle structure can change realized risk even when the underlying credit book looks similar on the surface.",
     },
 
+  ],
   quiz: [
     {
       questionId: "d43q1",
@@ -11838,6 +11836,18 @@ Write a note titled 'Why a property is a cash-flow case plus a refinancing case.
 
 This should improve diligence immediately. The allocator should become more skeptical of pro forma NOI, more focused on rent-roll and capex reality, and more disciplined about how leverage can turn a manageable operating issue into a control event for lenders. In real estate, the best-looking slide is often the least important one. The underwriting lives in the rollover table, the capex budget, and the debt maturity schedule.`,
     },
+    {
+      type: "teaching",
+      title: "Property underwriting should separate today's income from pro forma hope",
+      content:
+        "Real-estate mistakes often begin when underwriters blend stabilized in-place economics with the future leasing story and then present the combined number as if it were one coherent NOI base. A disciplined analyst separates what the property earns today, what must be spent to defend that income, and what assumptions are required to reach the pro forma case. That separation becomes especially important in sectors with heavy tenant-improvement spend, meaningful lease rollover, or uncertain demand such as office, life science development, or transitional retail.\n\nFor allocator diligence, the practical question is simple: how much of the thesis is underwritten cash flow and how much is capital-markets optimism. The wider that gap, the more the investment begins to behave like an operating turnaround with real-estate collateral rather than a straightforward income property.",
+    },
+    {
+      type: "example",
+      title: "Real-world case study: Stuyvesant Town and the danger of underwriting rent growth as inevitability",
+      content:
+        "The Stuyvesant Town episode remains a classic cautionary case because the original underwriting leaned heavily on a future path of rent growth and operational change that proved far less reliable than expected. What looked like a large, stable residential asset was in practice highly sensitive to assumptions about tenant turnover, legal constraints, financing structure, and the speed at which pro forma value could be realized.\n\nAllocator lesson: real-estate underwriting should never allow the scale or familiarity of an asset to substitute for evidence on how value creation will actually occur. The case is especially useful because it teaches that downside often enters through the failure of the operating plan, not just through a macro shock alone.",
+    },
   ],
   quiz: [
     {
@@ -11931,19 +11941,6 @@ This should improve diligence immediately. The allocator should become more skep
       prompt: "A GP says the asset was bought at an attractive cap rate. What are the three most important follow-up questions you should ask after this lesson?",
       modelAnswer:
         "First, I would ask how much NOI is truly in place today versus dependent on lease-up or optimistic mark-to-market assumptions. Second, I would ask when the major leases roll and what capex, tenant-improvement, and leasing costs are required to defend the income stream. Third, I would ask how the debt stack behaves if cap rates widen or refinancing remains difficult so I can see whether the investment case survives weaker capital-market conditions.",
-    },
-
-    {
-      type: "teaching",
-      title: "Property underwriting should separate today's income from pro forma hope",
-      content:
-        "Real-estate mistakes often begin when underwriters blend stabilized in-place economics with the future leasing story and then present the combined number as if it were one coherent NOI base. A disciplined analyst separates what the property earns today, what must be spent to defend that income, and what assumptions are required to reach the pro forma case. That separation becomes especially important in sectors with heavy tenant-improvement spend, meaningful lease rollover, or uncertain demand such as office, life science development, or transitional retail.\n\nFor allocator diligence, the practical question is simple: how much of the thesis is underwritten cash flow and how much is capital-markets optimism. The wider that gap, the more the investment begins to behave like an operating turnaround with real-estate collateral rather than a straightforward income property.",
-    },
-    {
-      type: "example",
-      title: "Real-world case study: Stuyvesant Town and the danger of underwriting rent growth as inevitability",
-      content:
-        "The Stuyvesant Town episode remains a classic cautionary case because the original underwriting leaned heavily on a future path of rent growth and operational change that proved far less reliable than expected. What looked like a large, stable residential asset was in practice highly sensitive to assumptions about tenant turnover, legal constraints, financing structure, and the speed at which pro forma value could be realized.\n\nAllocator lesson: real-estate underwriting should never allow the scale or familiarity of an asset to substitute for evidence on how value creation will actually occur. The case is especially useful because it teaches that downside often enters through the failure of the operating plan, not just through a macro shock alone.",
     },
   ],
   sources: [
@@ -12247,6 +12244,18 @@ Write a note titled 'Why position in the stack is only the start of real-estate 
 
 This should improve diligence in two ways. First, it should make the learner more precise about how senior, mezzanine, and preferred equity differ economically and legally. Second, it should make the learner more skeptical of broad 'protected by the stack' language unless the manager can explain attachment point, intercreditor terms, and the control path under stress. In real-estate debt, where you sit matters. What you can actually do matters just as much.`,
     },
+    {
+      type: "teaching",
+      title: "In real-estate debt, the control tree often matters more than the coupon",
+      content:
+        "When a real-estate debt manager says a loan sits at an attractive spread, the allocator should immediately ask who controls the next decision if the business plan slips. The answer may sit in intercreditor agreements, mezzanine pledge remedies, extension tests, reserve mechanics, and recourse carve-outs rather than in the headline economics. A debt position that appears senior in marketing materials can lose practical leverage if the lender cannot force information, sweep cash, block value leakage, or take control efficiently when the sponsor misses its plan.\n\nThis is why real-estate debt due diligence should trace the full control tree. Who can declare a default. What cure rights exist. How much additional capital the sponsor can inject to preserve control. Whether the lender can replace the manager or foreclose on equity interests. The coupon is compensation. The documents determine whether the lender can actually protect principal when the asset stops behaving as underwritten.",
+    },
+    {
+      type: "example",
+      title: "Real-world case study: 1740 Broadway and the difference between nominal seniority and realized outcomes",
+      content:
+        "The 1740 Broadway situation is a useful teaching case because it shows how quickly capital-stack labels can become inadequate once office values fall and refinancing capacity disappears. Senior debt, mezzanine debt, and equity each entered the situation with very different underwriting narratives, but the actual outcome depended on valuation pressure, extension dynamics, and who controlled the remedies as the asset failed to refinance cleanly.\n\nAllocator lesson: real-estate debt should be underwritten through the path of control and the path of loss, not through a simplistic view that anything above equity is automatically defensive. The case is particularly helpful for OCIO use because it forces the analyst to connect property-level underwriting, capital-markets liquidity, and documentation into one coherent downside view.",
+    },
   ],
   quiz: [
     {
@@ -12340,19 +12349,6 @@ This should improve diligence in two ways. First, it should make the learner mor
       prompt: "A manager says the strategy sits senior in the stack. What are the three most important follow-up questions you should ask after this lesson?",
       modelAnswer:
         "First, I would ask for the typical attachment point, including DSCR, debt yield, and LTV at origination and under stress. Second, I would ask what extension tests, cash-management triggers, and reserve protections activate if the property weakens. Third, I would ask what remedies the manager truly controls and how intercreditor terms or other documentation could limit those remedies in practice.",
-    },
-
-    {
-      type: "teaching",
-      title: "In real-estate debt, the control tree often matters more than the coupon",
-      content:
-        "When a real-estate debt manager says a loan sits at an attractive spread, the allocator should immediately ask who controls the next decision if the business plan slips. The answer may sit in intercreditor agreements, mezzanine pledge remedies, extension tests, reserve mechanics, and recourse carve-outs rather than in the headline economics. A debt position that appears senior in marketing materials can lose practical leverage if the lender cannot force information, sweep cash, block value leakage, or take control efficiently when the sponsor misses its plan.\n\nThis is why real-estate debt due diligence should trace the full control tree. Who can declare a default. What cure rights exist. How much additional capital the sponsor can inject to preserve control. Whether the lender can replace the manager or foreclose on equity interests. The coupon is compensation. The documents determine whether the lender can actually protect principal when the asset stops behaving as underwritten.",
-    },
-    {
-      type: "example",
-      title: "Real-world case study: 1740 Broadway and the difference between nominal seniority and realized outcomes",
-      content:
-        "The 1740 Broadway situation is a useful teaching case because it shows how quickly capital-stack labels can become inadequate once office values fall and refinancing capacity disappears. Senior debt, mezzanine debt, and equity each entered the situation with very different underwriting narratives, but the actual outcome depended on valuation pressure, extension dynamics, and who controlled the remedies as the asset failed to refinance cleanly.\n\nAllocator lesson: real-estate debt should be underwritten through the path of control and the path of loss, not through a simplistic view that anything above equity is automatically defensive. The case is particularly helpful for OCIO use because it forces the analyst to connect property-level underwriting, capital-markets liquidity, and documentation into one coherent downside view.",
     },
   ],
   sources: [
