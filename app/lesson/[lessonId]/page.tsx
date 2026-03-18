@@ -209,6 +209,19 @@ const BLOCK_STYLE: Record<
     labelColor: "text-[#9A918A]",
     contentClass: "text-[#9A918A]",
   },
+  misconception: {
+    label: "Misconception",
+    border: "border-[#D9532B]/25",
+    bg: "bg-[#D9532B]/5",
+    labelColor: "text-[#D9532B]",
+    accent: "border-l-[#D9532B]/60",
+  },
+  summary: {
+    label: "Summary",
+    border: "border-[#000]/10",
+    bg: "bg-white",
+    labelColor: "text-[#404040]",
+  },
 };
 
 function Block({ block }: { block: LessonBlock }) {
