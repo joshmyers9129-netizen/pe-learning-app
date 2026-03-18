@@ -3152,7 +3152,7 @@ export const lessonContents: LessonContent[] = [
         type: "example",
         title: "Worked example: fee savings do not answer the underwriting question",
         content:
-          "An LP has a $40M commitment to a buyout fund and is offered a $15M co-investment in the fund's largest transaction. Terms are zero fee, zero carry. The GP describes the deal as one of the highest-conviction investments in the current fund.\n\nThe headline economics look compelling. Assume the deal generates a 2.5x gross MOIC over five years. In the fund structure, full management fees and carry would materially reduce the net outcome to the LP. In the co-invest, the LP captures substantially more of the gross economics.\n\nBut now layer in concentration. Assume the main fund itself will still have a 12% look-through exposure to the company after syndicating the co-invest. The LP's $40M fund commitment therefore already carries indirect exposure to the same company. If the fund is $1B and the company position is sized at 12%, the LP's indirect exposure through the fund is approximately:\n\n$40M / $1B × 12% × $1B = $4.8M look-through exposure\n\nAdd the direct $15M co-invest, and the LP's total economic exposure to the company is roughly $19.8M.\n\nThe question is no longer 'is a $15M co-invest reasonable?' It is 'is approximately $20M of total exposure to this one company appropriate in the context of the full programme?' The fee savings remain attractive. But the sizing decision must be made against total exposure, not the direct sleeve alone.",
+          "An LP has a $40M commitment to a buyout fund and is offered a $15M co-investment in the fund's largest transaction. Terms are zero fee, zero carry. The GP describes the deal as one of the highest-conviction investments in the current fund.\n\nThe headline economics look compelling. Assume the deal generates a 2.5x gross MOIC over five years. In the fund structure, full management fees and carry would materially reduce the net outcome to the LP. In the co-invest, the LP captures substantially more of the gross economics.\n\nBut now layer in concentration. Assume the main fund itself will still have a 12% look-through exposure to the company after syndicating the co-invest. The LP's $40M fund commitment therefore already carries indirect exposure to the same company. If the fund is $1B and the company position is sized at 12%, the LP's indirect exposure through the fund is approximately:\n\n$40M / $1B × 12% × $1B = $4.8M look-through exposure\n\nAdd the direct $15M co-invest, and the LP's total economic exposure to the company is roughly $19.8M.\n\nThe question is no longer 'is a $15M co-invest reasonable?' It is 'is approximately $20M of total exposure to this one company appropriate in the context of the full programme?'\n\nNow layer in the return math. Assume the deal generates a 2.5× gross MOIC over five years.\n\n**Through the fund (indirect exposure):**\n- Gross return on the LP's $4.8M look-through: $4.8M × 2.5 = $12.0M gross\n- After roughly 2% annual management fee on committed capital and 20% carry above an 8% preferred return, the net outcome is materially lower — call it approximately $9.5M net, or roughly a 2.0× net MOIC\n\n**Through the co-invest (direct $15M):**\n- Gross return: $15M × 2.5 = $37.5M\n- At zero fee and zero carry, the LP keeps the full $37.5M — a 2.5× net MOIC\n- Fee savings versus a hypothetical fund-like structure: roughly $37.5M − $30.0M = $7.5M of additional value retained\n\nThose fee savings are real and meaningful. But now consider the downside. If the deal returns only 0.5× instead of 2.5×, the LP's loss on the co-invest alone is $7.5M — a direct, visible impairment on a single name. In the fund, the same outcome would cost roughly $2.4M of look-through value, diluted across the broader portfolio.\n\nThe net lesson: fee savings of $7.5M on the upside must be weighed against $7.5M of concentrated downside that cannot be diversified away. The sizing decision must be made against total exposure, not the direct sleeve alone.",
       },
       {
         type: "example",
@@ -3384,6 +3384,12 @@ export const lessonContents: LessonContent[] = [
           "A GP's last three exits were carried in the prior quarter at $210M, $165M, and $95M, respectively. They were ultimately realized at $205M, $168M, and $72M.\n\nWhat does this pattern show?\n\n- Exit 1: realized essentially in line with carrying value\n- Exit 2: realized modestly above carrying value\n- Exit 3: realized materially below carrying value (a 24% shortfall)\n\nThe overall conclusion is not simply 'marks are bad' or 'marks are fine.' It is more nuanced. The first two exits suggest the GP is broadly capable of marking credibly. The third exit suggests either that company-specific deterioration occurred late, or that the prior carrying value had embedded optimism that the market did not validate.\n\nThe allocator's next question should be: was Exit 3 an exception or part of a pattern? If one disappointing realization sits among many accurate ones, the inference is limited. If realizations repeatedly land below prior NAV, the GP's valuation style is biased upward.\n\nA secondary issue worth examining: the timing of downward mark revisions relative to exits. A GP that marks a company down one quarter before sale — after holding a higher mark for two years — may be managing the optics of when the write-down appears, not just reflecting business conditions. If marks only deteriorate in the final quarter before exit, that is a pattern worth flagging. Credible marking should produce gradual adjustment as information arrives, not a lumpy reset immediately before a realized price is disclosed.\n\nOver time, exit history is the most powerful reality check available. The question to maintain across relationships is not just 'how often did realizations match marks?' but 'when marks were wrong, were they systematically high or systematically low, and why?'",
       },
       {
+        type: "example",
+        title: "Worked example: the denominator effect in action",
+        content:
+          "A $2.5B endowment holds 15% in PE ($375M NAV) and 55% in public equities ($1,375M), with the remaining 30% in fixed income and other assets ($750M). Public equities fall 28% over two quarters while PE marks decline only 5%. Fixed income is roughly flat.\n\n**Before the drawdown:**\n- Total portfolio: $2,500M\n- PE: $375M (15.0% of total)\n- Public equity: $1,375M (55.0%)\n- Other: $750M (30.0%)\n\n**After the drawdown:**\n- PE: $375M × 0.95 = $356M\n- Public equity: $1,375M × 0.72 = $990M\n- Other: $750M (flat)\n- New total: $356M + $990M + $750M = $2,096M\n- PE as share of total: $356M / $2,096M = **17.0%**\n\nPE has gone from 15.0% to 17.0% of the portfolio — a two-percentage-point overshoot — without the endowment making a single new commitment. The PE allocation is now above its policy limit solely because the denominator (total portfolio) shrank while PE marks lagged.\n\n**The wrong response:** The committee panics, pauses new PE commitments, or sells secondary interests at distressed prices to restore the 15% target mechanically. This sacrifices future vintage exposure at exactly the moment new PE commitments are likely most attractively priced.\n\n**The right response:** The committee recognizes this as a valuation-timing artifact, not a structural overweight. If the endowment has a pre-approved tolerance band of ±3 percentage points around target, 17% is within policy. The committee monitors whether PE marks eventually catch down (which would reduce the overshoot naturally) and continues pacing discipline on new commitments. Only a persistent structural overweight — caused by genuine over-commitment, not mark lag — should trigger a real rebalancing response.\n\n**Key numbers to watch:** If PE marks subsequently fall another 10–15% over the next two quarters as appraisals catch up, the PE allocation would drift back toward 14–15% naturally. That is the mark-lag correction working itself out. Premature action would have locked in losses unnecessarily.",
+      },
+      {
         type: "weak-answer",
         title: "Weak vs. strong: reacting to 'stable marks despite volatility'",
         content:
@@ -3422,7 +3428,7 @@ export const lessonContents: LessonContent[] = [
     ],
     quiz: [
       {
-        questionId: "d18q1",
+        questionId: "d17q1",
         type: "multiple-choice",
         prompt:
           "What is the most accurate description of PE fund NAV?",
@@ -3436,7 +3442,7 @@ export const lessonContents: LessonContent[] = [
           "A fair-value estimate based on appraisal methods, selected market inputs, and GP judgment",
       },
       {
-        questionId: "d18q2",
+        questionId: "d17q2",
         type: "multiple-choice",
         prompt:
           "Why do PE marks often lag public-market moves?",
@@ -3450,7 +3456,7 @@ export const lessonContents: LessonContent[] = [
           "Because PE valuations are updated on a slower reporting cycle and filtered through appraisal judgment rather than continuous trading",
       },
       {
-        questionId: "d18q3",
+        questionId: "d17q3",
         type: "multiple-choice",
         prompt:
           "What is the main reason reported PE volatility can look lower than true underlying economic volatility?",
@@ -3464,7 +3470,7 @@ export const lessonContents: LessonContent[] = [
           "Appraisal-based smoothing and valuation lag dampen observed quarter-to-quarter movements",
       },
       {
-        questionId: "d18q4",
+        questionId: "d17q4",
         type: "multiple-choice",
         prompt:
           "Which of the following is the strongest single test of a GP's historical mark credibility?",
@@ -3478,7 +3484,7 @@ export const lessonContents: LessonContent[] = [
           "Whether reported realizations at exit tend to occur above, near, or below prior carrying values",
       },
       {
-        questionId: "d18q5",
+        questionId: "d17q5",
         type: "multiple-choice",
         prompt:
           "A GP marks a portfolio company at a substantial premium to public-market peers. What is the most appropriate allocator response?",
@@ -3492,7 +3498,7 @@ export const lessonContents: LessonContent[] = [
           "Ask for company-specific evidence supporting the premium and test whether similar premiums have historically been validated at exit",
       },
       {
-        questionId: "d18q6",
+        questionId: "d17q6",
         type: "short-response",
         prompt:
           "A committee notes that PE allocations have risen from 14% to 19% of total assets over the past two quarters despite no new commitments being funded. What is the most likely explanation, and what are the right and wrong responses?",
@@ -3500,7 +3506,7 @@ export const lessonContents: LessonContent[] = [
           "The most likely explanation is the denominator effect: public-market assets fell sharply while PE NAV was slow to adjust downward, causing PE to rise mechanically as a share of total assets. This is not evidence of a pacing error or a commitment problem — it is a valuation-lag artifact. The wrong response is to pause new PE commitments or sell secondary interests to restore the policy weight mechanically, which would sacrifice future vintage exposure at precisely the moment when new commitments are likely most attractively priced. The right response is to distinguish between the temporary overweight from mark lag and a structural overweight from excess pacing. Committees should have a pre-approved tolerance band around the PE target for exactly this reason, and should avoid treating a denominator-effect overshoot as though it required the same response as an overweight caused by deliberate over-commitment.",
       },
       {
-        questionId: "d18q7",
+        questionId: "d17q7",
         type: "short-response",
         prompt:
           "A GP says portfolio marks were stable because the assets are 'higher quality than the public comp set.' What follow-up information would you want before accepting that explanation?",
@@ -3601,6 +3607,12 @@ export const lessonContents: LessonContent[] = [
       },
       {
         type: "example",
+        title: "Worked example: PME — did the PE programme actually beat public markets?",
+        content:
+          "A foundation's PE programme shows a net IRR of 14.5% across its 2015–2019 vintages. The committee is pleased. But the CIO asks the harder question: did PE beat what the same cash flows would have earned in a liquid public-equity index?\n\nThis is what the Public Market Equivalent (PME) answers. The Kaplan-Schoar PME method works by investing each PE capital call into the public index on the date it occurs, and liquidating index shares on each distribution date, then comparing the ending wealth.\n\n**Simplified example using one fund:**\n- Year 0: LP contributes $50M. The S&P 500 index is at 2,000.\n- Year 3: LP contributes $30M. The index is at 2,400 (up 20%).\n- Year 6: LP receives $60M distribution. The index is at 3,000 (up 50% from Year 0).\n- Year 9: LP receives $55M distribution. The index is at 3,600 (up 80% from Year 0).\n- Final NAV: $12M. The index is at 3,600.\n\n**PE side:** Total value = $60M + $55M + $12M = $127M on $80M invested. Net TVPI = 1.59×.\n\n**Public-market replication:**\n- Year 0 call of $50M buys $50M of the index at 2,000.\n- Year 3 call of $30M buys $30M of the index at 2,400.\n- Year 6 distribution of $60M: sell $60M of index at 3,000. The Year-0 tranche is now worth $50M × (3,000/2,000) = $75M. The Year-3 tranche is worth $30M × (3,000/2,400) = $37.5M. Combined = $112.5M. After selling $60M, remaining = $52.5M.\n- Year 9: remaining index position is $52.5M × (3,600/3,000) = $63M. Sell $55M, remainder = $8M.\n\n**PME wealth comparison:**\n- PE ending value: $127M\n- Public-market replication ending value: $55M (distributed) + $60M (distributed) + $8M (remaining) = $123M\n\n**KS-PME = PE value / Public-market value = $127M / $123M ≈ 1.03×**\n\nInterpretation: The PE programme barely beat the public market on a timing-equivalent basis. The 14.5% IRR sounded strong, but much of that return came from vintage conditions that also lifted public equities. The PME of 1.03× tells the committee the PE programme added only modest incremental value after adjusting for market beta and cash-flow timing.\n\nA PME meaningfully above 1.0× — say 1.15× or higher — would be stronger evidence that the programme is earning its illiquidity premium. A PME below 1.0× means the programme lost to the public alternative on a timing-equivalent basis, regardless of how the IRR looked in isolation.",
+      },
+      {
+        type: "example",
         title: "Worked example: why a pension may rationally keep PE smaller",
         content:
           "A defined benefit pension with a $4B portfolio and a meaningful annual benefit-payment burden currently holds 11% in PE and is considering a move to 15%. The consultant notes that peer plans allocate more and that the plan's long-term return target is demanding.\n\nThe case for more PE is easy to state. The harder question is whether the pension's liability profile and governance model support a larger illiquid allocation.\n\nSuppose the pension relies on liquid assets to help fund near- and medium-term benefit payments, and suppose the plan's private markets team is relatively small. In that case, the institution may face real trade-offs:\n\n- less flexibility during public-market drawdowns\n- heavier dependence on distributions arriving from PE at the wrong moments\n- greater denominator-effect risk if public assets fall\n- more governance burden without a matching increase in internal staffing\n\nIn that setting, holding PE at 10–12% may be entirely rational even if the committee believes PE offers some long-run premium. The institution is not rejecting PE because it doubts the asset class in theory. It is sizing PE to the portfolio and liability structure it actually has.",
@@ -3644,7 +3656,7 @@ export const lessonContents: LessonContent[] = [
     ],
     quiz: [
       {
-        questionId: "d17q1",
+        questionId: "d18q1",
         type: "multiple-choice",
         prompt:
           "What is the most accurate description of the private equity illiquidity premium?",
@@ -3658,7 +3670,7 @@ export const lessonContents: LessonContent[] = [
           "A potential return premium that must survive fees, manager dispersion, and implementation quality to be realized by the allocator",
       },
       {
-        questionId: "d17q2",
+        questionId: "d18q2",
         type: "multiple-choice",
         prompt:
           "Which of the following is most likely to justify a larger PE allocation?",
@@ -3672,7 +3684,7 @@ export const lessonContents: LessonContent[] = [
           "A long-horizon capital base, strong governance capacity, and evidence that the institution can access and implement the asset class well",
       },
       {
-        questionId: "d17q3",
+        questionId: "d18q3",
         type: "multiple-choice",
         prompt:
           "Why is governance capacity a real constraint on PE allocation size?",
@@ -3686,7 +3698,7 @@ export const lessonContents: LessonContent[] = [
           "Because a larger PE programme requires more manager diligence, pacing oversight, reporting review, and relationship management",
       },
       {
-        questionId: "d17q4",
+        questionId: "d18q4",
         type: "multiple-choice",
         prompt:
           "What is the most important flaw in the statement 'PE reduces portfolio volatility because historical reported PE volatility is lower than public equities'?",
@@ -3700,7 +3712,7 @@ export const lessonContents: LessonContent[] = [
           "Reported PE volatility is partly an artifact of appraisal-based valuation lag and smoothing rather than proof of lower underlying economic risk",
       },
       {
-        questionId: "d17q5",
+        questionId: "d18q5",
         type: "multiple-choice",
         prompt:
           "Which institution is most likely, all else equal, to support a higher strategic PE allocation?",
@@ -3714,7 +3726,7 @@ export const lessonContents: LessonContent[] = [
           "A perpetual-capital endowment with strong private-markets staffing and modest liquidity needs",
       },
       {
-        questionId: "d17q6",
+        questionId: "d18q6",
         type: "short-response",
         prompt:
           "Why is the question 'Should we own more PE because it has higher expected returns?' incomplete as a portfolio-construction argument?",
@@ -3722,7 +3734,7 @@ export const lessonContents: LessonContent[] = [
           "Because PE allocation is not just a return decision. It is also a liquidity, governance, and opportunity-cost decision. A larger PE allocation may be justified only if the institution can tolerate the illiquidity, govern the programme well enough to capture the premium net of fees and manager dispersion, and explain what asset class PE is replacing in the portfolio. Without that full portfolio context, the higher-expected-return argument is incomplete. It states the attraction of PE without testing whether this specific institution can implement it successfully.",
       },
       {
-        questionId: "d17q7",
+        questionId: "d18q7",
         type: "short-response",
         prompt:
           "A foundation wants to increase PE from 10% to 15%. What are the three most important questions you would want answered before recommending the change?",
@@ -3802,7 +3814,7 @@ export const lessonContents: LessonContent[] = [
         type: "example",
         title: "Worked example: ESG as a real underwriting issue",
         content:
-          "A buyout GP evaluates a niche industrial services company with stable cash flow and attractive margins. On conventional metrics, the deal looks appealing. During ESG diligence, the GP identifies three issues:\n\n1. The company has a weak safety record across field operations.\n2. Customer contracts increasingly require emissions and supplier-compliance disclosures the company cannot yet provide.\n3. Board oversight is informal, with founder-dominated decision-making and limited documented controls.\n\nA superficial ESG process would note these issues in a memo appendix and proceed.\n\nA substantive process could change the deal in at least three ways:\n- the GP reduces the entry price or requires a remediation reserve because the safety issues could create future claims and operational disruption\n- the GP builds a post-close plan for compliance reporting and buyer-readiness because customer requirements are changing\n- the GP formalizes governance early, recognizing that weak controls could depress exit value even if EBITDA grows\n\nIf those actions occur, ESG has functioned as real underwriting and ownership discipline. If the GP simply states later that the company now has an ESG dashboard, that is reporting, not decision-useful integration.",
+          "A buyout GP evaluates a niche industrial services company with $45M trailing EBITDA at 9.0× EV/EBITDA ($405M enterprise value), targeting a $175M equity check alongside $230M acquisition debt. On conventional metrics — stable cash flow, 22% EBITDA margins, and fragmented market — the deal looks appealing.\n\nDuring ESG diligence, the GP identifies three issues:\n\n1. The company has a weak safety record: OSHA recordable rates 2.5× the industry average, with three significant incidents in the prior 18 months. External counsel estimates potential remediation and claims exposure of $8M–$15M.\n2. Customer contracts increasingly require emissions and supplier-compliance disclosures the company cannot yet provide. Three of the top ten customers (representing ~18% of revenue) have flagged this as a renewal condition.\n3. Board oversight is informal, with founder-dominated decision-making and limited documented controls.\n\nA superficial ESG process would note these issues in a memo appendix and proceed at the same price.\n\nA substantive process changes the deal economics in at least three ways:\n- the GP reduces the entry price by $12M (from $405M to $393M EV) and requires a $6M remediation reserve funded at close, reflecting the midpoint of estimated safety claims exposure. That changes the equity check from $175M to $163M and improves the LP's entry basis.\n- the GP builds a $2M post-close compliance investment plan for emissions tracking and supplier reporting, funded from operating cash flow, which protects ~$50M of at-risk revenue over the hold period.\n- the GP formalizes governance within 90 days of close: independent board chair, documented approval thresholds, and quarterly ESG KPI reporting to the board.\n\n**Net impact:** Over a five-year hold, if safety improvements reduce incident costs by $3M/year and compliance readiness preserves the at-risk customer base, EBITDA at exit could be $55M versus $48M in a no-action scenario. At 9.0× exit, that is a $63M difference in enterprise value — materially affecting MOIC and fund-level returns on a $163M equity position.\n\nIf those actions occur, ESG has functioned as real underwriting and ownership discipline. If the GP simply states later that the company now has an ESG dashboard, that is reporting, not decision-useful integration.",
       },
       {
         type: "teaching",
@@ -3983,7 +3995,7 @@ export const lessonContents: LessonContent[] = [
         type: "framing",
         title: "This lesson is synthesis, not new theory",
         content:
-          "By this point, the objective is not to learn one more PE concept. It is to integrate the earlier lessons into allocator judgment. That means moving from isolated knowledge to a disciplined recommendation process.\n\nThis synthesis draws on the curriculum in the sequence it was actually built:\n- **Fund structure, economics, and cash-flow mechanics** (Days 1–3): commitments, calls, fees, waterfalls, and the J-curve\n- **Performance measurement and timing context** (Days 4–6): IRR, multiples, lifecycle effects, and vintage framing\n- **Deal mechanics, strategy differences, value creation, and exits** (Days 7–10): leverage, strategy role, attribution, and realization routes\n- **Terms, benchmarking, and manager underwriting** (Days 11–13): waterfalls, benchmarking tools, people, process, and repeatability\n- **Programme construction and market implementation** (Days 14–17): pacing, secondaries, co-invest, PE sizing, and opportunity cost\n- **Valuation discipline** (Day 18): mark credibility, lag, and exit-to-mark thinking\n- **ESG as an underwriting and ownership lens** (Day 19): materiality, process evidence, and impact distinction\n\nA strong PE recommendation does five things at once:\n- interprets the fund mechanics correctly\n- distinguishes realized evidence from interim marks\n- evaluates the GP's people, process, and portfolio construction realistically\n- places the opportunity in programme context, not just fund context\n- states the decision and the remaining open risks clearly\n\nThis lesson therefore functions as a capstone and as a bridge to later work. The skill being tested is whether you can hear a GP presentation, separate signal from polish, and produce a recommendation that would survive committee scrutiny.",
+          "By this point, the objective is not to learn one more PE concept. It is to integrate the earlier lessons into allocator judgment. That means moving from isolated knowledge to a disciplined recommendation process.\n\nThis synthesis draws on the curriculum in the sequence it was actually built:\n- **Fund structure, economics, and cash-flow mechanics** (Days 1–3): commitments, calls, fees, waterfalls, and the J-curve\n- **Performance measurement and timing context** (Days 4–6): IRR, multiples, lifecycle effects, and vintage framing\n- **Deal mechanics, strategy differences, value creation, and exits** (Days 7–10): leverage, strategy role, attribution, and realization routes\n- **Terms, benchmarking, and manager underwriting** (Days 11–13): waterfalls, benchmarking tools, people, process, and repeatability\n- **Programme construction and market implementation** (Days 14–16): pacing, secondaries, and co-invest economics\n- **Reporting, NAV, and mark integrity** (Day 17): mark credibility, valuation lag, denominator effect, and exit-to-mark thinking\n- **PE in the portfolio: allocation and the illiquidity premium** (Day 18): PE sizing, opportunity cost, governance constraints, and PME discipline\n- **ESG as an underwriting and ownership lens** (Day 19): materiality, process evidence, and impact distinction\n\nA strong PE recommendation does five things at once:\n- interprets the fund mechanics correctly\n- distinguishes realized evidence from interim marks\n- evaluates the GP's people, process, and portfolio construction realistically\n- places the opportunity in programme context, not just fund context\n- states the decision and the remaining open risks clearly\n\nThis lesson therefore functions as a capstone and as a bridge to later work. The skill being tested is whether you can hear a GP presentation, separate signal from polish, and produce a recommendation that would survive committee scrutiny.",
       },
       {
         type: "teaching",
@@ -4013,7 +4025,7 @@ export const lessonContents: LessonContent[] = [
         type: "teaching",
         title: "The most common capstone failure modes",
         content:
-          "At the end of a PE diligence process, allocators often fail in predictable ways. Each failure mode maps to a specific lesson that should have caught it.\n\n**1. Headline capture**\nThey anchor on net IRR, TVPI, and brand quality, then work backward to justify a positive conclusion. The fix is what Days 4, 5, and 12 taught: separate IRR from multiples, separate DPI from RVPI, and use benchmarking tools such as PME with discipline rather than as decoration.\n\n**2. Realization neglect**\nThey discuss track record strength without explicitly stating how much of the result is confirmed in cash. A fund at year 5 reporting 1.8x TVPI but 0.3x DPI has confirmed only a small share of that total value. Day 18's valuation framework explains why the remaining RVPI should be treated as a working estimate, not confirmed wealth.\n\n**3. Process-story mismatch**\nThey repeat the GP's value-creation claim without checking whether realized deal outcomes support it. Day 9's value-creation framework applies here: was EBITDA growth organic or acquisition-driven? How much of the result came from multiple expansion rather than operational improvement? If the story is operational excellence but the attribution is mostly market re-rating, the claimed edge is weaker than advertised.\n\n**4. Programme-blind approval**\nThey recommend a strong fund without checking pacing, vintage concentration, liquidity, or governance capacity. Days 14 and 17 covered this: PE sizing is a programme-management question, not just a manager-quality question. A strong GP at the wrong moment in pacing or portfolio context can still be the wrong decision.\n\n**5. Vague risk language**\nThey list generic risks such as key person, valuation, or market conditions without identifying which one is most decision-relevant in this case. A recommendation that says 'usual PE risks apply' is not a risk statement. The real question is which specific risk is most likely to change the outcome and what evidence would reveal that sooner.\n\nA good capstone answer avoids all five.",
+          "At the end of a PE diligence process, allocators often fail in predictable ways. Each failure mode maps to a specific lesson that should have caught it.\n\n**1. Headline capture**\nThey anchor on net IRR, TVPI, and brand quality, then work backward to justify a positive conclusion. The fix is what Days 4, 5, and 12 taught: separate IRR from multiples, separate DPI from RVPI, and use benchmarking tools such as PME with discipline rather than as decoration.\n\n**2. Realization neglect**\nThey discuss track record strength without explicitly stating how much of the result is confirmed in cash. A fund at year 5 reporting 1.8x TVPI but 0.3x DPI has confirmed only a small share of that total value. Day 17's valuation framework explains why the remaining RVPI should be treated as a working estimate, not confirmed wealth.\n\n**3. Process-story mismatch**\nThey repeat the GP's value-creation claim without checking whether realized deal outcomes support it. Day 9's value-creation framework applies here: was EBITDA growth organic or acquisition-driven? How much of the result came from multiple expansion rather than operational improvement? If the story is operational excellence but the attribution is mostly market re-rating, the claimed edge is weaker than advertised.\n\n**4. Programme-blind approval**\nThey recommend a strong fund without checking pacing, vintage concentration, liquidity, or governance capacity. Days 14 and 18 covered this: PE sizing is a programme-management question, not just a manager-quality question. A strong GP at the wrong moment in pacing or portfolio context can still be the wrong decision.\n\n**5. Vague risk language**\nThey list generic risks such as key person, valuation, or market conditions without identifying which one is most decision-relevant in this case. A recommendation that says 'usual PE risks apply' is not a risk statement. The real question is which specific risk is most likely to change the outcome and what evidence would reveal that sooner.\n\nA good capstone answer avoids all five.",
       },
       {
         type: "example",
@@ -4245,7 +4257,7 @@ export const lessonContents: LessonContent[] = [
       type: "source-note",
       title: "Sources for this lesson",
       content:
-        "Core source categories for this lesson: ILPA Principles 3.0 for alignment, governance, and transparency baseline; ILPA DDQ / diligence frameworks for standard LP inquiry areas; representative LPA and side-letter structures as used in institutional PE practice; practitioner references on key-person, removal, LPAC, recycling, and fund-finance permissions. The key educational objective is not clause memorization. It is translating document language into allocator control, economics leakage, and information-rights implications.",
+        "ILPA Principles 3.0, Sections 2–4 — alignment, governance, transparency, and recommended LPA standards for key-person, removal, LPAC scope, and reporting obligations. ILPA Due Diligence Questionnaire (DDQ), current edition — standardized GP inquiry framework including fund terms, governance, side letters, and MFN mechanics. Pepper Hamilton / Troutman Pepper, 'Private Equity Fund Terms Research' (annual) — market data on key-person triggers, removal thresholds, expense definitions, recycling prevalence, and side-letter carve-outs. CFA Institute: Private Markets and Alternative Investments curriculum — fund structures, LP rights, and governance context. CAIA Level II: private equity fund terms, investor protections, and partnership governance.",
     },
     {
       type: "weak-answer",
@@ -4454,7 +4466,7 @@ export const lessonContents: LessonContent[] = [
       type: "source-note",
       title: "Sources for this lesson",
       content:
-        "Core source categories for this lesson: ILPA Principles 3.0 for alignment, governance, and transparency expectations; ILPA guidance on continuation funds and GP-led transactions for LP process, disclosure, and conflict-management expectations; institutional private fund governance materials on LPAC scope, conflict review, and valuation oversight. The learning objective is to understand governance as allocator risk control, not to memorize committee formalities.",
+        "ILPA Principles 3.0, Sections 3–4 — LPAC scope, conflict-of-interest procedures, valuation governance, and GP-led transaction disclosure expectations. ILPA Guidance on GP-Led Secondary Transactions (2021) — LP election process, fairness opinion standards, conflict framework, and recommended timelines for LPAC review. SEC Division of Examinations, Private Fund Risk Alert (2022) — conflicts, valuation practices, and fee and expense compliance observations. Institutional Limited Partners Association (ILPA), Model Side Letter Provisions — governance provisions and LPAC authority benchmarks. CFA Institute and CAIA Level II curriculum — private fund governance, LPAC scope, and conflict review mechanics.",
     },
     {
       type: "weak-answer",
@@ -4791,11 +4803,11 @@ export const lessonContents: LessonContent[] = [
     },
   ],
   sources: [
-    "ILPA reporting templates and institutional reporting guidance — standardization for private-markets data, cash flows, fees, and portfolio detail",
-    "Institutional allocator best practices for private-markets reporting, liquidity forecasting, and programme aggregation",
-    "Practitioner materials on private fund data quality, reporting timeliness, and operational scalability",
-    "CFA Institute: Private Markets and Alternative Investments curriculum — reporting, valuation, and fund-monitoring context",
-    "CAIA curriculum and industry materials on private fund reporting and allocator oversight",
+    "ILPA Reporting Best Practices and Standardized Reporting Templates — cash-flow, fee-expense, and portfolio-level data standards for LP reporting consistency",
+    "ILPA Quarterly Reporting Standards — recommended timing, content depth, and format guidance for GP-to-LP reporting",
+    "CFA Institute Global Investment Performance Standards (GIPS) for Asset Owners — framework for performance presentation, composite construction, and reporting transparency in private markets",
+    "CAIA Association Level II: Private Equity Fund Monitoring and Reporting — reporting cadence, data quality, and allocator oversight processes",
+    "Preqin and institutional LP survey data on private-markets reporting timeliness, data quality gaps, and aggregation challenges across multi-manager programmes",
   ],
 },
 {
@@ -5221,11 +5233,11 @@ export const lessonContents: LessonContent[] = [
     },
   ],
   sources: [
-    "ILPA guidance on NAV facilities — allocator expectations for disclosure, governance, and risk management",
-    "Practitioner primers on fund-finance structures — subscription facilities, NAV facilities, and hybrid facilities",
-    "Market commentary on NAV-finance growth drivers, use cases, and risk framing",
-    "CFA Institute: Private Markets and Alternative Investments curriculum — fund structure, leverage, and allocator interpretation context",
-    "Institutional private-markets governance materials linking fund finance, valuation, and LP oversight",
+    "ILPA Guidance on Subscription-Secured Credit Facilities and Fund-Level Borrowing — LP disclosure expectations, governance, and risk-management recommendations",
+    "17Capital and fund-finance practitioner materials on NAV-based lending — facility structures, borrowing-base mechanics, covenant frameworks, and market sizing",
+    "Cadwalader, Wickersham & Taft and Haynes Boone Fund Finance Market Review (annual) — subscription facility and NAV facility market data, structural evolution, and LP-impact analysis",
+    "CFA Institute: Private Markets and Alternative Investments curriculum, fund structure and leverage chapters — subscription lines, NAV facilities, and the effect of fund-level borrowing on performance measurement",
+    "CAIA Association Level II: Private Equity Fund Finance — fund-level leverage, borrowing-base sensitivity, and allocator interpretation of leveraged distributions and IRR distortion",
   ],
 },
 {
@@ -5442,11 +5454,11 @@ export const lessonContents: LessonContent[] = [
     },
   ],
   sources: [
-    "ILPA-aligned reporting and transparency practices — data backbone for private-markets liquidity monitoring and dashboarding",
-    "Practitioner materials on private-markets pacing, commitment forecasting, and stress testing across sleeves",
-    "Institutional guidance on secondaries, programme liquidity management, and governance design under stress",
-    "Market and regulatory context on evolving private-fund disclosure expectations and the need for durable allocator discipline",
-    "CFA Institute: Private Markets and Alternative Investments curriculum — private-markets cash-flow, portfolio-construction, and governance context",
+    "ILPA Principles 3.0, Section 4 — reporting, transparency, and LP information rights relevant to liquidity monitoring and commitment tracking",
+    "Cambridge Associates, 'Private Investment Pacing and Cash Flow Modeling' — commitment pacing, distribution forecasting, and stress testing for multi-vintage private-markets programmes",
+    "Takahashi & Alexander (2002), 'Illiquid Alternative Asset Fund Modeling' — foundational pacing model for commitment, NAV, and cash-flow forecasting across private capital sleeves",
+    "Preqin and institutional allocator survey data on liquidity management, over-commitment practices, and denominator-effect response across endowments, pensions, and foundations",
+    "CFA Institute: Private Markets and Alternative Investments curriculum — pacing, portfolio construction, and liquidity governance in multi-sleeve private-markets programmes",
   ],
 },
 {
@@ -5535,7 +5547,7 @@ export const lessonContents: LessonContent[] = [
       type: "source-note",
       title: "Sources for this lesson",
       content:
-        "Core source categories for this lesson: institutional and practitioner materials on venture return distributions, power-law portfolio construction, and venture fund economics; venture benchmarking and portfolio-construction commentary from reputable LP, academic, and industry sources; allocator-oriented materials on ownership, reserves, and outcome concentration. The goal is to give the learner a durable mental model for how venture really works before moving into stage, cap-table, and financing mechanics.",
+        "Correlation Ventures (2012–2018), venture outcome distribution data — empirical evidence on the skewness of individual-company returns across early-stage portfolios. Horsley Bridge Partners, historical fund-level data on venture return concentration — evidence that a small number of investments drive the majority of fund economics. Cambridge Associates, 'Venture Capital Disrupts Itself: Breaking the Concentration Rule' — benchmarking data on how top-performing funds differ in construction and outcome concentration. Kaplan & Schoar (2005), 'Private Equity Performance: Returns, Persistence, and Capital Flows' — foundational evidence on venture return dispersion and manager persistence. CFA Institute: Private Markets and Alternative Investments curriculum — venture fund economics, portfolio construction, and return-distribution context. CAIA Association Level II: venture capital portfolio construction and power-law economics.",
     },
     {
       type: "weak-answer",
@@ -5872,9 +5884,9 @@ export const lessonContents: LessonContent[] = [
     },
   ],
   sources: [
-    "Institutional and practitioner materials on venture stage taxonomy and portfolio construction by stage",
-    "Allocator-oriented resources on venture fund archetypes, reserves, ownership, and stage-specific underwriting",
-    "Reputable industry commentary on seed, early-stage, breakout, late-stage, and multi-stage venture platforms",
+    "PitchBook and NVCA Venture Monitor (quarterly) — stage-level deal activity, round sizes, and valuation data across seed, early, and late-stage venture",
+    "Cambridge Associates, venture benchmarking data and fund-archetype commentary — stage-specific return patterns, reserve allocation, and ownership economics by fund type",
+    "Institutional venture allocator materials on multi-stage platform evaluation, stage drift identification, and stage-specific underwriting frameworks",
     "CFA Institute: Private Markets and Alternative Investments curriculum — venture context, portfolio role, and stage distinctions",
     "CAIA and industry materials on venture strategy classification, manager differentiation, and stage-specific evidence",
   ],
@@ -6012,7 +6024,7 @@ export const lessonContents: LessonContent[] = [
       type: "source-note",
       title: "Sources for this lesson",
       content:
-        "Shared vocabulary for venture finance and ownership mechanics: NVCA Yearbook glossary and related venture financing educational materials. Cap-table and conversion concepts: Y Combinator SAFE documentation and supporting explanatory materials for post-money versus pre-money treatment. Allocator-relevant framing on venture ownership, reserves, dilution, and fund-level economics: institutional and practitioner venture portfolio-construction resources, including materials on ownership targets by stage and concentration of value in winners. This lesson is designed to make the learner economically fluent in ownership mechanics rather than legally exhaustive.",
+        "NVCA Yearbook (current edition), glossary and venture-financing definitions — pre-money, post-money, preferred stock, and capitalization vocabulary. Y Combinator SAFE documentation and post-money SAFE explainer — conversion mechanics, cap treatment, and fully diluted ownership math. Wilson Sonsini term-sheet guide and Cooley GO venture financing resources — option-pool mechanics, anti-dilution provisions, and round-by-round ownership analysis. Horsley Bridge Partners and Cambridge Associates data on venture ownership retention and fund-level economics — evidence linking ownership preservation to fund return quality. CFA Institute: Private Markets and Alternative Investments curriculum — venture cap-table concepts and allocator-relevant ownership analysis. CAIA Association Level II: venture financing structures, dilution, and reserve strategy.",
     },
     {
       type: "weak-answer",
@@ -6918,7 +6930,7 @@ export const lessonContents: LessonContent[] = [
       whyItMatters:
         "This is the core discipline of Day 33. Good venture allocators do not ask only what the round price was. They ask how informative that price really is.",
       sourceNote:
-        "This visual reflects the Lesson 33 blueprint's emphasis on transaction price versus fair value, structured rounds, secondary evidence, and integration with prior valuation-governance lessons.  [oai_citation:1‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)",
+        "This visual reflects venture valuation's emphasis on transaction price versus fair value, structured rounds, secondary evidence, and integration with prior valuation-governance lessons.",
     },
     {
       type: "teaching",
@@ -6972,7 +6984,7 @@ export const lessonContents: LessonContent[] = [
       whyItMatters:
         "This gives the learner a practical hierarchy for comparing rounds, tenders, secondaries, and internal marks without collapsing them into one bucket.",
       sourceNote:
-        "This visual reflects the Lesson 33 blueprint's emphasis on calibration, secondary transactions, inside rounds, and structured equity as valuation evidence.  [oai_citation:2‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)",
+        "This visual reflects the emphasis on calibration, secondary transactions, inside rounds, and structured equity as valuation evidence.",
     },
     {
       type: "teaching",
@@ -7176,7 +7188,7 @@ export const lessonContents: LessonContent[] = [
       whyItMatters:
         "This framework helps the learner turn broad venture storytelling into a repeatable allocator process.",
       sourceNote:
-        "This directly reflects the Lesson 34 blueprint: business model taxonomy, model-specific proof, failure modes, and how sector changes allocator interpretation.  [oai_citation:1‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)",
+        "This framework connects business model taxonomy, model-specific proof, failure modes, and how sector changes allocator interpretation.",
     },
     {
       type: "teaching",
@@ -7194,7 +7206,7 @@ export const lessonContents: LessonContent[] = [
       type: "teaching",
       title: "AI and data infrastructure: secular excitement does not eliminate model risk",
       content:
-        "Your blueprint rightly anchors Lesson 34 around AI and healthcare/life sciences because they are dominant themes and concentration risks, not merely popular sectors.  [oai_citation:2‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)\n\nAllocator-relevant distinctions inside AI include:\n- infrastructure versus application layer\n- model-layer exposure versus workflow-layer embedding\n- software-like economics versus compute- or services-heavy economics\n- proprietary data or distribution advantage versus wrapper risk\n\nWhat usually matters:\n- whether the product has defensibility beyond temporary novelty\n- whether gross margins are durable after inference or compute costs\n- whether usage reflects real workflow adoption or experimentation\n- whether dependence on third-party model providers weakens long-term economics\n- whether pricing power is likely to survive rapid model commoditization\n\nWhat often goes wrong:\n- the company is a feature rather than a durable platform\n- usage growth is real but monetization durability is weak\n- cost structure is much worse than software multiples imply\n- customer behavior reflects experimentation budgets, not embedded demand\n- thematically similar companies crowd the field faster than defensibility develops\n\nAllocator implication:\nThe more concentrated a manager is in AI, the more important it is to distinguish theme exposure from true underwriting edge. A generalist can ride enthusiasm. A specialist should be able to explain data moats, workflow embedding, model dependence, and the difference between adoption and durable economics.",
+        "AI and healthcare/life sciences deserve special attention because they are dominant themes and concentration risks, not merely popular sectors.\n\nAllocator-relevant distinctions inside AI include:\n- infrastructure versus application layer\n- model-layer exposure versus workflow-layer embedding\n- software-like economics versus compute- or services-heavy economics\n- proprietary data or distribution advantage versus wrapper risk\n\nWhat usually matters:\n- whether the product has defensibility beyond temporary novelty\n- whether gross margins are durable after inference or compute costs\n- whether usage reflects real workflow adoption or experimentation\n- whether dependence on third-party model providers weakens long-term economics\n- whether pricing power is likely to survive rapid model commoditization\n\nWhat often goes wrong:\n- the company is a feature rather than a durable platform\n- usage growth is real but monetization durability is weak\n- cost structure is much worse than software multiples imply\n- customer behavior reflects experimentation budgets, not embedded demand\n- thematically similar companies crowd the field faster than defensibility develops\n\nAllocator implication:\nThe more concentrated a manager is in AI, the more important it is to distinguish theme exposure from true underwriting edge. A generalist can ride enthusiasm. A specialist should be able to explain data moats, workflow embedding, model dependence, and the difference between adoption and durable economics.",
     },
     {
       type: "teaching",
@@ -7212,7 +7224,7 @@ export const lessonContents: LessonContent[] = [
       type: "teaching",
       title: "Healthcare and life sciences: proof is often clinical, not commercial",
       content:
-        "Healthcare and life sciences justify extra allocator attention because the evidence of value creation often differs sharply from software-trained intuition. Your blueprint explicitly flags healthcare and life sciences as a dominant theme requiring sector literacy.  [oai_citation:3‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)\n\nImportant distinctions include:\n- healthcare IT and workflow software\n- tech-enabled services\n- diagnostics\n- medical devices\n- biotech and therapeutics\n\nWhat often matters in biotech and therapeutics:\n- scientific validity\n- quality of preclinical or clinical data\n- milestone design\n- regulatory path\n- capital sufficiency to the next genuine de-risking event\n- syndicate quality and scientific network\n\nWhat often matters in healthcare software or services:\n- reimbursement dynamics\n- workflow integration\n- implementation friction\n- provider or payer adoption cycle\n- compliance burden\n\nWhat often goes wrong:\n- scientific promise does not become clinical or regulatory progress\n- commercialization proves slower or more expensive than expected\n- the business needs more capital than the market is willing to provide\n- generalist investors overread interim milestones as broad de-risking\n\nAllocator implication:\nHealthcare and life sciences often justify specialist managers because domain fluency, network depth, and regulatory understanding can be genuinely differentiating. A generalist can still win, but should face a higher burden of proof on process depth.",
+        "Healthcare and life sciences justify extra allocator attention because the evidence of value creation often differs sharply from software-trained intuition. Healthcare and life sciences are a dominant theme requiring sector literacy.\n\nImportant distinctions include:\n- healthcare IT and workflow software\n- tech-enabled services\n- diagnostics\n- medical devices\n- biotech and therapeutics\n\nWhat often matters in biotech and therapeutics:\n- scientific validity\n- quality of preclinical or clinical data\n- milestone design\n- regulatory path\n- capital sufficiency to the next genuine de-risking event\n- syndicate quality and scientific network\n\nWhat often matters in healthcare software or services:\n- reimbursement dynamics\n- workflow integration\n- implementation friction\n- provider or payer adoption cycle\n- compliance burden\n\nWhat often goes wrong:\n- scientific promise does not become clinical or regulatory progress\n- commercialization proves slower or more expensive than expected\n- the business needs more capital than the market is willing to provide\n- generalist investors overread interim milestones as broad de-risking\n\nAllocator implication:\nHealthcare and life sciences often justify specialist managers because domain fluency, network depth, and regulatory understanding can be genuinely differentiating. A generalist can still win, but should face a higher burden of proof on process depth.",
     },
     {
       type: "teaching",
@@ -7236,7 +7248,7 @@ export const lessonContents: LessonContent[] = [
       whyItMatters:
         "This helps the learner move from broad sector labels to allocator-relevant diligence questions.",
       sourceNote:
-        "This reflects the Lesson 34 blueprint's emphasis on model-specific proof, AI and healthcare concentration, and failure-mode-aware manager edge.  [oai_citation:4‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)",
+        "This framework reflects the emphasis on model-specific proof, AI and healthcare concentration, and failure-mode-aware manager edge.",
     },
     {
       type: "teaching",
@@ -7254,7 +7266,7 @@ export const lessonContents: LessonContent[] = [
       type: "teaching",
       title: "Sector concentration is a portfolio risk, not just a theme call",
       content:
-        "Your blueprint deliberately anchors Lesson 34 around AI and healthcare/life sciences because concentration in dominant themes is an allocator risk, not merely a trend observation.  [oai_citation:5‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)\n\nThis matters at two levels.\n\n**Manager level**\nA fund may look diversified by company count but still be highly concentrated in one technical, regulatory, or valuation-sensitive theme.\n\n**Programme level**\nAcross multiple VC and growth managers, the allocator may accumulate hidden concentration to the same underlying theme through different labels. AI infrastructure, developer tooling, vertical software, data platforms, and application workflow automation may overlap more than manager branding suggests. The same is true across healthcare software, diagnostics, devices, and life-sciences-adjacent models.\n\nAllocator implication:\nSector literacy is part of portfolio construction, not just company underwriting. The learner should now be able to hear repeated exposure across managers and translate it into concentration, duration, reserve burden, and valuation sensitivity rather than mere secular excitement.",
+        "Concentration in dominant themes like AI and healthcare/life sciences is an allocator risk, not merely a trend observation.\n\nThis matters at two levels.\n\n**Manager level**\nA fund may look diversified by company count but still be highly concentrated in one technical, regulatory, or valuation-sensitive theme.\n\n**Programme level**\nAcross multiple VC and growth managers, the allocator may accumulate hidden concentration to the same underlying theme through different labels. AI infrastructure, developer tooling, vertical software, data platforms, and application workflow automation may overlap more than manager branding suggests. The same is true across healthcare software, diagnostics, devices, and life-sciences-adjacent models.\n\nAllocator implication:\nSector literacy is part of portfolio construction, not just company underwriting. The learner should now be able to hear repeated exposure across managers and translate it into concentration, duration, reserve burden, and valuation sensitivity rather than mere secular excitement.",
     },
     {
       type: "example",
@@ -7272,7 +7284,7 @@ export const lessonContents: LessonContent[] = [
       type: "source-note",
       title: "Sources for this lesson",
       content:
-        "Core source categories for this lesson: NVCA Yearbook-style venture materials for sector framing, stage and theme definitions, and concentration context; allocator- and practitioner-oriented resources on venture business models, unit economics, burn quality, and sector-specific underwriting; sector-specialist commentary on software, AI infrastructure, fintech, healthcare, biotech, and marketplace models. The purpose is not to make the learner a domain operator. It is to build enough model-specific literacy that manager specialization claims, portfolio concentrations, and underwriting narratives can be interpreted correctly.  [oai_citation:6‡Private Markets Learning App Curriculum Blueprint for Lessons 21–50.docx](sediment://file_00000000720c71fb8e3f6ef36a1849f2)",
+        "NVCA Yearbook and annual venture data — sector composition, theme concentration, and stage definitions; Bessemer Venture Partners, 'State of the Cloud' reports — SaaS metrics, efficiency benchmarks, and enterprise software underwriting frameworks; a16z and institutional venture materials on AI infrastructure, application-layer economics, and model-dependence risk; NVCA Model Legal Documents and practitioner venture-finance resources on sector-specific underwriting and failure-mode identification; Rock Health, Silicon Valley Bank, and PitchBook sector analyses on healthcare venture, biotech capital requirements, and fintech model classification.",
     },
     {
       type: "weak-answer",
@@ -7672,11 +7684,11 @@ export const lessonContents: LessonContent[] = [
     },
   ],
   sources: [
-    "Allocator- and practitioner-oriented venture materials on reserve ratios, follow-on strategy, ownership retention, and venture fund construction",
-    "Venture portfolio-construction resources focused on capital concentration, reserve deployment, and the economics of defending winners",
-    "Institutional venture diligence materials on follow-on attribution, signaling, and ownership retention in eventual top contributors",
-    "Industry educational materials on venture reserves, pro rata execution, and portfolio-management tradeoffs across stages",
-    "CFA Institute and related private-markets educational materials providing context for venture portfolio construction, concentration, and follow-on discipline",
+    "Horsley Bridge Partners, venture fund-level data on reserve deployment and ownership retention — empirical evidence linking follow-on discipline to fund-return concentration",
+    "Cambridge Associates, 'Venture Capital Index and Selected Benchmark Statistics' — portfolio-construction data including reserve ratios, follow-on patterns, and return attribution by fund vintage and stage",
+    "Correlation Ventures, venture outcome distribution data — evidence on how follow-on capital allocation correlates with eventual winner concentration",
+    "NVCA Yearbook, venture fund construction and follow-on norms — industry benchmarks for reserve allocation, pro rata participation, and signaling dynamics",
+    "CFA Institute: Private Markets and Alternative Investments curriculum — venture portfolio management, follow-on strategy, and allocator oversight of reserve discipline",
   ],
 },
 {
@@ -7782,7 +7794,7 @@ export const lessonContents: LessonContent[] = [
       type: "example",
       title: "Worked example 2: a manager with great marks but slow DPI",
       content:
-        "Assume a venture manager has a high unrealized TVPI driven by several late-stage companies. Over the last two years:\n- one company completed an IPO but remains only partially monetized\n- another executed a tender that monetized a modest slice of the position\n- a third remains private at a high mark with no clean near-term exit path\n- realized DPI remains lower than peers despite strong headline NAV\n\nAllocator analysis path:\n\n**Step 1: identify value versus liquidity**\nThe portfolio may genuinely contain strong assets. That does not mean the liquidity profile is strong.\n\n**Step 2: classify each path**\nThe IPO created visibility but not full realization. The tender created partial cash. The private hold remains mainly a paper gain.\n\n**Step 3: assess manager behavior**\nDid the GP show sell discipline after IPO? Did it use the tender well? Does it have a coherent plan for the long private hold, or is it mainly relying on continued mark strength?\n\n**Step 4: update benchmark confidence**\nThe high TVPI may still be real, but the LP should attach lower confidence to near-term monetization than the headline return suggests.\n\nAllocator lesson:\nThis is why exit analysis is indispensable. Two managers can show similar venture NAV and very different liquidity quality.",
+        "Assume a $300M venture fund in year 8, reporting a 3.2× gross TVPI. The portfolio has three main value drivers:\n\n**Company A — IPO'd 18 months ago:**\n- Current mark: $280M (representing ~29% of gross asset value)\n- Fund ownership: 8.5% on ~3.3B market cap\n- Shares sold to date: ~30% of position, generating $84M in distributions\n- Remaining exposure: $196M in public stock, subject to lockup expiry and market risk\n\n**Company B — tender completed six months ago:**\n- Current mark: $165M\n- Tender monetized ~20% of the position: $33M distributed to LPs\n- Remaining $132M is still private, next liquidity event uncertain\n\n**Company C — private, no near-term exit:**\n- Current mark: $210M at last financing valuation (Series F, 14 months ago)\n- No IPO filing, no M&A process, no secondary activity\n- Entirely unrealized and mark-dependent\n\n**Fund-level math:**\n- Gross asset value: ~$960M → 3.2× TVPI on $300M fund\n- Total distributions to date: $84M + $33M + $45M (other smaller exits) = $162M\n- DPI: $162M / $300M = **0.54×**\n- RVPI: ($960M − $162M) / $300M = **2.66×**\n\nThe headline 3.2× TVPI sounds excellent. But 83% of value remains unrealized, and the three main drivers each carry different liquidity quality. Company A has public-market risk on a large remaining position. Company B returned only a fifth of its value. Company C is entirely paper.\n\nAllocator analysis path:\n\n**Step 1: identify value versus liquidity**\nThe portfolio may genuinely contain strong assets. That does not mean the liquidity profile is strong. A 0.54× DPI in year 8 is below median for a fund reporting 3.2× TVPI.\n\n**Step 2: classify each path**\nThe IPO created visibility but not full realization — the remaining $196M is exposed to public-market volatility. The tender created partial cash but left $132M still locked. The private hold is mainly a paper gain.\n\n**Step 3: assess manager behavior**\nDid the GP sell aggressively enough post-IPO, or is it holding for additional upside while exposing LPs to drawdown risk on a concentrated public position? Did it use the tender well? Does it have a coherent plan for Company C, or is it mainly relying on continued mark strength?\n\n**Step 4: update benchmark confidence**\nThe high TVPI may still be real, but the LP should attach lower confidence to near-term monetization than the headline return suggests. If Company A's stock declined 40% from current levels, gross TVPI would drop from 3.2× to approximately 2.5× — a scenario that is entirely possible for a concentrated public position.\n\nAllocator lesson:\nThis is why exit analysis is indispensable. Two managers can show similar venture NAV and very different liquidity quality. The DPI/RVPI split tells you how much of the story is confirmed cash versus mark-dependent optimism.",
     },
     {
       type: "source-note",
@@ -8152,11 +8164,11 @@ export const lessonContents: LessonContent[] = [
     },
   ],
   sources: [
-    "Private markets educational materials on growth equity as a distinct strategy with its own stage, ownership structure, risk profile, and return attribution",
-    "Allocator-oriented resources on growth equity underwriting criteria including revenue quality, growth sustainability, unit economics, and entry valuation discipline",
-    "Institutional manager research materials on growth equity track record evaluation distinguishing business-quality returns from cycle-driven multiple expansion",
-    "CFA Institute and related private-markets educational materials providing context for growth equity in the broader private markets landscape",
-    "Industry materials on minority versus control growth equity structures and the governance and value-creation implications for each approach",
+    "Cambridge Associates, 'Growth Equity: Bridging the Gap Between Venture and Buyout' — strategy-positioning data, return attribution, and benchmarking context for growth equity as a distinct sleeve",
+    "Bain & Company, Global Private Equity Report (annual) — growth equity deal volumes, pricing trends, and return decomposition distinguishing revenue growth from multiple expansion",
+    "PitchBook, growth equity deal and fund data — entry valuation multiples, ownership structures (minority versus control), and sector composition across growth equity vintages",
+    "CFA Institute: Private Markets and Alternative Investments curriculum — growth equity positioning, risk profile, and return-source analysis within the broader private markets landscape",
+    "CAIA Association Level II: Growth Equity and Expansion Capital — minority versus control governance structures, value-creation frameworks, and manager-evaluation criteria for growth-stage investing",
   ],
 },
 {
@@ -8374,11 +8386,11 @@ export const lessonContents: LessonContent[] = [
     },
   ],
   sources: [
-    "Private markets and venture capital materials on late-stage private investing, crossover fund participation, and the mechanics of structured rounds",
-    "Institutional allocator and OCIO materials on interpreting late-stage marks in the context of public market comparable movements",
-    "Industry and academic materials on crossover fund behavior, diligence approaches, and post-IPO selling patterns relative to traditional VC",
-    "Venture portfolio monitoring resources on structured round mechanics, down round implications, and the effect of late-stage capital on existing shareholder economics",
-    "CFA Institute and private markets educational materials providing context for IPO readiness, late-stage realization risk, and mark interpretation in the crossover era",
+    "PitchBook, late-stage venture and crossover fund data — round sizes, investor composition, structured-round prevalence, and valuation trends across 2018–2025 vintages",
+    "Lerner, Schoar & Wongsunwai (2007), 'Smart Institutions, Foolish Choices: The Limited Partner Performance Puzzle' — evidence on institutional investor behavior in private markets relevant to late-stage allocation and crossover participation",
+    "Goldman Sachs and Morgan Stanley IPO and late-stage private-market research — IPO readiness criteria, post-IPO lockup mechanics, and crossover investor selling patterns",
+    "NVCA and venture-finance practitioner materials on structured rounds, ratchets, liquidation preference stacking, and the effect of late-stage protective terms on earlier shareholder economics",
+    "CFA Institute: Private Markets and Alternative Investments curriculum — late-stage venture valuation, IPO transition mechanics, and mark interpretation in periods of public-market correction",
   ],
 },
 {
@@ -8638,11 +8650,11 @@ export const lessonContents: LessonContent[] = [
     },
   ],
   sources: [
-    "Allocator- and practitioner-oriented venture materials on sourcing models, ownership retention, reserve discipline, and venture firm construction",
-    "Venture partnership and succession commentary focused on decision rights, franchise durability, and next-generation economics",
-    "Institutional venture diligence frameworks addressing access, selection, ownership outcomes, reserve behavior, and monetization quality",
-    "Industry educational materials on venture portfolio construction, value-add specificity, and stage drift across multi-stage platforms",
-    "CFA Institute and related private-markets educational materials providing context for manager evaluation, process durability, and private-markets franchise risk",
+    "Kaplan & Schoar (2005), 'Private Equity Performance: Returns, Persistence, and Capital Flows' — foundational evidence on venture manager persistence, return dispersion, and the importance of manager selection in venture outcomes",
+    "Harris, Jenkinson & Kaplan (2014), 'Private Equity Performance: What Do We Know?' — updated evidence on venture versus buyout manager dispersion and the persistence of top-quartile venture outcomes",
+    "Cambridge Associates, venture manager benchmarking and fund-construction data — ownership retention, reserve discipline, and return concentration as manager-quality signals",
+    "ILPA Due Diligence Questionnaire (DDQ), venture-specific sections — standardized allocator inquiry framework for sourcing, portfolio construction, follow-on process, and team evaluation",
+    "CFA Institute: Private Markets and Alternative Investments curriculum — venture manager evaluation, franchise durability, and the role of access, selection, and monetization in allocator underwriting",
   ],
 },
 ];
