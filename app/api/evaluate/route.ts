@@ -87,7 +87,7 @@ export async function POST(req: NextRequest) {
       const err = await response.text();
       console.error("OpenRouter eval error:", response.status, err);
       return NextResponse.json(
-        { error: "AI service returned an error. Try again later." },
+        { error: `OpenRouter ${response.status}: ${err.slice(0, 200)}` },
         { status: 502 }
       );
     }
