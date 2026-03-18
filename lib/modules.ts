@@ -529,6 +529,20 @@ export const modules: Module[] = [
           "Build a distribution policy that accounts for the structural delay in VC DPI relative to buyout",
         ],
       },
+      {
+        lessonId: "day-40",
+        dayNumber: 40,
+        title: "Private Credit Strategy Map and Underwriting Logic",
+        estimatedMinutes: 42,
+        topics: ["private-credit", "direct-lending", "asset-based-finance", "repayment-engine", "credit-documentation", "credit-underwriting"],
+        difficulty: "advanced",
+        prerequisites: ["day-18", "day-24"],
+        learningObjectives: [
+          "Classify private credit strategies by repayment engine and structural protection rather than by marketing label",
+          "Explain the core underwriting question — what actually repays the loan — across direct lending, asset-based finance, and other private-credit forms",
+          "Distinguish yield from return and identify how documentation quality, sponsor behavior, and refinance dependence affect true credit risk",
+        ],
+      },
     ],
   },
 ];
