@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
           "X-Title": "PE Learning App",
         },
         body: JSON.stringify({
-          model: "anthropic/claude-haiku-4-5",
+          model: "google/gemini-2.5-pro-exp-03-25:free",
           messages: [
             { role: "system", content: EVAL_PROMPT },
             { role: "user", content: userContent },
