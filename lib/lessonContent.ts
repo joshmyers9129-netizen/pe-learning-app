@@ -7931,6 +7931,270 @@ export const lessonContents: LessonContent[] = [
     "CFA Institute and related private-markets educational materials providing context for realization timing, liquidity quality, and private-market exit discipline",
   ],
 },
+{
+  lessonId: "day-39",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The GP says: 'Our venture strategy is differentiated because we have access, judgment, and a strong network in the ecosystem.' That may be true. It is also not enough for allocator underwriting. A venture-fluent allocator wants to know what edge actually looks like in practice, whether the firm's sourcing advantage is real or mostly brand inertia, how decisions are made when evidence is sparse, whether reserve and ownership outcomes validate the process, and whether the edge appears repeatable or just attached to one or two famous wins. This lesson teaches venture manager evaluation as a distinct allocator discipline: how to separate real venture edge from polished storytelling, and how to test whether a firm's sourcing, selection, construction, follow-on behavior, and exits fit together coherently.",
+    },
+    {
+      type: "framing",
+      title: "Venture manager underwriting is not just general manager research with younger companies",
+      content:
+        "The learner already knows how to evaluate managers in a broad sense. That is not the same as being fully prepared to underwrite venture firms. Venture manager evaluation requires all the general instincts of manager research, but applied to a setting where evidence is noisier, outcomes are more skewed, ownership matters more, marks are less stable, and process quality often appears indirectly rather than through long realized attribution histories.\n\nDays 27 through 38 built the venture toolkit in layers: power-law outcomes, stage mapping, cap tables, seed instruments, preferred terms, valuation interpretation, business-model-specific underwriting, reserve discipline, exit pathways, growth equity distinction, and late-stage crossover dynamics. Day 39 is where those tools converge into a manager-evaluation framework. The question is no longer only 'how does venture work?' The question is 'how do I decide whether this venture firm is truly good at it?'\n\nThis is one of the most allocator-useful lessons in the full venture sequence because it turns topic knowledge into firm-level judgment. The learner should come out of Day 39 able to interview, evaluate, and classify venture firms with substantially more precision than broad venture-brand language would otherwise allow.",
+    },
+    {
+      type: "teaching",
+      title: "What counts as real edge in venture",
+      content:
+        "A useful starting point is that venture edge usually has to exist in more than one place. Very few strong firms win purely on one attribute.\n\nPotential sources of venture edge include:\n- differentiated access to founders or ecosystems\n- unusually strong judgment under sparse information\n- superior sector or technical pattern recognition\n- disciplined ownership and reserve management\n- meaningful post-investment value-add in the specific bottlenecks that matter\n- better exit and monetization judgment than peers\n\nThe allocator should resist the temptation to reduce this to slogans such as 'great network' or 'top brand.' Those may matter. But a real venture edge should usually be visible in an integrated chain:\n- the firm sees attractive opportunities early or in differentiated ways\n- it selects well relative to its opportunity set\n- it buys enough ownership or structures enough access to matter economically\n- it reserves intelligently and defends winners without overfunding hope\n- it exits or monetizes with enough discipline to convert paper value into real outcomes\n\nAllocator implication:\nA strong venture firm should be coherent end to end. If the sourcing story is strong but ownership retention is weak, or if the brand is strong but reserve discipline is poor, the edge may be narrower and less durable than the headline suggests.",
+    },
+    {
+      type: "visual",
+      title: "The allocator's venture edge chain",
+      content:
+        "**A venture firm's true edge should usually be visible across the full investment chain, not only at entry.**\n\n| Edge stage | Core question | What weak evidence looks like |\n|---|---|---|\n| **Access** | Does the firm see attractive deals earlier or on better footing than peers? | Brand language without evidence on founder choice or opportunity set |\n| **Selection** | Does the firm choose well within that opportunity set? | Reliance on one or two famous winners without broader process proof |\n| **Ownership** | Does the firm buy and preserve enough ownership in winners? | Good logos, weak retained economics |\n| **Reserves** | Does follow-on capital go where evidence genuinely improved? | Broad, defensive optionality instead of concentrated conviction |\n| **Value-add** | Does the firm help in ways that fit the business model? | Generic platform language not tied to actual bottlenecks |\n| **Monetization** | Does the firm turn company success into realized economics? | Great marks, weak DPI, vague exit discipline |\n\nThe allocator should test whether the same claimed edge survives each step.",
+      caption:
+        "The strongest venture managers are coherent across sourcing, ownership, reserve deployment, and monetization.",
+      whyItMatters:
+        "This gives the learner a repeatable way to test whether a venture firm's story hangs together as a full economic system.",
+      sourceNote:
+        "This visual operationalizes the venture-manager-underwriting lesson by linking prior lessons on access, ownership, reserves, value-add, and exit quality into one allocator framework.",
+    },
+    {
+      type: "teaching",
+      title: "Access is real, but allocators should define it precisely",
+      content:
+        "Access is one of the most overused words in venture. It is also one of the few words that can describe a real advantage when used carefully.\n\nAccess can mean:\n- the firm sees companies before broad market competition intensifies\n- founders choose the firm even when there are multiple credible investors\n- the firm has a differentiated position in an ecosystem, geography, technical community, or founder network\n- the firm is invited into rounds where many peers are not\n\nWhat access does not automatically mean:\n- that the firm selects well from the opportunities it sees\n- that access is still as strong at every stage the firm claims to invest\n- that the firm's brand today reflects current, not historical, founder preference\n- that access converts into ownership that matters economically\n\nAllocator implication:\nThe LP should ask not only whether the firm sees good deals, but what kind of access it has, at what stage, in which sectors, and how often founders choose the firm when they have alternatives. Access should be tested as a current and strategy-specific claim, not accepted as a permanent attribute attached to a famous name.",
+    },
+    {
+      type: "teaching",
+      title: "Selection in venture: sparse-data judgment and pattern recognition",
+      content:
+        "Selection is where many allocators want to spend time, but venture selection is difficult to assess because the underlying decisions are made with sparse information and because successful outcomes may take years to become fully legible.\n\nWhat selection edge may look like:\n- choosing the right founders or teams before broad consensus forms\n- distinguishing real product-market fit from noisy early enthusiasm\n- recognizing when a sector-specific bottleneck is more important than a top-line narrative\n- passing on heavily branded opportunities where the economics or risk-reward are weaker than they appear\n\nWhat weak selection evidence often looks like:\n- backfitting explanations around famous winners\n- presenting broad portfolio health without showing where true value concentration sits\n- relying on markups rather than realized or ownership-adjusted outcomes\n- using theme enthusiasm as a substitute for case-specific judgment\n\nAllocator implication:\nThe learner should not expect venture selection to be proved through a tidy public-markets-style batting-average table. But the firm should still be able to demonstrate some repeatable logic about what it sees early, what it screens out, what it prioritizes, and where past decisions show evidence of real pattern recognition rather than luck dressed up as process.",
+    },
+    {
+      type: "teaching",
+      title: "Partnership quality matters more in venture than many allocators realize",
+      content:
+        "In venture, decision quality is often heavily concentrated in the partnership itself. Individual partners can matter disproportionately because sourcing networks, company judgment, and founder relationships are often personal as much as institutional.\n\nAllocator-relevant dimensions include:\n- who actually has decision rights\n- whether the firm's famous brand is driven by a few partners or by a broader institutional machine\n- whether the partnership has coherent sector and stage accountability\n- whether junior partners are true future owners of the franchise or mainly support labor\n- whether partnership economics encourage collaboration or quiet internal competition\n\nWhy this matters:\n- venture outcomes may depend on a small number of partner-led decisions\n- succession risk can be greater than the firm brand suggests\n- a venture firm may look institutionally strong while actually being partner-fragile\n- cross-generational transition is often harder in venture than in more process-driven asset classes\n\nAllocator implication:\nThe learner should underwrite the partnership, not just the platform. In venture, firm stability and future repeatability often depend on who actually drives sourcing, selection, reserve decisions, and board influence. A firm with great logos and weak succession can still be a major underwriting risk.",
+    },
+    {
+      type: "example",
+      title: "Worked example 1: strong brand, weak franchise durability",
+      content:
+        "Assume a venture firm has a famous brand and several iconic historical wins. In meetings, much of the firm's identity still revolves around two long-tenured partners whose early-stage judgment built the franchise.\n\nAdditional facts:\n- newer partners have less obvious ownership in the economics of the firm\n- recent wins are less clearly attributable to the next generation\n- sourcing appears increasingly concentrated in the legacy partners' networks\n- the firm says succession is strong, but examples remain general rather than decision-specific\n\nAllocator analysis path:\n\n**Step 1: separate franchise reputation from current decision engine**\nThe brand may still matter, but the current repeatability question is about who drives today's edge.\n\n**Step 2: identify concentration of human capital**\nIf the real edge still resides mainly in a shrinking set of individuals, the franchise is more fragile than the brand suggests.\n\n**Step 3: test economic alignment**\nIf rising partners do not have meaningful economics or decision authority, succession claims may be weaker than presented.\n\n**Step 4: connect to future underwriting**\nThe allocator should ask whether re-upping is really a bet on a continuing institutional edge or on a legacy reputation with uncertain transfer.\n\nAllocator lesson:\nIn venture, partnership durability often matters as much as headline track record. A famous name is not the same thing as a durable decision engine.",
+    },
+    {
+      type: "teaching",
+      title: "Ownership outcomes are one of the strongest tests of real manager quality",
+      content:
+        "Days 29 and 35 established that ownership and reserves are central to venture economics. Day 39 now reframes them as manager-evaluation tools.\n\nWhy ownership outcomes matter so much:\n- they reveal whether sourcing and selection actually translated into economically meaningful positions\n- they show whether the firm reserved intelligently and defended winners\n- they distinguish firms that collect logos from firms that collect fund-relevant economics\n\nHigh-signal questions include:\n- what ownership does the firm typically target at entry by stage?\n- what ownership does it retain in its major winners?\n- how much of total gross value came from positions where ownership was actively defended through follow-ons?\n- how often did the firm identify a strong company but fail to retain enough of it to matter?\n\nAllocator implication:\nA venture manager should not be judged only on whether it invested in great companies. It should be judged on whether it owned enough, and retained enough, of the right companies to move the fund. This is one of the strongest practical distinctions between real manager quality and venture mythology.",
+    },
+    {
+      type: "teaching",
+      title: "Reserve discipline reveals whether the GP is allocating or just supporting",
+      content:
+        "Reserve behavior is one of the clearest windows into a venture firm's internal discipline. It forces the GP to reveal how it responds when information improves, when capital is scarce, and when signaling complicates the decision.\n\nStrong reserve behavior usually looks like:\n- a clear philosophy by stage and sector\n- willingness to concentrate into real breakouts\n- willingness to let weaker or overpriced companies dilute\n- coherent linkage between reserves, ownership targets, and opportunity cost\n\nWeak reserve behavior often looks like:\n- broad defensive optionality\n- relationship maintenance presented as conviction\n- inability to explain what evidence drives larger follow-ons\n- too little reserve capacity to defend winners or too much scattered reserve usage to preserve anything meaningful\n\nAllocator implication:\nA GP's reserve process should feel like a portfolio-management system, not a set of reactive responses. If the firm cannot show where reserve dollars went and what they accomplished economically, the LP should question whether venture portfolio management is genuinely strong.",
+    },
+    {
+      type: "visual",
+      title: "The allocator's venture-manager scorecard",
+      content:
+        "**A high-quality venture firm should look coherent across people, process, construction, and outcomes.**\n\n| Dimension | What allocator should test | Strong signal |\n|---|---|---|\n| **People** | Who really makes decisions, and is the franchise durable beyond a few rainmakers? | Clear accountability, real succession, aligned economics |\n| **Access** | Is sourcing differentiated in the actual sectors and stages the fund invests in? | Founder choice and repeatable ecosystem position |\n| **Selection** | Does the firm show repeatable judgment rather than narrative hindsight? | Clear decision logic and credible passing discipline |\n| **Construction** | Do ownership targets, reserves, and concentration fit the stated strategy? | Ownership-aware, stage-consistent portfolio design |\n| **Value-add** | Does the firm help in ways that fit the actual business models? | Sector- and stage-specific support rather than generic platform language |\n| **Outcomes** | Do logos convert into retained economics and eventually realized value? | Ownership-adjusted winners and credible monetization |\n\nThe allocator should score the firm as an integrated system, not as a collection of disconnected strengths.",
+      caption:
+        "The strongest venture manager evaluations tie partner quality, process, ownership, and monetization into one coherent underwriting judgment.",
+      whyItMatters:
+        "This gives the learner a manager-evaluation framework that is specific to venture rather than borrowed mechanically from broader manager research.",
+      sourceNote:
+        "This visual synthesizes the full venture sequence into a practical manager-underwriting scorecard for allocator use.",
+    },
+    {
+      type: "teaching",
+      title: "Value-add should be tested against actual bottlenecks, not generic platform language",
+      content:
+        "Many venture firms claim to be highly value-added. Allocators should be skeptical of broad platform language unless it maps to the actual constraints the portfolio companies face.\n\nUseful questions include:\n- for software, does the firm actually help with enterprise sales, hiring, pricing, or product scaling?\n- for fintech, does it offer meaningful regulatory, ecosystem, or risk-management support?\n- for healthcare or biotech, does it have genuine scientific, clinical, or reimbursement expertise?\n- for marketplaces, does it help with liquidity formation, trust, or channel expansion?\n\nWhat weak value-add claims often sound like:\n- 'we help founders hire'\n- 'we support strategy'\n- 'we have a great network'\n\nThose may all be directionally true. They are not yet differentiating. The stronger question is whether the firm's value-add is both specific and recurring in the kinds of bottlenecks that actually determine outcomes in the sectors where it invests.\n\nAllocator implication:\nReal value-add should show up in business-model-specific ways. If a firm cannot explain that clearly, its platform may be more branding than edge.",
+    },
+    {
+      type: "teaching",
+      title: "Marks, exits, and monetization should be read as evidence on the manager too",
+      content:
+        "Days 33 and 36 explained that venture marks and exits need careful interpretation. Day 39 adds the firm-underwriting lens: the quality of marks and monetization behavior also tells the allocator something about the manager.\n\nWhat strong manager evidence can look like:\n- marks that appear responsive to evidence rather than optics\n- clear explanations of structured rounds and their effect on common-equity value\n- thoughtful use of tenders and secondaries\n- disciplined post-IPO sell behavior rather than indefinite attachment to public marks\n- reasonable conversion of strong unrealized value into realized proceeds over time\n\nWhat weaker manager evidence can look like:\n- repeated reliance on headline round valuations without economic translation\n- stable unrealized marks that seem more smoothing-driven than evidence-driven\n- vague language around post-IPO monetization\n- great logos but persistently weak DPI without a coherent explanation\n\nAllocator implication:\nVenture firms should be judged not only on what they bought, but on how they carried and monetized it. The same company outcome can still imply different manager quality depending on how it was marked, defended, and exited.",
+    },
+    {
+      type: "teaching",
+      title: "Stage drift is one of the most underappreciated venture manager risks",
+      content:
+        "Stage drift is especially important in venture because the brand of a firm can persist even as the economic reality of the portfolio changes.\n\nHow stage drift shows up:\n- seed or early-stage brands pushing more capital into late-stage or crossover rounds\n- multi-stage firms where later vehicles increasingly dominate economics\n- ownership at entry shrinking because prices are higher and rounds are larger\n- return logic shifting from early pattern recognition toward public-market sensitivity and liquidity-window dependence\n\nWhy this matters:\n- the allocator may think they are re-upping a familiar venture strategy when they are underwriting a different risk regime\n- stage drift can weaken the fit between the firm's original edge and its current deployment pattern\n- portfolio role changes even when the firm name does not\n\nAllocator implication:\nThe learner should always ask how today's capital deployment compares with the franchise the firm is known for. A venture firm's stage identity should be treated as a current fact to verify, not a historical reputation to assume.",
+    },
+    {
+      type: "example",
+      title: "Worked example 2: same headline track record, different manager quality",
+      content:
+        "Assume two venture firms each have impressive gross performance and multiple high-profile investments.\n\n**Firm A**\n- retained meaningful ownership in major winners\n- concentrated reserves in a small number of true breakouts\n- can explain clearly why certain names were not followed\n- monetized some major positions through disciplined IPO selling and tenders\n- has visible next-generation partner ownership and decision authority\n\n**Firm B**\n- shows equally famous logos\n- retained weaker ownership in many winners\n- spread reserves more broadly across the portfolio\n- has strong unrealized marks but weaker DPI\n- still depends heavily on a small number of legacy partners for sourcing and brand pull\n\nAllocator analysis path:\n\n**Step 1: separate logo quality from economic quality**\nBoth firms may have seen excellent companies. That is not yet the whole story.\n\n**Step 2: compare ownership-adjusted outcomes**\nFirm A appears better at converting access into fund economics.\n\n**Step 3: compare portfolio-management quality**\nReserve concentration and sell discipline matter meaningfully in favor of Firm A.\n\n**Step 4: compare franchise durability**\nFirm A looks more institutionalized. Firm B may be more fragile despite the same surface prestige.\n\nAllocator lesson:\nIn venture, two firms can look similar in pitch books and very different in allocator quality once ownership, reserves, monetization, and people concentration are examined together.",
+    },
+    {
+      type: "teaching",
+      title: "What a strong venture GP should be able to show in a re-up case",
+      content:
+        "A strong venture re-up case should go beyond broad franchise statements and show allocator-useful evidence on five fronts.\n\n**1. Current edge, not only legacy edge**\nWhy is the firm's sourcing and selection still differentiated now?\n\n**2. Ownership-adjusted outcomes**\nHow did the firm actually participate economically in the winners that matter most?\n\n**3. Reserve and follow-on discipline**\nWhat did the manager do when information improved or weakened?\n\n**4. Marks and monetization quality**\nHow credible are unrealized gains, and how well has the firm converted value to cash?\n\n**5. Franchise durability**\nWho are the future decision-makers, and how aligned are they economically?\n\nAllocator implication:\nThe best re-up discussions in venture feel less like reputation reinforcement and more like proof that the full edge chain still works. A manager leaning too heavily on old wins, famous logos, or general brand appeal deserves more skepticism than a manager who can make the current system legible.",
+    },
+    {
+      type: "teaching",
+      title: "Common allocator mistakes in venture manager evaluation",
+      content:
+        "Several mistakes recur when allocators evaluate venture firms too superficially.\n\n**Mistake 1: over-weighting brand**\nA famous name can still hide weaker current access, weaker succession, or stage drift.\n\n**Mistake 2: over-weighting logo lists**\nGreat logos do not guarantee strong retained ownership or monetization.\n\n**Mistake 3: under-weighting partnership fragility**\nA small number of rainmakers can create major succession risk.\n\n**Mistake 4: treating value-add as generic and untested**\nPlatform claims should be judged against real company bottlenecks.\n\n**Mistake 5: treating reserve behavior as secondary**\nIn venture, follow-on discipline is a core test of manager quality.\n\n**Mistake 6: accepting unrealized marks without linking them to mark quality and exit realism**\nA venture track record can look stronger than it really is if the quality of evidence behind the remaining NAV is weak.\n\nAllocator implication:\nThe learner should now evaluate venture firms as systems. Any one strong attribute can be real and still be insufficient if the other links in the edge chain are weak.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: allocator- and practitioner-oriented venture materials on firm sourcing models, reserve strategy, ownership retention, and portfolio construction; venture partnership and succession commentary; institutional venture diligence frameworks focused on access, construction, follow-on behavior, and monetization quality. The goal is to teach firm-level underwriting, not to rank brand-name firms by popularity.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a GP saying the firm wins because of network and brand",
+      content:
+        "The GP says: 'Our network and brand mean we see the best founders and the best companies.'\n\nWeak LP response: 'That makes sense. A strong brand should create sustained access to the best venture opportunities.'\n\nWhy it is weak: it accepts access language without testing whether the access is current, strategy-specific, founder-preferred, or economically converted into ownership and realized outcomes.\n\nStrong LP response: 'Helpful. Please show us where that access is strongest today by stage and sector, how often founders choose you in competitive situations, how that access translated into meaningful retained ownership in your major winners, and how durable the sourcing engine is beyond the partners historically most associated with the brand.'\n\nWhy it is strong: it turns brand language into a test of current access, ownership conversion, and franchise durability.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what venture manager analysis can and cannot tell you",
+      content:
+        "Venture manager analysis can tell you whether a firm's sourcing, selection, ownership discipline, reserve behavior, and monetization approach form a coherent edge chain. It can also reveal whether the partnership is durable, whether stage drift is occurring, and whether the current franchise still matches the historical story allocators may be relying on.\n\nBut manager analysis cannot eliminate the role of luck in venture, guarantee that future outliers will emerge, or prove that a strong current process will produce top-decile outcomes in every fund. Venture is too skewed and too path-dependent for that. The allocator should therefore use Day 39 to improve odds, sharpen classification, and reduce avoidable mistakes, not to seek false certainty.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: underwrite a venture firm as a system",
+      content:
+        "You are reviewing a hypothetical venture firm with the following profile:\n- strong legacy brand in early-stage software\n- several famous historical winners\n- recent expansion into AI infrastructure and late-stage rounds\n- mixed evidence on next-generation partner ownership and decision authority\n- high unrealized marks, but only moderate DPI\n- broad platform claims, but limited company-specific examples of value-add\n- reserve usage concentrated in some winners, but also notable defensive follow-ons across several middling names\n\nWrite a one-page allocator memo under six headings:\n\n1. **Current access and sourcing quality**\n2. **Selection and decision quality**\n3. **Ownership retention and reserve discipline**\n4. **Value-add specificity**\n5. **Marks, exits, and monetization quality**\n6. **Franchise durability and stage drift risk**\n\nThen answer three questions:\n- What is the single strongest part of the edge chain?\n- What is the single weakest part?\n- What one follow-up data set or case-study packet would you request before making a re-up decision?\n\nFinal task:\nWrite a short conclusion titled 'Is this still the same venture firm allocators think they are backing?'",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal venture-firm questions",
+      content:
+        "1. 'Where exactly is your sourcing edge strongest today by stage and sector, and how do you know founders still choose you for those situations?' \n\n2. 'For your major winners, can you show entry ownership, retained ownership, reserve dollars deployed, and what those positions ultimately meant at the fund level?' \n\n3. 'How do you decide when to concentrate into a company versus allow dilution, and what do those decisions tell us about your current reserve discipline?' \n\n4. 'What parts of your value-add platform are genuinely differentiated for the business models you back most heavily, and where is the support more generic?' \n\n5. 'Who are the partners whose judgment and networks will define the next decade of the franchise, and how are they empowered economically and organizationally today?'",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 39 should change venture manager diligence",
+      content:
+        "After Day 39, the learner should stop evaluating venture firms mainly on reputation, logo lists, and broad founder-network language. The better allocator habit is to underwrite the firm as an integrated system: people, access, selection, ownership, reserves, value-add, marks, monetization, and franchise durability.\n\nThat shift should make manager evaluation materially sharper. It should increase skepticism toward legacy brand dependence, improve attention to ownership-adjusted outcomes, make reserve discipline a central evaluation criterion, and make stage drift easier to spot. It should also improve re-up decisions by forcing the allocator to ask whether the current decision engine still resembles the historical story. In venture, the hardest underwriting problem is often not whether a firm was good. It is whether the firm is still good for the reasons allocators think.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d39q1",
+      type: "multiple-choice",
+      prompt:
+        "Why is venture manager evaluation distinct from generic manager research?",
+      options: [
+        "Because venture firms do not need to be evaluated on people or process",
+        "Because venture outcomes are more skewed, evidence is noisier, ownership matters more, and process often shows up indirectly",
+        "Because only venture managers rely on incentives",
+        "Because venture manager evaluation can ignore monetization and reserves",
+      ],
+      correctAnswer:
+        "Because venture outcomes are more skewed, evidence is noisier, ownership matters more, and process often shows up indirectly",
+    },
+    {
+      questionId: "d39q2",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of 'access' in venture?",
+      options: [
+        "Any well-known brand automatically has permanent access",
+        "Access is real only if it is current, strategy-specific, and translates into opportunities founders actually choose the firm for",
+        "Access matters only in seed and not in later stages",
+        "Access alone proves selection edge",
+      ],
+      correctAnswer:
+        "Access is real only if it is current, strategy-specific, and translates into opportunities founders actually choose the firm for",
+    },
+    {
+      questionId: "d39q3",
+      type: "multiple-choice",
+      prompt:
+        "Why are ownership outcomes one of the strongest tests of venture manager quality?",
+      options: [
+        "Because they show whether access and selection actually translated into fund-relevant economics",
+        "Because ownership percentages never change after entry",
+        "Because only ownership matters and follow-on decisions do not",
+        "Because logos are less important than headcount growth at the GP",
+      ],
+      correctAnswer:
+        "Because they show whether access and selection actually translated into fund-relevant economics",
+    },
+    {
+      questionId: "d39q4",
+      type: "multiple-choice",
+      prompt:
+        "What does weak reserve discipline most often look like in venture?",
+      options: [
+        "Concentrating follow-on dollars into a few true breakouts",
+        "Allowing some liked but overpriced companies to dilute",
+        "Broad defensive optionality and reactive support across many familiar names",
+        "Linking reserves directly to ownership targets and opportunity cost",
+      ],
+      correctAnswer:
+        "Broad defensive optionality and reactive support across many familiar names",
+    },
+    {
+      questionId: "d39q5",
+      type: "multiple-choice",
+      prompt:
+        "Why should allocators evaluate partnership quality and succession especially carefully in venture?",
+      options: [
+        "Because venture brands are often driven by a small number of individual partners and may be less institutional than they appear",
+        "Because succession never matters once a firm has famous logos",
+        "Because junior partners are always irrelevant to venture outcomes",
+        "Because venture firms do not need aligned economics",
+      ],
+      correctAnswer:
+        "Because venture brands are often driven by a small number of individual partners and may be less institutional than they appear",
+    },
+    {
+      questionId: "d39q6",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of a venture firm's platform value-add?",
+      options: [
+        "It is meaningful only if it maps to recurring bottlenecks in the actual business models the firm backs",
+        "Any hiring help counts as differentiated edge",
+        "Platform value-add is mainly marketing and should always be ignored",
+        "Value-add replaces the need for pricing discipline",
+      ],
+      correctAnswer:
+        "It is meaningful only if it maps to recurring bottlenecks in the actual business models the firm backs",
+    },
+    {
+      questionId: "d39q7",
+      type: "short-response",
+      prompt:
+        "Explain why a famous venture brand can still be a weak current re-up candidate. Write two to four sentences.",
+      modelAnswer:
+        "A famous brand may reflect historical wins rather than current edge. If sourcing is still concentrated in a few legacy partners, ownership retention in recent winners is weaker, reserve discipline has softened, or the next generation lacks real decision authority and economics, the franchise may be less durable than its reputation suggests. A re-up should be based on the current decision engine, not only on legacy prestige.",
+    },
+    {
+      questionId: "d39q8",
+      type: "short-response",
+      prompt:
+        "A GP says the firm wins because of its network and brand. What are the three most important follow-up questions you should ask after this lesson?",
+      modelAnswer:
+        "First, I would ask where that access is strongest today by stage and sector and how the firm knows founders still choose it in competitive situations. Second, I would ask how that access translated into meaningful retained ownership in the major winners rather than just famous logos. Third, I would ask how durable the sourcing engine is beyond the historically dominant partners and what succession looks like in real decision and economic terms.",
+    },
+  ],
+  sources: [
+    "Allocator- and practitioner-oriented venture materials on sourcing models, ownership retention, reserve discipline, and venture firm construction",
+    "Venture partnership and succession commentary focused on decision rights, franchise durability, and next-generation economics",
+    "Institutional venture diligence frameworks addressing access, selection, ownership outcomes, reserve behavior, and monetization quality",
+    "Industry educational materials on venture portfolio construction, value-add specificity, and stage drift across multi-stage platforms",
+    "CFA Institute and related private-markets educational materials providing context for manager evaluation, process durability, and private-markets franchise risk",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
