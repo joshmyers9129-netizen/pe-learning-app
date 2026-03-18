@@ -3075,9 +3075,12 @@ export const lessonContents: LessonContent[] = [
       },
     ],
     sources: [
-      "ILPA guidance on GP-led secondaries, continuation vehicles, and conflict management",
-      "Jefferies Global Secondary Market Review and other major adviser market reports on LP-led pricing, GP-led volume, and market technicals",
-      "CAIA and CFA private markets materials on secondaries, NAV discounts, and portfolio-management uses of the secondary market",
+      "ILPA Guidance on GP-Led Secondary Transactions and Continuation Funds — LP election process, conflict framework, and disclosure expectations",
+      "Jefferies Global Secondary Market Review (annual) — LP-led pricing data, GP-led transaction volumes, discount-to-NAV trends, and market technicals",
+      "Greenhill & Co. / Evercore Secondary Market Advisory Reports — pricing benchmarks, buyer composition, and deal-type breakdowns",
+      "CAIA Association Level II: Private Equity Secondary Markets — secondary mechanics, NAV discount analysis, and portfolio-management applications",
+      "CFA Institute: Private Markets and Alternative Investments — secondary transaction framework, continuation vehicle structures, and LP governance",
+      "Nadauld, Sensoy, Vorkink & Weisbach (2019), 'The Liquidity Cost of Private Equity Investments' — empirical analysis of secondary pricing and discount determinants",
     ],
   },
 
@@ -3283,234 +3286,16 @@ export const lessonContents: LessonContent[] = [
       },
     ],
     sources: [
-      "ILPA materials on co-investment governance, allocation, and LP process design",
-      "CAIA and CFA private markets materials on co-invest economics, concentration risk, and underwriting burden",
-      "Practitioner surveys and adviser materials on co-invest timelines, syndication patterns, and LP operating requirements",
+      "ILPA Co-Investment Guidance — governance, allocation fairness, and LP process design for co-invest programmes",
+      "Fang, Ivashina & Lerner (2015), 'The Disintermediation of Financial Markets: Direct Investing in Private Equity' — empirical analysis of co-invest returns and adverse selection",
+      "CAIA Association Level II: Co-Investment Structures — fee economics, concentration risk, and co-invest programme design",
+      "CFA Institute: Private Markets and Alternative Investments — co-investment mechanics, underwriting burden, and portfolio-level implications",
+      "Cambridge Associates and practitioner surveys on co-invest timelines, syndication patterns, and LP operational requirements",
+      "Preqin / Institutional Investor surveys on co-invest programme adoption, governance, and realized performance versus fund-only returns",
     ],
   },
 
   // ── Day 17 ─────────────────────────────────────────────────────────────────
-  {
-    lessonId: "day-18",
-    blocks: [
-      {
-        type: "intro",
-        title: "Meeting cold open",
-        content:
-          "An investment committee is debating whether to raise private equity from 12% of plan assets to 18%. The argument in favor sounds familiar: 'private equity has outperformed public markets over time, we have strong manager access, and illiquidity is something we can afford to harvest.' The argument against sounds cautious but incomplete: 'we already have enough complexity, liquidity is valuable, and the last two years showed that marks can lag reality.' Both sides are partly right. Neither is asking the most important question: what role is private equity supposed to play in this specific portfolio, and what evidence do we have that it is earning that role net of fees, illiquidity, governance burden, and opportunity cost? This lesson provides the framework for answering that question.",
-      },
-      {
-        type: "framing",
-        title: "Private equity is not just a return sleeve",
-        content:
-          "Allocators often describe private equity as a return-enhancing allocation. That is directionally correct, but incomplete. PE is simultaneously:\n\n- a **return-seeking asset class** with a claim to an illiquidity premium\n- a **liquidity-consuming programme** that requires multi-year commitment planning\n- a **governance-intensive activity** that demands manager selection, pacing discipline, reporting review, and relationship management\n- a **risk transfer decision** away from daily marked liquidity toward valuation lag, manager dispersion, and capital-call uncertainty\n\nThat means the decision to allocate to PE is never just 'do we think returns will be good?' It is also:\n\n- can this portfolio tolerate the illiquidity?\n- can this institution govern the programme well enough to capture the premium rather than donate it to fees and weak manager selection?\n- what is the relevant opportunity cost versus public equities, credit, or other illiquid alternatives?\n\nThe allocator's job is not to admire PE's best historical outcomes. It is to determine whether PE deserves a larger, smaller, or unchanged role in the total portfolio given the institution's actual constraints.",
-      },
-      {
-        type: "teaching",
-        title: "The illiquidity premium argument: theory versus practice",
-        content:
-          "The theoretical case for private equity is straightforward. Investors who accept long lock-ups, uncertain cash-flow timing, complex structures, and higher manager-selection risk should earn a return premium over liquid public equities. That premium is often described as the **illiquidity premium**.\n\nBut in practice, the premium is not automatic. It has to survive four deductions:\n\n**1. Fees**\nPE fee structures are materially heavier than public-market index exposure. Management fees, carried interest, transaction costs, and portfolio company-level fee leakage all consume gross return. A rough estimate: a 2/20 buyout fund generating 22% gross IRR might deliver 14–16% net to the LP. The gap is not trivial.\n\n**2. Manager dispersion**\nUnlike broad public equity beta, PE outcomes vary dramatically by manager. A weak manager can easily erase whatever illiquidity premium the asset class might have offered in aggregate. Academic research consistently shows that manager selection is the dominant driver of PE net return variation.\n\n**3. Implementation quality**\nVintage diversification, pacing discipline, strategy selection, and re-up decisions all matter. A poorly run PE programme may underperform not because PE as an asset class failed, but because the allocator captured a weak subset of the opportunity set.\n\n**4. Opportunity cost**\nThe relevant comparison is not abstract historical outperformance. It is whether the PE programme beat what the institution could realistically have done in liquid markets or alternative uses of capital over the same period, with similar timing. This is precisely what the **Public Market Equivalent (PME)** measures: it simulates investing the same cash flows in a public index and compares the ending wealth. A PME above 1.0x means PE beat the public alternative on a timing-equivalent basis; below 1.0x means the PE programme was net-negative on an opportunity-cost basis regardless of headline IRR.\n\nThe professional conclusion is not 'PE earns an illiquidity premium.' It is: PE may earn one, but only for institutions with the governance, access, and discipline required to capture it net of costs and programme mistakes. And the only honest way to know whether they did is to measure it against a PME benchmark, not against absolute return or a peer survey.",
-      },
-      {
-        type: "teaching",
-        title: "Why PE belongs in some portfolios and not others",
-        content:
-          "Private equity is not universally appropriate. Its suitability depends on the structure of the institution more than on enthusiasm for the asset class.\n\n**PE tends to fit best where three conditions hold:**\n\n- the investor has a long time horizon and limited forced-liquidity needs\n- the investor has enough governance capacity to select and monitor managers well\n- the investor can tolerate periods when the PE allocation drifts above target because capital cannot be rebalanced quickly\n\nThat is why PE often fits naturally in endowments, some foundations, and large institutions with stable capital bases and dedicated private markets teams.\n\nPE is harder to justify where one or more of those conditions fails. A portfolio with near-term liability needs, weak internal private markets staffing, or limited tolerance for denominator-effect volatility may still invest in PE, but the allocation should usually be smaller and the programme simpler.\n\nThe allocator question is not whether PE is 'good.' It is whether this institution can live with the actual operating characteristics of PE without being forced into poor decisions during stress.",
-      },
-      {
-        type: "visual",
-        title: "When PE fits the portfolio",
-        content:
-          "**PE suitability depends on more than return appetite:**\n\n| Portfolio characteristic | PE more suitable | PE less suitable |\n|---|---|---|\n| **Time horizon** | Long-dated or perpetual capital base | Near-term asset-liability matching needs |\n| **Liquidity burden** | Modest near-term cash demands | Significant recurring payout or liability needs |\n| **Governance capacity** | Dedicated private markets staff / strong external support | Limited team bandwidth and weak monitoring capacity |\n| **Tolerance for drift** | Can accept temporary allocation overshoots and valuation lag | Requires frequent precise rebalancing |\n| **Manager access** | Strong sourcing and re-up discipline | Limited access, mostly commoditized fund exposure |\n\nPE is most attractive where the institution can absorb its operational reality, not just admire its headline returns.",
-        caption:
-          "Private equity is a fit decision as much as a return decision.",
-        whyItMatters:
-          "A portfolio can believe in PE's return potential and still be poorly suited to run a large PE programme. Suitability and expected return are separate questions.",
-        sourceNote:
-          "Institutional asset allocation practice consistently treats illiquid alternatives as a function of horizon, liquidity tolerance, and governance strength, not just expected return.",
-      },
-      {
-        type: "teaching",
-        title: "Sizing PE: the three real constraints",
-        content:
-          "Private equity allocation sizing is usually constrained by three things, not one.\n\n**1. Liquidity constraint**\nThis is the most obvious. The institution must be able to meet spending, liabilities, capital calls, and other obligations without relying on PE distributions arriving on schedule. PE should be sized inside the liquidity budget, not on top of it. A disciplined way to operationalize this: model the portfolio's PE exposure under a stress scenario where public markets fall 30% and PE distributions slow for two years. If that scenario forces a forced PE sale or a dangerous liquidity draw, the allocation is too large.\n\n**2. Governance constraint**\nThis is underappreciated. A larger PE programme requires more manager diligence, more pacing oversight, more quarterly reporting review, more side-letter and legal coordination, and often more LPAC participation. A rough heuristic: each meaningfully sized fund relationship requires one to two substantive reviews per year, plus ongoing monitoring and ad-hoc issue management. An institution with two private-markets staff managing 20 fund relationships is almost certainly under-resourced. An institution that thinks it can double the programme without proportionally increasing governance capacity is setting itself up for concentration in weak decisions, missed issues, and deferred re-up discipline.\n\n**3. Opportunity-cost constraint**\nPE should not just produce high nominal returns. It should produce sufficiently better net-of-fee, risk-aware outcomes than public-market alternatives to justify the liquidity and complexity burden. The PME benchmark is the right frame here: if the programme's historic PME is barely above 1.0x — or below — then the case for increasing PE weakens materially. A programme that is adding complexity, fees, and governance burden without beating the public alternative is a programme to simplify, not expand. If an institution cannot access strong managers or cannot run the programme well, a simpler public-market solution may be superior despite lower headline upside.\n\nThe mistake many committees make is to size PE using only strategic optimism: 'we want more return, therefore we want more PE.' The professional version asks how much PE the institution can actually absorb and execute well.",
-      },
-      {
-        type: "teaching",
-        title: "Allocator type matters: the right PE weight is institution-specific",
-        content:
-          "A common error in committee discussions is to treat PE allocation ranges as universal. They are not. The right PE weight is highly dependent on allocator type.\n\n**Endowments**\nLong horizons, relatively stable capital, and high tolerance for complexity often support larger PE allocations. The key risk is not just liquidity, but governance sprawl and overconfidence in manager access.\n\n**Foundations**\nFoundations often have perpetual capital, but spending requirements can create a more binding liquidity need than committees initially recognize. PE can fit well, but only if the payout burden and grant cadence are properly modeled.\n\n**Defined benefit pensions**\nPensions must consider benefit-payment obligations, funded status, and balance-sheet sensitivity. PE can still play a meaningful role, but the allocation often needs to be sized more conservatively than in perpetual-capital pools because liquidity and cash-flow reliability matter more.\n\n**Family offices**\nThe range is wide. Some have highly flexible balance sheets and can tolerate large illiquid allocations. Others face concentrated operating-business or family-liquidity needs that make a heavy PE programme unwise. Governance capacity is often more constrained than headline wealth suggests.\n\n**Insurers and liability-sensitive pools**\nThese portfolios often place a much higher premium on asset-liability matching and regulatory capital treatment. PE may still belong, but usually in a smaller role than in endowment-style models.\n\nThe practical conclusion: 'peer institutions allocate 25% to PE' is not evidence that you should. Peer practices are only relevant after adjusting for liquidity structure, liability profile, and governance capacity.",
-      },
-      {
-        type: "teaching",
-        title: "PE's real portfolio role: what is it substituting for?",
-        content:
-          "One of the most useful portfolio-construction questions is simple: if we increase PE, what are we reducing?\n\nBecause PE is usually treated as a growth asset, the substitute is often public equities. But that substitution is not one-for-one in risk terms. PE differs from public equities in several ways:\n\n- lower reported short-term volatility due to valuation lag, not necessarily lower economic risk\n- higher manager-selection risk\n- less liquidity and slower rebalancing capacity\n- different leverage exposure at the asset level, especially in buyouts\n- heavier governance demands\n\nThat means replacing public equities with PE is not just a beta swap. It is a trade between liquidity and complexity on one side, and the potential for higher net returns on the other.\n\nIn some portfolios, PE may instead substitute for other illiquid growth assets, such as private credit, real estate, or venture capital. The comparison should always be explicit. A recommendation to raise PE without naming the funding source is incomplete because it hides the actual portfolio trade-off.",
-      },
-      {
-        type: "teaching",
-        title: "Why reported diversification benefits can be overstated",
-        content:
-          "Some committees are drawn to PE because historical reporting often shows lower volatility and lower correlation to public equities than listed stocks. That should be interpreted carefully.\n\nPE valuations are appraisal-based and lag public markets. As a result, quarterly PE returns are smoothed relative to daily public-market prices. This creates the appearance of lower volatility and lower contemporaneous correlation.\n\nEconomically, PE still owns operating businesses that are exposed to the same macro forces as public companies: revenue cycles, margins, financing costs, and valuation multiples. Over a full cycle, PE is much more equity-like than short-term reported statistics suggest.\n\nThis does not mean PE has no diversification value. Strategy mix, sector exposure, leverage, and active ownership can all matter. But a committee should not size PE on the assumption that the historical volatility series reflects true liquid-market resilience. Doing so mistakes valuation method for economic diversification.",
-      },
-      {
-        type: "visual",
-        title: "What a larger PE allocation really asks the institution to do",
-        content:
-          "**Increasing PE asks for more than tolerance for illiquidity:**\n\n| If PE increases... | The institution must also accept... |\n|---|---|\n| **Higher return-seeking exposure** | Greater dependence on manager selection skill |\n| **More funded NAV over time** | Slower rebalancing and more denominator-effect risk |\n| **More commitments and relationships** | Higher governance load and monitoring burden |\n| **More illiquid capital** | Less flexibility to fund spending or redeploy during stress |\n| **Potentially higher net returns** | A higher burden of proof versus public-market opportunity cost |\n\nA larger PE allocation is an operating commitment, not just a strategic asset-allocation line item.",
-        caption:
-          "Allocating more to PE means accepting more governance and liquidity burden in exchange for expected return improvement.",
-        whyItMatters:
-          "Committees often debate PE at the level of expected return only. The real decision includes operational and governance consequences that can outweigh the return case if ignored.",
-        sourceNote:
-          "Institutional private-markets practice consistently treats PE programme scale as jointly determined by return goals, liquidity, and governance capacity.",
-      },
-      {
-        type: "example",
-        title: "Worked example: should the foundation double PE?",
-        content:
-          "A foundation with a $900M portfolio currently has a 9% PE allocation and is considering moving to 18% over time. The committee's argument is that the foundation has perpetual capital, can tolerate illiquidity, and wants to improve long-run returns.\n\nThat is the start of the analysis, not the end.\n\n**What supports the increase:**\n- perpetual capital base\n- moderate spending rate relative to assets\n- ability to accept long-horizon investments\n- access to a few high-quality relationships with established managers\n\n**What may argue against a sharp increase:**\n- the investment office has limited private-markets staffing\n- quarterly liquidity forecasting is still basic rather than robust\n- the current PE programme is manager-light and not well diversified by strategy or geography\n- the committee has not defined whether the extra PE will be funded from public equities or other illiquid assets\n\nNow frame the real question: should the foundation raise PE because it believes in the long-run premium, or should it first strengthen its implementation capacity so that a larger PE allocation has a realistic chance of earning that premium?\n\nA disciplined answer may be: increase, but gradually. Move from 9% toward 12–14% first, while improving governance infrastructure, liquidity modeling, and manager diversification. A direct jump toward 18% assumes implementation capacity that the current programme may not yet have. The problem is not the strategic thesis. It is the operational readiness.",
-      },
-      {
-        type: "example",
-        title: "Worked example: why a pension may rationally keep PE smaller",
-        content:
-          "A defined benefit pension with a $4B portfolio and a meaningful annual benefit-payment burden currently holds 11% in PE and is considering a move to 15%. The consultant notes that peer plans allocate more and that the plan's long-term return target is demanding.\n\nThe case for more PE is easy to state. The harder question is whether the pension's liability profile and governance model support a larger illiquid allocation.\n\nSuppose the pension relies on liquid assets to help fund near- and medium-term benefit payments, and suppose the plan's private markets team is relatively small. In that case, the institution may face real trade-offs:\n\n- less flexibility during public-market drawdowns\n- heavier dependence on distributions arriving from PE at the wrong moments\n- greater denominator-effect risk if public assets fall\n- more governance burden without a matching increase in internal staffing\n\nIn that setting, holding PE at 10–12% may be entirely rational even if the committee believes PE offers some long-run premium. The institution is not rejecting PE because it doubts the asset class in theory. It is sizing PE to the portfolio and liability structure it actually has.",
-      },
-      {
-        type: "weak-answer",
-        title: "Weak vs. strong: arguing for more PE",
-        content:
-          "The committee says: 'Private equity has higher expected returns than public equities, so we should raise the allocation.'\n\n**Weak response:** 'Agreed. If we can tolerate illiquidity, we should own more of the higher-returning asset class.'\n\nWhy it is weak: it assumes the premium is automatic, ignores governance and manager-access constraints, and fails to identify what asset is being reduced to fund the increase.\n\n**Strong response:** 'Maybe, but only if we can articulate the role PE plays in this portfolio, what asset class it would replace, and why we believe our programme can earn a sufficient premium net of fees and implementation costs. We also need to test whether our liquidity profile and governance resources can support a larger PE allocation without forcing poor decisions in stressed markets. Higher expected return is a necessary argument, not a sufficient one.'\n\nWhy it is strong: it reframes PE sizing as a portfolio design question rather than a simple return preference.",
-      },
-      {
-        type: "inference-boundary",
-        title: "Inference boundary: what past PE outperformance can and cannot tell you",
-        content:
-          "**What historical PE outperformance can tell you:**\n- that PE has, in some periods and segments, delivered strong net returns relative to public markets\n- that long-horizon institutions with strong manager selection and governance have often been able to capture a meaningful premium\n- that PE can be an important part of a growth-oriented portfolio when implemented well\n\n**What it cannot tell you:**\n- that this institution will capture the same premium; implementation quality matters enormously\n- that a larger allocation is automatically better; governance and liquidity burdens rise with programme size\n- that PE's reported short-term volatility reflects true economic resilience; valuation lag affects the data\n- that peer allocations are suitable analogies for your own portfolio; institution type matters",
-      },
-      {
-        type: "exercise",
-        title: "Applied exercise: write the case for and against increasing PE",
-        content:
-          "A foundation currently allocates 10% to PE and is considering raising the target to 15%. Write two short cases:\n\n1. **The case for increasing PE** — using expected return, time horizon, and portfolio role\n2. **The case against increasing PE right now** — using liquidity, governance, and implementation risk\n\nThen decide which side is stronger based on one missing fact you would most want before making the recommendation. A strong answer should recognize that PE allocation size is not a belief statement about the asset class. It is a judgment about fit, execution capability, and opportunity cost.",
-      },
-      {
-        type: "meeting-application",
-        title: "In the committee discussion: five questions that improve the PE sizing debate",
-        content:
-          "1. **'What exactly is PE replacing in the portfolio if we increase it?'** This forces the committee to make the portfolio trade-off explicit.\n\n2. **'What net premium do we believe this programme can earn over a liquid public-market alternative after fees and implementation costs?'** This shifts the discussion from headline return to actual expected value-add.\n\n3. **'What are the binding constraints on a larger PE programme: liquidity, governance, access, or something else?'** This identifies the real ceiling on allocation size.\n\n4. **'Which peer institutions are truly comparable to us in liquidity needs and governance capacity?'** This prevents lazy peer comparison.\n\n5. **'If public markets fell sharply next year, would we still feel comfortable with the larger PE target?'** This stress-tests the recommendation against denominator-effect conditions rather than benign markets.",
-      },
-      {
-        type: "meeting-application",
-        title: "Allocator application: how to characterize PE in a strategic asset-allocation memo",
-        content:
-          "A strong asset-allocation memo should not describe PE as simply 'higher-returning public equity.' It should characterize PE in four dimensions:\n\n**Return role** — expected source of excess return and how it will be judged versus public-market opportunity cost\n\n**Liquidity role** — how the allocation fits within the portfolio's liquidity budget and stress-case funding needs\n\n**Governance role** — what internal or external capabilities are required to execute the programme successfully\n\n**Risk role** — what new risks the portfolio is taking on, including manager dispersion, valuation lag, concentration in vintages or strategies, and slower rebalancing capacity\n\nIf the memo cannot clearly explain all four, the PE allocation case is underdeveloped.",
-      },
-      {
-        type: "source-note",
-        title: "Sources for this lesson",
-        content:
-          "Institutional asset allocation frameworks for illiquid assets: CFA Institute and CAIA curriculum materials on private markets in portfolio context. Foundational endowment and long-horizon allocator perspectives on illiquid allocation sizing and governance burden: David Swensen and institutional practitioner literature. Research and practitioner debate on PE's illiquidity premium, manager dispersion, and implementation dependence: academic PE performance literature and institutional benchmarking practice.",
-      },
-    ],
-    quiz: [
-      {
-        questionId: "d17q1",
-        type: "multiple-choice",
-        prompt:
-          "What is the most accurate description of the private equity illiquidity premium?",
-        options: [
-          "A guaranteed excess return over public equities earned simply by accepting locked-up capital",
-          "A potential return premium that must survive fees, manager dispersion, and implementation quality to be realized by the allocator",
-          "A regulatory premium created by lower accounting volatility for private assets",
-          "A premium available only to venture capital funds and not buyout funds",
-        ],
-        correctAnswer:
-          "A potential return premium that must survive fees, manager dispersion, and implementation quality to be realized by the allocator",
-      },
-      {
-        questionId: "d17q2",
-        type: "multiple-choice",
-        prompt:
-          "Which of the following is most likely to justify a larger PE allocation?",
-        options: [
-          "A belief that peer institutions allocate more to PE, even if their liquidity needs differ",
-          "A long-horizon capital base, strong governance capacity, and evidence that the institution can access and implement the asset class well",
-          "The fact that PE's reported volatility is lower than public equities on quarterly data",
-          "A desire to avoid public-market mark-to-market volatility in committee materials",
-        ],
-        correctAnswer:
-          "A long-horizon capital base, strong governance capacity, and evidence that the institution can access and implement the asset class well",
-      },
-      {
-        questionId: "d17q3",
-        type: "multiple-choice",
-        prompt:
-          "Why is governance capacity a real constraint on PE allocation size?",
-        options: [
-          "Because regulators cap PE allocations based on staff headcount",
-          "Because a larger PE programme requires more manager diligence, pacing oversight, reporting review, and relationship management",
-          "Because every PE fund requires monthly LPAC participation",
-          "Because GPs require dedicated internal operating partners from each LP",
-        ],
-        correctAnswer:
-          "Because a larger PE programme requires more manager diligence, pacing oversight, reporting review, and relationship management",
-      },
-      {
-        questionId: "d17q4",
-        type: "multiple-choice",
-        prompt:
-          "What is the most important flaw in the statement 'PE reduces portfolio volatility because historical reported PE volatility is lower than public equities'?",
-        options: [
-          "PE volatility is irrelevant because PE is always held to maturity",
-          "PE volatility is lower only because PE funds hedge macro risk more actively than public companies",
-          "Reported PE volatility is partly an artifact of appraisal-based valuation lag and smoothing rather than proof of lower underlying economic risk",
-          "PE volatility matters only for venture capital, not buyouts",
-        ],
-        correctAnswer:
-          "Reported PE volatility is partly an artifact of appraisal-based valuation lag and smoothing rather than proof of lower underlying economic risk",
-      },
-      {
-        questionId: "d17q5",
-        type: "multiple-choice",
-        prompt:
-          "Which institution is most likely, all else equal, to support a higher strategic PE allocation?",
-        options: [
-          "A perpetual-capital endowment with strong private-markets staffing and modest liquidity needs",
-          "A defined benefit plan with heavy near-term payout obligations and thin internal staff",
-          "An insurer prioritizing asset-liability matching and regulatory capital efficiency",
-          "A foundation with high annual spending needs and no reliable liquidity model",
-        ],
-        correctAnswer:
-          "A perpetual-capital endowment with strong private-markets staffing and modest liquidity needs",
-      },
-      {
-        questionId: "d17q6",
-        type: "short-response",
-        prompt:
-          "Why is the question 'Should we own more PE because it has higher expected returns?' incomplete as a portfolio-construction argument?",
-        modelAnswer:
-          "Because PE allocation is not just a return decision. It is also a liquidity, governance, and opportunity-cost decision. A larger PE allocation may be justified only if the institution can tolerate the illiquidity, govern the programme well enough to capture the premium net of fees and manager dispersion, and explain what asset class PE is replacing in the portfolio. Without that full portfolio context, the higher-expected-return argument is incomplete. It states the attraction of PE without testing whether this specific institution can implement it successfully.",
-      },
-      {
-        questionId: "d17q7",
-        type: "short-response",
-        prompt:
-          "A foundation wants to increase PE from 10% to 15%. What are the three most important questions you would want answered before recommending the change?",
-        modelAnswer:
-          "First, what is PE replacing in the portfolio, and what is the expected net benefit relative to that alternative after fees and implementation costs? Second, can the foundation's liquidity profile and spending obligations comfortably support a larger illiquid allocation through stressed markets, not just normal conditions? Third, does the institution have the governance capacity and manager access required to run a larger PE programme well? Those three questions determine whether the increase is a disciplined portfolio choice or just a belief statement about the asset class.",
-      },
-    ],
-    sources: [
-      "David Swensen and long-horizon institutional portfolio-construction frameworks for illiquid assets",
-      "CFA and CAIA materials on private markets in total-portfolio context and opportunity-cost analysis",
-      "Academic and practitioner literature on PE illiquidity premium, manager dispersion, and implementation dependence",
-      "Institutional allocator literature on liquidity budgeting, governance burden, and sizing illiquid programmes",
-    ],
-  },
-
-  // ── Day 18 ─────────────────────────────────────────────────────────────────
   {
     lessonId: "day-17",
     blocks: [
@@ -3724,10 +3509,234 @@ export const lessonContents: LessonContent[] = [
       },
     ],
     sources: [
-      "FASB ASC 820 fair value framework",
-      "IPEV valuation guidelines and related practitioner guidance",
-      "CAIA and CFA materials on private asset valuation, reporting, and appraisal-based smoothing",
-      "Institutional private-markets literature on valuation lag, denominator effects, and exit-to-mark analysis",
+      "FASB ASC 820 (Fair Value Measurement) — Level 1/2/3 hierarchy, observable versus unobservable inputs, and disclosure requirements for fair value estimates",
+      "IPEV Valuation Guidelines (International Private Equity and Venture Capital Valuation Guidelines), current edition — valuation methodology, calibration, and reporting best practices",
+      "Brown, Gredil & Kaplan (2019), 'Do Private Equity Funds Manipulate Reported Returns?' — evidence on GP mark timing, interim NAV smoothing, and exit-to-mark patterns",
+      "CAIA Association Level II: Private Asset Valuation — mark-to-model methodologies, appraisal-based smoothing effects, and allocator interpretation",
+      "CFA Institute: Private Markets Valuation and Reporting — fair value concepts, valuation governance, and the denominator effect in institutional portfolios",
+      "Institutional Investor and practitioner materials on exit-multiple-surprise analysis, valuation lag, and mark credibility assessment",
+    ],
+  },
+  // ── Day 18 ─────────────────────────────────────────────────────────────────
+  {
+    lessonId: "day-18",
+    blocks: [
+      {
+        type: "intro",
+        title: "Meeting cold open",
+        content:
+          "An investment committee is debating whether to raise private equity from 12% of plan assets to 18%. The argument in favor sounds familiar: 'private equity has outperformed public markets over time, we have strong manager access, and illiquidity is something we can afford to harvest.' The argument against sounds cautious but incomplete: 'we already have enough complexity, liquidity is valuable, and the last two years showed that marks can lag reality.' Both sides are partly right. Neither is asking the most important question: what role is private equity supposed to play in this specific portfolio, and what evidence do we have that it is earning that role net of fees, illiquidity, governance burden, and opportunity cost? This lesson provides the framework for answering that question.",
+      },
+      {
+        type: "framing",
+        title: "Private equity is not just a return sleeve",
+        content:
+          "Allocators often describe private equity as a return-enhancing allocation. That is directionally correct, but incomplete. PE is simultaneously:\n\n- a **return-seeking asset class** with a claim to an illiquidity premium\n- a **liquidity-consuming programme** that requires multi-year commitment planning\n- a **governance-intensive activity** that demands manager selection, pacing discipline, reporting review, and relationship management\n- a **risk transfer decision** away from daily marked liquidity toward valuation lag, manager dispersion, and capital-call uncertainty\n\nThat means the decision to allocate to PE is never just 'do we think returns will be good?' It is also:\n\n- can this portfolio tolerate the illiquidity?\n- can this institution govern the programme well enough to capture the premium rather than donate it to fees and weak manager selection?\n- what is the relevant opportunity cost versus public equities, credit, or other illiquid alternatives?\n\nThe allocator's job is not to admire PE's best historical outcomes. It is to determine whether PE deserves a larger, smaller, or unchanged role in the total portfolio given the institution's actual constraints.",
+      },
+      {
+        type: "teaching",
+        title: "The illiquidity premium argument: theory versus practice",
+        content:
+          "The theoretical case for private equity is straightforward. Investors who accept long lock-ups, uncertain cash-flow timing, complex structures, and higher manager-selection risk should earn a return premium over liquid public equities. That premium is often described as the **illiquidity premium**.\n\nBut in practice, the premium is not automatic. It has to survive four deductions:\n\n**1. Fees**\nPE fee structures are materially heavier than public-market index exposure. Management fees, carried interest, transaction costs, and portfolio company-level fee leakage all consume gross return. A rough estimate: a 2/20 buyout fund generating 22% gross IRR might deliver 14–16% net to the LP. The gap is not trivial.\n\n**2. Manager dispersion**\nUnlike broad public equity beta, PE outcomes vary dramatically by manager. A weak manager can easily erase whatever illiquidity premium the asset class might have offered in aggregate. Academic research consistently shows that manager selection is the dominant driver of PE net return variation.\n\n**3. Implementation quality**\nVintage diversification, pacing discipline, strategy selection, and re-up decisions all matter. A poorly run PE programme may underperform not because PE as an asset class failed, but because the allocator captured a weak subset of the opportunity set.\n\n**4. Opportunity cost**\nThe relevant comparison is not abstract historical outperformance. It is whether the PE programme beat what the institution could realistically have done in liquid markets or alternative uses of capital over the same period, with similar timing. This is precisely what the **Public Market Equivalent (PME)** measures: it simulates investing the same cash flows in a public index and compares the ending wealth. A PME above 1.0x means PE beat the public alternative on a timing-equivalent basis; below 1.0x means the PE programme was net-negative on an opportunity-cost basis regardless of headline IRR.\n\nThe professional conclusion is not 'PE earns an illiquidity premium.' It is: PE may earn one, but only for institutions with the governance, access, and discipline required to capture it net of costs and programme mistakes. And the only honest way to know whether they did is to measure it against a PME benchmark, not against absolute return or a peer survey.",
+      },
+      {
+        type: "teaching",
+        title: "Why PE belongs in some portfolios and not others",
+        content:
+          "Private equity is not universally appropriate. Its suitability depends on the structure of the institution more than on enthusiasm for the asset class.\n\n**PE tends to fit best where three conditions hold:**\n\n- the investor has a long time horizon and limited forced-liquidity needs\n- the investor has enough governance capacity to select and monitor managers well\n- the investor can tolerate periods when the PE allocation drifts above target because capital cannot be rebalanced quickly\n\nThat is why PE often fits naturally in endowments, some foundations, and large institutions with stable capital bases and dedicated private markets teams.\n\nPE is harder to justify where one or more of those conditions fails. A portfolio with near-term liability needs, weak internal private markets staffing, or limited tolerance for denominator-effect volatility may still invest in PE, but the allocation should usually be smaller and the programme simpler.\n\nThe allocator question is not whether PE is 'good.' It is whether this institution can live with the actual operating characteristics of PE without being forced into poor decisions during stress.",
+      },
+      {
+        type: "visual",
+        title: "When PE fits the portfolio",
+        content:
+          "**PE suitability depends on more than return appetite:**\n\n| Portfolio characteristic | PE more suitable | PE less suitable |\n|---|---|---|\n| **Time horizon** | Long-dated or perpetual capital base | Near-term asset-liability matching needs |\n| **Liquidity burden** | Modest near-term cash demands | Significant recurring payout or liability needs |\n| **Governance capacity** | Dedicated private markets staff / strong external support | Limited team bandwidth and weak monitoring capacity |\n| **Tolerance for drift** | Can accept temporary allocation overshoots and valuation lag | Requires frequent precise rebalancing |\n| **Manager access** | Strong sourcing and re-up discipline | Limited access, mostly commoditized fund exposure |\n\nPE is most attractive where the institution can absorb its operational reality, not just admire its headline returns.",
+        caption:
+          "Private equity is a fit decision as much as a return decision.",
+        whyItMatters:
+          "A portfolio can believe in PE's return potential and still be poorly suited to run a large PE programme. Suitability and expected return are separate questions.",
+        sourceNote:
+          "Institutional asset allocation practice consistently treats illiquid alternatives as a function of horizon, liquidity tolerance, and governance strength, not just expected return.",
+      },
+      {
+        type: "teaching",
+        title: "Sizing PE: the three real constraints",
+        content:
+          "Private equity allocation sizing is usually constrained by three things, not one.\n\n**1. Liquidity constraint**\nThis is the most obvious. The institution must be able to meet spending, liabilities, capital calls, and other obligations without relying on PE distributions arriving on schedule. PE should be sized inside the liquidity budget, not on top of it. A disciplined way to operationalize this: model the portfolio's PE exposure under a stress scenario where public markets fall 30% and PE distributions slow for two years. If that scenario forces a forced PE sale or a dangerous liquidity draw, the allocation is too large.\n\n**2. Governance constraint**\nThis is underappreciated. A larger PE programme requires more manager diligence, more pacing oversight, more quarterly reporting review, more side-letter and legal coordination, and often more LPAC participation. A rough heuristic: each meaningfully sized fund relationship requires one to two substantive reviews per year, plus ongoing monitoring and ad-hoc issue management. An institution with two private-markets staff managing 20 fund relationships is almost certainly under-resourced. An institution that thinks it can double the programme without proportionally increasing governance capacity is setting itself up for concentration in weak decisions, missed issues, and deferred re-up discipline.\n\n**3. Opportunity-cost constraint**\nPE should not just produce high nominal returns. It should produce sufficiently better net-of-fee, risk-aware outcomes than public-market alternatives to justify the liquidity and complexity burden. The PME benchmark is the right frame here: if the programme's historic PME is barely above 1.0x — or below — then the case for increasing PE weakens materially. A programme that is adding complexity, fees, and governance burden without beating the public alternative is a programme to simplify, not expand. If an institution cannot access strong managers or cannot run the programme well, a simpler public-market solution may be superior despite lower headline upside.\n\nThe mistake many committees make is to size PE using only strategic optimism: 'we want more return, therefore we want more PE.' The professional version asks how much PE the institution can actually absorb and execute well.",
+      },
+      {
+        type: "teaching",
+        title: "Allocator type matters: the right PE weight is institution-specific",
+        content:
+          "A common error in committee discussions is to treat PE allocation ranges as universal. They are not. The right PE weight is highly dependent on allocator type.\n\n**Endowments**\nLong horizons, relatively stable capital, and high tolerance for complexity often support larger PE allocations. The key risk is not just liquidity, but governance sprawl and overconfidence in manager access.\n\n**Foundations**\nFoundations often have perpetual capital, but spending requirements can create a more binding liquidity need than committees initially recognize. PE can fit well, but only if the payout burden and grant cadence are properly modeled.\n\n**Defined benefit pensions**\nPensions must consider benefit-payment obligations, funded status, and balance-sheet sensitivity. PE can still play a meaningful role, but the allocation often needs to be sized more conservatively than in perpetual-capital pools because liquidity and cash-flow reliability matter more.\n\n**Family offices**\nThe range is wide. Some have highly flexible balance sheets and can tolerate large illiquid allocations. Others face concentrated operating-business or family-liquidity needs that make a heavy PE programme unwise. Governance capacity is often more constrained than headline wealth suggests.\n\n**Insurers and liability-sensitive pools**\nThese portfolios often place a much higher premium on asset-liability matching and regulatory capital treatment. PE may still belong, but usually in a smaller role than in endowment-style models.\n\nThe practical conclusion: 'peer institutions allocate 25% to PE' is not evidence that you should. Peer practices are only relevant after adjusting for liquidity structure, liability profile, and governance capacity.",
+      },
+      {
+        type: "teaching",
+        title: "PE's real portfolio role: what is it substituting for?",
+        content:
+          "One of the most useful portfolio-construction questions is simple: if we increase PE, what are we reducing?\n\nBecause PE is usually treated as a growth asset, the substitute is often public equities. But that substitution is not one-for-one in risk terms. PE differs from public equities in several ways:\n\n- lower reported short-term volatility due to valuation lag, not necessarily lower economic risk\n- higher manager-selection risk\n- less liquidity and slower rebalancing capacity\n- different leverage exposure at the asset level, especially in buyouts\n- heavier governance demands\n\nThat means replacing public equities with PE is not just a beta swap. It is a trade between liquidity and complexity on one side, and the potential for higher net returns on the other.\n\nIn some portfolios, PE may instead substitute for other illiquid growth assets, such as private credit, real estate, or venture capital. The comparison should always be explicit. A recommendation to raise PE without naming the funding source is incomplete because it hides the actual portfolio trade-off.",
+      },
+      {
+        type: "teaching",
+        title: "Why reported diversification benefits can be overstated",
+        content:
+          "Some committees are drawn to PE because historical reporting often shows lower volatility and lower correlation to public equities than listed stocks. That should be interpreted carefully.\n\nPE valuations are appraisal-based and lag public markets. As a result, quarterly PE returns are smoothed relative to daily public-market prices. This creates the appearance of lower volatility and lower contemporaneous correlation.\n\nEconomically, PE still owns operating businesses that are exposed to the same macro forces as public companies: revenue cycles, margins, financing costs, and valuation multiples. Over a full cycle, PE is much more equity-like than short-term reported statistics suggest.\n\nThis does not mean PE has no diversification value. Strategy mix, sector exposure, leverage, and active ownership can all matter. But a committee should not size PE on the assumption that the historical volatility series reflects true liquid-market resilience. Doing so mistakes valuation method for economic diversification.",
+      },
+      {
+        type: "visual",
+        title: "What a larger PE allocation really asks the institution to do",
+        content:
+          "**Increasing PE asks for more than tolerance for illiquidity:**\n\n| If PE increases... | The institution must also accept... |\n|---|---|\n| **Higher return-seeking exposure** | Greater dependence on manager selection skill |\n| **More funded NAV over time** | Slower rebalancing and more denominator-effect risk |\n| **More commitments and relationships** | Higher governance load and monitoring burden |\n| **More illiquid capital** | Less flexibility to fund spending or redeploy during stress |\n| **Potentially higher net returns** | A higher burden of proof versus public-market opportunity cost |\n\nA larger PE allocation is an operating commitment, not just a strategic asset-allocation line item.",
+        caption:
+          "Allocating more to PE means accepting more governance and liquidity burden in exchange for expected return improvement.",
+        whyItMatters:
+          "Committees often debate PE at the level of expected return only. The real decision includes operational and governance consequences that can outweigh the return case if ignored.",
+        sourceNote:
+          "Institutional private-markets practice consistently treats PE programme scale as jointly determined by return goals, liquidity, and governance capacity.",
+      },
+      {
+        type: "example",
+        title: "Worked example: should the foundation double PE?",
+        content:
+          "A foundation with a $900M portfolio currently has a 9% PE allocation and is considering moving to 18% over time. The committee's argument is that the foundation has perpetual capital, can tolerate illiquidity, and wants to improve long-run returns.\n\nThat is the start of the analysis, not the end.\n\n**What supports the increase:**\n- perpetual capital base\n- moderate spending rate relative to assets\n- ability to accept long-horizon investments\n- access to a few high-quality relationships with established managers\n\n**What may argue against a sharp increase:**\n- the investment office has limited private-markets staffing\n- quarterly liquidity forecasting is still basic rather than robust\n- the current PE programme is manager-light and not well diversified by strategy or geography\n- the committee has not defined whether the extra PE will be funded from public equities or other illiquid assets\n\nNow frame the real question: should the foundation raise PE because it believes in the long-run premium, or should it first strengthen its implementation capacity so that a larger PE allocation has a realistic chance of earning that premium?\n\nA disciplined answer may be: increase, but gradually. Move from 9% toward 12–14% first, while improving governance infrastructure, liquidity modeling, and manager diversification. A direct jump toward 18% assumes implementation capacity that the current programme may not yet have. The problem is not the strategic thesis. It is the operational readiness.",
+      },
+      {
+        type: "example",
+        title: "Worked example: why a pension may rationally keep PE smaller",
+        content:
+          "A defined benefit pension with a $4B portfolio and a meaningful annual benefit-payment burden currently holds 11% in PE and is considering a move to 15%. The consultant notes that peer plans allocate more and that the plan's long-term return target is demanding.\n\nThe case for more PE is easy to state. The harder question is whether the pension's liability profile and governance model support a larger illiquid allocation.\n\nSuppose the pension relies on liquid assets to help fund near- and medium-term benefit payments, and suppose the plan's private markets team is relatively small. In that case, the institution may face real trade-offs:\n\n- less flexibility during public-market drawdowns\n- heavier dependence on distributions arriving from PE at the wrong moments\n- greater denominator-effect risk if public assets fall\n- more governance burden without a matching increase in internal staffing\n\nIn that setting, holding PE at 10–12% may be entirely rational even if the committee believes PE offers some long-run premium. The institution is not rejecting PE because it doubts the asset class in theory. It is sizing PE to the portfolio and liability structure it actually has.",
+      },
+      {
+        type: "weak-answer",
+        title: "Weak vs. strong: arguing for more PE",
+        content:
+          "The committee says: 'Private equity has higher expected returns than public equities, so we should raise the allocation.'\n\n**Weak response:** 'Agreed. If we can tolerate illiquidity, we should own more of the higher-returning asset class.'\n\nWhy it is weak: it assumes the premium is automatic, ignores governance and manager-access constraints, and fails to identify what asset is being reduced to fund the increase.\n\n**Strong response:** 'Maybe, but only if we can articulate the role PE plays in this portfolio, what asset class it would replace, and why we believe our programme can earn a sufficient premium net of fees and implementation costs. We also need to test whether our liquidity profile and governance resources can support a larger PE allocation without forcing poor decisions in stressed markets. Higher expected return is a necessary argument, not a sufficient one.'\n\nWhy it is strong: it reframes PE sizing as a portfolio design question rather than a simple return preference.",
+      },
+      {
+        type: "inference-boundary",
+        title: "Inference boundary: what past PE outperformance can and cannot tell you",
+        content:
+          "**What historical PE outperformance can tell you:**\n- that PE has, in some periods and segments, delivered strong net returns relative to public markets\n- that long-horizon institutions with strong manager selection and governance have often been able to capture a meaningful premium\n- that PE can be an important part of a growth-oriented portfolio when implemented well\n\n**What it cannot tell you:**\n- that this institution will capture the same premium; implementation quality matters enormously\n- that a larger allocation is automatically better; governance and liquidity burdens rise with programme size\n- that PE's reported short-term volatility reflects true economic resilience; valuation lag affects the data\n- that peer allocations are suitable analogies for your own portfolio; institution type matters",
+      },
+      {
+        type: "exercise",
+        title: "Applied exercise: write the case for and against increasing PE",
+        content:
+          "A foundation currently allocates 10% to PE and is considering raising the target to 15%. Write two short cases:\n\n1. **The case for increasing PE** — using expected return, time horizon, and portfolio role\n2. **The case against increasing PE right now** — using liquidity, governance, and implementation risk\n\nThen decide which side is stronger based on one missing fact you would most want before making the recommendation. A strong answer should recognize that PE allocation size is not a belief statement about the asset class. It is a judgment about fit, execution capability, and opportunity cost.",
+      },
+      {
+        type: "meeting-application",
+        title: "In the committee discussion: five questions that improve the PE sizing debate",
+        content:
+          "1. **'What exactly is PE replacing in the portfolio if we increase it?'** This forces the committee to make the portfolio trade-off explicit.\n\n2. **'What net premium do we believe this programme can earn over a liquid public-market alternative after fees and implementation costs?'** This shifts the discussion from headline return to actual expected value-add.\n\n3. **'What are the binding constraints on a larger PE programme: liquidity, governance, access, or something else?'** This identifies the real ceiling on allocation size.\n\n4. **'Which peer institutions are truly comparable to us in liquidity needs and governance capacity?'** This prevents lazy peer comparison.\n\n5. **'If public markets fell sharply next year, would we still feel comfortable with the larger PE target?'** This stress-tests the recommendation against denominator-effect conditions rather than benign markets.",
+      },
+      {
+        type: "meeting-application",
+        title: "Allocator application: how to characterize PE in a strategic asset-allocation memo",
+        content:
+          "A strong asset-allocation memo should not describe PE as simply 'higher-returning public equity.' It should characterize PE in four dimensions:\n\n**Return role** — expected source of excess return and how it will be judged versus public-market opportunity cost\n\n**Liquidity role** — how the allocation fits within the portfolio's liquidity budget and stress-case funding needs\n\n**Governance role** — what internal or external capabilities are required to execute the programme successfully\n\n**Risk role** — what new risks the portfolio is taking on, including manager dispersion, valuation lag, concentration in vintages or strategies, and slower rebalancing capacity\n\nIf the memo cannot clearly explain all four, the PE allocation case is underdeveloped.",
+      },
+      {
+        type: "source-note",
+        title: "Sources for this lesson",
+        content:
+          "Institutional asset allocation frameworks for illiquid assets: CFA Institute and CAIA curriculum materials on private markets in portfolio context. Foundational endowment and long-horizon allocator perspectives on illiquid allocation sizing and governance burden: David Swensen and institutional practitioner literature. Research and practitioner debate on PE's illiquidity premium, manager dispersion, and implementation dependence: academic PE performance literature and institutional benchmarking practice.",
+      },
+    ],
+    quiz: [
+      {
+        questionId: "d17q1",
+        type: "multiple-choice",
+        prompt:
+          "What is the most accurate description of the private equity illiquidity premium?",
+        options: [
+          "A guaranteed excess return over public equities earned simply by accepting locked-up capital",
+          "A potential return premium that must survive fees, manager dispersion, and implementation quality to be realized by the allocator",
+          "A regulatory premium created by lower accounting volatility for private assets",
+          "A premium available only to venture capital funds and not buyout funds",
+        ],
+        correctAnswer:
+          "A potential return premium that must survive fees, manager dispersion, and implementation quality to be realized by the allocator",
+      },
+      {
+        questionId: "d17q2",
+        type: "multiple-choice",
+        prompt:
+          "Which of the following is most likely to justify a larger PE allocation?",
+        options: [
+          "A belief that peer institutions allocate more to PE, even if their liquidity needs differ",
+          "A long-horizon capital base, strong governance capacity, and evidence that the institution can access and implement the asset class well",
+          "The fact that PE's reported volatility is lower than public equities on quarterly data",
+          "A desire to avoid public-market mark-to-market volatility in committee materials",
+        ],
+        correctAnswer:
+          "A long-horizon capital base, strong governance capacity, and evidence that the institution can access and implement the asset class well",
+      },
+      {
+        questionId: "d17q3",
+        type: "multiple-choice",
+        prompt:
+          "Why is governance capacity a real constraint on PE allocation size?",
+        options: [
+          "Because regulators cap PE allocations based on staff headcount",
+          "Because a larger PE programme requires more manager diligence, pacing oversight, reporting review, and relationship management",
+          "Because every PE fund requires monthly LPAC participation",
+          "Because GPs require dedicated internal operating partners from each LP",
+        ],
+        correctAnswer:
+          "Because a larger PE programme requires more manager diligence, pacing oversight, reporting review, and relationship management",
+      },
+      {
+        questionId: "d17q4",
+        type: "multiple-choice",
+        prompt:
+          "What is the most important flaw in the statement 'PE reduces portfolio volatility because historical reported PE volatility is lower than public equities'?",
+        options: [
+          "PE volatility is irrelevant because PE is always held to maturity",
+          "PE volatility is lower only because PE funds hedge macro risk more actively than public companies",
+          "Reported PE volatility is partly an artifact of appraisal-based valuation lag and smoothing rather than proof of lower underlying economic risk",
+          "PE volatility matters only for venture capital, not buyouts",
+        ],
+        correctAnswer:
+          "Reported PE volatility is partly an artifact of appraisal-based valuation lag and smoothing rather than proof of lower underlying economic risk",
+      },
+      {
+        questionId: "d17q5",
+        type: "multiple-choice",
+        prompt:
+          "Which institution is most likely, all else equal, to support a higher strategic PE allocation?",
+        options: [
+          "A perpetual-capital endowment with strong private-markets staffing and modest liquidity needs",
+          "A defined benefit plan with heavy near-term payout obligations and thin internal staff",
+          "An insurer prioritizing asset-liability matching and regulatory capital efficiency",
+          "A foundation with high annual spending needs and no reliable liquidity model",
+        ],
+        correctAnswer:
+          "A perpetual-capital endowment with strong private-markets staffing and modest liquidity needs",
+      },
+      {
+        questionId: "d17q6",
+        type: "short-response",
+        prompt:
+          "Why is the question 'Should we own more PE because it has higher expected returns?' incomplete as a portfolio-construction argument?",
+        modelAnswer:
+          "Because PE allocation is not just a return decision. It is also a liquidity, governance, and opportunity-cost decision. A larger PE allocation may be justified only if the institution can tolerate the illiquidity, govern the programme well enough to capture the premium net of fees and manager dispersion, and explain what asset class PE is replacing in the portfolio. Without that full portfolio context, the higher-expected-return argument is incomplete. It states the attraction of PE without testing whether this specific institution can implement it successfully.",
+      },
+      {
+        questionId: "d17q7",
+        type: "short-response",
+        prompt:
+          "A foundation wants to increase PE from 10% to 15%. What are the three most important questions you would want answered before recommending the change?",
+        modelAnswer:
+          "First, what is PE replacing in the portfolio, and what is the expected net benefit relative to that alternative after fees and implementation costs? Second, can the foundation's liquidity profile and spending obligations comfortably support a larger illiquid allocation through stressed markets, not just normal conditions? Third, does the institution have the governance capacity and manager access required to run a larger PE programme well? Those three questions determine whether the increase is a disciplined portfolio choice or just a belief statement about the asset class.",
+      },
+    ],
+    sources: [
+      "David Swensen, Pioneering Portfolio Management (2000, rev. 2009) — endowment-model PE allocation, illiquidity rationale, and governance requirements",
+      "Harris, Jenkinson & Kaplan (2014), 'Private Equity Performance: What Do We Know?' — PE return evidence, PME benchmarking, and the illiquidity premium debate",
+      "Ang, Papanikolaou & Westerfield (2014), 'Portfolio Choice with Illiquid Assets' — illiquidity premium theory and liquidity-budget calibration",
+      "CFA Institute: Private Markets and Alternative Investments — PE allocation sizing, opportunity-cost analysis, and total-portfolio integration",
+      "CAIA Association Level II: Portfolio Construction with Illiquid Assets — governance burden, denominator-effect mechanics, and allocation-framework design",
+      "Institutional investor surveys and practitioner materials on liquidity budgeting, PE sizing constraints, and OCIO versus direct governance models",
     ],
   },
 
@@ -3951,10 +3960,12 @@ export const lessonContents: LessonContent[] = [
       },
     ],
     sources: [
-      "UN PRI guidance for private equity ESG integration and active ownership",
-      "ILPA ESG assessment framework and due-diligence materials",
-      "SASB and ISSB materiality frameworks as inputs to sector-specific issue identification",
-      "CAIA, CFA, and practitioner materials on ESG integration, governance, and impact distinction in private markets",
+      "UN PRI: Private Equity Responsible Investment Due Diligence Questionnaire and ESG Integration Guidance — active ownership, ESG diligence process, and LP expectations",
+      "ILPA ESG Assessment Framework — standardized approach for LP evaluation of GP ESG practices, policies, and deal-level integration",
+      "SASB / ISSB Materiality Standards — sector-specific ESG issue identification and financially material factor mapping",
+      "EU SFDR: Sustainable Finance Disclosure Regulation — Article 8 and 9 classification framework, reporting requirements, and GP implications",
+      "CFA Institute: ESG Integration in Private Markets — governance, materiality assessment, and distinguishing ESG from impact",
+      "CAIA Association Level II: ESG and Responsible Investment in Alternatives — practical frameworks for PE ESG integration and allocator oversight",
     ],
   },
 
@@ -4146,9 +4157,12 @@ export const lessonContents: LessonContent[] = [
       },
     ],
     sources: [
-      "ILPA principles and institutional PE due-diligence concepts",
-      "PME, private equity benchmarking, and realization-quality research",
-      "Private equity fund economics, governance, and allocator programme-construction frameworks",
+      "ILPA Principles 3.0 — alignment, governance, and transparency baseline for institutional PE partnerships and recommendation processes",
+      "Harris, Jenkinson & Kaplan (2014), 'Private Equity Performance: What Do We Know?' — PME methodology, benchmarking evidence, and realization-quality analysis",
+      "Kaplan & Schoar (2005), 'Private Equity Performance: Returns, Persistence, and Capital Flows' — foundational PE performance evidence and the PME framework",
+      "CFA Institute: Private Markets and Alternative Investments — manager selection, recommendation frameworks, and allocator judgment processes",
+      "CAIA Association Level II: PE Fund Analysis and Manager Evaluation — due-diligence integration, committee presentation, and recommendation structure",
+      "Institutional investor practitioner materials on PE committee processes, recommendation writing, and decision frameworks under uncertainty",
     ],
   },
   {
@@ -4183,6 +4197,19 @@ export const lessonContents: LessonContent[] = [
       title: "LPA anatomy: the clauses that matter most to allocators",
       content:
         "Not every LPA clause carries equal analytical weight. The highest-signal provisions tend to cluster into five groups.\n\n**1. Economics leakage**\nThis includes management fee basis, offset treatment, broken-deal expenses, affiliate costs, transaction-fee treatment, and definitions of fund expenses. The issue is not whether fees are 'market.' It is whether the documents allow more leakage than the headline terms imply.\n\n**2. Governance and control**\nThis includes key-person events, removal for cause, removal without cause, suspension of the investment period, LP voting thresholds, and LPAC authority. These clauses determine whether LPs can do anything meaningful if the team changes or conflicts intensify.\n\n**3. Leverage and capital flexibility**\nThis includes subscription lines, asset-level and fund-level borrowing permissions, NAV facilities, recycling, recallability, and cross-fund financing boundaries. These terms shape both performance optics and real risk.\n\n**4. Reporting and transparency**\nThis includes frequency, timing, and scope of reporting: quarterly financials, portfolio company detail, fee and expense disclosure, valuation methodology, ESG or regulatory reporting, and capital account transparency. Reporting is not a courtesy. It is an enforceable information right if written properly.\n\n**5. Transfer, liquidity, and term**\nThis includes fund term, extension mechanics, transfer restrictions, excuse and exclusion rights, and whether LP interests can be transferred or restructured in stress or secondary situations.\n\nAn allocator does not need to memorize the full LPA. They need to know where these five categories live and how to identify the clauses within each category that actually change outcomes.",
+    },
+    // ── Visual 1 ─────────────────────────────────────────────────────────
+    {
+      type: "visual",
+      title: "The fund document stack: what each document controls",
+      content:
+        "**Where allocator rights actually live — a document-to-risk map:**\n\n| Document | Primary Function | Key Allocator Risk It Governs |\n|---|---|---|\n| **LPA** | Core governing agreement | Economics, governance, leverage, recycling, key-person, removal, LPAC scope, reporting obligations |\n| **PPM** | Marketing and disclosure | Strategy explanation and risk factors — but not the controlling source if LPA differs |\n| **Subscription Agreement** | Formal commitment | Investor representations, tax elections, agreement to be bound by LPA |\n| **Side Letters** | Bilateral LP-specific terms | Fee breaks, enhanced reporting, co-invest rights, regulatory accommodations, excuse rights |\n| **MFN Election Package** | Term equalization mechanism | Eligibility thresholds, carve-outs, election deadlines — practical access to side-letter terms |\n| **Amendments / Consents** | Post-closing modifications | Can materially change operating reality even when original documents looked acceptable |",
+      caption:
+        "The practical rule: know which document controls the issue before concluding you understand the issue. A PPM may describe conservative leverage use while the LPA permits far more.",
+      whyItMatters:
+        "Allocators who read only the PPM and headline terms miss the actual contractual control map. Each document in the stack governs different risks, and the gap between what the PPM suggests and what the LPA permits is where most surprises live.",
+      sourceNote:
+        "ILPA Principles 3.0 — document governance and transparency; institutional LP practice for fund documentation review.",
     },
     {
       type: "teaching",
@@ -4380,6 +4407,19 @@ export const lessonContents: LessonContent[] = [
       content:
         "Formal rights matter, but practical governance often turns on three operational variables: timing, information quality, and LP coordination.\n\n**Timing:** An LPAC with approval rights can still be weak in practice if materials arrive late, meetings are rushed, or alternatives are presented as urgent and unavoidable. A short timeline often shifts the balance of power toward the GP, even when the formal consent right sits with LPs.\n\n**Information quality:** Governance works only if the allocator receives enough information to judge the issue. For a GP-led transaction, that means process details, valuation support, rationale, economics reset terms, and election consequences. For a valuation issue, it means methodology, assumptions, and what changed.\n\n**LP coordination:** A right requiring a supermajority of dispersed LPs may be far weaker than it appears. LPs differ in size, access, interests, and willingness to challenge the GP. In practice, some rights are easier to document than to use.\n\nA disciplined allocator therefore reads governance in two layers:\n\n- **formal layer:** what the documents say\n- **practical layer:** whether the process makes the right usable under time pressure and imperfect information\n\nThis is why good governance is best observed in stress cases, not marketing decks. The allocator should ask: when conflict arises, does the GP slow down and illuminate the process, or accelerate and compress it?",
     },
+    // ── Visual 1 ─────────────────────────────────────────────────────────
+    {
+      type: "visual",
+      title: "Private fund conflict taxonomy: five recurring categories",
+      content:
+        "**The five conflict buckets allocators encounter most frequently — and what governance quality looks like in each:**\n\n| Conflict Type | Typical Trigger | Strong Governance Signal | Weak Governance Signal |\n|---|---|---|---|\n| **GP-led transactions** | Continuation vehicle, strip sale, tender offer | Early LPAC engagement; broad buyer outreach; adequate LP election timeline | Compressed process; single anchor buyer; materials arrive days before decision |\n| **Cross-fund conflicts** | Allocation of deals, cost-sharing, inter-fund sales | Written allocation policy; disclosed rationale; consistent historical pattern | Vague policy; GP discretion without documentation; ad hoc exceptions |\n| **Valuation conflicts** | Marks near fundraising, financing, or GP-led events | Independent committee challenge; third-party support; methodology consistency | Deal team controls final mark; selective use of external support |\n| **Affiliate / related-party** | GP-connected service providers, operating partners | LPAC approval required; full fee offset; transparent disclosure | LPAC notification only; partial or unclear offset; minimal disclosure |\n| **Fund-finance conflicts** | NAV facilities used for distributions or leverage | Clear use-of-proceeds disclosure; LPA contemplated the facility | Vague rationale; facility adopted without LP engagement or awareness |",
+      caption:
+        "Conflicts are not inherently evidence of bad behavior. They are inherent in scaled private-markets platforms. The allocator question is whether the GP identifies them early, provides decision-useful information, and allows enough process for informed LP response.",
+      whyItMatters:
+        "A structured conflict map helps the allocator prepare for the five situations where governance quality is most testable. Rather than reacting to each conflict ad hoc, the allocator can audit a manager's governance across all five categories during diligence and monitoring.",
+      sourceNote:
+        "ILPA Principles 3.0 — governance, conflicts, and transparency; ILPA guidance on continuation funds and GP-led transactions.",
+    },
     {
       type: "teaching",
       title: "GP-led transactions as the governance stress test",
@@ -4575,6 +4615,19 @@ export const lessonContents: LessonContent[] = [
       title: "ILPA reporting templates: why standardization matters",
       content:
         "Institutional allocators care about ILPA reporting templates not because standardization is aesthetically pleasing, but because programme management gets materially harder without it.\n\nThe ILPA reporting framework is useful because it pushes toward consistency in areas that matter operationally and analytically:\n\n- capital account transparency\n- cash-flow reporting\n- fee and expense categories\n- portfolio-level holdings detail\n- performance metrics and reconciliations\n- data fields that can be aggregated across managers\n\nFor an allocator, the advantage is practical:\n- better commitment pacing and unfunded forecasting\n- easier cross-manager comparison\n- faster detection of outliers in fees, valuation movement, or liquidity behavior\n- lower manual rework in programme reporting and board materials\n\nA common mistake is to treat ILPA compliance as a yes-no badge. The deeper question is whether the manager's actual reporting package is complete, consistent, timely, and machine-usable enough to support institutional oversight. A GP may claim to follow ILPA principles while still omitting fields, changing definitions, or delivering files that are hard to reconcile quarter to quarter.\n\nThe allocator should therefore think in terms of reporting maturity, not just template branding.",
+    },
+    // ── Visual 1 ─────────────────────────────────────────────────────────
+    {
+      type: "visual",
+      title: "Narrative reporting vs. decision-useful reporting",
+      content:
+        "**How to distinguish polished commentary from data that actually supports allocator decisions:**\n\n| Dimension | Narrative-Heavy (Weak) | Decision-Useful (Strong) |\n|---|---|---|\n| **Performance explanation** | Net IRR and TVPI headline only | Beginning-NAV to ending-NAV bridge with attribution |\n| **Portfolio detail** | Selected anecdotes on winners | Consistent company-level table with cost, fair value, and operating data |\n| **Cash-flow transparency** | Cumulative totals only | Quarterly and cumulative contributions, distributions, and recallable amounts |\n| **Fee and expense disclosure** | Bundled at high level | Granular breakout: management fee, fund expenses, broken-deal costs, offsets |\n| **Valuation commentary** | 'Portfolio performing well' | Methodology notes, market calibration, and mark-movement explanation |\n| **Programme usability** | PDF-only, format changes quarterly | Structured data files with consistent identifiers that feed allocator systems |",
+      caption:
+        "Two managers with identical top-line returns can provide very different monitoring value. The stronger reporting package improves confidence in valuation, liquidity forecasting, and cross-manager comparison.",
+      whyItMatters:
+        "Reporting quality directly constrains how well an allocator can monitor, compare, and defend private-markets holdings. A polished narrative that omits structured data is not institutional-quality reporting — it is marketing that arrives quarterly.",
+      sourceNote:
+        "ILPA reporting template guidance; institutional allocator best practices for private-markets reporting and data operations.",
     },
     {
       type: "teaching",
@@ -4778,6 +4831,19 @@ export const lessonContents: LessonContent[] = [
       content:
         "A strong allocator should be able to map a manager's valuation process in institutional terms. The central question is simple: who is involved, and where is challenge introduced?\n\nA typical valuation process includes:\n\n- deal team or portfolio team prepares the initial mark recommendation\n- finance or valuation function gathers supporting evidence\n- methodology is selected or updated based on company-specific and market inputs\n- a valuation committee reviews the recommendation\n- in some cases, an external valuation firm provides support or range analysis\n- final marks are approved and reported\n\nWhat matters is not whether these boxes exist. It is how they work in practice.\n\nHigh-signal questions include:\n- Does the same team that owns the investment also control the final mark?\n- Is there a real valuation committee or only a rubber-stamp process?\n- When public comparables or transactions move materially, how quickly does that evidence enter the mark?\n- Are methodology changes explained clearly?\n- Is third-party support used consistently or only when politically useful?\n\nThe allocator should think of valuation governance the same way they think of underwriting governance. Independence, escalation, documentation, and challenge quality matter more than formal committee labels.",
     },
+    // ── Visual 1 ─────────────────────────────────────────────────────────
+    {
+      type: "visual",
+      title: "Valuation governance framework: standards, process, and failure modes",
+      content:
+        "**How the main valuation standards, process elements, and common failure modes connect for allocator oversight:**\n\n| Dimension | What It Covers | Allocator Signal | Key Risk If Weak |\n|---|---|---|---|\n| **IPEV Guidelines** | Fair value framework for private capital; market-participant-based pricing; methodology consistency | Common language for methodology and calibration across managers | GP marks anchored to preference rather than market evidence |\n| **ASC 820 / Fair Value Hierarchy** | U.S. accounting framework; Level 1–3 classification; emphasis on observable inputs | Private assets are typically Level 3 — unobservable inputs require stronger governance | False comfort from framework compliance without process discipline |\n| **Valuation Committee** | Internal body that reviews and challenges deal-team mark proposals | Real separation between deal advocacy and mark approval | Rubber-stamp process where the investment team controls the final number |\n| **Third-Party Support** | External valuation firms providing range analysis or methodology review | Adds discipline, especially in conflict-heavy periods | Selective or decorative use that does not actually constrain the GP |\n| **Calibration** | Anchoring marks to observable events and updating as evidence changes | Forces explanation of what changed since last observable price | Marks that float on narrative rather than evidence |\n| **Backtesting** | Comparing prior marks with eventual exits or later financing rounds | Reveals whether mark accuracy is acceptable over time | Repeated late write-downs or sudden reality catches |",
+      caption:
+        "A GP can cite IPEV or ASC 820 and still produce marks that deserve skepticism. The framework is necessary but not sufficient — process quality, calibration discipline, and committee independence are what make the mark decision-useful.",
+      whyItMatters:
+        "Allocators use this framework to judge whether a mark was produced through disciplined subjectivity or convenient subjectivity. Each row is a checkpoint: if any element is missing or weak, confidence in the reported NAV should decrease accordingly.",
+      sourceNote:
+        "IPEV Valuation Guidelines; ASC 820 fair-value framework; institutional allocator guidance on private-asset valuation governance and process.",
+    },
     {
       type: "teaching",
       title: "Methodologies allocators should understand at a high level",
@@ -4980,6 +5046,19 @@ export const lessonContents: LessonContent[] = [
       content:
         "The core allocator mistake is to think of a NAV facility as just another administrative tool. In reality, a NAV facility can change the economic shape of the fund in at least five ways.\n\n**1. It introduces leverage into a mature portfolio**\nUnlike early subscription facilities, NAV borrowing often arrives later in the fund's life, when the portfolio is more concentrated and the assets are more valuation-sensitive.\n\n**2. It can extend fund duration implicitly**\nA facility used to support follow-ons or delay exits may preserve upside optionality, but it can also delay the natural cash-conversion discipline of a mature fund.\n\n**3. It can affect cash-timing optics**\nIf borrowing supports distributions or delays capital calls, LPs may experience smoother or earlier cash outcomes that do not fully reflect underlying realizations.\n\n**4. It introduces fund-level covenant and refinancing risk**\nThe GP is no longer managing only asset exits and operating performance. It is also managing borrowing bases, lender terms, and refinancing conditions.\n\n**5. It can layer leverage on top of already-levered assets**\nMany buyout portfolio companies already have operating leverage. A NAV facility adds another level of leverage above them at the fund level.\n\nThe allocator should therefore treat NAV finance as a portfolio-risk and governance issue, not just a financing footnote.",
     },
+    // ── Visual 1 ─────────────────────────────────────────────────────────
+    {
+      type: "visual",
+      title: "Fund finance taxonomy: subscription lines vs. NAV facilities",
+      content:
+        "**How the two main fund-finance structures differ in collateral, timing, risk, and allocator implications:**\n\n| Dimension | Subscription Facility | NAV Facility |\n|---|---|---|\n| **Collateral source** | Uncalled LP commitments (lender looks 'up' at LPs) | Unrealized portfolio value (lender looks 'down' at assets) |\n| **Typical timing** | Early in fund life, during investment period | Later in fund life, often when portfolio is mature and concentrated |\n| **Primary use** | Bridge capital calls, smooth deal execution, operational convenience | Fund follow-ons, support distributions, delay exits, extend optionality |\n| **Leverage character** | Mainly timing and administrative | Asset-sensitive leverage with borrowing-base dynamics |\n| **Performance effect** | Can boost early IRR by delaying LP cash outflows | Can alter distribution timing and extend effective fund duration |\n| **Covenant / refinancing risk** | Generally lower — secured by contractual commitments | Higher — sensitive to marks, concentration, and exit-market conditions |\n| **Key allocator question** | Does it distort IRR timing materially? | What economic problem is being solved, and what new risk is being accepted? |",
+      caption:
+        "Subscription lines are mainly about timing. NAV facilities introduce real leverage, borrowing-base sensitivity, and duration extension. The distinction matters because the same word — fund finance — can describe very different risk profiles.",
+      whyItMatters:
+        "Allocators who treat all fund borrowing as equivalent miss the fundamental shift that occurs when collateral moves from LP commitments to portfolio assets. NAV facilities change what the GP is managing and what the allocator should monitor.",
+      sourceNote:
+        "ILPA guidance on NAV facilities; practitioner primers on fund-finance taxonomy and allocator expectations.",
+    },
     {
       type: "teaching",
       title: "Use cases: when GPs say they need a NAV facility",
@@ -5175,6 +5254,19 @@ export const lessonContents: LessonContent[] = [
       title: "Why multi-sleeve pacing is harder than single-sleeve pacing",
       content:
         "Basic pacing assumes a relatively stable cash-flow pattern within one sleeve. Multi-sleeve pacing is harder because the sleeves differ structurally.\n\n**Buyout** often has a meaningful J-curve but may begin returning capital earlier than venture if exits are functioning.\n\n**Venture** tends to have a longer-duration profile, more dispersed outcomes, and slower distribution realization. A programme that is venture-heavy can look diversified by manager while remaining highly back-ended on cash conversion.\n\n**Private credit** may appear more income-like, but cash behavior depends on the vehicle and strategy. Closed-end lending funds, evergreen structures, specialty finance vehicles, and distressed strategies do not all behave alike.\n\n**Real estate** introduces another layer because vehicle structure matters a great deal. Closed-end opportunistic funds, open-end core funds, and real estate debt strategies have very different liquidity profiles.\n\nThe allocator implication is that 'vintage diversification' alone is not enough. Multi-sleeve liquidity design requires understanding how sleeve mix changes the shape of calls, distributions, valuation lag, and gating risk across the full programme.",
+    },
+    // ── Visual 1 ─────────────────────────────────────────────────────────
+    {
+      type: "visual",
+      title: "Multi-sleeve cash-flow profiles: how private-markets sleeves differ",
+      content:
+        "**How four core private-markets sleeves differ in cash-flow shape, liquidity behavior, and stress-case risk for programme management:**\n\n| Sleeve | Typical Call Pattern | Distribution Profile | Duration to Cash Conversion | Key Stress-Case Risk |\n|---|---|---|---|---|\n| **Buyout** | Front-loaded J-curve; steady draws over 3–5 years | Begins returning capital mid-life if exits function | Medium (5–8 years to meaningful DPI) | Exits stall in weak M&A markets; distributions slow sharply |\n| **Venture** | Drawn over 3–5 years; follow-on reserves extend calls | Back-ended; highly concentrated in a few winners | Long (7–12+ years for meaningful realization) | Most value stays unrealized; follow-on needs consume liquidity |\n| **Private Credit** | Varies by vehicle — closed-end vs. evergreen vs. specialty | Income-like in normal periods; lumpy in distressed strategies | Short to medium — but vehicle-dependent | Refinancing stress slows repayments; evergreen gates reduce access |\n| **Real Estate** | Depends on vehicle — closed-end vs. open-end core | Open-end: redemption-based; closed-end: exit-driven | Varies widely by structure and strategy | Open-end vehicles tighten redemptions; opportunistic exits delay |",
+      caption:
+        "Vintage diversification alone is not enough. The allocator must understand how sleeve mix changes the shape of calls, distributions, and gating risk across the full programme — especially when multiple sleeves underperform on cash conversion simultaneously.",
+      whyItMatters:
+        "A programme that looks diversified by strategy label can still be concentrated in cash-flow behavior. This table helps allocators move from return-category thinking to cash-system thinking, which is the shift that prevents liquidity surprises.",
+      sourceNote:
+        "Institutional pacing and liquidity-management frameworks; practitioner materials on multi-sleeve private-markets programme design.",
     },
     {
       type: "teaching",
@@ -5390,6 +5482,19 @@ export const lessonContents: LessonContent[] = [
       content:
         "Power-law behavior changes what good venture portfolio construction looks like. Construction is not just diversification. It is diversification in service of still having enough exposure to rare outliers.\n\nAllocator-relevant construction implications include:\n\n- **position count matters differently**: too few names can create fragile dependence on idiosyncratic outcomes, but too many names can dilute ownership and reduce the chance that any one winner matters enough\n- **initial check size is only part of the story**: reserves and follow-on discipline often matter as much as sourcing the original deal\n- **ownership matters**: a great company outcome with a heavily diluted stake may not move the fund enough\n- **stage mix matters**: seed, Series A, and later-stage exposure can produce very different outcome distributions and capital-allocation needs\n- **time horizon matters**: because value creation and realization are long-dated, construction must support a long duration of uncertainty\n\nThis is why venture portfolio construction should not be judged using buyout-style concentration logic or public-equity-style diversification logic. The right question is whether the fund is structured to capture enough of the positive skew without becoming so concentrated that one miss destroys the strategy.",
     },
+    // ── Visual 1 ─────────────────────────────────────────────────────────
+    {
+      type: "visual",
+      title: "Venture vs. buyout: why allocator instincts must shift",
+      content:
+        "**How power-law venture economics differ from more linear buyout economics across key allocator dimensions:**\n\n| Dimension | Buyout Instinct | Venture Reality | Why It Matters for Allocators |\n|---|---|---|---|\n| **Return driver** | Broad portfolio quality; operational improvement across many holdings | A small number of extreme winners dominate total value | Evaluating average company quality misses the real economics |\n| **Hit rate** | Higher hit rate generally means better fund | High hit rate of modest wins can still produce mediocre outcomes | Must ask how many companies can return the fund, not just how many survived |\n| **Construction logic** | Concentrated positions; deep ownership in each | Enough names to find outliers; enough ownership to capture them | Too many names dilutes; too few creates fragile dependence |\n| **Evidence standard** | Operating bridges, EBITDA growth, leverage paydown | Value concentration in top 1–5 names; ownership preservation; reserve effectiveness | Smooth attribution is rare — look for outlier capture evidence |\n| **Reserve / follow-on** | Reserves for bolt-ons and operational support | Reserves are critical for maintaining ownership in breakout winners | Poor reserve discipline can turn a great pick into an immaterial outcome |\n| **Median outcome** | Median company often informative about fund quality | Median company can be mediocre even in a top-performing fund | Fund evaluation must focus on the tails, not the middle |",
+      caption:
+        "Public-markets and buyout instincts do not port cleanly into venture. The allocator who evaluates venture through a linear lens will ask the wrong diligence questions and misjudge portfolio quality.",
+      whyItMatters:
+        "This comparison table crystallizes the mental-model shift Day 27 requires. Every subsequent venture lesson — on stages, cap tables, reserves, and underwriting — depends on internalizing that venture is a winner-concentration game, not an average-quality game.",
+      sourceNote:
+        "Institutional venture research and practitioner materials on power-law portfolio economics and venture fund construction.",
+    },
     {
       type: "teaching",
       title: "Power laws and allocator expectations for evidence",
@@ -5585,6 +5690,19 @@ export const lessonContents: LessonContent[] = [
       title: "Stage determines the tradeoff between ownership, evidence, and price",
       content:
         "One of the cleanest ways to understand stage investing is to see it as a changing tradeoff among three variables: ownership potential, evidence at entry, and price paid.\n\nAt earlier stages:\n- ownership opportunity is typically higher\n- evidence is thinner\n- price may be lower in absolute terms, though not necessarily 'cheap' relative to uncertainty\n\nAt later stages:\n- evidence is stronger\n- business-model risk may be lower in some respects\n- ownership opportunity for a given dollar invested is usually lower\n- valuation and financing-structure risk may become more important\n\nThis is one reason stage exposure matters so much for allocators. It is not simply a risk ladder from high risk to low risk. Later-stage funds may reduce some company-formation risk, but they can increase sensitivity to valuation compression, structured rounds, duration mismatch, and crowded-capital dynamics. Early-stage funds may take more fundamental uncertainty but preserve more upside if they identify real outliers early and maintain ownership.\n\nThe allocator should therefore avoid the simplistic view that later stage is just 'safer venture.' It is different venture, with a different balance of underwriting inputs and outcome drivers.",
+    },
+    // ── Visual 1 ─────────────────────────────────────────────────────────
+    {
+      type: "visual",
+      title: "Venture stage map: how risk, ownership, and evidence shift by stage",
+      content:
+        "**How the four main venture stages differ across the dimensions that matter most for allocator underwriting:**\n\n| Dimension | Seed / Pre-Seed | Series A / Early Venture | Series B / Breakout | Late-Stage / Pre-IPO |\n|---|---|---|---|---|\n| **Primary uncertainty** | Can this become a real company? | Can early traction scale repeatably? | Can the company become a category leader? | Can the business exit at or above current valuation? |\n| **Evidence at entry** | Founder quality, product insight, market thesis | Early commercial traction, customer adoption signals | Revenue scale, retention, unit economics direction | Rich operating data, but mark and structure sensitivity rise |\n| **Ownership opportunity** | Highest — small checks buy meaningful stakes | Moderate — first institutional round sets baseline | Lower per dollar — larger rounds dilute more | Lowest per dollar — large checks, modest ownership |\n| **Reserve burden** | High — many names need selective follow-on | Moderate to high — winners need capital to maintain ownership | Moderate — fewer positions but larger follow-on amounts | Lower — fewer rounds remain, but exit-timing risk rises |\n| **Typical portfolio count** | 30–80+ companies | 20–35 companies | 15–25 companies | 10–20 companies |\n| **Key allocator question** | Does the manager have real access and sparse-data judgment? | Can the manager distinguish durable traction from noise? | Is the manager disciplined on price and scaling evidence? | Is price discipline and exit-path realism strong enough? |",
+      caption:
+        "Stage is not a simple risk ladder from high to low. It is a shifting tradeoff among ownership potential, evidence quality, and valuation sensitivity. The allocator must match diligence questions to the stage being underwritten.",
+      whyItMatters:
+        "Without a clear stage map, allocators cannot distinguish between a seed specialist and a late-stage opportunity fund — even though they face completely different risks, construction needs, and evidence standards. This table is the classification tool that sharpens every subsequent venture diligence conversation.",
+      sourceNote:
+        "Institutional venture education and practitioner materials on stage taxonomy, portfolio construction, and venture fund archetypes.",
     },
     {
       type: "teaching",
@@ -6365,17 +6483,37 @@ export const lessonContents: LessonContent[] = [
         "Waterfall mechanics do not only affect individual company outcomes. They have implications for how the allocator should think about the entire fund.\n\n**TVPI and DPI can diverge from ownership math**\nIf a fund marks its positions based on ownership-times-valuation without adjusting for preference stack dynamics, the TVPI may overstate the likely DPI. The allocator should probe whether marks reflect as-converted common value, preference-adjusted value, or some other methodology.\n\n**Reserve adequacy depends on preference position**\nA fund that needs to protect pro-rata rights or lead follow-ons should assess whether investing additional capital in a later round changes its preference seniority position and how that affects existing economics. Adding capital is not always economically straightforward when preferred stacks are layered.\n\n**Secondary pricing reflects waterfall math**\nWhen secondary buyers price fund positions, they typically model waterfall mechanics at the company level. A fund trading at a discount on the secondary market may be signaling that secondary buyers believe the preference stack leaves little for the common-equivalent position the fund holds.\n\n**Manager incentive alignment**\nThe GP carry is typically calculated on fund returns to the LP, not on gross enterprise value. But the pathway from enterprise value to LP returns runs through the waterfall. A manager who understands waterfall mechanics is more likely to think clearly about what economic outcomes actually generate carry versus what produces valuation marks that do not translate to distributions.",
     },
     {
-      type: "misconception",
-      title: "Common allocator misreading: confusing headline valuation with realized economics",
+      type: "weak-answer",
+      title: "Weak vs. strong: interpreting headline valuation versus realized economics",
       content:
-        "The most common error allocators make with venture preferred terms is treating headline valuations as if they represent pro-rata claims on equity value.\n\nThe error looks like this:\n- Company raised a Series C at a $500M valuation\n- Fund owns 8% fully diluted\n- Allocator infers the fund's stake is worth approximately $40M\n\nThis can be directionally correct in strong exit scenarios where all preference is well-covered and common trades at or above the implied common value. It is materially misleading in weaker scenarios where:\n- The preference stack is large relative to exit value\n- Participating preferred absorbs a disproportionate share of proceeds\n- The company's operating performance has declined since the headline raise, meaning the $500M valuation is stale\n\nThe correction is not to abandon valuation-times-ownership as a useful heuristic. It is to treat it as the ceiling under strong exit conditions and to separately model the floor under weaker outcomes by working through preference mechanics.\n\nA rigorous allocator should be able to articulate: 'At what exit value does the fund's position begin generating meaningful returns, and how much cushion exists between today's implied valuation and the preference waterfall crossover point?' That question cannot be answered by headline valuation and ownership percentage alone.",
+        "The GP says: 'Our stake is worth approximately $40 million based on the last round valuation of $500 million and our 8% fully diluted ownership.'\n\n**Weak LP response:** 'That sounds like a strong position. $40 million is a meaningful portion of fund value.'\n\nWhy it is weak: it treats headline valuation times ownership percentage as a reliable estimate of economic value without examining the preference stack, participation features, or what exit value the fund's position actually needs to generate strong returns.\n\n**Strong LP response:** 'We would like to understand what sits ahead of common in the preference stack, whether participation features affect payout at different exit levels, and at what exit valuation the fund's position begins generating meaningful returns after preferences are satisfied. Ownership-times-valuation is a useful ceiling estimate, but the floor under weaker outcomes depends on waterfall mechanics.'\n\nWhy it is strong: it separates headline valuation from realized economics and forces the GP to explain the preference-adjusted payout profile rather than relying on simple multiplication.",
     },
     {
-      type: "summary",
+      type: "teaching",
       title: "What this lesson establishes",
       content:
         "Preferred stock mechanics and company-level waterfalls are the second major conceptual layer allocators need to interpret venture ownership correctly. The first layer, covered in prior lessons, is understanding ownership percentage and cap table dilution. This lesson adds the translation step from ownership percentage to actual payout economics.\n\nKey points:\n- Preferred stock creates contractual claims that change payout sequencing and amounts relative to common equity\n- Liquidation preferences determine how much preferred holders receive before common participates\n- Participating preferred holders take preference amounts and then share in residual proceeds, shifting economics away from common and non-participating holders\n- Company-level waterfalls sequence claims across all security classes and determine how much of a given exit value flows to each holder\n- Allocators should model waterfalls at multiple exit values to understand at what exit levels the fund's position generates strong returns\n- Headline marks that are ownership-times-valuation without preference adjustment may overstate likely DPI in weaker exit scenarios\n\nDay 32 will extend this framework to anti-dilution provisions, pro-rata rights, and control terms, completing the core toolkit for evaluating how venture financing terms affect allocator economics.",
     },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what waterfall analysis can and cannot tell you",
+      content:
+        "**What waterfall analysis can tell you:**\n- how exit proceeds are distributed among different security holders at various exit values\n- where the fund's position sits in the preference stack and what exit levels generate strong returns\n- whether headline marks based on ownership-times-valuation overstate the likely economic outcome under stress\n- how participating versus non-participating structures change payout economics\n\n**What waterfall analysis cannot tell you on its own:**\n- whether the company will actually exit at any particular price\n- whether the GP's operating work will produce the revenue or EBITDA growth needed to support current marks\n- whether future financing rounds will add more preference above the fund's current position\n- whether the manager's judgment on follow-ons and reserves is correct\n\nThe allocator should therefore use waterfall analysis as a translation tool that converts headline valuations into security-specific economics. It improves interpretation quality but does not replace company-level underwriting judgment.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: model a two-round preference stack at three exit values",
+      content:
+        "A venture-backed company has two preferred rounds and a common pool:\n\n- **Series A:** $15M invested, 1x non-participating preferred, 20% fully diluted ownership\n- **Series B:** $40M invested, 1x participating preferred, 35% fully diluted ownership\n- **Common:** founders and employees, 45% fully diluted ownership\n- Series A is senior to Series B\n\nModel the waterfall at three exit values:\n\n1. **$50M exit** — calculate what each holder receives\n2. **$100M exit** — calculate what each holder receives, noting where non-participating preferred conversion becomes attractive\n3. **$250M exit** — calculate what each holder receives and show how participation shifts economics\n\nFor each scenario, answer:\n- What percentage of exit proceeds goes to common holders?\n- At what point does Series A convert rather than take its preference?\n- How much does Series B's participation feature shift economics away from common and Series A relative to a non-participating structure?\n\nThen write one sentence explaining why headline exit value alone is insufficient for the allocator to assess the fund's outcome quality.",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal questions on preferred terms and waterfall economics",
+      content:
+        "1. **'For your top five positions by current mark, what security type does the fund hold and what liquidation preferences sit ahead of common?'**\nThis forces the GP to think in waterfall terms rather than ownership-times-valuation.\n\n2. **'At what exit values do your largest positions begin generating meaningful returns after satisfying the preference stack?'**\nThis tests whether the GP has modeled the crossover point.\n\n3. **'In prior exits, how often did the actual fund proceeds differ materially from what ownership-times-headline-valuation would have predicted?'**\nThis surfaces the historical gap between naive valuation and waterfall-adjusted economics.\n\n4. **'Do you model company-level waterfalls when setting interim marks, or do you primarily use ownership-times-valuation?'**\nThis tests valuation methodology sophistication.\n\n5. **'When a portfolio company raises a new round with aggressive preference terms, how do you assess the impact on the fund's existing position economics?'**\nThis tests whether the GP tracks preference-stack changes as an ongoing portfolio management input.",
+    },
+  ],
+  quiz: [
     {
       questionId: "d31q1",
       type: "multiple-choice",
