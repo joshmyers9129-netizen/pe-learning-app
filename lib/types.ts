@@ -107,3 +107,37 @@ export interface ReviewCard {
   front: string;
   back: string;
 }
+
+// ── Quiz History ─────────────────────────────────────────────────────────────
+
+export interface QuizAttempt extends QuizResult {
+  attemptNumber: number;
+}
+
+// ── Wrong-Answer Tracking ────────────────────────────────────────────────────
+
+export interface WrongAnswer {
+  lessonId: string;
+  questionId: string;
+  selectedAnswer: string;
+  attemptDate: string;
+}
+
+// ── SRS (Spaced Repetition) ──────────────────────────────────────────────────
+
+export interface SRSCardState {
+  cardId: string;
+  interval: number;      // days until next review
+  easeFactor: number;    // SM-2 ease factor (≥1.3)
+  nextReviewDate: string; // YYYY-MM-DD
+  repetitions: number;
+}
+
+// ── Resume Position ──────────────────────────────────────────────────────────
+
+export interface LessonPosition {
+  lessonId: string;
+  blockIndex: number;
+  scrollY: number;
+  updatedAt: string;
+}

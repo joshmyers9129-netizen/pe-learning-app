@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { getDefaultModule } from "@/lib/modules";
 import { useModuleProgress } from "@/hooks/useProgress";
-import { getAllQuizResults, getCardStruggleCounts } from "@/lib/progress";
+import { getAllQuizResults, getCardStruggleCounts, getAllWrongAnswers } from "@/lib/progress";
 import { buildReviewQueue, groupByPriority } from "@/lib/reviewQueue";
 import { topicLabel } from "@/lib/topics";
 
@@ -30,6 +30,7 @@ export default function Home() {
   const queue = buildReviewQueue(progress, getAllQuizResults(), getCardStruggleCounts());
   const { high, medium } = groupByPriority(queue);
   const dueCount = high.length + medium.length;
+  const wrongAnswerCount = getAllWrongAnswers().length;
 
   // Topics with the most high-priority review cards = weakest areas
   const topicCounts: Record<string, number> = {};
@@ -129,6 +130,31 @@ export default function Home() {
             </div>
           </Link>
         </div>
+
+        {/* Practice / wrong answers */}
+        {(wrongAnswerCount > 0 || completed > 0) && (
+          <Link href="/practice" className="block mb-5">
+            <div className="rounded-2xl border border-[#E8DDD4] bg-white p-4 shadow-sm hover:border-[#2294BD]/40 transition-colors">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#404040] mb-2">
+                Practice
+              </p>
+              <div className="flex items-center justify-between">
+                <div>
+                  {wrongAnswerCount > 0 ? (
+                    <p className="text-sm text-[#000000]">
+                      <span className="font-semibold text-[#D9532B]">{wrongAnswerCount}</span> wrong answer{wrongAnswerCount !== 1 ? "s" : ""} to drill
+                    </p>
+                  ) : (
+                    <p className="text-sm text-[#000000]">
+                      Cumulative quiz across all completed lessons
+                    </p>
+                  )}
+                </div>
+                <span className="text-xs font-medium text-[#2294BD]">Go →</span>
+              </div>
+            </div>
+          </Link>
+        )}
 
         {/* Weak topics */}
         {weakTopics.length > 0 && (
