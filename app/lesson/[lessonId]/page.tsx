@@ -2,7 +2,7 @@
 
 import { use, useState, useEffect, useRef, useCallback } from "react";
 import { getLessonContent, lessonContents } from "@/lib/lessonContent";
-import { DEFAULT_MODULE_ID, getModuleById } from "@/lib/modules";
+import { DEFAULT_MODULE_ID, getModuleById, getDefaultModule } from "@/lib/modules";
 import {
   setLessonStatus,
   getQuizResult,
@@ -627,6 +627,127 @@ function ConfidenceRating({
   );
 }
 
+// ── Spaced quiz injection ─────────────────────────────────────────────────────
+
+type InjectedQuestion = MCQuestion & { sourceLessonId: string; sourceDayNumber: number };
+
+function pickInjectedQuestions(currentLessonId: string, count: number): InjectedQuestion[] {
+  if (typeof window === "undefined") return [];
+  const progress = getModuleProgress(MODULE_ID);
+  const mod = getDefaultModule();
+  const pool: InjectedQuestion[] = [];
+
+  for (const lesson of mod.lessons) {
+    if (lesson.lessonId === currentLessonId) continue;
+    if (progress[lesson.lessonId]?.status !== "completed") continue;
+    const content = lessonContents.find((c) => c.lessonId === lesson.lessonId);
+    if (!content) continue;
+    for (const q of content.quiz) {
+      if (q.type === "multiple-choice") {
+        pool.push({
+          ...q,
+          // Prefix ID to avoid collision with current lesson questions
+          questionId: `injected:${q.questionId}`,
+          sourceLessonId: lesson.lessonId,
+          sourceDayNumber: lesson.dayNumber,
+        });
+      }
+    }
+  }
+
+  // Shuffle and pick
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, count);
+}
+
+function InjectedQuestionCard({
+  q,
+  submitted,
+  selected,
+  onSelect,
+}: {
+  q: InjectedQuestion;
+  submitted: boolean;
+  selected: string | null;
+  onSelect: (v: string) => void;
+}) {
+  const isCorrect = selected === q.correctAnswer;
+
+  return (
+    <div className="mb-7">
+      <div className="flex items-center gap-2 mb-2">
+        <p className="text-[10px] font-bold text-[#7C5CBF] uppercase tracking-widest">
+          Spaced recall · Day {q.sourceDayNumber}
+        </p>
+      </div>
+      <p className="text-[15px] font-medium text-[#000000] leading-snug mb-3">
+        {q.prompt}
+      </p>
+
+      <div className="space-y-2">
+        {q.options.map((opt) => {
+          const isSelected = selected === opt;
+          const isRight = opt === q.correctAnswer;
+
+          let style =
+            "border border-[#7C5CBF]/20 bg-white text-[#000000] hover:border-[#7C5CBF]/50 hover:bg-[#7C5CBF]/5";
+          let icon: string | null = null;
+
+          if (submitted) {
+            if (isRight) {
+              style = "border-2 border-[#2294BD] bg-[#2294BD]/10 text-[#000000]";
+              icon = "\u2713";
+            } else if (isSelected && !isRight) {
+              style = "border-2 border-[#D9532B] bg-[#D9532B]/8 text-[#D9532B] line-through";
+              icon = "\u2717";
+            } else {
+              style = "border border-[#E8DDD4] bg-[#F9F6F3] text-[#9A918A] cursor-default";
+            }
+          } else if (isSelected) {
+            style = "border-2 border-[#7C5CBF] bg-[#7C5CBF]/8 text-[#000000]";
+          }
+
+          return (
+            <button
+              key={opt}
+              disabled={submitted}
+              onClick={() => onSelect(opt)}
+              className={`w-full text-left rounded-xl px-4 py-3 text-sm transition-colors flex items-start gap-2 ${style}`}
+            >
+              {icon && (
+                <span className={`flex-shrink-0 font-bold text-sm leading-snug ${isRight ? "text-[#2294BD]" : "text-[#D9532B]"}`}>
+                  {icon}
+                </span>
+              )}
+              <span className="leading-snug">{opt}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {submitted && (
+        <div
+          className={`mt-3 rounded-xl px-4 py-2.5 text-sm font-medium flex items-center gap-2 ${
+            isCorrect
+              ? "bg-[#2294BD]/10 text-[#2294BD] border border-[#2294BD]/20"
+              : "bg-[#D9532B]/8 text-[#D9532B] border border-[#D9532B]/20"
+          }`}
+        >
+          <span>{isCorrect ? "\u2713 Correct" : "\u2717 Incorrect"}</span>
+          {!isCorrect && (
+            <span className="text-[#404040] font-normal">
+              — correct answer highlighted above
+            </span>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ── Prereq knowledge gate ─────────────────────────────────────────────────────
 
 function PrereqGate({
@@ -832,6 +953,13 @@ export default function LessonPage({
   const currentModule = getModuleById(MODULE_ID);
   const lesson = currentModule?.lessons.find((l) => l.lessonId === lessonId);
 
+  // Spaced quiz injection — pick 2-3 questions from old completed lessons
+  const [injectedQuestions] = useState<InjectedQuestion[]>(() =>
+    pickInjectedQuestions(lessonId, 3)
+  );
+  const [injectedAnswers, setInjectedAnswers] = useState<Record<string, string>>({});
+  const [injectedSubmitted, setInjectedSubmitted] = useState(false);
+
   // MC answers: questionId → selected option
   const [mcAnswers, setMcAnswers] = useState<Record<string, string>>({});
   // SR states: questionId → state + text
@@ -993,6 +1121,8 @@ export default function LessonPage({
     setMcAnswers({});
     setSrStates({});
     setMcSubmitted(false);
+    setInjectedAnswers({});
+    setInjectedSubmitted(false);
     setConfidence(null);
     setSaved(false);
     setRetaking(true);
@@ -1089,6 +1219,50 @@ export default function LessonPage({
 
           {/* Quiz attempt history */}
           <QuizHistory attempts={quizHistory} />
+
+          {/* Spaced recall injection — questions from older lessons */}
+          {injectedQuestions.length > 0 && (
+            <div className="mb-6">
+              <div className="rounded-xl border border-[#7C5CBF]/15 bg-[#7C5CBF]/[0.03] px-5 py-4">
+                <p className="text-[10px] font-bold text-[#7C5CBF] uppercase tracking-widest mb-1">
+                  Spaced recall
+                </p>
+                <p className="text-xs text-[#404040] mb-4">
+                  These questions are from earlier lessons — quick retrieval practice to keep older material fresh.
+                </p>
+                {injectedQuestions.map((q) => (
+                  <InjectedQuestionCard
+                    key={q.questionId}
+                    q={q}
+                    submitted={injectedSubmitted}
+                    selected={injectedAnswers[q.questionId] ?? null}
+                    onSelect={(v) => {
+                      if (!injectedSubmitted)
+                        setInjectedAnswers((prev) => ({ ...prev, [q.questionId]: v }));
+                    }}
+                  />
+                ))}
+                {!injectedSubmitted && (
+                  <button
+                    disabled={!injectedQuestions.every((q) => injectedAnswers[q.questionId])}
+                    onClick={() => setInjectedSubmitted(true)}
+                    className="w-full rounded-xl bg-[#7C5CBF] text-white text-sm font-semibold py-2.5 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#6B4DAE] transition-colors"
+                  >
+                    Check recall
+                  </button>
+                )}
+                {injectedSubmitted && (
+                  <div className={`rounded-xl px-4 py-2.5 text-sm font-medium border ${
+                    injectedQuestions.every((q) => injectedAnswers[q.questionId] === q.correctAnswer)
+                      ? "bg-[#2294BD]/10 text-[#2294BD] border-[#2294BD]/20"
+                      : "bg-[#FAA51A]/10 text-[#9B6A00] border-[#FAA51A]/20"
+                  }`}>
+                    {injectedQuestions.filter((q) => injectedAnswers[q.questionId] === q.correctAnswer).length}/{injectedQuestions.length} recalled from earlier lessons
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* MC questions */}
           {mcQuestions.map((q) => (

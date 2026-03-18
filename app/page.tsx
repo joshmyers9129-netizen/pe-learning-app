@@ -156,6 +156,24 @@ export default function Home() {
           </Link>
         )}
 
+        {/* Calibration + concepts links */}
+        {completed > 0 && (
+          <div className="flex gap-3 mb-5">
+            <Link href="/calibration" className="flex-1 block">
+              <div className="rounded-2xl border border-[#E8DDD4] bg-white p-4 shadow-sm hover:border-[#7C5CBF]/40 transition-colors text-center">
+                <p className="text-xs font-semibold text-[#7C5CBF]">Calibration</p>
+                <p className="text-[10px] text-[#404040]">Confidence vs scores</p>
+              </div>
+            </Link>
+            <Link href="/concepts" className="flex-1 block">
+              <div className="rounded-2xl border border-[#E8DDD4] bg-white p-4 shadow-sm hover:border-[#2294BD]/40 transition-colors text-center">
+                <p className="text-xs font-semibold text-[#2294BD]">Concept Map</p>
+                <p className="text-[10px] text-[#404040]">Dependencies &amp; gaps</p>
+              </div>
+            </Link>
+          </div>
+        )}
+
         {/* Weak topics */}
         {weakTopics.length > 0 && (
           <Link href="/review" className="block">
