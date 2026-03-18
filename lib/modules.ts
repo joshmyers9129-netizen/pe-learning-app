@@ -571,6 +571,20 @@ export const modules: Module[] = [
           "Assess partnership durability, succession risk, and the difference between firm brand and the actual decision engine driving returns",
         ],
       },
+      {
+        lessonId: "day-40",
+        dayNumber: 40,
+        title: "Private Credit: Strategy Map, Underwriting Logic, and Repayment Path",
+        estimatedMinutes: 45,
+        topics: ["private-credit", "direct-lending", "credit-underwriting", "repayment-path", "documentation-quality"],
+        difficulty: "advanced",
+        prerequisites: ["day-18", "day-24"],
+        learningObjectives: [
+          "Classify private credit by strategy type and repayment engine rather than treating it as a single asset class",
+          "Distinguish yield from return and evaluate why high contractual income can coexist with weak structural protection",
+          "Assess documentation quality, sponsor dynamics, and the private-credit stress ladder as core underwriting disciplines",
+        ],
+      },
     ],
   },
 ];

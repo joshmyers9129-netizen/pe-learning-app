@@ -8645,6 +8645,264 @@ export const lessonContents: LessonContent[] = [
     "CFA Institute and related private-markets educational materials providing context for manager evaluation, process durability, and private-markets franchise risk",
   ],
 },
+{
+  lessonId: "day-40",
+  blocks: [
+    {
+      type: "intro",
+      title: "Meeting cold open",
+      content:
+        "The GP says: 'Our private credit strategy offers downside protection, contractual cash flows, and attractive risk-adjusted returns.' That may all be directionally true. It is also far too broad for allocator use. A private-credit-fluent allocator wants to know: what kind of credit is this, what exactly is underwriting the loan, where does repayment really come from, what covenant protection exists, how much of the return is carry versus fees or leverage, and what happens when the borrower cannot refinance on schedule? This lesson begins the private credit sequence by teaching the strategy map and underwriting logic of private credit as a distinct private-markets sleeve, not as a generic high-yield substitute.",
+    },
+    {
+      type: "framing",
+      title: "Private credit is not one strategy. It is a set of lending regimes with very different underwriting problems.",
+      content:
+        "The first thirty-nine lessons gave the learner a deep toolkit for private equity, venture, growth, and the allocator interpretation of private-company value. Day 40 starts a new sleeve: private credit. The transition is important because many allocators with public fixed-income experience initially underestimate how different private credit can be from broadly syndicated loans, public high yield, or generic 'income plus illiquidity premium' framing.\n\nPrivate credit is structurally different because the investor is often underwriting bespoke lender protections, sponsor behavior, documentation terms, borrower incentives, and refinancing pathways in relatively illiquid settings with limited price transparency. In public fixed income, the learner may already know spread, duration, default risk, and credit selection. In private credit, the distinctive questions are often contractual and path-dependent: what exactly is protected, how strong is the lender's seat at the table, what does amendment or workout leverage look like, and how much of the strategy's safety depends on continued access to refinancing markets rather than current cash coverage alone?\n\nThis lesson lays the foundation for the rest of the credit sequence. It maps the major strategy buckets, explains the core return drivers, distinguishes sponsor-backed direct lending from other private-credit forms, and reframes private credit as an underwriting and structure discipline rather than merely a yield product.",
+    },
+    {
+      type: "teaching",
+      title: "Start with the strategy map: private credit is a family, not a single asset class",
+      content:
+        "A strong allocator starts private credit by classifying the strategy correctly. The term 'private credit' is too broad to be useful on its own.\n\nMajor private-credit strategy groupings include:\n- sponsor-backed direct lending\n- asset-based finance or asset-backed lending\n- opportunistic or distressed credit\n- special situations and rescue financing\n- real-estate debt\n- venture debt and growth lending\n- hard-asset or equipment-backed lending\n- specialty finance platforms with recurring origination engines\n\nWhy classification matters:\n- repayment sources differ materially across these strategies\n- covenant packages and lender protections differ\n- duration and liquidity profiles differ\n- portfolio construction logic differs\n- drawdown behavior in stress differs\n- performance smoothing can look similar while true underlying risk differs substantially\n\nAllocator implication:\nThe learner should refuse to discuss private credit in generic language. The first question should always be: what exactly is being lent against, to whom, under what structure, and with what repayment path? Without that classification step, risk assessment will remain shallow.",
+    },
+    {
+      type: "visual",
+      title: "The allocator's private-credit map",
+      content:
+        "**Private credit strategies differ mainly in what supports repayment, what legal protections exist, and what happens when things go wrong.**\n\n| Strategy type | Typical borrower / collateral | Primary repayment source | Main allocator risk |\n|---|---|---|---|\n| **Direct lending** | Sponsor-backed middle-market companies | Cash flow and eventual refinancing or sale | Leverage, documentation weakness, refinance dependence |\n| **Asset-based finance** | Borrowers with receivables, inventory, equipment, or contractual assets | Asset cash flows and collateral value | Collateral volatility, servicing, structure complexity |\n| **Distressed / opportunistic** | Stressed or dislocated issuers | Restructuring, recovery, control, or repricing | Timing, legal complexity, mark volatility |\n| **Special situations** | Companies needing bespoke capital | Contractual return plus negotiated downside protection | Complexity, event risk, deal idiosyncrasy |\n| **Real-estate debt** | Property-backed borrowers | Property cash flow, refinance, or asset sale | LTV drift, market liquidity, property fundamentals |\n| **Venture debt** | Venture-backed growth companies | New equity financing, cash runway, or strategic event | Equity-market dependence, weak cash-flow support |\n\nThe allocator should classify the repayment engine before evaluating yield.",
+      caption:
+        "In private credit, the key question is not just 'what is the spread?' It is 'what actually gets the lender repaid?'",
+      whyItMatters:
+        "This is the foundational move of Day 40: classify private credit by repayment engine and structural protection, not by marketing label.",
+      sourceNote:
+        "This visual reflects the Day 40 roadmap objective of building the private-credit strategy map before going deeper into specific sleeves.",
+    },
+    {
+      type: "teaching",
+      title: "Direct lending: the modern core of private credit",
+      content:
+        "Sponsor-backed direct lending is the segment many allocators mean when they say private credit. It generally involves privately negotiated loans to non-investment-grade middle-market companies, often in sponsor-backed transactions, held in private funds rather than traded widely in public markets.\n\nTypical characteristics include:\n- floating-rate senior secured loans\n- relatively high current income compared with public credit\n- limited or no broad syndication\n- lender groups that are smaller and often more influential than in syndicated markets\n- documentation that can be negotiated more directly, but also varies in quality\n\nWhat the lender is usually underwriting:\n- current cash-flow support\n- sponsor incentives and willingness to support the company\n- leverage level and capital-structure cushion\n- documentation and covenant quality\n- credible exit or refinance pathway\n\nAllocator implication:\nDirect lending should not be understood simply as 'private floating-rate income.' It is a strategy that depends on origination discipline, leverage tolerance, documentation strength, and the borrower's future access to refinancing. A loan can look safe because it pays current income and sits high in the structure while still being vulnerable if the company's path to de-leveraging or refinancing is weak.",
+    },
+    {
+      type: "teaching",
+      title: "The core underwriting question in private credit: what repays the loan?",
+      content:
+        "This is the most important underwriting question in the entire private credit sequence: what actually repays the loan?\n\nPossible answers include:\n- recurring borrower cash flow\n- collateral liquidation value\n- working-capital asset conversion\n- sponsor support\n- a future refinancing\n- a sale of the business or asset\n- some combination of the above\n\nWhy this matters:\nA private-credit strategy can look attractive on carry alone while relying on a much weaker repayment engine than the headline yield suggests. For example:\n- a direct-lending loan may appear senior and secured but still depend heavily on refinance markets\n- an asset-based deal may appear overcollateralized but still be only as strong as collateral monitoring, advance rates, and servicing\n- a venture-debt loan may have warrants and seniority but still rely mainly on the company's ability to raise new equity\n\nAllocator implication:\nEvery private-credit deal should be mentally rewritten as a repayment memo. The learner should ask not simply whether the coupon looks attractive, but whether the repayment path is current, contractual, asset-based, refinance-dependent, or sponsor-dependent. That distinction is one of the sharpest lines between safe-looking credit and actually resilient credit.",
+    },
+    {
+      type: "teaching",
+      title: "Yield is not return. Spread is not safety.",
+      content:
+        "Private credit is frequently marketed through its coupon or yield profile. That is understandable, but allocators should be careful. High current income can coexist with weak structural protection, weak documentation, or poor ultimate recoveries.\n\nWhy yield can mislead:\n- some strategies earn higher spread because the risk is genuinely higher\n- some funds boost reported return through fund-level leverage\n- some deals compensate for weak covenants or weak collateral with extra spread\n- some current income masks refinance dependence or future default risk\n\nThe right allocator framing is to separate:\n- contractual cash yield\n- expected total return\n- expected loss severity if the thesis breaks\n- confidence in principal return\n\nThis is especially important because private credit often appears smoother than public credit due to appraisal-like marks and limited secondary pricing. The learner should avoid importing a false sense of security from stable NAV. The better discipline is to ask what part of return is true credit spread for bearing understandable risk and what part is compensation for structural fragility, illiquidity, or complexity.\n\nAllocator implication:\nA fund with a higher stated yield is not automatically a better credit investment. The real question is whether the manager is being paid enough for the specific risks in the repayment path, legal structure, and likely workout outcomes.",
+    },
+    {
+      type: "example",
+      title: "Worked example 1: same yield, very different risk",
+      content:
+        "Assume two private-credit funds each target a similar gross yield.\n\n**Fund A**\n- lends senior secured to sponsor-backed software and services companies\n- moderate leverage at borrower level\n- decent interest coverage\n- documentation includes maintenance covenants on many deals\n- repayment often expected through refinance or sale\n\n**Fund B**\n- lends against pools of receivables and other contractual cash-flow assets\n- stronger collateral coverage on paper\n- servicing and asset-performance complexity is materially higher\n- repayment depends more on collateral cash conversion than enterprise sale\n\nAllocator analysis path:\n\n**Step 1: reject yield-level comparison as sufficient**\nThe same coupon does not mean the same risk.\n\n**Step 2: identify repayment engine**\nFund A relies more on borrower cash flow plus refinance or sale. Fund B relies more on asset performance and collateral structure.\n\n**Step 3: identify where downside shows up**\nFund A is more exposed to leverage, sponsor behavior, and refinance markets. Fund B is more exposed to collateral quality, servicing, and structural modeling risk.\n\n**Step 4: connect to manager skill**\nFund A needs strong enterprise underwriting and documentation discipline. Fund B needs stronger asset-level analytics, collateral monitoring, and structure expertise.\n\nAllocator lesson:\nPrivate credit should not be compared only by yield. The repayment engine and workout regime determine what kind of risk the allocator is actually taking.",
+    },
+    {
+      type: "teaching",
+      title: "Documentation quality is part of underwriting, not a legal appendix",
+      content:
+        "One of the most important differences between private credit and more generic public fixed-income intuition is that documentation quality can change the economics materially. Covenant packages, baskets, restricted-payment flexibility, collateral definitions, incurrence capacity, and amendment thresholds all matter.\n\nWhy:\n- weak docs can allow value leakage to sponsors or junior creditors\n- loose baskets and permissive terms can reduce lender protection before a problem becomes obvious\n- covenant-lite structures reduce early intervention ability\n- amendment flexibility can weaken the lender's negotiating leverage when performance deteriorates\n\nAllocator implication:\nThe learner is not being asked to become a credit lawyer. But they do need to understand that documentation is one of the core assets a private lender is buying. A manager who underwrites company fundamentals well but accepts weak covenants may not actually be preserving downside the way the marketing suggests.\n\nThis is especially relevant because many private-credit funds position themselves as safer than public alternatives precisely because they can negotiate directly. If that negotiation advantage is not showing up in the documents, the allocator should question how much real private-market edge is being captured.",
+    },
+    {
+      type: "teaching",
+      title: "The sponsor relationship can help or hurt",
+      content:
+        "In direct lending especially, sponsor backing is often presented as a positive. Sometimes it is. But sponsor presence is not automatically protection.\n\nPotential benefits of sponsor involvement:\n- better governance and reporting\n- sponsor willingness to support a company through a rough patch\n- more disciplined transaction process\n- additional equity cushion in some situations\n\nPotential risks:\n- aggressive leverage at entry\n- documentation negotiated in favor of flexibility\n- dividend or value leakage incentives\n- pressure to refinance rather than de-risk\n- sponsor behavior that is rational for equity but not ideal for lenders\n\nAllocator implication:\nThe right question is not 'is there a sponsor?' The better question is 'what does sponsor backing do to behavior, leverage, reporting quality, and workout incentives in this strategy?' A good lender should be able to describe not only the upside of sponsor alignment, but also where sponsor incentives can work against lender protection.",
+    },
+    {
+      type: "teaching",
+      title: "Private credit downside often shows up through amendments, extensions, and restructurings before headline defaults",
+      content:
+        "Allocators accustomed to public credit may look first for default rates. That is useful, but in private credit the path to loss often runs through softer forms of stress first.\n\nCommon warning stages include:\n- amendment requests\n- covenant resets\n- maturity extensions\n- PIK toggles or interest accommodation\n- delayed reporting or weaker disclosure quality\n- sponsor requests for flexibility\n- asset-performance deterioration in structured or asset-based deals\n\nWhy this matters:\n- private-credit losses can build gradually before they are recognized explicitly\n- reported default rates may understate stress if loans are being amended or extended rather than crystallized\n- stable marks can mask rising workout complexity\n\nAllocator implication:\nA manager should be able to explain not only realized losses, but also amendment culture, extension behavior, non-accrual policy, and how they distinguish temporary accommodation from real impairment. This is a key difference between surface-level credit reporting and allocator-grade underwriting.",
+    },
+    {
+      type: "visual",
+      title: "The private-credit stress ladder",
+      content:
+        "**Private-credit stress usually escalates through stages before a final loss is realized.**\n\n| Stage | What it may look like | Why allocator should care |\n|---|---|---|\n| **Early strain** | Covenant pressure, weaker coverage, softer collateral performance | Underwriting assumptions are being tested |\n| **Accommodation** | Amendments, waivers, PIK, maturity pushes | Reported stability may hide rising risk |\n| **Workout mode** | Sponsor negotiation, restructuring, collateral enforcement | Manager skill and legal position become critical |\n| **Resolution** | Refinance, sale, restructuring, or loss realization | This is where true recovery economics appear |\n\nThe allocator should ask where in this ladder the portfolio really is, not just whether defaults are low.",
+      caption:
+        "Low defaults do not always mean low stress. In private credit, trouble often arrives through accommodation before it becomes a loss.",
+      whyItMatters:
+        "This gives the learner a practical way to interpret private-credit stability claims with more discipline.",
+      sourceNote:
+        "This visual reflects the Day 40 objective of teaching private credit as a structure and workout discipline, not merely a yield sleeve.",
+    },
+    {
+      type: "teaching",
+      title: "Why private credit often looks smoother than it really is",
+      content:
+        "Private credit portfolios frequently look less volatile than public credit portfolios. Some of that may be genuine, because private lenders can be closer to borrowers and can sometimes negotiate earlier. But some of the smoothness is also a valuation artifact.\n\nReasons apparent smoothness can be misleading:\n- loans are not continuously traded\n- marks may move slowly absent a clear transaction or impairment event\n- amendments can delay visible loss recognition\n- collateral or enterprise-value deterioration may not show immediately in NAV\n- manager-reported stability can overstate true economic resilience if refinancing conditions worsen quietly\n\nAllocator implication:\nThe learner should carry a Day 18 and Day 24 mindset into private credit. Stability in reported value is not proof that risk is low. It may partly reflect less frequent price discovery. The correct response is not cynicism. It is to ask what evidence would cause the mark to move and whether the manager's valuation and impairment discipline feels credible.",
+    },
+    {
+      type: "teaching",
+      title: "Portfolio role: why private credit is not just 'income with less volatility'",
+      content:
+        "Private credit can play an important portfolio role, but allocators should define that role precisely. It is not enough to say the sleeve provides income and diversification.\n\nPossible roles include:\n- a floating-rate income sleeve\n- a defensive private-income complement to private equity\n- an illiquidity-bearing credit return enhancer\n- a specialty or opportunistic sleeve for complexity-premium capture\n- a cash-flow-oriented diversifier with lower equity beta than buyout or venture\n\nWhat can go wrong in role framing:\n- treating all private credit as cash-like\n- assuming low reported volatility means low underlying risk\n- ignoring liquidity mismatch at the programme level\n- underestimating how correlated sponsor-backed direct lending can become to broader private-equity conditions\n\nAllocator implication:\nPrivate credit can be useful, but its role should be linked to drawdown behavior, repayment path, and mark realism, not just stated yield. A core direct-lending sleeve is different from opportunistic distressed credit, and both are different from specialty asset-based finance. Role clarity begins with strategy classification.",
+    },
+    {
+      type: "example",
+      title: "Worked example 2: why direct lending is not simply private high yield",
+      content:
+        "Assume an allocator compares a direct-lending fund with a public high-yield allocation and concludes the private fund looks superior because its yield is higher and its reported volatility is lower.\n\nAllocator analysis path:\n\n**Step 1: identify what is being compared incorrectly**\nThe private fund may indeed offer higher contractual yield and smoother marks, but that does not mean the risk is lower.\n\n**Step 2: compare structural reality**\nDirect lending may provide better documentation, tighter lender groups, and stronger information access. But it may also be less liquid, more refinance-dependent, and slower to reflect stress in marks.\n\n**Step 3: compare downside pathway**\nHigh yield reprices continuously in public markets. Direct lending may instead move through amendments, extensions, and workout negotiations before losses become visible.\n\n**Step 4: compare allocator role**\nThe direct-lending fund may still be attractive, but it should be underwritten as private illiquid credit with bespoke structure, not as a smoother version of a public market index.\n\nAllocator lesson:\nPrivate credit should be compared on structure, repayment path, and workout regime, not just on yield and apparent volatility.",
+    },
+    {
+      type: "teaching",
+      title: "What a strong private-credit manager should be able to explain from day one",
+      content:
+        "A strong private-credit manager should be able to answer several questions clearly before the allocator does any advanced analysis.\n\n**1. Strategy map**\nWhat exact part of private credit does the fund play in, and what does it avoid?\n\n**2. Repayment engine**\nWhat actually repays the loan or financing?\n\n**3. Structural protection**\nWhat docs, collateral, covenants, and lender rights matter most?\n\n**4. Stress path**\nHow does the manager monitor amendments, extensions, and emerging impairment?\n\n**5. Portfolio role**\nHow should the allocator think about the sleeve in relation to public credit and private equity?\n\nWeak managers often stay too close to general language:\n- high current income\n- downside protection\n- sponsor relationships\n- strong sourcing\n- attractive risk-adjusted return\n\nThose may all be true. But until they are translated into repayment path, documentation strength, and workout logic, they are not yet allocator-useful.",
+    },
+    {
+      type: "source-note",
+      title: "Sources for this lesson",
+      content:
+        "Core source categories for this lesson: allocator- and practitioner-oriented materials on private-credit strategy mapping, direct lending, asset-based finance, and specialty lending; educational resources on repayment path, documentation quality, covenant protection, and workout dynamics; institutional private-markets materials on the portfolio role of private credit relative to public fixed income and private equity. The goal is to build a precise conceptual map before moving into deeper underwriting and portfolio-construction detail in later credit lessons.",
+    },
+    {
+      type: "weak-answer",
+      title: "Weak vs. strong: responding to a GP saying the strategy offers downside protection and attractive yield",
+      content:
+        "The GP says: 'Our private credit strategy offers downside protection and attractive risk-adjusted yield.'\n\nWeak LP response: 'That sounds appealing. High income with downside protection is exactly what we look for in private credit.'\n\nWhy it is weak: it accepts generic yield language without asking what is being lent against, what repays the loan, how strong the documents are, and what the stress path looks like before loss recognition.\n\nStrong LP response: 'Please walk us through the exact repayment engine, the structural protections that matter most, the kinds of amendment or extension situations you see before a true default, and how we should think about this strategy relative to direct lending, asset-based finance, or other private-credit forms. We want to understand not just the coupon, but the legal and economic path that protects principal.'\n\nWhy it is strong: it forces the manager to translate generic credit language into a concrete underwriting regime.",
+    },
+    {
+      type: "inference-boundary",
+      title: "Inference boundary: what this first private-credit lesson can and cannot tell you",
+      content:
+        "This lesson can tell you how to classify private credit strategies, what the main repayment engines are, why documentation and structure matter, and why smooth marks should not be confused with the absence of risk. It can also give the learner a practical first filter for separating direct lending, asset-based finance, distressed, and specialty lending before strategy-specific underwriting begins.\n\nBut it cannot yet tell you which private-credit sub-strategy is best for a given portfolio, which managers are strongest, or how to size each sleeve. Those questions depend on later lessons about leverage, covenants, asset quality, restructuring, sector differences, and portfolio construction. Day 40 is the map, not the full destination.\n\nThe allocator should therefore use this lesson as a vocabulary and classification reset. It sharpens the right questions and prevents superficial yield-based thinking. It does not replace deeper manager-specific work.",
+    },
+    {
+      type: "exercise",
+      title: "Applied exercise: classify five private-credit sleeves",
+      content:
+        "Take five hypothetical strategies and classify them by repayment engine, structural protection, and likely allocator role.\n\nFor each strategy, write a short note under five headings:\n\n1. **Strategy classification**\n2. **Primary repayment source**\n3. **Main structural protections**\n4. **Most likely stress path before loss**\n5. **Most appropriate portfolio role**\n\nUse these examples:\n- sponsor-backed senior direct lending to software and services companies\n- asset-based finance backed by receivables and inventory\n- opportunistic distressed investing in dislocated corporate capital structures\n- venture debt to growth companies with recurring equity raises\n- bridge or special-situations financing with bespoke covenants and warrants\n\nThen answer three questions:\n- Which strategy is easiest to misclassify if you look only at yield?\n- Which one relies most on collateral and servicing rather than enterprise value?\n- What one diligence artifact would you ask for first from each manager?\n\nFinal task:\nWrite a short allocator memo titled 'Why private credit should be underwritten by repayment path, not by coupon.'",
+    },
+    {
+      type: "meeting-application",
+      title: "In the manager meeting: five high-signal private-credit questions",
+      content:
+        "1. 'What exactly repays your loans in normal cases and in stressed cases?' \n\n2. 'Which part of the private-credit market are you truly in, and what nearby strategies do you deliberately avoid?' \n\n3. 'What documentation or covenant protections most often determine whether a difficult situation becomes a manageable amendment or a real loss?' \n\n4. 'How do problems usually show up in your portfolio before they become formal defaults or realized impairments?' \n\n5. 'How should we think about this strategy relative to public high yield, syndicated loans, and private equity in a total-portfolio context?'",
+    },
+    {
+      type: "meeting-application",
+      title: "Allocator application: how Day 40 should change private-credit diligence",
+      content:
+        "After Day 40, the learner should stop hearing private credit as a generic high-yielding private-income sleeve and start hearing it as a family of lending regimes defined by repayment path, documentation strength, structural protection, and workout behavior. That is the main allocator upgrade.\n\nThis should sharpen diligence in several ways. It should make the learner more precise about strategy classification, less impressed by generic coupon language, more skeptical of apparently smooth marks, and more focused on what actually repays the loan. It should also set up the rest of the credit sequence cleanly, because later lessons can now build on a classification framework rather than on generic income language. In private credit, the most important question usually is not what the stated yield is. It is what makes principal come back.",
+    },
+  ],
+  quiz: [
+    {
+      questionId: "d40q1",
+      type: "multiple-choice",
+      prompt:
+        "Why is it important to classify private credit by strategy type before evaluating yield?",
+      options: [
+        "Because all private-credit strategies share the same repayment engine",
+        "Because different private-credit strategies rely on different repayment sources, structural protections, and stress paths",
+        "Because yield is irrelevant in private credit",
+        "Because classification matters only for legal reporting",
+      ],
+      correctAnswer:
+        "Because different private-credit strategies rely on different repayment sources, structural protections, and stress paths",
+    },
+    {
+      questionId: "d40q2",
+      type: "multiple-choice",
+      prompt:
+        "What is the most important underwriting question introduced in this lesson?",
+      options: [
+        "What is the coupon?",
+        "What benchmark should be used?",
+        "What actually repays the loan?",
+        "What is the fund's management fee?",
+      ],
+      correctAnswer:
+        "What actually repays the loan?",
+    },
+    {
+      questionId: "d40q3",
+      type: "multiple-choice",
+      prompt:
+        "Why can high contractual yield be a misleading indicator of private-credit attractiveness?",
+      options: [
+        "Because higher yield can compensate for weaker documentation, refinance dependence, structural fragility, or complexity",
+        "Because yield is never part of total return",
+        "Because all high-yielding private loans are distressed",
+        "Because private credit has no principal risk",
+      ],
+      correctAnswer:
+        "Because higher yield can compensate for weaker documentation, refinance dependence, structural fragility, or complexity",
+    },
+    {
+      questionId: "d40q4",
+      type: "multiple-choice",
+      prompt:
+        "Why should allocators care about amendments, extensions, and PIK accommodations in private credit?",
+      options: [
+        "Because they can signal rising stress before losses are formally recognized",
+        "Because they eliminate credit risk",
+        "Because they matter only in public high yield",
+        "Because they automatically improve returns",
+      ],
+      correctAnswer:
+        "Because they can signal rising stress before losses are formally recognized",
+    },
+    {
+      questionId: "d40q5",
+      type: "multiple-choice",
+      prompt:
+        "What is the strongest allocator interpretation of sponsor backing in direct lending?",
+      options: [
+        "Sponsor backing always improves lender protection",
+        "Sponsor backing can improve governance and support, but can also increase leverage and create value-leakage incentives",
+        "Sponsor backing matters only at exit",
+        "Sponsor-backed loans do not need covenant analysis",
+      ],
+      correctAnswer:
+        "Sponsor backing can improve governance and support, but can also increase leverage and create value-leakage incentives",
+    },
+    {
+      questionId: "d40q6",
+      type: "multiple-choice",
+      prompt:
+        "Why can private-credit NAV appear smoother than the underlying economics justify?",
+      options: [
+        "Because private-credit managers are required to report constant values",
+        "Because loans are not continuously traded, marks may move slowly, and amendments can delay visible loss recognition",
+        "Because private-credit strategies never experience stress",
+        "Because collateral values are always stable",
+      ],
+      correctAnswer:
+        "Because loans are not continuously traded, marks may move slowly, and amendments can delay visible loss recognition",
+    },
+    {
+      questionId: "d40q7",
+      type: "short-response",
+      prompt:
+        "Explain why private credit should be underwritten by repayment path rather than by coupon alone. Write two to four sentences.",
+      modelAnswer:
+        "The coupon tells you what the loan pays if it performs, but not what actually protects principal if the borrower or collateral weakens. Different private-credit strategies rely on different repayment engines such as borrower cash flow, collateral liquidation, refinancing, sponsor support, or asset cash conversion. The allocator therefore needs to understand what repays the loan in both normal and stressed cases, not just what yield is promised.",
+    },
+    {
+      questionId: "d40q8",
+      type: "short-response",
+      prompt:
+        "A GP says the strategy offers downside protection and attractive yield. What are the three most important follow-up questions you should ask after this lesson?",
+      modelAnswer:
+        "First, I would ask what exact strategy type this is and what actually repays the loan in normal and stressed cases. Second, I would ask what documentation, covenant, collateral, or structural protections matter most to preserving principal. Third, I would ask how stress tends to show up before realized loss, including amendments, extensions, or refinancing dependence, so I can distinguish smooth reporting from real resilience.",
+    },
+  ],
+  sources: [
+    "Allocator- and practitioner-oriented materials on private-credit strategy mapping, direct lending, asset-based finance, and specialty lending",
+    "Educational resources on repayment path, documentation quality, covenant protection, and restructuring or workout dynamics in private credit",
+    "Institutional private-markets materials on the portfolio role of private credit relative to public fixed income and private equity",
+    "Industry resources on sponsor-backed lending, asset-based lending, opportunistic credit, and venture debt strategy distinctions",
+    "CFA Institute and related private-markets educational materials providing context for illiquidity, credit underwriting, and structure-specific private-credit risk",
+  ],
+},
 ];
 
 export function getLessonContent(lessonId: string): LessonContent | undefined {
