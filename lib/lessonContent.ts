@@ -6070,6 +6070,7 @@ export const lessonContents: LessonContent[] = [
       {
         "type": "visual",
         "title": "Allocator inference map for SAFE-heavy portfolios",
+        "visualId": "safe-inference-map",
         "content": "**When a seed fund relies heavily on SAFEs, the allocator should infer both benefits and burdens:**\n| Observable feature | Potential upside | Potential allocator concern |\n|---|---|---|\n| **Fast deployment through SAFEs** | Better access to early rounds and founder-friendly positioning | Weak pricing discipline or shallow ownership modeling |\n| **Consistent use of post-money SAFEs** | Better ownership predictability | Still does not eliminate later dilution and reserve pressure |\n| **Large unconverted SAFE stack** | Exposure to early company formation before formal rounds | Ownership and cap-table uncertainty may be understated |\n| **Mixed SAFE and note structures** | Flexibility by company context | Harder portfolio-level modeling and reserve planning |\n| **Frequent MFN references** | Some protection against later term drift | Signals complexity that must actually be tracked and exercised |\nThe allocator should ask whether the manager has built process discipline to match the instrument mix.",
         "caption": "A SAFE-heavy strategy can be coherent. It can also hide weak ownership predictability behind founder-friendly language.",
         "whyItMatters": "The instrument mix affects not only company economics but also portfolio-management quality, reserve planning, and later valuation interpretation.",
@@ -6275,6 +6276,7 @@ export const lessonContents: LessonContent[] = [
       {
         "type": "visual",
         "title": "Common versus preferred: the allocator's payout lens",
+        "visualId": "common-vs-preferred",
         "content": "**Two investors can own the same percentage headline and still have different economic outcomes because they sit in different places in the stack.**\n| Security type | Typical economic position | What allocator should infer |\n|---|---|---|\n| **Common stock** | Residual claimant after preference claims are satisfied | More exposed to weak or middling exits |\n| **Non-participating preferred** | Usually entitled to take a preference return or convert to common, whichever is higher | Better downside floor in weaker exits; capped in middling outcomes unless conversion makes sense |\n| **Participating preferred** | Usually entitled to take preference return and then also share in residual proceeds as if converted | Can outperform common in a wider range of exit outcomes |\n| **Multiple-liquidation-preference preferred** | Entitled to a multiple of invested capital before common participates | Shifts a larger share of weak-to-moderate exits away from common holders |\nThe key allocator question is never just 'what is the company worth?' It is 'at what exit values does our security generate strong returns, and what scenarios leave common holders with little after preferences are satisfied?'"
       },
       {
