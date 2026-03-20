@@ -88,43 +88,35 @@ function renderTable(lines: string[], key: number): React.ReactNode {
   );
 }
 
+type LineKind = "table" | "bullet" | "numbered" | "text" | "blank";
+
+function classifyLine(line: string): LineKind {
+  const t = line.trimStart();
+  if (!t) return "blank";
+  if (t.startsWith("|")) return "table";
+  if (t.startsWith("- ")) return "bullet";
+  if (/^\d+\.\s/.test(t)) return "numbered";
+  return "text";
+}
+
 function renderContent(text: string): React.ReactNode {
-  // Split into segments: separate tables from non-table content even within
-  // a single paragraph (they may be separated by only one newline).
-  const rawParagraphs = text.split(/\n\n+/);
-  const segments: { kind: "table" | "bullets" | "numbered" | "text"; lines: string[] }[] = [];
+  // Classify every line, then group consecutive lines of the same kind.
+  // This handles single-\n transitions (text→table, text→bullets, etc.)
+  const allLines = text.split("\n");
+  const segments: { kind: LineKind; lines: string[] }[] = [];
 
-  for (const para of rawParagraphs) {
-    const trimmed = para.trim();
-    if (!trimmed) continue;
-
-    const lines = trimmed.split("\n");
-    let buf: string[] = [];
-    let bufIsTable = false;
-
-    const flush = () => {
-      if (buf.length === 0) return;
-      if (bufIsTable) {
-        segments.push({ kind: "table", lines: [...buf] });
-      } else if (buf.every((l) => l.trimStart().startsWith("- "))) {
-        segments.push({ kind: "bullets", lines: [...buf] });
-      } else if (buf.every((l) => /^\d+\.\s/.test(l.trimStart()))) {
-        segments.push({ kind: "numbered", lines: [...buf] });
-      } else {
-        segments.push({ kind: "text", lines: [...buf] });
-      }
-      buf = [];
-    };
-
-    for (const line of lines) {
-      const lineIsTable = line.trimStart().startsWith("|");
-      if (buf.length > 0 && lineIsTable !== bufIsTable) {
-        flush();
-      }
-      bufIsTable = lineIsTable;
-      buf.push(line);
+  for (const line of allLines) {
+    const kind = classifyLine(line);
+    if (kind === "blank") {
+      // Blank lines just break the current segment
+      continue;
     }
-    flush();
+    const prev = segments.length > 0 ? segments[segments.length - 1] : null;
+    if (prev && prev.kind === kind) {
+      prev.lines.push(line);
+    } else {
+      segments.push({ kind, lines: [line] });
+    }
   }
 
   const nodes: React.ReactNode[] = [];
@@ -132,7 +124,7 @@ function renderContent(text: string): React.ReactNode {
     const seg = segments[i];
     if (seg.kind === "table") {
       nodes.push(renderTable(seg.lines, i));
-    } else if (seg.kind === "bullets") {
+    } else if (seg.kind === "bullet") {
       nodes.push(
         <ul key={i} className="list-disc list-outside ml-4 space-y-1 text-[15px] text-[#000000] leading-[1.7]">
           {seg.lines.map((l, j) => (
@@ -149,11 +141,15 @@ function renderContent(text: string): React.ReactNode {
         </ol>
       );
     } else {
-      nodes.push(
-        <p key={i} className="text-[15px] text-[#000000] leading-[1.7]">
-          {renderInline(seg.lines.join("\n"))}
-        </p>
-      );
+      // Text lines: each line becomes its own paragraph so bold headers
+      // and other content that sits on separate lines render separately.
+      for (let j = 0; j < seg.lines.length; j++) {
+        nodes.push(
+          <p key={`${i}-${j}`} className="text-[15px] text-[#000000] leading-[1.7]">
+            {renderInline(seg.lines[j])}
+          </p>
+        );
+      }
     }
   }
 
