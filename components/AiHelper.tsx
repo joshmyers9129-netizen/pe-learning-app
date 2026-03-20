@@ -9,6 +9,20 @@ interface AiHelperProps {
   label?: string;
 }
 
+// ── Cache the availability check so it only fires once across all AiHelper instances ──
+
+let _availabilityPromise: Promise<boolean> | null = null;
+
+function checkAvailability(): Promise<boolean> {
+  if (!_availabilityPromise) {
+    _availabilityPromise = fetch("/api/ai-help")
+      .then((r) => r.json())
+      .then((d) => d.available === true)
+      .catch(() => false);
+  }
+  return _availabilityPromise;
+}
+
 function renderAiResponse(text: string): React.ReactNode {
   return text.split("\n").map((line, i) => {
     if (!line.trim()) return <div key={i} className="h-2" />;
@@ -40,10 +54,7 @@ export function AiHelper({ prompt, label = "Explain this more simply" }: AiHelpe
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("/api/ai-help")
-      .then((r) => r.json())
-      .then((d) => setAvailable(d.available === true))
-      .catch(() => setAvailable(false));
+    checkAvailability().then(setAvailable);
   }, []);
 
   if (!available) return null;

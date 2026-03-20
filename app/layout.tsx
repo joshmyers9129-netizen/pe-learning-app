@@ -14,7 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PE Learning App",
+  title: {
+    default: "PE Learning App",
+    template: "%s — PE Learning App",
+  },
   description: "20-day private equity curriculum",
 };
 

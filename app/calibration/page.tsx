@@ -61,14 +61,16 @@ function computeCalibration(points: CalibrationPoint[]) {
 }
 
 // Find the biggest gaps between confidence and actual performance
-function findGaps(points: CalibrationPoint[]): CalibrationPoint[] {
+type CalibrationGap = CalibrationPoint & { gap: number };
+
+function findGaps(points: CalibrationPoint[]): CalibrationGap[] {
   return points
     .filter((p) => p.score < 1)
-    .map((p) => ({
+    .map((p): CalibrationGap => ({
       ...p,
       gap: p.confidence / 5 - p.score, // positive = overconfident
     }))
-    .sort((a, b) => (b as unknown as { gap: number }).gap - (a as unknown as { gap: number }).gap)
+    .sort((a, b) => b.gap - a.gap)
     .slice(0, 5);
 }
 

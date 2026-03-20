@@ -8,7 +8,7 @@ import { LessonProgress, ModuleProgress, QuizResult, QuizAttempt, WrongAnswer, S
  */
 function safeSetItem(key: string, value: string): boolean {
   try {
-    safeSetItem(key, value);
+    localStorage.setItem(key, value);
     return true;
   } catch (e) {
     if (

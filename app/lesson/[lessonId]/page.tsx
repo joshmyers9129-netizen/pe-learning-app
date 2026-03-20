@@ -180,10 +180,12 @@ export default function LessonPage({
     saveLessonPosition(lessonId, blockIndex, window.scrollY);
   }, [lessonId]);
 
+  const posTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   useEffect(() => {
     const handleScroll = () => {
-      clearTimeout((window as unknown as Record<string, ReturnType<typeof setTimeout>>).__posTimer);
-      (window as unknown as Record<string, ReturnType<typeof setTimeout>>).__posTimer = setTimeout(savePosition, 500);
+      if (posTimerRef.current) clearTimeout(posTimerRef.current);
+      posTimerRef.current = setTimeout(savePosition, 500);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
