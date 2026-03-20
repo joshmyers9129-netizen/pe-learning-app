@@ -6,6 +6,8 @@ import { getDefaultModule } from "@/lib/modules";
 import { lessonContents } from "@/lib/lessonContent";
 import { topicLabel } from "@/lib/topics";
 import { Difficulty } from "@/lib/types";
+import { useDebounce } from "@/hooks/useDebounce";
+import { MATCH_TYPE_LABELS } from "@/lib/ui-config";
 
 interface SearchResult {
   lessonId: string;
@@ -110,16 +112,10 @@ function searchLessons(query: string): SearchResult[] {
   return results;
 }
 
-const MATCH_TYPE_LABELS: Record<string, { label: string; color: string }> = {
-  title: { label: "Title", color: "text-[#2294BD] bg-[#2294BD]/10" },
-  topic: { label: "Topic", color: "text-[#9B6A00] bg-[#FAA51A]/15" },
-  objective: { label: "Objective", color: "text-[#1A6B42] bg-[#2A9D60]/10" },
-  content: { label: "Content", color: "text-[#404040] bg-[#F0E6DD]" },
-};
-
 export default function SearchPage() {
   const [query, setQuery] = useState("");
-  const results = useMemo(() => searchLessons(query), [query]);
+  const debouncedQuery = useDebounce(query, 250);
+  const results = useMemo(() => searchLessons(debouncedQuery), [debouncedQuery]);
 
   return (
     <main className="min-h-screen bg-[#FBF7F3]">

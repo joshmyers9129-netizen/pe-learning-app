@@ -1,4 +1,4 @@
-const CONFIDENCE_LABELS = ["Not at all", "Shaky", "Okay", "Solid", "Nailed it"];
+import { CONFIDENCE_SHORT_LABELS } from "@/lib/ui-config";
 
 export function ConfidenceRating({
   value,
@@ -16,7 +16,7 @@ export function ConfidenceRating({
         Rate your understanding of today&apos;s material.
       </p>
       <div className="flex gap-2 justify-between" role="radiogroup" aria-label="Confidence rating">
-        {CONFIDENCE_LABELS.map((label, i) => {
+        {CONFIDENCE_SHORT_LABELS.map((label, i) => {
           const v = i + 1;
           const active = value === v;
           return (

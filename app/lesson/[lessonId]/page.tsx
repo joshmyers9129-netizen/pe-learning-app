@@ -153,6 +153,20 @@ export default function LessonPage({
     }
   }, [lessonId]);
 
+  // Warn before navigating away from in-progress quiz
+  useEffect(() => {
+    function handleBeforeUnload(e: BeforeUnloadEvent) {
+      // Only warn if the user has started answering but hasn't saved yet
+      const hasStartedQuiz =
+        Object.keys(mcAnswers).length > 0 || Object.keys(srStates).length > 0;
+      if (hasStartedQuiz && !saved) {
+        e.preventDefault();
+      }
+    }
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [mcAnswers, srStates, saved]);
+
   // Save scroll position periodically
   const savePosition = useCallback(() => {
     if (!blocksRef.current) return;

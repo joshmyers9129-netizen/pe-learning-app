@@ -3,32 +3,7 @@
 import { getDefaultModule } from "@/lib/modules";
 import { useModuleProgress } from "@/hooks/useProgress";
 import { Difficulty, Lesson, LessonStatus } from "@/lib/types";
-
-// ── status helpers ────────────────────────────────────────────────────────────
-
-const STATUS_CONFIG: Record<
-  LessonStatus,
-  { label: string; dot: string; row: string; badge: string }
-> = {
-  completed: {
-    label: "Completed",
-    dot: "bg-[#2294BD]",
-    row: "bg-white",
-    badge: "bg-[#2294BD]/10 text-[#2294BD]",
-  },
-  "in-progress": {
-    label: "In Progress",
-    dot: "bg-[#FAA51A]",
-    row: "bg-[#FAA51A]/5",
-    badge: "bg-[#FAA51A]/15 text-[#D9532B]",
-  },
-  "not-started": {
-    label: "Not started",
-    dot: "bg-[#D0C8C0]",
-    row: "bg-white",
-    badge: "bg-[#F0E6DD] text-[#404040]",
-  },
-};
+import { STATUS_CONFIG, DIFFICULTY_COLORS } from "@/lib/ui-config";
 
 function StatusDot({ status }: { status: LessonStatus }) {
   const cfg = STATUS_CONFIG[status];
@@ -56,14 +31,9 @@ function StatusBadge({ status }: { status: LessonStatus }) {
 // ── sub-components ────────────────────────────────────────────────────────────
 
 function DifficultyPip({ level }: { level: Difficulty }) {
-  const colors: Record<Difficulty, string> = {
-    foundational: "bg-[#2294BD]",
-    intermediate: "bg-[#FAA51A]",
-    advanced: "bg-[#D9532B]",
-  };
   return (
     <span
-      className={`inline-block w-1.5 h-1.5 rounded-full ${colors[level] ?? "bg-gray-300"}`}
+      className={`inline-block w-1.5 h-1.5 rounded-full ${DIFFICULTY_COLORS[level] ?? "bg-gray-300"}`}
       title={level}
     />
   );

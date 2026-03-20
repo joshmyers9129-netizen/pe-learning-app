@@ -1,5 +1,30 @@
 import { LessonProgress, ModuleProgress, QuizResult, QuizAttempt, WrongAnswer, SRSCardState, LessonPosition } from "./types";
 
+// ── Safe localStorage wrapper ────────────────────────────────────────────────
+
+/**
+ * Safely write to localStorage, catching quota-exceeded errors.
+ * Returns `true` on success, `false` if the write failed.
+ */
+function safeSetItem(key: string, value: string): boolean {
+  try {
+    safeSetItem(key, value);
+    return true;
+  } catch (e) {
+    if (
+      e instanceof DOMException &&
+      (e.code === 22 || e.code === 1014 || e.name === "QuotaExceededError")
+    ) {
+      console.error(
+        `[pe-app] localStorage quota exceeded when writing "${key}". Data was NOT saved.`
+      );
+    } else {
+      console.error(`[pe-app] localStorage write failed for "${key}":`, e);
+    }
+    return false;
+  }
+}
+
 const STORAGE_KEY = "pe-app-progress";
 
 function loadAll(): Record<string, ModuleProgress> {
@@ -14,7 +39,7 @@ function loadAll(): Record<string, ModuleProgress> {
 
 function saveAll(data: Record<string, ModuleProgress>) {
   if (typeof window === "undefined") return;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  safeSetItem(STORAGE_KEY, JSON.stringify(data));
 }
 
 export function getModuleProgress(moduleId: string): ModuleProgress {
@@ -52,7 +77,7 @@ export function saveQuizResult(lessonId: string, result: QuizResult) {
   if (typeof window === "undefined") return;
   const all = loadQuiz();
   all[lessonId] = result;
-  localStorage.setItem(QUIZ_KEY, JSON.stringify(all));
+  safeSetItem(QUIZ_KEY, JSON.stringify(all));
 }
 
 const REVIEW_KEY = "pe-app-review";
@@ -86,7 +111,7 @@ export function dismissCard(cardId: string) {
   if (typeof window === "undefined") return;
   const all = loadReview();
   all[cardId] = new Date().toISOString().slice(0, 10);
-  localStorage.setItem(REVIEW_KEY, JSON.stringify(all));
+  safeSetItem(REVIEW_KEY, JSON.stringify(all));
 }
 
 /** Return the set of card IDs dismissed today. */
@@ -108,7 +133,7 @@ export function recordCardStruggle(cardId: string) {
   if (typeof window === "undefined") return;
   const all = loadStruggles();
   all[cardId] = (all[cardId] ?? 0) + 1;
-  localStorage.setItem(STRUGGLES_KEY, JSON.stringify(all));
+  safeSetItem(STRUGGLES_KEY, JSON.stringify(all));
 }
 
 export function setLessonStatus(
@@ -160,7 +185,7 @@ export function saveQuizAttempt(lessonId: string, result: QuizResult): QuizAttem
     attemptNumber: history.length + 1,
   };
   all[lessonId] = [...history, attempt];
-  localStorage.setItem(QUIZ_HISTORY_KEY, JSON.stringify(all));
+  safeSetItem(QUIZ_HISTORY_KEY, JSON.stringify(all));
   // Also update the "latest" quiz result
   saveQuizResult(lessonId, result);
   return attempt;
@@ -191,7 +216,7 @@ export function recordWrongAnswers(answers: WrongAnswer[]) {
   const key = (a: WrongAnswer) => `${a.lessonId}:${a.questionId}`;
   const newKeys = new Set(answers.map(key));
   const filtered = existing.filter((a) => !newKeys.has(key(a)));
-  localStorage.setItem(WRONG_ANSWERS_KEY, JSON.stringify([...filtered, ...answers]));
+  safeSetItem(WRONG_ANSWERS_KEY, JSON.stringify([...filtered, ...answers]));
 }
 
 export function removeWrongAnswer(lessonId: string, questionId: string) {
@@ -200,7 +225,7 @@ export function removeWrongAnswer(lessonId: string, questionId: string) {
   const filtered = existing.filter(
     (a) => !(a.lessonId === lessonId && a.questionId === questionId)
   );
-  localStorage.setItem(WRONG_ANSWERS_KEY, JSON.stringify(filtered));
+  safeSetItem(WRONG_ANSWERS_KEY, JSON.stringify(filtered));
 }
 
 // ── SRS Card State ───────────────────────────────────────────────────────────
@@ -270,7 +295,7 @@ export function updateSRS(cardId: string, quality: number): SRSCardState {
 
   all[cardId] = updated;
   if (typeof window !== "undefined") {
-    localStorage.setItem(SRS_KEY, JSON.stringify(all));
+    safeSetItem(SRS_KEY, JSON.stringify(all));
   }
   return updated;
 }
@@ -302,5 +327,5 @@ export function saveLessonPosition(lessonId: string, blockIndex: number, scrollY
     scrollY,
     updatedAt: new Date().toISOString(),
   };
-  localStorage.setItem(POSITION_KEY, JSON.stringify(all));
+  safeSetItem(POSITION_KEY, JSON.stringify(all));
 }

@@ -12,52 +12,11 @@ import { CardType, Priority, SRSCardState } from "@/lib/types";
 import { AiHelper } from "@/components/AiHelper";
 import { topicLabel } from "@/lib/topics";
 import { DEFAULT_MODULE_ID } from "@/lib/modules";
+import { CARD_TYPE_CONFIG, PRIORITY_CONFIG, SRS_RATINGS } from "@/lib/ui-config";
 
 // ── constants ─────────────────────────────────────────────────────────────────
 
 const MODULE_ID = DEFAULT_MODULE_ID;
-
-const CARD_TYPE_CONFIG: Record<
-  CardType,
-  { label: string; bg: string; text: string; border: string }
-> = {
-  flashcard: {
-    label: "Flashcard",
-    bg: "bg-[#2294BD]/10",
-    text: "text-[#2294BD]",
-    border: "border-[#2294BD]/20",
-  },
-  "mini-case": {
-    label: "Mini-case",
-    bg: "bg-[#D9532B]/10",
-    text: "text-[#D9532B]",
-    border: "border-[#D9532B]/20",
-  },
-  reteach: {
-    label: "Reteach",
-    bg: "bg-[#FAA51A]/15",
-    text: "text-[#9B6A00]",
-    border: "border-[#FAA51A]/30",
-  },
-};
-
-const PRIORITY_CONFIG: Record<
-  Priority,
-  { label: string; dot: string; text: string }
-> = {
-  high: { label: "High priority", dot: "bg-[#D9532B]", text: "text-[#D9532B]" },
-  medium: { label: "Medium", dot: "bg-[#FAA51A]", text: "text-[#9B6A00]" },
-  low: { label: "Low", dot: "bg-[#2294BD]", text: "text-[#2294BD]" },
-};
-
-// ── card component ────────────────────────────────────────────────────────────
-
-const SRS_RATINGS = [
-  { quality: 1, label: "Again", color: "text-[#D9532B] bg-[#D9532B]/10 hover:bg-[#D9532B]/18" },
-  { quality: 3, label: "Hard", color: "text-[#FAA51A] bg-[#FAA51A]/10 hover:bg-[#FAA51A]/18" },
-  { quality: 4, label: "Good", color: "text-[#2294BD] bg-[#2294BD]/10 hover:bg-[#2294BD]/18" },
-  { quality: 5, label: "Easy", color: "text-[#1A6B42] bg-[#2A9D60]/10 hover:bg-[#2A9D60]/18" },
-];
 
 function ReviewCardTile({
   card,

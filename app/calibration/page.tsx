@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getDefaultModule } from "@/lib/modules";
 import { getQuizHistory } from "@/lib/progress";
 import { topicLabel } from "@/lib/topics";
+import { CONFIDENCE_LABELS } from "@/lib/ui-config";
 
 interface CalibrationPoint {
   lessonId: string;
@@ -125,14 +126,6 @@ function CalibrationBar({
     </div>
   );
 }
-
-const CONFIDENCE_LABELS: Record<number, string> = {
-  1: "Not at all (1)",
-  2: "Shaky (2)",
-  3: "Okay (3)",
-  4: "Solid (4)",
-  5: "Nailed it (5)",
-};
 
 export default function CalibrationPage() {
   const [points] = useState<CalibrationPoint[]>(getCalibrationData);
