@@ -55,27 +55,27 @@ function renderTable(lines: string[], key: number): React.ReactNode {
   const headerRow = rows[0];
   const bodyRows = rows.slice(1).filter((r) => !isAlignRow(r));
   return (
-    <div key={key} className="overflow-x-auto">
+    <div key={key} className="overflow-x-auto rounded-lg border border-[#E8DDD4] shadow-sm">
       <table className="w-full text-[13px] border-collapse">
         <thead>
-          <tr>
+          <tr className="bg-gradient-to-r from-[#3B3B3B] to-[#4A4A4A]">
             {headerRow.map((cell, j) => (
               <th
                 key={j}
-                className="border border-[#000]/15 bg-[#000]/5 px-3 py-2 text-left font-semibold text-[#000000]"
+                className="px-4 py-2.5 text-left text-[11px] font-bold uppercase tracking-wider text-white/90 first:rounded-tl-lg last:rounded-tr-lg"
               >
                 {renderInline(cell)}
               </th>
             ))}
           </tr>
         </thead>
-        <tbody>
+        <tbody className="divide-y divide-[#E8DDD4]/60">
           {bodyRows.map((row, i) => (
-            <tr key={i} className={i % 2 === 0 ? "" : "bg-[#000]/[0.02]"}>
+            <tr key={i} className={`transition-colors hover:bg-[#F5F0EB]/60 ${i % 2 === 1 ? "bg-[#FAF8F5]" : "bg-white"}`}>
               {row.map((cell, j) => (
                 <td
                   key={j}
-                  className="border border-[#000]/15 px-3 py-2 text-[#000000] leading-[1.5]"
+                  className={`px-4 py-2.5 text-[#2A2A2A] leading-[1.6] ${j === 0 ? "font-medium text-[#1A1A1A]" : ""}`}
                 >
                   {renderInline(cell)}
                 </td>
