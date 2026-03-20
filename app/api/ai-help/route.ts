@@ -30,8 +30,6 @@ export async function POST(req: NextRequest) {
       { status: 503 }
     );
   }
-  console.log("API key debug:", apiKey.slice(0, 12) + "..., length:", apiKey.length);
-
   let body: { prompt?: string };
   try {
     body = await req.json();
