@@ -19,8 +19,18 @@ import GPUnderwritingFramework from "./GPUnderwritingFramework";
 import CommitmentPacingTimeline from "./CommitmentPacingTimeline";
 import OvercommitmentRiskMap from "./OvercommitmentRiskMap";
 import VintageDiversification from "./VintageDiversification";
+import ComparisonFramework from "./ComparisonFramework";
+import StrategyDrift from "./StrategyDrift";
+import ValueCreationDecomposition from "./ValueCreationDecomposition";
+import IRRManipulation from "./IRRManipulation";
+import RedFlagsValueCreation from "./RedFlagsValueCreation";
+import FundDocumentStack from "./FundDocumentStack";
+import VentureStageMap from "./VentureStageMap";
+import AlignmentDimensions from "./AlignmentDimensions";
+import VentureVsBuyout from "./VentureVsBuyout";
+import IRRMOICTradeoff from "./IRRMOICTradeoff";
 
-export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification };
+export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification, ComparisonFramework, StrategyDrift, ValueCreationDecomposition, IRRManipulation, RedFlagsValueCreation, FundDocumentStack, VentureStageMap, AlignmentDimensions, VentureVsBuyout, IRRMOICTradeoff };
 
 export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "fund-lifecycle-timeline": FundLifecycleTimeline,
@@ -35,4 +45,14 @@ export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "commitment-pacing-timeline": CommitmentPacingTimeline,
   "overcommitment-risk-map": OvercommitmentRiskMap,
   "vintage-diversification": VintageDiversification,
+  "comparison-framework": ComparisonFramework,
+  "strategy-drift": StrategyDrift,
+  "value-creation-decomposition": ValueCreationDecomposition,
+  "irr-manipulation": IRRManipulation,
+  "red-flags-value-creation": RedFlagsValueCreation,
+  "fund-document-stack": FundDocumentStack,
+  "venture-stage-map": VentureStageMap,
+  "alignment-dimensions": AlignmentDimensions,
+  "venture-vs-buyout": VentureVsBuyout,
+  "irr-moic-tradeoff": IRRMOICTradeoff,
 };
