@@ -213,6 +213,13 @@ const BLOCK_STYLE: Record<
     labelColor: "text-[#1A6B42]",
     accent: "border-l-[#2A9D60]",
   },
+  "allocator-application": {
+    label: "Allocator application",
+    border: "border-[#2A9D60]/20",
+    bg: "bg-[#2A9D60]/5",
+    labelColor: "text-[#1A6B42]",
+    accent: "border-l-[#2A9D60]",
+  },
   "source-note": {
     label: "Source note",
     border: "border-[#E8DDD4]",

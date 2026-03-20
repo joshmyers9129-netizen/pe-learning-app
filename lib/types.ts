@@ -43,6 +43,7 @@ export type LessonBlockType =
   | "weak-answer"
   | "exercise"
   | "meeting-application"
+  | "allocator-application"
   | "source-note";
 
 export interface LessonBlock {
