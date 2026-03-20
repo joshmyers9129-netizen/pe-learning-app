@@ -89,32 +89,61 @@ function renderTable(lines: string[], key: number): React.ReactNode {
 }
 
 function renderContent(text: string): React.ReactNode {
-  const paragraphs = text.split(/\n\n+/);
+  // Split into segments: separate tables from non-table content even within
+  // a single paragraph (they may be separated by only one newline).
+  const rawParagraphs = text.split(/\n\n+/);
+  const segments: { kind: "table" | "bullets" | "numbered" | "text"; lines: string[] }[] = [];
+
+  for (const para of rawParagraphs) {
+    const trimmed = para.trim();
+    if (!trimmed) continue;
+
+    const lines = trimmed.split("\n");
+    let buf: string[] = [];
+    let bufIsTable = false;
+
+    const flush = () => {
+      if (buf.length === 0) return;
+      if (bufIsTable) {
+        segments.push({ kind: "table", lines: [...buf] });
+      } else if (buf.every((l) => l.trimStart().startsWith("- "))) {
+        segments.push({ kind: "bullets", lines: [...buf] });
+      } else if (buf.every((l) => /^\d+\.\s/.test(l.trimStart()))) {
+        segments.push({ kind: "numbered", lines: [...buf] });
+      } else {
+        segments.push({ kind: "text", lines: [...buf] });
+      }
+      buf = [];
+    };
+
+    for (const line of lines) {
+      const lineIsTable = line.trimStart().startsWith("|");
+      if (buf.length > 0 && lineIsTable !== bufIsTable) {
+        flush();
+      }
+      bufIsTable = lineIsTable;
+      buf.push(line);
+    }
+    flush();
+  }
+
   const nodes: React.ReactNode[] = [];
-
-  for (let i = 0; i < paragraphs.length; i++) {
-    const para = paragraphs[i].trim();
-    if (!para) continue;
-
-    const lines = para.split("\n");
-    const isTable = lines.every((l) => l.trimStart().startsWith("|"));
-    const isBulletList = lines.every((l) => l.trimStart().startsWith("- "));
-    const isNumberedList = lines.every((l) => /^\d+\.\s/.test(l.trimStart()));
-
-    if (isTable) {
-      nodes.push(renderTable(lines, i));
-    } else if (isBulletList) {
+  for (let i = 0; i < segments.length; i++) {
+    const seg = segments[i];
+    if (seg.kind === "table") {
+      nodes.push(renderTable(seg.lines, i));
+    } else if (seg.kind === "bullets") {
       nodes.push(
         <ul key={i} className="list-disc list-outside ml-4 space-y-1 text-[15px] text-[#000000] leading-[1.7]">
-          {lines.map((l, j) => (
+          {seg.lines.map((l, j) => (
             <li key={j}>{renderInline(l.replace(/^-\s+/, ""))}</li>
           ))}
         </ul>
       );
-    } else if (isNumberedList) {
+    } else if (seg.kind === "numbered") {
       nodes.push(
         <ol key={i} className="list-decimal list-outside ml-4 space-y-1 text-[15px] text-[#000000] leading-[1.7]">
-          {lines.map((l, j) => (
+          {seg.lines.map((l, j) => (
             <li key={j}>{renderInline(l.replace(/^\d+\.\s+/, ""))}</li>
           ))}
         </ol>
@@ -122,7 +151,7 @@ function renderContent(text: string): React.ReactNode {
     } else {
       nodes.push(
         <p key={i} className="text-[15px] text-[#000000] leading-[1.7]">
-          {renderInline(para)}
+          {renderInline(seg.lines.join("\n"))}
         </p>
       );
     }
