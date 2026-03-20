@@ -522,6 +522,11 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Curriculum links",
         "content": "**Builds on:** Builds on Day 1 and Day 2.\n**Critical companion lessons:** Day 4, Day 6, Day 25\n**Unlocks:** Cleaner split between real progress and timing-driven IRR optics."
+      },
+      {
+        "type": "inference-boundary",
+        "title": "Inference boundary: what the J-curve can and cannot tell you",
+        "content": "**What J-curve analysis can tell you:**\n- Whether early negative returns are structurally expected given deployment pace, fee load, and unrealized marks\n- How subscription line usage affects the shape and apparent depth of the J-curve\n- Whether the timing of first distributions is consistent with the fund's strategy and vintage\n**What J-curve analysis usually cannot tell you:**\n- Whether the fund will ultimately produce attractive terminal returns\n- Whether early marks are reliable predictors of final realized value\n- Whether the GP's deployment pace is optimal versus simply fast"
       }
     ],
     "quiz": [
@@ -1090,7 +1095,7 @@ export const lessonContents: LessonContent[] = [
       {
         "type": "teaching",
         "title": "Vintage year: the macro entry condition that dominates cross-fund return variation",
-        "content": "Vintage year - typically the year of first investment, sometimes the year of final LP close - is the primary axis for benchmarking PE fund performance. The reason is economic, not conventional: entry multiples, credit availability, leverage costs, and macroeconomic cycle position vary materially by year, and these entry conditions are the largest determinant of fund-level returns for leveraged strategies.\n**Historical vintage effects - illustrative ranges (Cambridge Associates / Preqin data):**\n| Vintage Window | Macro Context | Entry EV/EBITDA (buyout) | Credit Availability | Approx. Median Net IRR |\n|---|---|---|---|---|\n| 2005–2007 | Pre-GFC credit peak | 9–11x | Very easy; 7–8x debt/EBITDA | 8–11% (peak-entry drag) |\n| 2008–2010 | GFC trough / recovery | 6–8x | Tight; 4–5x debt/EBITDA | 14–18% (distressed-entry premium) |\n| 2011–2015 | Recovery / expansion | 8–10x | Recovering; 5–6x debt/EBITDA | 12–16% (moderate) |\n| 2019–2021 | Pre/post-COVID peak | 11–14x | Very easy; 7–9x debt/EBITDA | TBD; early signals of compression |\n**The CFA-level analytical implication:**\nVintage year is analogous to a systematic factor exposure in equity returns - the 'market factor' for PE is the macro entry condition at the time investments were made. A GP who outperforms within a difficult vintage (e.g., 2006–2007) has demonstrated genuine skill against adverse starting conditions. A GP who outperforms an easy vintage using a favorable one is doing something less analytically meaningful.\n**Practical implication for LP analysis:**\nComparing a 2009-vintage fund to a 2007-vintage fund is not comparing managers - it is comparing market timing. The 2009 fund will almost always outperform because it bought cheap with tighter but available credit. A rigorous comparison asks: how did this fund perform relative to other funds that made investments in the same macroeconomic environment, in the same strategy segment, at the same market stage?"
+        "content": "Vintage year - typically the year of first investment, sometimes the year of final LP close - is the primary axis for benchmarking PE fund performance. The reason is economic, not conventional: entry multiples, credit availability, leverage costs, and macroeconomic cycle position vary materially by year, and these entry conditions are the largest determinant of fund-level returns for leveraged strategies.\n**Historical vintage effects - illustrative ranges (Cambridge Associates / Preqin data):**\n| Vintage Window | Macro Context | Entry EV/EBITDA (buyout) | Credit Availability | Approx. Median Net IRR |\n|---|---|---|---|---|\n| 2005–2007 | Pre-GFC credit peak | 9–11x | Very easy; 7–8x debt/EBITDA | 8–11% (peak-entry drag) |\n| 2008–2010 | GFC trough / recovery | 6–8x | Tight; 4–5x debt/EBITDA | 14–18% (distressed-entry premium) |\n| 2011–2015 | Recovery / expansion | 8–10x | Recovering; 5–6x debt/EBITDA | 12–16% (moderate) |\n| 2019–2021 | Pre/post-COVID peak | 11–14x | Very easy; 7–9x debt/EBITDA | 8–12% (early data; high entry multiples compressing returns) |\n**The CFA-level analytical implication:**\nVintage year is analogous to a systematic factor exposure in equity returns - the 'market factor' for PE is the macro entry condition at the time investments were made. A GP who outperforms within a difficult vintage (e.g., 2006–2007) has demonstrated genuine skill against adverse starting conditions. A GP who outperforms an easy vintage using a favorable one is doing something less analytically meaningful.\n**Practical implication for LP analysis:**\nComparing a 2009-vintage fund to a 2007-vintage fund is not comparing managers - it is comparing market timing. The 2009 fund will almost always outperform because it bought cheap with tighter but available credit. A rigorous comparison asks: how did this fund perform relative to other funds that made investments in the same macroeconomic environment, in the same strategy segment, at the same market stage?"
       },
       {
         "type": "teaching",
@@ -1584,6 +1589,14 @@ export const lessonContents: LessonContent[] = [
         "type": "framing",
         "title": "Why GP value creation claims require systematic decomposition",
         "content": "'We add operational value' is the default claim of every buyout GP. The challenge is not that GPs are dishonest - most believe their own narrative - it is that the mental models used to evaluate operational improvement are imprecise.\nDay 7 built the three-driver return model for a single deal. This lesson extends it to the portfolio level: how to read aggregate portfolio statistics, what data to request to decompose GP claims, how to distinguish the sources of EBITDA growth, and what the portfolio-level return attribution pattern tells you about whether the next fund is likely to replicate the track record."
+      },
+      {
+        "type": "visual",
+        "title": "Value creation decomposition: from headline EBITDA growth to attributable sources",
+        "content": "**Decomposing a GP's claimed value creation into its actual components:**\n| Source | What it measures | Repeatability | Key allocator question |\n|---|---|---|---|\n| **Organic revenue growth** | Volume and customer-driven top-line expansion | High if driven by competitive position | Is growth from market share gains or market tailwinds? |\n| **Pricing improvement** | Same volume, higher revenue per unit | High if reflects brand or switching costs | Can the GP show a systematic pricing methodology? |\n| **Margin improvement (cost)** | Fixed cost cuts, procurement savings, headcount | Low — typically one-time | How much of the margin gain is repeatable in the next fund? |\n| **Acquisition-driven (buy-and-build)** | Bolt-on EBITDA added to the platform | Moderate — depends on pipeline and integration | What is organic EBITDA growth after stripping out acquired EBITDA? |\n| **Multiple expansion** | Higher exit multiple vs. entry | Low — market-dependent | Would returns still work at flat or compressed exit multiples? |",
+        "caption": "The allocator should request this decomposition for each material portfolio company rather than accept aggregate portfolio-level claims.",
+        "whyItMatters": "Without this breakdown, a GP can present market-driven or acquisition-driven EBITDA growth as evidence of operational skill.",
+        "sourceNote": "Framework synthesized from Day 7 return attribution and standard GP portfolio review practices."
       },
       {
         "type": "teaching",
@@ -3592,6 +3605,11 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Curriculum links",
         "content": "**Builds on:** Day 9 and Day 13.\n**Critical companion lessons:** Day 21, Day 23, Day 43, Day 50\n**Unlocks:** Better separation between process evidence, governance quality, and soft sustainability language when diligencing GPs."
+      },
+      {
+        "type": "inference-boundary",
+        "title": "Inference boundary: what ESG diligence can and cannot tell you",
+        "content": "**What ESG diligence can tell you:**\n- Whether a GP has changed real investment or ownership decisions because of material ESG issues\n- Whether governance quality at the GP level is consistent with ESG claims\n- Whether sector-specific materiality is understood and acted upon\n**What ESG diligence usually cannot tell you:**\n- Whether ESG integration will produce measurable financial outperformance over a fund's life\n- Whether current ESG practices will remain adequate as standards, regulations, and stakeholder expectations evolve\n- Whether a GP's ESG improvements at portfolio companies would not have happened under any competent owner"
       }
     ],
     "quiz": [
@@ -3645,21 +3663,39 @@ export const lessonContents: LessonContent[] = [
       },
       {
         "questionId": "d19q5",
+        "type": "multiple-choice",
+        "prompt": "What distinguishes ESG integration from impact investing in an allocator diligence context?",
+        "options": [
+          "ESG integration requires measurable social outcomes; impact investing does not",
+          "Impact investing requires intentional, measurable outcomes and additionality; ESG integration focuses on incorporating material risks into investment decisions",
+          "They are interchangeable terms used by different industry associations",
+          "ESG integration applies only to buyout funds while impact investing applies only to venture funds"
+        ],
+        "correctAnswer": "Impact investing requires intentional, measurable outcomes and additionality; ESG integration focuses on incorporating material risks into investment decisions"
+      },
+      {
+        "questionId": "d19q6",
+        "type": "multiple-choice",
+        "prompt": "A GP presents a generic ESG checklist applied uniformly across all portfolio companies. What is the main allocator concern?",
+        "options": [
+          "Generic checklists are more rigorous than sector-specific frameworks",
+          "The checklist may not identify the ESG issues most economically material to each company's specific sector and business model",
+          "Checklists are only useful for environmental issues, not governance",
+          "A uniform approach proves the GP treats ESG seriously across the portfolio"
+        ],
+        "correctAnswer": "The checklist may not identify the ESG issues most economically material to each company's specific sector and business model"
+      },
+      {
+        "questionId": "d19q7",
         "type": "short-response",
         "prompt": "A GP has strong ESG reporting, but cannot point to a single deal it repriced, restructured, or declined because of ESG findings. How much underwriting credit should you give that?",
         "modelAnswer": "Only limited credit. Strong reporting may show effort and organizational seriousness, but it is not enough to prove decision integration. Until the GP can show where ESG changed underwriting, ownership action, or exit preparation, the allocator should treat the evidence as process infrastructure rather than as proof of edge or reduced risk."
       },
       {
-        "questionId": "d19q6",
+        "questionId": "d19q8",
         "type": "short-response",
         "prompt": "Why is a generic ESG checklist weak evidence in private equity?",
         "modelAnswer": "Because private equity underwriting is concentrated and company-specific. The top ESG risks should vary by sector, strategy, and business model. A generic checklist may be a useful minimum standard, but it does not prove that the GP understands which issues are economically material for the companies it actually buys."
-      },
-      {
-        "questionId": "d19q7",
-        "type": "short-response",
-        "prompt": "What is the most important distinction between ESG integration and impact investing for allocator diligence?",
-        "modelAnswer": "ESG integration is mainly about incorporating material risks and opportunities into investment decisions and ownership. Impact investing requires more: intentional pursuit of measurable outcomes and a credible case that the investment caused those outcomes. Allocators should not give impact credit when the evidence supports only improved risk management or operational stewardship."
       }
     ],
     "sources": [
@@ -8704,6 +8740,16 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Curriculum links",
         "content": "**Builds on:** Day 21 and Day 22, translated into lender-rights analysis; Day 41, translated into direct-lending downside control.\n**Critical companion lessons:** Day 43, Day 44, Day 49\n**Unlocks:** Better judgment on whether legal structure reinforces or undermines the underwriting case, and whether a credit strategy is truly defensive or only marketed that way."
+      },
+      {
+        "type": "weak-answer",
+        "title": "Weak vs. strong: responding to 'we have strong documentation'",
+        "content": "The GP says: 'Our documentation is institutional quality — we use market-standard terms across the portfolio.'\nWeak LP response: 'Good to hear — market-standard terms give us comfort on downside protection.'\nWhy it is weak: 'market standard' in private credit can mean almost anything, including broad EBITDA add-backs, loose baskets, and limited sacred-right protections. Accepting the label without examining specifics is not diligence.\nStrong LP response: 'Walk us through your typical EBITDA definition, the permitted add-back categories and caps, your sacred-right protections, and a recent example where your documentation gave you intervention leverage that a covenant-lite structure would not have provided.'"
+      },
+      {
+        "type": "inference-boundary",
+        "title": "Inference boundary: what documentation analysis can and cannot tell you",
+        "content": "**What documentation analysis can tell you:**\n- Whether the lender has meaningful intervention rights before value is fully eroded\n- Whether EBITDA definitions and add-backs create material measurement risk\n- Whether the manager prioritizes control quality or deal volume\n**What documentation analysis usually cannot tell you:**\n- Whether the manager will actually enforce its rights in a workout — willingness to act matters as much as the legal right to act\n- Whether market conditions will shift documentation standards before the portfolio matures\n- Whether strong documentation alone will prevent loss if the underlying credit thesis was wrong"
       }
     ],
     "quiz": [
@@ -9330,6 +9376,11 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Checkpoint synthesis",
         "content": "By the end of Day 45, the learner should be able to distinguish between cash-flow lending, stressed and distressed credit, and collateral-system strategies such as ABF. The core progression is that private credit is not one underwriting regime. Documentation, control rights, monitoring, workouts, and asset-level data each matter differently depending on where repayment actually comes from."
+      },
+      {
+        "type": "inference-boundary",
+        "title": "Inference boundary: what ABF analysis can and cannot tell you",
+        "content": "**What ABF analysis can tell you:**\n- Whether the collateral pool generates predictable, observable cash flows that support the lending thesis\n- Whether the manager has the operational infrastructure to monitor granular asset-level data\n- Whether the strategy genuinely diversifies a private-credit programme or simply adds complexity\n**What ABF analysis usually cannot tell you:**\n- Whether historical collateral performance will persist through a severe economic downturn or behavioral shift\n- Whether the servicer and originator will maintain underwriting discipline as the strategy scales\n- Whether the illiquidity premium embedded in ABF yields is adequate compensation for the operational and structural risks involved"
       }
     ],
     "quiz": [
@@ -9991,6 +10042,11 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Curriculum links",
         "content": "**Builds on:** Builds on Day 47.\n**Critical companion lessons:** Day 49 and Day 50.\n**Unlocks:** Better translation from a real-estate story to asset-level underwriting judgment.\n**Avoid redundancy:** Later real-estate lessons should assume this property-underwriting frame rather than re-explaining cap rates and NOI from scratch."
+      },
+      {
+        "type": "inference-boundary",
+        "title": "Inference boundary: what property underwriting can and cannot tell you",
+        "content": "**What property underwriting can tell you:**\n- Whether in-place NOI is durable based on lease terms, tenant quality, and rollover timing\n- Whether the debt structure can survive a realistic downside in rates, cap rates, or occupancy\n- Whether the sponsor's business plan requires market cooperation or stands on its own\n**What property underwriting usually cannot tell you:**\n- Whether macro shifts in tenant demand, remote work patterns, or interest rates will invalidate the sector thesis entirely\n- Whether the sponsor will fund rescue equity if the property underperforms but remains salvageable\n- Whether appraisal-based valuations reflect achievable transaction prices in a stressed market"
       }
     ],
     "quiz": [
@@ -10044,21 +10100,39 @@ export const lessonContents: LessonContent[] = [
       },
       {
         "questionId": "d48q5",
+        "type": "multiple-choice",
+        "prompt": "A sponsor says the property has strong debt yield. What additional metric should the allocator check before concluding the debt is safe?",
+        "options": [
+          "Only LTV, because it captures the full picture",
+          "DSCR at current rates, because debt yield alone does not reveal whether current cash flow covers current debt service",
+          "Trailing twelve-month revenue growth, because top-line momentum is the best debt protection",
+          "The sponsor's fund-level IRR, because it shows overall execution quality"
+        ],
+        "correctAnswer": "DSCR at current rates, because debt yield alone does not reveal whether current cash flow covers current debt service"
+      },
+      {
+        "questionId": "d48q6",
+        "type": "multiple-choice",
+        "prompt": "Why is tenant rollover risk especially important in property underwriting?",
+        "options": [
+          "Tenant rollover always improves NOI because new leases reset at higher market rents",
+          "Rolling leases create re-leasing costs and potential vacancy that can reduce NOI precisely when the sponsor needs stable cash flow for debt service or exit",
+          "Rollover risk only matters for retail properties, not office or industrial",
+          "Tenant rollover is already fully captured in the headline cap rate"
+        ],
+        "correctAnswer": "Rolling leases create re-leasing costs and potential vacancy that can reduce NOI precisely when the sponsor needs stable cash flow for debt service or exit"
+      },
+      {
+        "questionId": "d48q7",
         "type": "short-response",
         "prompt": "Explain in three to five sentences why a property should be underwritten as both an operating case and a refinancing case.",
         "modelAnswer": "A property can perform reasonably at the operating level and still become a poor investment if lenders will not refinance it on workable terms. Lease rollover, capex needs, and tenant weakness can reduce NOI just as debt matures, forcing new equity, loan modification, or default. The allocator therefore has to test both whether the cash flow is durable and whether the capital markets will still support the asset if the plan slips. A property thesis that works only in a friendly refinance market is not a resilient underwriting case."
       },
       {
-        "questionId": "d48q6",
+        "questionId": "d48q8",
         "type": "short-response",
         "prompt": "A GP says the deal was bought at an attractive cap rate. What are the three highest-value follow-up questions after this lesson?",
         "modelAnswer": "First, ask how much NOI is actually in place today versus dependent on lease-up, mark-to-market rent growth, or redevelopment. Second, ask when major leases roll and what tenant-improvement, leasing-commission, and capex burden is required to defend the income stream. Third, ask how the debt behaves if rates stay high or exit cap rates widen so you can see whether the equity case survives a weaker refinance market."
-      },
-      {
-        "questionId": "d48q7",
-        "type": "short-response",
-        "prompt": "Why can a modest NOI miss produce a much larger equity impairment in leveraged real estate?",
-        "modelAnswer": "Because value is a leveraged residual claim. A smaller NOI base reduces value directly, and a weaker lending market can reduce refinance proceeds at the same time. That combination can force the owner to repay debt with new equity or sell into a weak market. The result is that a deal can move from 'slightly below plan' to 'economically impaired' much faster than the operating miss alone suggests."
       }
     ],
     "sources": [
