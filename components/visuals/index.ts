@@ -49,8 +49,23 @@ import VentureMarkHierarchy from "./VentureMarkHierarchy";
 import VenturePortfolioMgmt from "./VenturePortfolioMgmt";
 import ReserveDecisionTree from "./ReserveDecisionTree";
 import VentureEdgeChain from "./VentureEdgeChain";
+import ManagementFees from "./ManagementFees";
+import FeeOffsets from "./FeeOffsets";
+import JCurveStrategyVariation from "./JCurveStrategyVariation";
+import IRRSubStrategies from "./IRRSubStrategies";
+import MultiplesLifecycle from "./MultiplesLifecycle";
+import DenominatorProblem from "./DenominatorProblem";
+import LifecyclePhaseMetrics from "./LifecyclePhaseMetrics";
+import VintageYearEffects from "./VintageYearEffects";
+import VintageYearComparison from "./VintageYearComparison";
+import SecondaryPricing from "./SecondaryPricing";
+import PEMarksSmoother from "./PEMarksSmoother";
+import NAVCredibilityTests from "./NAVCredibilityTests";
+import PESuitability from "./PESuitability";
+import LargerPEAllocation from "./LargerPEAllocation";
+import RecommendationStack from "./RecommendationStack";
 
-export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification, ComparisonFramework, StrategyDrift, ValueCreationDecomposition, IRRManipulation, RedFlagsValueCreation, FundDocumentStack, VentureStageMap, AlignmentDimensions, VentureVsBuyout, IRRMOICTradeoff, JCurveTroughFactors, FundFinanceTaxonomy, NarrativeVsDecisionReporting, ValuationGovernance, TopQuartileQuestions, StrongVsWeakEvidence, ConflictTaxonomy, MeetingVocabulary, BenchmarkingToolkit, MultiSleeveCashFlow, CreditRiskDashboard, DocumentationRiskMap, CoInvestRisk, ESGEvidenceLadder, CapTableLens, CompanyToFundRelevance, VentureMarkHierarchy, VenturePortfolioMgmt, ReserveDecisionTree, VentureEdgeChain };
+export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification, ComparisonFramework, StrategyDrift, ValueCreationDecomposition, IRRManipulation, RedFlagsValueCreation, FundDocumentStack, VentureStageMap, AlignmentDimensions, VentureVsBuyout, IRRMOICTradeoff, JCurveTroughFactors, FundFinanceTaxonomy, NarrativeVsDecisionReporting, ValuationGovernance, TopQuartileQuestions, StrongVsWeakEvidence, ConflictTaxonomy, MeetingVocabulary, BenchmarkingToolkit, MultiSleeveCashFlow, CreditRiskDashboard, DocumentationRiskMap, CoInvestRisk, ESGEvidenceLadder, CapTableLens, CompanyToFundRelevance, VentureMarkHierarchy, VenturePortfolioMgmt, ReserveDecisionTree, VentureEdgeChain, ManagementFees, FeeOffsets, JCurveStrategyVariation, IRRSubStrategies, MultiplesLifecycle, DenominatorProblem, LifecyclePhaseMetrics, VintageYearEffects, VintageYearComparison, SecondaryPricing, PEMarksSmoother, NAVCredibilityTests, PESuitability, LargerPEAllocation, RecommendationStack };
 
 export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "fund-lifecycle-timeline": FundLifecycleTimeline,
@@ -95,4 +110,19 @@ export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "venture-portfolio-mgmt": VenturePortfolioMgmt,
   "reserve-decision-tree": ReserveDecisionTree,
   "venture-edge-chain": VentureEdgeChain,
+  "management-fees": ManagementFees,
+  "fee-offsets": FeeOffsets,
+  "j-curve-strategy-variation": JCurveStrategyVariation,
+  "irr-sub-strategies": IRRSubStrategies,
+  "multiples-lifecycle": MultiplesLifecycle,
+  "denominator-problem": DenominatorProblem,
+  "lifecycle-phase-metrics": LifecyclePhaseMetrics,
+  "vintage-year-effects": VintageYearEffects,
+  "vintage-year-comparison": VintageYearComparison,
+  "secondary-pricing": SecondaryPricing,
+  "pe-marks-smoother": PEMarksSmoother,
+  "nav-credibility-tests": NAVCredibilityTests,
+  "pe-suitability": PESuitability,
+  "larger-pe-allocation": LargerPEAllocation,
+  "recommendation-stack": RecommendationStack,
 };
