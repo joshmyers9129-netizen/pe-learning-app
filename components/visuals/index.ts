@@ -71,8 +71,28 @@ import DilutionMap from "./DilutionMap";
 import SeedInstrumentMap from "./SeedInstrumentMap";
 import SAFEInferenceMap from "./SAFEInferenceMap";
 import CommonVsPreferred from "./CommonVsPreferred";
+import TermSheetLayerTwo from "./TermSheetLayerTwo";
+import EconVsControlRights from "./EconVsControlRights";
+import VentureMarkFramework from "./VentureMarkFramework";
+import VentureUnderwritingSequence from "./VentureUnderwritingSequence";
+import BizModelFailureMap from "./BizModelFailureMap";
+import VentureLiquidityMap from "./VentureLiquidityMap";
+import ExitQualityVsHeadline from "./ExitQualityVsHeadline";
+import GrowthEquityClassification from "./GrowthEquityClassification";
+import LateStageEcosystem from "./LateStageEcosystem";
+import VentureManagerScorecard from "./VentureManagerScorecard";
+import PrivateCreditMap from "./PrivateCreditMap";
+import CreditStressLadder from "./CreditStressLadder";
+import DirectLendingUnderwriting from "./DirectLendingUnderwriting";
+import DistressedPathway from "./DistressedPathway";
+import ABFvsCashFlow from "./ABFvsCashFlow";
+import CreditVehiclesDiff from "./CreditVehiclesDiff";
+import RealEstateMap from "./RealEstateMap";
+import PropertyUnderwritingStack from "./PropertyUnderwritingStack";
+import LossWaterfallStack from "./LossWaterfallStack";
+import CIORoleMap from "./CIORoleMap";
 
-export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification, ComparisonFramework, StrategyDrift, ValueCreationDecomposition, IRRManipulation, RedFlagsValueCreation, FundDocumentStack, VentureStageMap, AlignmentDimensions, VentureVsBuyout, IRRMOICTradeoff, JCurveTroughFactors, FundFinanceTaxonomy, NarrativeVsDecisionReporting, ValuationGovernance, TopQuartileQuestions, StrongVsWeakEvidence, ConflictTaxonomy, MeetingVocabulary, BenchmarkingToolkit, MultiSleeveCashFlow, CreditRiskDashboard, DocumentationRiskMap, CoInvestRisk, ESGEvidenceLadder, CapTableLens, CompanyToFundRelevance, VentureMarkHierarchy, VenturePortfolioMgmt, ReserveDecisionTree, VentureEdgeChain, ManagementFees, FeeOffsets, JCurveStrategyVariation, IRRSubStrategies, MultiplesLifecycle, DenominatorProblem, LifecyclePhaseMetrics, VintageYearEffects, VintageYearComparison, SecondaryPricing, PEMarksSmoother, NAVCredibilityTests, PESuitability, LargerPEAllocation, RecommendationStack, CapitalStructureDesign, SecondaryBuyouts, RecommendationLanguage, DilutionMap, SeedInstrumentMap, SAFEInferenceMap, CommonVsPreferred };
+export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification, ComparisonFramework, StrategyDrift, ValueCreationDecomposition, IRRManipulation, RedFlagsValueCreation, FundDocumentStack, VentureStageMap, AlignmentDimensions, VentureVsBuyout, IRRMOICTradeoff, JCurveTroughFactors, FundFinanceTaxonomy, NarrativeVsDecisionReporting, ValuationGovernance, TopQuartileQuestions, StrongVsWeakEvidence, ConflictTaxonomy, MeetingVocabulary, BenchmarkingToolkit, MultiSleeveCashFlow, CreditRiskDashboard, DocumentationRiskMap, CoInvestRisk, ESGEvidenceLadder, CapTableLens, CompanyToFundRelevance, VentureMarkHierarchy, VenturePortfolioMgmt, ReserveDecisionTree, VentureEdgeChain, ManagementFees, FeeOffsets, JCurveStrategyVariation, IRRSubStrategies, MultiplesLifecycle, DenominatorProblem, LifecyclePhaseMetrics, VintageYearEffects, VintageYearComparison, SecondaryPricing, PEMarksSmoother, NAVCredibilityTests, PESuitability, LargerPEAllocation, RecommendationStack, CapitalStructureDesign, SecondaryBuyouts, RecommendationLanguage, DilutionMap, SeedInstrumentMap, SAFEInferenceMap, CommonVsPreferred, TermSheetLayerTwo, EconVsControlRights, VentureMarkFramework, VentureUnderwritingSequence, BizModelFailureMap, VentureLiquidityMap, ExitQualityVsHeadline, GrowthEquityClassification, LateStageEcosystem, VentureManagerScorecard, PrivateCreditMap, CreditStressLadder, DirectLendingUnderwriting, DistressedPathway, ABFvsCashFlow, CreditVehiclesDiff, RealEstateMap, PropertyUnderwritingStack, LossWaterfallStack, CIORoleMap };
 
 export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "fund-lifecycle-timeline": FundLifecycleTimeline,
@@ -139,4 +159,24 @@ export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "seed-instrument-map": SeedInstrumentMap,
   "safe-inference-map": SAFEInferenceMap,
   "common-vs-preferred": CommonVsPreferred,
+  "term-sheet-layer-two": TermSheetLayerTwo,
+  "econ-vs-control-rights": EconVsControlRights,
+  "venture-mark-framework": VentureMarkFramework,
+  "venture-underwriting-sequence": VentureUnderwritingSequence,
+  "biz-model-failure-map": BizModelFailureMap,
+  "venture-liquidity-map": VentureLiquidityMap,
+  "exit-quality-vs-headline": ExitQualityVsHeadline,
+  "growth-equity-classification": GrowthEquityClassification,
+  "late-stage-ecosystem": LateStageEcosystem,
+  "venture-manager-scorecard": VentureManagerScorecard,
+  "private-credit-map": PrivateCreditMap,
+  "credit-stress-ladder": CreditStressLadder,
+  "direct-lending-underwriting": DirectLendingUnderwriting,
+  "distressed-pathway": DistressedPathway,
+  "abf-vs-cashflow": ABFvsCashFlow,
+  "credit-vehicles-diff": CreditVehiclesDiff,
+  "real-estate-map": RealEstateMap,
+  "property-underwriting-stack": PropertyUnderwritingStack,
+  "loss-waterfall-stack": LossWaterfallStack,
+  "cio-role-map": CIORoleMap,
 };

@@ -288,7 +288,7 @@ function Block({ block }: { block: LessonBlock }) {
             className="w-full rounded-lg mb-4 object-contain max-h-80"
           />
         )}
-        {block.content && (
+        {block.content && !VisualComponent && (
           <div className="text-[15px] text-[#000000] leading-[1.7] mb-3">
             {renderContent(block.content)}
           </div>
