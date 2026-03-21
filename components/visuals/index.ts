@@ -71,8 +71,19 @@ import DilutionMap from "./DilutionMap";
 import SeedInstrumentMap from "./SeedInstrumentMap";
 import SAFEInferenceMap from "./SAFEInferenceMap";
 import CommonVsPreferred from "./CommonVsPreferred";
+import NBPEDiscount from "./NBPEDiscount";
+import DenominatorEffect from "./DenominatorEffect";
+import CalPERSFeeTransparency from "./CalPERSFeeTransparency";
+import ILPASubscriptionLines from "./ILPASubscriptionLines";
+import CalPERSIRRvsMOIC from "./CalPERSIRRvsMOIC";
+import NewMexicoPERA from "./NewMexicoPERA";
+import VermontPensionVintage from "./VermontPensionVintage";
+import HiltonBlackstone from "./HiltonBlackstone";
+import SubStrategyComparison from "./SubStrategyComparison";
+import KraftHeinzValueCreation from "./KraftHeinzValueCreation";
+import HiltonExitSequence from "./HiltonExitSequence";
 
-export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification, ComparisonFramework, StrategyDrift, ValueCreationDecomposition, IRRManipulation, RedFlagsValueCreation, FundDocumentStack, VentureStageMap, AlignmentDimensions, VentureVsBuyout, IRRMOICTradeoff, JCurveTroughFactors, FundFinanceTaxonomy, NarrativeVsDecisionReporting, ValuationGovernance, TopQuartileQuestions, StrongVsWeakEvidence, ConflictTaxonomy, MeetingVocabulary, BenchmarkingToolkit, MultiSleeveCashFlow, CreditRiskDashboard, DocumentationRiskMap, CoInvestRisk, ESGEvidenceLadder, CapTableLens, CompanyToFundRelevance, VentureMarkHierarchy, VenturePortfolioMgmt, ReserveDecisionTree, VentureEdgeChain, ManagementFees, FeeOffsets, JCurveStrategyVariation, IRRSubStrategies, MultiplesLifecycle, DenominatorProblem, LifecyclePhaseMetrics, VintageYearEffects, VintageYearComparison, SecondaryPricing, PEMarksSmoother, NAVCredibilityTests, PESuitability, LargerPEAllocation, RecommendationStack, CapitalStructureDesign, SecondaryBuyouts, RecommendationLanguage, DilutionMap, SeedInstrumentMap, SAFEInferenceMap, CommonVsPreferred };
+export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification, ComparisonFramework, StrategyDrift, ValueCreationDecomposition, IRRManipulation, RedFlagsValueCreation, FundDocumentStack, VentureStageMap, AlignmentDimensions, VentureVsBuyout, IRRMOICTradeoff, JCurveTroughFactors, FundFinanceTaxonomy, NarrativeVsDecisionReporting, ValuationGovernance, TopQuartileQuestions, StrongVsWeakEvidence, ConflictTaxonomy, MeetingVocabulary, BenchmarkingToolkit, MultiSleeveCashFlow, CreditRiskDashboard, DocumentationRiskMap, CoInvestRisk, ESGEvidenceLadder, CapTableLens, CompanyToFundRelevance, VentureMarkHierarchy, VenturePortfolioMgmt, ReserveDecisionTree, VentureEdgeChain, ManagementFees, FeeOffsets, JCurveStrategyVariation, IRRSubStrategies, MultiplesLifecycle, DenominatorProblem, LifecyclePhaseMetrics, VintageYearEffects, VintageYearComparison, SecondaryPricing, PEMarksSmoother, NAVCredibilityTests, PESuitability, LargerPEAllocation, RecommendationStack, CapitalStructureDesign, SecondaryBuyouts, RecommendationLanguage, DilutionMap, SeedInstrumentMap, SAFEInferenceMap, CommonVsPreferred, NBPEDiscount, DenominatorEffect, CalPERSFeeTransparency, ILPASubscriptionLines, CalPERSIRRvsMOIC, NewMexicoPERA, VermontPensionVintage, HiltonBlackstone, HiltonExitSequence, SubStrategyComparison, KraftHeinzValueCreation };
 
 export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "fund-lifecycle-timeline": FundLifecycleTimeline,
@@ -139,4 +150,15 @@ export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "seed-instrument-map": SeedInstrumentMap,
   "safe-inference-map": SAFEInferenceMap,
   "common-vs-preferred": CommonVsPreferred,
+  "nbpe-discount": NBPEDiscount,
+  "denominator-effect-case": DenominatorEffect,
+  "calpers-fee-transparency": CalPERSFeeTransparency,
+  "ilpa-subscription-lines": ILPASubscriptionLines,
+  "calpers-irr-vs-moic": CalPERSIRRvsMOIC,
+  "new-mexico-pera": NewMexicoPERA,
+  "vermont-pension-vintage": VermontPensionVintage,
+  "hilton-blackstone": HiltonBlackstone,
+  "hilton-exit-sequence": HiltonExitSequence,
+  "sub-strategy-comparison": SubStrategyComparison,
+  "kraft-heinz-value-creation": KraftHeinzValueCreation,
 };
