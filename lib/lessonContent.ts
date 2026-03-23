@@ -2200,6 +2200,14 @@ export const lessonContents: LessonContent[] = [
         "content": "ILPA's model LPAs and market-term surveys are useful allocator evidence because they show where negotiation pressure persists across funds. ILPA's whole-of-fund model LPA makes the economic logic explicit: return all contributed capital and the preferred return before the GP fully participates in carry. Its deal-by-deal model and related guidance are more defensive because early realizations can accelerate carry years before the full portfolio outcome is known. ILPA's 2021 market-terms report also noted that interim clawbacks are negotiated more often in deal-by-deal structures precisely because LPs recognize the overpayment risk.\nAllocator lesson: this is not just legal architecture. A GP can present 'standard' fee and carry economics while still asking LPs to accept more timing risk, weaker escrow, looser recycling, or less robust clawback protection. Headline economics can look normal while the net-risk transfer moves toward the GP."
       },
       {
+        "type": "visual",
+        "title": "European vs American waterfall: why structure changes LP risk",
+        "visualId": "ilpa-waterfall-comparison",
+        "caption": "ILPA maintains two model LPAs because the waterfall structure fundamentally changes carry timing, clawback exposure, and LP protection quality.",
+        "whyItMatters": "A GP presenting 'standard market terms' may be using an American waterfall with weak clawback protection — the headline fee and carry look normal while the net-risk transfer favours the GP.",
+        "sourceNote": "ILPA Principles 3.0; ILPA model LPA provisions; ILPA 2021 market-terms report on interim clawback negotiation frequency."
+      },
+      {
         "type": "meeting-application",
         "title": "In the manager meeting: five questions to ask about fund economics",
         "content": "These questions should feel like a professional conversation, not an interrogation. They signal that you understand the economics deeply:\n- 'Can you walk us through the waterfall in practical terms - with an illustrative example of how distributions would flow across the different tiers?'\n- 'Under your American waterfall, how have prior carry payments timed relative to final fund realizations? Have there been situations where carry was paid early that required adjustment?'\n- 'How is the clawback protected in practice - is there an escrow mechanism, and if so, what percentage of carry is held and for how long?'\n- 'Your LPA grants broad recycling authority - how much have you historically recycled across your prior funds, and what was the maximum effective deployment multiple in any prior fund?'\n- 'Under what circumstances would you expect to use the extension rights? In prior funds where you used extensions, was there LP or LPAC consultation in advance?'"
@@ -2380,6 +2388,14 @@ export const lessonContents: LessonContent[] = [
         "type": "example",
         "title": "Real-world allocator case: PA SERS shows why peer-relative and public-relative success can diverge",
         "content": "Pennsylvania SERS' March 31, 2025 private equity board update gives a clean allocator example. On a five-year basis, the combined private equity portfolio reported a 16.6% IRR versus 15.0% for the Burgiss Private iQ pooled private equity benchmark. But the same report showed the Russell 3000 at 18. That is the key lesson: peer-relative success and public-market-relative success are not the same thing.\nAllocator takeaway: A board can hear 'we beat private peers' and still miss the more important opportunity-cost question. The right interpretation is two-step. First, ask where the programme sits versus its private peer set. Second, ask whether the same cash-flow pattern justified the illiquidity, fees, and governance burden versus the relevant public alternative. A fund or programme can clear one test and still fail the other."
+      },
+      {
+        "type": "visual",
+        "title": "PA SERS: peer success vs public-market success diverge",
+        "visualId": "pa-sers-benchmark-divergence",
+        "caption": "PA SERS beat private-equity peers by 1.6 percentage points but lagged the Russell 3000 — showing that peer-relative and public-relative success answer different questions.",
+        "whyItMatters": "A board that hears 'we beat private peers' may miss the more important opportunity-cost question: did the programme justify its illiquidity and fee burden versus the public alternative?",
+        "sourceNote": "Pennsylvania SERS March 31, 2025 private equity board update; Burgiss Private iQ benchmark data."
       },
       {
         "type": "visual",
@@ -2612,6 +2628,14 @@ export const lessonContents: LessonContent[] = [
         "content": "A real allocator problem appears when a famous franchise changes shape. In 2018, Kleiner Perkins said it would spin off its late-stage investing practice. Mary Meeker left the firm with other investors from that growth team, and Bond later raised roughly $1.25 billion.\nHistorical winners associated with the Kleiner name did not automatically prove that the same decision engine, economics, or stage discipline remained in one place. The allocator had to re-underwrite who actually drove late-stage judgment, whether the new entities were keeping or changing fund-size discipline, how economics would be shared, and whether references pointed to an institutional process or to a few individuals.\nAllocator lesson: brand can survive organizational change better than investment continuity can. When a franchise splits, grows fast, or transitions generations, treat the old logo as background context, not as current proof."
       },
       {
+        "type": "visual",
+        "title": "Franchise splits and team continuity risk",
+        "visualId": "kleiner-perkins-team-split",
+        "caption": "When a famous franchise splits, the allocator must re-underwrite who drove performance, whether the decision engine survived, and whether brand continuity masks investment discontinuity.",
+        "whyItMatters": "Brand can survive organisational change better than investment continuity can. An LP who treats a franchise logo as current evidence — rather than re-underwriting the people, process, and economics — may be buying yesterday's track record.",
+        "sourceNote": "Kleiner Perkins / Bond separation (2018); Bond Capital's initial fundraise of approximately $1.25 billion."
+      },
+      {
         "type": "allocator-application",
         "title": "Allocator application: the four durability tests after a franchise change",
         "content": "When a GP has brand strength but real organizational change, press four issues before treating the franchise as durable.\n**1. Decision-engine continuity** Who actually made the investments that built the reputation, and are those people still making the same type of decisions?\n**2. Incentive continuity** Did carry ownership, equity ownership, or promotion paths shift in ways that could weaken retention or risk discipline?\n**3. Strategy continuity** Did fund size, stage, sector, or geography move enough that the historical record is no longer a clean guide to the next fund?\nIf the answers are fuzzy, a famous GP should be scored as less underwriteable than a plainer-looking firm with cleaner continuity."
@@ -2786,6 +2810,14 @@ export const lessonContents: LessonContent[] = [
         "type": "example",
         "title": "Real-world case study: Pennsylvania SERS cut private-equity pacing in 2024 when liquidity and denominator pressure changed the programme math",
         "content": "In 2024, Pennsylvania SERS board materials showed staff and consultant recommendations for an $800 million private-equity pacing level rather than simply maintaining prior commitment rhythm. The point was not that private equity had become unattractive. The point was that slowed distributions, denominator effects, and total-fund liquidity conditions had changed the programme-level arithmetic.\nAllocator lesson:\nThis is what real pacing discipline looks like. A allocator does not ask only whether manager opportunities look good. The allocator also asks whether the portfolio can absorb new commitments without creating hidden liquidity stress or forcing poor future decisions. Programme construction is therefore not a clerical overlay to manager selection. It is part of the investment decision itself."
+      },
+      {
+        "type": "visual",
+        "title": "PA SERS pacing reduction: programme math in action",
+        "visualId": "pa-sers-pacing-decision",
+        "caption": "Pennsylvania SERS reduced annual PE pacing by ~27% in 2024, driven by slowed distributions, denominator effects, and liquidity conditions — not by a change in view on manager quality.",
+        "whyItMatters": "Pacing discipline means the programme-level arithmetic governs commitment decisions, not GP attractiveness alone. A strong manager at the wrong programme moment is still the wrong commitment.",
+        "sourceNote": "Pennsylvania SERS 2024 board materials; staff and consultant pacing recommendations."
       },
       {
         "type": "exercise",
@@ -2974,6 +3006,14 @@ export const lessonContents: LessonContent[] = [
         "content": "When reports surfaced in 2025 that Yale was exploring sales of private-equity fund interests, the allocator lesson was not that secondaries are only a tool for distressed sellers. The more useful interpretation was that even highly sophisticated institutions can use the secondary market as a portfolio-management valve when liquidity, pacing, denominator pressure, or strategic rebalancing require action.\nAllocator takeaway:\nA secondary sale can reflect many motives at once: liquidity management, vintage rebalancing, exposure reduction, manager pruning, or simply a view that capital can be redeployed into better opportunities. A buyer who interprets every sale as informational alpha from the seller will misread the market. A seller who treats secondaries as costless balance-sheet management will also misread the market. The price, discount, concentration, unfunded tail, and quality of the underlying managers all still matter."
       },
       {
+        "type": "visual",
+        "title": "Yale: secondary sales as programme management",
+        "visualId": "yale-secondary-strategy",
+        "caption": "Yale's 2025 secondary-sale exploration shows that even elite institutions use secondaries as a programme-management tool — not from distress, but from strategic rebalancing priorities.",
+        "whyItMatters": "A buyer who treats every sale as informational alpha will misread the market. A seller who treats secondaries as costless will also misread it. Both sides must underwrite the specific economics.",
+        "sourceNote": "Reported Yale endowment secondary-sale exploration (2025); Lazard 2023 Secondary Market Report on LP-led portfolio pricing."
+      },
+      {
         "type": "meeting-application",
         "title": "Manager-diligence application: what to ask in a continuation-vehicle meeting after Day 15",
         "content": "The allocator should leave this lesson with a more exact continuation-vehicle script. Ask why the asset was not sold outright, what evidence supports the reset value, who provided fairness or price-validation input, how rollover and cash-out LPs were treated, what new economics the GP is earning, and what the downside case looks like if the holding period extends again.\nThe key upgrade is that you are no longer reacting to the transaction as a generic liquidity event. You are underwriting it as a fresh deal with embedded conflicts, selective information advantages, and a new alignment package. That is what separates modern secondary fluency from simply knowing the vocabulary."
@@ -3124,6 +3164,14 @@ export const lessonContents: LessonContent[] = [
         "type": "example",
         "title": "Real-world case: Qualtrics shows why size-driven syndication does not remove single-name risk",
         "content": "Qualtrics' 2023 take-private is a useful co-invest syndication case. When Qualtrics agreed to be acquired by Silver Lake in partnership with CPP Investments, the company disclosed that the transaction was financed by equity commitments from Silver Lake and co-investors, together with $1.75 billion of equity from CPP Investments and $1. This is a clean reminder that sponsor-backed syndication is often about concentration management and transaction size, not necessarily weak conviction.\nAllocator takeaway: That does not make the LP's job easy. A zero-fee or reduced-fee co-invest into a deal like this still creates single-name software exposure, a specific leverage package, and a time-sensitive exit-underwriting problem. Lower fees improve net economics. They do not remove underwriting burden, concentration risk, timeline risk, or the need to understand why the sponsor retained the hold size it did."
+      },
+      {
+        "type": "visual",
+        "title": "Qualtrics co-invest anatomy: fee savings vs concentration risk",
+        "visualId": "qualtrics-coinvest-anatomy",
+        "caption": "Silver Lake's Qualtrics syndication shows that co-invest is about concentration management and deal size — but fee savings do not eliminate single-name risk, timeline pressure, or underwriting burden.",
+        "whyItMatters": "LPs are drawn to co-invest because the fee advantage is easy to quantify. The harder part is recognising that underwriting challenge, look-through concentration, and compressed timelines are materially different from a primary fund commitment.",
+        "sourceNote": "Qualtrics 2023 take-private disclosure; Silver Lake and CPP Investments equity commitment structure."
       },
       {
         "type": "teaching",
@@ -3358,6 +3406,14 @@ export const lessonContents: LessonContent[] = [
         "content": "NB Private Equity Partners reported a 31 December 2024 NAV per share of £21.49 while its share price closed at £15.80, a **26.5% discount to stated NAV**. That does **not** prove the underlying company marks were wrong or manipulated. It does show something more useful for allocators: a published fair-value estimate and an executable market-clearing price can diverge materially at the same time.\nTwo disciplined interpretations follow. First, the discount is a warning against treating private-equity NAV as equivalent to cash value available on demand. Second, the market is implicitly applying a haircut for illiquidity, uncertainty, fees, timing, and the possibility that some marks will prove optimistic when assets are actually realized.\nHarbourVest's discussion of LP-led secondaries makes the same point from a different angle: when discounts widen, buyers still need to decide whether they are buying true value or simply receiving a discount to an overstated NAV.\nThe allocator conclusion is not 'trust public discount, ignore GP NAV.' It is: use discounts and secondary pricing as **external stress tests** on mark credibility and liquidity value, then ask whether the GP's top positions and exit history support the reported NAV."
       },
       {
+        "type": "visual",
+        "title": "NAV discount as signal, not verdict",
+        "visualId": "nav-signal-not-verdict",
+        "caption": "NBPE's 26.5% discount does not prove NAV is wrong — it shows that reported fair value and executable market price can diverge materially and persistently.",
+        "whyItMatters": "Use discounts and secondary pricing as external stress tests on mark credibility and liquidity value, not as proof that every GP mark is inflated.",
+        "sourceNote": "NBPE December 2024 factsheet (NAV £21.49, share price £15.80); HarbourVest LP-led secondary pricing commentary."
+      },
+      {
         "type": "example",
         "title": "Worked example: exit history as the best valuation audit",
         "content": "A GP's last three exits were carried in the prior quarter at $210M, $165M, and $95M, respectively. They were ultimately realized at $205M, $168M, and $72M.\nWhat does this pattern show?\n- Exit 1: realized essentially in line with carrying value\n- Exit 2: realized modestly above carrying value\n- Exit 3: realized materially below carrying value (a 24% shortfall)\nThe overall conclusion is not simply 'marks are bad' or 'marks are fine.' It is more nuanced. The first two exits suggest the GP is broadly capable of marking credibly. The third exit suggests either that company-specific deterioration occurred late, or that the prior carrying value had embedded optimism that the market did not validate.\nThe allocator's next question should be: was Exit 3 an exception or part of a pattern? If one disappointing realization sits among many accurate ones, the inference is limited. If realizations repeatedly land below prior NAV, the GP's valuation style is biased upward.\nA secondary issue worth examining: the timing of downward mark revisions relative to exits. A GP that marks a company down one quarter before sale - after holding a higher mark for two years - may be managing the optics of when the write-down appears, not just reflecting business conditions. If marks only deteriorate in the final quarter before exit, that is a pattern worth flagging. Credible marking should produce gradual adjustment as information arrives, not a lumpy reset immediately before a realized price is disclosed.\nOver time, exit history is the most powerful reality check available. The question to maintain across relationships is not just 'how often did realizations match marks?' but 'when marks were wrong, were they systematically high or systematically low, and why?'"
@@ -3559,6 +3615,14 @@ export const lessonContents: LessonContent[] = [
       },
       {
         "type": "visual",
+        "title": "The smooth-marks governance paradox",
+        "visualId": "smooth-marks-governance",
+        "caption": "HarbourVest's ~45% discount shows how smooth appraisal-based marks can diverge dramatically from market-clearing prices — creating hidden governance and portfolio risks.",
+        "whyItMatters": "Smooth marks reduce reported volatility but do not eliminate real portfolio risks. Committees that confuse appraisal smoothness with economic stability may misjudge liquidity, rebalancing capacity, and opportunity cost.",
+        "sourceNote": "HarbourVest Global Private Equity 2024 discount data; Lazard 2023 Secondary Market Report on LP-led portfolio pricing."
+      },
+      {
+        "type": "visual",
         "title": "What a larger PE allocation really asks the institution to do",
         "visualId": "larger-pe-allocation",
         "content": "**Increasing PE asks for more than tolerance for illiquidity:**\n| If PE increases... | The institution must also accept... |\n|---|---|\n| **Higher return-seeking exposure** | Greater dependence on manager selection skill |\n| **More funded NAV over time** | Slower rebalancing and more denominator-effect risk |\n| **More commitments and relationships** | Higher governance load and monitoring burden |\n| **More illiquid capital** | Less flexibility to fund spending or redeploy during stress |\n| **Potentially higher net returns** | A higher burden of proof versus public-market opportunity cost |\nA larger PE allocation is an operating commitment, not just a strategic asset-allocation line item.",
@@ -3754,6 +3818,14 @@ export const lessonContents: LessonContent[] = [
         "type": "example",
         "title": "Real case: Vista Equity Partners and portfolio emissions measurement",
         "content": "Vista's public climate materials are useful because they move beyond generic commitment language into operating evidence. According to the PRI case study and Vista's climate reporting, the firm used its value-creation infrastructure to help software portfolio companies measure emissions, provided a toolkit and software support, and by the end of 2021 had measured 2019 emissions for all majority-owned portfolio companies plus five minority-controlled companies. Vista also stated that footprint results were expected to be discussed at the board level annually and that historical GHG data was being integrated into exit materials.\nAllocator lesson: the most useful part of this case is not the net-zero headline. It is the operating chain. A sector-specific materiality thesis led to portfolio-wide measurement, management support, board discussion, and sell-side documentation. That is what process evidence looks like. An allocator still has to ask whether the effort improved economics, reduced risk, or broadened exit readiness, but this is meaningfully stronger than a GP that only publishes a policy PDF."
+      },
+      {
+        "type": "visual",
+        "title": "Vista's ESG evidence chain: from thesis to exit",
+        "visualId": "vista-esg-evidence",
+        "caption": "Vista moved from a sector-specific materiality thesis through portfolio-wide measurement, management support, board discussion, and exit documentation — showing what real ESG process evidence looks like.",
+        "whyItMatters": "ESG should change decisions, not just reporting. Credit only the evidence that shows altered underwriting, ownership behaviour, or economic outcomes — not policy PDFs or signatory badges.",
+        "sourceNote": "PRI case study, Vista Equity Partners (2022); Vista climate reporting on portfolio emissions measurement."
       },
       {
         "type": "example",
@@ -3984,6 +4056,14 @@ export const lessonContents: LessonContent[] = [
         "content": "Many real IC debates are not about obviously good or obviously bad managers. They are about mixed cases: a respected franchise with some team turnover, a strategy with strong historic outcomes but weaker recent deployment conditions, or a GP that is still investable but only in a narrower role than before. In those situations, weak recommendation writing hides behind summary language. Strong recommendation writing makes the tradeoff explicit.\nAllocator takeaway:\nThe best recommendation notes do three things at once. They state the decision clearly, isolate the handful of facts that actually drive that decision, and define the monitoring triggers that would change it later. If the note does not tell a committee what would make you upgrade, downgrade, or revisit the call, the judgment is still incomplete."
       },
       {
+        "type": "visual",
+        "title": "Recommendation quality: where allocator skill is tested",
+        "visualId": "recommendation-quality",
+        "caption": "Recommendation skill is tested by borderline cases with mixed facts — not by easy approvals or obvious declines where the answer writes itself.",
+        "whyItMatters": "If a recommendation note does not say what would change the call, the judgment is still incomplete. The five common failure modes — headline capture, realization neglect, process-story mismatch, programme-blind approval, and vague risk language — are all testable and fixable.",
+        "sourceNote": "Synthesised from the Day 1-19 curriculum: each failure mode maps to a specific prior lesson's analytical framework."
+      },
+      {
         "type": "example",
         "title": "Case study: recasting a borderline manager from 'approve' to 'approve only as a complement'",
         "content": "Assume a buyout manager has a credible team, acceptable alignment, and repeatable sourcing, but also shows narrower sector breadth, higher valuation sensitivity, and weaker downside resilience than the strongest peers. A weak memo would still push toward a generic approval because there is no obvious red flag. A stronger memo would redefine the portfolio role.\nAllocator lesson:\nThe improved recommendation is not 'we like the manager.' It is 'we view the strategy as usable only as a complement within a diversified PE program, not as a core anchor, because upside capture appears intact but downside protection and breadth are weaker than top-tier alternatives.' That is a better investment judgment because it links evidence to role sizing and implementation, not just to a binary vote."
@@ -4198,6 +4278,14 @@ export const lessonContents: LessonContent[] = [
         "content": "Recent regulation made an old allocator lesson explicit. The SEC's 2023 private-fund adviser rules focused heavily on preferential treatment, especially side-letter terms that grant certain investors better redemption, withdrawal, or information rights.\nThe headline economics can look identical across two LPs and still hide meaningful differences in risk. One LP may have superior information rights. Another may have negotiated liquidity or excuse rights that matter in stress.\nAllocator lesson: legal terms are part of underwriting. If one LP can see more, exit earlier, or influence financing flexibility differently, the risk is not the same even when the fee terms are."
       },
       {
+        "type": "visual",
+        "title": "Side-letter asymmetry: identical fees, different risk",
+        "visualId": "side-letter-risk-map",
+        "caption": "Two LPs with identical headline fees can have materially different risk profiles based on information rights, liquidity provisions, and financing permissions hidden in side letters.",
+        "whyItMatters": "Legal terms are part of underwriting. The SEC's 2023 focus on preferential treatment confirmed that side-letter asymmetry is structural, not marginal.",
+        "sourceNote": "SEC 2023 private-fund adviser rules on preferential treatment; ILPA best practices on side-letter transparency."
+      },
+      {
         "type": "meeting-application",
         "title": "In the documents review: the three questions that matter most",
         "content": "When reviewing LPAs and side letters, ask three direct questions.\n**1. Information asymmetry:** Can any LP receive materially better portfolio, valuation, or financing information than others?\n**2. Liquidity asymmetry:** Does any LP have redemption, excuse, transfer, or withdrawal rights that could change behavior under stress?\n**3. Financing flexibility:** What exactly may the GP do with subscription lines or other fund-level financing, how long can facilities stay outstanding, who bears the cost, and how will performance be shown both gross and line-adjusted?\nA normal-fee fund with weak answers can be riskier than a more expensive fund with cleaner documentation."
@@ -4407,6 +4495,14 @@ export const lessonContents: LessonContent[] = [
         "type": "example",
         "title": "Real-world case study: American Infrastructure and Blackstone show how governance failures move economics, not just optics",
         "content": "Two SEC cases are useful because they show different ways governance failures can hurt LPs. In 2023, the SEC said American Infrastructure Funds transferred assets from expiring funds into a new fund it also advised, extending investor money for at least an additional decade without investor consent, without an exit option for existing investors, and without adequate conflict disclosure. In 2015, the SEC said Blackstone failed to fully disclose accelerated monitoring-fee practices and a legal-fee discount arrangement that benefited Blackstone more than the funds it advised.\nAllocator lesson: these are not merely disclosure mistakes. They change economics, liquidity, and bargaining position. One case changes duration and LP choice. The other changes who captures value at the portfolio-company and adviser level. A governance review that focuses only on whether the GP is reputable will miss the more important question: where can the GP lawfully or practically move value when stress, exits, or fee events arise?"
+      },
+      {
+        "type": "visual",
+        "title": "Governance failures that move economics",
+        "visualId": "governance-failure-economics",
+        "caption": "American Infrastructure's asset transfer and Blackstone's fee practices show two different patterns of governance failure — both changed LP economics, not just optics.",
+        "whyItMatters": "A governance review that focuses only on GP reputation will miss the more important question: where can the GP move value when stress, exits, or fee events arise?",
+        "sourceNote": "SEC enforcement actions: American Infrastructure Funds (2023), Blackstone Management Partners (2015)."
       },
       {
         "type": "teaching",
@@ -4630,6 +4726,14 @@ export const lessonContents: LessonContent[] = [
         "type": "example",
         "title": "Real-world case study: Abraaj and why cash-control and use-of-proceeds reporting matter",
         "content": "The Abraaj situation is one of the clearest reminders that polished private-markets storytelling is not a substitute for hard cash reporting and governance controls. Investor concerns escalated when questions emerged about the use of capital in healthcare-focused vehicles and whether cash was being deployed and held in ways LPs had not fully understood.\nWhy the case matters for this lesson:\n- cash-location and use-of-proceeds reporting can be more important than polished valuation commentary\n- side letters, governance rights, and administrator oversight matter most when stress appears\n- a manager's willingness to provide granular support often becomes visible only after LPs ask hard questions\nAllocator analysis path:\n**Step 1: distinguish performance reporting from control reporting** A quarterly NAV package can look comprehensive while still telling you too little about where cash sits, who controls it, and how it can move."
+      },
+      {
+        "type": "visual",
+        "title": "Abraaj: performance reporting vs cash-control reporting",
+        "visualId": "abraaj-cash-control",
+        "caption": "The Abraaj situation showed that polished performance reporting is not a substitute for cash-control and use-of-proceeds transparency — the most important reporting gap is often invisible until stress appears.",
+        "whyItMatters": "Cash-location reporting can be more important than polished valuation commentary. Side letters, governance rights, and administrator oversight matter most when the GP's willingness to provide granular detail is tested.",
+        "sourceNote": "Abraaj investor concerns and regulatory proceedings; ILPA reporting standards on cash-flow transparency."
       },
       {
         "type": "weak-answer",
@@ -4858,6 +4962,14 @@ export const lessonContents: LessonContent[] = [
         "content": "The Financial Times reported in February 2026 that Triton created a continuation fund in 2021 to buy assets from its 2009 Fund III, and that most existing investors chose to cash out rather than roll. The report said Triton later generated about €550 million in gross proceeds from assets acquired for roughly €210 million, raising obvious questions about whether the original LPs exited at a price that was procedurally fair but economically too low. Triton said the process followed market practice and involved independent pricing and investor disclosures.\nAllocator lesson:\n**Step 1: do not confuse fairness process with outcome certainty** A transaction can have independent pricing support and still leave selling LPs with an unattractive choice if the GP knows the assets far better than they do.\n**Step 2: ask what information asymmetry remains after the opinion** The opinion helps on process, but the allocator still needs to judge asset quality, upside skew, and whether the buyer has an informational edge.\n**Step 3: decide whether the lesson affects manager underwriting** If a GP repeatedly asks LPs to transact in conflict-heavy settings, the allocator should underwrite not only the assets but also the manager's governance culture and disclosure quality."
       },
       {
+        "type": "visual",
+        "title": "Triton continuation fund: process vs outcome",
+        "visualId": "triton-continuation-fund",
+        "caption": "Triton's continuation fund acquired assets for ~€210M that later generated ~€550M — showing that procedural fairness does not guarantee economic fairness when the GP holds an information advantage.",
+        "whyItMatters": "A transaction can have independent pricing support and still leave selling LPs with an economically unattractive exit if the GP knows the assets far better than they do.",
+        "sourceNote": "Financial Times reporting (February 2026) on Triton Fund III continuation vehicle; Triton statement on market-practice compliance."
+      },
+      {
         "type": "example",
         "title": "Real-world case study: adviser-led secondaries made valuation governance a regulatory issue",
         "content": "In August 2023, the SEC adopted private-fund adviser rules that would have required an adviser-led secondary transaction to include a fairness opinion or valuation opinion from an independent provider, plus disclosure of material relationships with that provider. The Fifth Circuit vacated those rules in June 2024, but the allocator lesson remains important: the regulator viewed continuation-fund pricing conflicts as structural enough to justify a formal process requirement.\nAllocator lesson:\n**Step 1: focus on why the rule existed, not only on whether it survived** The core concern was that the GP can influence pricing when it advises the selling fund and the buying vehicle.\n**Step 2: separate process comfort from economic comfort** A fairness or valuation opinion can strengthen process, but it does not make the price automatically attractive for the selling LP.\n**Step 3: carry the lesson into manager underwriting** Even after the rule was vacated, allocators should still ask for the same underlying evidence: pricing methodology, conflict controls, committee challenge, and disclosure of adviser relationships with any opinion provider.\nThis makes Day 24 different from a generic stale-mark lesson. The issue is not just whether the number is slow to move. It is whether the decision process around the number is robust when incentives are most conflicted."
@@ -5077,6 +5189,14 @@ export const lessonContents: LessonContent[] = [
         "type": "example",
         "title": "Real-world case study: the post-2022 rise in NAV loans as exits slowed",
         "content": "As buyout exits slowed after 2022, NAV financing became more prominent across the market. It is that a financing tool becomes much more consequential when it is being used in an environment where realizations are delayed, valuations are under pressure, and the manager may be trying to preserve flexibility across a maturing portfolio.\nAllocator analysis path:\n**Step 1: ask what changed** Was the facility added because it created genuine optionality, or because a weaker exit market made the existing fund model harder to execute?\n**Step 2: identify what the borrowing is replacing** In many cases the real alternative is some mix of asset sales, slower distributions, GP-led solutions, or acceptance of a longer duration profile.\n**Step 3: re-interpret reported cash flows** Distributions funded through balance-sheet flexibility should not be read the same way as distributions funded by clean realizations."
+      },
+      {
+        "type": "visual",
+        "title": "Post-2022 NAV loans: filling the exit gap",
+        "visualId": "nav-loan-rise-map",
+        "caption": "As exits slowed after 2022, NAV loans became more prominent — the key allocator question is whether distributions are funded by clean realizations or by balance-sheet flexibility.",
+        "whyItMatters": "A financing tool becomes much more consequential when used in an environment where realizations are delayed and valuations are under pressure. Distributions funded through NAV facilities should not be read the same as exit-funded distributions.",
+        "sourceNote": "Market commentary on post-2022 NAV lending growth; institutional LP practice on fund-finance disclosure."
       },
       {
         "type": "weak-answer",
@@ -5334,6 +5454,14 @@ export const lessonContents: LessonContent[] = [
         "content": "Harvard's well-known liquidity strain during the global financial crisis remains one of the clearest allocator teaching cases in private markets. The issue was not simply that markets fell. The deeper problem was that capital commitments, operating liquidity needs, and reduced flexibility converged at the wrong time, forcing the institution to rethink commitments and asset sales under pressure.\nAllocator lesson: pacing is not an abstract portfolio-construction topic. It is a governance topic. A programme can look diversified and well planned in benign conditions yet still become fragile if the institution lacks pre-agreed decision rules for what happens when distributions slow, the denominator shrinks, and commitments made in optimistic conditions become binding claims on liquidity."
       },
       {
+        "type": "visual",
+        "title": "Harvard 2009: when pacing meets liquidity stress",
+        "visualId": "harvard-liquidity-strain",
+        "caption": "Harvard's GFC liquidity strain showed that commitments, operating needs, and reduced flexibility can converge at the worst moment — pacing is a governance topic, not just a portfolio-construction exercise.",
+        "whyItMatters": "A programme can look diversified and well planned in benign conditions yet become fragile when distributions slow, the denominator shrinks, and commitments become binding claims on scarce liquidity.",
+        "sourceNote": "Harvard endowment GFC experience; institutional PE programme management literature on liquidity stress testing."
+      },
+      {
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Increase conviction in a programme when managers, pacing, liquidity planning, governance speed, and data quality still work together under stress.\n**Monitor:** Watch correlated capital calls, delayed exits, stale marks, and committee decision speed.\n**Red flag / caution:** A programme that looks fine in point-in-time snapshots can still be fragile if it relies on optimistic distributions or incomplete data."
@@ -5505,6 +5633,14 @@ export const lessonContents: LessonContent[] = [
         "type": "example",
         "title": "Real-world case study: Sequoia's early Google investment and what true outlier capture looks like",
         "content": "Sequoia's early investment in Google is a classic venture case because it illustrates what power-law economics actually mean at the fund and franchise level. The lesson is that identifying, winning access to, and then holding meaningful exposure to a business of that quality requires a specific combination of sourcing, conviction, ownership discipline, and organizational support.\nAllocator analysis path:\n**Step 1: isolate the mechanism of outlier capture** Was the firm simply present in a hot ecosystem, or did it consistently earn trust and allocation in the best companies?\n**Step 2: connect winner capture to team design** If a firm's best outcomes are tied to a few partners or a narrow founder network, succession and key-person risk should be underwritten accordingly."
+      },
+      {
+        "type": "visual",
+        "title": "Sequoia and Google: anatomy of outlier capture",
+        "visualId": "sequoia-google-outlier",
+        "caption": "Outlier capture requires a specific combination of sourcing, conviction, ownership discipline, and organisational support — not just market presence in a hot ecosystem.",
+        "whyItMatters": "An allocator must test whether a venture firm consistently earns access and maintains ownership in the best companies, or whether a famous outcome reflects timing rather than repeatable edge.",
+        "sourceNote": "Sequoia Capital's publicly described Google investment; venture power-law economics literature."
       },
       {
         "type": "weak-answer",
@@ -5706,6 +5842,14 @@ export const lessonContents: LessonContent[] = [
         "type": "example",
         "title": "Real-world case study: Benchmark versus large multi-stage platforms",
         "content": "A useful way to internalize stage discipline is to compare a concentrated early-stage specialist such as Benchmark with large multi-stage venture platforms that invest from seed through late stage. Benchmark's reputation has been built around early conviction, concentrated ownership, and a relatively narrow stage identity.\nAllocator lesson:\n**Specialist model** The diligence focus is on early judgment, partnership quality, reserves, and whether the narrow strategy still has access and relevance.\n**Multi-stage platform model** The diligence focus expands to stage-specific sourcing, internal coordination, ownership discipline, and whether the firm truly adds value in each stage rather than simply following winners.\nThe case comparison teaches a core allocator skill: do not let a venture brand blur stage economics. Two celebrated firms can both be high quality and still require completely different underwriting because the stage map is different."
+      },
+      {
+        "type": "visual",
+        "title": "Specialist vs platform: different models, different underwriting",
+        "visualId": "benchmark-vs-platform",
+        "caption": "Benchmark's concentrated early-stage model and multi-stage platforms require completely different underwriting — brand quality does not eliminate the need for stage-specific diligence.",
+        "whyItMatters": "Do not let a venture brand blur stage economics. Two celebrated firms can both be high quality and still require completely different diligence because the stage map, ownership targets, and reserve logic differ.",
+        "sourceNote": "Benchmark's publicly described investment model; institutional venture underwriting practice on stage discipline."
       },
       {
         "type": "weak-answer",
@@ -5961,6 +6105,14 @@ export const lessonContents: LessonContent[] = [
         "content": "Sequoia has publicly described WhatsApp as a company it partnered with in 2011 before the business was acquired in 2014. Public reporting later described Sequoia's stake as worth roughly $3.5 billion at the transaction value. The allocator lesson is not simply that Sequoia found a winner. It is that the outcome mattered at the fund level because the ownership retained was large enough to matter economically. That is exactly why venture diligence should convert every famous company example into an ownership case study: how much did the fund actually own, how much was diluted over time, and did the retained stake stay meaningful enough to influence overall fund results?"
       },
       {
+        "type": "visual",
+        "title": "Sequoia and WhatsApp: ownership drives fund relevance",
+        "visualId": "sequoia-whatsapp-ownership",
+        "caption": "Sequoia's ~$3.5B WhatsApp stake mattered at the fund level because retained ownership was large enough to drive economics — not just because the company was famous.",
+        "whyItMatters": "Every famous venture logo should be converted into an ownership case study: entry ownership, dilution events, retained stake, and fund-level impact. A famous company in the portfolio means little if the fund's ownership was diluted to irrelevance.",
+        "sourceNote": "Sequoia's publicly described WhatsApp partnership (2011-2014); reported stake value at Facebook acquisition."
+      },
+      {
         "type": "meeting-application",
         "title": "Allocator application: turning a famous venture logo into an ownership case study",
         "content": "If a GP cites a marquee company, ask for the entry ownership, the fully diluted ownership before exit, the major dilution events, the reserve dollars required to maintain position, and the share of total fund value the company ultimately represented. The point is to move from narrative prestige to measurable fund economics."
@@ -6213,6 +6365,14 @@ export const lessonContents: LessonContent[] = [
         "type": "example",
         "title": "Real case: Artiva Biotherapeutics SAFE conversion made dilution visible",
         "content": "A clean public example helps make SAFE economics concrete. Artiva Biotherapeutics disclosed that in connection with its 2024 IPO it had about $24.4 million outstanding under SAFEs, which converted into 2,391,418 shares of common stock at the IPO price of $12.00 per share, using a 15% discount.\nThat is exactly what allocators need to remember about SAFEs and similar seed instruments. The instrument deferred pricing, but it did not remove economics. Once the priced event arrived, the ownership cost became explicit. Existing holders were diluted, and the fully diluted share count increased meaningfully.\nAllocator lesson: never describe a SAFE as if it avoids valuation or dilution. It merely postpones when those economics become visible."
+      },
+      {
+        "type": "visual",
+        "title": "Artiva SAFE conversion: deferred pricing becomes real",
+        "visualId": "artiva-safe-conversion",
+        "caption": "Artiva's $24.4M in SAFEs converted to 2.39M shares at IPO — showing that SAFEs defer pricing but do not remove dilution or valuation consequences.",
+        "whyItMatters": "Never describe a SAFE as avoiding valuation or dilution. It merely postpones when those economics become visible. The three cap-table views — current, post-conversion, and post-next-financing — are essential underwriting steps.",
+        "sourceNote": "Artiva Biotherapeutics 2024 IPO disclosure on SAFE conversion mechanics."
       },
       {
         "type": "teaching",

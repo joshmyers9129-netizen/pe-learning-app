@@ -102,8 +102,28 @@ import HiltonBlackstone from "./HiltonBlackstone";
 import SubStrategyComparison from "./SubStrategyComparison";
 import KraftHeinzValueCreation from "./KraftHeinzValueCreation";
 import HiltonExitSequence from "./HiltonExitSequence";
+import ILPAWaterfallComparison from "./ILPAWaterfallComparison";
+import PASERSBenchmarkDivergence from "./PASERSBenchmarkDivergence";
+import KleinerPerkinsTeamSplit from "./KleinerPerkinsTeamSplit";
+import PASERSPacingDecision from "./PASERSPacingDecision";
+import YaleSecondaryStrategy from "./YaleSecondaryStrategy";
+import QualtricsCoinvestAnatomy from "./QualtricsCoinvestAnatomy";
+import NAVSignalNotVerdict from "./NAVSignalNotVerdict";
+import SmoothMarksGovernance from "./SmoothMarksGovernance";
+import VistaESGEvidence from "./VistaESGEvidence";
+import RecommendationQuality from "./RecommendationQuality";
+import SideLetterRiskMap from "./SideLetterRiskMap";
+import GovernanceFailureEconomics from "./GovernanceFailureEconomics";
+import AbraajCashControl from "./AbraajCashControl";
+import TritonContinuationFund from "./TritonContinuationFund";
+import NAVLoanRiseMap from "./NAVLoanRiseMap";
+import HarvardLiquidityStrain from "./HarvardLiquidityStrain";
+import SequoiaGoogleOutlier from "./SequoiaGoogleOutlier";
+import BenchmarkVsPlatform from "./BenchmarkVsPlatform";
+import SequoiaWhatsAppOwnership from "./SequoiaWhatsAppOwnership";
+import ArtivaSAFEConversion from "./ArtivaSAFEConversion";
 
-export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification, ComparisonFramework, StrategyDrift, ValueCreationDecomposition, IRRManipulation, RedFlagsValueCreation, FundDocumentStack, VentureStageMap, AlignmentDimensions, VentureVsBuyout, IRRMOICTradeoff, JCurveTroughFactors, FundFinanceTaxonomy, NarrativeVsDecisionReporting, ValuationGovernance, TopQuartileQuestions, StrongVsWeakEvidence, ConflictTaxonomy, MeetingVocabulary, BenchmarkingToolkit, MultiSleeveCashFlow, CreditRiskDashboard, DocumentationRiskMap, CoInvestRisk, ESGEvidenceLadder, CapTableLens, CompanyToFundRelevance, VentureMarkHierarchy, VenturePortfolioMgmt, ReserveDecisionTree, VentureEdgeChain, ManagementFees, FeeOffsets, JCurveStrategyVariation, IRRSubStrategies, MultiplesLifecycle, DenominatorProblem, LifecyclePhaseMetrics, VintageYearEffects, VintageYearComparison, SecondaryPricing, PEMarksSmoother, NAVCredibilityTests, PESuitability, LargerPEAllocation, RecommendationStack, CapitalStructureDesign, SecondaryBuyouts, RecommendationLanguage, DilutionMap, SeedInstrumentMap, SAFEInferenceMap, CommonVsPreferred, TermSheetLayerTwo, EconVsControlRights, VentureMarkFramework, VentureUnderwritingSequence, BizModelFailureMap, VentureLiquidityMap, ExitQualityVsHeadline, GrowthEquityClassification, LateStageEcosystem, VentureManagerScorecard, PrivateCreditMap, CreditStressLadder, DirectLendingUnderwriting, DistressedPathway, ABFvsCashFlow, CreditVehiclesDiff, RealEstateMap, PropertyUnderwritingStack, LossWaterfallStack, CIORoleMap, NBPEDiscount, DenominatorEffect, CalPERSFeeTransparency, ILPASubscriptionLines, CalPERSIRRvsMOIC, NewMexicoPERA, VermontPensionVintage, HiltonBlackstone, HiltonExitSequence, SubStrategyComparison, KraftHeinzValueCreation };
+export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification, ComparisonFramework, StrategyDrift, ValueCreationDecomposition, IRRManipulation, RedFlagsValueCreation, FundDocumentStack, VentureStageMap, AlignmentDimensions, VentureVsBuyout, IRRMOICTradeoff, JCurveTroughFactors, FundFinanceTaxonomy, NarrativeVsDecisionReporting, ValuationGovernance, TopQuartileQuestions, StrongVsWeakEvidence, ConflictTaxonomy, MeetingVocabulary, BenchmarkingToolkit, MultiSleeveCashFlow, CreditRiskDashboard, DocumentationRiskMap, CoInvestRisk, ESGEvidenceLadder, CapTableLens, CompanyToFundRelevance, VentureMarkHierarchy, VenturePortfolioMgmt, ReserveDecisionTree, VentureEdgeChain, ManagementFees, FeeOffsets, JCurveStrategyVariation, IRRSubStrategies, MultiplesLifecycle, DenominatorProblem, LifecyclePhaseMetrics, VintageYearEffects, VintageYearComparison, SecondaryPricing, PEMarksSmoother, NAVCredibilityTests, PESuitability, LargerPEAllocation, RecommendationStack, CapitalStructureDesign, SecondaryBuyouts, RecommendationLanguage, DilutionMap, SeedInstrumentMap, SAFEInferenceMap, CommonVsPreferred, TermSheetLayerTwo, EconVsControlRights, VentureMarkFramework, VentureUnderwritingSequence, BizModelFailureMap, VentureLiquidityMap, ExitQualityVsHeadline, GrowthEquityClassification, LateStageEcosystem, VentureManagerScorecard, PrivateCreditMap, CreditStressLadder, DirectLendingUnderwriting, DistressedPathway, ABFvsCashFlow, CreditVehiclesDiff, RealEstateMap, PropertyUnderwritingStack, LossWaterfallStack, CIORoleMap, NBPEDiscount, DenominatorEffect, CalPERSFeeTransparency, ILPASubscriptionLines, CalPERSIRRvsMOIC, NewMexicoPERA, VermontPensionVintage, HiltonBlackstone, HiltonExitSequence, SubStrategyComparison, KraftHeinzValueCreation, ILPAWaterfallComparison, PASERSBenchmarkDivergence, KleinerPerkinsTeamSplit, PASERSPacingDecision, YaleSecondaryStrategy, QualtricsCoinvestAnatomy, NAVSignalNotVerdict, SmoothMarksGovernance, VistaESGEvidence, RecommendationQuality, SideLetterRiskMap, GovernanceFailureEconomics, AbraajCashControl, TritonContinuationFund, NAVLoanRiseMap, HarvardLiquidityStrain, SequoiaGoogleOutlier, BenchmarkVsPlatform, SequoiaWhatsAppOwnership, ArtivaSAFEConversion };
 
 export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "fund-lifecycle-timeline": FundLifecycleTimeline,
@@ -201,4 +221,24 @@ export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "hilton-exit-sequence": HiltonExitSequence,
   "sub-strategy-comparison": SubStrategyComparison,
   "kraft-heinz-value-creation": KraftHeinzValueCreation,
+  "ilpa-waterfall-comparison": ILPAWaterfallComparison,
+  "pa-sers-benchmark-divergence": PASERSBenchmarkDivergence,
+  "kleiner-perkins-team-split": KleinerPerkinsTeamSplit,
+  "pa-sers-pacing-decision": PASERSPacingDecision,
+  "yale-secondary-strategy": YaleSecondaryStrategy,
+  "qualtrics-coinvest-anatomy": QualtricsCoinvestAnatomy,
+  "nav-signal-not-verdict": NAVSignalNotVerdict,
+  "smooth-marks-governance": SmoothMarksGovernance,
+  "vista-esg-evidence": VistaESGEvidence,
+  "recommendation-quality": RecommendationQuality,
+  "side-letter-risk-map": SideLetterRiskMap,
+  "governance-failure-economics": GovernanceFailureEconomics,
+  "abraaj-cash-control": AbraajCashControl,
+  "triton-continuation-fund": TritonContinuationFund,
+  "nav-loan-rise-map": NAVLoanRiseMap,
+  "harvard-liquidity-strain": HarvardLiquidityStrain,
+  "sequoia-google-outlier": SequoiaGoogleOutlier,
+  "benchmark-vs-platform": BenchmarkVsPlatform,
+  "sequoia-whatsapp-ownership": SequoiaWhatsAppOwnership,
+  "artiva-safe-conversion": ArtivaSAFEConversion,
 };
