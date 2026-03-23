@@ -122,8 +122,28 @@ import SequoiaGoogleOutlier from "./SequoiaGoogleOutlier";
 import BenchmarkVsPlatform from "./BenchmarkVsPlatform";
 import SequoiaWhatsAppOwnership from "./SequoiaWhatsAppOwnership";
 import ArtivaSAFEConversion from "./ArtivaSAFEConversion";
+import GoodTechnologyWaterfall from "./GoodTechnologyWaterfall";
+import SquareIPORatchet from "./SquareIPORatchet";
+import StripeValuationReset from "./StripeValuationReset";
+import SoftBankWeWorkUnderwriting from "./SoftBankWeWorkUnderwriting";
+import SequoiaAdaptingEndure from "./SequoiaAdaptingEndure";
+import SpotifyDirectListing from "./SpotifyDirectListing";
+import TigerGlobalGrowthArc from "./TigerGlobalGrowthArc";
+import InstacartValuationUnwind from "./InstacartValuationUnwind";
+import BenchmarkVsTigerModels from "./BenchmarkVsTigerModels";
+import ApolloCreditTransformation from "./ApolloCreditTransformation";
+import FinastraMegaUnitranche from "./FinastraMegaUnitranche";
+import JCrewIPTransfer from "./JCrewIPTransfer";
+import BDCDiscountCrisis2020 from "./BDCDiscountCrisis2020";
+import EnvisionHealthcareDistressed from "./EnvisionHealthcareDistressed";
+import GreensillCollapseABF from "./GreensillCollapseABF";
+import BCREDRedemptionStress from "./BCREDRedemptionStress";
+import BREITRedemptionCrisis from "./BREITRedemptionCrisis";
+import BrookfieldDTLAOffice from "./BrookfieldDTLAOffice";
+import Broadway1740LossWaterfall from "./Broadway1740LossWaterfall";
+import Harvard2008LiquidityCrisis from "./Harvard2008LiquidityCrisis";
 
-export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification, ComparisonFramework, StrategyDrift, ValueCreationDecomposition, IRRManipulation, RedFlagsValueCreation, FundDocumentStack, VentureStageMap, AlignmentDimensions, VentureVsBuyout, IRRMOICTradeoff, JCurveTroughFactors, FundFinanceTaxonomy, NarrativeVsDecisionReporting, ValuationGovernance, TopQuartileQuestions, StrongVsWeakEvidence, ConflictTaxonomy, MeetingVocabulary, BenchmarkingToolkit, MultiSleeveCashFlow, CreditRiskDashboard, DocumentationRiskMap, CoInvestRisk, ESGEvidenceLadder, CapTableLens, CompanyToFundRelevance, VentureMarkHierarchy, VenturePortfolioMgmt, ReserveDecisionTree, VentureEdgeChain, ManagementFees, FeeOffsets, JCurveStrategyVariation, IRRSubStrategies, MultiplesLifecycle, DenominatorProblem, LifecyclePhaseMetrics, VintageYearEffects, VintageYearComparison, SecondaryPricing, PEMarksSmoother, NAVCredibilityTests, PESuitability, LargerPEAllocation, RecommendationStack, CapitalStructureDesign, SecondaryBuyouts, RecommendationLanguage, DilutionMap, SeedInstrumentMap, SAFEInferenceMap, CommonVsPreferred, TermSheetLayerTwo, EconVsControlRights, VentureMarkFramework, VentureUnderwritingSequence, BizModelFailureMap, VentureLiquidityMap, ExitQualityVsHeadline, GrowthEquityClassification, LateStageEcosystem, VentureManagerScorecard, PrivateCreditMap, CreditStressLadder, DirectLendingUnderwriting, DistressedPathway, ABFvsCashFlow, CreditVehiclesDiff, RealEstateMap, PropertyUnderwritingStack, LossWaterfallStack, CIORoleMap, NBPEDiscount, DenominatorEffect, CalPERSFeeTransparency, ILPASubscriptionLines, CalPERSIRRvsMOIC, NewMexicoPERA, VermontPensionVintage, HiltonBlackstone, HiltonExitSequence, SubStrategyComparison, KraftHeinzValueCreation, ILPAWaterfallComparison, PASERSBenchmarkDivergence, KleinerPerkinsTeamSplit, PASERSPacingDecision, YaleSecondaryStrategy, QualtricsCoinvestAnatomy, NAVSignalNotVerdict, SmoothMarksGovernance, VistaESGEvidence, RecommendationQuality, SideLetterRiskMap, GovernanceFailureEconomics, AbraajCashControl, TritonContinuationFund, NAVLoanRiseMap, HarvardLiquidityStrain, SequoiaGoogleOutlier, BenchmarkVsPlatform, SequoiaWhatsAppOwnership, ArtivaSAFEConversion };
+export { FundLifecycleTimeline, JCurveVisual, MultiplesRelationship, FeeWaterfall, JCurveDepthFactors, SubscriptionLineIRR, JCurveDPIOverlay, IRRvsMOIC, GPUnderwritingFramework, CommitmentPacingTimeline, OvercommitmentRiskMap, VintageDiversification, ComparisonFramework, StrategyDrift, ValueCreationDecomposition, IRRManipulation, RedFlagsValueCreation, FundDocumentStack, VentureStageMap, AlignmentDimensions, VentureVsBuyout, IRRMOICTradeoff, JCurveTroughFactors, FundFinanceTaxonomy, NarrativeVsDecisionReporting, ValuationGovernance, TopQuartileQuestions, StrongVsWeakEvidence, ConflictTaxonomy, MeetingVocabulary, BenchmarkingToolkit, MultiSleeveCashFlow, CreditRiskDashboard, DocumentationRiskMap, CoInvestRisk, ESGEvidenceLadder, CapTableLens, CompanyToFundRelevance, VentureMarkHierarchy, VenturePortfolioMgmt, ReserveDecisionTree, VentureEdgeChain, ManagementFees, FeeOffsets, JCurveStrategyVariation, IRRSubStrategies, MultiplesLifecycle, DenominatorProblem, LifecyclePhaseMetrics, VintageYearEffects, VintageYearComparison, SecondaryPricing, PEMarksSmoother, NAVCredibilityTests, PESuitability, LargerPEAllocation, RecommendationStack, CapitalStructureDesign, SecondaryBuyouts, RecommendationLanguage, DilutionMap, SeedInstrumentMap, SAFEInferenceMap, CommonVsPreferred, TermSheetLayerTwo, EconVsControlRights, VentureMarkFramework, VentureUnderwritingSequence, BizModelFailureMap, VentureLiquidityMap, ExitQualityVsHeadline, GrowthEquityClassification, LateStageEcosystem, VentureManagerScorecard, PrivateCreditMap, CreditStressLadder, DirectLendingUnderwriting, DistressedPathway, ABFvsCashFlow, CreditVehiclesDiff, RealEstateMap, PropertyUnderwritingStack, LossWaterfallStack, CIORoleMap, NBPEDiscount, DenominatorEffect, CalPERSFeeTransparency, ILPASubscriptionLines, CalPERSIRRvsMOIC, NewMexicoPERA, VermontPensionVintage, HiltonBlackstone, HiltonExitSequence, SubStrategyComparison, KraftHeinzValueCreation, ILPAWaterfallComparison, PASERSBenchmarkDivergence, KleinerPerkinsTeamSplit, PASERSPacingDecision, YaleSecondaryStrategy, QualtricsCoinvestAnatomy, NAVSignalNotVerdict, SmoothMarksGovernance, VistaESGEvidence, RecommendationQuality, SideLetterRiskMap, GovernanceFailureEconomics, AbraajCashControl, TritonContinuationFund, NAVLoanRiseMap, HarvardLiquidityStrain, SequoiaGoogleOutlier, BenchmarkVsPlatform, SequoiaWhatsAppOwnership, ArtivaSAFEConversion, GoodTechnologyWaterfall, SquareIPORatchet, StripeValuationReset, SoftBankWeWorkUnderwriting, SequoiaAdaptingEndure, SpotifyDirectListing, TigerGlobalGrowthArc, InstacartValuationUnwind, BenchmarkVsTigerModels, ApolloCreditTransformation, FinastraMegaUnitranche, JCrewIPTransfer, BDCDiscountCrisis2020, EnvisionHealthcareDistressed, GreensillCollapseABF, BCREDRedemptionStress, BREITRedemptionCrisis, BrookfieldDTLAOffice, Broadway1740LossWaterfall, Harvard2008LiquidityCrisis };
 
 export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "fund-lifecycle-timeline": FundLifecycleTimeline,
@@ -241,4 +261,24 @@ export const LESSON_VISUALS: Record<string, React.ComponentType> = {
   "benchmark-vs-platform": BenchmarkVsPlatform,
   "sequoia-whatsapp-ownership": SequoiaWhatsAppOwnership,
   "artiva-safe-conversion": ArtivaSAFEConversion,
+  "good-technology-waterfall": GoodTechnologyWaterfall,
+  "square-ipo-ratchet": SquareIPORatchet,
+  "stripe-valuation-reset": StripeValuationReset,
+  "softbank-wework-underwriting": SoftBankWeWorkUnderwriting,
+  "sequoia-adapting-endure": SequoiaAdaptingEndure,
+  "spotify-direct-listing": SpotifyDirectListing,
+  "tiger-global-growth-arc": TigerGlobalGrowthArc,
+  "instacart-valuation-unwind": InstacartValuationUnwind,
+  "benchmark-vs-tiger-models": BenchmarkVsTigerModels,
+  "apollo-credit-transformation": ApolloCreditTransformation,
+  "finastra-mega-unitranche": FinastraMegaUnitranche,
+  "jcrew-ip-transfer": JCrewIPTransfer,
+  "bdc-discount-crisis-2020": BDCDiscountCrisis2020,
+  "envision-healthcare-distressed": EnvisionHealthcareDistressed,
+  "greensill-collapse-abf": GreensillCollapseABF,
+  "bcred-redemption-stress": BCREDRedemptionStress,
+  "breit-redemption-crisis": BREITRedemptionCrisis,
+  "brookfield-dtla-office": BrookfieldDTLAOffice,
+  "broadway-1740-loss-waterfall": Broadway1740LossWaterfall,
+  "harvard-2008-liquidity-crisis": Harvard2008LiquidityCrisis,
 };
