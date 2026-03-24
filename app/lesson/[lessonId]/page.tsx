@@ -275,6 +275,11 @@ function Block({ block }: { block: LessonBlock }) {
           {block.title}
         </p>
 
+        {block.content && (
+          <div className="text-[15px] text-[#000000] leading-[1.7] mb-3">
+            {renderContent(block.content)}
+          </div>
+        )}
         {VisualComponent && (
           <div className="mb-4">
             <VisualComponent />
@@ -287,11 +292,6 @@ function Block({ block }: { block: LessonBlock }) {
             alt={block.caption ?? block.title}
             className="w-full rounded-lg mb-4 object-contain max-h-80"
           />
-        )}
-        {block.content && !VisualComponent && (
-          <div className="text-[15px] text-[#000000] leading-[1.7] mb-3">
-            {renderContent(block.content)}
-          </div>
         )}
         {block.caption && (
           <p className="text-xs text-[#404040] italic mb-3">{block.caption}</p>
