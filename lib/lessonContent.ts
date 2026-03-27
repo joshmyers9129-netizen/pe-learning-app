@@ -134,11 +134,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Increase conviction if a GP can explain deployment pace, follow-on reserve, and unfunded obligations precisely rather than in vague AUM terms.\n**Monitor:** Watch for presentations that blur commitments, called capital, invested capital, and remaining investable capacity.\n**Red flag / caution:** Do not let committee discussion focus on interim NAV or fund size without asking how much capital is actually available versus already reserved."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** The base layer for the whole curriculum.\n**Critical companion lessons:** Day 2, Day 3, Day 5, Day 14\n**Unlocks:** Usable fund-model vocabulary for every later lesson."
       }
     ],
     "quiz": [
@@ -346,11 +341,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Favor managers whose economics preserve LP-first alignment through sensible fee bases, real step-downs, offsets, and waterfalls that do not monetize too early.\n**Monitor:** Fee drag matters most when deployment is slow, reserves are high, or the GP scales fund size too fast.\n**What would change the view:** Full fee schedules, waterfall examples, and post-investment-period fee bases."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 1 fund structure.\n**Critical companion lessons:** Day 11, Day 21, Day 25\n**Unlocks:** Cleaner way to read alignment and net return quality."
       }
     ],
     "quiz": [
@@ -569,11 +559,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Be more comfortable when a GP explains early negative IRR through deployment math, fee load, and realization timing rather than hand-waving.\n**Monitor:** Track line size, duration, and whether unusually shallow early J-curves are timing optics rather than economic strength.\n**Red flag / caution:** Do not interpret early IRR differences as proof of skill when cash-flow timing and line usage are the simpler explanation."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 1 and Day 2.\n**Critical companion lessons:** Day 4, Day 6, Day 25\n**Unlocks:** Cleaner split between real progress and timing-driven IRR optics."
       },
       {
         "type": "inference-boundary",
@@ -799,11 +784,6 @@ export const lessonContents: LessonContent[] = [
         "caption": "Using CalPERS public data as a framework: high IRR with low MOIC may reflect metric optimization, while low IRR with high MOIC may reflect patient, durable value creation.",
         "whyItMatters": "A GP that presents only IRR (or only MOIC) is giving you half the picture. The four-quadrant framework — high/low IRR crossed with high/low MOIC — is the fastest way to separate genuine performance from measurement artifacts.",
         "sourceNote": "CalPERS public PE fund performance data; Insight Venture Partners fund-level returns as publicly reported by CalPERS."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 1 through Day 3.\n**Critical companion lessons:** Day 5, Day 10, Day 12\n**Unlocks:** habit of asking whether return quality came from time, capital gain, or presentation."
       }
     ],
     "quiz": [
@@ -1036,11 +1016,6 @@ export const lessonContents: LessonContent[] = [
       },
       {
         "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 1, Day 3, and Day 4.\n**Critical companion lessons:** Day 12, Day 17, Day 18\n**Unlocks:** Better separation of confirmed cash from provisional appraisal."
-      },
-      {
-        "type": "teaching",
         "title": "Checkpoint synthesis",
         "content": "By now, you should be able to read a fund update and separate structure, timing, and value. The test: can you explain how commitment mechanics, fee drag, J-curve shape, IRR, and TVPI, DPI, and RVPI fit together without confusing marks with cash."
       }
@@ -1246,11 +1221,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Increase conviction if a GP benchmarks predecessor funds by phase, vintage, realization profile, and subscription-line treatment rather than relying on raw interim quartiles.\n**Monitor:** Watch how much of the re-up case depends on a still-young predecessor fund. Early marks can be directionally useful, but they are weak proof.\n**Red flag / caution:** Be wary when a GP uses year-3 or year-4 rankings as though they were settled evidence of franchise quality, or when the benchmark set is not age-matched."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 1 through Day 5.\n**Critical companion lessons:** Day 12, Day 14\n**Unlocks:** Cleaner committee language around whether the issue is fund quality, fund age, or cycle context."
       }
     ],
     "quiz": [
@@ -1416,11 +1386,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Underwrite buyout managers more favorably when they can decompose returns into EBITDA growth, multiple change, leverage, and deleveraging with evidence that the first two are repeatable.\n**Monitor:** High returns driven mainly by leverage and multiple expansion deserve closer cycle and downside scrutiny.\n**What would change the view:** Deal-level bridges, entry and exit leverage, debt paydown, and evidence that underwriting stayed disciplined as markets changed."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 1 through Day 6.\n**Critical companion lessons:** Day 8, Day 9, Day 10\n**Unlocks:** More precise way to distinguish true buyout skill from leverage and market beta."
       }
     ],
     "quiz": [
@@ -1603,11 +1568,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Programme construction improves when sub-strategy choice is explicit and linked to client role, cash-flow shape, and risk tolerance.\n**Monitor:** Strategy labels drift over time, especially as fund size and check size change.\n**Red flag / caution:** Avoid treating private equity as one homogeneous sleeve.\n**What would change the view:** Clear evidence on stage, ownership, leverage, check size, reserve policy, and expected exit routes."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 7 and earlier fund mechanics.\n**Critical companion lessons:** Day 14, Day 27, Day 50\n**Unlocks:** Cleaner categorization and benchmarking by actual strategy."
       }
     ],
     "quiz": [
@@ -1807,11 +1767,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Give credit when a GP can prove where value was created at the company level and which levers it plausibly controlled.\n**Monitor:** Value-creation narratives often get cleaner as markets get stronger, so keep checking attribution against outcomes.\n**Red flag / caution:** Broad portfolio-level operating claims without company-specific attribution are weak evidence."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 7.\n**Critical companion lessons:** Day 13, Day 34, Day 39\n**Unlocks:** Better test of whether process claims deserve valuation in your recommendation."
       }
     ],
     "quiz": [
@@ -1995,11 +1950,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Raise conviction when exit history shows more than one workable path to liquidity and when realized distributions validate the underwriting.\n**Monitor:** Track exit-route mix, hold-period extension, and partial monetization patterns.\n**Red flag / caution:** Do not let a GP equate a high-profile listing with complete success.\n**What would change the view:** Realization schedules, lock-up detail, sell-down history, and evidence that exits worked across different market windows."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 4 and Day 7.\n**Critical companion lessons:** Day 5, Day 18, Day 36\n**Unlocks:** Disciplined view of how a paper win becomes realized LP cash."
       },
       {
         "type": "teaching",
@@ -2225,11 +2175,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Prefer funds whose waterfall, escrow, and clawback design keep the GP aligned over the whole fund life.\n**Monitor:** Track deal-by-deal distributions, escrow sufficiency, tax assumptions, and clawback enforceability.\n**Red flag / caution:** Headline economics can look normal while practical LP risk is much weaker because of waterfall sequence or weak escrow."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 2 economics.\n**Critical companion lessons:** Day 21, Day 22, Day 42\n**Unlocks:** Sharper ability to identify alignment that survives stress."
       }
     ],
     "quiz": [
@@ -2451,11 +2396,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Treat a manager more favorably when performance remains strong across more than one lens: peer-relative, multiple quality, and public-market-relative measures.\n**Monitor:** Disagreement across benchmark lenses is the actual work, not an error in the analysis.\n**Red flag / caution:** Quartile ranking alone is not enough, and PME alone is not enough."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 4 through Day 6.\n**Critical companion lessons:** Day 13, Day 18\n**Unlocks:** More disciplined committee language around whether a fund is good, merely acceptable, or just less bad than peers."
       }
     ],
     "quiz": [
@@ -2643,11 +2583,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Approve or re-up only when people, process, portfolio construction, and evidence quality all line up.\n**Monitor:** Franchise durability is dynamic. Team changes, carry concentration, and stage drift should move monitoring intensity.\n**Red flag / caution:** Be skeptical when one or two star names, one or two big winners, or one famous brand carry most of the argument."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 7 through Day 12.\n**Critical companion lessons:** Day 20, Day 39, Day 50\n**Unlocks:** Repeatable manager-research method instead of impressionistic meetings."
       }
     ],
     "quiz": [
@@ -2827,11 +2762,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** A private-markets programme is more credible when pacing, overcommitment, vintage diversification, and liquidity support fit the client's governance speed and cash resources.\n**Monitor:** Programme design should change with denominator volatility, distributions, and board tolerance for irregular cash flows.\n**Red flag / caution:** Single-manager underwriting can look excellent while the overall programme is still poorly designed."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 1, Day 3, Day 6, and Day 12.\n**Critical companion lessons:** Day 18, Day 20, Day 26\n**Unlocks:** OCIO-grade thinking, where the decision unit is the programme rather than only the fund."
       }
     ],
     "quiz": [
@@ -3021,11 +2951,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Prefer secondaries managers who can explain what is being bought, why the discount exists, and what edge closes the gap between carry value and purchase value.\n**Monitor:** Discounts can reflect quality, liquidity, information asymmetry, or governance issues, not free alpha.\n**Red flag / caution:** A GP-led process is not automatically bad, but it always deserves extra scrutiny on conflicts and process fairness."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 5 valuation basics and Day 14 portfolio-construction needs.\n**Critical companion lessons:** Day 17, Day 21, Day 50\n**Unlocks:** Better evaluation of secondaries as a pacing and liquidity-management tool."
       },
       {
         "type": "teaching",
@@ -3234,11 +3159,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Co-invest belongs only when lower fees come with full discipline on single-name risk, concentration, timeline, and downside case.\n**Monitor:** Look-through exposure across the whole programme, because co-invest can quietly concentrate risk.\n**Red flag / caution:** Fast timelines, small internal teams, and sponsor urgency are classic conditions for adverse selection."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 7, Day 13, and Day 14.\n**Critical companion lessons:** Day 18, Day 20\n**Unlocks:** more realistic use of co-invest as a selective implementation tool rather than a fee-reduction reflex."
       }
     ],
     "quiz": [
@@ -3451,11 +3371,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Marks are more credible when they move with real market conditions and are explained consistently across winners and losers.\n**Monitor:** Smoothing and stale marks can distort portfolio construction and peer comparisons even if no single mark is indefensible.\n**Red flag / caution:** Apparent diversification benefits from smooth marks are often an accounting artifact."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 5 and Day 6.\n**Critical companion lessons:** Day 18, Day 23, Day 24, Day 33\n**Unlocks:** Better recognition of when reported stability is informative versus misleading."
       }
     ],
     "quiz": [
@@ -3673,11 +3588,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Size private equity where the client can actually bear illiquidity, valuation lag, and pacing uncertainty.\n**Monitor:** The right PE weight differs by client because spending rules, funding status, rebalancing needs, and governance speed differ.\n**Red flag / caution:** Smooth marks can create false comfort. Under stress, the portfolio can still face governance and liquidity strain."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 12, Day 14, and Day 17.\n**Critical companion lessons:** Day 20, Day 50\n**Unlocks:** more honest conversation about whether PE belongs in the portfolio at all, and at what size."
       }
     ],
     "quiz": [
@@ -3855,11 +3765,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Give ESG credit when the GP can show sector-specific materiality, deal-level decision examples, ownership follow-through, and governance credibility.\n**Monitor:** Keep ESG in the diligence record when the GP has a real framework but thinner proof on realized outcomes or cross-fund consistency.\n**Red flag / caution:** Treat ESG as low-value marketing if the evidence never leaves policies, KPIs, and memberships, or if governance conduct undermines the broader story.\n**What would change the view:** One concrete example where ESG altered underwriting is worth more than ten pages of generic reporting."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Day 9 and Day 13.\n**Critical companion lessons:** Day 21, Day 23, Day 43, Day 50\n**Unlocks:** Better separation between process evidence, governance quality, and soft sustainability language when diligencing GPs."
       },
       {
         "type": "inference-boundary",
@@ -4084,11 +3989,6 @@ export const lessonContents: LessonContent[] = [
       },
       {
         "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on the entire PE sequence.\n**Critical companion lessons:** Day 26, Day 50\n**Unlocks:** Committee-ready communication where analysis becomes a recommendation."
-      },
-      {
-        "type": "teaching",
         "title": "Checkpoint synthesis",
         "content": "By now, you should be able to turn PE analysis into a recommendation. The test: can you write a clear approve, monitor, or caution call that separates fact, manager claim, and inference while still explaining portfolio fit."
       }
@@ -4293,11 +4193,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Documentation quality should raise conviction only when the actual rights protect LP economics, information access, transfer flexibility, and financing boundaries under stress.\n**Monitor:** MFN rights, side letters, excuse rights, transfer provisions, and financing permissions can all change allocator risk without changing headline fees.\n**Red flag / caution:** A market LPA is not a sufficient answer. Standard documents often stop looking standard in a bad scenario."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 2 and Day 11.\n**Critical companion lessons:** Day 22, Day 23, Day 25\n**Unlocks:** clearer reading of where allocator risk really sits: in documents, not only in pitch decks."
       }
     ],
     "quiz": [
@@ -4542,11 +4437,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Governance is stronger when the allocator has meaningful process rights, information rights, and escalation channels, even if operational control stays with the GP.\n**Monitor:** Track advisory-committee scope, conflict processes, valuation oversight, and key-person or removal mechanics.\n**Red flag / caution:** Do not confuse access to quarterly meetings with real governance protection."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 21 and Day 11.\n**Critical companion lessons:** Day 24, Day 26, Day 42\n**Unlocks:** Better committee judgment on when a manager is governable versus merely reputable."
       }
     ],
     "quiz": [
@@ -4773,11 +4663,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Reporting quality should increase conviction when it gives enough clean data to understand exposures, valuation support, cash flows, and manager behavior without filling gaps with inference.\n**Monitor:** Track timeliness, consistency with ILPA-style formats, and the ease of aggregating data across managers.\n**Red flag / caution:** Poor reporting is not back-office sloppiness. It is weak investment infrastructure."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 5, Day 17, and Day 21.\n**Critical companion lessons:** Day 24, Day 26, Day 50\n**Unlocks:** Better use of data as an allocator tool rather than an administrative afterthought."
       }
     ],
     "quiz": [
@@ -5002,11 +4887,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** A valuation system deserves more trust when policy, committee process, evidence hierarchy, and challenge mechanisms are visible and consistent, especially in conflict-heavy situations.\n**Monitor:** Differences between policy on paper and practice in volatile markets or around adviser-led transactions deserve close monitoring.\n**Red flag / caution:** Even technically defensible valuation policies can fail allocator needs if they are opaque, weakly documented, or treated as sufficient comfort in situations where the GP has pricing influence."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 17 and Day 23.\n**Critical companion lessons:** Day 15, Day 18, Day 33\n**Unlocks:** Better judgment on whether marks can be relied on for governance, pacing, and benchmarking decisions."
       }
     ],
     "quiz": [
@@ -5231,11 +5111,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Fund finance is acceptable only when it supports operations without materially distorting performance, liquidity, or LP transparency.\n**Monitor:** Track line size, duration, permitted uses, repayment expectations, and whether financing changes economic risk or only smooths operations.\n**Red flag / caution:** Treat fund finance skeptically when it improves optics more than economics or creates hidden leverage at the programme level."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 3 and Day 21.\n**Critical companion lessons:** Day 14, Day 26, Day 40\n**Unlocks:** Better recognition of where financing changes reported outcomes without improving investment quality."
       },
       {
         "type": "teaching",
@@ -5464,11 +5339,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Increase conviction in a programme when managers, pacing, liquidity planning, governance speed, and data quality still work together under stress.\n**Monitor:** Watch correlated capital calls, delayed exits, stale marks, and committee decision speed.\n**Red flag / caution:** A programme that looks fine in point-in-time snapshots can still be fragile if it relies on optimistic distributions or incomplete data."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 14 and Day 21 through Day 25.\n**Critical companion lessons:** Day 20, Day 50\n**Unlocks:** System-level allocator thinking, which is the bridge from manager selection to OCIO implementation."
       }
     ],
     "quiz": [
@@ -5670,11 +5540,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Venture belongs only when the allocator accepts extreme outcome concentration, long-duration cash flows, and weaker evidence quality than in buyout.\n**Monitor:** Manager edge in venture should be framed around access, selection, ownership, reserves, and stage discipline.\n**Red flag / caution:** Do not import buyout intuitions directly into venture."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 8 and Day 13.\n**Critical companion lessons:** Day 28, Day 29, Day 33, Day 35\n**Unlocks:** proper transition from buyout-oriented thinking to venture-specific allocator judgment."
       }
     ],
     "quiz": [
@@ -5879,11 +5744,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Stage exposure should match the client's tolerance for duration, loss rate, ownership uncertainty, and benchmark patience.\n**Monitor:** A manager can drift across seed, early, and growth while keeping the same brand.\n**Red flag / caution:** Do not compare managers across stage without adjusting for loss profile, time to liquidity, and ownership dynamics."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 27.\n**Critical companion lessons:** Day 29, Day 30, Day 37, Day 38\n**Unlocks:** Better stage-specific benchmarking and client-fit judgments."
       }
     ],
     "quiz": [
@@ -6120,11 +5980,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** In venture, real ownership that can be maintained through follow-ons matters more than narrative access to interesting companies.\n**Monitor:** Track entry ownership, pro rata rights, follow-on capacity, and dilution through later rounds.\n**Red flag / caution:** A manager can have a famous logo portfolio and still capture too little of the upside."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 27 and Day 28.\n**Critical companion lessons:** Day 30, Day 31, Day 35\n**Unlocks:** more economic view of venture track records where company access is not enough without meaningful participation."
       }
     ],
     "quiz": [
@@ -6385,11 +6240,6 @@ export const lessonContents: LessonContent[] = [
       },
       {
         "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 29.\n**Critical companion lessons:** Day 31, Day 32, Day 33\n**Unlocks:** Better reading of early-stage economics before the priced-round cap table looks clean.\n**Avoid redundancy:** Use Day 30 as the deferred-economics reference."
-      },
-      {
-        "type": "teaching",
         "title": "Checkpoint synthesis",
         "content": "By now, you should be able to move from generic venture enthusiasm to economic analysis of stage, ownership, and deferred pricing. The test: can you explain how a venture fund can back the right company and still capture too little value because stage, instrument choice, or dilution went against it."
       }
@@ -6604,11 +6454,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Venture managers deserve more credit when ownership, liquidation preference, dilution, and exit proceeds line up in a way that actually benefits the fund.\n**Monitor:** Payout percentage can differ from ownership percentage because of preferences, seniority, and participation rights.\n**Red flag / caution:** A manager can cite strong ownership in a winner and still capture a weaker-than-expected outcome once the proceeds waterfall is modeled."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 29 and Day 30.\n**Critical companion lessons:** Day 32, Day 35, Day 36\n**Unlocks:** more accurate translation from cap-table position to realized fund economics."
       }
     ],
     "quiz": [
@@ -6841,11 +6686,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Terms create economic and governance leverage. They matter most when a company is under stress, not when everything is working.\n**Monitor:** Track preference stacks, pay-to-play, anti-dilution, board control, and investor-consent rights.\n**Red flag / caution:** Standard docs is a weak answer in venture because small term changes can move value and control materially."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 30 and Day 31.\n**Critical companion lessons:** Day 33, Day 35, Day 39\n**Unlocks:** clearer sense of who really controls outcomes when private companies need capital on worse terms."
       }
     ],
     "quiz": [
@@ -7073,11 +6913,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Venture marks are more trustworthy when the GP updates them in response to new financing evidence, public comps, and company-specific deterioration.\n**Monitor:** Down rounds, structured rounds, and long gaps between financing events can distort benchmarking and pacing if marks stay too smooth.\n**Red flag / caution:** Stable venture NAV during a public multiple collapse is not automatically proof of resilience."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 17, Day 24, and Day 32.\n**Critical companion lessons:** Day 35, Day 36, Day 39\n**Unlocks:** Cleaner benchmarking and more realistic pacing in venture-heavy programmes.\n**Avoid redundancy:** Use Day 33 as the venture re-marking reference."
       }
     ],
     "quiz": [
@@ -7334,11 +7169,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Venture underwriting improves when business-model pattern recognition is specific rather than generic growth language.\n**Monitor:** A manager can be right at one model type and weak at another, so track sector and model drift.\n**Red flag / caution:** Generic growth-company language is weak evidence in venture."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 27 through Day 33.\n**Critical companion lessons:** Day 35, Day 39\n**Unlocks:** Better attribution of whether a venture GP has true domain judgment or only broad growth intuition."
       }
     ],
     "quiz": [
@@ -7593,11 +7423,6 @@ export const lessonContents: LessonContent[] = [
       },
       {
         "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 29, Day 31, and Day 33.\n**Critical companion lessons:** Day 36, Day 39\n**Unlocks:** Better understanding of who actually captures the outliers in a venture portfolio."
-      },
-      {
-        "type": "teaching",
         "title": "Checkpoint synthesis",
         "content": "By now, you should be able to judge venture marks, business-model underwriting, and reserve policy together. The test: can you explain why venture success depends not only on access and selection, but also on honest marking and disciplined follow-on capital allocation."
       }
@@ -7841,11 +7666,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** A venture manager deserves more credit when it converts private marks into real liquidity through repeatable exit paths, not just occasional headline outcomes.\n**Monitor:** Monitor secondary sales, staged exits, lock-ups, and partial realizations.\n**Red flag / caution:** An apparent exit event can still leave the allocator with large residual market and timing risk."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 10, Day 31, and Day 33.\n**Critical companion lessons:** Day 35, Day 38, Day 50\n**Unlocks:** More realistic benchmarking of venture outcomes and better committee communication about realized versus still-exposed value."
       }
     ],
     "quiz": [
@@ -8036,11 +7856,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Increase conviction when the GP can show that business quality, price discipline, and usable minority rights all mattered in realized outcomes.\n**Monitor:** Monitor strategy drift toward larger auctioned deals, sponsor-led minority trades, or return stories driven mostly by market re-rating.\n**Red flag / caution:** Treat 'high-quality growth' language as a red flag when the GP cannot decompose returns or show how minority rights protected downside.\n**What would change the view:** More realized evidence under flat or lower exit multiples, better proof of governance-right usage, and clearer separation between founder-led and sponsor-backed minority playbooks."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Day 8, Day 30, Day 34, Day 36\n**Critical companion lessons:** Day 38, Day 39\n**Unlocks:** Cleaner strategy classification, better re-up decisions, and better interpretation of late-stage marks and exit dependence."
       }
     ],
     "quiz": [
@@ -8271,11 +8086,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Late-stage and crossover exposure is attractive only when the manager is explicit about public-market sensitivity, round-structure risk, and the possibility that private marks will catch down to public comps.\n**Monitor:** Track pricing discipline, round structure, liquidity expectations, and how much of the thesis depends on a near-term IPO window."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 28, Day 33, and Day 36.\n**Critical companion lessons:** Day 37, Day 39\n**Unlocks:** Better evaluation of late-stage funds that can look safer than they are because companies are larger and better known."
       }
     ],
     "quiz": [
@@ -8525,11 +8335,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Venture-manager approval should rest on access, selection, ownership, reserves, judgment under adverse financing conditions, and franchise durability, not on brand alone.\n**Monitor:** Track team continuity, decision rights, stage drift, and whether winners came from a repeatable process or a shrinking historical edge.\n**Red flag / caution:** Famous firms are often the easiest to overrate because the brand can outlive the original decision engine."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 13 plus Day 27 through Day 38.\n**Critical companion lessons:** Day 20, Day 50\n**Unlocks:** venture-specific version of manager research that is stricter about evidence and franchise continuity."
       }
     ],
     "quiz": [
@@ -8770,11 +8575,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Private credit deserves approval only after the allocator has defined the actual lending regime, repayment source, documentation strength, and liquidity expectations.\n**Monitor:** Monitor strategy mix across direct lending, opportunistic credit, ABF, distressed, and real-estate debt.\n**Red flag / caution:** High current income can hide weak covenants, aggressive leverage, or vehicles whose liquidity terms do not match the assets."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on the allocator mindset developed in PE and venture.\n**Critical companion lessons:** Day 41, Day 46, Day 50\n**Unlocks:** Cleaner transition into credit without importing equity assumptions.\n**Avoid redundancy:** Use Day 40 as the family-of-strategies reference."
       },
       {
         "type": "teaching",
@@ -9021,11 +8821,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Direct-lending managers should earn conviction when they show repayment discipline, conservative leverage, documentation protection, and realistic downside recovery analysis.\n**Monitor:** Monitor EBITDA add-backs, enterprise-value assumptions, sponsor behavior, and the gap between first-lien labels and actual downside control.\n**Red flag / caution:** Similar spreads can mask different risk because repayment quality, leverage, and covenant protection differ."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 40.\n**Critical companion lessons:** Day 42, Day 43, Day 46\n**Unlocks:** Better separation between income optics and credit quality."
       }
     ],
     "quiz": [
@@ -9208,11 +9003,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Increase conviction only when the manager can show that documentation strengthens intervention rights, limits value leakage, disciplines metric inflation, and blocks obvious lender-on-lender vulnerability.\n**Monitor:** Monitor EBITDA add-backs, basket creep, unrestricted-subsidiary permissions, amendment activity, and any increase in covenant-lite usage.\n**Red flag / caution:** Phrases such as senior secured, market docs, or strong sponsor are weak evidence if the manager cannot translate them into specific control rights and blocked leakage paths.\n**What would change the view:** Evidence that recent deals preserve tighter blockers, faster reporting, and stronger sacred-right protection would improve the view. Evidence that the manager routinely accepts broad flexibility to preserve volume would weaken it."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Day 21 and Day 22, translated into lender-rights analysis; Day 41, translated into direct-lending downside control.\n**Critical companion lessons:** Day 43, Day 44, Day 49\n**Unlocks:** Better judgment on whether legal structure reinforces or undermines the underwriting case, and whether a credit strategy is truly defensive or only marketed that way."
       },
       {
         "type": "weak-answer",
@@ -9454,11 +9244,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Credit portfolios are stronger when managers monitor actual repayment risk through leverage, coverage, non-accruals, amendments, and sector concentration rather than leaning on marks.\n**Monitor:** Early-warning indicators matter more than smooth valuations.\n**Red flag / caution:** Reported stability in private credit can hide deterioration if the monitoring system is weak or too sponsor-dependent."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 41 and Day 42.\n**Critical companion lessons:** Day 44, Day 46, Day 50\n**Unlocks:** Better portfolio-level credit oversight that focuses on risk migration rather than yield collection alone."
       }
     ],
     "quiz": [
@@ -9681,11 +9466,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Distressed credit should be approved only when the manager can navigate process, control rights, and restructuring pathways, not simply buy debt at a low price.\n**Monitor:** Monitor intercreditor positioning, fulcrum-security analysis, DIP needs, and whether the team has real restructuring skill.\n**Red flag / caution:** Distressed strategies can look attractive in theory while hiding execution and legal-process risk."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 41 through Day 43.\n**Critical companion lessons:** Day 49, Day 50\n**Unlocks:** Better differentiation between spread collecting and control-oriented credit investing.\n**Avoid redundancy:** Use Day 44 as the process-and-control reference."
       }
     ],
     "quiz": [
@@ -9853,11 +9633,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Increase conviction only when the manager can evidence asset quality, structural controls, servicing resilience, and funding durability with data rather than adjectives.\n**Monitor:** Monitor concentration drift, trigger usage, servicer changes, delinquency or loss migration, and dependence on external insurance or financing support.\n**Red flag / caution:** A collateral-backed strategy with weak data, thin reporting, or heavy third-party dependence should be treated as more fragile than a plain-language pitch suggests."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 40 through Day 44.\n**Critical companion lessons:** Day 43, Day 46, Day 50\n**Unlocks:** Better judgment on when specialty credit genuinely diversifies a private-credit programme and when it simply adds opacity."
       },
       {
         "type": "teaching",
@@ -10064,11 +9839,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Vehicle structure should increase conviction only when liquidity terms, leverage, valuation policy, and gate mechanics fit the actual asset profile and the client's use case.\n**Monitor:** Monitor interval funds, evergreen structures, leverage facilities, and redemption terms.\n**Red flag / caution:** Do not treat fund format as packaging. In private credit, vehicle terms can materially change risk and client experience."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 40 through Day 45.\n**Critical companion lessons:** Day 18, Day 43, Day 50\n**Unlocks:** More realistic allocator judgment on which credit vehicles belong in which client channels."
       }
     ],
     "quiz": [
@@ -10334,11 +10104,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Real-estate managers earn conviction when style, property exposure, leverage, and benchmark frame are all explicit.\n**Monitor:** Monitor classification drift, sector concentration, and the difference between stated style and realized asset-level risk.\n**Red flag / caution:** Style labels can be as misleading in real estate as they are in private equity."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 8 and Day 40's classification discipline.\n**Critical companion lessons:** Day 48, Day 49, Day 50\n**Unlocks:** Better benchmarking and sleeve-role clarity in private real estate."
       }
     ],
     "quiz": [
@@ -10539,11 +10304,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Increase conviction only when rent-roll durability, capex realism, leverage, and refinance assumptions still produce acceptable downside outcomes.\n**Monitor:** Monitor large rollover cliffs, tenant concentration, leasing-cost inflation, floating-rate exposure, extension tests, and whether management is still underwriting to an achievable refinance market.\n**Red flag / caution:** Be cautious when the valuation rests on stabilized NOI that is not yet earned, or when a realistic downside depends on the next lender ignoring current market conditions.\n**What would change the view:** Stronger evidence would include tenant-by-tenant rollover support, realistic capex budgets, downside cases that still preserve refinance flexibility, and examples of management realizing value without relying on a heroic exit environment."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 47.\n**Critical companion lessons:** Day 49 and Day 50.\n**Unlocks:** Better translation from a real-estate story to asset-level underwriting judgment.\n**Avoid redundancy:** Later real-estate lessons should assume this property-underwriting frame rather than re-explaining cap rates and NOI from scratch."
       },
       {
         "type": "inference-boundary",
@@ -10793,11 +10553,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** Real-estate debt deserves approval only when attachment point, collateral quality, sponsor behavior, and structure provide enough protection for the promised return.\n**Monitor:** Monitor subordination, intercreditor terms, capex needs, refinance risk, and the path through which losses reach your tranche.\n**Red flag / caution:** Yield can rise simply because you are sitting in a place where losses travel quickly."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on Day 41, Day 42, and Day 47 through Day 48.\n**Critical companion lessons:** Day 50\n**Unlocks:** Better distinction between defensive income and structurally junior risk in real-estate debt."
       }
     ],
     "quiz": [
@@ -11036,11 +10791,6 @@ export const lessonContents: LessonContent[] = [
         "type": "teaching",
         "title": "Decision relevance",
         "content": "**Approve / increase conviction:** A private-markets allocation is strongest when pacing, manager selection, vehicle choice, liquidity planning, governance, and data infrastructure fit together at the total-portfolio level.\n**Monitor:** Monitor cross-sleeve concentration, cash-flow correlation, governance speed, and whether each sleeve still serves the role it was hired to serve."
-      },
-      {
-        "type": "teaching",
-        "title": "Curriculum links",
-        "content": "**Builds on:** Builds on the entire curriculum.\n**Critical companion lessons:** Day 14, Day 18, Day 20, Day 26, Day 40, Day 46\n**Unlocks:** operating-system view of allocation, manager selection, governance, and monitoring."
       },
       {
         "type": "teaching",
